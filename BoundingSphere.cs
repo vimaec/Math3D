@@ -39,8 +39,8 @@ namespace Ara3D
             get
             {
                 return string.Concat(
-                    "Center( ", this.Center.ToString(), " )  \r\n",
-                    "Radius( ", this.Radius.ToString(), " )"
+                    "Center( ", Center.ToString(), " )  \r\n",
+                    "Radius( ", Radius.ToString(), " )"
                     );
             }
         }
@@ -56,8 +56,8 @@ namespace Ara3D
         /// <param name="radius">The sphere radius.</param>
         public BoundingSphere(Vector3 center, float radius)
         {
-            this.Center = center;
-            this.Radius = radius;
+            Center = center;
+            Radius = radius;
         }
 
         #endregion
@@ -77,7 +77,7 @@ namespace Ara3D
             bool inside = true;
             foreach (Vector3 corner in box.GetCorners())
             {
-                if (this.Contains(corner) == ContainmentType.Disjoint)
+                if (Contains(corner) == ContainmentType.Disjoint)
                 {
                     inside = false;
                     break;
@@ -122,7 +122,7 @@ namespace Ara3D
         /// <param name="result">The containment type as an output parameter.</param>
         public void Contains(ref BoundingBox box, out ContainmentType result)
         {
-            result = this.Contains(box);
+            result = Contains(box);
         }
 
         /// <summary>
@@ -138,7 +138,7 @@ namespace Ara3D
             Vector3[] corners = frustum.GetCorners();
             foreach (Vector3 corner in corners)
             {
-                if (this.Contains(corner) == ContainmentType.Disjoint)
+                if (Contains(corner) == ContainmentType.Disjoint)
                 {
                     inside = false;
                     break;
@@ -165,7 +165,7 @@ namespace Ara3D
         /// <param name="result">The containment type as an output parameter.</param>
         public void Contains(ref BoundingFrustum frustum,out ContainmentType result)
         {
-            result = this.Contains(frustum);
+            result = Contains(frustum);
         }
 
         /// <summary>
@@ -175,8 +175,7 @@ namespace Ara3D
         /// <returns>The containment type.</returns>
         public ContainmentType Contains(BoundingSphere sphere)
         {
-            ContainmentType result;
-            Contains(ref sphere, out result);
+            Contains(ref sphere, out ContainmentType result);
             return result;
         }
 
@@ -206,8 +205,7 @@ namespace Ara3D
         /// <returns>The containment type.</returns>
         public ContainmentType Contains(Vector3 point)
         {
-            ContainmentType result;
-            Contains(ref point, out result);
+            Contains(ref point, out ContainmentType result);
             return result;
         }
 
@@ -242,8 +240,7 @@ namespace Ara3D
         /// <returns>The new <see cref="BoundingSphere"/>.</returns>
         public static BoundingSphere CreateFromBoundingBox(BoundingBox box)
         {
-            BoundingSphere result;
-            CreateFromBoundingBox(ref box, out result);
+            CreateFromBoundingBox(ref box, out BoundingSphere result);
             return result;
         }
 
@@ -285,7 +282,7 @@ namespace Ara3D
         public static BoundingSphere CreateFromPoints(IEnumerable<Vector3> points)
         {
             if (points == null )
-                throw new ArgumentNullException("points");
+                throw new ArgumentNullException(nameof(points));
 
             // From "Real-Time Collision Detection" (Page 89)
 
@@ -371,8 +368,7 @@ namespace Ara3D
         /// <returns>The new <see cref="BoundingSphere"/>.</returns>
         public static BoundingSphere CreateMerged(BoundingSphere original, BoundingSphere additional)
         {
-            BoundingSphere result;
-            CreateMerged(ref original, ref additional, out result);
+            CreateMerged(ref original, ref additional, out BoundingSphere result);
             return result;
         }
 
@@ -416,7 +412,7 @@ namespace Ara3D
         /// <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
         public bool Equals(BoundingSphere other)
         {
-            return this.Center == other.Center && this.Radius == other.Radius;
+            return Center == other.Center && Radius == other.Radius;
         }
 
         /// <summary>
@@ -427,7 +423,7 @@ namespace Ara3D
         public override bool Equals(object obj)
         {
             if (obj is BoundingSphere)
-                return this.Equals((BoundingSphere)obj);
+                return Equals((BoundingSphere)obj);
 
             return false;
         }
@@ -438,7 +434,7 @@ namespace Ara3D
         /// <returns>Hash code of this <see cref="BoundingSphere"/>.</returns>
         public override int GetHashCode()
         {
-            return this.Center.GetHashCode() + this.Radius.GetHashCode();
+            return Center.GetHashCode() + Radius.GetHashCode();
         }
 
         #region Intersects
@@ -483,8 +479,7 @@ namespace Ara3D
         /// <returns><c>true</c> if other <see cref="BoundingSphere"/> intersects with this sphere; <c>false</c> otherwise.</returns>
         public bool Intersects(BoundingSphere sphere)
         {
-            bool result;
-            Intersects(ref sphere, out result);
+            Intersects(ref sphere, out bool result);
             return result;
         }
 
@@ -510,9 +505,8 @@ namespace Ara3D
         /// <returns>Type of intersection.</returns>
         public PlaneIntersectionType Intersects(Plane plane)
         {
-            var result = default(PlaneIntersectionType);
             // TODO: we might want to inline this for performance reasons
-            this.Intersects(ref plane, out result);
+            Intersects(ref plane, out PlaneIntersectionType result);
             return result;
         }
 
@@ -527,7 +521,7 @@ namespace Ara3D
             distance += plane.D;
             if (distance > Radius)
                 result = PlaneIntersectionType.Front;
-            else if (distance < -this.Radius)
+            else if (distance < -Radius)
                 result = PlaneIntersectionType.Back;
             else
                 result = PlaneIntersectionType.Intersecting;
@@ -562,7 +556,7 @@ namespace Ara3D
         /// <returns>A <see cref="String"/> representation of this <see cref="BoundingSphere"/>.</returns>
         public override string ToString()
         {
-            return "{Center:" + this.Center + " Radius:" + this.Radius + "}";
+            return "{Center:" + Center + " Radius:" + Radius + "}";
         }
 
         #region Transform
@@ -575,8 +569,8 @@ namespace Ara3D
         public BoundingSphere Transform(Matrix4x4 matrix)
         {
             BoundingSphere sphere = new BoundingSphere();
-            sphere.Center = Vector3.Transform(this.Center, matrix);
-            sphere.Radius = this.Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33)))));
+            sphere.Center = Vector3.Transform(Center, matrix);
+            sphere.Radius = Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33)))));
             return sphere;
         }
 
@@ -587,8 +581,8 @@ namespace Ara3D
         /// <param name="result">Transformed <see cref="BoundingSphere"/> as an output parameter.</param>
         public void Transform(ref Matrix4x4 matrix, out BoundingSphere result)
         {
-            result.Center = Vector3.Transform(this.Center, matrix);
-            result.Radius = this.Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33)))));
+            result.Center = Vector3.Transform(Center, matrix);
+            result.Radius = Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33)))));
         }
 
         #endregion

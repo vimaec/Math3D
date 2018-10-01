@@ -27,8 +27,8 @@ namespace Ara3D
 
         public Ray(Vector3 position, Vector3 direction)
         {
-            this.Position = position;
-            this.Direction = direction;
+            Position = position;
+            Direction = direction;
         }
 
         #endregion
@@ -38,13 +38,13 @@ namespace Ara3D
 
         public override bool Equals(object obj)
         {
-            return (obj is Ray) ? this.Equals((Ray)obj) : false;
+            return (obj is Ray) ? Equals((Ray)obj) : false;
         }
 
         
         public bool Equals(Ray other)
         {
-            return this.Position.Equals(other.Position) && this.Direction.Equals(other.Direction);
+            return Position.Equals(other.Position) && Direction.Equals(other.Direction);
         }
 
         
@@ -157,15 +157,13 @@ namespace Ara3D
 
         public float? Intersects(BoundingSphere sphere)
         {
-            float? result;
-            Intersects(ref sphere, out result);
+            Intersects(ref sphere, out float? result);
             return result;
         }
 
         public float? Intersects(Plane plane)
         {
-            float? result;
-            Intersects(ref plane, out result);
+            Intersects(ref plane, out float? result);
             return result;
         }
 
@@ -195,7 +193,7 @@ namespace Ara3D
         public void Intersects(ref BoundingSphere sphere, out float? result)
         {
             // Find the vector between where the ray starts the the sphere's centre
-            Vector3 difference = sphere.Center - this.Position;
+            Vector3 difference = sphere.Center - Position;
 
             float differenceLengthSquared = difference.LengthSquared();
             float sphereRadiusSquared = sphere.Radius * sphere.Radius;
@@ -246,8 +244,8 @@ namespace Ara3D
             get
             {
                 return string.Concat(
-                    "Pos( ", this.Position.ToString(), " )  \r\n",
-                    "Dir( ", this.Direction.ToString(), " )"
+                    "Pos( ", Position.ToString(), " )  \r\n",
+                    "Dir( ", Direction.ToString(), " )"
                 );
             }
         }
