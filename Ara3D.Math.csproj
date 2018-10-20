@@ -20,10 +20,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LinqArray\Ara3D.LinqArray.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="MathOps.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MathOps.cs</LastGenOutput>
