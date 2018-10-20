@@ -38,7 +38,7 @@ namespace Ara3D
 
         public override bool Equals(object obj)
         {
-            return (obj is Ray) ? Equals((Ray)obj) : false;
+            return (obj is Ray) && Equals((Ray)obj);
         }
 
         
@@ -239,16 +239,10 @@ namespace Ara3D
             return a.Equals(b);
         }
 
-        internal string DebugDisplayString
-        {
-            get
-            {
-                return string.Concat(
+        internal string DebugDisplayString => string.Concat(
                     "Pos( ", Position.ToString(), " )  \r\n",
                     "Dir( ", Direction.ToString(), " )"
                 );
-            }
-        }
 
         public override string ToString()
         {

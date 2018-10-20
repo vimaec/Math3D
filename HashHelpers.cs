@@ -4,7 +4,7 @@
 
 namespace System.Numerics.Hashing
 {
-    static class HashHelpers
+    public static class HashHelpers
     {
         public static readonly int RandomSeed = Guid.NewGuid().GetHashCode();
 

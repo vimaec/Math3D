@@ -9,7 +9,6 @@ using System;
 using System.Globalization;
 using System.Numerics.Hashing;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Ara3D
@@ -90,7 +89,7 @@ namespace Ara3D
         }
         private static readonly Vector<T> s_one = new Vector<T>(GetOneValue());
 
-        internal static Vector<T> AllOnes { get { return s_allOnes; } }
+        internal static Vector<T> AllOnes => s_allOnes;
         private static readonly Vector<T> s_allOnes = new Vector<T>(GetAllBitsSetValue());
         #endregion Static Members
 
@@ -1187,7 +1186,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="obj">The Object to compare against.</param>
         /// <returns>True if the Object is equal to this vector; False otherwise.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public override bool Equals(object obj)
         {
             if (!(obj is Vector<T>))
@@ -2780,7 +2779,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="value">The source vector.</param>
         /// <returns>The one's complement vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> operator ~(Vector<T> value)
         {
             return s_allOnes ^ value;
@@ -2794,7 +2793,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The first vector to compare.</param>
         /// <returns>True if all elements are equal; False otherwise.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator ==(Vector<T> left, Vector<T> right)
         {
             return left.Equals(right);
@@ -2806,7 +2805,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>True if left and right are not equal; False otherwise.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator !=(Vector<T> left, Vector<T> right)
         {
             return !(left == right);
@@ -2932,7 +2931,7 @@ namespace Ara3D
 
         #region Internal Comparison Methods
         [Intrinsic]
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         internal static unsafe Vector<T> Equals(Vector<T> left, Vector<T> right)
         {
             if (Vector.IsHardwareAccelerated)
@@ -3149,7 +3148,7 @@ namespace Ara3D
         }
 
         [Intrinsic]
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         internal static unsafe Vector<T> LessThan(Vector<T> left, Vector<T> right)
         {
             if (Vector.IsHardwareAccelerated)
@@ -3366,7 +3365,7 @@ namespace Ara3D
         }
 
         [Intrinsic]
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         internal static unsafe Vector<T> GreaterThan(Vector<T> left, Vector<T> right)
         {
             if (Vector.IsHardwareAccelerated)
@@ -4537,7 +4536,7 @@ namespace Ara3D
         #endregion Internal Math Methods
 
         #region Helper Methods
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static bool ScalarEquals(T left, T right)
         {
             if (typeof(T) == typeof(byte))
@@ -4586,7 +4585,7 @@ namespace Ara3D
             }
         }
 
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static bool ScalarLessThan(T left, T right)
         {
             if (typeof(T) == typeof(byte))
@@ -4635,7 +4634,7 @@ namespace Ara3D
             }
         }
 
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static bool ScalarGreaterThan(T left, T right)
         {
             if (typeof(T) == typeof(byte))
@@ -4684,7 +4683,7 @@ namespace Ara3D
             }
         }
 
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static T ScalarAdd(T left, T right)
         {
             if (typeof(T) == typeof(byte))
@@ -4733,7 +4732,7 @@ namespace Ara3D
             }
         }
 
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static T ScalarSubtract(T left, T right)
         {
             if (typeof(T) == typeof(byte))
@@ -4782,7 +4781,7 @@ namespace Ara3D
             }
         }
 
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static T ScalarMultiply(T left, T right)
         {
             if (typeof(T) == typeof(byte))
@@ -4831,7 +4830,7 @@ namespace Ara3D
             }
         }
 
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static T ScalarDivide(T left, T right)
         {
             if (typeof(T) == typeof(byte))
@@ -4880,7 +4879,7 @@ namespace Ara3D
             }
         }
 
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static T GetOneValue()
         {
             if (typeof(T) == typeof(byte))
@@ -4939,7 +4938,7 @@ namespace Ara3D
             }
         }
 
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static T GetAllBitsSetValue()
         {
             if (typeof(T) == typeof(byte))

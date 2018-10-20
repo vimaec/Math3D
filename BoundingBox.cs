@@ -228,7 +228,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="points">The list of Vector3 instances defining the point cloud to bound</param>
         /// <returns>A bounding box that encapsulates the given point cloud.</returns>
-        /// <exception cref="System.ArgumentException">Thrown if the given list has no points.</exception>
+        /// <exception cref="ArgumentException">Thrown if the given list has no points.</exception>
         public static BoundingBox CreateFromPoints(IEnumerable<Vector3> points)
         {
             if (points == null)
@@ -291,7 +291,7 @@ namespace Ara3D
 
         public override bool Equals(object obj)
         {
-            return (obj is BoundingBox) ? Equals((BoundingBox)obj) : false;
+            return (obj is BoundingBox) && Equals((BoundingBox)obj);
         }
 
         public Vector3[] GetCorners()
@@ -481,14 +481,14 @@ namespace Ara3D
             result = PlaneIntersectionType.Intersecting;
         }
 
-        public Nullable<float> Intersects(Ray ray)
+        public float? Intersects(Ray ray)
         {
             // TODO: finish this
             throw new NotImplementedException();
             // return ray.Intersects(this);
         }
         
-        public void Intersects(ref Ray ray, out Nullable<float> result)
+        public void Intersects(ref Ray ray, out float? result)
         {
             result = Intersects(ray);
         }
@@ -503,16 +503,10 @@ namespace Ara3D
             return !a.Equals(b);
         }
 
-        internal string DebugDisplayString
-        {
-            get
-            {
-                return string.Concat(
+        internal string DebugDisplayString => string.Concat(
                     "Min( ", Min.ToString(), " )  \r\n",
-                    "Max( ",Max.ToString(), " )"
+                    "Max( ", Max.ToString(), " )"
                     );
-            }
-        }
 
         public override string ToString()
         {

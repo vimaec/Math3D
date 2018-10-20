@@ -36,17 +36,4 @@
         public T Max { get; set; }
     }
 
-    public interface IProcedural<T> {
-        Limits<T> Limits { get; }
-        Vector3 Eval(T input);
-    }
-
-    public interface ICurve : IProcedural<float>
-    { }
-
-    public interface ISurface : IProcedural<Vector2>
-    { }
-
-    public interface IField : IProcedural<Vector3>
-    { }
 }

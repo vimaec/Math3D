@@ -33,18 +33,12 @@ namespace Ara3D
         /// <summary>
         /// Returns a Quaternion representing no rotation. 
         /// </summary>
-        public static Quaternion Identity
-        {
-            get { return new Quaternion(0, 0, 0, 1); }
-        }
+        public static Quaternion Identity => new Quaternion(0, 0, 0, 1);
 
         /// <summary>
         /// Returns whether the Quaternion is the identity Quaternion.
         /// </summary>
-        public bool IsIdentity
-        {
-            get { return X == 0f && Y == 0f && Z == 0f && W == 1f; }
-        }
+        public bool IsIdentity => X == 0f && Y == 0f && Z == 0f && W == 1f;
 
         /// <summary>
         /// Constructs a Quaternion from the given components.

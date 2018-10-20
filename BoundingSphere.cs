@@ -34,16 +34,10 @@ namespace Ara3D
 
         #region Internal Properties
 
-        internal string DebugDisplayString
-        {
-            get
-            {
-                return string.Concat(
+        internal string DebugDisplayString => string.Concat(
                     "Center( ", Center.ToString(), " )  \r\n",
                     "Radius( ", Radius.ToString(), " )"
                     );
-            }
-        }
 
         #endregion
 
@@ -400,9 +394,11 @@ namespace Ara3D
             float Rightradius = Math.Max(original.Radius + distance, additional.Radius);
             ocenterToaCenter = ocenterToaCenter + (((leftRadius - Rightradius) / (2 * ocenterToaCenter.Length())) * ocenterToaCenter);//oCenterToResultCenter
 
-            result = new BoundingSphere();
-            result.Center = original.Center + ocenterToaCenter;
-            result.Radius = (leftRadius + Rightradius) / 2;
+            result = new BoundingSphere
+            {
+                Center = original.Center + ocenterToaCenter,
+                Radius = (leftRadius + Rightradius) / 2
+            };
         }
 
         /// <summary>
@@ -568,9 +564,11 @@ namespace Ara3D
         /// <returns>Transformed <see cref="BoundingSphere"/>.</returns>
         public BoundingSphere Transform(Matrix4x4 matrix)
         {
-            BoundingSphere sphere = new BoundingSphere();
-            sphere.Center = Vector3.Transform(Center, matrix);
-            sphere.Radius = Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33)))));
+            BoundingSphere sphere = new BoundingSphere
+            {
+                Center = Vector3.Transform(Center, matrix),
+                Radius = Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33)))))
+            };
             return sphere;
         }
 

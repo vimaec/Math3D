@@ -98,25 +98,16 @@ namespace Ara3D
         /// <summary>
         /// Returns the multiplicative identity matrix.
         /// </summary>
-        public static Matrix4x4 Identity
-        {
-            get { return _identity; }
-        }
+        public static Matrix4x4 Identity => _identity;
 
         /// <summary>
         /// Returns whether the matrix is the identity matrix.
         /// </summary>
-        public bool IsIdentity
-        {
-            get
-            {
-                return M11 == 1f && M22 == 1f && M33 == 1f && M44 == 1f && // Check diagonal element first for early out.
+        public bool IsIdentity => M11 == 1f && M22 == 1f && M33 == 1f && M44 == 1f && // Check diagonal element first for early out.
                                     M12 == 0f && M13 == 0f && M14 == 0f &&
                        M21 == 0f && M23 == 0f && M24 == 0f &&
                        M31 == 0f && M32 == 0f && M34 == 0f &&
                        M41 == 0f && M42 == 0f && M43 == 0f;
-            }
-        }
 
         /// <summary>
         /// Gets or sets the translation component of this matrix.

@@ -19,23 +19,23 @@ namespace Ara3D
         /// <summary>
         /// Returns the vector (0,0,0).
         /// </summary>
-        public static Vector3 Zero { get { return new Vector3(); } }
+        public static Vector3 Zero => new Vector3();
         /// <summary>
         /// Returns the vector (1,1,1).
         /// </summary>
-        public static Vector3 One { get { return new Vector3(1.0f, 1.0f, 1.0f); } }
+        public static Vector3 One => new Vector3(1.0f, 1.0f, 1.0f);
         /// <summary>
         /// Returns the vector (1,0,0).
         /// </summary>
-        public static Vector3 UnitX { get { return new Vector3(1.0f, 0.0f, 0.0f); } }
+        public static Vector3 UnitX => new Vector3(1.0f, 0.0f, 0.0f);
         /// <summary>
         /// Returns the vector (0,1,0).
         /// </summary>
-        public static Vector3 UnitY { get { return new Vector3(0.0f, 1.0f, 0.0f); } }
+        public static Vector3 UnitY => new Vector3(0.0f, 1.0f, 0.0f);
         /// <summary>
         /// Returns the vector (0,0,1).
         /// </summary>
-        public static Vector3 UnitZ { get { return new Vector3(0.0f, 0.0f, 1.0f); } }
+        public static Vector3 UnitZ => new Vector3(0.0f, 0.0f, 1.0f);
         #endregion Public Static Properties
 
         #region Public Instance Methods

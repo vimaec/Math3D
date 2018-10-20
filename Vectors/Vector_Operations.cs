@@ -22,7 +22,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The new vector with elements selected based on the mask.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<float> ConditionalSelect(Vector<int> condition, Vector<float> left, Vector<float> right)
         {
             return (Vector<float>)Vector<float>.ConditionalSelect((Vector<float>)condition, left, right);
@@ -35,7 +35,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The new vector with elements selected based on the mask.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<double> ConditionalSelect(Vector<long> condition, Vector<double> left, Vector<double> right)
         {
             return (Vector<double>)Vector<double>.ConditionalSelect((Vector<double>)condition, left, right);
@@ -48,7 +48,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The new vector with elements selected based on the mask.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> ConditionalSelect<T>(Vector<T> condition, Vector<T> left, Vector<T> right) where T : struct
         {
             return Vector<T>.ConditionalSelect(condition, left, right);
@@ -63,7 +63,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> Equals<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return Vector<T>.Equals(left, right);
@@ -75,7 +75,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<int> Equals(Vector<float> left, Vector<float> right)
         {
             return (Vector<int>)Vector<float>.Equals(left, right);
@@ -87,7 +87,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<int> Equals(Vector<int> left, Vector<int> right)
         {
             return Vector<int>.Equals(left, right);
@@ -99,7 +99,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<long> Equals(Vector<double> left, Vector<double> right)
         {
             return (Vector<long>)Vector<double>.Equals(left, right);
@@ -111,7 +111,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<long> Equals(Vector<long> left, Vector<long> right)
         {
             return Vector<long>.Equals(left, right);
@@ -123,7 +123,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The first vector to compare.</param>
         /// <returns>True if all elements are equal; False otherwise.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool EqualsAll<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return left == right;
@@ -135,7 +135,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>True if any element pairs are equal; False if no element pairs are equal.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool EqualsAny<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return !Vector<T>.Equals(left, right).Equals(Vector<T>.Zero);
@@ -150,7 +150,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> LessThan<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return Vector<T>.LessThan(left, right);
@@ -163,7 +163,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant integral vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<int> LessThan(Vector<float> left, Vector<float> right)
         {
             return (Vector<int>)Vector<float>.LessThan(left, right);
@@ -176,7 +176,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<int> LessThan(Vector<int> left, Vector<int> right)
         {
             return Vector<int>.LessThan(left, right);
@@ -189,7 +189,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant integral vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<long> LessThan(Vector<double> left, Vector<double> right)
         {
             return (Vector<long>)Vector<double>.LessThan(left, right);
@@ -202,7 +202,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<long> LessThan(Vector<long> left, Vector<long> right)
         {
             return Vector<long>.LessThan(left, right);
@@ -214,7 +214,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>True if all elements in left are less than their corresponding elements in right; False otherwise.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool LessThanAll<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             Vector<int> cond = (Vector<int>)Vector<T>.LessThan(left, right);
@@ -227,7 +227,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>True if any elements in left are less than their corresponding elements in right; False otherwise.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool LessThanAny<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             Vector<int> cond = (Vector<int>)Vector<T>.LessThan(left, right);
@@ -243,7 +243,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> LessThanOrEqual<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return Vector<T>.LessThanOrEqual(left, right);
@@ -256,7 +256,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant integral vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<int> LessThanOrEqual(Vector<float> left, Vector<float> right)
         {
             return (Vector<int>)Vector<float>.LessThanOrEqual(left, right);
@@ -269,7 +269,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<int> LessThanOrEqual(Vector<int> left, Vector<int> right)
         {
             return Vector<int>.LessThanOrEqual(left, right);
@@ -282,7 +282,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<long> LessThanOrEqual(Vector<long> left, Vector<long> right)
         {
             return Vector<long>.LessThanOrEqual(left, right);
@@ -295,7 +295,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant integral vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<long> LessThanOrEqual(Vector<double> left, Vector<double> right)
         {
             return (Vector<long>)Vector<double>.LessThanOrEqual(left, right);
@@ -307,7 +307,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>True if all elements in left are less than or equal to their corresponding elements in right; False otherwise.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool LessThanOrEqualAll<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             Vector<int> cond = (Vector<int>)Vector<T>.LessThanOrEqual(left, right);
@@ -320,7 +320,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>True if any elements in left are less than their corresponding elements in right; False otherwise.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool LessThanOrEqualAny<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             Vector<int> cond = (Vector<int>)Vector<T>.LessThanOrEqual(left, right);
@@ -336,7 +336,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> GreaterThan<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return Vector<T>.GreaterThan(left, right);
@@ -349,7 +349,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant integral vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<int> GreaterThan(Vector<float> left, Vector<float> right)
         {
             return (Vector<int>)Vector<float>.GreaterThan(left, right);
@@ -362,7 +362,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<int> GreaterThan(Vector<int> left, Vector<int> right)
         {
             return Vector<int>.GreaterThan(left, right);
@@ -375,7 +375,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant integral vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<long> GreaterThan(Vector<double> left, Vector<double> right)
         {
             return (Vector<long>)Vector<double>.GreaterThan(left, right);
@@ -388,7 +388,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<long> GreaterThan(Vector<long> left, Vector<long> right)
         {
             return Vector<long>.GreaterThan(left, right);
@@ -401,7 +401,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>True if all elements in left are greater than their corresponding elements in right; False otherwise.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool GreaterThanAll<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             Vector<int> cond = (Vector<int>)Vector<T>.GreaterThan(left, right);
@@ -414,7 +414,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>True if any elements in left are greater than their corresponding elements in right; False otherwise.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool GreaterThanAny<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             Vector<int> cond = (Vector<int>)Vector<T>.GreaterThan(left, right);
@@ -430,7 +430,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> GreaterThanOrEqual<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return Vector<T>.GreaterThanOrEqual(left, right);
@@ -443,7 +443,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant integral vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<int> GreaterThanOrEqual(Vector<float> left, Vector<float> right)
         {
             return (Vector<int>)Vector<float>.GreaterThanOrEqual(left, right);
@@ -456,7 +456,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<int> GreaterThanOrEqual(Vector<int> left, Vector<int> right)
         {
             return Vector<int>.GreaterThanOrEqual(left, right);
@@ -469,7 +469,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<long> GreaterThanOrEqual(Vector<long> left, Vector<long> right)
         {
             return Vector<long>.GreaterThanOrEqual(left, right);
@@ -482,7 +482,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>The resultant integral vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<long> GreaterThanOrEqual(Vector<double> left, Vector<double> right)
         {
             return (Vector<long>)Vector<double>.GreaterThanOrEqual(left, right);
@@ -495,7 +495,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>True if all elements in left are greater than or equal to their corresponding elements in right; False otherwise.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool GreaterThanOrEqualAll<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             Vector<int> cond = (Vector<int>)Vector<T>.GreaterThanOrEqual(left, right);
@@ -508,7 +508,7 @@ namespace Ara3D
         /// <param name="left">The first vector to compare.</param>
         /// <param name="right">The second vector to compare.</param>
         /// <returns>True if any elements in left are greater than or equal to their corresponding elements in right; False otherwise.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool GreaterThanOrEqualAny<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             Vector<int> cond = (Vector<int>)Vector<T>.GreaterThanOrEqual(left, right);
@@ -543,7 +543,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="value">The source vector.</param>
         /// <returns>The absolute value vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> Abs<T>(Vector<T> value) where T : struct
         {
             return Vector<T>.Abs(value);
@@ -555,7 +555,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The minimum vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> Min<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return Vector<T>.Min(left, right);
@@ -567,7 +567,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The maximum vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> Max<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return Vector<T>.Max(left, right);
@@ -581,7 +581,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The dot product.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T Dot<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return Vector<T>.DotProduct(left, right);
@@ -592,7 +592,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="value">The source vector.</param>
         /// <returns>The square root vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> SquareRoot<T>(Vector<T> value) where T : struct
         {
             return Vector<T>.SquareRoot(value);
@@ -606,7 +606,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The summed vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> Add<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return left + right;
@@ -618,7 +618,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The difference vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> Subtract<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return left - right;
@@ -630,7 +630,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The summed vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> Multiply<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return left * right;
@@ -642,7 +642,7 @@ namespace Ara3D
         /// <param name="left">The source vector.</param>
         /// <param name="right">The scalar factor.</param>
         /// <returns>The scaled vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> Multiply<T>(Vector<T> left, T right) where T : struct
         {
             return left * right;
@@ -654,7 +654,7 @@ namespace Ara3D
         /// <param name="left">The scalar factor.</param>
         /// <param name="right">The source vector.</param>
         /// <returns>The scaled vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> Multiply<T>(T left, Vector<T> right) where T : struct
         {
             return left * right;
@@ -667,7 +667,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The divided vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> Divide<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return left / right;
@@ -678,7 +678,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="value">The source vector.</param>
         /// <returns>The negated vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> Negate<T>(Vector<T> value) where T : struct
         {
             return -value;
@@ -692,7 +692,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> BitwiseAnd<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return left & right;
@@ -704,7 +704,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> BitwiseOr<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return left | right;
@@ -715,7 +715,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="value">The source vector.</param>
         /// <returns>The one's complement vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> OnesComplement<T>(Vector<T> value) where T : struct
         {
             return ~value;
@@ -727,7 +727,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> Xor<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return left ^ right;
@@ -739,7 +739,7 @@ namespace Ara3D
         /// <param name="left">The first source vector.</param>
         /// <param name="right">The second source vector.</param>
         /// <returns>The resultant vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<T> AndNot<T>(Vector<T> left, Vector<T> right) where T : struct
         {
             return left & ~right;
@@ -752,7 +752,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="value">The source vector</param>
         /// <returns>The reinterpreted vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<byte> AsVectorByte<T>(Vector<T> value) where T : struct
         {
             return (Vector<byte>)value;
@@ -764,7 +764,7 @@ namespace Ara3D
         /// <param name="value">The source vector</param>
         /// <returns>The reinterpreted vector.</returns>
         [CLSCompliant(false)]
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<sbyte> AsVectorSByte<T>(Vector<T> value) where T : struct
         {
             return (Vector<sbyte>)value;
@@ -776,7 +776,7 @@ namespace Ara3D
         /// <param name="value">The source vector</param>
         /// <returns>The reinterpreted vector.</returns>
         [CLSCompliant(false)]
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<ushort> AsVectorUInt16<T>(Vector<T> value) where T : struct
         {
             return (Vector<ushort>)value;
@@ -787,7 +787,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="value">The source vector</param>
         /// <returns>The reinterpreted vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<short> AsVectorInt16<T>(Vector<T> value) where T : struct
         {
             return (Vector<short>)value;
@@ -799,7 +799,7 @@ namespace Ara3D
         /// <param name="value">The source vector</param>
         /// <returns>The reinterpreted vector.</returns>
         [CLSCompliant(false)]
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<uint> AsVectorUInt32<T>(Vector<T> value) where T : struct
         {
             return (Vector<uint>)value;
@@ -810,7 +810,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="value">The source vector</param>
         /// <returns>The reinterpreted vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<int> AsVectorInt32<T>(Vector<T> value) where T : struct
         {
             return (Vector<int>)value;
@@ -822,7 +822,7 @@ namespace Ara3D
         /// <param name="value">The source vector</param>
         /// <returns>The reinterpreted vector.</returns>
         [CLSCompliant(false)]
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<ulong> AsVectorUInt64<T>(Vector<T> value) where T : struct
         {
             return (Vector<ulong>)value;
@@ -834,7 +834,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="value">The source vector</param>
         /// <returns>The reinterpreted vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<long> AsVectorInt64<T>(Vector<T> value) where T : struct
         {
             return (Vector<long>)value;
@@ -845,7 +845,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="value">The source vector</param>
         /// <returns>The reinterpreted vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<float> AsVectorSingle<T>(Vector<T> value) where T : struct
         {
             return (Vector<float>)value;
@@ -856,7 +856,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="value">The source vector</param>
         /// <returns>The reinterpreted vector.</returns>
-        [MethodImplAttribute(MethodImplOptions.AggressiveInlining)]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector<double> AsVectorDouble<T>(Vector<T> value) where T : struct
         {
             return (Vector<double>)value;

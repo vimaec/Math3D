@@ -15,27 +15,27 @@ namespace Ara3D
         /// <summary>
         /// Returns the vector (0,0,0,0).
         /// </summary>
-        public static Vector4 Zero { get { return new Vector4(); } }
+        public static Vector4 Zero => new Vector4();
         /// <summary>
         /// Returns the vector (1,1,1,1).
         /// </summary>
-        public static Vector4 One { get { return new Vector4(1.0f, 1.0f, 1.0f, 1.0f); } }
+        public static Vector4 One => new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
         /// <summary>
         /// Returns the vector (1,0,0,0).
         /// </summary>
-        public static Vector4 UnitX { get { return new Vector4(1.0f, 0.0f, 0.0f, 0.0f); } }
+        public static Vector4 UnitX => new Vector4(1.0f, 0.0f, 0.0f, 0.0f);
         /// <summary>
         /// Returns the vector (0,1,0,0).
         /// </summary>
-        public static Vector4 UnitY { get { return new Vector4(0.0f, 1.0f, 0.0f, 0.0f); } }
+        public static Vector4 UnitY => new Vector4(0.0f, 1.0f, 0.0f, 0.0f);
         /// <summary>
         /// Returns the vector (0,0,1,0).
         /// </summary>
-        public static Vector4 UnitZ { get { return new Vector4(0.0f, 0.0f, 1.0f, 0.0f); } }
+        public static Vector4 UnitZ => new Vector4(0.0f, 0.0f, 1.0f, 0.0f);
         /// <summary>
         /// Returns the vector (0,0,0,1).
         /// </summary>
-        public static Vector4 UnitW { get { return new Vector4(0.0f, 0.0f, 0.0f, 1.0f); } }
+        public static Vector4 UnitW => new Vector4(0.0f, 0.0f, 0.0f, 1.0f);
         #endregion Public Static Properties
 
         #region Public instance methods
