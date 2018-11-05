@@ -54,7 +54,7 @@ namespace Ara3D
         }
 
         // adapted from http://www.scratchapixel.com/lessons/3d-basic-lessons/lesson-7-intersecting-simple-shapes/ray-box-intersection/
-        public float? Intersects(BoundingBox box)
+        public float? Intersects(Box box)
         {
             const float Epsilon = 1e-6f;
 
@@ -138,7 +138,7 @@ namespace Ara3D
         }
 
 
-        public void Intersects(ref BoundingBox box, out float? result)
+        public void Intersects(ref Box box, out float? result)
         {
 			result = Intersects(box);
         }
@@ -155,7 +155,7 @@ namespace Ara3D
         }
         */
 
-        public float? Intersects(BoundingSphere sphere)
+        public float? Intersects(Sphere sphere)
         {
             Intersects(ref sphere, out float? result);
             return result;
@@ -190,7 +190,7 @@ namespace Ara3D
             }
         }
 
-        public void Intersects(ref BoundingSphere sphere, out float? result)
+        public void Intersects(ref Sphere sphere, out float? result)
         {
             // Find the vector between where the ray starts the the sphere's centre
             Vector3 difference = sphere.Center - Position;

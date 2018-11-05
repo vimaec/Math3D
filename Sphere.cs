@@ -14,8 +14,9 @@ namespace Ara3D
     /// </summary>
     [DataContract]
     [DebuggerDisplay("{DebugDisplayString,nq}")]
-    public struct BoundingSphere : IEquatable<BoundingSphere>
+    public struct Sphere : IEquatable<Sphere>
     {
+        // TODO: convert this to use a Vector4
         #region Public Fields
 
         /// <summary>
@@ -48,7 +49,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="center">The sphere center.</param>
         /// <param name="radius">The sphere radius.</param>
-        public BoundingSphere(Vector3 center, float radius)
+        public Sphere(Vector3 center, float radius)
         {
             Center = center;
             Radius = radius;
@@ -65,7 +66,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="box">The box for testing.</param>
         /// <returns>The containment type.</returns>
-        public ContainmentType Contains(BoundingBox box)
+        public ContainmentType Contains(Box box)
         {
             //check if all corner is in sphere
             bool inside = true;
@@ -114,7 +115,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="box">The box for testing.</param>
         /// <param name="result">The containment type as an output parameter.</param>
-        public void Contains(ref BoundingBox box, out ContainmentType result)
+        public void Contains(ref Box box, out ContainmentType result)
         {
             result = Contains(box);
         }
@@ -124,7 +125,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="frustum">The frustum for testing.</param>
         /// <returns>The containment type.</returns>
-        public ContainmentType Contains(BoundingFrustum frustum)
+        public ContainmentType Contains(Frustum frustum)
         {
             //check if all corner is in sphere
             bool inside = true;
@@ -157,7 +158,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="frustum">The frustum for testing.</param>
         /// <param name="result">The containment type as an output parameter.</param>
-        public void Contains(ref BoundingFrustum frustum,out ContainmentType result)
+        public void Contains(ref Frustum frustum,out ContainmentType result)
         {
             result = Contains(frustum);
         }
@@ -167,7 +168,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="sphere">The other sphere for testing.</param>
         /// <returns>The containment type.</returns>
-        public ContainmentType Contains(BoundingSphere sphere)
+        public ContainmentType Contains(Sphere sphere)
         {
             Contains(ref sphere, out ContainmentType result);
             return result;
@@ -178,7 +179,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="sphere">The other sphere for testing.</param>
         /// <param name="result">The containment type as an output parameter.</param>
-        public void Contains(ref BoundingSphere sphere, out ContainmentType result)
+        public void Contains(ref Sphere sphere, out ContainmentType result)
         {
             float sqDistance = Vector3.DistanceSquared(sphere.Center, Center);
 
@@ -228,22 +229,22 @@ namespace Ara3D
         #region CreateFromBoundingBox
 
         /// <summary>
-        /// Creates the smallest <see cref="BoundingSphere"/> that can contain a specified <see cref="BoundingBox"/>.
+        /// Creates the smallest <see cref="Sphere"/> that can contain a specified <see cref="Box"/>.
         /// </summary>
         /// <param name="box">The box to create the sphere from.</param>
-        /// <returns>The new <see cref="BoundingSphere"/>.</returns>
-        public static BoundingSphere CreateFromBoundingBox(BoundingBox box)
+        /// <returns>The new <see cref="Sphere"/>.</returns>
+        public static Sphere CreateFromBoundingBox(Box box)
         {
-            CreateFromBoundingBox(ref box, out BoundingSphere result);
+            CreateFromBoundingBox(ref box, out Sphere result);
             return result;
         }
 
         /// <summary>
-        /// Creates the smallest <see cref="BoundingSphere"/> that can contain a specified <see cref="BoundingBox"/>.
+        /// Creates the smallest <see cref="Sphere"/> that can contain a specified <see cref="Box"/>.
         /// </summary>
         /// <param name="box">The box to create the sphere from.</param>
-        /// <param name="result">The new <see cref="BoundingSphere"/> as an output parameter.</param>
-        public static void CreateFromBoundingBox(ref BoundingBox box, out BoundingSphere result)
+        /// <param name="result">The new <see cref="Sphere"/> as an output parameter.</param>
+        public static void CreateFromBoundingBox(ref Box box, out Sphere result)
         {
             // Find the center of the box.
             Vector3 center = new Vector3((box.Min.X + box.Max.X) / 2.0f,
@@ -253,27 +254,27 @@ namespace Ara3D
             // Find the distance between the center and one of the corners of the box.
             float radius = Vector3.Distance(center, box.Max);
 
-            result = new BoundingSphere(center, radius);
+            result = new Sphere(center, radius);
         }
 
         #endregion
 
         /// <summary>
-        /// Creates the smallest <see cref="BoundingSphere"/> that can contain a specified <see cref="BoundingFrustum"/>.
+        /// Creates the smallest <see cref="Sphere"/> that can contain a specified <see cref="Frustum"/>.
         /// </summary>
         /// <param name="frustum">The frustum to create the sphere from.</param>
-        /// <returns>The new <see cref="BoundingSphere"/>.</returns>
-        public static BoundingSphere CreateFromFrustum(BoundingFrustum frustum)
+        /// <returns>The new <see cref="Sphere"/>.</returns>
+        public static Sphere CreateFromFrustum(Frustum frustum)
         {
             return CreateFromPoints(frustum.GetCorners());
         }
 
         /// <summary>
-        /// Creates the smallest <see cref="BoundingSphere"/> that can contain a specified list of points in 3D-space. 
+        /// Creates the smallest <see cref="Sphere"/> that can contain a specified list of points in 3D-space. 
         /// </summary>
         /// <param name="points">List of point to create the sphere from.</param>
-        /// <returns>The new <see cref="BoundingSphere"/>.</returns>
-        public static BoundingSphere CreateFromPoints(IEnumerable<Vector3> points)
+        /// <returns>The new <see cref="Sphere"/>.</returns>
+        public static Sphere CreateFromPoints(IEnumerable<Vector3> points)
         {
             if (points == null )
                 throw new ArgumentNullException(nameof(points));
@@ -351,28 +352,28 @@ namespace Ara3D
                 }
             }
 
-            return new BoundingSphere(center, radius);
+            return new Sphere(center, radius);
         }
 
         /// <summary>
-        /// Creates the smallest <see cref="BoundingSphere"/> that can contain two spheres.
+        /// Creates the smallest <see cref="Sphere"/> that can contain two spheres.
         /// </summary>
         /// <param name="original">First sphere.</param>
         /// <param name="additional">Second sphere.</param>
-        /// <returns>The new <see cref="BoundingSphere"/>.</returns>
-        public static BoundingSphere CreateMerged(BoundingSphere original, BoundingSphere additional)
+        /// <returns>The new <see cref="Sphere"/>.</returns>
+        public static Sphere CreateMerged(Sphere original, Sphere additional)
         {
-            CreateMerged(ref original, ref additional, out BoundingSphere result);
+            CreateMerged(ref original, ref additional, out Sphere result);
             return result;
         }
 
         /// <summary>
-        /// Creates the smallest <see cref="BoundingSphere"/> that can contain two spheres.
+        /// Creates the smallest <see cref="Sphere"/> that can contain two spheres.
         /// </summary>
         /// <param name="original">First sphere.</param>
         /// <param name="additional">Second sphere.</param>
-        /// <param name="result">The new <see cref="BoundingSphere"/> as an output parameter.</param>
-        public static void CreateMerged(ref BoundingSphere original, ref BoundingSphere additional, out BoundingSphere result)
+        /// <param name="result">The new <see cref="Sphere"/> as an output parameter.</param>
+        public static void CreateMerged(ref Sphere original, ref Sphere additional, out Sphere result)
         {
             Vector3 ocenterToaCenter = Vector3.Subtract(additional.Center, original.Center);
             float distance = ocenterToaCenter.Length();
@@ -394,7 +395,7 @@ namespace Ara3D
             float Rightradius = Math.Max(original.Radius + distance, additional.Radius);
             ocenterToaCenter = ocenterToaCenter + (((leftRadius - Rightradius) / (2 * ocenterToaCenter.Length())) * ocenterToaCenter);//oCenterToResultCenter
 
-            result = new BoundingSphere
+            result = new Sphere
             {
                 Center = original.Center + ocenterToaCenter,
                 Radius = (leftRadius + Rightradius) / 2
@@ -402,11 +403,11 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Compares whether current instance is equal to specified <see cref="BoundingSphere"/>.
+        /// Compares whether current instance is equal to specified <see cref="Sphere"/>.
         /// </summary>
-        /// <param name="other">The <see cref="BoundingSphere"/> to compare.</param>
+        /// <param name="other">The <see cref="Sphere"/> to compare.</param>
         /// <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
-        public bool Equals(BoundingSphere other)
+        public bool Equals(Sphere other)
         {
             return Center == other.Center && Radius == other.Radius;
         }
@@ -418,16 +419,16 @@ namespace Ara3D
         /// <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
         public override bool Equals(object obj)
         {
-            if (obj is BoundingSphere)
-                return Equals((BoundingSphere)obj);
+            if (obj is Sphere)
+                return Equals((Sphere)obj);
 
             return false;
         }
 
         /// <summary>
-        /// Gets the hash code of this <see cref="BoundingSphere"/>.
+        /// Gets the hash code of this <see cref="Sphere"/>.
         /// </summary>
-        /// <returns>Hash code of this <see cref="BoundingSphere"/>.</returns>
+        /// <returns>Hash code of this <see cref="Sphere"/>.</returns>
         public override int GetHashCode()
         {
             return Center.GetHashCode() + Radius.GetHashCode();
@@ -436,21 +437,21 @@ namespace Ara3D
         #region Intersects
 
         /// <summary>
-        /// Gets whether or not a specified <see cref="BoundingBox"/> intersects with this sphere.
+        /// Gets whether or not a specified <see cref="Box"/> intersects with this sphere.
         /// </summary>
         /// <param name="box">The box for testing.</param>
-        /// <returns><c>true</c> if <see cref="BoundingBox"/> intersects with this sphere; <c>false</c> otherwise.</returns>
-        public bool Intersects(BoundingBox box)
+        /// <returns><c>true</c> if <see cref="Box"/> intersects with this sphere; <c>false</c> otherwise.</returns>
+        public bool Intersects(Box box)
         {
 			return box.Intersects(this);
         }
 
         /// <summary>
-        /// Gets whether or not a specified <see cref="BoundingBox"/> intersects with this sphere.
+        /// Gets whether or not a specified <see cref="Box"/> intersects with this sphere.
         /// </summary>
         /// <param name="box">The box for testing.</param>
-        /// <param name="result"><c>true</c> if <see cref="BoundingBox"/> intersects with this sphere; <c>false</c> otherwise. As an output parameter.</param>
-        public void Intersects(ref BoundingBox box, out bool result)
+        /// <param name="result"><c>true</c> if <see cref="Box"/> intersects with this sphere; <c>false</c> otherwise. As an output parameter.</param>
+        public void Intersects(ref Box box, out bool result)
         {
             box.Intersects(ref this, out result);
         }
@@ -469,22 +470,22 @@ namespace Ara3D
         */
 
         /// <summary>
-        /// Gets whether or not the other <see cref="BoundingSphere"/> intersects with this sphere.
+        /// Gets whether or not the other <see cref="Sphere"/> intersects with this sphere.
         /// </summary>
         /// <param name="sphere">The other sphere for testing.</param>
-        /// <returns><c>true</c> if other <see cref="BoundingSphere"/> intersects with this sphere; <c>false</c> otherwise.</returns>
-        public bool Intersects(BoundingSphere sphere)
+        /// <returns><c>true</c> if other <see cref="Sphere"/> intersects with this sphere; <c>false</c> otherwise.</returns>
+        public bool Intersects(Sphere sphere)
         {
             Intersects(ref sphere, out bool result);
             return result;
         }
 
         /// <summary>
-        /// Gets whether or not the other <see cref="BoundingSphere"/> intersects with this sphere.
+        /// Gets whether or not the other <see cref="Sphere"/> intersects with this sphere.
         /// </summary>
         /// <param name="sphere">The other sphere for testing.</param>
-        /// <param name="result"><c>true</c> if other <see cref="BoundingSphere"/> intersects with this sphere; <c>false</c> otherwise. As an output parameter.</param>
-        public void Intersects(ref BoundingSphere sphere, out bool result)
+        /// <param name="result"><c>true</c> if other <see cref="Sphere"/> intersects with this sphere; <c>false</c> otherwise. As an output parameter.</param>
+        public void Intersects(ref Sphere sphere, out bool result)
         {
             float sqDistance = Vector3.DistanceSquared(sphere.Center, Center);
 
@@ -546,10 +547,10 @@ namespace Ara3D
         #endregion
 
         /// <summary>
-        /// Returns a <see cref="String"/> representation of this <see cref="BoundingSphere"/> in the format:
+        /// Returns a <see cref="String"/> representation of this <see cref="Sphere"/> in the format:
         /// {Center:[<see cref="Center"/>] Radius:[<see cref="Radius"/>]}
         /// </summary>
-        /// <returns>A <see cref="String"/> representation of this <see cref="BoundingSphere"/>.</returns>
+        /// <returns>A <see cref="String"/> representation of this <see cref="Sphere"/>.</returns>
         public override string ToString()
         {
             return "{Center:" + Center + " Radius:" + Radius + "}";
@@ -558,13 +559,13 @@ namespace Ara3D
         #region Transform
 
         /// <summary>
-        /// Creates a new <see cref="BoundingSphere"/> that contains a transformation of translation and scale from this sphere by the specified <see cref="Matrix"/>.
+        /// Creates a new <see cref="Sphere"/> that contains a transformation of translation and scale from this sphere by the specified <see cref="Matrix"/>.
         /// </summary>
         /// <param name="matrix">The transformation <see cref="Matrix"/>.</param>
-        /// <returns>Transformed <see cref="BoundingSphere"/>.</returns>
-        public BoundingSphere Transform(Matrix4x4 matrix)
+        /// <returns>Transformed <see cref="Sphere"/>.</returns>
+        public Sphere Transform(Matrix4x4 matrix)
         {
-            BoundingSphere sphere = new BoundingSphere
+            Sphere sphere = new Sphere
             {
                 Center = Vector3.Transform(Center, matrix),
                 Radius = Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33)))))
@@ -573,11 +574,11 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Creates a new <see cref="BoundingSphere"/> that contains a transformation of translation and scale from this sphere by the specified <see cref="Matrix"/>.
+        /// Creates a new <see cref="Sphere"/> that contains a transformation of translation and scale from this sphere by the specified <see cref="Matrix"/>.
         /// </summary>
         /// <param name="matrix">The transformation <see cref="Matrix"/>.</param>
-        /// <param name="result">Transformed <see cref="BoundingSphere"/> as an output parameter.</param>
-        public void Transform(ref Matrix4x4 matrix, out BoundingSphere result)
+        /// <param name="result">Transformed <see cref="Sphere"/> as an output parameter.</param>
+        public void Transform(ref Matrix4x4 matrix, out Sphere result)
         {
             result.Center = Vector3.Transform(Center, matrix);
             result.Radius = Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33)))));
@@ -586,7 +587,7 @@ namespace Ara3D
         #endregion
 
         /// <summary>
-        /// Deconstruction method for <see cref="BoundingSphere"/>.
+        /// Deconstruction method for <see cref="Sphere"/>.
         /// </summary>
         /// <param name="center"></param>
         /// <param name="radius"></param>
@@ -601,23 +602,23 @@ namespace Ara3D
         #region Operators
 
         /// <summary>
-        /// Compares whether two <see cref="BoundingSphere"/> instances are equal.
+        /// Compares whether two <see cref="Sphere"/> instances are equal.
         /// </summary>
-        /// <param name="a"><see cref="BoundingSphere"/> instance on the left of the equal sign.</param>
-        /// <param name="b"><see cref="BoundingSphere"/> instance on the right of the equal sign.</param>
+        /// <param name="a"><see cref="Sphere"/> instance on the left of the equal sign.</param>
+        /// <param name="b"><see cref="Sphere"/> instance on the right of the equal sign.</param>
         /// <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
-        public static bool operator == (BoundingSphere a, BoundingSphere b)
+        public static bool operator == (Sphere a, Sphere b)
         {
             return a.Equals(b);
         }
 
         /// <summary>
-        /// Compares whether two <see cref="BoundingSphere"/> instances are not equal.
+        /// Compares whether two <see cref="Sphere"/> instances are not equal.
         /// </summary>
-        /// <param name="a"><see cref="BoundingSphere"/> instance on the left of the not equal sign.</param>
-        /// <param name="b"><see cref="BoundingSphere"/> instance on the right of the not equal sign.</param>
+        /// <param name="a"><see cref="Sphere"/> instance on the left of the not equal sign.</param>
+        /// <param name="b"><see cref="Sphere"/> instance on the right of the not equal sign.</param>
         /// <returns><c>true</c> if the instances are not equal; <c>false</c> otherwise.</returns>
-        public static bool operator != (BoundingSphere a, BoundingSphere b)
+        public static bool operator != (Sphere a, Sphere b)
         {
             return !a.Equals(b);
         }

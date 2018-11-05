@@ -11,11 +11,8 @@ namespace Ara3D
 {
     [DataContract]
     [DebuggerDisplay("{DebugDisplayString,nq}")]
-    public struct BoundingBox : IEquatable<BoundingBox>
+    public struct Box : IEquatable<Box>, IArray<Vector3>
     {
-
-        #region Public Fields
-
         [DataMember]
         public Vector3 Min;
       
@@ -24,23 +21,17 @@ namespace Ara3D
 
         public const int CornerCount = 8;
 
-        #endregion Public Fields
+        public int Count { get { return 2;  } }
 
+        public Vector3 this[int n] { get { return n == 0 ? Min : Max; } }
 
-        #region Public Constructors
-
-        public BoundingBox(Vector3 min, Vector3 max)
+        public Box(Vector3 min, Vector3 max)
         {
             Min = min;
             Max = max;
         }
 
-        #endregion Public Constructors
-
-
-        #region Public Methods
-
-        public ContainmentType Contains(BoundingBox box)
+        public ContainmentType Contains(Box box)
         {
             //test if all corner is in the same side of a face by just checking min and max
             if (box.Max.X < Min.X
@@ -50,7 +41,6 @@ namespace Ara3D
                 || box.Max.Z < Min.Z
                 || box.Min.Z > Max.Z)
                 return ContainmentType.Disjoint;
-
 
             if (box.Min.X >= Min.X
                 && box.Max.X <= Max.X
@@ -63,51 +53,12 @@ namespace Ara3D
             return ContainmentType.Intersects;
         }
 
-        public void Contains(ref BoundingBox box, out ContainmentType result)
+        public void Contains(ref Box box, out ContainmentType result)
         {
             result = Contains(box);
         }
 
-        public ContainmentType Contains(BoundingFrustum frustum)
-        {
-            //TODO: bad done here need a fix. 
-            //Because question is not frustum contain box but reverse and this is not the same
-            int i;
-            ContainmentType contained;
-            Vector3[] corners = frustum.GetCorners();
-
-            // First we check if frustum is in box
-            for (i = 0; i < corners.Length; i++)
-            {
-                Contains(ref corners[i], out contained);
-                if (contained == ContainmentType.Disjoint)
-                    break;
-            }
-
-            if (i == corners.Length) // This means we checked all the corners and they were all contain or instersect
-                return ContainmentType.Contains;
-
-            if (i != 0)             // if i is not equal to zero, we can fastpath and say that this box intersects
-                return ContainmentType.Intersects;
-
-
-            // If we get here, it means the first (and only) point we checked was actually contained in the frustum.
-            // So we assume that all other points will also be contained. If one of the points is disjoint, we can
-            // exit immediately saying that the result is Intersects
-            i++;
-            for (; i < corners.Length; i++)
-            {
-                Contains(ref corners[i], out contained);
-                if (contained != ContainmentType.Contains)
-                    return ContainmentType.Intersects;
-
-            }
-
-            // If we get here, then we know all the points were actually contained, therefore result is Contains
-            return ContainmentType.Contains;
-        }
-
-        public ContainmentType Contains(BoundingSphere sphere)
+        public ContainmentType Contains(Sphere sphere)
         {
             if (sphere.Center.X - Min.X >= sphere.Radius
                 && sphere.Center.Y - Min.Y >= sphere.Radius
@@ -191,7 +142,7 @@ namespace Ara3D
             return ContainmentType.Disjoint;
         }
 
-        public void Contains(ref BoundingSphere sphere, out ContainmentType result)
+        public void Contains(ref Sphere sphere, out ContainmentType result)
         {
             result = Contains(sphere);
         }
@@ -220,8 +171,8 @@ namespace Ara3D
             }
         }
 
-        private static readonly Vector3 MaxVector3 = new Vector3(float.MaxValue);
-        private static readonly Vector3 MinVector3 = new Vector3(float.MinValue);
+        public static readonly Vector3 MaxVector3 = new Vector3(float.MaxValue);
+        public static readonly Vector3 MinVector3 = new Vector3(float.MinValue);
 
         /// <summary>
         /// Create a bounding box from the given list of points.
@@ -229,12 +180,8 @@ namespace Ara3D
         /// <param name="points">The list of Vector3 instances defining the point cloud to bound</param>
         /// <returns>A bounding box that encapsulates the given point cloud.</returns>
         /// <exception cref="ArgumentException">Thrown if the given list has no points.</exception>
-        public static BoundingBox CreateFromPoints(IEnumerable<Vector3> points)
+        public static Box CreateFromPoints(IEnumerable<Vector3> points)
         {
-            if (points == null)
-                throw new ArgumentNullException();
-
-            var empty = true;
             var minVec = MaxVector3;
             var maxVec = MinVector3;
             foreach (var ptVector in points)
@@ -242,39 +189,33 @@ namespace Ara3D
                 minVec.X = (minVec.X < ptVector.X) ? minVec.X : ptVector.X;
                 minVec.Y = (minVec.Y < ptVector.Y) ? minVec.Y : ptVector.Y;
                 minVec.Z = (minVec.Z < ptVector.Z) ? minVec.Z : ptVector.Z;
-
                 maxVec.X = (maxVec.X > ptVector.X) ? maxVec.X : ptVector.X;
                 maxVec.Y = (maxVec.Y > ptVector.Y) ? maxVec.Y : ptVector.Y;
                 maxVec.Z = (maxVec.Z > ptVector.Z) ? maxVec.Z : ptVector.Z;
-
-                empty = false;
             }
-            if (empty)
-                throw new ArgumentException();
-
-            return new BoundingBox(minVec, maxVec);
+            return new Box(minVec, maxVec);
         }
 
-        public static BoundingBox CreateFromSphere(BoundingSphere sphere)
+        public static Box CreateFromSphere(Sphere sphere)
         {
-            CreateFromSphere(ref sphere, out BoundingBox result);
+            CreateFromSphere(ref sphere, out Box result);
             return result;
         }
 
-        public static void CreateFromSphere(ref BoundingSphere sphere, out BoundingBox result)
+        public static void CreateFromSphere(ref Sphere sphere, out Box result)
         {
             var corner = new Vector3(sphere.Radius);
             result.Min = sphere.Center - corner;
             result.Max = sphere.Center + corner;
         }
 
-        public static BoundingBox CreateMerged(BoundingBox original, BoundingBox additional)
+        public static Box CreateMerged(Box original, Box additional)
         {
-            CreateMerged(ref original, ref additional, out BoundingBox result);
+            CreateMerged(ref original, ref additional, out Box result);
             return result;
         }
 
-        public static void CreateMerged(ref BoundingBox original, ref BoundingBox additional, out BoundingBox result)
+        public static void CreateMerged(ref Box original, ref Box additional, out Box result)
         {
             result.Min.X = Math.Min(original.Min.X, additional.Min.X);
             result.Min.Y = Math.Min(original.Min.Y, additional.Min.Y);
@@ -284,14 +225,14 @@ namespace Ara3D
             result.Max.Z = Math.Max(original.Max.Z, additional.Max.Z);
         }
 
-        public bool Equals(BoundingBox other)
+        public bool Equals(Box other)
         {
             return (Min == other.Min) && (Max == other.Max);
         }
 
         public override bool Equals(object obj)
         {
-            return (obj is BoundingBox) && Equals((BoundingBox)obj);
+            return (obj is Box) && Equals((Box)obj);
         }
 
         public Vector3[] GetCorners()
@@ -349,13 +290,13 @@ namespace Ara3D
             return Min.GetHashCode() + Max.GetHashCode();
         }
 
-        public bool Intersects(BoundingBox box)
+        public bool Intersects(Box box)
         {
             Intersects(ref box, out bool result);
             return result;
         }
 
-        public void Intersects(ref BoundingBox box, out bool result)
+        public void Intersects(ref Box box, out bool result)
         {
             if ((Max.X >= box.Min.X) && (Min.X <= box.Max.X))
             {
@@ -373,12 +314,12 @@ namespace Ara3D
             return;
         }
 
-        public bool Intersects(BoundingFrustum frustum)
+        public bool Intersects(Frustum frustum)
         {
             return frustum.Intersects(this);
         }
 
-        public bool Intersects(BoundingSphere sphere)
+        public bool Intersects(Sphere sphere)
         {
             if (sphere.Center.X - Min.X > sphere.Radius
                 && sphere.Center.Y - Min.Y > sphere.Radius
@@ -411,7 +352,7 @@ namespace Ara3D
             return false;
         }
 
-        public void Intersects(ref BoundingSphere sphere, out bool result)
+        public void Intersects(ref Sphere sphere, out bool result)
         {
             result = Intersects(sphere);
         }
@@ -493,12 +434,12 @@ namespace Ara3D
             result = Intersects(ray);
         }
 
-        public static bool operator ==(BoundingBox a, BoundingBox b)
+        public static bool operator ==(Box a, Box b)
         {
             return a.Equals(b);
         }
 
-        public static bool operator !=(BoundingBox a, BoundingBox b)
+        public static bool operator !=(Box a, Box b)
         {
             return !a.Equals(b);
         }
@@ -514,7 +455,7 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Deconstruction method for <see cref="BoundingBox"/>.
+        /// Deconstruction method for <see cref="Box"/>.
         /// </summary>
         /// <param name="min"></param>
         /// <param name="max"></param>

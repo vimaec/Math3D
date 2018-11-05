@@ -23,7 +23,7 @@ namespace Ara3D
         /// <summary>
         /// Returns the vector (1,1,1).
         /// </summary>
-        public static Vector3 One => new Vector3(1.0f, 1.0f, 1.0f);
+        public static Vector3 One => new Vector3(1.0f);
         /// <summary>
         /// Returns the vector (1,0,0).
         /// </summary>
@@ -36,6 +36,18 @@ namespace Ara3D
         /// Returns the vector (0,0,1).
         /// </summary>
         public static Vector3 UnitZ => new Vector3(0.0f, 0.0f, 1.0f);
+        /// <summary>
+        /// Returns a vector3 containing maximum value floats 
+        /// </summary>
+        public static Vector3 MaxValue => new Vector3(float.MaxValue);
+        /// <summary>
+        /// Returns a Vector3 containing minimum value floats 
+        /// </summary>
+        public static Vector3 MinValue => new Vector3(float.MinValue);
+        /// <summary>
+        /// Returns a Vector3 containing NaN value floats 
+        /// </summary>
+        public static Vector3 NaNValue => new Vector3(float.NaN);
         #endregion Public Static Properties
 
         #region Public Instance Methods

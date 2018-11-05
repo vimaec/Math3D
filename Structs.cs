@@ -1,4 +1,6 @@
-﻿namespace Ara3D
+﻿using System;
+
+namespace Ara3D
 {
     /*
     public struct Vector2 : IArray<float> {
@@ -25,15 +27,19 @@
         public Vector4(IArray<int> xs) { v = new System.Numerics.Vector4(xs[0], xs[1], xs[2], xs[3]); }
     }*/
     
+
+    public struct Pair<T> : IArray<T>, IEquatable<T> where T : struct, IEquatable<T>
+    {
+        T A;
+        T B;
+        int Count { get; }
+
+
+    }
+
     public interface ILimits<T>
     {
         T Min { get; }
         T Max { get; }
     }
-
-    public struct Limits<T>  {
-        public T Min { get; set; }
-        public T Max { get; set; }
-    }
-
 }

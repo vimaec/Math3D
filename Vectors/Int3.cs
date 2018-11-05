@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Ara3D.Vectors
+namespace Ara3D
 {    
     public struct Int3 : IArray<int>, IEnumerable<int>
     {

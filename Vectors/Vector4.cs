@@ -36,6 +36,18 @@ namespace Ara3D
         /// Returns the vector (0,0,0,1).
         /// </summary>
         public static Vector4 UnitW => new Vector4(0.0f, 0.0f, 0.0f, 1.0f);
+        /// <summary>
+        /// Returns a Vector4 containing maximum value floats 
+        /// </summary>
+        public static Vector4 MaxValue => new Vector4(float.MaxValue);
+        /// <summary>
+        /// Returns a Vector3 containing minimum value floats 
+        /// </summary>
+        public static Vector4 MinValue => new Vector4(float.MinValue);
+        /// <summary>
+        /// Returns a Vector4 containing NaN value floats 
+        /// </summary>
+        public static Vector4 NaNValue => new Vector4(float.NaN);
         #endregion Public Static Properties
 
         #region Public instance methods

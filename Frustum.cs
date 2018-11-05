@@ -148,22 +148,22 @@ namespace Ara3D
         #region Contains
 
         /// <summary>
-        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="BoundingBox"/>.
+        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="Box"/>.
         /// </summary>
-        /// <param name="box">A <see cref="BoundingBox"/> for testing.</param>
-        /// <returns>Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="BoundingBox"/>.</returns>
-        public ContainmentType Contains(BoundingBox box)
+        /// <param name="box">A <see cref="Box"/> for testing.</param>
+        /// <returns>Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="Box"/>.</returns>
+        public ContainmentType Contains(Box box)
         {
             Contains(ref box, out ContainmentType result);
             return result;
         }
 
         /// <summary>
-        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="BoundingBox"/>.
+        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="Box"/>.
         /// </summary>
-        /// <param name="box">A <see cref="BoundingBox"/> for testing.</param>
-        /// <param name="result">Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="BoundingBox"/> as an output parameter.</param>
-        public void Contains(ref BoundingBox box, out ContainmentType result)
+        /// <param name="box">A <see cref="Box"/> for testing.</param>
+        /// <param name="result">Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="Box"/> as an output parameter.</param>
+        public void Contains(ref Box box, out ContainmentType result)
         {
             var intersects = false;
             for (var i = 0; i < PlaneCount; ++i)
@@ -209,22 +209,22 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="BoundingSphere"/>.
+        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="Sphere"/>.
         /// </summary>
-        /// <param name="sphere">A <see cref="BoundingSphere"/> for testing.</param>
-        /// <returns>Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="BoundingSphere"/>.</returns>
-        public ContainmentType Contains(BoundingSphere sphere)
+        /// <param name="sphere">A <see cref="Sphere"/> for testing.</param>
+        /// <returns>Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="Sphere"/>.</returns>
+        public ContainmentType Contains(Sphere sphere)
         {
             Contains(ref sphere, out ContainmentType result);
             return result;
         }
 
         /// <summary>
-        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="BoundingSphere"/>.
+        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="Sphere"/>.
         /// </summary>
-        /// <param name="sphere">A <see cref="BoundingSphere"/> for testing.</param>
-        /// <param name="result">Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="BoundingSphere"/> as an output parameter.</param>
-        public void Contains(ref BoundingSphere sphere, out ContainmentType result)
+        /// <param name="sphere">A <see cref="Sphere"/> for testing.</param>
+        /// <param name="result">Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="Sphere"/> as an output parameter.</param>
+        public void Contains(ref Sphere sphere, out ContainmentType result)
         {
             var intersects = false;
             for (var i = 0; i < PlaneCount; ++i) 
@@ -331,22 +331,22 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Gets whether or not a specified <see cref="BoundingBox"/> intersects with this <see cref="BoundingFrustum"/>.
+        /// Gets whether or not a specified <see cref="Box"/> intersects with this <see cref="BoundingFrustum"/>.
         /// </summary>
-        /// <param name="box">A <see cref="BoundingBox"/> for intersection test.</param>
-        /// <returns><c>true</c> if specified <see cref="BoundingBox"/> intersects with this <see cref="BoundingFrustum"/>; <c>false</c> otherwise.</returns>
-        public bool Intersects(BoundingBox box)
+        /// <param name="box">A <see cref="Box"/> for intersection test.</param>
+        /// <returns><c>true</c> if specified <see cref="Box"/> intersects with this <see cref="BoundingFrustum"/>; <c>false</c> otherwise.</returns>
+        public bool Intersects(Box box)
         {
             Intersects(ref box, out bool result);
             return result;
         }
 
         /// <summary>
-        /// Gets whether or not a specified <see cref="BoundingBox"/> intersects with this <see cref="BoundingFrustum"/>.
+        /// Gets whether or not a specified <see cref="Box"/> intersects with this <see cref="BoundingFrustum"/>.
         /// </summary>
-        /// <param name="box">A <see cref="BoundingBox"/> for intersection test.</param>
-        /// <param name="result"><c>true</c> if specified <see cref="BoundingBox"/> intersects with this <see cref="BoundingFrustum"/>; <c>false</c> otherwise as an output parameter.</param>
-        public void Intersects(ref BoundingBox box, out bool result)
+        /// <param name="box">A <see cref="Box"/> for intersection test.</param>
+        /// <param name="result"><c>true</c> if specified <see cref="Box"/> intersects with this <see cref="BoundingFrustum"/>; <c>false</c> otherwise as an output parameter.</param>
+        public void Intersects(ref Box box, out bool result)
         {
             Contains(ref box, out ContainmentType containment);
             result = containment != ContainmentType.Disjoint;
@@ -363,22 +363,22 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Gets whether or not a specified <see cref="BoundingSphere"/> intersects with this <see cref="BoundingFrustum"/>.
+        /// Gets whether or not a specified <see cref="Sphere"/> intersects with this <see cref="BoundingFrustum"/>.
         /// </summary>
-        /// <param name="sphere">A <see cref="BoundingSphere"/> for intersection test.</param>
-        /// <returns><c>true</c> if specified <see cref="BoundingSphere"/> intersects with this <see cref="BoundingFrustum"/>; <c>false</c> otherwise.</returns>
-        public bool Intersects(BoundingSphere sphere)
+        /// <param name="sphere">A <see cref="Sphere"/> for intersection test.</param>
+        /// <returns><c>true</c> if specified <see cref="Sphere"/> intersects with this <see cref="BoundingFrustum"/>; <c>false</c> otherwise.</returns>
+        public bool Intersects(Sphere sphere)
         {
             Intersects(ref sphere, out bool result);
             return result;
         }
 
         /// <summary>
-        /// Gets whether or not a specified <see cref="BoundingSphere"/> intersects with this <see cref="BoundingFrustum"/>.
+        /// Gets whether or not a specified <see cref="Sphere"/> intersects with this <see cref="BoundingFrustum"/>.
         /// </summary>
-        /// <param name="sphere">A <see cref="BoundingSphere"/> for intersection test.</param>
-        /// <param name="result"><c>true</c> if specified <see cref="BoundingSphere"/> intersects with this <see cref="BoundingFrustum"/>; <c>false</c> otherwise as an output parameter.</param>
-        public void Intersects(ref BoundingSphere sphere, out bool result)
+        /// <param name="sphere">A <see cref="Sphere"/> for intersection test.</param>
+        /// <param name="result"><c>true</c> if specified <see cref="Sphere"/> intersects with this <see cref="BoundingFrustum"/>; <c>false</c> otherwise as an output parameter.</param>
+        public void Intersects(ref Sphere sphere, out bool result)
         {
             Contains(ref sphere, out ContainmentType containment);
             result = containment != ContainmentType.Disjoint;
