@@ -4,6 +4,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Numerics;
 
 namespace Ara3D
 {
@@ -11,7 +12,7 @@ namespace Ara3D
     /// Defines a viewing frustum for intersection operations.
     /// </summary>
     [DebuggerDisplay("{DebugDisplayString,nq}")]
-    public class BoundingFrustum : IEquatable<BoundingFrustum>
+    public class Frustum : IEquatable<Frustum>
     {
         #region Private Fields
 
@@ -102,7 +103,7 @@ namespace Ara3D
         /// Constructs the frustum by extracting the view planes from a matrix.
         /// </summary>
         /// <param name="value">Combined matrix which usually is (View * Projection).</param>
-        public BoundingFrustum(Matrix4x4 value)
+        public Frustum(Matrix4x4 value)
         {
             _matrix = value;
             CreatePlanes();
@@ -114,12 +115,12 @@ namespace Ara3D
         #region Operators
 
         /// <summary>
-        /// Compares whether two <see cref="BoundingFrustum"/> instances are equal.
+        /// Compares whether two <see cref="Frustum"/> instances are equal.
         /// </summary>
-        /// <param name="a"><see cref="BoundingFrustum"/> instance on the left of the equal sign.</param>
-        /// <param name="b"><see cref="BoundingFrustum"/> instance on the right of the equal sign.</param>
+        /// <param name="a"><see cref="Frustum"/> instance on the left of the equal sign.</param>
+        /// <param name="b"><see cref="Frustum"/> instance on the right of the equal sign.</param>
         /// <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
-        public static bool operator ==(BoundingFrustum a, BoundingFrustum b)
+        public static bool operator ==(Frustum a, Frustum b)
         {
             if (Equals(a, null))
                 return (Equals(b, null));
@@ -131,12 +132,12 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Compares whether two <see cref="BoundingFrustum"/> instances are not equal.
+        /// Compares whether two <see cref="Frustum"/> instances are not equal.
         /// </summary>
-        /// <param name="a"><see cref="BoundingFrustum"/> instance on the left of the not equal sign.</param>
-        /// <param name="b"><see cref="BoundingFrustum"/> instance on the right of the not equal sign.</param>
+        /// <param name="a"><see cref="Frustum"/> instance on the left of the not equal sign.</param>
+        /// <param name="b"><see cref="Frustum"/> instance on the right of the not equal sign.</param>
         /// <returns><c>true</c> if the instances are not equal; <c>false</c> otherwise.</returns>
-        public static bool operator !=(BoundingFrustum a, BoundingFrustum b)
+        public static bool operator !=(Frustum a, Frustum b)
         {
             return !(a == b);
         }
@@ -148,10 +149,10 @@ namespace Ara3D
         #region Contains
 
         /// <summary>
-        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="Box"/>.
+        /// Containment test between this <see cref="Frustum"/> and specified <see cref="Box"/>.
         /// </summary>
         /// <param name="box">A <see cref="Box"/> for testing.</param>
-        /// <returns>Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="Box"/>.</returns>
+        /// <returns>Result of testing for containment between this <see cref="Frustum"/> and specified <see cref="Box"/>.</returns>
         public ContainmentType Contains(Box box)
         {
             Contains(ref box, out ContainmentType result);
@@ -159,10 +160,10 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="Box"/>.
+        /// Containment test between this <see cref="Frustum"/> and specified <see cref="Box"/>.
         /// </summary>
         /// <param name="box">A <see cref="Box"/> for testing.</param>
-        /// <param name="result">Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="Box"/> as an output parameter.</param>
+        /// <param name="result">Result of testing for containment between this <see cref="Frustum"/> and specified <see cref="Box"/> as an output parameter.</param>
         public void Contains(ref Box box, out ContainmentType result)
         {
             var intersects = false;
@@ -183,11 +184,11 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="BoundingFrustum"/>.
+        /// Containment test between this <see cref="Frustum"/> and specified <see cref="Frustum"/>.
         /// </summary>
-        /// <param name="frustum">A <see cref="BoundingFrustum"/> for testing.</param>
-        /// <returns>Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="BoundingFrustum"/>.</returns>
-        public ContainmentType Contains(BoundingFrustum frustum)
+        /// <param name="frustum">A <see cref="Frustum"/> for testing.</param>
+        /// <returns>Result of testing for containment between this <see cref="Frustum"/> and specified <see cref="Frustum"/>.</returns>
+        public ContainmentType Contains(Frustum frustum)
         {
             if (this == frustum)                // We check to see if the two frustums are equal
                 return ContainmentType.Contains;// If they are, there's no need to go any further.
@@ -209,10 +210,10 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="Sphere"/>.
+        /// Containment test between this <see cref="Frustum"/> and specified <see cref="Sphere"/>.
         /// </summary>
         /// <param name="sphere">A <see cref="Sphere"/> for testing.</param>
-        /// <returns>Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="Sphere"/>.</returns>
+        /// <returns>Result of testing for containment between this <see cref="Frustum"/> and specified <see cref="Sphere"/>.</returns>
         public ContainmentType Contains(Sphere sphere)
         {
             Contains(ref sphere, out ContainmentType result);
@@ -220,10 +221,10 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="Sphere"/>.
+        /// Containment test between this <see cref="Frustum"/> and specified <see cref="Sphere"/>.
         /// </summary>
         /// <param name="sphere">A <see cref="Sphere"/> for testing.</param>
-        /// <param name="result">Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="Sphere"/> as an output parameter.</param>
+        /// <param name="result">Result of testing for containment between this <see cref="Frustum"/> and specified <see cref="Sphere"/> as an output parameter.</param>
         public void Contains(ref Sphere sphere, out ContainmentType result)
         {
             var intersects = false;
@@ -246,34 +247,32 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="Vector3"/>.
+        /// Containment test between this <see cref="Frustum"/> and specified <see cref="Vector3"/>.
         /// </summary>
         /// <param name="point">A <see cref="Vector3"/> for testing.</param>
-        /// <returns>Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="Vector3"/>.</returns>
+        /// <returns>Result of testing for containment between this <see cref="Frustum"/> and specified <see cref="Vector3"/>.</returns>
         public ContainmentType Contains(Vector3 point)
         {
             Contains(ref point, out ContainmentType result);
             return result;
         }
 
+       
+
         /// <summary>
-        /// Containment test between this <see cref="BoundingFrustum"/> and specified <see cref="Vector3"/>.
+        /// Containment test between this <see cref="Frustum"/> and specified <see cref="Vector3"/>.
         /// </summary>
         /// <param name="point">A <see cref="Vector3"/> for testing.</param>
-        /// <param name="result">Result of testing for containment between this <see cref="BoundingFrustum"/> and specified <see cref="Vector3"/> as an output parameter.</param>
+        /// <param name="result">Result of testing for containment between this <see cref="Frustum"/> and specified <see cref="Vector3"/> as an output parameter.</param>
         public void Contains(ref Vector3 point, out ContainmentType result)
         {
             for (var i = 0; i < PlaneCount; ++i)
             {
-                // TODO: find and integrate PlaneHelper
-                throw new NotImplementedException();
-                /*
-                // TODO: we might want to inline this for performance reasons
-                if (PlaneHelper.ClassifyPoint(ref point, ref this._planes[i]) > 0)
+                if (_planes[i].ClassifyPoint(point) > 0)
                 {   
                     result = ContainmentType.Disjoint;
                     return;
-                }*/
+                }
             }
             result = ContainmentType.Contains;
         }
@@ -281,23 +280,23 @@ namespace Ara3D
         #endregion
 
         /// <summary>
-        /// Compares whether current instance is equal to specified <see cref="BoundingFrustum"/>.
+        /// Compares whether current instance is equal to specified <see cref="Frustum"/>.
         /// </summary>
-        /// <param name="other">The <see cref="BoundingFrustum"/> to compare.</param>
+        /// <param name="other">The <see cref="Frustum"/> to compare.</param>
         /// <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
-        public bool Equals(BoundingFrustum other)
+        public bool Equals(Frustum other)
         {
             return (this == other);
         }
 
         /// <summary>
-        /// Compares whether current instance is equal to specified <see cref="BoundingFrustum"/>.
+        /// Compares whether current instance is equal to specified <see cref="Frustum"/>.
         /// </summary>
         /// <param name="obj">The <see cref="Object"/> to compare.</param>
         /// <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
         public override bool Equals(object obj)
         {
-            return (obj is BoundingFrustum) && this == ((BoundingFrustum)obj);
+            return (obj is Frustum) && this == ((Frustum)obj);
         }
 
         /// <summary>
@@ -322,19 +321,19 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Gets the hash code of this <see cref="BoundingFrustum"/>.
+        /// Gets the hash code of this <see cref="Frustum"/>.
         /// </summary>
-        /// <returns>Hash code of this <see cref="BoundingFrustum"/>.</returns>
+        /// <returns>Hash code of this <see cref="Frustum"/>.</returns>
         public override int GetHashCode()
         {
             return _matrix.GetHashCode();
         }
 
         /// <summary>
-        /// Gets whether or not a specified <see cref="Box"/> intersects with this <see cref="BoundingFrustum"/>.
+        /// Gets whether or not a specified <see cref="Box"/> intersects with this <see cref="Frustum"/>.
         /// </summary>
         /// <param name="box">A <see cref="Box"/> for intersection test.</param>
-        /// <returns><c>true</c> if specified <see cref="Box"/> intersects with this <see cref="BoundingFrustum"/>; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if specified <see cref="Box"/> intersects with this <see cref="Frustum"/>; <c>false</c> otherwise.</returns>
         public bool Intersects(Box box)
         {
             Intersects(ref box, out bool result);
@@ -342,10 +341,10 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Gets whether or not a specified <see cref="Box"/> intersects with this <see cref="BoundingFrustum"/>.
+        /// Gets whether or not a specified <see cref="Box"/> intersects with this <see cref="Frustum"/>.
         /// </summary>
         /// <param name="box">A <see cref="Box"/> for intersection test.</param>
-        /// <param name="result"><c>true</c> if specified <see cref="Box"/> intersects with this <see cref="BoundingFrustum"/>; <c>false</c> otherwise as an output parameter.</param>
+        /// <param name="result"><c>true</c> if specified <see cref="Box"/> intersects with this <see cref="Frustum"/>; <c>false</c> otherwise as an output parameter.</param>
         public void Intersects(ref Box box, out bool result)
         {
             Contains(ref box, out ContainmentType containment);
@@ -353,20 +352,20 @@ namespace Ara3D
 		}
 
         /// <summary>
-        /// Gets whether or not a specified <see cref="BoundingFrustum"/> intersects with this <see cref="BoundingFrustum"/>.
+        /// Gets whether or not a specified <see cref="Frustum"/> intersects with this <see cref="Frustum"/>.
         /// </summary>
-        /// <param name="frustum">An other <see cref="BoundingFrustum"/> for intersection test.</param>
-        /// <returns><c>true</c> if other <see cref="BoundingFrustum"/> intersects with this <see cref="BoundingFrustum"/>; <c>false</c> otherwise.</returns>
-        public bool Intersects(BoundingFrustum frustum)
+        /// <param name="frustum">An other <see cref="Frustum"/> for intersection test.</param>
+        /// <returns><c>true</c> if other <see cref="Frustum"/> intersects with this <see cref="Frustum"/>; <c>false</c> otherwise.</returns>
+        public bool Intersects(Frustum frustum)
         {
             return Contains(frustum) != ContainmentType.Disjoint;
         }
 
         /// <summary>
-        /// Gets whether or not a specified <see cref="Sphere"/> intersects with this <see cref="BoundingFrustum"/>.
+        /// Gets whether or not a specified <see cref="Sphere"/> intersects with this <see cref="Frustum"/>.
         /// </summary>
         /// <param name="sphere">A <see cref="Sphere"/> for intersection test.</param>
-        /// <returns><c>true</c> if specified <see cref="Sphere"/> intersects with this <see cref="BoundingFrustum"/>; <c>false</c> otherwise.</returns>
+        /// <returns><c>true</c> if specified <see cref="Sphere"/> intersects with this <see cref="Frustum"/>; <c>false</c> otherwise.</returns>
         public bool Intersects(Sphere sphere)
         {
             Intersects(ref sphere, out bool result);
@@ -374,10 +373,10 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Gets whether or not a specified <see cref="Sphere"/> intersects with this <see cref="BoundingFrustum"/>.
+        /// Gets whether or not a specified <see cref="Sphere"/> intersects with this <see cref="Frustum"/>.
         /// </summary>
         /// <param name="sphere">A <see cref="Sphere"/> for intersection test.</param>
-        /// <param name="result"><c>true</c> if specified <see cref="Sphere"/> intersects with this <see cref="BoundingFrustum"/>; <c>false</c> otherwise as an output parameter.</param>
+        /// <param name="result"><c>true</c> if specified <see cref="Sphere"/> intersects with this <see cref="Frustum"/>; <c>false</c> otherwise as an output parameter.</param>
         public void Intersects(ref Sphere sphere, out bool result)
         {
             Contains(ref sphere, out ContainmentType containment);
@@ -385,7 +384,7 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Gets type of intersection between specified <see cref="Plane"/> and this <see cref="BoundingFrustum"/>.
+        /// Gets type of intersection between specified <see cref="Plane"/> and this <see cref="Frustum"/>.
         /// </summary>
         /// <param name="plane">A <see cref="Plane"/> for intersection test.</param>
         /// <returns>A plane intersection type.</returns>
@@ -396,7 +395,7 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Gets type of intersection between specified <see cref="Plane"/> and this <see cref="BoundingFrustum"/>.
+        /// Gets type of intersection between specified <see cref="Plane"/> and this <see cref="Frustum"/>.
         /// </summary>
         /// <param name="plane">A <see cref="Plane"/> for intersection test.</param>
         /// <param name="result">A plane intersection type as an output parameter.</param>
@@ -413,10 +412,10 @@ namespace Ara3D
         }
         
         /// <summary>
-        /// Gets the distance of intersection of <see cref="Ray"/> and this <see cref="BoundingFrustum"/> or null if no intersection happens.
+        /// Gets the distance of intersection of <see cref="Ray"/> and this <see cref="Frustum"/> or null if no intersection happens.
         /// </summary>
         /// <param name="ray">A <see cref="Ray"/> for intersection test.</param>
-        /// <returns>Distance at which ray intersects with this <see cref="BoundingFrustum"/> or null if no intersection happens.</returns>
+        /// <returns>Distance at which ray intersects with this <see cref="Frustum"/> or null if no intersection happens.</returns>
         public float? Intersects(Ray ray)
         {
             Intersects(ref ray, out float? result);
@@ -424,10 +423,10 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Gets the distance of intersection of <see cref="Ray"/> and this <see cref="BoundingFrustum"/> or null if no intersection happens.
+        /// Gets the distance of intersection of <see cref="Ray"/> and this <see cref="Frustum"/> or null if no intersection happens.
         /// </summary>
         /// <param name="ray">A <see cref="Ray"/> for intersection test.</param>
-        /// <param name="result">Distance at which ray intersects with this <see cref="BoundingFrustum"/> or null if no intersection happens as an output parameter.</param>
+        /// <param name="result">Distance at which ray intersects with this <see cref="Frustum"/> or null if no intersection happens as an output parameter.</param>
         public void Intersects(ref Ray ray, out float? result)
         {
             Contains(ref ray.Position, out ContainmentType ctype);
@@ -448,10 +447,10 @@ namespace Ara3D
         } 
 
         /// <summary>
-        /// Returns a <see cref="String"/> representation of this <see cref="BoundingFrustum"/> in the format:
+        /// Returns a <see cref="String"/> representation of this <see cref="Frustum"/> in the format:
         /// {Near:[nearPlane] Far:[farPlane] Left:[leftPlane] Right:[rightPlane] Top:[topPlane] Bottom:[bottomPlane]}
         /// </summary>
-        /// <returns><see cref="String"/> representation of this <see cref="BoundingFrustum"/>.</returns>
+        /// <returns><see cref="String"/> representation of this <see cref="Frustum"/>.</returns>
         public override string ToString()
         {
             return "{Near: " + _planes[0] +

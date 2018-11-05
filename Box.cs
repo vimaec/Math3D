@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Numerics;
 using System.Runtime.Serialization;
 
 namespace Ara3D
@@ -464,7 +465,5 @@ namespace Ara3D
             min = Min;
             max = Max;
         }
-
-        #endregion Public Methods
     }
 }

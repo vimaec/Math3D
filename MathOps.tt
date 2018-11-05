@@ -27,6 +27,7 @@ var sysBinaryOps = new[] { "Atan2", "Log", "Pow" };
 using System;
 using System.Numerics;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Linq;
 
 namespace Ara3D 

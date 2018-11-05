@@ -2,13 +2,13 @@
 // This file is subject to the terms and conditions defined in
 // file 'LICENSE.txt', which is part of this source code package.
 
-
+using System.Numerics;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Ara3D
+namespace Ara3D 
 {
-    public static class MathOps {
+	public static class MathOps {
 
         public static int Add (this int v1, int v2) { return v1 + v2; }
         public static int Sub (this int v1, int v2) { return v1 - v2; }
