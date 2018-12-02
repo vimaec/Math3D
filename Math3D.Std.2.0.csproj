@@ -26,11 +26,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LinqArray\LinqArray.Std.2.0.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="MathOps.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MathOps.cs</LastGenOutput>
+    </None>
+    <None Update="src\MathOps.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MathOps.cs</LastGenOutput>
     </None>
@@ -50,6 +50,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="src\MathOps.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MathOps.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 

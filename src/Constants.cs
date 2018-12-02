@@ -11,7 +11,5 @@ namespace Ara3D
 
         public const float PI = (float)Math.PI;
         public const float PI2 = PI * 2f;
-
-
     }
 }
