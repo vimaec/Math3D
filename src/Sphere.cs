@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Numerics;
 using System.Runtime.Serialization;
 
@@ -267,7 +268,7 @@ namespace Ara3D
         /// <returns>The new <see cref="Sphere"/>.</returns>
         public static Sphere CreateFromFrustum(Frustum frustum)
         {
-            return CreateFromPoints(frustum.GetCorners());
+            return Create(frustum.GetCorners());
         }
 
         /// <summary>
@@ -275,7 +276,7 @@ namespace Ara3D
         /// </summary>
         /// <param name="points">List of point to create the sphere from.</param>
         /// <returns>The new <see cref="Sphere"/>.</returns>
-        public static Sphere CreateFromPoints(IEnumerable<Vector3> points)
+        public static Sphere Create(IEnumerable<Vector3> points)
         {
             if (points == null )
                 throw new ArgumentNullException(nameof(points));
@@ -354,6 +355,14 @@ namespace Ara3D
             }
 
             return new Sphere(center, radius);
+        }
+
+        /// <summary>
+        /// Creates a sphere from the given points
+        /// </summary>
+        public static Sphere Create(params Vector3[] points)
+        {
+            return Create(points.AsEnumerable());
         }
 
         /// <summary>
@@ -560,10 +569,8 @@ namespace Ara3D
         #region Transform
 
         /// <summary>
-        /// Creates a new <see cref="Sphere"/> that contains a transformation of translation and scale from this sphere by the specified <see cref="Matrix"/>.
-        /// </summary>
-        /// <param name="matrix">The transformation <see cref="Matrix"/>.</param>
-        /// <returns>Transformed <see cref="Sphere"/>.</returns>
+        /// Creates a new <see cref="Sphere"/> that contains a transformation of translation and scale from this sphere by the specified Matrix.
+        /// </summary>        
         public Sphere Transform(Matrix4x4 matrix)
         {
             Sphere sphere = new Sphere
@@ -575,16 +582,13 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Creates a new <see cref="Sphere"/> that contains a transformation of translation and scale from this sphere by the specified <see cref="Matrix"/>.
+        /// Creates a new <see cref="Sphere"/> that contains a transformation of translation and scale from this sphere by the specified Matrix.
         /// </summary>
-        /// <param name="matrix">The transformation <see cref="Matrix"/>.</param>
-        /// <param name="result">Transformed <see cref="Sphere"/> as an output parameter.</param>
         public void Transform(ref Matrix4x4 matrix, out Sphere result)
         {
             result.Center = Vector3.Transform(Center, matrix);
             result.Radius = Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33)))));
         }
-
         #endregion
 
         /// <summary>

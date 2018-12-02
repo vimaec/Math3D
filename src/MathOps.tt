@@ -1,0 +1,168 @@
+﻿<#@ template language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+// MIT License - Copyright (C) Ara 3D, Inc.
+// This file is subject to the terms and conditions defined in
+// file 'LICENSE.txt', which is part of this source code package.
+
+<# 
+var nonVectorTypes = new[] { "int", "long", "float", "double" };
+var vectorTypes = new[] { "Vector2", "Vector3", "Vector4" };
+var types = nonVectorTypes.Concat(vectorTypes);
+var intTypes = new[] { "int", "long" };
+var araBinaryOps = new[] { "Add", "Sub", "Mul", "Div" };
+var araCompOps = new[] { "Gt", "Lt", "GtEq", "LtEq", "Eq", "NEq" };
+var sysUnaryOps = new[] { "Abs", "Acos", "Asin", "Atan", "Cos", "Cosh", "Exp", "Log", "Log10", "Sin", "Sinh", "Sqrt", "Tan", "Tanh" };
+var araUnaryOps = new[] { "Sqr", "Inverse", "Ceiling", "Floor", "Round", "Truncate" };
+var allUnaryOps = sysUnaryOps.Concat(araUnaryOps);
+#>
+
+using System.Numerics;
+
+namespace Ara3D 
+{
+	public static class MathOps
+	{
+	
+<# 
+foreach (var t in types) { 
+#>
+        public static <#= t #> Add (this <#= t #> v1, <#= t #> v2) { return v1 + v2; }
+        public static <#= t #> Sub (this <#= t #> v1, <#= t #> v2) { return v1 - v2; }
+        public static <#= t #> Mul (this <#= t #> v1, <#= t #> v2) { return v1 * v2; }
+        public static <#= t #> Div (this <#= t #> v1, <#= t #> v2) { return v1 / v2; }
+		public static <#= t #> Negate (this <#= t #> v) { return -v; }
+        //public static <#= t #> Mod (this <#= t #> v1, <#= t #> v2) { return v1 % v2; }
+		public static IArray< <#= t #> > Negate(this IArray< <#= t #> > self) { return self.Select(Negate); }
+<#
+foreach (var op in new[] { "Add", "Mul", "Sub", "Div" }) 
+{
+#>
+		public static IArray< <#= t #> > <#= op #>(this IArray< <#= t #> > self, IArray< <#= t #> > other) { return self.Zip(other, <#= op #>); }
+		public static IArray< <#= t #> > <#= op #>(this IArray< <#= t #> > self, <#= t #> scalar) { return self.Select(x => <#= op #>(x, scalar)); }
+		public static IArray< <#= t #> > <#= op #>(this <#= t #> self, IArray< <#= t #> > vector) { return vector.Select(x => <#= op #>(self, x)); }
+<#
+} 
+}
+foreach (var t in nonVectorTypes) { 
+#>
+
+        public static <#= t #> Min (this <#= t #> v1, <#= t #> v2) { return System.Math.Min(v1, v2); }
+        public static <#= t #> Max (this <#= t #> v1, <#= t #> v2) { return System.Math.Max(v1, v2); }
+<#
+}
+#>
+		public static double Sqr(this double self) { return self * self; }
+		public static double Ceiling(this double self) { return System.Math.Ceiling(self); }
+		public static double Floor(this double self) { return System.Math.Floor(self); }
+		public static double Round(this double self) { return System.Math.Round(self); }
+		public static double Truncate(this double self) { return System.Math.Ceiling(self); }
+		public static double Inverse(this double self) { return 1.0 / self; }
+		public static float Sqr(this float self) { return self * self; }
+		public static float Ceiling(this float self) { return (float)System.Math.Ceiling(self); }
+		public static float Floor(this float self) { return (float)System.Math.Floor(self); }
+		public static float Round(this float self) { return (float)System.Math.Round(self); }
+		public static float Truncate(this float self) { return (float)System.Math.Ceiling(self); }
+		public static float Inverse(this float self) { return 1.0f / self; }
+<#
+foreach (var op in sysUnaryOps) {
+#>
+		public static double <#= op #>(this double self) { return System.Math.<#= op #>(self); }
+		public static float <#= op #>(this float self) { return (float)System.Math.<#= op #>(self); }
+<#
+}
+foreach (var op in allUnaryOps) {
+#>
+
+		public static Vector2 <#= op #>(this Vector2 self) { return self.Select(<#= op #>); }
+		public static Vector3 <#= op #>(this Vector3 self) { return self.Select(<#= op #>); }
+		public static Vector4 <#= op #>(this Vector4 self) { return self.Select(<#= op #>); }
+        public static IArray<double> <#= op #> (this IArray< double > self) { return self.Select(<#= op #>); }
+        public static IArray<float> <#= op #> (this IArray< float > self) { return self.Select(<#= op #>); }
+        public static IArray<Vector2> <#= op #> (this IArray< Vector2 > self) { return self.Select(<#= op #>); }
+        public static IArray<Vector3> <#= op #> (this IArray< Vector3 > self) { return self.Select(<#= op #>); }
+        public static IArray<Vector4> <#= op #> (this IArray< Vector4 > self) { return self.Select(<#= op #>); }
+<#
+}
+foreach (var t in types) { 
+#>
+        public static bool Eq (this <#= t #> v1, <#= t #> v2) { return v1 == v2; }
+        public static bool NEq (this <#= t #> v1, <#= t #> v2) { return v1 != v2; }
+<# 
+} 
+foreach (var t in nonVectorTypes) { 
+#>
+        public static bool Gt (this <#= t #> v1, <#= t #> v2) { return v1 > v2; }
+        public static bool Lt (this <#= t #> v1, <#= t #> v2) { return v1 < v2; }
+        public static bool GtEq (this <#= t #> v1, <#= t #> v2) { return v1 >= v2; }
+        public static bool LtEq (this <#= t #> v1, <#= t #> v2) { return v1 <= v2; }
+<# 
+} 
+#>
+		public static bool And (this bool a, bool b) { return a && b; }
+		public static bool Or (this bool a, bool b) { return a || b; }
+		public static bool NAnd (this bool a, bool b) { return !(a && b); }
+		public static bool XOr (this bool a, bool b) { return a || b && !(a && b); }
+		public static bool NOr (this bool a, bool b) { return !(a || b); }
+		public static bool Not (this bool a) { return !a; }
+
+		// TODO: parameterize over all of the integer types
+<# 
+foreach (var t in intTypes) { 
+#>
+		public static <#= t #> And (this <#= t #> a, <#= t #> b) { return a & b; }
+		public static <#= t #> Or (this <#= t #> a, <#= t #> b) { return a | b; }
+		public static <#= t #> NAnd (this <#= t #> a, <#= t #> b) { return ~(a & b); }
+		public static <#= t #> XOr (this <#= t #> a, <#= t #> b) { return a | b & ~(a & b); }
+		public static <#= t #> NOr (this <#= t #> a, <#= t #> b) { return ~(a | b); }
+		public static <#= t #> Not (this <#= t #> a) { return ~a; }
+<# 
+} 
+#>
+
+		public static long Sum(this IArray<int> self) { return self.Aggregate(0L, (x, y) => x + y); }
+		public static long Sum(this IArray<long> self) { return self.Aggregate(0L, (x, y) => x + y); }
+		public static double Sum(this IArray<float> self) { return self.Aggregate(0.0, (x, y) => x + y); }
+		public static double Sum(this IArray<double> self) { return self.Aggregate(0.0, (x, y) => x + y); }
+		public static Vector2 Sum(this IArray<Vector2> self) { return self.Aggregate(Vector2.Zero, (x, y) => x + y); }
+		public static Vector3 Sum(this IArray<Vector3> self) { return self.Aggregate(Vector3.Zero, (x, y) => x + y); }
+		public static Vector4 Sum(this IArray<Vector4> self) { return self.Aggregate(Vector4.Zero, (x, y) => x + y); }
+		
+		public static double Average(this IArray<int> self) { return self.Sum() / self.Count; }
+		public static double Average(this IArray<long> self) { return self.Sum() / self.Count; }
+		public static double Average(this IArray<float> self) { return self.Sum() / self.Count; }
+		public static double Average(this IArray<double> self) { return self.Sum() / self.Count; }
+		public static Vector2 Average(this IArray<Vector2> self) { return self.Sum() / self.Count; }
+		public static Vector3 Average(this IArray<Vector3> self) { return self.Sum() / self.Count; }
+		public static Vector4 Average(this IArray<Vector4> self) { return self.Sum() / self.Count; }	
+
+		public static double Variance(this IArray<int> self) { var mean = self.Average(); return self.Select(x => Sqr(x - mean)).Average(); }
+		public static double Variance(this IArray<long> self) { var mean = self.Average(); return self.Select(x => Sqr(x - mean)).Average(); }
+		public static double Variance(this IArray<float> self) { var mean = self.Average(); return self.Select(x => Sqr(x - mean)).Average(); }
+		public static double Variance(this IArray<double> self) { var mean = self.Average(); return self.Select(x => Sqr(x - mean)).Average(); }
+		public static Vector2 Variance(this IArray<Vector2> self) { var mean = self.Average(); return self.Select(x => Sqr(x - mean)).Average(); }
+		public static Vector3 Variance(this IArray<Vector3> self) { var mean = self.Average(); return self.Select(x => Sqr(x - mean)).Average(); }
+		public static Vector4 Variance(this IArray<Vector4> self) { var mean = self.Average(); return self.Select(x => Sqr(x - mean)).Average(); }
+
+		public static double StdDev(this IArray<int> self) { return self.Variance().Sqrt(); }
+		public static double StdDev(this IArray<long> self) { return self.Variance().Sqrt(); }
+		public static double StdDev(this IArray<float> self) { return self.Variance().Sqrt(); }
+		public static double StdDev(this IArray<double> self) { return self.Variance().Sqrt(); }
+		public static Vector2 StdDev(this IArray<Vector2> self) { return self.Variance().Sqrt(); }
+		public static Vector3 StdDev(this IArray<Vector3> self) { return self.Variance().Sqrt(); }
+		public static Vector4 StdDev(this IArray<Vector4> self) { return self.Variance().Sqrt(); }
+
+		public static IArray<int> PartialSums(this IArray<int> self) { return self.Accumulate((x, y) => x + y); }
+		public static IArray<long> PartialSums(this IArray<long> self) { return self.Accumulate((x, y) => x + y); }
+		public static IArray<float> PartialSums(this IArray<float> self) { return self.Accumulate((x, y) => x + y); }
+		public static IArray<double> PartialSums(this IArray<double> self) { return self.Accumulate((x, y) => x + y); }
+		public static IArray<Vector2> PartialSums(this IArray<Vector2> self) { return self.Accumulate((x, y) => x + y); }
+		public static IArray<Vector3> PartialSums(this IArray<Vector3> self) { return self.Accumulate((x, y) => x + y); }
+		public static IArray<Vector4> PartialSums(this IArray<Vector4> self) { return self.Accumulate((x, y) => x + y); }
+		
+	} 
+} 

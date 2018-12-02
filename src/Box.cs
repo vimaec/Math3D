@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Numerics;
 using System.Runtime.Serialization;
 
@@ -12,7 +13,7 @@ namespace Ara3D
 {
     [DataContract]
     [DebuggerDisplay("{DebugDisplayString,nq}")]
-    public struct Box : IEquatable<Box>, IArray<Vector3>
+    public struct Box : IEquatable<Box>
     {
         [DataMember]
         public Vector3 Min;
@@ -181,7 +182,7 @@ namespace Ara3D
         /// <param name="points">The list of Vector3 instances defining the point cloud to bound</param>
         /// <returns>A bounding box that encapsulates the given point cloud.</returns>
         /// <exception cref="ArgumentException">Thrown if the given list has no points.</exception>
-        public static Box CreateFromPoints(IEnumerable<Vector3> points)
+        public static Box Create(IEnumerable<Vector3> points)
         {
             var minVec = MaxVector3;
             var maxVec = MinVector3;
@@ -195,6 +196,11 @@ namespace Ara3D
                 maxVec.Z = (maxVec.Z > ptVector.Z) ? maxVec.Z : ptVector.Z;
             }
             return new Box(minVec, maxVec);
+        }
+
+        public static Box Create(params Vector3[] points)
+        {
+            return Create(points.AsEnumerable());
         }
 
         public static Box CreateFromSphere(Sphere sphere)

@@ -5,7 +5,7 @@
 namespace Ara3D
 {
     /// <summary>
-    /// Defines the intersection between a <see cref="Plane"/> and a bounding volume.
+    /// Defines the intersection between a Plane and a bounding volume.
     /// </summary>
     public enum PlaneIntersectionType
     {

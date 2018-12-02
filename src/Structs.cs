@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Ara3D
+﻿namespace Ara3D
 {
     /*
     public struct Vector2 : IArray<float> {
@@ -26,7 +24,7 @@ namespace Ara3D
         public float this[int n] => n == 0 ? v.X : n == 1 ? v.Y : n == 2 ? v.Z : v.W;
         public Vector4(IArray<int> xs) { v = new System.Numerics.Vector4(xs[0], xs[1], xs[2], xs[3]); }
     }*/
-   
+
 
     public interface ILimits<T>
     {

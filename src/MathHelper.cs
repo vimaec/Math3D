@@ -3,6 +3,7 @@
 // file 'LICENSE.txt', which is part of this source code package.
 
 using System;
+using System.Numerics;
 
 namespace Ara3D
 {
@@ -60,7 +61,7 @@ namespace Ara3D
             return value1 + (value2 - value1) * amount1 + (value3 - value1) * amount2;
         }
 
-	/// <summary>
+	    /// <summary>
         /// Performs a Catmull-Rom interpolation using the specified positions.
         /// </summary>
         /// <param name="value1">The first position in the interpolation.</param>
@@ -254,9 +255,8 @@ namespace Ara3D
             // It is expected that 0 < amount < 1
             // If amount < 0, return value1
             // If amount > 1, return value2
-            float result = MathHelper.Clamp(amount, 0f, 1f);
-            result = MathHelper.Hermite(value1, 0f, value2, 0f, result);
-
+            var result = Clamp(amount, 0f, 1f);
+            result = Hermite(value1, 0f, value2, 0f, result);
             return result;
         }
         
@@ -317,7 +317,7 @@ namespace Ara3D
             return (value > 0) && ((value & (value - 1)) == 0);
         }
 
-        public static float ClassifyPoint(ref Vector3 point, ref Plane plane)
+        public static float ClassifyPoint(this Plane plane, Vector3 point)
         {
             return point.X * plane.Normal.X + point.Y * plane.Normal.Y + point.Z * plane.Normal.Z + plane.D;
         }
