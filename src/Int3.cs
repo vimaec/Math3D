@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace Ara3D
 {
@@ -23,8 +21,7 @@ namespace Ara3D
         {
             yield return X;
             yield return Y;
-            yield return Z;
-                 
+            yield return Z;                 
         }
     }
 }

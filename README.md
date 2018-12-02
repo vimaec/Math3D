@@ -1,29 +1,9 @@
 # Math3D
 
-This is a portable high-performance 3D math library written in C# built using code taken from proven open-source libraries:
+*Math3D* is a portable high-performance 3D math library from [Ara3D](https://ara3d.com) in pure C#. It has only a dependency on the Microsoft library `System.Numerics.Vectors`. Math3D was started using code from [MonoGame][https://github.com/MonoGame/MonoGame] which is was a popular open-source version of the XNA game framework. The reason for forking the code, was to use the Microsoft system numerics, and to capture the core Math algorithms in one reusable library. This project targets .NET Standard 2.0, which means it is compatible with .NET 4.6, .NET Core 2.0, and recent versions of Unity.
 
-* (CoreFX .NET Reference Library)[https://github.com/dotnet/corefx] - System.Numerics.Vectors
-* (MonoGame)[https://github.com/MonoGame/MonoGame] - MonoGame Framework 
+## Design 
 
-At its core, Math3D is primarily a library for working with 3 dimensional vectors, quaternions, 4x4 matrices, and arrays of numerical types. Additionally it provides supports for common data-structures such as rays, planes, bounding boxes, and more.
+Math3D is intended to be used in soft real-time contexts and trades precision for performance, so all data structures and algorithms use 32 bit floating math. 
 
-This project targets .NET Standard 2.0 and depends on the very lightweight (and useful) (LinqArray library)[https://github.com/ara3d/LinqArray].
-
-# Design Rationale
-
-For the purpose of near real-time 3D geometry processing, from various 3D math libraries in C# examined, the `System.Numerics.Vector` class from Microsoft seemed like the best choice. It offered an excellent mix of performance, stability, and portability. It also was similar to the XNA and MonoGame libraries. However, the API footprint is very small and targeted.
-
-We wanted to integrate support for more types (e.g. bounding boxes, boudning spheres, lines, rays, triangles, and quadrilaterals), provide a more object-oriented syntax, better integration with the system math routines, and support for the LinqArray library. Since the API is very stable, we chose to fork the System.Numerics.Vector code base and integrate missing elements from other proven libraries. 
-
-# Plans
-
-We are also looking into creating a bridge project to facilitate conversion between data-structures from various popular 3D libraries:
-
-* Unity
-* (MonoGame)[https://github.com/MonoGame/MonoGame] - MonoGame Framework 
-* (geometry3Sharp)[geometrySharp]
-* System.Numerics
-* WPF
-* BulletSharp
-
-We encourage and welcome suggestions and feedback for how to make this a library that can be useful for a larger audience. 
+If you are looking for double precision floating point 3D math and geometry I suggest taking a look at [Geometry3Sharp](https://github.com/gradientspace/geometry3Sharp) by GradientSharp. 
