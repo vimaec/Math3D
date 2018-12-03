@@ -321,5 +321,25 @@ namespace Ara3D
         {
             return point.X * plane.Normal.X + point.Y * plane.Normal.Y + point.Z * plane.Normal.Z + plane.D;
         }
+
+        public static bool AlmostEquals(this float a, float b, float tolerance = Constants.Tolerance)
+        {
+            return (a == b) || (b - a).Abs() < tolerance;
+        }
+
+        public static bool IsInfinity(this float self)
+        {
+            return float.IsInfinity(self);
+        }
+
+        public static bool IsNaN(this float self)
+        {
+            return float.IsNaN(self);
+        }
+
+        public static bool IsNonZeroAndValid(this float self, float tolerance = Constants.Tolerance)
+        {
+            return !self.IsInfinity() && !self.IsNaN() && self.Abs() > tolerance;
+        }
     }
 }

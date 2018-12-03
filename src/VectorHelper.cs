@@ -3,6 +3,9 @@ using System.Numerics;
 
 namespace Ara3D
 {
+    // NOTE: some code inspired by https://www.codeproject.com/Articles/17425/A-Vector-Type-for-C
+    // other algorithms taken from: https://github.com/MonoGame/MonoGame
+
     public static class VectorHelper
     {
         public static Vector2 Select(this Vector2 self, Func<float, float> f)
@@ -65,6 +68,26 @@ namespace Ara3D
             return Vector3.Normalize(self);
         }
 
+        public static float MaxComponent(this Vector3 self)
+        {
+            return Math.Max(Math.Max(self.X, self.Y), self.Z);
+        }
+
+        public static float MinComponent(this Vector3 self)
+        {
+            return Math.Min(Math.Min(self.X, self.Y), self.Z);
+        }
+
+        public static float SumComponents(this Vector3 self)
+        {
+            return self.X + self.Y + self.Z;
+        }
+
+        public static float SumSqrComponents(this Vector3 self)
+        {
+            return self.X.Sqr() + self.Y.Sqr() + self.Z.Sqr();
+        }
+
         public static Vector3 Transform(this Vector3 self, Matrix4x4 matrix)
         {
             return Vector3.Transform(self, matrix);
@@ -88,6 +111,134 @@ namespace Ara3D
         public static Vector3 To3D(this Vector2 self)
         {
             return new Vector3(self.X, self.Y, 0);
+        }
+
+        public static double MixedProduct(this Vector3 v1, Vector3 v2, Vector3 v3)
+        {
+            return v1.Cross(v2).Dot(v3);
+        }
+
+        public static bool AlmostEquals(this Vector3 self, Vector3 other, float tolerance = Constants.Tolerance)
+        {
+            var diff = self - other.Abs();
+            return diff.X < tolerance && diff.Y < tolerance && diff.Z < tolerance;
+        }
+
+        public static bool IsNaN(this Vector3 self)
+        {
+            return float.IsNaN(self.X) || float.IsNaN(self.Y) || float.IsNaN(self.Z);
+        }
+
+        public static bool IsInfinity(this Vector3 self)
+        {
+            return float.IsInfinity(self.X) || float.IsInfinity(self.Y) || float.IsInfinity(self.Z);
+        }
+
+        public static bool IsNonZeroAndValid(this Vector3 self)
+        {
+            return self.LengthSquared().IsNonZeroAndValid();
+        }
+
+        public static bool IsZeroOrInvalid(this Vector3 self)
+        {
+            return !self.IsNonZeroAndValid();
+        }
+
+        public static bool IsPerpendicular(this Vector3 v1, Vector3 v2, float tolerance = Constants.Tolerance)
+        {
+            // If either vector is vector(0,0,0) the vectors are not perpendicular
+            if (v1 == Vector3.Zero || v2 == Vector3.Zero)
+                return false;
+            return v1.Dot(v2).AlmostEquals(0, tolerance);
+        }
+
+        public static Vector3 Projection(this Vector3 v1, Vector3 v2)
+        {
+            return v2 * (v1.Dot(v2) / v2.LengthSquared());
+        }
+
+        public static Vector3 Rejection(this Vector3 v1, Vector3 v2)
+        {
+            return v1 - v1.Projection(v2);
+        }
+
+        public static float Angle(this Vector3 v1, Vector3 v2, float tolerance = Constants.Tolerance)
+        {
+            if (v1.IsZeroOrInvalid() || v2.IsZeroOrInvalid() || v1.AlmostEquals(v2))
+                return 0;
+
+            return Math.Min(1.0f, v1.Normal().Dot(v2.Normal())).Acos();
+        }
+
+        public static bool IsBackFace(this Vector3 normal, Vector3 lineOfSight)
+        {
+            return normal.Dot(lineOfSight) < 0;
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="Vector3"/> that contains the cartesian coordinates of a vector specified in barycentric coordinates and relative to 3d-triangle.
+        /// </summary>
+        /// <param name="value1">The first vector of 3d-triangle.</param>
+        /// <param name="value2">The second vector of 3d-triangle.</param>
+        /// <param name="value3">The third vector of 3d-triangle.</param>
+        /// <param name="amount1">Barycentric scalar <c>b2</c> which represents a weighting factor towards second vector of 3d-triangle.</param>
+        /// <param name="amount2">Barycentric scalar <c>b3</c> which represents a weighting factor towards third vector of 3d-triangle.</param>
+        /// <returns>The cartesian translation of barycentric coordinates.</returns>
+        public static Vector3 Barycentric(this Vector3 value1, Vector3 value2, Vector3 value3, float amount1, float amount2)
+        {
+            return new Vector3(
+                MathHelper.Barycentric(value1.X, value2.X, value3.X, amount1, amount2),
+                MathHelper.Barycentric(value1.Y, value2.Y, value3.Y, amount1, amount2),
+                MathHelper.Barycentric(value1.Z, value2.Z, value3.Z, amount1, amount2));
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="Vector3"/> that contains CatmullRom interpolation of the specified vectors.
+        /// </summary>
+        /// <param name="value1">The first vector in interpolation.</param>
+        /// <param name="value2">The second vector in interpolation.</param>
+        /// <param name="value3">The third vector in interpolation.</param>
+        /// <param name="value4">The fourth vector in interpolation.</param>
+        /// <param name="amount">Weighting factor.</param>
+        /// <returns>The result of CatmullRom interpolation.</returns>
+        public static Vector3 CatmullRom(this Vector3 value1, Vector3 value2, Vector3 value3, Vector3 value4, float amount)
+        {
+            return new Vector3(
+                MathHelper.CatmullRom(value1.X, value2.X, value3.X, value4.X, amount),
+                MathHelper.CatmullRom(value1.Y, value2.Y, value3.Y, value4.Y, amount),
+                MathHelper.CatmullRom(value1.Z, value2.Z, value3.Z, value4.Z, amount));
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="Vector3"/> that contains hermite spline interpolation.
+        /// </summary>
+        /// <param name="value1">The first position vector.</param>
+        /// <param name="tangent1">The first tangent vector.</param>
+        /// <param name="value2">The second position vector.</param>
+        /// <param name="tangent2">The second tangent vector.</param>
+        /// <param name="amount">Weighting factor.</param>
+        /// <returns>The hermite spline interpolation vector.</returns>
+        public static Vector3 Hermite(this Vector3 value1, Vector3 tangent1, Vector3 value2, Vector3 tangent2, float amount)
+        {
+            return new Vector3(
+                MathHelper.Hermite(value1.X, tangent1.X, value2.X, tangent2.X, amount),
+                MathHelper.Hermite(value1.Y, tangent1.Y, value2.Y, tangent2.Y, amount),
+                MathHelper.Hermite(value1.Z, tangent1.Z, value2.Z, tangent2.Z, amount));
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="Vector3"/> that contains cubic interpolation of the specified vectors.
+        /// </summary>
+        /// <param name="value1">Source <see cref="Vector3"/>.</param>
+        /// <param name="value2">Source <see cref="Vector3"/>.</param>
+        /// <param name="amount">Weighting value.</param>
+        /// <returns>Cubic interpolation of the specified vectors.</returns>
+        public static Vector3 SmoothStep(this Vector3 value1, Vector3 value2, float amount)
+        {
+            return new Vector3(
+                MathHelper.SmoothStep(value1.X, value2.X, amount),
+                MathHelper.SmoothStep(value1.Y, value2.Y, amount),
+                MathHelper.SmoothStep(value1.Z, value2.Z, amount));
         }
     }
 }
