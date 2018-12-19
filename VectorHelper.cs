@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Numerics;
 
 namespace Ara3D
@@ -38,35 +39,7 @@ namespace Ara3D
             return new Vector4(f(self.X, v.X), f(self.Y, v.Y), f(self.Z, v.Z), f(self.W, v.W));
         }
 
-        public static float DistanceTo(this Vector3 a, Vector3 b)
-        {
-            return Vector3.Distance(a, b);
-        }
-
-        public static float DistanceTo(this Vector2 a, Vector2 b)
-        {
-            return Vector2.Distance(a, b);
-        }
-
-        public static float Dot(this Vector3 a, Vector3 b)
-        {
-            return Vector3.Dot(a, b);
-        }
-
-        public static float Dot(this Vector2 a, Vector2 b)
-        {
-            return Vector2.Dot(a, b);
-        }
-
-        public static Vector3 Cross(this Vector3 a, Vector3 b)
-        {
-            return Vector3.Cross(a, b);
-        }
-
-        public static Vector3 Normal(this Vector3 self)
-        {
-            return Vector3.Normalize(self);
-        }
+        // TODO: I am not implementing all of these for all of the different types of Vectors
 
         public static float MaxComponent(this Vector3 self)
         {
@@ -86,6 +59,11 @@ namespace Ara3D
         public static float SumSqrComponents(this Vector3 self)
         {
             return self.X.Sqr() + self.Y.Sqr() + self.Z.Sqr();
+        }
+
+        public static Vector3 Rotate(this Vector3 self, Vector3 axis, float angle)
+        {
+            return self.Transform(Matrix4x4.CreateFromAxisAngle(axis, angle));
         }
 
         public static Vector3 Transform(this Vector3 self, Matrix4x4 matrix)
@@ -164,7 +142,7 @@ namespace Ara3D
 
         public static float Angle(this Vector3 v1, Vector3 v2, float tolerance = Constants.Tolerance)
         {
-            if (v1.IsZeroOrInvalid() || v2.IsZeroOrInvalid() || v1.AlmostEquals(v2))
+            if (v1.IsZeroOrInvalid() || v2.IsZeroOrInvalid() || v1.AlmostEquals(v2, tolerance))
                 return 0;
 
             return Math.Min(1.0f, v1.Normal().Dot(v2.Normal())).Acos();
@@ -239,6 +217,31 @@ namespace Ara3D
                 MathHelper.SmoothStep(value1.X, value2.X, amount),
                 MathHelper.SmoothStep(value1.Y, value2.Y, amount),
                 MathHelper.SmoothStep(value1.Z, value2.Z, amount));
+        }
+
+        public static Line ToLine(this Vector3 v)
+        {
+            return new Line(Vector3.Zero, v);
+        }
+        
+        public static Vector3 AlongVector(this Vector3 v, float d)
+        {
+            return v.Normal() * d;
+        }
+
+        public static Vector3 AlongX(this float self)
+        {
+            return Vector3.UnitX.AlongVector(self);
+        }
+
+        public static Vector3 AlongY(this float self)
+        {
+            return Vector3.UnitY.AlongVector(self);
+        }
+
+        public static Vector3 AlongZ(this float self)
+        {
+            return Vector3.UnitX.AlongVector(self);
         }
     }
 }

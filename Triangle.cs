@@ -5,6 +5,7 @@ namespace Ara3D
 {
     public struct Triangle : IEquatable<Triangle>
     {
+        // TODO: are "readonly" fields or properties with getters only preferred for the compiler
         public Vector3 A { get; }
         public Vector3 B { get; }
         public Vector3 C { get; }
@@ -33,9 +34,9 @@ namespace Ara3D
             return $"Triangle({A}, {B}, {C})";
         }
 
-        public float LengthA => A.DistanceTo(B);
-        public float LengthB => B.DistanceTo(C);
-        public float LengthC => C.DistanceTo(A);
+        public float LengthA => A.Distance(B);
+        public float LengthB => B.Distance(C);
+        public float LengthC => C.Distance(A);
 
         public bool HasArea => A != B && B != C && C != A;
 

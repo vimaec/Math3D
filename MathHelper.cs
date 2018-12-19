@@ -341,5 +341,10 @@ namespace Ara3D
         {
             return !self.IsInfinity() && !self.IsNaN() && self.Abs() > tolerance;
         }
+        
+        public static float SafeDivide(this float a, float b)
+        {
+            return b > 0 ? a / b : a > 0 ? float.PositiveInfinity : 0;
+        }
     }
 }

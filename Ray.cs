@@ -13,18 +13,11 @@ namespace Ara3D
     [DebuggerDisplay("{DebugDisplayString,nq}")]
     public struct Ray : IEquatable<Ray>
     {
-        #region Public Fields
-
         [DataMember]
         public Vector3 Direction;
       
         [DataMember]
         public Vector3 Position;
-
-        #endregion
-
-
-        #region Public Constructors
 
         public Ray(Vector3 position, Vector3 direction)
         {
@@ -32,22 +25,15 @@ namespace Ara3D
             Direction = direction;
         }
 
-        #endregion
-
-
-        #region Public Methods
-
         public override bool Equals(object obj)
         {
             return (obj is Ray) && Equals((Ray)obj);
         }
-
         
         public bool Equals(Ray other)
         {
             return Position.Equals(other.Position) && Direction.Equals(other.Direction);
         }
-
         
         public override int GetHashCode()
         {
@@ -168,10 +154,10 @@ namespace Ara3D
             return result;
         }
 
-        public void Intersects(ref Plane plane, out float? result)
+        public void Intersects(ref Plane plane, out float? result, float tolerance = Constants.Tolerance)
         {
             var den = Vector3.Dot(Direction, plane.Normal);
-            if (Math.Abs(den) < 0.00001f)
+            if (Math.Abs(den) < tolerance)
             {
                 result = null;
                 return;
@@ -260,7 +246,5 @@ namespace Ara3D
             position = Position;
             direction = Direction;
         }
-
-        #endregion
     }
 }

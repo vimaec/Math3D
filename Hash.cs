@@ -25,5 +25,6 @@ namespace Ara3D
                 r = Combine(r, i);
             return r;
         }
+
     }
 }
