@@ -9,15 +9,10 @@ using System.Runtime.Serialization;
 
 namespace Ara3D
 {
-    [DataContract]
-    [DebuggerDisplay("{DebugDisplayString,nq}")]
     public struct Ray : IEquatable<Ray>
     {
-        [DataMember]
-        public Vector3 Direction;
-      
-        [DataMember]
-        public Vector3 Position;
+        public readonly Vector3 Direction;      
+        public readonly Vector3 Position;
 
         public Ray(Vector3 position, Vector3 direction)
         {
@@ -123,128 +118,67 @@ namespace Ara3D
 
             return tMin;
         }
-
-
-        public void Intersects(ref Box box, out float? result)
-        {
-			result = Intersects(box);
-        }
-
-        /*
-        public float? Intersects(BoundingFrustum frustum)
-        {
-            if (frustum == null)
-			{
-				throw new ArgumentNullException("frustum");
-			}
-			
-			return frustum.Intersects(this);			
-        }
-        */
-
-        public float? Intersects(Sphere sphere)
-        {
-            Intersects(ref sphere, out float? result);
-            return result;
-        }
-
-        public float? Intersects(Plane plane)
-        {
-            Intersects(ref plane, out float? result);
-            return result;
-        }
-
-        public void Intersects(ref Plane plane, out float? result, float tolerance = Constants.Tolerance)
+      
+        public float? Intersects(Plane plane, float tolerance = Constants.Tolerance)
         {
             var den = Vector3.Dot(Direction, plane.Normal);
-            if (Math.Abs(den) < tolerance)
-            {
-                result = null;
-                return;
-            }
+            if (den.Abs() < tolerance)
+                return null;
 
-            result = (-plane.D - Vector3.Dot(plane.Normal, Position)) / den;
+            var result = (-plane.D - Vector3.Dot(plane.Normal, Position)) / den;
 
             if (result < 0.0f)
             {
-                if (result < -0.00001f)
+                if (result < -tolerance)
                 {
-                    result = null;
-                    return;
+                    return null;
                 }
 
                 result = 0.0f;
             }
+            return result;
         }
 
-        public void Intersects(ref Sphere sphere, out float? result)
+        public float? Intersects(Sphere sphere)
         {
             // Find the vector between where the ray starts the the sphere's centre
-            Vector3 difference = sphere.Center - Position;
-
-            float differenceLengthSquared = difference.LengthSquared();
-            float sphereRadiusSquared = sphere.Radius * sphere.Radius;
-
-            float distanceAlongRay;
+            var difference = sphere.Center - Position;
+            var differenceLengthSquared = difference.LengthSquared();
+            var sphereRadiusSquared = sphere.Radius * sphere.Radius;
 
             // If the distance between the ray start and the sphere's centre is less than
             // the radius of the sphere, it means we've intersected. N.B. checking the LengthSquared is faster.
             if (differenceLengthSquared < sphereRadiusSquared)
-            {
-                result = 0.0f;
-                return;
-            }
+                return 0.0f;
 
-            distanceAlongRay = Vector3.Dot(Direction, difference);
+            var distanceAlongRay = Vector3.Dot(Direction, difference);
 
             // If the ray is pointing away from the sphere then we don't ever intersect
             if (distanceAlongRay < 0)
-            {
-                result = null;
-                return;
-            }
+                return null;
 
             // Next we kinda use Pythagoras to check if we are within the bounds of the sphere
             // if x = radius of sphere
             // if y = distance between ray position and sphere centre
             // if z = the distance we've travelled along the ray
             // if x^2 + z^2 - y^2 < 0, we do not intersect
-            float dist = sphereRadiusSquared + distanceAlongRay * distanceAlongRay - differenceLengthSquared;
-
-            result = (dist < 0) ? null : distanceAlongRay - (float?)Math.Sqrt(dist);
+            var dist = sphereRadiusSquared + distanceAlongRay * distanceAlongRay - differenceLengthSquared;
+            return (dist < 0) ? null : distanceAlongRay - (float?)Math.Sqrt(dist);
         }
-
 
         public static bool operator !=(Ray a, Ray b)
         {
             return !a.Equals(b);
         }
 
-
         public static bool operator ==(Ray a, Ray b)
         {
             return a.Equals(b);
         }
 
-        internal string DebugDisplayString => string.Concat(
-                    "Pos( ", Position.ToString(), " )  \r\n",
-                    "Dir( ", Direction.ToString(), " )"
-                );
-
         public override string ToString()
         {
-            return "{{Position:" + Position.ToString() + " Direction:" + Direction.ToString() + "}}";
-        }
-
-        /// <summary>
-        /// Deconstruction method for <see cref="Ray"/>.
-        /// </summary>
-        /// <param name="position">Receives the start position of the ray.</param>
-        /// <param name="direction">Receives the direction of the ray.</param>
-        public void Deconstruct(out Vector3 position, out Vector3 direction)
-        {
-            position = Position;
-            direction = Direction;
+            return $"Ray(Position={Position}, Direction={Direction})";
         }
     }
 }

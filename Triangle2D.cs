@@ -13,9 +13,9 @@ namespace Ara3D
             }
         }
 
-        public Vector2 A { get; }
-        public Vector2 B { get; }
-        public Vector2 C { get; }
+        public readonly Vector2 A;
+        public readonly Vector2 B;
+        public readonly Vector2 C;
 
         public Triangle2D(Vector2 a, Vector2 b, Vector2 c)
         {

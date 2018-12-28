@@ -123,12 +123,12 @@ namespace Ara3D
 		public static float Sin (this float x) { return (float)System.Math.Sin(x); }
 		public static double Sinh (this double x) { return System.Math.Sinh(x); }
 		public static float Sinh (this float x) { return (float)System.Math.Sinh(x); }
-		public static double Sqrt (this double x) { return System.Math.Sqrt(x); }
-		public static float Sqrt (this float x) { return (float)System.Math.Sqrt(x); }
 		public static double Tan (this double x) { return System.Math.Tan(x); }
 		public static float Tan (this float x) { return (float)System.Math.Tan(x); }
 		public static double Tanh (this double x) { return System.Math.Tanh(x); }
 		public static float Tanh (this float x) { return (float)System.Math.Tanh(x); }
+		public static double Sqrt (this double x) { return System.Math.Sqrt(x); }
+		public static float Sqrt (this float x) { return (float)System.Math.Sqrt(x); }
 
 		public static float Sqr (this float x) { return x * x; }
 		public static float Cube (this float x) { return x * x * x; }
@@ -179,9 +179,6 @@ namespace Ara3D
 		public static Vector2 Sinh (this Vector2 x) { return x.Select(MathOps.Sinh); }
 		public static Vector3 Sinh (this Vector3 x) { return x.Select(MathOps.Sinh); }
 		public static Vector4 Sinh (this Vector4 x) { return x.Select(MathOps.Sinh); }
-		public static Vector2 Sqrt (this Vector2 x) { return x.Select(MathOps.Sqrt); }
-		public static Vector3 Sqrt (this Vector3 x) { return x.Select(MathOps.Sqrt); }
-		public static Vector4 Sqrt (this Vector4 x) { return x.Select(MathOps.Sqrt); }
 		public static Vector2 Tan (this Vector2 x) { return x.Select(MathOps.Tan); }
 		public static Vector3 Tan (this Vector3 x) { return x.Select(MathOps.Tan); }
 		public static Vector4 Tan (this Vector4 x) { return x.Select(MathOps.Tan); }
@@ -247,6 +244,6 @@ namespace Ara3D
 		public static Vector4 Normal( this Vector4 self) { return Vector4.Normalize(self); }
 		public static Vector4 Sqrt( this Vector4 self) { return Vector4.SquareRoot(self); }
 
-		public static Vector3 Cross( this Vector3 self, Vector3 x ) { return Vector.Cross(self, x); }
+		public static Vector3 Cross( this Vector3 self, Vector3 x ) { return Vector3.Cross(self, x); }
 
 } } 

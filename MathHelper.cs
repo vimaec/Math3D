@@ -82,7 +82,7 @@ namespace Ara3D
                 (3.0 * value2 - value1 - 3.0 * value3 + value4) * amountCubed));
         }
 
- 	/// <summary>
+ 	    /// <summary>
         /// Restricts a value to be within a specified range.
         /// </summary>
         /// <param name="value">The value to clamp.</param>
@@ -155,7 +155,6 @@ namespace Ara3D
             return (float)result;
         }
 
-
         /// <summary>
         /// Linearly interpolates between two values.
         /// </summary>
@@ -172,7 +171,6 @@ namespace Ara3D
         {
             return value1 + (value2 - value1) * amount;
         }
-
 
         /// <summary>
         /// Linearly interpolates between two values.
@@ -199,50 +197,6 @@ namespace Ara3D
             return ((1 - amount) * value1) + (value2 * amount);
         }
 
-        /// <summary>
-        /// Returns the greater of two values.
-        /// </summary>
-        /// <param name="value1">Source value.</param>
-        /// <param name="value2">Source value.</param>
-        /// <returns>The greater value.</returns>
-        public static float Max(float value1, float value2)
-        {
-            return value1 > value2 ? value1 : value2;
-        }
-
-        /// <summary>
-        /// Returns the greater of two values.
-        /// </summary>
-        /// <param name="value1">Source value.</param>
-        /// <param name="value2">Source value.</param>
-        /// <returns>The greater value.</returns>
-        public static int Max(int value1, int value2)
-        {
-            return value1 > value2 ? value1 : value2;
-        }
-        
-        /// <summary>
-        /// Returns the lesser of two values.
-        /// </summary>
-        /// <param name="value1">Source value.</param>
-        /// <param name="value2">Source value.</param>
-        /// <returns>The lesser value.</returns>
-        public static float Min(float value1, float value2)
-        {
-            return value1 < value2 ? value1 : value2;
-        }
-
-        /// <summary>
-        /// Returns the lesser of two values.
-        /// </summary>
-        /// <param name="value1">Source value.</param>
-        /// <param name="value2">Source value.</param>
-        /// <returns>The lesser value.</returns>
-        public static int Min(int value1, int value2)
-        {
-            return value1 < value2 ? value1 : value2;
-        }
-        
         /// <summary>
         /// Interpolates between two values using a cubic equation.
         /// </summary>

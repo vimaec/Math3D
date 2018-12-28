@@ -11,19 +11,14 @@ using System.Runtime.Serialization;
 
 namespace Ara3D
 {
-    [DataContract]
-    [DebuggerDisplay("{DebugDisplayString,nq}")]
     public struct Box : IEquatable<Box>
     {
-        [DataMember]
-        public Vector3 Min;
-      
-        [DataMember]
-        public Vector3 Max;
-
-        public const int CornerCount = 8;
+        public readonly Vector3 Min;
+        public readonly Vector3 Max;
 
         public int Count { get { return 2;  } }
+        public Vector3 Center => Min.Average(Max);
+        public Vector3[] Corners => GetCorners(new Vector3[8]);
 
         public Vector3 this[int n] { get { return n == 0 ? Min : Max; } }
 
@@ -53,11 +48,6 @@ namespace Ara3D
                 return ContainmentType.Contains;
 
             return ContainmentType.Intersects;
-        }
-
-        public void Contains(ref Box box, out ContainmentType result)
-        {
-            result = Contains(box);
         }
 
         public ContainmentType Contains(Sphere sphere)
@@ -144,18 +134,18 @@ namespace Ara3D
             return ContainmentType.Disjoint;
         }
 
-        public void Contains(ref Sphere sphere, out ContainmentType result)
+        public void Contains(Sphere sphere, out ContainmentType result)
         {
             result = Contains(sphere);
         }
 
         public ContainmentType Contains(Vector3 point)
         {
-            Contains(ref point, out ContainmentType result);
+            Contains(point, out ContainmentType result);
             return result;
         }
 
-        public void Contains(ref Vector3 point, out ContainmentType result)
+        public void Contains(Vector3 point, out ContainmentType result)
         {
             //first we get if point is out of box
             if (point.X < Min.X
@@ -173,19 +163,13 @@ namespace Ara3D
             }
         }
 
-        public static readonly Vector3 MaxVector3 = new Vector3(float.MaxValue);
-        public static readonly Vector3 MinVector3 = new Vector3(float.MinValue);
-
         /// <summary>
         /// Create a bounding box from the given list of points.
         /// </summary>
-        /// <param name="points">The list of Vector3 instances defining the point cloud to bound</param>
-        /// <returns>A bounding box that encapsulates the given point cloud.</returns>
-        /// <exception cref="ArgumentException">Thrown if the given list has no points.</exception>
         public static Box Create(IEnumerable<Vector3> points)
         {
-            var minVec = MaxVector3;
-            var maxVec = MinVector3;
+            var minVec = Constants.MaxVector;
+            var maxVec = Constants.MinVector;
             foreach (var ptVector in points)
             {
                 minVec.X = (minVec.X < ptVector.X) ? minVec.X : ptVector.X;
@@ -205,31 +189,12 @@ namespace Ara3D
 
         public static Box CreateFromSphere(Sphere sphere)
         {
-            CreateFromSphere(ref sphere, out Box result);
-            return result;
+            return new Box(sphere.Center - new Vector3(sphere.Radius), sphere.Center + new Vector3(sphere.Radius));
         }
 
-        public static void CreateFromSphere(ref Sphere sphere, out Box result)
+        public Box Merge(Box box)
         {
-            var corner = new Vector3(sphere.Radius);
-            result.Min = sphere.Center - corner;
-            result.Max = sphere.Center + corner;
-        }
-
-        public static Box CreateMerged(Box original, Box additional)
-        {
-            CreateMerged(ref original, ref additional, out Box result);
-            return result;
-        }
-
-        public static void CreateMerged(ref Box original, ref Box additional, out Box result)
-        {
-            result.Min.X = Math.Min(original.Min.X, additional.Min.X);
-            result.Min.Y = Math.Min(original.Min.Y, additional.Min.Y);
-            result.Min.Z = Math.Min(original.Min.Z, additional.Min.Z);
-            result.Max.X = Math.Max(original.Max.X, additional.Max.X);
-            result.Max.Y = Math.Max(original.Max.Y, additional.Max.Y);
-            result.Max.Z = Math.Max(original.Max.Z, additional.Max.Z);
+            return new Box(Min.Min(box.Min), Max.Max(box.Max));
         }
 
         public bool Equals(Box other)
@@ -242,21 +207,7 @@ namespace Ara3D
             return (obj is Box) && Equals((Box)obj);
         }
 
-        public Vector3[] GetCorners()
-        {
-            return new Vector3[] {
-                new Vector3(Min.X, Max.Y, Max.Z), 
-                new Vector3(Max.X, Max.Y, Max.Z),
-                new Vector3(Max.X, Min.Y, Max.Z), 
-                new Vector3(Min.X, Min.Y, Max.Z), 
-                new Vector3(Min.X, Max.Y, Min.Z),
-                new Vector3(Max.X, Max.Y, Min.Z),
-                new Vector3(Max.X, Min.Y, Min.Z),
-                new Vector3(Min.X, Min.Y, Min.Z)
-            };
-        }
-
-        public void GetCorners(Vector3[] corners)
+        public Vector3[] GetCorners(Vector3[] corners)
         {
             if (corners == null)
             {
@@ -290,6 +241,7 @@ namespace Ara3D
             corners[7].X = Min.X;
             corners[7].Y = Min.Y;
             corners[7].Z = Min.Z;
+            return corners;
         }
 
         public override int GetHashCode()
@@ -299,11 +251,11 @@ namespace Ara3D
 
         public bool Intersects(Box box)
         {
-            Intersects(ref box, out bool result);
+            Intersects(box, out bool result);
             return result;
         }
 
-        public void Intersects(ref Box box, out bool result)
+        public void Intersects(Box box, out bool result)
         {
             if ((Max.X >= box.Min.X) && (Min.X <= box.Max.X))
             {
@@ -319,11 +271,6 @@ namespace Ara3D
 
             result = false;
             return;
-        }
-
-        public bool Intersects(Frustum frustum)
-        {
-            return frustum.Intersects(this);
         }
 
         public bool Intersects(Sphere sphere)
@@ -359,18 +306,7 @@ namespace Ara3D
             return false;
         }
 
-        public void Intersects(ref Sphere sphere, out bool result)
-        {
-            result = Intersects(sphere);
-        }
-
         public PlaneIntersectionType Intersects(Plane plane)
-        {
-            Intersects(ref plane, out PlaneIntersectionType result);
-            return result;
-        }
-
-        public void Intersects(ref Plane plane, out PlaneIntersectionType result)
         {
             // See http://zach.in.tu-clausthal.de/teaching/cg_literatur/lighthouse3d_view_frustum_culling/index.html
 
@@ -413,34 +349,16 @@ namespace Ara3D
             // Inline Vector3.Dot(plane.Normal, negativeVertex) + plane.D;
             var distance = plane.Normal.X * negativeVertex.X + plane.Normal.Y * negativeVertex.Y + plane.Normal.Z * negativeVertex.Z + plane.D;
             if (distance > 0)
-            {
-                result = PlaneIntersectionType.Front;
-                return;
-            }
+                return PlaneIntersectionType.Front;
 
             // Inline Vector3.Dot(plane.Normal, positiveVertex) + plane.D;
             distance = plane.Normal.X * positiveVertex.X + plane.Normal.Y * positiveVertex.Y + plane.Normal.Z * positiveVertex.Z + plane.D;
             if (distance < 0)
-            {
-                result = PlaneIntersectionType.Back;
-                return;
-            }
+                return PlaneIntersectionType.Back;
 
-            result = PlaneIntersectionType.Intersecting;
+            return PlaneIntersectionType.Intersecting;
         }
-
-        public float? Intersects(Ray ray)
-        {
-            // TODO: finish this
-            throw new NotImplementedException();
-            // return ray.Intersects(this);
-        }
-        
-        public void Intersects(ref Ray ray, out float? result)
-        {
-            result = Intersects(ray);
-        }
-
+            
         public static bool operator ==(Box a, Box b)
         {
             return a.Equals(b);
@@ -451,25 +369,6 @@ namespace Ara3D
             return !a.Equals(b);
         }
 
-        internal string DebugDisplayString => string.Concat(
-                    "Min( ", Min.ToString(), " )  \r\n",
-                    "Max( ", Max.ToString(), " )"
-                    );
-
-        public override string ToString()
-        {
-            return "{{Min:" + Min.ToString() + " Max:" + Max.ToString() + "}}";
-        }
-
-        /// <summary>
-        /// Deconstruction method for <see cref="Box"/>.
-        /// </summary>
-        /// <param name="min"></param>
-        /// <param name="max"></param>
-        public void Deconstruct(out Vector3 min, out Vector3 max)
-        {
-            min = Min;
-            max = Max;
-        }
+        public override string ToString() => $"Box({Min}, {Max})";
     }
 }

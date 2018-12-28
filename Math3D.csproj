@@ -52,8 +52,7 @@
     <Compile Include="Box.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="ContainmentType.cs" />
-    <Compile Include="Frustum.cs" />
-    <Compile Include="HashHelpers.cs" />
+    <Compile Include="Hash.cs" />
     <Compile Include="Int3.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="MathHelper.cs" />

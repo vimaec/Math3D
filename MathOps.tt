@@ -23,7 +23,7 @@ var types = nonVectorTypes.Concat(vectorTypes);
 var araBinaryOps = new[] { "Add", "Sub", "Mul", "Div" };
 var araUnaryOps = new[] { "Inverse", "Ceiling", "Floor", "Round", "Truncate", "Sqr", "Cube" };
 var araCompOps = new[] { "Gt", "Lt", "GtEq", "LtEq", "Eq", "NEq" };
-var sysUnaryOps = new[] { "Acos", "Asin", "Atan", "Cos", "Cosh", "Exp", "Log", "Log10", "Sin", "Sinh", "Sqrt", "Tan", "Tanh" };
+var sysUnaryOps = new[] { "Acos", "Asin", "Atan", "Cos", "Cosh", "Exp", "Log", "Log10", "Sin", "Sinh", "Tan", "Tanh" };
 var sysBinaryOps = new[] { "Atan2", "Log", "Pow" };
 var allUnaryOps = sysUnaryOps.Concat(araUnaryOps);
 #>
@@ -88,6 +88,8 @@ foreach (var op in sysUnaryOps) {
 		public static double <#= op #> (this double x) { return System.Math.<#= op #>(x); }
 		public static float <#= op #> (this float x) { return (float)System.Math.<#= op #>(x); }
 <# } #>
+		public static double Sqrt (this double x) { return System.Math.Sqrt(x); }
+		public static float Sqrt (this float x) { return (float)System.Math.Sqrt(x); }
 
 <# 
 foreach (var t in floatTypes) { 
@@ -128,6 +130,6 @@ foreach (var t in vectorTypes) {
 		public static <#= t #> Sqrt( this <#= t #> self) { return <#= t #>.SquareRoot(self); }
 <#  } #>
 
-		public static Vector3 Cross( this Vector3 self, Vector3 x ) { return Vector.Cross(self, x); }
+		public static Vector3 Cross( this Vector3 self, Vector3 x ) { return Vector3.Cross(self, x); }
 
 } } 

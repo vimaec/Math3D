@@ -5,10 +5,9 @@ namespace Ara3D
 {
     public struct Triangle : IEquatable<Triangle>
     {
-        // TODO: are "readonly" fields or properties with getters only preferred for the compiler
-        public Vector3 A { get; }
-        public Vector3 B { get; }
-        public Vector3 C { get; }
+        public readonly Vector3 A;
+        public readonly Vector3 B;
+        public readonly Vector3 C;
 
         public Triangle(Vector3 a, Vector3 b, Vector3 c)
         {

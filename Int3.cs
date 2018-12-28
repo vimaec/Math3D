@@ -4,9 +4,9 @@ namespace Ara3D
 {
     public struct Int3 
     {
-        public int X { get; }
-        public int Y { get; }
-        public int Z { get; }
+        public readonly int X;
+        public readonly int Y;
+        public readonly int Z;
 
         public Int3(int x, int y, int z)
         {

@@ -14,55 +14,20 @@ namespace Ara3D
     /// <summary>
     /// Describes a sphere in 3D-space for bounding operations.
     /// </summary>
-    [DataContract]
-    [DebuggerDisplay("{DebugDisplayString,nq}")]
     public struct Sphere : IEquatable<Sphere>
     {
-        // TODO: convert this to use a Vector4
-        #region Public Fields
-
-        /// <summary>
-        /// The sphere center.
-        /// </summary>
-        [DataMember]
-        public Vector3 Center;
-
-        /// <summary>
-        /// The sphere radius.
-        /// </summary>
-        [DataMember]
-        public float Radius;
-
-        #endregion
-
-        #region Internal Properties
-
-        internal string DebugDisplayString => string.Concat(
-                    "Center( ", Center.ToString(), " )  \r\n",
-                    "Radius( ", Radius.ToString(), " )"
-                    );
-
-        #endregion
-
-        #region Constructors
-
+        public readonly Vector3 Center;
+        public readonly float Radius;
+       
         /// <summary>
         /// Constructs a bounding sphere with the specified center and radius.  
         /// </summary>
-        /// <param name="center">The sphere center.</param>
-        /// <param name="radius">The sphere radius.</param>
         public Sphere(Vector3 center, float radius)
         {
             Center = center;
             Radius = radius;
         }
-
-        #endregion
-
-        #region Public Methods
-
-        #region Contains
-
+        
         /// <summary>
         /// Test if a bounding box is fully inside, outside, or just intersecting the sphere.
         /// </summary>
@@ -72,7 +37,7 @@ namespace Ara3D
         {
             //check if all corner is in sphere
             bool inside = true;
-            foreach (Vector3 corner in box.GetCorners())
+            foreach (var corner in box.Corners)
             {
                 if (Contains(corner) == ContainmentType.Disjoint)
                 {
@@ -113,105 +78,34 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Test if a bounding box is fully inside, outside, or just intersecting the sphere.
-        /// </summary>
-        /// <param name="box">The box for testing.</param>
-        /// <param name="result">The containment type as an output parameter.</param>
-        public void Contains(ref Box box, out ContainmentType result)
-        {
-            result = Contains(box);
-        }
-
-        /// <summary>
-        /// Test if a frustum is fully inside, outside, or just intersecting the sphere.
-        /// </summary>
-        /// <param name="frustum">The frustum for testing.</param>
-        /// <returns>The containment type.</returns>
-        public ContainmentType Contains(Frustum frustum)
-        {
-            //check if all corner is in sphere
-            bool inside = true;
-
-            Vector3[] corners = frustum.GetCorners();
-            foreach (Vector3 corner in corners)
-            {
-                if (Contains(corner) == ContainmentType.Disjoint)
-                {
-                    inside = false;
-                    break;
-                }
-            }
-            if (inside)
-                return ContainmentType.Contains;
-
-            //check if the distance from sphere center to frustrum face < radius
-            double dmin = 0;
-            //TODO : calcul dmin
-
-            if (dmin <= Radius * Radius)
-                return ContainmentType.Intersects;
-
-            //else disjoint
-            return ContainmentType.Disjoint;
-        }
-
-        /// <summary>
-        /// Test if a frustum is fully inside, outside, or just intersecting the sphere.
-        /// </summary>
-        /// <param name="frustum">The frustum for testing.</param>
-        /// <param name="result">The containment type as an output parameter.</param>
-        public void Contains(ref Frustum frustum,out ContainmentType result)
-        {
-            result = Contains(frustum);
-        }
-
-        /// <summary>
         /// Test if a sphere is fully inside, outside, or just intersecting the sphere.
         /// </summary>
-        /// <param name="sphere">The other sphere for testing.</param>
-        /// <returns>The containment type.</returns>
         public ContainmentType Contains(Sphere sphere)
         {
-            Contains(ref sphere, out ContainmentType result);
-            return result;
-        }
-
-        /// <summary>
-        /// Test if a sphere is fully inside, outside, or just intersecting the sphere.
-        /// </summary>
-        /// <param name="sphere">The other sphere for testing.</param>
-        /// <param name="result">The containment type as an output parameter.</param>
-        public void Contains(ref Sphere sphere, out ContainmentType result)
-        {
-            float sqDistance = Vector3.DistanceSquared(sphere.Center, Center);
+            var sqDistance = Vector3.DistanceSquared(sphere.Center, Center);
 
             if (sqDistance > (sphere.Radius + Radius) * (sphere.Radius + Radius))
-                result = ContainmentType.Disjoint;
+                return  ContainmentType.Disjoint;
 
-            else if (sqDistance <= (Radius - sphere.Radius) * (Radius - sphere.Radius))
-                result = ContainmentType.Contains;
+            if (sqDistance <= (Radius - sphere.Radius) * (Radius - sphere.Radius))
+                return ContainmentType.Contains;
 
-            else
-                result = ContainmentType.Intersects;
+            return ContainmentType.Intersects;
         }
 
         /// <summary>
         /// Test if a point is fully inside, outside, or just intersecting the sphere.
         /// </summary>
-        /// <param name="point">The vector in 3D-space for testing.</param>
-        /// <returns>The containment type.</returns>
         public ContainmentType Contains(Vector3 point)
         {
-            Contains(ref point, out ContainmentType result);
+            Contains(point, out ContainmentType result);
             return result;
         }
 
         /// <summary>
         /// Test if a point is fully inside, outside, or just intersecting the sphere.
         /// </summary>
-        /// <param name="point">The vector in 3D-space for testing.</param>
-        /// <param name="result">The containment type as an output parameter.</param>
-        public void Contains(ref Vector3 point, out ContainmentType result)
+        public void Contains(Vector3 point, out ContainmentType result)
         {
             float sqRadius = Radius * Radius;
             float sqDistance = Vector3.DistanceSquared(point, Center);
@@ -226,56 +120,19 @@ namespace Ara3D
                 result = ContainmentType.Intersects;
         }
 
-        #endregion
-
-        #region CreateFromBoundingBox
-
         /// <summary>
-        /// Creates the smallest <see cref="Sphere"/> that can contain a specified <see cref="Box"/>.
+        /// Creates the smallest sphere that contains the box. 
         /// </summary>
-        /// <param name="box">The box to create the sphere from.</param>
-        /// <returns>The new <see cref="Sphere"/>.</returns>
         public static Sphere CreateFromBoundingBox(Box box)
         {
-            CreateFromBoundingBox(ref box, out Sphere result);
-            return result;
-        }
-
-        /// <summary>
-        /// Creates the smallest <see cref="Sphere"/> that can contain a specified <see cref="Box"/>.
-        /// </summary>
-        /// <param name="box">The box to create the sphere from.</param>
-        /// <param name="result">The new <see cref="Sphere"/> as an output parameter.</param>
-        public static void CreateFromBoundingBox(ref Box box, out Sphere result)
-        {
-            // Find the center of the box.
-            Vector3 center = new Vector3((box.Min.X + box.Max.X) / 2.0f,
-                                         (box.Min.Y + box.Max.Y) / 2.0f,
-                                         (box.Min.Z + box.Max.Z) / 2.0f);
-
-            // Find the distance between the center and one of the corners of the box.
+            var center = box.Center;
             float radius = Vector3.Distance(center, box.Max);
-
-            result = new Sphere(center, radius);
-        }
-
-        #endregion
-
-        /// <summary>
-        /// Creates the smallest <see cref="Sphere"/> that can contain a specified <see cref="Frustum"/>.
-        /// </summary>
-        /// <param name="frustum">The frustum to create the sphere from.</param>
-        /// <returns>The new <see cref="Sphere"/>.</returns>
-        public static Sphere CreateFromFrustum(Frustum frustum)
-        {
-            return Create(frustum.GetCorners());
+            return new Sphere(center, radius);
         }
 
         /// <summary>
-        /// Creates the smallest <see cref="Sphere"/> that can contain a specified list of points in 3D-space. 
+        /// Creates the smallest Sphere that contains the given points 
         /// </summary>
-        /// <param name="points">List of point to create the sphere from.</param>
-        /// <returns>The new <see cref="Sphere"/>.</returns>
         public static Sphere Create(IEnumerable<Vector3> points)
         {
             if (points == null )
@@ -364,52 +221,30 @@ namespace Ara3D
         {
             return Create(points.AsEnumerable());
         }
-
+        
         /// <summary>
-        /// Creates the smallest <see cref="Sphere"/> that can contain two spheres.
+        /// Creates a sphere merging it with another 
         /// </summary>
-        /// <param name="original">First sphere.</param>
-        /// <param name="additional">Second sphere.</param>
-        /// <returns>The new <see cref="Sphere"/>.</returns>
-        public static Sphere CreateMerged(Sphere original, Sphere additional)
+        public Sphere Merge(Sphere additional)
         {
-            CreateMerged(ref original, ref additional, out Sphere result);
-            return result;
-        }
-
-        /// <summary>
-        /// Creates the smallest <see cref="Sphere"/> that can contain two spheres.
-        /// </summary>
-        /// <param name="original">First sphere.</param>
-        /// <param name="additional">Second sphere.</param>
-        /// <param name="result">The new <see cref="Sphere"/> as an output parameter.</param>
-        public static void CreateMerged(ref Sphere original, ref Sphere additional, out Sphere result)
-        {
-            Vector3 ocenterToaCenter = Vector3.Subtract(additional.Center, original.Center);
-            float distance = ocenterToaCenter.Length();
-            if (distance <= original.Radius + additional.Radius)//intersect
+            var ocenterToaCenter = Vector3.Subtract(additional.Center, Center);
+            var distance = ocenterToaCenter.Length();
+            if (distance <= Radius + additional.Radius)//intersect
             {
-                if (distance <= original.Radius - additional.Radius)//original contain additional
+                if (distance <= Radius - additional.Radius)//original contain additional
                 {
-                    result = original;
-                    return;
+                    return this;
                 }
-                if (distance <= additional.Radius - original.Radius)//additional contain original
+                if (distance <= additional.Radius - Radius)//additional contain original
                 {
-                    result = additional;
-                    return;
+                    return additional;
                 }
             }
             //else find center of new sphere and radius
-            float leftRadius = Math.Max(original.Radius - distance, additional.Radius);
-            float Rightradius = Math.Max(original.Radius + distance, additional.Radius);
-            ocenterToaCenter = ocenterToaCenter + (((leftRadius - Rightradius) / (2 * ocenterToaCenter.Length())) * ocenterToaCenter);//oCenterToResultCenter
-
-            result = new Sphere
-            {
-                Center = original.Center + ocenterToaCenter,
-                Radius = (leftRadius + Rightradius) / 2
-            };
+            float leftRadius = Math.Max(Radius - distance, additional.Radius);
+            float Rightradius = Math.Max(Radius + distance, additional.Radius);
+            ocenterToaCenter = ocenterToaCenter + (((leftRadius - Rightradius) / (2 * ocenterToaCenter.Length())) * ocenterToaCenter);
+            return new Sphere(Center + ocenterToaCenter, (leftRadius + Rightradius) / 2);
         }
 
         /// <summary>
@@ -425,193 +260,75 @@ namespace Ara3D
         /// <summary>
         /// Compares whether current instance is equal to specified <see cref="Object"/>.
         /// </summary>
-        /// <param name="obj">The <see cref="Object"/> to compare.</param>
-        /// <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
         public override bool Equals(object obj)
         {
             if (obj is Sphere)
                 return Equals((Sphere)obj);
-
             return false;
         }
 
         /// <summary>
         /// Gets the hash code of this <see cref="Sphere"/>.
         /// </summary>
-        /// <returns>Hash code of this <see cref="Sphere"/>.</returns>
         public override int GetHashCode()
         {
             return Center.GetHashCode() + Radius.GetHashCode();
         }
 
-        #region Intersects
-
         /// <summary>
         /// Gets whether or not a specified <see cref="Box"/> intersects with this sphere.
         /// </summary>
-        /// <param name="box">The box for testing.</param>
-        /// <returns><c>true</c> if <see cref="Box"/> intersects with this sphere; <c>false</c> otherwise.</returns>
         public bool Intersects(Box box)
         {
 			return box.Intersects(this);
         }
 
         /// <summary>
-        /// Gets whether or not a specified <see cref="Box"/> intersects with this sphere.
-        /// </summary>
-        /// <param name="box">The box for testing.</param>
-        /// <param name="result"><c>true</c> if <see cref="Box"/> intersects with this sphere; <c>false</c> otherwise. As an output parameter.</param>
-        public void Intersects(ref Box box, out bool result)
-        {
-            box.Intersects(ref this, out result);
-        }
-
-        /*
-        TODO : Make the public bool Intersects(BoundingFrustum frustum) overload
-
-        public bool Intersects(BoundingFrustum frustum)
-        {
-            if (frustum == null)
-                throw new NullReferenceException();
-
-            throw new NotImplementedException();
-        }
-
-        */
-
         /// <summary>
         /// Gets whether or not the other <see cref="Sphere"/> intersects with this sphere.
         /// </summary>
-        /// <param name="sphere">The other sphere for testing.</param>
-        /// <returns><c>true</c> if other <see cref="Sphere"/> intersects with this sphere; <c>false</c> otherwise.</returns>
         public bool Intersects(Sphere sphere)
         {
-            Intersects(ref sphere, out bool result);
-            return result;
-        }
-
-        /// <summary>
-        /// Gets whether or not the other <see cref="Sphere"/> intersects with this sphere.
-        /// </summary>
-        /// <param name="sphere">The other sphere for testing.</param>
-        /// <param name="result"><c>true</c> if other <see cref="Sphere"/> intersects with this sphere; <c>false</c> otherwise. As an output parameter.</param>
-        public void Intersects(ref Sphere sphere, out bool result)
-        {
-            float sqDistance = Vector3.DistanceSquared(sphere.Center, Center);
-
-            if (sqDistance > (sphere.Radius + Radius) * (sphere.Radius + Radius))
-                result = false;
-            else
-                result = true;
+            var sqDistance = Vector3.DistanceSquared(sphere.Center, Center);
+            return !(sqDistance > (sphere.Radius + Radius) * (sphere.Radius + Radius));
         }
 
         /// <summary>
         /// Gets whether or not a specified <see cref="Plane"/> intersects with this sphere.
         /// </summary>
-        /// <param name="plane">The plane for testing.</param>
-        /// <returns>Type of intersection.</returns>
         public PlaneIntersectionType Intersects(Plane plane)
-        {
-            // TODO: we might want to inline this for performance reasons
-            Intersects(ref plane, out PlaneIntersectionType result);
-            return result;
-        }
-
-        /// <summary>
-        /// Gets whether or not a specified <see cref="Plane"/> intersects with this sphere.
-        /// </summary>
-        /// <param name="plane">The plane for testing.</param>
-        /// <param name="result">Type of intersection as an output parameter.</param>
-        public void Intersects(ref Plane plane, out PlaneIntersectionType result)
         {
             var distance = Vector3.Dot(plane.Normal, Center);
             distance += plane.D;
             if (distance > Radius)
-                result = PlaneIntersectionType.Front;
-            else if (distance < -Radius)
-                result = PlaneIntersectionType.Back;
-            else
-                result = PlaneIntersectionType.Intersecting;
+                return PlaneIntersectionType.Front;
+            if (distance < -Radius)
+                return PlaneIntersectionType.Back;
+            return PlaneIntersectionType.Intersecting;
         }
 
         /// <summary>
         /// Gets whether or not a specified <see cref="Ray"/> intersects with this sphere.
         /// </summary>
-        /// <param name="ray">The ray for testing.</param>
-        /// <returns>Distance of ray intersection or <c>null</c> if there is no intersection.</returns>
         public float? Intersects(Ray ray)
         {
             return ray.Intersects(this);
         }
 
-        /// <summary>
-        /// Gets whether or not a specified <see cref="Ray"/> intersects with this sphere.
-        /// </summary>
-        /// <param name="ray">The ray for testing.</param>
-        /// <param name="result">Distance of ray intersection or <c>null</c> if there is no intersection as an output parameter.</param>
-        public void Intersects(ref Ray ray, out float? result)
-        {
-            ray.Intersects(ref this, out result);
-        }
-
-        #endregion
-
-        /// <summary>
-        /// Returns a <see cref="String"/> representation of this <see cref="Sphere"/> in the format:
-        /// {Center:[<see cref="Center"/>] Radius:[<see cref="Radius"/>]}
-        /// </summary>
-        /// <returns>A <see cref="String"/> representation of this <see cref="Sphere"/>.</returns>
         public override string ToString()
         {
-            return "{Center:" + Center + " Radius:" + Radius + "}";
+            return $"Point(Center({Center}, Radius({Radius})))";
         }
 
-        #region Transform
-
-        /// <summary>
-        /// Creates a new <see cref="Sphere"/> that contains a transformation of translation and scale from this sphere by the specified Matrix.
-        /// </summary>        
         public Sphere Transform(Matrix4x4 matrix)
         {
-            Sphere sphere = new Sphere
-            {
-                Center = Vector3.Transform(Center, matrix),
-                Radius = Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33)))))
-            };
-            return sphere;
+            // TODO: simplify this expression
+            return new Sphere(Center.Transform(matrix), Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33))))));
         }
-
-        /// <summary>
-        /// Creates a new <see cref="Sphere"/> that contains a transformation of translation and scale from this sphere by the specified Matrix.
-        /// </summary>
-        public void Transform(ref Matrix4x4 matrix, out Sphere result)
-        {
-            result.Center = Vector3.Transform(Center, matrix);
-            result.Radius = Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33)))));
-        }
-        #endregion
-
-        /// <summary>
-        /// Deconstruction method for <see cref="Sphere"/>.
-        /// </summary>
-        /// <param name="center"></param>
-        /// <param name="radius"></param>
-        public void Deconstruct(out Vector3 center, out float radius)
-        {
-            center = Center;
-            radius = Radius;
-        }
-
-        #endregion
-
-        #region Operators
 
         /// <summary>
         /// Compares whether two <see cref="Sphere"/> instances are equal.
         /// </summary>
-        /// <param name="a"><see cref="Sphere"/> instance on the left of the equal sign.</param>
-        /// <param name="b"><see cref="Sphere"/> instance on the right of the equal sign.</param>
-        /// <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
         public static bool operator == (Sphere a, Sphere b)
         {
             return a.Equals(b);
@@ -620,14 +337,9 @@ namespace Ara3D
         /// <summary>
         /// Compares whether two <see cref="Sphere"/> instances are not equal.
         /// </summary>
-        /// <param name="a"><see cref="Sphere"/> instance on the left of the not equal sign.</param>
-        /// <param name="b"><see cref="Sphere"/> instance on the right of the not equal sign.</param>
-        /// <returns><c>true</c> if the instances are not equal; <c>false</c> otherwise.</returns>
         public static bool operator != (Sphere a, Sphere b)
         {
             return !a.Equals(b);
         }
-
-        #endregion
     }
 }
