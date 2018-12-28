@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// MIT License 
+// Copyright (C) 2018 Ara 3D. Inc
+// Copyright (C) The Mono.Xna Team
+// This file is subject to the terms and conditions defined in
+// file 'LICENSE.txt', which is part of this source code package.
+
+using System;
 using System.Numerics;
 
 namespace Ara3D
 {
-    // NOTE: some code inspired by https://www.codeproject.com/Articles/17425/A-Vector-Type-for-C
-    // other algorithms taken from: https://github.com/MonoGame/MonoGame
-
     public static class VectorHelper
     {
         public static Vector2 Select(this Vector2 self, Func<float, float> f)

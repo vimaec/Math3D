@@ -1,11 +1,11 @@
-﻿// MIT License - Copyright (C) The Mono.Xna Team
+﻿// MIT License 
+// Copyright (C) 2018 Ara 3D. Inc
+// Copyright (C) The Mono.Xna Team
 // This file is subject to the terms and conditions defined in
 // file 'LICENSE.txt', which is part of this source code package.
 
 using System;
-using System.Diagnostics;
 using System.Numerics;
-using System.Runtime.Serialization;
 
 namespace Ara3D
 {
