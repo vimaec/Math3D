@@ -27,7 +27,6 @@ var sysUnaryOps = new[] { "Acos", "Asin", "Atan", "Cos", "Cosh", "Exp", "Log", "
 var sysBinaryOps = new[] { "Atan2", "Log", "Pow" };
 var allUnaryOps = sysUnaryOps.Concat(araUnaryOps);
 #>
-
 using System.Numerics;
 
 namespace Ara3D 

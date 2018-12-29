@@ -1,0 +1,98 @@
+﻿<#@ import namespace="System.Linq" #>
+<#+
+	private void CreateSetter(string name, int i, string[] fields, string[] types)
+	{
+	   var field = fields[i];
+	   var type = types[i];
+	   var sb = new StringBuilder();
+	   
+	   for (var j=0; j < fields.Length; ++j) {
+			if (j > 0) sb.Append(", ");
+			sb.Append(j == i ? "x" : fields[j]);
+		}
+		var args = sb.ToString();
+#>
+		public <#= name #> Set<#= field #>(<#= type #> x) => new <#= name #>(<#= args #>);
+<#+
+	}
+	
+	private void CreateSetters(string name, string[] fields, string[] types) {
+		for (var i=0; i < fields.Length; ++i) 
+			CreateSetter(name, i, fields, types);
+	}
+
+    private void CreateShapeStruct(string name, string[] fields, string type)
+	{
+		CreateStruct(name, fields, fields.Select(f => type).ToArray());
+	}
+
+    private void CreateVectorStruct(string name, string[] fields, string type)
+	{
+		CreateStruct(name, fields, fields.Select(f => type).ToArray());
+	}
+
+	private void CreateRangeStruct(string name, string type) 
+	{
+		CreateStruct(name, new[] { "Min", "Max" }, new[] { type, type });
+	}
+
+	private static string ZeroValue(string type) {
+		switch (type)
+		{
+		case "int": return 0;
+		case "float": return 0f;
+		case "double": return 0.0;
+		case "long": return 0L;
+		default: return type + ".Zero";
+		}
+	}
+
+	private static string OneValue(string type) {
+		switch (type)
+		{
+		case "int": return 1;
+		case "float": return 1f;
+		case "double": return 1.0;
+		case "long": return 1L;
+		default: return type + ".One";
+		}
+	}
+
+    private void CreateStruct(string name, string[] fields, string[] types)
+    {
+        var toStringBodyInner = string.Join(", ", fields.Select((f) => $"{f} = {{{f}}}"));
+        var toStringBody = $"{name}({toStringBodyInner})";
+        var hashBodyInner = string.Join(", ", fields.Select((f) => $"{f}.GetHashCode()"));
+        var hashBody = $"Hash.Combine({hashBodyInner})";
+		var eqBody = string.Join(" && ",fields.Select((f) => $"{f} == x.{f}"));
+        var opArgs = $"{name} x0, {name} x1";				
+		var ctorArgs = string.Join(", ", fields.Zip(types, (field, type) => $"{type} {field.ToLower()}"));
+		var ctorAssign = string.Join(" ", fields.Select((f) => $"{f} = {f.ToLower()};"));
+		var zeroArgs = string.Join(", ", types.Select(ZeroValue));
+		var oneArgs = string.Join(", ", types.Select(ZeroValue));
+		public static <#= name #> One = new <#= name #>(<#=oneArgs#>);
+
+#>
+	public partial struct <#= name #> : IEquatable< <#= name #> >
+	{ 
+<#+
+        for (var i=0; i < fields.Length; ++i) {
+#>
+		public readonly <#= types[i] #> <#= fields[i] #>;
+<#+
+		}
+#>
+		public <#= name #>(<#= ctorArgs #>) { <#= ctorAssign #> }
+		public override bool Equals(object obj) => obj is <#= name #> x && Equals(x);
+		public override int GetHashCode() => <#= hashBody #>;
+		public override string ToString() => $"<#= toStringBody #>";
+		public bool Equals(<#= name #> x) => <#= eqBody #>;
+		public static bool operator ==(<#= opArgs #>) => x0.Equals(x1);
+		public static bool operator !=(<#= opArgs #>) => !x0.Equals(x1);
+<#+
+		CreateSetters(name, fields, types); 
+#>
+	}
+<#+
+	}
+#>

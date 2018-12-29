@@ -9,32 +9,8 @@ using System.Numerics;
 
 namespace Ara3D
 {
-    public struct Ray : IEquatable<Ray>
+    public partial struct Ray 
     {
-        public readonly Vector3 Direction;      
-        public readonly Vector3 Position;
-
-        public Ray(Vector3 position, Vector3 direction)
-        {
-            Position = position;
-            Direction = direction;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return (obj is Ray) && Equals((Ray)obj);
-        }
-        
-        public bool Equals(Ray other)
-        {
-            return Position.Equals(other.Position) && Direction.Equals(other.Direction);
-        }
-        
-        public override int GetHashCode()
-        {
-            return Position.GetHashCode() ^ Direction.GetHashCode();
-        }
-
         // adapted from http://www.scratchapixel.com/lessons/3d-basic-lessons/lesson-7-intersecting-simple-shapes/ray-box-intersection/
         public float? Intersects(Box box)
         {
@@ -164,21 +140,6 @@ namespace Ara3D
             // if x^2 + z^2 - y^2 < 0, we do not intersect
             var dist = sphereRadiusSquared + distanceAlongRay * distanceAlongRay - differenceLengthSquared;
             return (dist < 0) ? null : distanceAlongRay - (float?)Math.Sqrt(dist);
-        }
-
-        public static bool operator !=(Ray a, Ray b)
-        {
-            return !a.Equals(b);
-        }
-
-        public static bool operator ==(Ray a, Ray b)
-        {
-            return a.Equals(b);
-        }
-
-        public override string ToString()
-        {
-            return $"Ray(Position={Position}, Direction={Direction})";
         }
     }
 }

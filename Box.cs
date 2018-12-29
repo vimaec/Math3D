@@ -11,22 +11,13 @@ using System.Numerics;
 
 namespace Ara3D
 {
-    public struct Box : IEquatable<Box>
+    public partial struct Box
     {
-        public readonly Vector3 Min;
-        public readonly Vector3 Max;
-
         public int Count { get { return 2;  } }
         public Vector3 Center => Min.Average(Max);
         public Vector3[] Corners => GetCorners(new Vector3[8]);
 
         public Vector3 this[int n] { get { return n == 0 ? Min : Max; } }
-
-        public Box(Vector3 min, Vector3 max)
-        {
-            Min = min;
-            Max = max;
-        }
 
         public ContainmentType Contains(Box box)
         {
@@ -197,16 +188,6 @@ namespace Ara3D
             return new Box(Min.Min(box.Min), Max.Max(box.Max));
         }
 
-        public bool Equals(Box other)
-        {
-            return (Min == other.Min) && (Max == other.Max);
-        }
-
-        public override bool Equals(object obj)
-        {
-            return (obj is Box) && Equals((Box)obj);
-        }
-
         public Vector3[] GetCorners(Vector3[] corners)
         {
             if (corners == null)
@@ -242,11 +223,6 @@ namespace Ara3D
             corners[7].Y = Min.Y;
             corners[7].Z = Min.Z;
             return corners;
-        }
-
-        public override int GetHashCode()
-        {
-            return Min.GetHashCode() + Max.GetHashCode();
         }
 
         public bool Intersects(Box box)
@@ -358,17 +334,5 @@ namespace Ara3D
 
             return PlaneIntersectionType.Intersecting;
         }
-            
-        public static bool operator ==(Box a, Box b)
-        {
-            return a.Equals(b);
-        }
-
-        public static bool operator !=(Box a, Box b)
-        {
-            return !a.Equals(b);
-        }
-
-        public override string ToString() => $"Box({Min}, {Max})";
     }
 }

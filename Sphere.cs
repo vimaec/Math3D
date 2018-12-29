@@ -14,20 +14,8 @@ namespace Ara3D
     /// <summary>
     /// Describes a sphere in 3D-space for bounding operations.
     /// </summary>
-    public struct Sphere : IEquatable<Sphere>
-    {
-        public readonly Vector3 Center;
-        public readonly float Radius;
-       
-        /// <summary>
-        /// Constructs a bounding sphere with the specified center and radius.  
-        /// </summary>
-        public Sphere(Vector3 center, float radius)
-        {
-            Center = center;
-            Radius = radius;
-        }
-        
+    public partial struct Sphere 
+    {        
         /// <summary>
         /// Test if a bounding box is fully inside, outside, or just intersecting the sphere.
         /// </summary>
@@ -248,34 +236,6 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Compares whether current instance is equal to specified <see cref="Sphere"/>.
-        /// </summary>
-        /// <param name="other">The <see cref="Sphere"/> to compare.</param>
-        /// <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
-        public bool Equals(Sphere other)
-        {
-            return Center == other.Center && Radius == other.Radius;
-        }
-
-        /// <summary>
-        /// Compares whether current instance is equal to specified <see cref="Object"/>.
-        /// </summary>
-        public override bool Equals(object obj)
-        {
-            if (obj is Sphere)
-                return Equals((Sphere)obj);
-            return false;
-        }
-
-        /// <summary>
-        /// Gets the hash code of this <see cref="Sphere"/>.
-        /// </summary>
-        public override int GetHashCode()
-        {
-            return Center.GetHashCode() + Radius.GetHashCode();
-        }
-
-        /// <summary>
         /// Gets whether or not a specified <see cref="Box"/> intersects with this sphere.
         /// </summary>
         public bool Intersects(Box box)
@@ -315,31 +275,10 @@ namespace Ara3D
             return ray.Intersects(this);
         }
 
-        public override string ToString()
-        {
-            return $"Point(Center({Center}, Radius({Radius})))";
-        }
-
         public Sphere Transform(Matrix4x4 matrix)
         {
             // TODO: simplify this expression
             return new Sphere(Center.Transform(matrix), Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33))))));
-        }
-
-        /// <summary>
-        /// Compares whether two <see cref="Sphere"/> instances are equal.
-        /// </summary>
-        public static bool operator == (Sphere a, Sphere b)
-        {
-            return a.Equals(b);
-        }
-
-        /// <summary>
-        /// Compares whether two <see cref="Sphere"/> instances are not equal.
-        /// </summary>
-        public static bool operator != (Sphere a, Sphere b)
-        {
-            return !a.Equals(b);
         }
     }
 }

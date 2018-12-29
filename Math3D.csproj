@@ -46,7 +46,6 @@
     <Compile Include="Constants.cs" />
     <Compile Include="ContainmentType.cs" />
     <Compile Include="Hash.cs" />
-    <Compile Include="Int3.cs" />
     <Compile Include="Line.cs" />
     <Compile Include="MathHelper.cs" />
     <Compile Include="MathOps.cs">
@@ -57,6 +56,11 @@
     <Compile Include="PlaneIntersectionType.cs" />
     <Compile Include="Ray.cs" />
     <Compile Include="Sphere.cs" />
+    <Compile Include="Structs.cs">
+      <DependentUpon>Structs.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Include="Triangle.cs" />
     <Compile Include="Triangle2D.cs" />
     <Compile Include="VectorHelper.cs" />
@@ -69,6 +73,11 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MathOps.cs</LastGenOutput>
     </Content>
+    <Content Include="Structs.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Structs.cs</LastGenOutput>
+    </Content>
+    <None Include="TemplateHelpers.tt" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

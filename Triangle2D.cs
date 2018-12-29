@@ -7,26 +7,8 @@ using System.Numerics;
 
 namespace Ara3D
 {
-    class Triangle2D
+    public partial struct Triangle2
     {
-        // Computes the signed 2D area of a triangle.
-        public float Area2D
-        {
-            get
-            {
-                return 0.5f * (A.X * (C.Y - B.Y) + B.X * (A.Y - C.Y) + C.X * (B.Y - A.Y));
-            }
-        }
-
-        public readonly Vector2 A;
-        public readonly Vector2 B;
-        public readonly Vector2 C;
-
-        public Triangle2D(Vector2 a, Vector2 b, Vector2 c)
-        {
-            A = a; B = b; C = c;
-        }
-
         public int Count => 3;
 
         public Vector2 this[int n] => n == 0 ? A : n == 1 ? B : C;
@@ -43,7 +25,7 @@ namespace Ara3D
         // Test if a given point p2 is on the left side of the line formed by p0-p1.
         public static bool OnLeftSideOfLine(Vector2 p0, Vector2 p1, Vector2 p2)
         {
-            return new Triangle2D(p0, p2, p1).Area > 0;
+            return new Triangle2(p0, p2, p1).Area > 0;
         }
 
         // Test if a given point is inside a given triangle in R2.
