@@ -12,26 +12,22 @@ At Ara 3D we develop C# libraries for geometry processing that are used in comma
 desktop applications as well as exporters, importers, and plug-ins for various tools such as Unity, 3ds Max, Revit, 
 and more. 
 
-The foundation of all computational geometry are a common set of algorithms and data strctures that include vectors,
+The foundation of computational geometry is a common set of algorithms and data strctures that include vectors,
 quaternions, matrices, rays, lines, bounding boxes and other structures. 
 
 Ideally, we would have reused an open-source library, and have tried several different libraries before 
-settling on managing our own. See the Appendix for a list of related libraries, and some of the rationale for not 
-using them.
-
-This library has a very similar API to System.Numerics and supports many of the same functions and signatures, plus 
-a lot more. 
+settling on writing and maintaining our own. See the Appendix for a list of related libraries. 
 
 ## Design Goals 
 
-Our design goals were in order:
+In rough order, the Math3D design goals are:
 
 1. Portability
 	* The library must be pure C# 
 	* No unsafe code 
 	* Fixed binary layout of structs in memory
 	* Double and Single precision implementation of most structures 
-2. Robust
+2. Robustness
 	* Functions are well covered by unit tests 
 	* Functions are easily read and understood 
 3. Ease of Use
@@ -40,7 +36,7 @@ Our design goals were in order:
 	* Consistent with Microsoft coding styles
 	* Consistent API with System.Numerics
 4. Performance 
-	* Good performance 
+	* Good-enough performance 
 
 ## Performance: Aggressive Method Inlining
 
@@ -48,21 +44,32 @@ One of the most effective compiler optimizations is method inlining. Unfortunate
 as a formal arg the [method will not be inlined](https://stackoverflow.com/a/55432110/184528).
 
 Ara3D.Math3D uses the `[MethodImpl(MethodImplOptions.AggressiveInlining)]` attribute on methods to overcome the 
-inefficiency of structs not-being inlined. 
+inefficiency of structs not-being inlined. This is the approach used by System.Numerics and allows
+a more discoverable object-oriented syntax.
 
-## A Design Goal: Matching the System.Numerics API
+Without this attribute libraries often resort to pass the structs as `ref` parameters (e.g. MonoGame and SharpDX)
+which makes for a less readable syntax, and an API that is less discoverable because auto-complete doesn't work 
+as well.
+
+## Matching the System.Numerics API
 
 Rather than presenting C# programmers with an unfamiliar interface in the library, we have attempted to 
 match the System.Numerics API as closely as possible (with the exception of making the structs immutable). 
 This has made it easier for us to adapt existing code bases to use `Ara3D.Math` and to reuse the rich 
 set of tests provided by the CoreFX framework. 
 
-One difference is that we opted to make all structs immutable.
+Related to this topic last year Unity released a prototype library called [`Unity.Mathematics`](https://github.com/Unity-Technologies/Unity.Mathematics),
+this library opted to emulate the math library of GLSL, which we feel makes the API harder to learn 
+for C# programmers, though it does make it easier to learn for shader programmers. 
+
+One difference from System.Numerics is that we opted to make virtually all structs immutable (with the 
+temporary exception of `Matrix4x4`)
 
 ## Immutable Structs
 
 Microsoft's recommendations around [struct design](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/struct)
-are to make structs immutable. Oddly enough this is violated by the System.Numerics library. 
+are to make structs immutable. Oddly enough this is violated by the System.Numerics library. This is one of the reasons 
+we decided to fork the System.Numerics library. 
 
 By opting to make data types immutable by default eliminates large categories of bugs like race conditions, 
 invariant violations after construction. 
@@ -142,51 +149,3 @@ the T4 templating engine.
 * [SharpDX Mathematics](https://github.com/sharpdx/SharpDX/tree/master/Source/SharpDX.Mathematics)
 * [A Vector Type for C# - R Potter via Code Project](https://www.codeproject.com/Articles/17425/A-Vector-Type-for-C)
 
-Because the `MonoGame` framework is an older code-base, it adopted an awkward coding of style which resulted from 
-passing structs by `ref` to overcome the performance hit caused by non-inlining of methods.  
-
-## Why not Library X
-
-We evaluated all of the aforementioned libraries, and chose not to use them for a variety of reasons. Some of these
-are listed here:
-
-### Why not use MonoGame
-
-MonoGame is a mature library with a rich set of 3D algorithms and data structures, a subset of which are very similar
-to `System.Numerics`. 
-
-* Layout in memory is not fixed 
-* The API emphasizes usage of `out` and `ref` parameters, rather than using an object-oriented syntax 
-* There are no double-precision versions of the functions and classes
-* The API surface is incomplete 
-
-## Why not use System.Numerics
-
-Originally Ara3D used `System.Numerics` directly but we ran into several issues:
-
-* The layout in memory of `System.Numerics.Vector3` is different between .NET Framework and .NET Core
-* The structs are mutable, violating Microsoft's own best practices around [struct design](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/struct).
-* There are no double precision versions of the structs, so we had to create our own
-* Many useful functions were only available as static non-extension functions, forcing users to use a non-fluent API
-* The number of structs and functions was limited, so we had to extend them anyway
-* System.Numerics used some unsafe code in places 
-
-Because System.Numerics is based on very well-known and proven algorithms that arent likely to change, we found it 
-to be a reasonable approach to fork the code, and put it into a stsandalone library 
-
-## Why not use SharpDX
-
-The [SharpDX mathematics library](https://github.com/sharpdx/SharpDX/tree/master/Source/SharpDX.Mathematics) is closely related to MonoGame. 
-It has many of the same data structures and algorithms, and follows a similar style. The main reason for not using it,
-other than the same reasons we are not using MonoGame, is that library is no
-longer being actively maintained.
-
-## Why not use Unity.Mathematics
-
-In the last year Unity released a prototype library called [`Unity.Mathematics`](https://github.com/Unity-Technologies/Unity.Mathematics).
-The reasons this library are not used:
-
-* Unity.Mathematics is licened under a non-standard open-source license 
-* The API is a work in progress and we may introduce breaking changes
-* The API supports a very limited set of types and operations (basically that of GLSL)
-* The library nomenclature and coding style is based on GLSL rather than C# System Libraries
