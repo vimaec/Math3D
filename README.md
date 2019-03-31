@@ -76,7 +76,7 @@ invariant violations after construction.
 
 ## What Structs are Provided
 
-The following is a list of data structures that are provide by Ara3D.Math
+The following is a [list of data structures](https://github.com/ara3d/Math3D/blob/master/Structs.cs) that are provided by Ara3D.Math
 
 	* Ara3D.Vector2
 	* Ara3D.Vector3
@@ -110,7 +110,8 @@ The following is a list of data structures that are provide by Ara3D.Math
 
 ## System.Math as Extension Functions, 
 
-All of the `System.Math` routines, and additional math routines, are reimplemented in `Ara3D.MathOps` as 
+All of the `System.Math` routines, and additional math routines, are reimplemented in [`Ara3D.MathOps`](https://github.com/ara3d/Math3D/blob/master/MathOps.cs) 
+and as 
 static extension functions for `float`, `double`, `Vector2`,`Vector3`, `Vector4`, `DVector2`,`DVector3`, 
 and `DVector4`. This provides a convenient fluent syntax on all variables, making the Ara3D.Math3D API
 easily discoverable using auto-complete.
