@@ -96,7 +96,7 @@ namespace Ara3D
         public void Contains(Vector3 point, out ContainmentType result)
         {
             float sqRadius = Radius * Radius;
-            float sqDistance = Vector3.DistanceSquared(point, Center);
+            var sqDistance = Vector3.DistanceSquared(point, Center);
             
             if (sqDistance > sqRadius)
                 result = ContainmentType.Disjoint;
@@ -114,7 +114,7 @@ namespace Ara3D
         public static Sphere CreateFromBoundingBox(Box box)
         {
             var center = box.Center;
-            float radius = Vector3.Distance(center, box.Max);
+            var radius = Vector3.Distance(center, box.Max);
             return new Sphere(center, radius);
         }
 
@@ -186,15 +186,15 @@ namespace Ara3D
             float sqRadius = radius * radius;
             foreach (var pt in points)
             {
-                Vector3 diff = (pt-center);
-                float sqDist = diff.LengthSquared();
+                var diff = pt-center;
+                var sqDist = diff.LengthSquared();
                 if (sqDist > sqRadius)
                 {
-                    float distance = (float)Math.Sqrt(sqDist); // equal to diff.Length();
-                    Vector3 direction = diff / distance;
-                    Vector3 G = center - radius * direction;
+                    var distance = (float)Math.Sqrt(sqDist); // equal to diff.Length();
+                    var direction = diff / distance;
+                    var G = center - radius * direction;
                     center = (G + pt) / 2;
-                    radius = Vector3.Distance(pt, center);
+                    radius = pt.Distance(center);
                     sqRadius = radius * radius;
                 }
             }
@@ -229,9 +229,9 @@ namespace Ara3D
                 }
             }
             //else find center of new sphere and radius
-            float leftRadius = Math.Max(Radius - distance, additional.Radius);
-            float Rightradius = Math.Max(Radius + distance, additional.Radius);
-            ocenterToaCenter = ocenterToaCenter + (((leftRadius - Rightradius) / (2 * ocenterToaCenter.Length())) * ocenterToaCenter);
+            var leftRadius = Math.Max(Radius - distance, additional.Radius);
+            var Rightradius = Math.Max(Radius + distance, additional.Radius);
+            ocenterToaCenter = ocenterToaCenter + ((leftRadius - Rightradius) / (2 * ocenterToaCenter.Length()) * ocenterToaCenter);
             return new Sphere(Center + ocenterToaCenter, (leftRadius + Rightradius) / 2);
         }
 
@@ -275,10 +275,13 @@ namespace Ara3D
             return ray.Intersects(this);
         }
 
-        public Sphere Transform(Matrix4x4 matrix)
+        public Sphere Transform(Matrix4x4 m)
         {
-            // TODO: simplify this expression
-            return new Sphere(Center.Transform(matrix), Radius * ((float)Math.Sqrt((double)Math.Max(((matrix.M11 * matrix.M11) + (matrix.M12 * matrix.M12)) + (matrix.M13 * matrix.M13), Math.Max(((matrix.M21 * matrix.M21) + (matrix.M22 * matrix.M22)) + (matrix.M23 * matrix.M23), ((matrix.M31 * matrix.M31) + (matrix.M32 * matrix.M32)) + (matrix.M33 * matrix.M33))))));
+            return new Sphere(Center.Transform(m), 
+                Radius * ((float)Math.Sqrt(
+                    Math.Max((m.M11 * m.M11) + (m.M12 * m.M12) + (m.M13 * m.M13), 
+                    Math.Max((m.M21 * m.M21) + (m.M22 * m.M22) + (m.M23 * m.M23), 
+                    (m.M31 * m.M31) + (m.M32 * m.M32) + (m.M33 * m.M33))))));
         }
     }
 }

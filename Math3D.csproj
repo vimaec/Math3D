@@ -54,6 +54,7 @@
       <DependentUpon>MathOps.tt</DependentUpon>
     </Compile>
     <Compile Include="PlaneIntersectionType.cs" />
+    <Compile Include="RandomNumberGenerator.cs" />
     <Compile Include="Ray.cs" />
     <Compile Include="Sphere.cs" />
     <Compile Include="Structs.cs">

@@ -21,7 +21,7 @@ namespace Ara3D
 		public static bool operator ==(Interval x0, Interval x1) => x0.Equals(x1);
 		public static bool operator !=(Interval x0, Interval x1) => !x0.Equals(x1);
 		public Interval SetMin(float x) => new Interval(x, Max);
-		public Interval SetMax(float x) => new Interval(Min, x);
+		public Interval     SetMax(float x) => new Interval(Min, x);
 	}
 	public partial struct Box : IEquatable< Box >
 	{ 

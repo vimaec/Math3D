@@ -23,7 +23,7 @@ namespace Ara3D
         public float Area
         {
             get
-            {
+            {                
                 var s = (LengthA + LengthB + LengthC) / 2;
                 return MathOps.Sqrt(s * (s - LengthA) * (s - LengthB) * (s - LengthC));
             }

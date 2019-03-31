@@ -158,12 +158,6 @@ namespace Ara3D
         /// <summary>
         /// Creates a new <see cref="Vector3"/> that contains the cartesian coordinates of a vector specified in barycentric coordinates and relative to 3d-triangle.
         /// </summary>
-        /// <param name="value1">The first vector of 3d-triangle.</param>
-        /// <param name="value2">The second vector of 3d-triangle.</param>
-        /// <param name="value3">The third vector of 3d-triangle.</param>
-        /// <param name="amount1">Barycentric scalar <c>b2</c> which represents a weighting factor towards second vector of 3d-triangle.</param>
-        /// <param name="amount2">Barycentric scalar <c>b3</c> which represents a weighting factor towards third vector of 3d-triangle.</param>
-        /// <returns>The cartesian translation of barycentric coordinates.</returns>
         public static Vector3 Barycentric(this Vector3 value1, Vector3 value2, Vector3 value3, float amount1, float amount2)
         {
             return new Vector3(
@@ -175,12 +169,6 @@ namespace Ara3D
         /// <summary>
         /// Creates a new <see cref="Vector3"/> that contains CatmullRom interpolation of the specified vectors.
         /// </summary>
-        /// <param name="value1">The first vector in interpolation.</param>
-        /// <param name="value2">The second vector in interpolation.</param>
-        /// <param name="value3">The third vector in interpolation.</param>
-        /// <param name="value4">The fourth vector in interpolation.</param>
-        /// <param name="amount">Weighting factor.</param>
-        /// <returns>The result of CatmullRom interpolation.</returns>
         public static Vector3 CatmullRom(this Vector3 value1, Vector3 value2, Vector3 value3, Vector3 value4, float amount)
         {
             return new Vector3(
@@ -192,12 +180,6 @@ namespace Ara3D
         /// <summary>
         /// Creates a new <see cref="Vector3"/> that contains hermite spline interpolation.
         /// </summary>
-        /// <param name="value1">The first position vector.</param>
-        /// <param name="tangent1">The first tangent vector.</param>
-        /// <param name="value2">The second position vector.</param>
-        /// <param name="tangent2">The second tangent vector.</param>
-        /// <param name="amount">Weighting factor.</param>
-        /// <returns>The hermite spline interpolation vector.</returns>
         public static Vector3 Hermite(this Vector3 value1, Vector3 tangent1, Vector3 value2, Vector3 tangent2, float amount)
         {
             return new Vector3(
@@ -209,10 +191,6 @@ namespace Ara3D
         /// <summary>
         /// Creates a new <see cref="Vector3"/> that contains cubic interpolation of the specified vectors.
         /// </summary>
-        /// <param name="value1">Source <see cref="Vector3"/>.</param>
-        /// <param name="value2">Source <see cref="Vector3"/>.</param>
-        /// <param name="amount">Weighting value.</param>
-        /// <returns>Cubic interpolation of the specified vectors.</returns>
         public static Vector3 SmoothStep(this Vector3 value1, Vector3 value2, float amount)
         {
             return new Vector3(
@@ -233,17 +211,17 @@ namespace Ara3D
 
         public static Vector3 AlongX(this float self)
         {
-            return Vector3.UnitX.AlongVector(self);
+            return Vector3.UnitX * self;
         }
 
         public static Vector3 AlongY(this float self)
         {
-            return Vector3.UnitY.AlongVector(self);
+            return Vector3.UnitY * self;
         }
 
         public static Vector3 AlongZ(this float self)
         {
-            return Vector3.UnitX.AlongVector(self);
+            return Vector3.UnitX * self;
         }
     }
 }
