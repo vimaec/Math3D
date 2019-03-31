@@ -1,5 +1,6 @@
 ﻿// MIT License 
-// Copyright (C) 2018 Ara 3D. Inc
+// Copyright (C) 2019 Ara 3D. Inc
+// https://ara3d.com
 // Copyright (C) The Mono.Xna Team
 // This file is subject to the terms and conditions defined in
 // file 'LICENSE.txt', which is part of this source code package.
@@ -7,7 +8,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
 
 namespace Ara3D
 {
@@ -19,12 +19,10 @@ namespace Ara3D
         /// <summary>
         /// Test if a bounding box is fully inside, outside, or just intersecting the sphere.
         /// </summary>
-        /// <param name="box">The box for testing.</param>
-        /// <returns>The containment type.</returns>
         public ContainmentType Contains(Box box)
         {
             //check if all corner is in sphere
-            bool inside = true;
+            var inside = true;
             foreach (var corner in box.Corners)
             {
                 if (Contains(corner) == ContainmentType.Disjoint)
@@ -70,7 +68,7 @@ namespace Ara3D
         /// </summary>
         public ContainmentType Contains(Sphere sphere)
         {
-            var sqDistance = Vector3.DistanceSquared(sphere.Center, Center);
+            var sqDistance = sphere.Center.DistanceSquared(Center);
 
             if (sqDistance > (sphere.Radius + Radius) * (sphere.Radius + Radius))
                 return  ContainmentType.Disjoint;
@@ -86,7 +84,7 @@ namespace Ara3D
         /// </summary>
         public ContainmentType Contains(Vector3 point)
         {
-            Contains(point, out ContainmentType result);
+            Contains(point, out var result);
             return result;
         }
 
@@ -95,8 +93,8 @@ namespace Ara3D
         /// </summary>
         public void Contains(Vector3 point, out ContainmentType result)
         {
-            float sqRadius = Radius * Radius;
-            var sqDistance = Vector3.DistanceSquared(point, Center);
+            var sqRadius = Radius * Radius;
+            var sqDistance = point.DistanceSquared(Center);
             
             if (sqDistance > sqRadius)
                 result = ContainmentType.Disjoint;
@@ -114,7 +112,7 @@ namespace Ara3D
         public static Sphere CreateFromBoundingBox(Box box)
         {
             var center = box.Center;
-            var radius = Vector3.Distance(center, box.Max);
+            var radius = center.Distance(box.Max);
             return new Sphere(center, radius);
         }
 
@@ -158,9 +156,9 @@ namespace Ara3D
             if (numPoints == 0)
                 throw new ArgumentException("You should have at least one point in points.");
 
-            var sqDistX = Vector3.DistanceSquared(maxx, minx);
-            var sqDistY = Vector3.DistanceSquared(maxy, miny);
-            var sqDistZ = Vector3.DistanceSquared(maxz, minz);
+            var sqDistX = maxx.DistanceSquared(minx);
+            var sqDistY = maxy.DistanceSquared(miny);
+            var sqDistZ = maxz.DistanceSquared(minz);
 
             // Pick the pair of most distant points.
             var min = minx;
@@ -177,13 +175,13 @@ namespace Ara3D
             }
             
             var center = (min + max) * 0.5f;
-            var radius = Vector3.Distance(max, center);
+            var radius = max.Distance(center);
             
             // Test every point and expand the sphere.
             // The current bounding sphere is just a good approximation and may not enclose all points.            
             // From: Mathematics for 3D Game Programming and Computer Graphics, Eric Lengyel, Third Edition.
             // Page 218
-            float sqRadius = radius * radius;
+            var sqRadius = radius * radius;
             foreach (var pt in points)
             {
                 var diff = pt-center;
@@ -215,7 +213,7 @@ namespace Ara3D
         /// </summary>
         public Sphere Merge(Sphere additional)
         {
-            var ocenterToaCenter = Vector3.Subtract(additional.Center, Center);
+            var ocenterToaCenter = additional.Center - Center;
             var distance = ocenterToaCenter.Length();
             if (distance <= Radius + additional.Radius)//intersect
             {
@@ -244,12 +242,11 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// <summary>
         /// Gets whether or not the other <see cref="Sphere"/> intersects with this sphere.
         /// </summary>
         public bool Intersects(Sphere sphere)
         {
-            var sqDistance = Vector3.DistanceSquared(sphere.Center, Center);
+            var sqDistance = sphere.Center.DistanceSquared(Center);
             return !(sqDistance > (sphere.Radius + Radius) * (sphere.Radius + Radius));
         }
 
@@ -283,5 +280,14 @@ namespace Ara3D
                     Math.Max((m.M21 * m.M21) + (m.M22 * m.M22) + (m.M23 * m.M23), 
                     (m.M31 * m.M31) + (m.M32 * m.M32) + (m.M33 * m.M33))))));
         }
+
+        public Sphere Translate(Vector3 offset) 
+            => new Sphere(Center + offset, Radius);            
+
+        public float Distance(Vector3 point) 
+            => (Center.Distance(point) - Radius).ClampLower(0);
+
+        public float Distance(Sphere other) 
+            => (Center.Distance(other.Center) - Radius - other.Radius).ClampLower(0);
     }
 }

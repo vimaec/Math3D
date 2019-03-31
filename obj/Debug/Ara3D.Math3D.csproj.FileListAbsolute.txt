@@ -1,0 +1,12 @@
+C:\dev\repos\ara3d-dev\dotnet\Math3D\bin\Debug\Ara3D.Math3D.dll
+C:\dev\repos\ara3d-dev\dotnet\Math3D\bin\Debug\Ara3D.Math3D.pdb
+C:\dev\repos\ara3d-dev\dotnet\Math3D\obj\Debug\Ara3D.Math3D.csprojAssemblyReference.cache
+C:\dev\repos\ara3d-dev\dotnet\Math3D\obj\Debug\Ara3D.Math3D.csproj.CoreCompileInputs.cache
+C:\dev\repos\ara3d-dev\dotnet\Math3D\obj\Debug\Ara3D.Math3D.dll
+C:\dev\repos\ara3d-dev\dotnet\Math3D\obj\Debug\Ara3D.Math3D.pdb
+C:\dev\repos\Math3D\bin\Debug\Ara3D.Math3D.dll
+C:\dev\repos\Math3D\bin\Debug\Ara3D.Math3D.pdb
+C:\dev\repos\Math3D\obj\Debug\Ara3D.Math3D.csprojAssemblyReference.cache
+C:\dev\repos\Math3D\obj\Debug\Ara3D.Math3D.csproj.CoreCompileInputs.cache
+C:\dev\repos\Math3D\obj\Debug\Ara3D.Math3D.dll
+C:\dev\repos\Math3D\obj\Debug\Ara3D.Math3D.pdb

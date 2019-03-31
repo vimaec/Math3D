@@ -1,10 +1,8 @@
 ﻿// MIT License 
-// Copyright (C) 2018 Ara 3D. Inc
+// Copyright (C) 2019 Ara 3D. Inc
+// https://ara3d.com
 // This file is subject to the terms and conditions defined in
 // file 'LICENSE.txt', which is part of this source code package.
-
-using System;
-using System.Numerics;
 
 namespace Ara3D
 {
@@ -25,20 +23,19 @@ namespace Ara3D
             get
             {                
                 var s = (LengthA + LengthB + LengthC) / 2;
-                return MathOps.Sqrt(s * (s - LengthA) * (s - LengthB) * (s - LengthC));
+                return (s * (s - LengthA) * (s - LengthB) * (s - LengthC)).Sqrt();
             }
         }
 
+        public float Perimeter => LengthA + LengthB + LengthC;
         public Vector3 MidPoint => (A + B + C) / 3f;
         public Vector3 NormalDirection => (B - A).Cross(C - A);
-        public Vector3 Normal => NormalDirection.Normal();
+        public Vector3 Normal => NormalDirection.Normalize();
         public Box BoundingBox => Box.Create(A, B, C);
         public Sphere BoundingSphere => Sphere.Create(A, B, C);
         
         // TODO: plane
         // TODO: contained sphere
         // TODO: bounding sphere 
-
-        public static Triangle Zero = new Triangle(Vector3.Zero, Vector3.Zero, Vector3.Zero);                
     }
 }

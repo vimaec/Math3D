@@ -5,8 +5,8 @@
     <ProjectGuid>{F9430261-9426-4D6B-A1B8-9D3F2BFBB501}</ProjectGuid>
     <OutputType>Library</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
-    <AssemblyName>Math3D</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <AssemblyName>Ara3D.Math3D</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -19,6 +19,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,33 +29,37 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>Math3D</RootNamespace>
+    <RootNamespace>Ara3D</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <None Include=".gitignore" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Box.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="ContainmentType.cs" />
     <Compile Include="Hash.cs" />
     <Compile Include="Line.cs" />
-    <Compile Include="MathHelper.cs" />
+    <Compile Include="MathOpsPartial.cs" />
     <Compile Include="MathOps.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MathOps.tt</DependentUpon>
     </Compile>
+    <Compile Include="Matrix4x4.cs" />
+    <Compile Include="Plane.cs" />
     <Compile Include="PlaneIntersectionType.cs" />
-    <Compile Include="RandomNumberGenerator.cs" />
+    <Compile Include="Quaternion.cs" />
+    <Compile Include="Random.cs" />
     <Compile Include="Ray.cs" />
     <Compile Include="Sphere.cs" />
     <Compile Include="Structs.cs">
@@ -64,7 +69,9 @@
     </Compile>
     <Compile Include="Triangle.cs" />
     <Compile Include="Triangle2D.cs" />
-    <Compile Include="VectorHelper.cs" />
+    <Compile Include="Vector2..cs" />
+    <Compile Include="Vector3.cs" />
+    <Compile Include="Vector4.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
