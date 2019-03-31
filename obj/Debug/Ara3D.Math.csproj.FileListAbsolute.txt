@@ -1,6 +1,0 @@
-C:\dev\repos\ara3d-dev\dotnet\Math3D\bin\Debug\Ara3D.Math.dll
-C:\dev\repos\ara3d-dev\dotnet\Math3D\bin\Debug\Ara3D.Math.pdb
-C:\dev\repos\ara3d-dev\dotnet\Math3D\obj\Debug\Ara3D.Math.csproj.CoreCompileInputs.cache
-C:\dev\repos\ara3d-dev\dotnet\Math3D\obj\Debug\Ara3D.Math.dll
-C:\dev\repos\ara3d-dev\dotnet\Math3D\obj\Debug\Ara3D.Math.pdb
-C:\dev\repos\ara3d-dev\dotnet\Math3D\obj\Debug\Ara3D.Math.csprojAssemblyReference.cache
