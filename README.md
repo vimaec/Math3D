@@ -111,9 +111,8 @@ The following is a [list of data structures](https://github.com/ara3d/Math3D/blo
 ## System.Math as Extension Functions, 
 
 All of the `System.Math` routines, and additional math routines, are reimplemented in [`Ara3D.MathOps`](https://github.com/ara3d/Math3D/blob/master/MathOps.cs) 
-and as 
-static extension functions for `float`, `double`, `Vector2`,`Vector3`, `Vector4`, `DVector2`,`DVector3`, 
-and `DVector4`. This provides a convenient fluent syntax on all variables, making the Ara3D.Math3D API
+and as static extension functions for `float`, `double`, `Vector2`,`Vector3`, `Vector4`, `DVector2`,`DVector3`, 
+and `DVector4`. This provides a convenient object oriented syntax on all variables, making the Ara3D.Math3D API
 easily discoverable using auto-complete.
 
 ## What are .TT Files
@@ -149,4 +148,3 @@ the T4 templating engine.
 * [Unity Reference](https://github.com/Unity-Technologies/UnityCsReference/tree/master/Runtime/Export)
 * [SharpDX Mathematics](https://github.com/sharpdx/SharpDX/tree/master/Source/SharpDX.Mathematics)
 * [A Vector Type for C# - R Potter via Code Project](https://www.codeproject.com/Articles/17425/A-Vector-Type-for-C)
-
