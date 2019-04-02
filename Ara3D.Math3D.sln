@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ara3D.Math3D", "Math3D.Net.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ara3D.Tests", "tests\Ara3D.Tests.csproj", "{8ADE2F5A-B432-41E9-AB4E-F36CB58C7E54}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ara3D.Math3D.Standard", "Math3d.Std.2.0\Ara3D.Math3D.Standard.csproj", "{93BE9820-C9B4-4215-8C64-2C9F605F3E01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8ADE2F5A-B432-41E9-AB4E-F36CB58C7E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ADE2F5A-B432-41E9-AB4E-F36CB58C7E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ADE2F5A-B432-41E9-AB4E-F36CB58C7E54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93BE9820-C9B4-4215-8C64-2C9F605F3E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93BE9820-C9B4-4215-8C64-2C9F605F3E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93BE9820-C9B4-4215-8C64-2C9F605F3E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93BE9820-C9B4-4215-8C64-2C9F605F3E01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

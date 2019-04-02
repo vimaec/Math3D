@@ -53,7 +53,6 @@
     <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MaxPlusDotNet, Version=21.0.0.845, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -94,38 +93,6 @@
     <ProjectReference Include="..\Math3D.Net.4.7.1\Ara3D.Math3D.csproj">
       <Project>{f9430261-9426-4d6b-a1b8-9d3f2bfbb501}</Project>
       <Name>Ara3D.Math3D</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AraGeometry\Ara3D.Geometry.csproj">
-      <Project>{e89008fa-6d3f-48de-900a-be5a9d79f4ae}</Project>
-      <Name>Ara3D.Geometry</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BFast\Ara3D.BFast.csproj">
-      <Project>{4ce35b4d-4fa8-491e-b195-77520c1e8683}</Project>
-      <Name>Ara3D.BFast</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\G3D\Ara3D.G3D.csproj">
-      <Project>{4007804a-598f-495f-84f3-f2cf3136797d}</Project>
-      <Name>Ara3D.G3D</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\G3SharpBridge\Ara3D.G3SharpBridge.csproj">
-      <Project>{82182a4d-2acc-4f5f-b490-aee4308d3719}</Project>
-      <Name>Ara3D.G3SharpBridge</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HelixBridge\Ara3D.HelixBridge.csproj">
-      <Project>{91BAFDF7-5A40-4FE2-BEF3-4397EC6022B0}</Project>
-      <Name>Ara3D.HelixBridge</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LinqArray\Ara3D.LinqArray.csproj">
-      <Project>{81718218-f3e7-4d54-8552-2a65fbebee85}</Project>
-      <Name>Ara3D.LinqArray</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Utilities\Ara3D.DotNetUtilities.csproj">
-      <Project>{25330241-4c82-4c17-8027-ff882b91640e}</Project>
-      <Name>Ara3D.DotNetUtilities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WPFBridge\Ara3D.WPFBridge.csproj">
-      <Project>{1A3688A4-45C6-46FB-8DAE-510FA25D80C3}</Project>
-      <Name>Ara3D.WPFBridge</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
