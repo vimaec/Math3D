@@ -69,17 +69,11 @@
     <Compile Include="Matrix4x4Tests.cs" />
     <Compile Include="PlaneTests.cs" />
     <Compile Include="QuaternionTests.cs" />
-    <Compile Include="TestGeometries.cs" />
-    <Compile Include="UnmanagedDataTests.cs" />
-    <Compile Include="IOTests.cs" />
-    <Compile Include="LinqArrayTests.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Tester.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="Vector2Tests.cs" />
     <Compile Include="Vector3Tests.cs" />
     <Compile Include="Vector4Tests.cs" />
-    <Compile Include="WpfTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
@@ -97,7 +91,7 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Math3D\Ara3D.Math3D.csproj">
+    <ProjectReference Include="..\Math3D.Net.4.7.1\Ara3D.Math3D.csproj">
       <Project>{f9430261-9426-4d6b-a1b8-9d3f2bfbb501}</Project>
       <Name>Ara3D.Math3D</Name>
     </ProjectReference>
