@@ -112,7 +112,8 @@ The following is a [list of data structures](https://github.com/ara3d/Math3D/blo
 
 ## System.Math as Extension Functions, 
 
-All of the `System.Math` routines, and additional math routines, are reimplemented in [`Ara3D.MathOps`](https://github.com/ara3d/Math3D/blob/master/MathOps.cs) 
+All of the `System.Math` routines, and additional math routines, are reimplemented in 
+[`Ara3D.MathOps`](https://github.com/ara3d/Math3D/blob/master/MathOps.cs). 
 and as static extension functions for `float`, `double`, `Vector2`,`Vector3`, `Vector4`, `DVector2`,`DVector3`, 
 and `DVector4`. This provides a convenient object oriented syntax on all variables, making the Ara3D.Math3D API
 easily discoverable using auto-complete.
@@ -124,16 +125,17 @@ to auto-generate efficient boilerplate code for the different types of
 structs. This has proven for us to be an effective way to create generic code that is also very efficient for numerical types and 
 reduce the overhead of maintainance.  
 
-## Where are the Tests? 
+## About the Tests
 
-Ara3D.Math3D is used in a number of different open-source libraries developed by Ara3D, inluding a Geometry library.
-In order to facilitate development and testing all Ara3D open-source libraries are developed in a central 
-repository at [github.com/ara3d/ara3d-dev](https://github.com/ara3d/ara3d-dev). 
+Ara3D.Math3D uses NUnit for the tests, which many were ported from the CoreFX Numerics implementation of System.Numerics. 
+At last measure we have approximately 50% code coverage, with most of the uncovered functions having trivial implementations 
+that are auto-generated using the T4 templating engine. 
 
-You can find the [Math3D tests here](https://github.com/ara3d/ara3d-dev/tree/master/dotnet/Tests). We 
-ported many of the tests used by CoreFX Numerics implementation to that library. At last measure we have over 50% 
-code coverage, but most of the uncovered functions having trivial implementations that are auto-generated using 
-the T4 templating engine. 
+## Targetted Frameworks and Language
+
+The main project targets .NET Framework 4.7.1, but a .NET Standard 2.0 project also references the same code, but which consumes
+the generated output of the T4 files. The .NET Standard project is the one we post to NuGet, but active development is done 
+on the .NET 4.7.1 branch. We are currently using C# 7.2. 
 
 # Appendix 
 
