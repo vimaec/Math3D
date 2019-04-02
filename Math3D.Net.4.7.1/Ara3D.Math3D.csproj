@@ -41,7 +41,10 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Box.cs" />
@@ -49,12 +52,12 @@
     <Compile Include="ContainmentType.cs" />
     <Compile Include="Hash.cs" />
     <Compile Include="Line.cs" />
-    <Compile Include="MathOpsPartial.cs" />
     <Compile Include="MathOps.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MathOps.tt</DependentUpon>
     </Compile>
+    <Compile Include="MathOpsPartial.cs" />
     <Compile Include="Matrix4x4.cs" />
     <Compile Include="Plane.cs" />
     <Compile Include="PlaneIntersectionType.cs" />
@@ -63,18 +66,15 @@
     <Compile Include="Ray.cs" />
     <Compile Include="Sphere.cs" />
     <Compile Include="Structs.cs">
-      <DependentUpon>Structs.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Structs.tt</DependentUpon>
     </Compile>
     <Compile Include="Triangle.cs" />
     <Compile Include="Triangle2D.cs" />
     <Compile Include="Vector2.cs" />
     <Compile Include="Vector3.cs" />
     <Compile Include="Vector4.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MathOps.tt">
@@ -85,10 +85,12 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Structs.cs</LastGenOutput>
     </Content>
-    <None Include="TemplateHelpers.tt" />
+    <Content Include="TemplateHelpers.tt">
+      <LastGenOutput>TemplateHelpers1.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>

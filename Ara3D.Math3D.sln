@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ara3D.Math3D", "Ara3D.Math3D.csproj", "{F9430261-9426-4D6B-A1B8-9D3F2BFBB501}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ara3D.Math3D.Standard", "Ara3D.Math3D.Standard.csproj", "{91D4B8B7-17C3-4CB8-BCCE-87FF1B77CB2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ara3D.Math3D", "Math3D.Net.4.7.1\Ara3D.Math3D.csproj", "{F9430261-9426-4D6B-A1B8-9D3F2BFBB501}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{F9430261-9426-4D6B-A1B8-9D3F2BFBB501}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9430261-9426-4D6B-A1B8-9D3F2BFBB501}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9430261-9426-4D6B-A1B8-9D3F2BFBB501}.Release|Any CPU.Build.0 = Release|Any CPU
-		{91D4B8B7-17C3-4CB8-BCCE-87FF1B77CB2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{91D4B8B7-17C3-4CB8-BCCE-87FF1B77CB2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{91D4B8B7-17C3-4CB8-BCCE-87FF1B77CB2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{91D4B8B7-17C3-4CB8-BCCE-87FF1B77CB2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
