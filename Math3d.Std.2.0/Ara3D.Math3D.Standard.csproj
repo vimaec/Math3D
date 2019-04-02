@@ -8,7 +8,6 @@
   <ItemGroup>
     <Compile Remove="MathOps1.cs" />
     <Compile Remove="Structs1.cs" />
-    <Compile Remove="TemplateHelpers.cs" />
   </ItemGroup>
 
   <ItemGroup>
