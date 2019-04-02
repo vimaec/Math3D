@@ -1,7 +1,5 @@
 # Ara3D.Math3D
 
-![Nuget]()
-
 [<img src="https://img.shields.io/nuget/v/Ara3D.Math3D.svg">](https://github.com/ara3d/Math3D)
 
 **Ara3D.Math3D** is a portable and efficient 3D math library from [Ara3D](https://ara3d.com) written in pure safe C# 
