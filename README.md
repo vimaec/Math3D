@@ -1,5 +1,8 @@
 # Ara3D.Math3D
 
+![Nuget](https://img.shields.io/nuget/v/Ara3D.Math3D.svg)
+
+
 **Ara3D.Math3D** is a portable and efficient 3D math library from [Ara3D](https://ara3d.com) written in pure safe C# 
 with no dependencies. Math3D was forked from the core classes provided in the CoreFX implementation of 
 [System.Numerics](https://github.com/dotnet/corefx/tree/master/src/System.Numerics.Vectors/src/System/Numerics) and 

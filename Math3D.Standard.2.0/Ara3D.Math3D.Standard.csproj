@@ -3,12 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>7.2</LangVersion>
-    <PackageId>Ara3D.Math3D</PackageId>
+    <PackageId>Ara3D.Math3D.Standard</PackageId>
     <Authors>Ara3D</Authors>
     <Company>Ara 3D Inc.</Company>
     <Product>Ara3D.Math3D</Product>
     <Description>An easy to use, portable, and efficient .NET Standard 2.0 C# library of single and double precision 3D math routines and data structures, based on System.Numerics and MonoGame.</Description>
-    <Copyright>Copyright 2019, Ara 3D, licensed under the MIT License</Copyright>
+    <Copyright>MIT License. Copyright 2019 Ara 3D Inc.</Copyright>
     <PackageLicenseUrl>https://github.com/ara3d/Math3D/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/ara3d/Math3D</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ara3d/Math3D</RepositoryUrl>
