@@ -59,6 +59,5 @@ namespace Ara3D
 
         public static T RotateZ<T>(this ITransformable<T> self, float angle)
             => self.RotateAround(Vector3.UnitZ, angle);
-
     }
 }

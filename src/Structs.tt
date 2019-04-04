@@ -31,10 +31,8 @@ namespace Ara3D
 	CreateVectorStruct("DVector4", new[] { "X", "Y", "Z", "W", }, "double");    
 
 	CreateStruct("Plane", new[] { "Normal", "D" }, new[] { "Vector3", "float" });
-	CreateStruct("DPlane", new[] { "Normal", "D" }, new[] { "DVector3", "double" });
 
 	CreateStruct("Quaternion", new[] { "X", "Y", "Z", "W" }, new [] { "float", "float", "float", "float" });
-	CreateStruct("DQuaternion", new[] { "X", "Y", "Z", "W" }, new [] { "double", "double", "double", "double" });
 
 	// Various types of intervals (and bounding structs)  
 	CreateRangeStruct("Interval", "float");
@@ -42,16 +40,9 @@ namespace Ara3D
 	CreateRangeStruct("Box", "Vector3");     
 	CreateRangeStruct("Box4", "Vector4"); 
 	 
-	CreateRangeStruct("DInterval", "double");   
-	CreateRangeStruct("DBox2", "DVector2");     
-	CreateRangeStruct("DBox3", "DVector3");    
-	CreateRangeStruct("DBox4", "DVector4");  
-
 	// These are common structs 
 	CreateStruct("Ray", new[] { "Position", "Direction" }, new[] { "Vector3", "Vector3" });
-	CreateStruct("DRay", new[] { "Position", "Direction" }, new[] { "DVector3", "DVector3" });
 	CreateStruct("Sphere", new[] { "Center", "Radius" }, new[] { "Vector3", "float" }); 
-	CreateStruct("DSphere", new[] { "Center", "Radius" }, new[] { "DVector3", "double" });
 	
 	// These have surface areas and midpoints and bounding boxes
 	CreateShapeStruct("Line", new[] { "A", "B" }, "Vector3");    
