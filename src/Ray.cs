@@ -9,8 +9,8 @@ using System;
 
 namespace Ara3D
 {
-    public partial struct Ray 
-    {
+    public partial struct Ray
+    {        
         // adapted from http://www.scratchapixel.com/lessons/3d-basic-lessons/lesson-7-intersecting-simple-shapes/ray-box-intersection/
         public float? Intersects(Box box)
         {
