@@ -61,7 +61,6 @@
     <Compile Include="Matrix4x4.cs" />
     <Compile Include="Plane.cs" />
     <Compile Include="PlaneIntersectionType.cs" />
-    <Compile Include="Quad.cs" />
     <Compile Include="Quaternion.cs" />
     <Compile Include="Random.cs" />
     <Compile Include="Ray.cs" />
