@@ -194,7 +194,7 @@ namespace Ara3D
             foreach (var pt in points)
             {
                 minVec = minVec.Min(pt);
-                maxVec = maxVec.Min(pt);
+                maxVec = maxVec.Max(pt);
             }
             return new Box(minVec, maxVec);
         }
