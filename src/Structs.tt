@@ -15,11 +15,12 @@
 // file 'LICENSE.txt', which is part of this source code package.  
 // ReSharper disable CompareOfFloatsByEqualityOperator
   
-using System;    
+using System;
 using System.Runtime.CompilerServices; 
 using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
 
-namespace Ara3D      
+namespace Ara3D
 {
 <# 
 	CreateVectorStruct("Vector2", new[] { "X", "Y" }, "float");    
