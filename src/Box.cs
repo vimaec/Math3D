@@ -65,8 +65,16 @@ namespace Ara3D
         public float MaxSide
             => Extent.MaxComponent();
 
+        public float MaxFaceArea
+            => Extent.X > Extent.Y 
+                ? Extent.X * Extent.Z.Max(Extent.Y) 
+                : Extent.Y * Extent.Z.Max(Extent.X);
+
         public float MinSide
             => Extent.MinComponent();
+
+        public float Diagonal
+            => Extent.Length();
 
         public ContainmentType Contains(Box box)
         {
