@@ -57,11 +57,6 @@ namespace Ara3D
                 value.D / normalLength);
         }
 
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Plane Normalize()
-            => Normalize(this);
-
         /// <summary>
         /// Transforms a normalized Plane by a Matrix.
         /// </summary>

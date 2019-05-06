@@ -52,7 +52,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="ContainmentType.cs" />
     <Compile Include="Hash.cs" />
-    <Compile Include="Line.cs" />
+    <Compile Include="ITransformable.cs" />
     <Compile Include="MathOps.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -71,11 +71,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Structs.tt</DependentUpon>
     </Compile>
-    <Compile Include="Triangle.cs" />
+    <Compile Include="StructsPartial.cs" />
     <Compile Include="Triangle2D.cs" />
-    <Compile Include="Vector2.cs" />
-    <Compile Include="Vector3.cs" />
-    <Compile Include="Vector4.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MathOps.tt">

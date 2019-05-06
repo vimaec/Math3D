@@ -8,13 +8,14 @@
 using System;
 using System.Globalization;
 using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
 
 namespace Ara3D
 {
     /// <summary>
     /// A structure encapsulating a 4x4 matrix.
     /// </summary>
-    [StructLayout(LayoutKind.Sequential)]
+    [StructLayout(LayoutKind.Sequential), DataContract]
     public struct Matrix4x4 : IEquatable<Matrix4x4>
     {
         public Vector3 Col0 => new Vector3(M11, M21, M31);
@@ -36,70 +37,70 @@ namespace Ara3D
         /// <summary>
         /// Value at row 1, column 1 of the matrix.
         /// </summary>
-        public float M11;
+        [DataMember] public float M11;
         /// <summary>
         /// Value at row 1, column 2 of the matrix.
         /// </summary>
-        public float M12;
+        [DataMember] public float M12;
         /// <summary>
         /// Value at row 1, column 3 of the matrix.
         /// </summary>
-        public float M13;
+        [DataMember] public float M13;
         /// <summary>
         /// Value at row 1, column 4 of the matrix.
         /// </summary>
-        public float M14;
+        [DataMember] public float M14;
 
         /// <summary>
         /// Value at row 2, column 1 of the matrix.
         /// </summary>
-        public float M21;
+        [DataMember] public float M21;
         /// <summary>
         /// Value at row 2, column 2 of the matrix.
         /// </summary>
-        public float M22;
+        [DataMember] public float M22;
         /// <summary>
         /// Value at row 2, column 3 of the matrix.
         /// </summary>
-        public float M23;
+        [DataMember] public float M23;
         /// <summary>
         /// Value at row 2, column 4 of the matrix.
         /// </summary>
-        public float M24;
+        [DataMember] public float M24;
 
         /// <summary>
         /// Value at row 3, column 1 of the matrix.
         /// </summary>
-        public float M31;
+        [DataMember] public float M31;
         /// <summary>
         /// Value at row 3, column 2 of the matrix.
         /// </summary>
-        public float M32;
+        [DataMember] public float M32;
         /// <summary>
         /// Value at row 3, column 3 of the matrix.
         /// </summary>
-        public float M33;
+        [DataMember] public float M33;
         /// <summary>
         /// Value at row 3, column 4 of the matrix.
         /// </summary>
-        public float M34;
+        [DataMember] public float M34;
 
         /// <summary>
         /// Value at row 4, column 1 of the matrix.
         /// </summary>
-        public float M41;
+        [DataMember] public float M41;
         /// <summary>
         /// Value at row 4, column 2 of the matrix.
         /// </summary>
-        public float M42;
+        [DataMember] public float M42;
         /// <summary>
         /// Value at row 4, column 3 of the matrix.
         /// </summary>
-        public float M43;
+        [DataMember] public float M43;
         /// <summary>
         /// Value at row 4, column 4 of the matrix.
         /// </summary>
-        public float M44;
+        [DataMember] public float M44;
         
         /// <summary>
         /// Returns the multiplicative identity matrix.
