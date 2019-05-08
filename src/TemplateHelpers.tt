@@ -135,11 +135,13 @@
 
 #>
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct <#= name #> : IEquatable< <#= name #> >
 	{ 
 <#+
         for (var i=0; i < fields.Length; ++i) {
 #>
+		[DataMember]
 		public readonly <#= types[i] #> <#= fields[i] #>;
 <#+
 		}		
