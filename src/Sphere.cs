@@ -109,7 +109,7 @@ namespace Ara3D
         /// <summary>
         /// Creates the smallest sphere that contains the box. 
         /// </summary>
-        public static Sphere CreateFromBoundingBox(Box box)
+        public static Sphere Create(Box box)
         {
             var center = box.Center;
             var radius = center.Distance(box.Max);

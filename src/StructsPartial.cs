@@ -78,5 +78,9 @@ namespace Ara3D
         public Vector3 Normal => NormalDirection.Normalize();
         public Box BoundingBox => Box.Create(A, B, C);
         public Sphere BoundingSphere => Sphere.Create(A, B, C);
+
+        public bool IsSliver(float tolerance = Constants.Tolerance)
+            => LengthA <= tolerance || LengthB <= tolerance || LengthC <= tolerance;
+
     }
 }

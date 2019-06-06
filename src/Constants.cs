@@ -25,5 +25,9 @@ namespace Ara3D
 
         public const double RadiansToDegrees = 57.295779513082320876798154814105;
         public const double DegreesToRadians = 0.017453292519943295769236907684886;
+
+        public const double OneTenthOfADegree = DegreesToRadians / 10;
+        public const double FeetToMm = 0.00328084;
+        public const double MmToFeet = 1 / FeetToMm;
     }
 }

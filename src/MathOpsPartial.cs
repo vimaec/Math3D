@@ -191,6 +191,13 @@ namespace Ara3D
         public static float SignedAngle(Vector3 from, Vector3 to, Vector3 axis)
             => Angle(from, to) * Math.Sign(axis.Dot(from.Cross(to)));
 
+        // The smaller of the two possible angles between the two vectors is returned, therefore the result will never be greater than 180 degrees or smaller than -180 degrees.
+        // If you imagine the from and to vectors as lines on a piece of paper, both originating from the same point, then the /axis/ vector would point up out of the paper.
+        // The measured angle between the two vectors would be positive in a clockwise direction and negative in an anti-clockwise direction.
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static float SignedAngle(this Vector3 from, Vector3 to)
+            => SignedAngle(from, to, Vector3.UnitZ);
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static float Angle(this Vector3 v1, Vector3 v2, float tolerance = Constants.Tolerance)
         {
@@ -199,6 +206,10 @@ namespace Ara3D
                 return 0;
             return (v1.Dot(v2) / d).Clamp(-1F, 1F).Acos();
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool Colinear(this Vector3 v1, Vector3 v2, float tolerance = Constants.Tolerance)
+            => !v1.IsNaN() && !v2.IsNaN() && v1.SignedAngle(v2) <= tolerance;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsBackFace(this Vector3 normal, Vector3 lineOfSight)
