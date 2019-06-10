@@ -14,12 +14,12 @@ namespace Ara3D
     /// <summary>
     /// Describes a sphere in 3D-space for bounding operations.
     /// </summary>
-    public partial struct Sphere 
+    public partial struct Sphere : ITransformable3D<Sphere>
     {        
         /// <summary>
         /// Test if a bounding box is fully inside, outside, or just intersecting the sphere.
         /// </summary>
-        public ContainmentType Contains(Box box)
+        public ContainmentType Contains(AABox box)
         {
             //check if all corner is in sphere
             var inside = true;
@@ -109,7 +109,7 @@ namespace Ara3D
         /// <summary>
         /// Creates the smallest sphere that contains the box. 
         /// </summary>
-        public static Sphere Create(Box box)
+        public static Sphere Create(AABox box)
         {
             var center = box.Center;
             var radius = center.Distance(box.Max);
@@ -234,9 +234,9 @@ namespace Ara3D
         }
 
         /// <summary>
-        /// Gets whether or not a specified <see cref="Box"/> intersects with this sphere.
+        /// Gets whether or not a specified <see cref="AABox"/> intersects with this sphere.
         /// </summary>
-        public bool Intersects(Box box)
+        public bool Intersects(AABox box)
         {
 			return box.Intersects(this);
         }

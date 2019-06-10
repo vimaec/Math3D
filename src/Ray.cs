@@ -9,10 +9,10 @@ using System;
 
 namespace Ara3D
 {
-    public partial struct Ray
-    {        
+    public partial struct Ray : ITransformable3D<Ray>
+    {
         // adapted from http://www.scratchapixel.com/lessons/3d-basic-lessons/lesson-7-intersecting-simple-shapes/ray-box-intersection/
-        public float? Intersects(Box box)
+        public float? Intersects(AABox box)
         {
             const float Epsilon = 1e-6f;
 
@@ -94,7 +94,7 @@ namespace Ara3D
 
             return tMin;
         }
-      
+
         public float? Intersects(Plane plane, float tolerance = Constants.Tolerance)
         {
             var den = Vector3.Dot(Direction, plane.Normal);
@@ -141,5 +141,8 @@ namespace Ara3D
             var dist = sphereRadiusSquared + distanceAlongRay.Sqr() - differenceLengthSquared;
             return (dist < 0) ? null : distanceAlongRay - (float?)Math.Sqrt(dist);
         }
+
+        public Ray Transform(Matrix4x4 mat)
+            => new Ray(Position.Transform(mat), Direction.TransformNormal(mat));
     }
 }

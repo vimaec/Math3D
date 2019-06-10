@@ -113,17 +113,6 @@ namespace Ara3D
             => Matrix4x4.Invert(m, out var r) ? r : throw new Exception("No inversion of matrix available");
 
         /// <summary>
-        /// Transforms a vector by the given matrix.
-        /// </summary>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector4 Transform(this Vector4 vector, Matrix4x4 matrix)
-            => new Vector4(
-                vector.X * matrix.M11 + vector.Y * matrix.M21 + vector.Z * matrix.M31 + vector.W * matrix.M41,
-                vector.X * matrix.M12 + vector.Y * matrix.M22 + vector.Z * matrix.M32 + vector.W * matrix.M42,
-                vector.X * matrix.M13 + vector.Y * matrix.M23 + vector.Z * matrix.M33 + vector.W * matrix.M43,
-                vector.X * matrix.M14 + vector.Y * matrix.M24 + vector.Z * matrix.M34 + vector.W * matrix.M44);
-
-        /// <summary>
         /// Transforms a vector by the given Quaternion rotation value.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -238,50 +227,6 @@ namespace Ara3D
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 AlongX(this float self) => Vector3.UnitX * self;
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 AlongY(this float self) => Vector3.UnitY * self;
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 AlongZ(this float self) => Vector3.UnitX * self;
-
-        /// <summary>
-        /// Computes the cross product of two vectors.
-        /// </summary>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 Cross(this Vector3 vector1, Vector3 vector2)
-            => new Vector3(
-                vector1.Y * vector2.Z - vector1.Z * vector2.Y,
-                vector1.Z * vector2.X - vector1.X * vector2.Z,
-                vector1.X * vector2.Y - vector1.Y * vector2.X);
-
-        /// <summary>
-        /// Returns the mixed product
-        /// </summary>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static double MixedProduct(this Vector3 v1, Vector3 v2, Vector3 v3)
-            => v1.Cross(v2).Dot(v3);
-
-        /// <summary>
-        /// Returns the reflection of a vector off a surface that has the specified normal.
-        /// </summary>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 Reflect(this Vector3 vector, Vector3 normal)
-            => vector - normal * vector.Dot(normal) * 2f;
-
-        /// <summary>
-        /// Transforms a vector by the given matrix.
-        /// </summary>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 Transform(this Vector3 position, Matrix4x4 matrix)
-            => new Vector3(
-                position.X * matrix.M11 + position.Y * matrix.M21 + position.Z * matrix.M31 + matrix.M41,
-                position.X * matrix.M12 + position.Y * matrix.M22 + position.Z * matrix.M32 + matrix.M42,
-                position.X * matrix.M13 + position.Y * matrix.M23 + position.Z * matrix.M33 + matrix.M43);
-
-        /// <summary>
-        /// Transforms a vector normal by the given matrix.
-        /// </summary>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 TransformNormal(this Vector3 normal, Matrix4x4 matrix)
-            => new Vector3(
-                normal.X * matrix.M11 + normal.Y * matrix.M21 + normal.Z * matrix.M31,
-                normal.X * matrix.M12 + normal.Y * matrix.M22 + normal.Z * matrix.M32,
-                normal.X * matrix.M13 + normal.Y * matrix.M23 + normal.Z * matrix.M33);
 
         /// <summary>
         /// Transforms a vector by the given Quaternion rotation value.

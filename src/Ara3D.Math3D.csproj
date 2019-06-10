@@ -51,7 +51,9 @@
     <Compile Include="Box.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="ContainmentType.cs" />
+    <Compile Include="Experimental.cs" />
     <Compile Include="Hash.cs" />
+    <Compile Include="IMappable.cs" />
     <Compile Include="ITransformable.cs" />
     <Compile Include="MathOps.cs">
       <AutoGen>True</AutoGen>
@@ -62,6 +64,7 @@
     <Compile Include="Matrix4x4.cs" />
     <Compile Include="Plane.cs" />
     <Compile Include="PlaneIntersectionType.cs" />
+    <Compile Include="IPoints.cs" />
     <Compile Include="Quaternion.cs" />
     <Compile Include="Random.cs" />
     <Compile Include="Ray.cs" />

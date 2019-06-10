@@ -467,24 +467,24 @@ namespace Ara3D
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
 	[DataContract]
-	public readonly partial struct Box : IEquatable< Box >
+	public readonly partial struct AABox : IEquatable< AABox >
 	{ 
 		[DataMember]
 		public readonly Vector3 Min;
 		[DataMember]
 		public readonly Vector3 Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Box(Vector3 min, Vector3 max) { Min = min; Max = max; }
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Box x && Equals(x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public AABox(Vector3 min, Vector3 max) { Min = min; Max = max; }
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is AABox x && Equals(x);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(Min.GetHashCode(), Max.GetHashCode());
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"Box(Min = {Min}, Max = {Max})";
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(Box x) => Min == x.Min && Max == x.Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(Box x0, Box x1) => x0.Equals(x1);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(Box x0, Box x1) => !x0.Equals(x1);
-		public static Box Zero = new Box(default, default);
-		public static Box MinValue = new Box(Vector3.MinValue, Vector3.MinValue);
-		public static Box MaxValue = new Box(Vector3.MaxValue, Vector3.MaxValue);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Box SetMin(Vector3 x) => new Box(x, Max);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Box SetMax(Vector3 x) => new Box(Min, x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(AABox x) => Min == x.Min && Max == x.Max;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(AABox x0, AABox x1) => x0.Equals(x1);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(AABox x0, AABox x1) => !x0.Equals(x1);
+		public static AABox Zero = new AABox(default, default);
+		public static AABox MinValue = new AABox(Vector3.MinValue, Vector3.MinValue);
+		public static AABox MaxValue = new AABox(Vector3.MaxValue, Vector3.MaxValue);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public AABox SetMin(Vector3 x) => new AABox(x, Max);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public AABox SetMax(Vector3 x) => new AABox(Min, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
 	[DataContract]
