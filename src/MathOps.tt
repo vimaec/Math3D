@@ -40,87 +40,87 @@ namespace Ara3D
 <# 
 foreach (var op in sysUnaryOps) { 
 #>
-		public static double <#= op #>(this double x) => Math.<#= op #>(x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double <#= op #>(this double x) => Math.<#= op #>(x);
 <# } #>
 
 <# 
 foreach (var op in sysUnaryOps) { 
 #>
-		public static float <#= op #>(this float x) => (float)Math.<#= op #>(x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static float <#= op #>(this float x) => (float)Math.<#= op #>(x);
 <# } #>
 
 <# 
 foreach (var t in floatTypes) { 
 #>
-		public static <#= t #> Inverse (this <#= t #> x) => (<#= t #>)1 / x; 		
-		public static <#= t #> Truncate (this <#= t #> x) => (<#= t #>)Math.Truncate(x); 
-		public static <#= t #> Ceiling (this <#= t #> x) => (<#= t #>)Math.Ceiling(x); 
-		public static <#= t #> Floor (this <#= t #> x) => (<#= t #>)Math.Floor(x);
-		public static <#= t #> Round (this <#= t #> x) => (<#= t #>)System.Math.Round(x); 
-		public static <#= t #> ToRadians(this <#= t #> x) => (<#= t #>)(x * Constants.DegreesToRadians);
-		public static <#= t #> ToDegrees(this <#= t #> x) => (<#= t #>)(x * Constants.RadiansToDegrees);
-		public static <#= t #> Distance(this <#= t #> v1, <#= t #> v2) => (v1 - v2).Abs();
-		public static bool IsInfinity(this <#= t #> v) => <#= t #>.IsInfinity(v);
-		public static bool IsNaN(this <#= t #> v) => <#= t #>.IsNaN(v);
-		public static bool AlmostEquals(this <#= t #> v1, <#= t #> v2) => (v2 - v1).AlmostZero();
-		public static bool AlmostZero(this <#= t #> v, float tolerance = Constants.Tolerance) => v.Abs() < tolerance;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Inverse (this <#= t #> x) => (<#= t #>)1 / x; 		
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Truncate (this <#= t #> x) => (<#= t #>)Math.Truncate(x); 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Ceiling (this <#= t #> x) => (<#= t #>)Math.Ceiling(x); 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Floor (this <#= t #> x) => (<#= t #>)Math.Floor(x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Round (this <#= t #> x) => (<#= t #>)System.Math.Round(x); 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> ToRadians(this <#= t #> x) => (<#= t #>)(x * Constants.DegreesToRadians);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> ToDegrees(this <#= t #> x) => (<#= t #>)(x * Constants.RadiansToDegrees);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Distance(this <#= t #> v1, <#= t #> v2) => (v1 - v2).Abs();
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool IsInfinity(this <#= t #> v) => <#= t #>.IsInfinity(v);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool IsNaN(this <#= t #> v) => <#= t #>.IsNaN(v);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool AlmostEquals(this <#= t #> v1, <#= t #> v2) => (v2 - v1).AlmostZero();
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool AlmostZero(this <#= t #> v, float tolerance = Constants.Tolerance) => v.Abs() < tolerance;
 <# } #>
 
 <# 
 foreach (var t in types) { 
 #>
-        public static <#= t #> Add (this <#= t #> v1, <#= t #> v2) => v1 + v2;
-        public static <#= t #> Subtract (this <#= t #> v1, <#= t #> v2) => v1 - v2;
-        public static <#= t #> Multiply (this <#= t #> v1, <#= t #> v2) => v1 * v2;
-        public static <#= t #> Divide (this <#= t #> v1, <#= t #> v2) => v1 / v2;
-		public static <#= t #> Negate (this <#= t #> v) => -v; 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Add (this <#= t #> v1, <#= t #> v2) => v1 + v2;
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Subtract (this <#= t #> v1, <#= t #> v2) => v1 - v2;
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Multiply (this <#= t #> v1, <#= t #> v2) => v1 * v2;
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Divide (this <#= t #> v1, <#= t #> v2) => v1 / v2;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Negate (this <#= t #> v) => -v; 
 <# } #>
 
 <#
 foreach (var t in nonVectorTypes) { 
 #>
-		public static bool WithinInterval(this <#= t #> v, <#= t #> min, <#= t #> max) => v >= min && v <= max;
-		public static <#= t #> Sqr (this <#= t #> x) => x * x;
-		public static <#= t #> Cube (this <#= t #> x) => x * x * x; 
-        public static <#= t #> Min (this <#= t #> v1, <#= t #> v2) => Math.Min(v1, v2);
-        public static <#= t #> Max (this <#= t #> v1, <#= t #> v2) => Math.Max(v1, v2); 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool Within(this <#= t #> v, <#= t #> min, <#= t #> max) => v >= min && v < max;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Sqr (this <#= t #> x) => x * x;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Cube (this <#= t #> x) => x * x * x; 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Min (this <#= t #> v1, <#= t #> v2) => Math.Min(v1, v2);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Max (this <#= t #> v1, <#= t #> v2) => Math.Max(v1, v2); 
 <# } #>
 
 <#
 foreach (var t in comparableTypes) { 
 #>
-        public static bool Gt (this <#= t #> v1, <#= t #> v2) => v1 > v2; 
-        public static bool Lt (this <#= t #> v1, <#= t #> v2) => v1 < v2; 
-        public static bool GtEq (this <#= t #> v1, <#= t #> v2) => v1 >= v2; 
-        public static bool LtEq (this <#= t #> v1, <#= t #> v2) => v1 <= v2; 
-        public static bool Eq (this <#= t #> v1, <#= t #> v2) => v1 == v2;
-        public static bool NEq (this <#= t #> v1, <#= t #> v2) => v1 != v2; 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool Gt (this <#= t #> v1, <#= t #> v2) => v1 > v2; 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool Lt (this <#= t #> v1, <#= t #> v2) => v1 < v2; 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool GtEq (this <#= t #> v1, <#= t #> v2) => v1 >= v2; 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool LtEq (this <#= t #> v1, <#= t #> v2) => v1 <= v2; 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool Eq (this <#= t #> v1, <#= t #> v2) => v1 == v2;
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool NEq (this <#= t #> v1, <#= t #> v2) => v1 != v2; 
 <# } #>
 
-		public static bool And (this bool a, bool b) => a && b; 
-		public static bool Or (this bool a, bool b) => a || b;
-		public static bool NAnd (this bool a, bool b) => !(a && b);
-		public static bool XOr (this bool a, bool b) => a || b && !(a && b); 
-		public static bool NOr (this bool a, bool b) => !(a || b); 
-		public static bool Not (this bool a) => !a;
-		public static bool Eq (this bool a, bool b) => a == b;
-		public static bool NEq ( this bool a, bool b) => a != b; 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool And (this bool a, bool b) => a && b; 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool Or (this bool a, bool b) => a || b;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool NAnd (this bool a, bool b) => !(a && b);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool XOr (this bool a, bool b) => a || b && !(a && b); 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool NOr (this bool a, bool b) => !(a || b); 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool Not (this bool a) => !a;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool Eq (this bool a, bool b) => a == b;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool NEq ( this bool a, bool b) => a != b; 
 
 <# 
 foreach (var t in intTypes) { 
 #>
-		public static <#= t #> And (this <#= t #> a, <#= t #> b) => a & b; 
-		public static <#= t #> Or (this <#= t #> a, <#= t #> b) => a | b;
-		public static <#= t #> NAnd (this <#= t #> a, <#= t #> b) => ~(a & b);
-		public static <#= t #> XOr (this <#= t #> a, <#= t #> b) => a | b & ~(a & b);
-		public static <#= t #> NOr (this <#= t #> a, <#= t #> b) => ~(a | b); 
-		public static <#= t #> Not (this <#= t #> a) => ~a;
-		public static <#= t #> Abs (this <#= t #> a) => Math.Abs(a);
-		public static <#= t #> DivideRoundUp (this <#= t #> a, <#= t #> b) => a / b + (a % b > 0 ? 1 : 0);
-        public static bool IsEven (this <#= t #> n) => n % 2 == 0;        
-        public static bool IsOdd (this <#= t #> n) => n % 2 == 1;
-		public static bool IsPowerOfTwo (this <#= t #> v) => v > 0 && (v & (v - 1)) == 0;
-        public static bool IsNaN (this <#= t #> n) => false;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> And (this <#= t #> a, <#= t #> b) => a & b; 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Or (this <#= t #> a, <#= t #> b) => a | b;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> NAnd (this <#= t #> a, <#= t #> b) => ~(a & b);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> XOr (this <#= t #> a, <#= t #> b) => a | b & ~(a & b);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> NOr (this <#= t #> a, <#= t #> b) => ~(a | b); 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Not (this <#= t #> a) => ~a;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> Abs (this <#= t #> a) => Math.Abs(a);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= t #> DivideRoundUp (this <#= t #> a, <#= t #> b) => a / b + (a % b > 0 ? 1 : 0);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool IsEven (this <#= t #> n) => n % 2 == 0;        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool IsOdd (this <#= t #> n) => n % 2 == 1;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool IsPowerOfTwo (this <#= t #> v) => v > 0 && (v & (v - 1)) == 0;
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool IsNaN (this <#= t #> n) => false;
 <# } #>
 
 
