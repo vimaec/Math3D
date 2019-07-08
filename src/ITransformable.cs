@@ -22,7 +22,7 @@ namespace Ara3D
             => self.Translate(new Vector3(x, y, z));
 
         public static T Rotate<T>(this ITransformable3D<T> self, Quaternion q)
-            => self.Transform(Matrix4x4.CreateFromQuaternion(q));
+            => self.Transform(Matrix4x4.CreateRotation(q));
 
         public static T Scale<T>(this ITransformable3D<T> self, Vector3 scales)
             => self.Transform(Matrix4x4.CreateScale(scales));

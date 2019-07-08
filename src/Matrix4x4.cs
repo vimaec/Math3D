@@ -117,11 +117,12 @@ namespace Ara3D
         /// <summary>
         /// Returns whether the matrix is the identity matrix.
         /// </summary>
-        public bool IsIdentity => M11 == 1f && M22 == 1f && M33 == 1f && M44 == 1f && // Check diagonal element first for early out.
-                                    M12 == 0f && M13 == 0f && M14 == 0f &&
-                       M21 == 0f && M23 == 0f && M24 == 0f &&
-                       M31 == 0f && M32 == 0f && M34 == 0f &&
-                       M41 == 0f && M42 == 0f && M43 == 0f;
+        public bool IsIdentity => 
+            M11 == 1f && M22 == 1f && M33 == 1f && M44 == 1f && // Check diagonal element first for early out.
+            M12 == 0f && M13 == 0f && M14 == 0f &&
+            M21 == 0f && M23 == 0f && M24 == 0f &&
+            M31 == 0f && M32 == 0f && M34 == 0f &&
+            M41 == 0f && M42 == 0f && M43 == 0f;
 
         /// <summary>
         /// Gets the translation component of this matrix.
@@ -1093,10 +1094,8 @@ namespace Ara3D
         /// <summary>
         /// Creates a rotation matrix from the given Quaternion rotation value.
         /// </summary>
-        /// <param name="quaternion">The source Quaternion.</param>
-        /// <returns>The rotation matrix.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Matrix4x4 CreateFromQuaternion(Quaternion quaternion)
+        public static Matrix4x4 CreateRotation(Quaternion quaternion)
         {
             Matrix4x4 result;
 
@@ -1140,7 +1139,7 @@ namespace Ara3D
         /// <returns>The rotation matrix.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Matrix4x4 CreateFromYawPitchRoll(float yaw, float pitch, float roll)
-            => CreateFromQuaternion(Quaternion.CreateFromYawPitchRoll(yaw, pitch, roll));
+            => CreateRotation(Quaternion.CreateFromYawPitchRoll(yaw, pitch, roll));
 
         /// <summary>
         /// Creates a Matrix that flattens geometry into a specified Plane as if casting a shadow from a specified light source.
@@ -2002,5 +2001,9 @@ namespace Ara3D
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Matrix4x4 Transform(Matrix4x4 mat)
             => this * mat;
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Matrix4x4 CreateTRS(Vector3 translation, Quaternion rotation, Vector3 scale)
+            => CreateTranslation(translation) * CreateRotation(rotation) * CreateScale(scale);
     }    
 }

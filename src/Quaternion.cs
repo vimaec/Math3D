@@ -79,6 +79,14 @@ namespace Ara3D
 
         /// <summary>
         /// Creates a new Quaternion from the given yaw, pitch, and roll, in radians.
+        /// TODO: should we have "Euler" as a separate input? I am not sure.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Quaternion CreateFromYawPitchRoll(Vector3 v)
+            => CreateFromYawPitchRoll(v.X, v.Y, v.Z);
+
+        /// <summary>
+        /// Creates a new Quaternion from the given yaw, pitch, and roll, in radians.
         /// </summary>
         /// <param name="yaw">The yaw angle, in radians, around the Y-axis.</param>
         /// <param name="pitch">The pitch angle, in radians, around the X-axis.</param>
