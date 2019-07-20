@@ -101,12 +101,27 @@ namespace Ara3D
         public float LengthSquared => A.DistanceSquared(B);
         public Vector3 MidPoint => A.Average(B);
         public Line Normal => new Line(A, A + Vector.Normalize());
-        public Vector3 Lerp(float amount) => A.Lerp(B, amount);
-        public Line SetLength(float length) => new Line(A, A + Vector.Along(length));
-        public Line Transform(Matrix4x4 mat) => new Line(A.Transform(mat), B.Transform(mat));
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public Vector3 Lerp(float amount) 
+            => A.Lerp(B, amount);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public Line SetLength(float length) 
+            => new Line(A, A + Vector.Along(length));
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public Line Transform(Matrix4x4 mat) 
+            => new Line(A.Transform(mat), B.Transform(mat));
+
         public int NumPoints => 2;
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Vector3 GetPoint(int n) => n == 0 ? A : B;
-        public Line Map(Func<Vector3, Vector3> f) => new Line(f(A), f(B));
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public Line Map(Func<Vector3, Vector3> f) 
+            => new Line(f(A), f(B));
     }
 
     public partial struct Quad : ITransformable3D<Quad>, IPoints, IMappable<Quad, Vector3>

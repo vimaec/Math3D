@@ -7,6 +7,35 @@ namespace Ara3D.Experimental
     // ISignedDistanceField?
     // http://jamie-wong.com/2016/07/15/ray-marching-signed-distance-functions/
 
+    // 
+    // https://github.com/Unity-Technologies/Unity.Mathematics/tree/master/src/Unity.Mathematics/Noise
+
+    // https://en.wikipedia.org/wiki/Set_theory
+    // https://en.wikipedia.org/wiki/Set_(mathematics)
+    public interface IAlgebraicSet<T>
+    {
+        IAlgebraicSet<T> Union(IAlgebraicSet<T> other);
+        IAlgebraicSet<T> Complement { get; }
+        IAlgebraicSet<T> Intersection(IAlgebraicSet<T> other);
+    }
+
+    public interface IPolygon {
+        int NumPoints { get; }
+        Vector3 GetPoint(int n);
+        bool Closed { get; }
+    }
+
+    public interface SurfaceDistance
+    { }
+
+    public interface InsideOutside
+    { }
+
+    public interface ILerp<T>
+    {
+        T Lerp(T other, float amount);
+    }
+
     public interface IPositionRotationScale
         {
             Vector3 Position { get; }
@@ -19,9 +48,6 @@ namespace Ara3D.Experimental
             IEnumerable<Vector3> Points { get; }
             T SetPoints(IEnumerable<Vector3> points);
         }
-
-        public interface IPolygon : IPoints
-        { }
 
         public interface IRange<T>
         {

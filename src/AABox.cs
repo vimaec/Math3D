@@ -350,5 +350,11 @@ namespace Ara3D
 
         public bool AlmostEquals(AABox other, float tolerance = Constants.Tolerance)
             => Min.AlmostEquals(other.Min, tolerance) && Max.AlmostEquals(other.Max, tolerance);
+
+        /// <summary>
+        /// Returns where a point is relative to the bounding box on a scale of 0..1 
+        /// </summary>
+        public Vector3 Normalize(Vector3 v)
+            => v.InverseLerp(Min, Max);
     }
 }

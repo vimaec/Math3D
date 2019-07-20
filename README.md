@@ -152,3 +152,8 @@ on the .NET 4.7.1 branch. We are currently using C# 7.2.
 * [Unity Reference](https://github.com/Unity-Technologies/UnityCsReference/tree/master/Runtime/Export)
 * [SharpDX Mathematics](https://github.com/sharpdx/SharpDX/tree/master/Source/SharpDX.Mathematics)
 * [A Vector Type for C# - R Potter via Code Project](https://www.codeproject.com/Articles/17425/A-Vector-Type-for-C)
+
+## Future Ideas 
+
+It would be fun to map and include the Ashima noise functions that were ported to C# by Unity.  
+https://github.com/Unity-Technologies/Unity.Mathematics/tree/master/src/Unity.Mathematics/Noise

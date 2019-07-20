@@ -201,6 +201,7 @@ namespace Ara3D
 
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static float Lerp(this float v1, float v2, float t) => v1 + (v2 - v1) * t;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static float InverseLerp(this float v, float a, float b) => (v - a) / (b - a);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static float LerpPrecise(this float v1, float v2, float t) => ((1 - t) * v1) + (v2 * t);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static float ClampLower(this float v, float min) => v.Max(min);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static float ClampUpper(this float v, float max) => v.Min(max);
@@ -208,6 +209,7 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static float Average(this float v1, float v2) => v1.Lerp(v2, 0.5f);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static float Barycentric(this float v1, float v2, float v3, float u, float v) => v1 + (v2 - v1) * u + (v3 - v1) * v;        
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double Lerp(this double v1, double v2, float t) => v1 + (v2 - v1) * t;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double InverseLerp(this double v, double a, double b) => (v - a) / (b - a);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double LerpPrecise(this double v1, double v2, float t) => ((1 - t) * v1) + (v2 * t);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double ClampLower(this double v, double min) => v.Max(min);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double ClampUpper(this double v, double max) => v.Min(max);
@@ -215,6 +217,7 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double Average(this double v1, double v2) => v1.Lerp(v2, 0.5f);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double Barycentric(this double v1, double v2, double v3, float u, float v) => v1 + (v2 - v1) * u + (v3 - v1) * v;        
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector2 Lerp(this Vector2 v1, Vector2 v2, float t) => v1 + (v2 - v1) * t;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector2 InverseLerp(this Vector2 v, Vector2 a, Vector2 b) => (v - a) / (b - a);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector2 LerpPrecise(this Vector2 v1, Vector2 v2, float t) => ((1 - t) * v1) + (v2 * t);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector2 ClampLower(this Vector2 v, Vector2 min) => v.Max(min);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector2 ClampUpper(this Vector2 v, Vector2 max) => v.Min(max);
@@ -222,6 +225,7 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector2 Average(this Vector2 v1, Vector2 v2) => v1.Lerp(v2, 0.5f);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector2 Barycentric(this Vector2 v1, Vector2 v2, Vector2 v3, float u, float v) => v1 + (v2 - v1) * u + (v3 - v1) * v;        
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 Lerp(this Vector3 v1, Vector3 v2, float t) => v1 + (v2 - v1) * t;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 InverseLerp(this Vector3 v, Vector3 a, Vector3 b) => (v - a) / (b - a);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 LerpPrecise(this Vector3 v1, Vector3 v2, float t) => ((1 - t) * v1) + (v2 * t);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 ClampLower(this Vector3 v, Vector3 min) => v.Max(min);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 ClampUpper(this Vector3 v, Vector3 max) => v.Min(max);
@@ -229,6 +233,7 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 Average(this Vector3 v1, Vector3 v2) => v1.Lerp(v2, 0.5f);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 Barycentric(this Vector3 v1, Vector3 v2, Vector3 v3, float u, float v) => v1 + (v2 - v1) * u + (v3 - v1) * v;        
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector4 Lerp(this Vector4 v1, Vector4 v2, float t) => v1 + (v2 - v1) * t;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector4 InverseLerp(this Vector4 v, Vector4 a, Vector4 b) => (v - a) / (b - a);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector4 LerpPrecise(this Vector4 v1, Vector4 v2, float t) => ((1 - t) * v1) + (v2 * t);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector4 ClampLower(this Vector4 v, Vector4 min) => v.Max(min);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector4 ClampUpper(this Vector4 v, Vector4 max) => v.Min(max);
@@ -236,6 +241,7 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector4 Average(this Vector4 v1, Vector4 v2) => v1.Lerp(v2, 0.5f);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector4 Barycentric(this Vector4 v1, Vector4 v2, Vector4 v3, float u, float v) => v1 + (v2 - v1) * u + (v3 - v1) * v;        
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector2 Lerp(this DVector2 v1, DVector2 v2, float t) => v1 + (v2 - v1) * t;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector2 InverseLerp(this DVector2 v, DVector2 a, DVector2 b) => (v - a) / (b - a);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector2 LerpPrecise(this DVector2 v1, DVector2 v2, float t) => ((1 - t) * v1) + (v2 * t);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector2 ClampLower(this DVector2 v, DVector2 min) => v.Max(min);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector2 ClampUpper(this DVector2 v, DVector2 max) => v.Min(max);
@@ -243,6 +249,7 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector2 Average(this DVector2 v1, DVector2 v2) => v1.Lerp(v2, 0.5f);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector2 Barycentric(this DVector2 v1, DVector2 v2, DVector2 v3, float u, float v) => v1 + (v2 - v1) * u + (v3 - v1) * v;        
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector3 Lerp(this DVector3 v1, DVector3 v2, float t) => v1 + (v2 - v1) * t;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector3 InverseLerp(this DVector3 v, DVector3 a, DVector3 b) => (v - a) / (b - a);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector3 LerpPrecise(this DVector3 v1, DVector3 v2, float t) => ((1 - t) * v1) + (v2 * t);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector3 ClampLower(this DVector3 v, DVector3 min) => v.Max(min);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector3 ClampUpper(this DVector3 v, DVector3 max) => v.Min(max);
@@ -250,6 +257,7 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector3 Average(this DVector3 v1, DVector3 v2) => v1.Lerp(v2, 0.5f);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector3 Barycentric(this DVector3 v1, DVector3 v2, DVector3 v3, float u, float v) => v1 + (v2 - v1) * u + (v3 - v1) * v;        
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector4 Lerp(this DVector4 v1, DVector4 v2, float t) => v1 + (v2 - v1) * t;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector4 InverseLerp(this DVector4 v, DVector4 a, DVector4 b) => (v - a) / (b - a);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector4 LerpPrecise(this DVector4 v1, DVector4 v2, float t) => ((1 - t) * v1) + (v2 * t);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector4 ClampLower(this DVector4 v, DVector4 min) => v.Max(min);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector4 ClampUpper(this DVector4 v, DVector4 max) => v.Min(max);
@@ -287,6 +295,8 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector2 Truncate (this Vector2 v) => new Vector2(v.X.Truncate(), v.Y.Truncate());
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector2 Sqr (this Vector2 v) => new Vector2(v.X.Sqr(), v.Y.Sqr());
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector2 Cube (this Vector2 v) => new Vector2(v.X.Cube(), v.Y.Cube());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector2 ToRadians (this Vector2 v) => new Vector2(v.X.ToRadians(), v.Y.ToRadians());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector2 ToDegrees (this Vector2 v) => new Vector2(v.X.ToDegrees(), v.Y.ToDegrees());
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static float DistanceSquared(this Vector3 v1, Vector3 v2) => (v1 - v2).LengthSquared();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static float Distance(this Vector3 v1, Vector3 v2) => (v1 - v2).Length();
@@ -318,6 +328,8 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 Truncate (this Vector3 v) => new Vector3(v.X.Truncate(), v.Y.Truncate(), v.Z.Truncate());
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 Sqr (this Vector3 v) => new Vector3(v.X.Sqr(), v.Y.Sqr(), v.Z.Sqr());
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 Cube (this Vector3 v) => new Vector3(v.X.Cube(), v.Y.Cube(), v.Z.Cube());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 ToRadians (this Vector3 v) => new Vector3(v.X.ToRadians(), v.Y.ToRadians(), v.Z.ToRadians());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 ToDegrees (this Vector3 v) => new Vector3(v.X.ToDegrees(), v.Y.ToDegrees(), v.Z.ToDegrees());
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static float DistanceSquared(this Vector4 v1, Vector4 v2) => (v1 - v2).LengthSquared();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static float Distance(this Vector4 v1, Vector4 v2) => (v1 - v2).Length();
@@ -349,6 +361,8 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector4 Truncate (this Vector4 v) => new Vector4(v.X.Truncate(), v.Y.Truncate(), v.Z.Truncate(), v.W.Truncate());
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector4 Sqr (this Vector4 v) => new Vector4(v.X.Sqr(), v.Y.Sqr(), v.Z.Sqr(), v.W.Sqr());
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector4 Cube (this Vector4 v) => new Vector4(v.X.Cube(), v.Y.Cube(), v.Z.Cube(), v.W.Cube());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector4 ToRadians (this Vector4 v) => new Vector4(v.X.ToRadians(), v.Y.ToRadians(), v.Z.ToRadians(), v.W.ToRadians());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector4 ToDegrees (this Vector4 v) => new Vector4(v.X.ToDegrees(), v.Y.ToDegrees(), v.Z.ToDegrees(), v.W.ToDegrees());
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double DistanceSquared(this DVector2 v1, DVector2 v2) => (v1 - v2).LengthSquared();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double Distance(this DVector2 v1, DVector2 v2) => (v1 - v2).Length();
@@ -380,6 +394,8 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector2 Truncate (this DVector2 v) => new DVector2(v.X.Truncate(), v.Y.Truncate());
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector2 Sqr (this DVector2 v) => new DVector2(v.X.Sqr(), v.Y.Sqr());
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector2 Cube (this DVector2 v) => new DVector2(v.X.Cube(), v.Y.Cube());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector2 ToRadians (this DVector2 v) => new DVector2(v.X.ToRadians(), v.Y.ToRadians());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector2 ToDegrees (this DVector2 v) => new DVector2(v.X.ToDegrees(), v.Y.ToDegrees());
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double DistanceSquared(this DVector3 v1, DVector3 v2) => (v1 - v2).LengthSquared();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double Distance(this DVector3 v1, DVector3 v2) => (v1 - v2).Length();
@@ -411,6 +427,8 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector3 Truncate (this DVector3 v) => new DVector3(v.X.Truncate(), v.Y.Truncate(), v.Z.Truncate());
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector3 Sqr (this DVector3 v) => new DVector3(v.X.Sqr(), v.Y.Sqr(), v.Z.Sqr());
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector3 Cube (this DVector3 v) => new DVector3(v.X.Cube(), v.Y.Cube(), v.Z.Cube());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector3 ToRadians (this DVector3 v) => new DVector3(v.X.ToRadians(), v.Y.ToRadians(), v.Z.ToRadians());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector3 ToDegrees (this DVector3 v) => new DVector3(v.X.ToDegrees(), v.Y.ToDegrees(), v.Z.ToDegrees());
 
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double DistanceSquared(this DVector4 v1, DVector4 v2) => (v1 - v2).LengthSquared();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static double Distance(this DVector4 v1, DVector4 v2) => (v1 - v2).Length();
@@ -442,6 +460,8 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector4 Truncate (this DVector4 v) => new DVector4(v.X.Truncate(), v.Y.Truncate(), v.Z.Truncate(), v.W.Truncate());
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector4 Sqr (this DVector4 v) => new DVector4(v.X.Sqr(), v.Y.Sqr(), v.Z.Sqr(), v.W.Sqr());
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector4 Cube (this DVector4 v) => new DVector4(v.X.Cube(), v.Y.Cube(), v.Z.Cube(), v.W.Cube());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector4 ToRadians (this DVector4 v) => new DVector4(v.X.ToRadians(), v.Y.ToRadians(), v.Z.ToRadians(), v.W.ToRadians());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static DVector4 ToDegrees (this DVector4 v) => new DVector4(v.X.ToDegrees(), v.Y.ToDegrees(), v.Z.ToDegrees(), v.W.ToDegrees());
 
 
 } } 

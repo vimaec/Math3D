@@ -48,12 +48,14 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Box.cs" />
+    <Compile Include="AABox.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="ContainmentType.cs" />
     <Compile Include="Experimental.cs" />
     <Compile Include="Hash.cs" />
     <Compile Include="IMappable.cs" />
+    <Compile Include="IAlmostEquatable.cs" />
+    <Compile Include="IPolygon.cs" />
     <Compile Include="ITransformable.cs" />
     <Compile Include="MathOps.cs">
       <AutoGen>True</AutoGen>

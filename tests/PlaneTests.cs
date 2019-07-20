@@ -187,7 +187,7 @@ namespace Ara3D.Tests
                 x * itm.M13 + y * itm.M23 + z * itm.M33 + w * itm.M43);
             var D = x * itm.M14 + y * itm.M24 + z * itm.M34 + w * itm.M44;
             var expected = new Plane(Normal, D);
-            var actual = Plane.Transform(target, m);
+            var actual = target.Transform(m);
             Assert.True(MathHelper.Equal(expected, actual), "Plane.Transform did not return the expected value.");
         }
 
@@ -211,7 +211,7 @@ namespace Ara3D.Tests
                 x * m.M13 + y * m.M23 + z * m.M33 + w * m.M43);
             var D = x * m.M14 + y * m.M24 + z * m.M34 + w * m.M44;
             var expected = new Plane(Normal, D);            
-            var actual = Plane.Transform(target, q);
+            var actual = target.Transform(q);
             Assert.True(MathHelper.Equal(expected, actual), "Plane.Transform did not return the expected value.");
         }
 

@@ -26,7 +26,7 @@ var types = nonVectorTypes.Concat(vectorTypes);
 var araBinaryOps = new[] { "Add", "Subtract", "Multiply", "Divide" };
 var araCompOps = new[] { "Gt", "Lt", "GtEq", "LtEq", "Eq", "NEq" };
 var sysBinaryOps = new[] { "Atan2", "Log", "Pow" };
-var araUnaryOps = new[] { "Inverse", "Ceiling", "Floor", "Round", "Truncate", "Sqr", "Cube" };
+var araUnaryOps = new[] { "Inverse", "Ceiling", "Floor", "Round", "Truncate", "Sqr", "Cube", "ToRadians", "ToDegrees" };
 var sysUnaryOps = new[] { "Abs", "Acos", "Asin", "Atan", "Cos", "Cosh", "Exp", "Log", "Log10", "Sin", "Sinh", "Sqrt", "Tan", "Tanh" };
 var allUnaryOps = sysUnaryOps.Concat(araUnaryOps);
 #>
@@ -128,6 +128,7 @@ foreach (var t in intTypes) {
 foreach (var v in floatAndVectorTypes) { 
 #>
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= v #> Lerp(this <#= v #> v1, <#= v #> v2, float t) => v1 + (v2 - v1) * t;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= v #> InverseLerp(this <#= v #> v, <#= v #> a, <#= v #> b) => (v - a) / (b - a);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= v #> LerpPrecise(this <#= v #> v1, <#= v #> v2, float t) => ((1 - t) * v1) + (v2 * t);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= v #> ClampLower(this <#= v #> v, <#= v #> min) => v.Max(min);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static <#= v #> ClampUpper(this <#= v #> v, <#= v #> max) => v.Min(max);

@@ -262,6 +262,13 @@ namespace Ara3D
             => vector - (2 * (vector.Dot(normal) * normal));
 
         /// <summary>
+        /// Returns the reflection of a vector off a surface that has the specified normal.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector3 Reflect(Vector3 vector, Vector3 normal)
+            => vector - (2 * (vector.Dot(normal) * normal));
+
+        /// <summary>
         /// Transforms a vector by the given matrix.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -378,5 +385,9 @@ namespace Ara3D
                 position.X * matrix.M13 + position.Y * matrix.M23 + position.Z * matrix.M33 + matrix.M43,
                 position.X * matrix.M14 + position.Y * matrix.M24 + position.Z * matrix.M34 + matrix.M44);
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector3 Cross(Vector3 a, Vector3 b)
+            => a.Cross(b);
     }
 }

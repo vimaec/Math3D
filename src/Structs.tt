@@ -39,16 +39,16 @@ namespace Ara3D
 
 	// Various types of intervals (and bounding structs)  
 	CreateRangeStruct("Interval", "float");
-	CreateRangeStruct("Box2", "Vector2");    
-	CreateRangeStruct("Box", "Vector3");     
-	CreateRangeStruct("Box4", "Vector4"); 
+	CreateRangeStruct("AABox2D", "Vector2");    
+	CreateRangeStruct("AABox", "Vector3");     
+	CreateRangeStruct("AABox4D", "Vector4"); 
 	 
 	CreateRangeStruct("DInterval", "double");   
-	CreateRangeStruct("DBox2", "DVector2");     
-	CreateRangeStruct("DBox3", "DVector3");    
-	CreateRangeStruct("DBox4", "DVector4");  
+	CreateRangeStruct("DAABox2D", "DVector2");     
+	CreateRangeStruct("DAABox", "DVector3");    
+	CreateRangeStruct("DAABox4D", "DVector4");  
 
-	// These are common structs 
+	// These are common structs
 	CreateStruct("Ray", new[] { "Position", "Direction" }, new[] { "Vector3", "Vector3" });
 	CreateStruct("DRay", new[] { "Position", "Direction" }, new[] { "DVector3", "DVector3" });
 	CreateStruct("Sphere", new[] { "Center", "Radius" }, new[] { "Vector3", "float" }); 
@@ -56,15 +56,15 @@ namespace Ara3D
 	
 	// These have surface areas and midpoints and bounding boxes
 	CreateShapeStruct("Line", new[] { "A", "B" }, "Vector3");    
+	CreateShapeStruct("Line2D", new[] { "A", "B" }, "Vector2");    
 	CreateShapeStruct("Triangle", new[] { "A", "B", "C" }, "Vector3");
-	CreateShapeStruct("Triangle2", new[] { "A", "B", "C" }, "Vector2");
+	CreateShapeStruct("Triangle2D", new[] { "A", "B", "C" }, "Vector2");
 	CreateShapeStruct("Quad", new[] { "A", "B", "C", "D" }, "Vector3");
+	CreateShapeStruct("Quad2D", new[] { "A", "B", "C", "D" }, "Vector2");
 
 	// These are plain old vector types (they will need mathematical operators)
 	CreateVectorStruct("Int2", new[] { "A", "B" }, "int");    
 	CreateVectorStruct("Int3", new[] { "A", "B", "C" }, "int");    
 	CreateVectorStruct("Int4", new[] { "A", "B", "C", "D" }, "int");
-
-	// TODO: the double operators are not yet finished.
 #>
 }

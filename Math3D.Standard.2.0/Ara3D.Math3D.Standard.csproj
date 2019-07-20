@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -17,11 +17,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="MathOps1.cs" />
-    <Compile Remove="Structs1.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove=".gitignore" />
     <None Remove="MathOps.tt" />
     <None Remove="Structs.tt" />
@@ -29,11 +24,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\src\Box.cs" Link="Box.cs" />
+    <Compile Include="..\src\AABox.cs" Link="Box.cs" />
     <Compile Include="..\src\Constants.cs" Link="Constants.cs" />
     <Compile Include="..\src\ContainmentType.cs" Link="ContainmentType.cs" />
     <Compile Include="..\src\Hash.cs" Link="Hash.cs" />
-    <Compile Include="..\src\Line.cs" Link="Line.cs" />
+    <Compile Include="..\src\ITranformable.cs" Link="ITranformable.cs" />
     <Compile Include="..\src\MathOps.cs" Link="MathOps.cs" />
     <Compile Include="..\src\MathOpsPartial.cs" Link="MathOpsPartial.cs" />
     <Compile Include="..\src\Matrix4x4.cs" Link="Matrix4x4.cs" />
@@ -46,9 +41,6 @@
     <Compile Include="..\src\Structs.cs" Link="Structs.cs" />
     <Compile Include="..\src\Triangle.cs" Link="Triangle.cs" />
     <Compile Include="..\src\Triangle2D.cs" Link="Triangle2D.cs" />
-    <Compile Include="..\src\Vector2.cs" Link="Vector2.cs" />
-    <Compile Include="..\src\Vector3.cs" Link="Vector3.cs" />
-    <Compile Include="..\src\Vector4.cs" Link="Vector4.cs" />
   </ItemGroup>
 
 </Project>

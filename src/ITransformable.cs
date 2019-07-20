@@ -7,7 +7,7 @@ namespace Ara3D
         TSelf Transform(Matrix4x4 mat);
     }
 
-    public static class Transformable
+    public static class Transformable3D
     {
         public static Matrix4x4 Multiply(params Matrix4x4[] matrices)
             => matrices.Aggregate(Matrix4x4.Identity, (m1, m2) => m1 * m2);

@@ -1095,6 +1095,13 @@ namespace Ara3D
         /// Creates a rotation matrix from the given Quaternion rotation value.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Matrix4x4 CreateFromQuaternion(Quaternion quaternion)
+            => CreateRotation(quaternion);
+
+        /// <summary>
+        /// Creates a rotation matrix from the given Quaternion rotation value.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Matrix4x4 CreateRotation(Quaternion quaternion)
         {
             Matrix4x4 result;
