@@ -8,7 +8,7 @@ using System.Numerics;
 using System.Runtime.InteropServices;
 using NUnit.Framework;
 
-namespace Ara3D.Tests
+namespace Vim.Tests
 {
     public class Matrix4x4Tests
     {
@@ -714,9 +714,9 @@ namespace Ara3D.Tests
                 Vector3 pp = -plane.D * plane.Normal; // Position on the plane.
 
                 //
-                foreach (Vector3 point in points)
+                foreach (var point in points)
                 {
-                    Vector3 rp = MathOps.Transform(point, m);
+                    Vector3 rp = point.Transform(m);
 
                     // Manually compute reflection point and compare results.
                     Vector3 v = point - pp;

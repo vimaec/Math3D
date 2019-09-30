@@ -8,16 +8,20 @@
 // file 'LICENSE.txt', which is part of this source code package.  
 // ReSharper disable CompareOfFloatsByEqualityOperator
   
-using System;    
+using System;
 using System.Runtime.CompilerServices; 
 using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
 
-namespace Ara3D      
+namespace Vim
 {
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Vector2 : IEquatable< Vector2 >
 	{ 
+		[DataMember]
 		public readonly float X;
+		[DataMember]
 		public readonly float Y;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Vector2(float x, float y) { X = x; Y = y; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Vector2 x && Equals(x);
@@ -58,12 +62,19 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public float SumComponents() => (X) + (Y);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public float SumSqrComponents() => (X).Sqr() + (Y).Sqr();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public float ProductComponents() => (X) * (Y);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public float GetComponent(int n) => n == 0 ? X:Y;		
+		public const int NumComponents = 2;
+
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Vector3 : IEquatable< Vector3 >
 	{ 
+		[DataMember]
 		public readonly float X;
+		[DataMember]
 		public readonly float Y;
+		[DataMember]
 		public readonly float Z;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Vector3(float x, float y, float z) { X = x; Y = y; Z = z; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Vector3 x && Equals(x);
@@ -106,13 +117,21 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public float SumComponents() => (X) + (Y) + (Z);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public float SumSqrComponents() => (X).Sqr() + (Y).Sqr() + (Z).Sqr();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public float ProductComponents() => (X) * (Y) * (Z);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public float GetComponent(int n) => n == 0 ? X : n == 1 ? Y:Z;		
+		public const int NumComponents = 3;
+
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Vector4 : IEquatable< Vector4 >
 	{ 
+		[DataMember]
 		public readonly float X;
+		[DataMember]
 		public readonly float Y;
+		[DataMember]
 		public readonly float Z;
+		[DataMember]
 		public readonly float W;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Vector4(float x, float y, float z, float w) { X = x; Y = y; Z = z; W = w; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Vector4 x && Equals(x);
@@ -157,11 +176,17 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public float SumComponents() => (X) + (Y) + (Z) + (W);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public float SumSqrComponents() => (X).Sqr() + (Y).Sqr() + (Z).Sqr() + (W).Sqr();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public float ProductComponents() => (X) * (Y) * (Z) * (W);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public float GetComponent(int n) => n == 0 ? X : n == 1 ? Y : n == 2 ? Z:W;		
+		public const int NumComponents = 4;
+
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct DVector2 : IEquatable< DVector2 >
 	{ 
+		[DataMember]
 		public readonly double X;
+		[DataMember]
 		public readonly double Y;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DVector2(double x, double y) { X = x; Y = y; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DVector2 x && Equals(x);
@@ -202,12 +227,19 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public double SumComponents() => (X) + (Y);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public double SumSqrComponents() => (X).Sqr() + (Y).Sqr();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public double ProductComponents() => (X) * (Y);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public double GetComponent(int n) => n == 0 ? X:Y;		
+		public const int NumComponents = 2;
+
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct DVector3 : IEquatable< DVector3 >
 	{ 
+		[DataMember]
 		public readonly double X;
+		[DataMember]
 		public readonly double Y;
+		[DataMember]
 		public readonly double Z;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DVector3(double x, double y, double z) { X = x; Y = y; Z = z; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DVector3 x && Equals(x);
@@ -250,13 +282,21 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public double SumComponents() => (X) + (Y) + (Z);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public double SumSqrComponents() => (X).Sqr() + (Y).Sqr() + (Z).Sqr();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public double ProductComponents() => (X) * (Y) * (Z);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public double GetComponent(int n) => n == 0 ? X : n == 1 ? Y:Z;		
+		public const int NumComponents = 3;
+
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct DVector4 : IEquatable< DVector4 >
 	{ 
+		[DataMember]
 		public readonly double X;
+		[DataMember]
 		public readonly double Y;
+		[DataMember]
 		public readonly double Z;
+		[DataMember]
 		public readonly double W;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DVector4(double x, double y, double z, double w) { X = x; Y = y; Z = z; W = w; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DVector4 x && Equals(x);
@@ -301,11 +341,17 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public double SumComponents() => (X) + (Y) + (Z) + (W);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public double SumSqrComponents() => (X).Sqr() + (Y).Sqr() + (Z).Sqr() + (W).Sqr();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public double ProductComponents() => (X) * (Y) * (Z) * (W);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public double GetComponent(int n) => n == 0 ? X : n == 1 ? Y : n == 2 ? Z:W;		
+		public const int NumComponents = 4;
+
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Plane : IEquatable< Plane >
 	{ 
+		[DataMember]
 		public readonly Vector3 Normal;
+		[DataMember]
 		public readonly float D;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Plane(Vector3 normal, float d) { Normal = normal; D = d; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Plane x && Equals(x);
@@ -321,9 +367,12 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Plane SetD(float x) => new Plane(Normal, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct DPlane : IEquatable< DPlane >
 	{ 
+		[DataMember]
 		public readonly DVector3 Normal;
+		[DataMember]
 		public readonly double D;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DPlane(DVector3 normal, double d) { Normal = normal; D = d; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DPlane x && Equals(x);
@@ -339,11 +388,16 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DPlane SetD(double x) => new DPlane(Normal, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Quaternion : IEquatable< Quaternion >
 	{ 
+		[DataMember]
 		public readonly float X;
+		[DataMember]
 		public readonly float Y;
+		[DataMember]
 		public readonly float Z;
+		[DataMember]
 		public readonly float W;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Quaternion(float x, float y, float z, float w) { X = x; Y = y; Z = z; W = w; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Quaternion x && Equals(x);
@@ -361,11 +415,16 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Quaternion SetW(float x) => new Quaternion(X, Y, Z, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct DQuaternion : IEquatable< DQuaternion >
 	{ 
+		[DataMember]
 		public readonly double X;
+		[DataMember]
 		public readonly double Y;
+		[DataMember]
 		public readonly double Z;
+		[DataMember]
 		public readonly double W;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DQuaternion(double x, double y, double z, double w) { X = x; Y = y; Z = z; W = w; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DQuaternion x && Equals(x);
@@ -383,9 +442,12 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DQuaternion SetW(double x) => new DQuaternion(X, Y, Z, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Interval : IEquatable< Interval >
 	{ 
+		[DataMember]
 		public readonly float Min;
+		[DataMember]
 		public readonly float Max;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Interval(float min, float max) { Min = min; Max = max; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Interval x && Equals(x);
@@ -401,63 +463,75 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Interval SetMax(float x) => new Interval(Min, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
-	public readonly partial struct Box2 : IEquatable< Box2 >
+	[DataContract]
+	public readonly partial struct AABox2D : IEquatable< AABox2D >
 	{ 
+		[DataMember]
 		public readonly Vector2 Min;
+		[DataMember]
 		public readonly Vector2 Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Box2(Vector2 min, Vector2 max) { Min = min; Max = max; }
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Box2 x && Equals(x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public AABox2D(Vector2 min, Vector2 max) { Min = min; Max = max; }
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is AABox2D x && Equals(x);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(Min.GetHashCode(), Max.GetHashCode());
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"Box2(Min = {Min}, Max = {Max})";
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(Box2 x) => Min == x.Min && Max == x.Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(Box2 x0, Box2 x1) => x0.Equals(x1);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(Box2 x0, Box2 x1) => !x0.Equals(x1);
-		public static Box2 Zero = new Box2(default, default);
-		public static Box2 MinValue = new Box2(Vector2.MinValue, Vector2.MinValue);
-		public static Box2 MaxValue = new Box2(Vector2.MaxValue, Vector2.MaxValue);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Box2 SetMin(Vector2 x) => new Box2(x, Max);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Box2 SetMax(Vector2 x) => new Box2(Min, x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"AABox2D(Min = {Min}, Max = {Max})";
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(AABox2D x) => Min == x.Min && Max == x.Max;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(AABox2D x0, AABox2D x1) => x0.Equals(x1);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(AABox2D x0, AABox2D x1) => !x0.Equals(x1);
+		public static AABox2D Zero = new AABox2D(default, default);
+		public static AABox2D MinValue = new AABox2D(Vector2.MinValue, Vector2.MinValue);
+		public static AABox2D MaxValue = new AABox2D(Vector2.MaxValue, Vector2.MaxValue);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public AABox2D SetMin(Vector2 x) => new AABox2D(x, Max);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public AABox2D SetMax(Vector2 x) => new AABox2D(Min, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
-	public readonly partial struct Box : IEquatable< Box >
+	[DataContract]
+	public readonly partial struct AABox : IEquatable< AABox >
 	{ 
+		[DataMember]
 		public readonly Vector3 Min;
+		[DataMember]
 		public readonly Vector3 Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Box(Vector3 min, Vector3 max) { Min = min; Max = max; }
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Box x && Equals(x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public AABox(Vector3 min, Vector3 max) { Min = min; Max = max; }
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is AABox x && Equals(x);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(Min.GetHashCode(), Max.GetHashCode());
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"Box(Min = {Min}, Max = {Max})";
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(Box x) => Min == x.Min && Max == x.Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(Box x0, Box x1) => x0.Equals(x1);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(Box x0, Box x1) => !x0.Equals(x1);
-		public static Box Zero = new Box(default, default);
-		public static Box MinValue = new Box(Vector3.MinValue, Vector3.MinValue);
-		public static Box MaxValue = new Box(Vector3.MaxValue, Vector3.MaxValue);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Box SetMin(Vector3 x) => new Box(x, Max);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Box SetMax(Vector3 x) => new Box(Min, x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"AABox(Min = {Min}, Max = {Max})";
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(AABox x) => Min == x.Min && Max == x.Max;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(AABox x0, AABox x1) => x0.Equals(x1);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(AABox x0, AABox x1) => !x0.Equals(x1);
+		public static AABox Zero = new AABox(default, default);
+		public static AABox MinValue = new AABox(Vector3.MinValue, Vector3.MinValue);
+		public static AABox MaxValue = new AABox(Vector3.MaxValue, Vector3.MaxValue);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public AABox SetMin(Vector3 x) => new AABox(x, Max);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public AABox SetMax(Vector3 x) => new AABox(Min, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
-	public readonly partial struct Box4 : IEquatable< Box4 >
+	[DataContract]
+	public readonly partial struct AABox4D : IEquatable< AABox4D >
 	{ 
+		[DataMember]
 		public readonly Vector4 Min;
+		[DataMember]
 		public readonly Vector4 Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Box4(Vector4 min, Vector4 max) { Min = min; Max = max; }
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Box4 x && Equals(x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public AABox4D(Vector4 min, Vector4 max) { Min = min; Max = max; }
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is AABox4D x && Equals(x);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(Min.GetHashCode(), Max.GetHashCode());
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"Box4(Min = {Min}, Max = {Max})";
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(Box4 x) => Min == x.Min && Max == x.Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(Box4 x0, Box4 x1) => x0.Equals(x1);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(Box4 x0, Box4 x1) => !x0.Equals(x1);
-		public static Box4 Zero = new Box4(default, default);
-		public static Box4 MinValue = new Box4(Vector4.MinValue, Vector4.MinValue);
-		public static Box4 MaxValue = new Box4(Vector4.MaxValue, Vector4.MaxValue);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Box4 SetMin(Vector4 x) => new Box4(x, Max);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Box4 SetMax(Vector4 x) => new Box4(Min, x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"AABox4D(Min = {Min}, Max = {Max})";
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(AABox4D x) => Min == x.Min && Max == x.Max;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(AABox4D x0, AABox4D x1) => x0.Equals(x1);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(AABox4D x0, AABox4D x1) => !x0.Equals(x1);
+		public static AABox4D Zero = new AABox4D(default, default);
+		public static AABox4D MinValue = new AABox4D(Vector4.MinValue, Vector4.MinValue);
+		public static AABox4D MaxValue = new AABox4D(Vector4.MaxValue, Vector4.MaxValue);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public AABox4D SetMin(Vector4 x) => new AABox4D(x, Max);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public AABox4D SetMax(Vector4 x) => new AABox4D(Min, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct DInterval : IEquatable< DInterval >
 	{ 
+		[DataMember]
 		public readonly double Min;
+		[DataMember]
 		public readonly double Max;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DInterval(double min, double max) { Min = min; Max = max; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DInterval x && Equals(x);
@@ -473,63 +547,75 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DInterval SetMax(double x) => new DInterval(Min, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
-	public readonly partial struct DBox2 : IEquatable< DBox2 >
+	[DataContract]
+	public readonly partial struct DAABox2D : IEquatable< DAABox2D >
 	{ 
+		[DataMember]
 		public readonly DVector2 Min;
+		[DataMember]
 		public readonly DVector2 Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DBox2(DVector2 min, DVector2 max) { Min = min; Max = max; }
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DBox2 x && Equals(x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DAABox2D(DVector2 min, DVector2 max) { Min = min; Max = max; }
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DAABox2D x && Equals(x);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(Min.GetHashCode(), Max.GetHashCode());
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"DBox2(Min = {Min}, Max = {Max})";
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(DBox2 x) => Min == x.Min && Max == x.Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(DBox2 x0, DBox2 x1) => x0.Equals(x1);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(DBox2 x0, DBox2 x1) => !x0.Equals(x1);
-		public static DBox2 Zero = new DBox2(default, default);
-		public static DBox2 MinValue = new DBox2(DVector2.MinValue, DVector2.MinValue);
-		public static DBox2 MaxValue = new DBox2(DVector2.MaxValue, DVector2.MaxValue);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DBox2 SetMin(DVector2 x) => new DBox2(x, Max);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DBox2 SetMax(DVector2 x) => new DBox2(Min, x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"DAABox2D(Min = {Min}, Max = {Max})";
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(DAABox2D x) => Min == x.Min && Max == x.Max;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(DAABox2D x0, DAABox2D x1) => x0.Equals(x1);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(DAABox2D x0, DAABox2D x1) => !x0.Equals(x1);
+		public static DAABox2D Zero = new DAABox2D(default, default);
+		public static DAABox2D MinValue = new DAABox2D(DVector2.MinValue, DVector2.MinValue);
+		public static DAABox2D MaxValue = new DAABox2D(DVector2.MaxValue, DVector2.MaxValue);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DAABox2D SetMin(DVector2 x) => new DAABox2D(x, Max);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DAABox2D SetMax(DVector2 x) => new DAABox2D(Min, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
-	public readonly partial struct DBox3 : IEquatable< DBox3 >
+	[DataContract]
+	public readonly partial struct DAABox : IEquatable< DAABox >
 	{ 
+		[DataMember]
 		public readonly DVector3 Min;
+		[DataMember]
 		public readonly DVector3 Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DBox3(DVector3 min, DVector3 max) { Min = min; Max = max; }
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DBox3 x && Equals(x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DAABox(DVector3 min, DVector3 max) { Min = min; Max = max; }
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DAABox x && Equals(x);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(Min.GetHashCode(), Max.GetHashCode());
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"DBox3(Min = {Min}, Max = {Max})";
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(DBox3 x) => Min == x.Min && Max == x.Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(DBox3 x0, DBox3 x1) => x0.Equals(x1);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(DBox3 x0, DBox3 x1) => !x0.Equals(x1);
-		public static DBox3 Zero = new DBox3(default, default);
-		public static DBox3 MinValue = new DBox3(DVector3.MinValue, DVector3.MinValue);
-		public static DBox3 MaxValue = new DBox3(DVector3.MaxValue, DVector3.MaxValue);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DBox3 SetMin(DVector3 x) => new DBox3(x, Max);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DBox3 SetMax(DVector3 x) => new DBox3(Min, x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"DAABox(Min = {Min}, Max = {Max})";
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(DAABox x) => Min == x.Min && Max == x.Max;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(DAABox x0, DAABox x1) => x0.Equals(x1);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(DAABox x0, DAABox x1) => !x0.Equals(x1);
+		public static DAABox Zero = new DAABox(default, default);
+		public static DAABox MinValue = new DAABox(DVector3.MinValue, DVector3.MinValue);
+		public static DAABox MaxValue = new DAABox(DVector3.MaxValue, DVector3.MaxValue);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DAABox SetMin(DVector3 x) => new DAABox(x, Max);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DAABox SetMax(DVector3 x) => new DAABox(Min, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
-	public readonly partial struct DBox4 : IEquatable< DBox4 >
+	[DataContract]
+	public readonly partial struct DAABox4D : IEquatable< DAABox4D >
 	{ 
+		[DataMember]
 		public readonly DVector4 Min;
+		[DataMember]
 		public readonly DVector4 Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DBox4(DVector4 min, DVector4 max) { Min = min; Max = max; }
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DBox4 x && Equals(x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DAABox4D(DVector4 min, DVector4 max) { Min = min; Max = max; }
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DAABox4D x && Equals(x);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(Min.GetHashCode(), Max.GetHashCode());
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"DBox4(Min = {Min}, Max = {Max})";
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(DBox4 x) => Min == x.Min && Max == x.Max;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(DBox4 x0, DBox4 x1) => x0.Equals(x1);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(DBox4 x0, DBox4 x1) => !x0.Equals(x1);
-		public static DBox4 Zero = new DBox4(default, default);
-		public static DBox4 MinValue = new DBox4(DVector4.MinValue, DVector4.MinValue);
-		public static DBox4 MaxValue = new DBox4(DVector4.MaxValue, DVector4.MaxValue);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DBox4 SetMin(DVector4 x) => new DBox4(x, Max);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DBox4 SetMax(DVector4 x) => new DBox4(Min, x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"DAABox4D(Min = {Min}, Max = {Max})";
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(DAABox4D x) => Min == x.Min && Max == x.Max;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(DAABox4D x0, DAABox4D x1) => x0.Equals(x1);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(DAABox4D x0, DAABox4D x1) => !x0.Equals(x1);
+		public static DAABox4D Zero = new DAABox4D(default, default);
+		public static DAABox4D MinValue = new DAABox4D(DVector4.MinValue, DVector4.MinValue);
+		public static DAABox4D MaxValue = new DAABox4D(DVector4.MaxValue, DVector4.MaxValue);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DAABox4D SetMin(DVector4 x) => new DAABox4D(x, Max);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DAABox4D SetMax(DVector4 x) => new DAABox4D(Min, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Ray : IEquatable< Ray >
 	{ 
+		[DataMember]
 		public readonly Vector3 Position;
+		[DataMember]
 		public readonly Vector3 Direction;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Ray(Vector3 position, Vector3 direction) { Position = position; Direction = direction; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Ray x && Equals(x);
@@ -545,9 +631,12 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Ray SetDirection(Vector3 x) => new Ray(Position, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct DRay : IEquatable< DRay >
 	{ 
+		[DataMember]
 		public readonly DVector3 Position;
+		[DataMember]
 		public readonly DVector3 Direction;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DRay(DVector3 position, DVector3 direction) { Position = position; Direction = direction; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DRay x && Equals(x);
@@ -563,9 +652,12 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DRay SetDirection(DVector3 x) => new DRay(Position, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Sphere : IEquatable< Sphere >
 	{ 
+		[DataMember]
 		public readonly Vector3 Center;
+		[DataMember]
 		public readonly float Radius;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Sphere(Vector3 center, float radius) { Center = center; Radius = radius; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Sphere x && Equals(x);
@@ -581,9 +673,12 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Sphere SetRadius(float x) => new Sphere(Center, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct DSphere : IEquatable< DSphere >
 	{ 
+		[DataMember]
 		public readonly DVector3 Center;
+		[DataMember]
 		public readonly double Radius;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DSphere(DVector3 center, double radius) { Center = center; Radius = radius; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is DSphere x && Equals(x);
@@ -599,9 +694,12 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public DSphere SetRadius(double x) => new DSphere(Center, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Line : IEquatable< Line >
 	{ 
+		[DataMember]
 		public readonly Vector3 A;
+		[DataMember]
 		public readonly Vector3 B;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Line(Vector3 a, Vector3 b) { A = a; B = b; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Line x && Equals(x);
@@ -617,10 +715,35 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Line SetB(Vector3 x) => new Line(A, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
+	public readonly partial struct Line2D : IEquatable< Line2D >
+	{ 
+		[DataMember]
+		public readonly Vector2 A;
+		[DataMember]
+		public readonly Vector2 B;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Line2D(Vector2 a, Vector2 b) { A = a; B = b; }
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Line2D x && Equals(x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(A.GetHashCode(), B.GetHashCode());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"Line2D(A = {A}, B = {B})";
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(Line2D x) => A == x.A && B == x.B;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(Line2D x0, Line2D x1) => x0.Equals(x1);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(Line2D x0, Line2D x1) => !x0.Equals(x1);
+		public static Line2D Zero = new Line2D(default, default);
+		public static Line2D MinValue = new Line2D(Vector2.MinValue, Vector2.MinValue);
+		public static Line2D MaxValue = new Line2D(Vector2.MaxValue, Vector2.MaxValue);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Line2D SetA(Vector2 x) => new Line2D(x, B);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Line2D SetB(Vector2 x) => new Line2D(A, x);
+	}
+	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Triangle : IEquatable< Triangle >
 	{ 
+		[DataMember]
 		public readonly Vector3 A;
+		[DataMember]
 		public readonly Vector3 B;
+		[DataMember]
 		public readonly Vector3 C;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Triangle(Vector3 a, Vector3 b, Vector3 c) { A = a; B = b; C = c; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Triangle x && Equals(x);
@@ -637,31 +760,40 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Triangle SetC(Vector3 x) => new Triangle(A, B, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
-	public readonly partial struct Triangle2 : IEquatable< Triangle2 >
+	[DataContract]
+	public readonly partial struct Triangle2D : IEquatable< Triangle2D >
 	{ 
+		[DataMember]
 		public readonly Vector2 A;
+		[DataMember]
 		public readonly Vector2 B;
+		[DataMember]
 		public readonly Vector2 C;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Triangle2(Vector2 a, Vector2 b, Vector2 c) { A = a; B = b; C = c; }
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Triangle2 x && Equals(x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Triangle2D(Vector2 a, Vector2 b, Vector2 c) { A = a; B = b; C = c; }
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Triangle2D x && Equals(x);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(A.GetHashCode(), B.GetHashCode(), C.GetHashCode());
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"Triangle2(A = {A}, B = {B}, C = {C})";
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(Triangle2 x) => A == x.A && B == x.B && C == x.C;
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(Triangle2 x0, Triangle2 x1) => x0.Equals(x1);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(Triangle2 x0, Triangle2 x1) => !x0.Equals(x1);
-		public static Triangle2 Zero = new Triangle2(default, default, default);
-		public static Triangle2 MinValue = new Triangle2(Vector2.MinValue, Vector2.MinValue, Vector2.MinValue);
-		public static Triangle2 MaxValue = new Triangle2(Vector2.MaxValue, Vector2.MaxValue, Vector2.MaxValue);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Triangle2 SetA(Vector2 x) => new Triangle2(x, B, C);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Triangle2 SetB(Vector2 x) => new Triangle2(A, x, C);
-		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Triangle2 SetC(Vector2 x) => new Triangle2(A, B, x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"Triangle2D(A = {A}, B = {B}, C = {C})";
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(Triangle2D x) => A == x.A && B == x.B && C == x.C;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(Triangle2D x0, Triangle2D x1) => x0.Equals(x1);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(Triangle2D x0, Triangle2D x1) => !x0.Equals(x1);
+		public static Triangle2D Zero = new Triangle2D(default, default, default);
+		public static Triangle2D MinValue = new Triangle2D(Vector2.MinValue, Vector2.MinValue, Vector2.MinValue);
+		public static Triangle2D MaxValue = new Triangle2D(Vector2.MaxValue, Vector2.MaxValue, Vector2.MaxValue);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Triangle2D SetA(Vector2 x) => new Triangle2D(x, B, C);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Triangle2D SetB(Vector2 x) => new Triangle2D(A, x, C);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Triangle2D SetC(Vector2 x) => new Triangle2D(A, B, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Quad : IEquatable< Quad >
 	{ 
+		[DataMember]
 		public readonly Vector3 A;
+		[DataMember]
 		public readonly Vector3 B;
+		[DataMember]
 		public readonly Vector3 C;
+		[DataMember]
 		public readonly Vector3 D;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Quad(Vector3 a, Vector3 b, Vector3 c, Vector3 d) { A = a; B = b; C = c; D = d; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Quad x && Equals(x);
@@ -679,9 +811,39 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Quad SetD(Vector3 x) => new Quad(A, B, C, x);
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
+	public readonly partial struct Quad2D : IEquatable< Quad2D >
+	{ 
+		[DataMember]
+		public readonly Vector2 A;
+		[DataMember]
+		public readonly Vector2 B;
+		[DataMember]
+		public readonly Vector2 C;
+		[DataMember]
+		public readonly Vector2 D;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Quad2D(Vector2 a, Vector2 b, Vector2 c, Vector2 d) { A = a; B = b; C = c; D = d; }
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Quad2D x && Equals(x);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(A.GetHashCode(), B.GetHashCode(), C.GetHashCode(), D.GetHashCode());
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"Quad2D(A = {A}, B = {B}, C = {C}, D = {D})";
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(Quad2D x) => A == x.A && B == x.B && C == x.C && D == x.D;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(Quad2D x0, Quad2D x1) => x0.Equals(x1);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(Quad2D x0, Quad2D x1) => !x0.Equals(x1);
+		public static Quad2D Zero = new Quad2D(default, default, default, default);
+		public static Quad2D MinValue = new Quad2D(Vector2.MinValue, Vector2.MinValue, Vector2.MinValue, Vector2.MinValue);
+		public static Quad2D MaxValue = new Quad2D(Vector2.MaxValue, Vector2.MaxValue, Vector2.MaxValue, Vector2.MaxValue);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Quad2D SetA(Vector2 x) => new Quad2D(x, B, C, D);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Quad2D SetB(Vector2 x) => new Quad2D(A, x, C, D);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Quad2D SetC(Vector2 x) => new Quad2D(A, B, x, D);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Quad2D SetD(Vector2 x) => new Quad2D(A, B, C, x);
+	}
+	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Int2 : IEquatable< Int2 >
 	{ 
+		[DataMember]
 		public readonly int A;
+		[DataMember]
 		public readonly int B;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Int2(int a, int b) { A = a; B = b; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Int2 x && Equals(x);
@@ -722,12 +884,19 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public int SumComponents() => (A) + (B);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public int SumSqrComponents() => (A).Sqr() + (B).Sqr();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public int ProductComponents() => (A) * (B);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public int GetComponent(int n) => n == 0 ? A:B;		
+		public const int NumComponents = 2;
+
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Int3 : IEquatable< Int3 >
 	{ 
+		[DataMember]
 		public readonly int A;
+		[DataMember]
 		public readonly int B;
+		[DataMember]
 		public readonly int C;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Int3(int a, int b, int c) { A = a; B = b; C = c; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Int3 x && Equals(x);
@@ -770,13 +939,21 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public int SumComponents() => (A) + (B) + (C);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public int SumSqrComponents() => (A).Sqr() + (B).Sqr() + (C).Sqr();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public int ProductComponents() => (A) * (B) * (C);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public int GetComponent(int n) => n == 0 ? A : n == 1 ? B:C;		
+		public const int NumComponents = 3;
+
 	}
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct Int4 : IEquatable< Int4 >
 	{ 
+		[DataMember]
 		public readonly int A;
+		[DataMember]
 		public readonly int B;
+		[DataMember]
 		public readonly int C;
+		[DataMember]
 		public readonly int D;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public Int4(int a, int b, int c, int d) { A = a; B = b; C = c; D = d; }
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Int4 x && Equals(x);
@@ -821,5 +998,8 @@ namespace Ara3D
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public int SumComponents() => (A) + (B) + (C) + (D);
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public int SumSqrComponents() => (A).Sqr() + (B).Sqr() + (C).Sqr() + (D).Sqr();
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public int ProductComponents() => (A) * (B) * (C) * (D);
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public int GetComponent(int n) => n == 0 ? A : n == 1 ? B : n == 2 ? C:D;		
+		public const int NumComponents = 4;
+
 	}
 }

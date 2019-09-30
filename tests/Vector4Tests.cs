@@ -6,7 +6,7 @@ using System.Globalization;
 using System.Runtime.InteropServices;
 using NUnit.Framework;
 
-namespace Ara3D.Tests
+namespace Vim.Tests
 {
     public class Vector4Tests
     {

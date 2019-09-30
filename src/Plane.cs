@@ -7,12 +7,12 @@
 
 using System.Runtime.CompilerServices;
 
-namespace Ara3D
+namespace Vim
 {
     /// <summary>
     /// A structure encapsulating a 3D Plane
     /// </summary>
-    public partial struct Plane 
+    public partial struct Plane : ITransformable3D<Plane>
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Plane(float x, float y, float z, float d)
@@ -57,19 +57,14 @@ namespace Ara3D
                 value.D / normalLength);
         }
 
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Plane Normalize()
-            => Normalize(this);
-
         /// <summary>
         /// Transforms a normalized Plane by a Matrix.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Plane Transform(Plane plane, Matrix4x4 matrix)
+        public Plane Transform(Matrix4x4 matrix)
         {
             Matrix4x4.Invert(matrix, out var m);
-            float x = plane.Normal.X, y = plane.Normal.Y, z = plane.Normal.Z, w = plane.D;
+            float x = Normal.X, y = Normal.Y, z = Normal.Z, w = D;
             return new Plane(
                 x * m.M11 + y * m.M12 + z * m.M13 + w * m.M14,
                 x * m.M21 + y * m.M22 + z * m.M23 + w * m.M24,
@@ -81,7 +76,7 @@ namespace Ara3D
         ///  Transforms a normalized Plane by a Quaternion rotation.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Plane Transform(Plane plane, Quaternion rotation)
+        public Plane Transform(Quaternion rotation)
         {
             // Compute rotation matrix.
             var x2 = rotation.X + rotation.X;
@@ -110,13 +105,13 @@ namespace Ara3D
             var m23 = yz2 + wx2;
             var m33 = 1.0f - xx2 - yy2;
 
-            float x = plane.Normal.X, y = plane.Normal.Y, z = plane.Normal.Z;
+            float x = Normal.X, y = Normal.Y, z = Normal.Z;
 
             return new Plane(
                 x * m11 + y * m21 + z * m31,
                 x * m12 + y * m22 + z * m32,
                 x * m13 + y * m23 + z * m33,
-                plane.D);
+                D);
         }
 
         /// <summary>

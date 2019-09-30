@@ -8,7 +8,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace Ara3D
+namespace Vim
 {
     public static partial class MathOps
     {
@@ -113,15 +113,11 @@ namespace Ara3D
             => Matrix4x4.Invert(m, out var r) ? r : throw new Exception("No inversion of matrix available");
 
         /// <summary>
-        /// Transforms a vector by the given matrix.
+        /// Transforms a vector by the given Quaternion rotation value.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector4 Transform(this Vector4 vector, Matrix4x4 matrix)
-            => new Vector4(
-                vector.X * matrix.M11 + vector.Y * matrix.M21 + vector.Z * matrix.M31 + vector.W * matrix.M41,
-                vector.X * matrix.M12 + vector.Y * matrix.M22 + vector.Z * matrix.M32 + vector.W * matrix.M42,
-                vector.X * matrix.M13 + vector.Y * matrix.M23 + vector.Z * matrix.M33 + vector.W * matrix.M43,
-                vector.X * matrix.M14 + vector.Y * matrix.M24 + vector.Z * matrix.M34 + vector.W * matrix.M44);
+        public static Vector4 Transform(this Vector4 value, Matrix4x4 matrix)
+            => value.Transform(matrix);
 
         /// <summary>
         /// Transforms a vector by the given Quaternion rotation value.
@@ -191,6 +187,13 @@ namespace Ara3D
         public static float SignedAngle(Vector3 from, Vector3 to, Vector3 axis)
             => Angle(from, to) * Math.Sign(axis.Dot(from.Cross(to)));
 
+        // The smaller of the two possible angles between the two vectors is returned, therefore the result will never be greater than 180 degrees or smaller than -180 degrees.
+        // If you imagine the from and to vectors as lines on a piece of paper, both originating from the same point, then the /axis/ vector would point up out of the paper.
+        // The measured angle between the two vectors would be positive in a clockwise direction and negative in an anti-clockwise direction.
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static float SignedAngle(this Vector3 from, Vector3 to)
+            => SignedAngle(from, to, Vector3.UnitZ);
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static float Angle(this Vector3 v1, Vector3 v2, float tolerance = Constants.Tolerance)
         {
@@ -201,24 +204,31 @@ namespace Ara3D
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool Colinear(this Vector3 v1, Vector3 v2, float tolerance = Constants.Tolerance)
+            => !v1.IsNaN() && !v2.IsNaN() && v1.SignedAngle(v2) <= tolerance;
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsBackFace(this Vector3 normal, Vector3 lineOfSight)
             => normal.Dot(lineOfSight) < 0;
 
         /// <summary>
         /// Creates a new <see cref="Vector3"/> that contains CatmullRom interpolation of the specified vectors.
         /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector3 CatmullRom(this Vector3 value1, Vector3 value2, Vector3 value3, Vector3 value4, float amount) =>
             new Vector3(value1.X.CatmullRom(value2.X, value3.X, value4.X, amount), value1.Y.CatmullRom(value2.Y, value3.Y, value4.Y, amount), value1.Z.CatmullRom(value2.Z, value3.Z, value4.Z, amount));
 
         /// <summary>
         /// Creates a new <see cref="Vector3"/> that contains hermite spline interpolation.
         /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector3 Hermite(this Vector3 value1, Vector3 tangent1, Vector3 value2, Vector3 tangent2, float amount) =>
             new Vector3(value1.X.Hermite(tangent1.X, value2.X, tangent2.X, amount), value1.Y.Hermite(tangent1.Y, value2.Y, tangent2.Y, amount), value1.Z.Hermite(tangent1.Z, value2.Z, tangent2.Z, amount));
 
         /// <summary>
         /// Creates a new <see cref="Vector3"/> that contains cubic interpolation of the specified vectors.
         /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Vector3 SmoothStep(this Vector3 value1, Vector3 value2, float amount) =>
             new Vector3(value1.X.SmoothStep(value2.X, amount), value1.Y.SmoothStep(value2.Y, amount), value1.Z.SmoothStep(value2.Z, amount));
 
@@ -227,50 +237,6 @@ namespace Ara3D
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 AlongX(this float self) => Vector3.UnitX * self;
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 AlongY(this float self) => Vector3.UnitY * self;
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Vector3 AlongZ(this float self) => Vector3.UnitX * self;
-
-        /// <summary>
-        /// Computes the cross product of two vectors.
-        /// </summary>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 Cross(this Vector3 vector1, Vector3 vector2)
-            => new Vector3(
-                vector1.Y * vector2.Z - vector1.Z * vector2.Y,
-                vector1.Z * vector2.X - vector1.X * vector2.Z,
-                vector1.X * vector2.Y - vector1.Y * vector2.X);
-
-        /// <summary>
-        /// Returns the mixed product
-        /// </summary>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static double MixedProduct(this Vector3 v1, Vector3 v2, Vector3 v3)
-            => v1.Cross(v2).Dot(v3);
-
-        /// <summary>
-        /// Returns the reflection of a vector off a surface that has the specified normal.
-        /// </summary>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 Reflect(this Vector3 vector, Vector3 normal)
-            => vector - normal * vector.Dot(normal) * 2f;
-
-        /// <summary>
-        /// Transforms a vector by the given matrix.
-        /// </summary>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 Transform(this Vector3 position, Matrix4x4 matrix)
-            => new Vector3(
-                position.X * matrix.M11 + position.Y * matrix.M21 + position.Z * matrix.M31 + matrix.M41,
-                position.X * matrix.M12 + position.Y * matrix.M22 + position.Z * matrix.M32 + matrix.M42,
-                position.X * matrix.M13 + position.Y * matrix.M23 + position.Z * matrix.M33 + matrix.M43);
-
-        /// <summary>
-        /// Transforms a vector normal by the given matrix.
-        /// </summary>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Vector3 TransformNormal(this Vector3 normal, Matrix4x4 matrix)
-            => new Vector3(
-                normal.X * matrix.M11 + normal.Y * matrix.M21 + normal.Z * matrix.M31,
-                normal.X * matrix.M12 + normal.Y * matrix.M22 + normal.Z * matrix.M32,
-                normal.X * matrix.M13 + normal.Y * matrix.M23 + normal.Z * matrix.M33);
 
         /// <summary>
         /// Transforms a vector by the given Quaternion rotation value.
@@ -306,6 +272,13 @@ namespace Ara3D
             => vector - (2 * (vector.Dot(normal) * normal));
 
         /// <summary>
+        /// Returns the reflection of a vector off a surface that has the specified normal.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector3 Reflect(Vector3 vector, Vector3 normal)
+            => vector - (2 * (vector.Dot(normal) * normal));
+
+        /// <summary>
         /// Transforms a vector by the given matrix.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -322,6 +295,29 @@ namespace Ara3D
             => new Vector2(
                 normal.X * matrix.M11 + normal.Y * matrix.M21,
                 normal.X * matrix.M12 + normal.Y * matrix.M22);
+
+        /// <summary>
+        /// Transforms a vector normal by the given matrix.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector3 TransformNormal(Vector3 normal, Matrix4x4 matrix)
+            => new Vector3(
+                normal.X * matrix.M11 + normal.Y * matrix.M21 + normal.Z * matrix.M31,
+                normal.X * matrix.M12 + normal.Y * matrix.M22 + normal.Z * matrix.M32,
+                normal.X * matrix.M13 + normal.Y * matrix.M23 + normal.Z * matrix.M33
+                );
+
+        /// <summary>
+        /// Transforms a vector normal by the given matrix.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector4 TransformNormal(Vector4 normal, Matrix4x4 matrix)
+            => new Vector4(
+                normal.X * matrix.M11 + normal.Y * matrix.M21 + normal.Z * matrix.M31 + normal.W * matrix.M41,
+                normal.X * matrix.M12 + normal.Y * matrix.M22 + normal.Z * matrix.M32 + normal.W * matrix.M42,
+                normal.X * matrix.M13 + normal.Y * matrix.M23 + normal.Z * matrix.M33 + normal.W * matrix.M43,
+                normal.X * matrix.M14 + normal.Y * matrix.M24 + normal.Z * matrix.M34 + normal.W * matrix.M44
+                );
 
         /// <summary>
         /// Transforms a vector by the given Quaternion rotation value.
@@ -422,5 +418,9 @@ namespace Ara3D
                 position.X * matrix.M13 + position.Y * matrix.M23 + position.Z * matrix.M33 + matrix.M43,
                 position.X * matrix.M14 + position.Y * matrix.M24 + position.Z * matrix.M34 + matrix.M44);
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector3 Cross(Vector3 a, Vector3 b)
+            => a.Cross(b);
     }
 }

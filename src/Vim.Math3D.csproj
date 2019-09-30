@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Content Include="MathOps.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MathOps.cs</LastGenOutput>
+    </Content>
+    <Content Include="Structs.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Structs.cs</LastGenOutput>
+    </Content>
+    <Content Include="TemplateHelpers.tt">
+      <LastGenOutput>TemplateHelpers1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Update="MathOps.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MathOps.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Structs.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Structs.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

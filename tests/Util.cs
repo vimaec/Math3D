@@ -5,7 +5,7 @@
 using System;
 using System.Linq;
 
-namespace Ara3D.Tests
+namespace Vim.Tests
 {
     public static class TestUtil
     {

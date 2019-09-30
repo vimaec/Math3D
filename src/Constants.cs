@@ -7,7 +7,7 @@
 
 using System;
 
-namespace Ara3D
+namespace Vim
 {
     public static class Constants
     {
@@ -23,7 +23,13 @@ namespace Ara3D
         public const float Log2E = 1.442695f;
         public const float E = (float)Math.E;
 
-        public const double DegreesToRadians = 57.295779513082320876798154814105;
-        public const double RadiansToDegrees = 0.017453292519943295769236907684886;
+        public const double RadiansToDegrees = 57.295779513082320876798154814105;
+        public const double DegreesToRadians = 0.017453292519943295769236907684886;
+
+        public const double OneTenthOfADegree = DegreesToRadians / 10;
+
+        // TODO: BUG: these two values are inverted dumb-dumb
+        public const double MmToFeet = 0.00328084;
+        public const double FeetToMm = 1 / MmToFeet;
     }
 }

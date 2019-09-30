@@ -85,7 +85,7 @@
 		var dotArgs = string.Join(" + ", fields.Select(f => $"value1.{f} * value2.{f}"));
 		var one = OneValue(type);
 		var compareBody = string.Join(" && ", fields.Select(f => $"{f}.Abs() < tolerance"));
-		var indexBody = string.Join(" : ", fields.Select((f, i) => $"n == {i} ? {f}"));
+		var indexBody = string.Join(" : ", fields.Take(fields.Length - 1).Select((f, i) => $"n == {i} ? {f}")) + ":" + fields[fields.Length-1];
 
 		var minBody = string.Join(".Min", fields.Select(f => $"({f})"));
 		var maxBody = string.Join(".Max", fields.Select(f => $"({f})"));
@@ -116,6 +116,9 @@
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public <#= type #> SumComponents() => <#= sumBody #>;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public <#= type #> SumSqrComponents() => <#= sumSqrBody #>;
 		[MethodImpl(MethodImplOptions.AggressiveInlining)] public <#= type #> ProductComponents() => <#= productBody #>;
+		[MethodImpl(MethodImplOptions.AggressiveInlining)] public <#= type #> GetComponent(int n) => <#= indexBody #>;		
+		public const int NumComponents = <#= fields.Length #>;
+
 <#+
 	}
 
@@ -135,11 +138,13 @@
 
 #>
 	[StructLayout(LayoutKind.Sequential, Pack=4)]
+	[DataContract]
 	public readonly partial struct <#= name #> : IEquatable< <#= name #> >
 	{ 
 <#+
         for (var i=0; i < fields.Length; ++i) {
 #>
+		[DataMember]
 		public readonly <#= types[i] #> <#= fields[i] #>;
 <#+
 		}		

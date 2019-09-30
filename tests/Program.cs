@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ara3D.Tests
+namespace Vim.Tests
 {
     class Program
     {

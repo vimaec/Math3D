@@ -7,7 +7,7 @@
 
 using System.Runtime.CompilerServices;
 
-namespace Ara3D
+namespace Vim
 {
     /// <summary>
     /// A structure encapsulating a four-dimensional vector (x,y,z,w), 
@@ -76,6 +76,14 @@ namespace Ara3D
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Quaternion CreateFromAxisAngle(Vector3 axis, float angle)
             => new Quaternion(axis * (angle * 0.5f).Sin(), (angle * 0.5f).Cos());
+
+        /// <summary>
+        /// Creates a new Quaternion from the given yaw, pitch, and roll, in radians.
+        /// TODO: should we have "Euler" as a separate input? I am not sure.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Quaternion CreateFromYawPitchRoll(Vector3 v)
+            => CreateFromYawPitchRoll(v.X, v.Y, v.Z);
 
         /// <summary>
         /// Creates a new Quaternion from the given yaw, pitch, and roll, in radians.

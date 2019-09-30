@@ -98,9 +98,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\Ara3D.Math3D.csproj">
+    <ProjectReference Include="..\src\Vim.Math3D.csproj">
       <Project>{f9430261-9426-4d6b-a1b8-9d3f2bfbb501}</Project>
-      <Name>Ara3D.Math3D</Name>
+      <Name>Vim.Math3D</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,7 +4,7 @@
 
 using System;
 
-namespace Ara3D.Tests
+namespace Vim.Tests
 {
     static class MathHelper
     {

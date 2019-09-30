@@ -1,6 +1,6 @@
-﻿// MIT License 
-// Copyright (C) 2019 Ara 3D. Inc
-// https://ara3d.com
+﻿// MIT License  
+// Copyright (C) 2019 VIM aec LLC. 
+// Copyright (C) 2018 Ara 3D. Inc
 // Copyright (C) The Mono.Xna Team
 // This file is subject to the terms and conditions defined in
 // file 'LICENSE.txt', which is part of this source code package.
@@ -9,9 +9,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Ara3D
+namespace Vim
 {
-    public partial struct Box
+    public partial struct AABox
     {
         public int Count 
             => 2;
@@ -19,11 +19,14 @@ namespace Ara3D
         public Vector3 Center 
             => Min.Average(Max);
 
-        public Vector3[] Corners 
-            => GetCorners(new Vector3[8]);
+        public Vector3 CenterBottom
+            => Center.SetZ(Min.Z);
 
-        public static readonly Box Empty 
-            = new Box(Vector3.MaxValue, Vector3.MinValue);
+        public Vector3[] Corners 
+            => GetCorners();
+
+        public static readonly AABox Empty 
+            = new AABox(Vector3.MaxValue, Vector3.MinValue);
 
         public bool IsEmpty 
             => !IsValid;
@@ -38,17 +41,23 @@ namespace Ara3D
         public float Distance(Vector3 point)
             => Vector3.Zero.Max(Min - point).Max(point - Max).Length();
 
+        /// <summary>
+        /// Returns the distance of the point to the box center. 
+        /// </summary>
         public float CenterDistance(Vector3 point)
             => Center.Distance(point);
 
-        public Box Translate(Vector3 offset)
-            => new Box(Min + offset, Max + offset);
+        /// <summary>
+        /// Moves the box by the given vector offset
+        /// </summary>
+        public AABox Translate(Vector3 offset)
+            => new AABox(Min + offset, Max + offset);
 
-        public Box Merge(Box box)
-            => new Box(Min.Min(box.Min), Max.Max(box.Max));
+        public AABox Merge(AABox box)
+            => new AABox(Min.Min(box.Min), Max.Max(box.Max));
 
-        public Box Merge(Vector3 point)
-            => new Box(Min.Min(point), Max.Max(point));
+        public AABox Merge(Vector3 point)
+            => new AABox(Min.Min(point), Max.Max(point));
 
         public float DistanceToOrigin
             => Distance(Vector3.Zero);
@@ -65,10 +74,18 @@ namespace Ara3D
         public float MaxSide
             => Extent.MaxComponent();
 
+        public float MaxFaceArea
+            => Extent.X > Extent.Y 
+                ? Extent.X * Extent.Z.Max(Extent.Y) 
+                : Extent.Y * Extent.Z.Max(Extent.X);
+
         public float MinSide
             => Extent.MinComponent();
 
-        public ContainmentType Contains(Box box)
+        public float Diagonal
+            => Extent.Length();
+
+        public ContainmentType Contains(AABox box)
         {
             //test if all corner is in the same side of a face by just checking min and max
             if (box.Max.X < Min.X
@@ -187,54 +204,62 @@ namespace Ara3D
         /// <summary>
         /// Create a bounding box from the given list of points.
         /// </summary>
-        public static Box Create(IEnumerable<Vector3> points)
+        public static AABox Create(IEnumerable<Vector3> points)
         {
             var minVec = Vector3.MaxValue;
             var maxVec = Vector3.MinValue;
             foreach (var pt in points)
             {
                 minVec = minVec.Min(pt);
-                maxVec = maxVec.Min(pt);
+                maxVec = maxVec.Max(pt);
             }
-            return new Box(minVec, maxVec);
+            return new AABox(minVec, maxVec);
         }
 
-        public static Box Create(params Vector3[] points)
+        public static AABox Create(params Vector3[] points)
             => Create(points.AsEnumerable());
         
-        public static Box CreateFromSphere(Sphere sphere)
-            => new Box(sphere.Center - new Vector3(sphere.Radius), sphere.Center + new Vector3(sphere.Radius));
+        public static AABox CreateFromSphere(Sphere sphere)
+            => new AABox(sphere.Center - new Vector3(sphere.Radius), sphere.Center + new Vector3(sphere.Radius));
         
         /// <summary>
         /// This is the four front corners followed by the four back corners all as if looking from the front
-        /// going in clockwise order from upper left. 
+        /// going in counter-clockwise order from bottom left. 
         /// </summary>
-        public Vector3[] GetCorners(Vector3[] corners)
+        public Vector3[] GetCorners(Vector3[] corners = null)
         {
-            if (corners == null)
-                throw new ArgumentNullException(nameof(corners));
+            corners = corners ?? new Vector3[8];
             if (corners.Length < 8)
                 throw new ArgumentOutOfRangeException(nameof(corners));
-            // Front
-            corners[0] = new Vector3(Min.X, Max.Y, Max.Z);
-            corners[1] = new Vector3(Max.X, Max.Y, Max.Z);
+            // Bottom (looking down)
+            corners[0] = new Vector3(Min.X, Min.Y, Min.Z);
+            corners[1] = new Vector3(Max.X, Min.Y, Min.Z);
             corners[2] = new Vector3(Max.X, Max.Y, Min.Z);
             corners[3] = new Vector3(Min.X, Max.Y, Min.Z);
-            // Back
+            // Top (looking down)
             corners[4] = new Vector3(Min.X, Min.Y, Max.Z);
             corners[5] = new Vector3(Max.X, Min.Y, Max.Z);
-            corners[6] = new Vector3(Max.X, Min.Y, Min.Z);
-            corners[7] = new Vector3(Min.X, Min.Y, Min.Z);
+            corners[6] = new Vector3(Max.X, Max.Y, Max.Z);
+            corners[7] = new Vector3(Min.X, Max.Y, Max.Z);
             return corners;
         }
 
-        public bool Intersects(Box box)
+        // CCW
+        public static readonly int[] TopIndices = { 0, 1, 2, 3, };
+        public static readonly int[] BottomIndices = { 7, 6, 5, 4 };
+        public static readonly int[] FrontIndices = { 4, 5, 1, 0 };
+        public static readonly int[] RightIndices = { 5, 6, 2, 1 };
+        public static readonly int[] BackIndices = { 6, 7, 3, 2 };
+        public static readonly int[] LeftIndices = { 7, 4, 0, 3 };
+
+
+        public bool Intersects(AABox box)
         {
             Intersects(box, out var result);
             return result;
         }
 
-        public void Intersects(Box box, out bool result)
+        public void Intersects(AABox box, out bool result)
         {
             if ((Max.X >= box.Min.X) && (Min.X <= box.Max.X))
             {
@@ -337,7 +362,55 @@ namespace Ara3D
             return PlaneIntersectionType.Intersecting;
         }
 
-        public static readonly Box Unit 
-            = new Box(Vector3.Zero, new Vector3(1));
+        public static readonly AABox Unit 
+            = new AABox(Vector3.Zero, new Vector3(1));
+
+        public bool AlmostEquals(AABox other, float tolerance = Constants.Tolerance)
+            => Min.AlmostEquals(other.Min, tolerance) && Max.AlmostEquals(other.Max, tolerance);
+
+        /// <summary>
+        /// Returns where a point is relative to the bounding box on a scale of 0..1 
+        /// </summary>
+        public Vector3 RelativePosition(Vector3 v)
+            => v.InverseLerp(Min, Max);
+
+        /// <summary>
+        /// Moves the box so that it's origin is on the center
+        /// </summary>
+        public AABox Recenter()
+            => Translate(-Center);
+
+        /// <summary>
+        /// Rescales the box
+        /// </summary>
+        public AABox Scale(float scale)
+            => new AABox(Recenter().Min * scale, Recenter().Max * scale).Translate(Center);
+
+        /// <summary>
+        /// Returns the center of each face.
+        /// </summary>
+        public Vector3[] FaceCenters()
+        {
+            var corners = GetCorners();
+            return new[]
+            {
+                corners[FrontIndices[0]].Average(corners[FrontIndices[2]]),
+                corners[RightIndices[0]].Average(corners[RightIndices[2]]),
+                corners[BackIndices[0]].Average(corners[BackIndices[2]]),
+                corners[LeftIndices[0]].Average(corners[LeftIndices[2]]),
+                corners[TopIndices[0]].Average(corners[TopIndices[2]]),
+                corners[BottomIndices[0]].Average(corners[BottomIndices[2]]),
+            };
+        }
+
+        public IEnumerable<Vector3> GetCornersAndFaceCenters()
+            => Corners.Concat(FaceCenters());
+
+        /// <summary>
+        /// Returns the enclosing bounding sphere.
+        /// </summary>
+        /// <returns></returns>
+        public Sphere ToSphere()
+            => Sphere.Create(this);
     }
 }

@@ -5,7 +5,7 @@
 // This file is subject to the terms and conditions defined in
 // file 'LICENSE.txt', which is part of this source code package.
 
-namespace Ara3D
+namespace Vim
 {
     /// <summary>
     /// Defines the intersection between a Plane and a bounding volume.

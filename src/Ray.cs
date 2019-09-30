@@ -6,13 +6,15 @@
 // file 'LICENSE.txt', which is part of this source code package.
 
 using System;
+using System.Runtime.CompilerServices;
 
-namespace Ara3D
+namespace Vim
 {
-    public partial struct Ray 
+    public partial struct Ray : ITransformable3D<Ray>
     {
         // adapted from http://www.scratchapixel.com/lessons/3d-basic-lessons/lesson-7-intersecting-simple-shapes/ray-box-intersection/
-        public float? Intersects(Box box)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public float? Intersects(AABox box)
         {
             const float Epsilon = 1e-6f;
 
@@ -94,7 +96,8 @@ namespace Ara3D
 
             return tMin;
         }
-      
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public float? Intersects(Plane plane, float tolerance = Constants.Tolerance)
         {
             var den = Vector3.Dot(Direction, plane.Normal);
@@ -115,6 +118,7 @@ namespace Ara3D
             return result;
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public float? Intersects(Sphere sphere)
         {
             // Find the vector between where the ray starts the the sphere's centre
@@ -141,5 +145,8 @@ namespace Ara3D
             var dist = sphereRadiusSquared + distanceAlongRay.Sqr() - differenceLengthSquared;
             return (dist < 0) ? null : distanceAlongRay - (float?)Math.Sqrt(dist);
         }
+
+        public Ray Transform(Matrix4x4 mat)
+            => new Ray(Position.Transform(mat), Direction.TransformNormal(mat));
     }
 }

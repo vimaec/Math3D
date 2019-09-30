@@ -6,7 +6,7 @@ using System.Globalization;
 using System.Runtime.InteropServices;
 using NUnit.Framework;
 
-namespace Ara3D.Tests
+namespace Vim.Tests
 {
     public class Vector3Tests
     {
@@ -403,7 +403,7 @@ namespace Ara3D.Tests
             Vector3 expected = new Vector3(12.191987f, 21.533493f, 32.616024f);
             Vector3 actual;
 
-            actual = MathOps.Transform(v, m);
+            actual = v.Transform(m);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Transform did not return the expected value.");
         }
 
@@ -496,8 +496,8 @@ namespace Ara3D.Tests
                 Matrix4x4.CreateRotationZ(MathHelper.ToRadians(30.0f));
             Quaternion q = Quaternion.CreateFromRotationMatrix(m);
 
-            Vector3 expected = MathOps.Transform(v, m);
-            Vector3 actual = MathOps.Transform(v, q);
+            Vector3 expected = v.Transform(m);
+            Vector3 actual = v.Transform(q);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Transform did not return the expected value.");
         }
 
