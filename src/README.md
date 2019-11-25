@@ -2,14 +2,14 @@
 
 [<img src="https://img.shields.io/nuget/v/Vim.Math3D.svg">](https://github.com/Vim/Math3D)
 
-**Vim.Math3D** is a portable and efficient 3D math library from [VIM AEC](https://vimaec.com) written in pure safe C# 
-with no dependencies. Math3D was forked from the core classes provided in the CoreFX implementation of 
+**Vim.Math3D** is a portable and efficient 3D math library from [VIM AEC](https://vimaec.com) written in C# 
+targeting .NET Standard 2.0 and with no dependencies. Math3D was forked from the core classes provided in the CoreFX implementation of 
 [System.Numerics](https://github.com/dotnet/corefx/tree/master/src/System.Numerics.Vectors/src/System/Numerics) and 
 [MonoGame](https://github.com/MonoGame/MonoGame) an open-source cross platform port of the XNA game development 
 framework. 
 
 The main goal of Math 3D was to extend the functionality of System.Numerics and assure that the base types
-that can be reliably serialized across different platforms. 
+can be reliably serialized across different platforms. 
 
 ## Motivation 
 
@@ -22,39 +22,6 @@ quaternions, matrices, rays, lines, bounding boxes and other structures.
 
 Ideally, we would have reused an open-source library, and have tried several different libraries before 
 settling on writing and maintaining our own. See the Appendix for a list of related libraries. 
-
-## Design Goals 
-
-In rough order, the Math3D design goals are:
-
-1. Portability
-	* The library must be pure C# 
-	* No unsafe code 
-	* Fixed binary layout of structs in memory
-	* Double and Single precision implementation of most structures 
-2. Robustness
-	* Functions are well covered by unit tests 
-	* Functions are easily read and understood 
-3. Ease of Use
-	* We don't have to pass arguments by reference
-	* Can use object-oriented "dot" notation
-	* Consistent with Microsoft coding styles
-	* Consistent API with System.Numerics
-4. Performance 
-	* Good-enough performance 
-
-## Performance: Aggressive Method Inlining
-
-One of the most effective compiler optimizations is method inlining. Unfortunately as soon as you pass a struct 
-as a formal arg the [method will not be inlined](https://stackoverflow.com/a/55432110/184528).
-
-Vim.Math3D uses the `[MethodImpl(MethodImplOptions.AggressiveInlining)]` attribute on methods to overcome the 
-inefficiency of structs not-being inlined. This is the approach used by System.Numerics and allows
-a more discoverable object-oriented syntax.
-
-Without this attribute libraries often resort to pass the structs as `ref` parameters (e.g. MonoGame and SharpDX)
-which makes for a less readable syntax, and an API that is less discoverable because auto-complete doesn't work 
-as well.
 
 ## Matching the System.Numerics API
 
@@ -133,12 +100,6 @@ reduce the overhead of maintainance.
 Vim.Math3D uses NUnit for the tests, which many were ported from the CoreFX Numerics implementation of System.Numerics. 
 At last measure we have approximately 50% code coverage, with most of the uncovered functions having trivial implementations 
 that are auto-generated using the T4 templating engine. 
-
-## Targetted Frameworks and Language
-
-The main project targets .NET Framework 4.7.1, but a .NET Standard 2.0 project also references the same code, but which consumes
-the generated output of the T4 files. The .NET Standard project is the one we post to NuGet, but active development is done 
-on the .NET 4.7.1 branch. We are currently using C# 7.2. 
 
 # Appendix 
 

@@ -15,12 +15,6 @@ namespace Vim
         /// <summary>
         /// Performs a Catmull-Rom interpolation using the specified positions.
         /// </summary>
-        /// <param name="value1">The first position in the interpolation.</param>
-        /// <param name="value2">The second position in the interpolation.</param>
-        /// <param name="value3">The third position in the interpolation.</param>
-        /// <param name="value4">The fourth position in the interpolation.</param>
-        /// <param name="amount">Weighting factor.</param>
-        /// <returns>A position that is the result of the Catmull-Rom interpolation.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static float CatmullRom(this float value1, float value2, float value3, float value4, float amount)
         {
@@ -37,12 +31,6 @@ namespace Vim
         /// <summary>
         /// Performs a Hermite spline interpolation.
         /// </summary>
-        /// <param name="value1">Source position.</param>
-        /// <param name="tangent1">Source tangent.</param>
-        /// <param name="value2">Source position.</param>
-        /// <param name="tangent2">Source tangent.</param>
-        /// <param name="amount">Weighting factor.</param>
-        /// <returns>The result of the Hermite spline interpolation.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static float Hermite(this float value1, float tangent1, float value2, float tangent2, float amount)
         {

@@ -24,6 +24,9 @@ namespace Vim
         public static T Rotate<T>(this ITransformable3D<T> self, Quaternion q)
             => self.Transform(Matrix4x4.CreateRotation(q));
 
+        public static T Scale<T>(this ITransformable3D<T> self, float scale)
+            => self.Scale(new Vector3(scale, scale, scale));
+
         public static T Scale<T>(this ITransformable3D<T> self, Vector3 scales)
             => self.Transform(Matrix4x4.CreateScale(scales));
 

@@ -2,6 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RootNamespace>Vim</RootNamespace>
+    <Authors>VIM AEC</Authors>
+    <Company>VIMaec LLC.</Company>
+    <Copyright>Copyright 2019, VIMaec LLC. licensed under the MIT License</Copyright>
+    <Description>Math3D is an efficient low-level math library forked from System.Numerics and MonoGame with additional functionality and a strict struct layout for cross platform serialization.</Description>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/vimaec/math3d</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/vimaec/math3d</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.1.0</Version>
   </PropertyGroup>
   
   <ItemGroup>
@@ -33,6 +48,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Structs.tt</DependentUpon>
     </Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="..\license.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

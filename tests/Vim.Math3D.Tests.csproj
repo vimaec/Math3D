@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8ADE2F5A-B432-41E9-AB4E-F36CB58C7E54}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ara3D.Tests</RootNamespace>
-    <AssemblyName>Ara3D.Tests</AssemblyName>
+    <RootNamespace>Vim.Tests</RootNamespace>
+    <AssemblyName>Vim.Math3D.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -91,10 +91,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NUnit">
-      <Version>3.11.0</Version>
+      <Version>3.12.0</Version>
     </PackageReference>
     <PackageReference Include="NUnit3TestAdapter">
-      <Version>3.13.0</Version>
+      <Version>3.15.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
