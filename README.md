@@ -1,6 +1,6 @@
 # Vim.Math3D
 
-[<img src="https://img.shields.io/nuget/v/Vim.Math3D.svg">](https://github.com/Vim/Math3D)
+[<img src="https://img.shields.io/nuget/v/Vim.Math3D.svg">](https://www.nuget.org/packages/Vim.Math3D/)
 
 **Vim.Math3D** is a portable, safe, and efficient 3D math library from [VIM AEC](https://vimaec.com) written in C# 
 targeting .NET Standard 2.0 without any dependencies. 
