@@ -12,7 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\src\Vim.Math3d.csproj" />
+        <ProjectReference Include="..\src\Vim.Math3D.csproj" />
     </ItemGroup>
 
 </Project>
