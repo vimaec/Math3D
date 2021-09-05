@@ -163,7 +163,7 @@ namespace Vim.Math3d
     public partial struct Line2D
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public AABox2D BoundingBox() => AABox2D.Create(A, B);
+        public AABox2D BoundingBox() => AABox2D.CreateFromPoints(A, B);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public double LinePointCrossProduct(Vector2 point)

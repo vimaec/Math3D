@@ -193,19 +193,7 @@ namespace Vim.Math3d
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static AABox Create(IEnumerable<Vector3> points = null)
-        {
-            var minVec = Vector3.MaxValue;
-            var maxVec = Vector3.MinValue;
-            if (points != null)
-            {
-                foreach (var pt in points)
-                {
-                    minVec = minVec.Min(pt);
-                    maxVec = maxVec.Max(pt);
-                }
-            }
-            return new AABox(minVec, maxVec);
-        }
+            => points?.Aggregate(Empty, (box, point) => box + point) ?? Empty;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static AABox Create(params Vector3[] points)
@@ -269,7 +257,6 @@ namespace Vim.Math3d
             }
 
             result = false;
-            return;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
