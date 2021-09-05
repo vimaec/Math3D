@@ -4,8 +4,8 @@
     {
         public ColorRGB(long value)
             : this((byte)(value >> 16), (byte)(value >> 8), (byte)(value))
-        { } 
-        
+        { }
+
         public static readonly ColorRGB AliceBlue = new ColorRGB(0xF0F8FF);
         public static readonly ColorRGB AntiqueWhite = new ColorRGB(0xFAEBD7);
         public static readonly ColorRGB Aqua = new ColorRGB(0x00FFFF);

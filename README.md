@@ -193,4 +193,4 @@ that are auto-generated using the T4 templating engine.
 * [Stride](https://github.com/stride3d/stride/tree/master/sources/core/Stride.Core.Mathematics)
 * [A Vector Type for C# - R Potter via Code Project](https://www.codeproject.com/Articles/17425/A-Vector-Type-for-C)
 * [Godot Engine C# Libraries](https://github.com/godotengine/godot/tree/master/modules/mono/glue/GodotSharp/GodotSharp/Core)
-
+* [GeometRi - Simple and lightweight computational geometry library for .Net](https://github.com/RiSearcher/GeometRi.CSharp)
