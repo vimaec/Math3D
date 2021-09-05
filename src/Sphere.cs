@@ -1,4 +1,5 @@
-﻿// MIT License 
+﻿// MIT License
+// Copyright (C) 2019 VIMaec LLC.
 // Copyright (C) 2019 Ara 3D. Inc
 // https://ara3d.com
 // Copyright (C) The Mono.Xna Team
@@ -9,13 +10,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Ara3D
+namespace Vim.Math3d
 {
     /// <summary>
     /// Describes a sphere in 3D-space for bounding operations.
     /// </summary>
     public partial struct Sphere : ITransformable3D<Sphere>
-    {        
+    {
         /// <summary>
         /// Test if a bounding box is fully inside, outside, or just intersecting the sphere.
         /// </summary>
@@ -39,26 +40,26 @@ namespace Ara3D
             double dmin = 0;
 
             if (Center.X < box.Min.X)
-				dmin += (Center.X - box.Min.X) * (Center.X - box.Min.X);
+                dmin += (Center.X - box.Min.X) * (Center.X - box.Min.X);
 
-			else if (Center.X > box.Max.X)
-					dmin += (Center.X - box.Max.X) * (Center.X - box.Max.X);
+            else if (Center.X > box.Max.X)
+                dmin += (Center.X - box.Max.X) * (Center.X - box.Max.X);
 
-			if (Center.Y < box.Min.Y)
-				dmin += (Center.Y - box.Min.Y) * (Center.Y - box.Min.Y);
+            if (Center.Y < box.Min.Y)
+                dmin += (Center.Y - box.Min.Y) * (Center.Y - box.Min.Y);
 
-			else if (Center.Y > box.Max.Y)
-				dmin += (Center.Y - box.Max.Y) * (Center.Y - box.Max.Y);
+            else if (Center.Y > box.Max.Y)
+                dmin += (Center.Y - box.Max.Y) * (Center.Y - box.Max.Y);
 
-			if (Center.Z < box.Min.Z)
-				dmin += (Center.Z - box.Min.Z) * (Center.Z - box.Min.Z);
+            if (Center.Z < box.Min.Z)
+                dmin += (Center.Z - box.Min.Z) * (Center.Z - box.Min.Z);
 
-			else if (Center.Z > box.Max.Z)
-				dmin += (Center.Z - box.Max.Z) * (Center.Z - box.Max.Z);
+            else if (Center.Z > box.Max.Z)
+                dmin += (Center.Z - box.Max.Z) * (Center.Z - box.Max.Z);
 
-			if (dmin <= Radius * Radius) 
-				return ContainmentType.Intersects;
-            
+            if (dmin <= Radius * Radius)
+                return ContainmentType.Intersects;
+
             //else disjoint
             return ContainmentType.Disjoint;
         }
@@ -71,7 +72,7 @@ namespace Ara3D
             var sqDistance = sphere.Center.DistanceSquared(Center);
 
             if (sqDistance > (sphere.Radius + Radius) * (sphere.Radius + Radius))
-                return  ContainmentType.Disjoint;
+                return ContainmentType.Disjoint;
 
             if (sqDistance <= (Radius - sphere.Radius) * (Radius - sphere.Radius))
                 return ContainmentType.Contains;
@@ -95,14 +96,14 @@ namespace Ara3D
         {
             var sqRadius = Radius * Radius;
             var sqDistance = point.DistanceSquared(Center);
-            
+
             if (sqDistance > sqRadius)
                 result = ContainmentType.Disjoint;
 
             else if (sqDistance < sqRadius)
                 result = ContainmentType.Contains;
 
-            else 
+            else
                 result = ContainmentType.Intersects;
         }
 
@@ -121,7 +122,7 @@ namespace Ara3D
         /// </summary>
         public static Sphere Create(IEnumerable<Vector3> points)
         {
-            if (points == null )
+            if (points == null)
                 throw new ArgumentNullException(nameof(points));
 
             // From "Real-Time Collision Detection" (Page 89)
@@ -134,22 +135,22 @@ namespace Ara3D
             var maxz = -minx;
 
             // Find the most extreme points along the principle axis.
-            var numPoints = 0;           
+            var numPoints = 0;
             foreach (var pt in points)
             {
                 ++numPoints;
 
-                if (pt.X < minx.X) 
+                if (pt.X < minx.X)
                     minx = pt;
-                if (pt.X > maxx.X) 
+                if (pt.X > maxx.X)
                     maxx = pt;
-                if (pt.Y < miny.Y) 
+                if (pt.Y < miny.Y)
                     miny = pt;
-                if (pt.Y > maxy.Y) 
+                if (pt.Y > maxy.Y)
                     maxy = pt;
-                if (pt.Z < minz.Z) 
+                if (pt.Z < minz.Z)
                     minz = pt;
-                if (pt.Z > maxz.Z) 
+                if (pt.Z > maxz.Z)
                     maxz = pt;
             }
 
@@ -163,20 +164,20 @@ namespace Ara3D
             // Pick the pair of most distant points.
             var min = minx;
             var max = maxx;
-            if (sqDistY > sqDistX && sqDistY > sqDistZ) 
+            if (sqDistY > sqDistX && sqDistY > sqDistZ)
             {
                 max = maxy;
                 min = miny;
             }
-            if (sqDistZ > sqDistX && sqDistZ > sqDistY) 
+            if (sqDistZ > sqDistX && sqDistZ > sqDistY)
             {
                 max = maxz;
                 min = minz;
             }
-            
+
             var center = (min + max) * 0.5f;
             var radius = max.Distance(center);
-            
+
             // Test every point and expand the sphere.
             // The current bounding sphere is just a good approximation and may not enclose all points.            
             // From: Mathematics for 3D Game Programming and Computer Graphics, Eric Lengyel, Third Edition.
@@ -184,7 +185,7 @@ namespace Ara3D
             var sqRadius = radius * radius;
             foreach (var pt in points)
             {
-                var diff = pt-center;
+                var diff = pt - center;
                 var sqDist = diff.LengthSquared();
                 if (sqDist > sqRadius)
                 {
@@ -204,10 +205,8 @@ namespace Ara3D
         /// Creates a sphere from the given points
         /// </summary>
         public static Sphere Create(params Vector3[] points)
-        {
-            return Create(points.AsEnumerable());
-        }
-        
+            => Create(points.AsEnumerable());
+
         /// <summary>
         /// Creates a sphere merging it with another 
         /// </summary>
@@ -237,9 +236,7 @@ namespace Ara3D
         /// Gets whether or not a specified <see cref="AABox"/> intersects with this sphere.
         /// </summary>
         public bool Intersects(AABox box)
-        {
-			return box.Intersects(this);
-        }
+            => box.Intersects(this);
 
         /// <summary>
         /// Gets whether or not the other <see cref="Sphere"/> intersects with this sphere.
@@ -268,26 +265,22 @@ namespace Ara3D
         /// Gets whether or not a specified <see cref="Ray"/> intersects with this sphere.
         /// </summary>
         public float? Intersects(Ray ray)
-        {
-            return ray.Intersects(this);
-        }
+            => ray.Intersects(this);
 
         public Sphere Transform(Matrix4x4 m)
-        {
-            return new Sphere(Center.Transform(m), 
+            => new Sphere(Center.Transform(m),
                 Radius * ((float)Math.Sqrt(
-                    Math.Max((m.M11 * m.M11) + (m.M12 * m.M12) + (m.M13 * m.M13), 
-                    Math.Max((m.M21 * m.M21) + (m.M22 * m.M22) + (m.M23 * m.M23), 
+                    Math.Max((m.M11 * m.M11) + (m.M12 * m.M12) + (m.M13 * m.M13),
+                    Math.Max((m.M21 * m.M21) + (m.M22 * m.M22) + (m.M23 * m.M23),
                     (m.M31 * m.M31) + (m.M32 * m.M32) + (m.M33 * m.M33))))));
-        }
 
-        public Sphere Translate(Vector3 offset) 
-            => new Sphere(Center + offset, Radius);            
+        public Sphere Translate(Vector3 offset)
+            => new Sphere(Center + offset, Radius);
 
-        public float Distance(Vector3 point) 
+        public float Distance(Vector3 point)
             => (Center.Distance(point) - Radius).ClampLower(0);
 
-        public float Distance(Sphere other) 
+        public float Distance(Sphere other)
             => (Center.Distance(other.Center) - Radius - other.Radius).ClampLower(0);
     }
 }

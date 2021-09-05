@@ -2,11 +2,11 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-using System.Globalization;
+using System;
 using System.Runtime.InteropServices;
 using NUnit.Framework;
 
-namespace Ara3D.Tests
+namespace Vim.Math3d.Tests
 {
     public class QuaternionTests
     {
@@ -14,10 +14,10 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionDotTest()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            Quaternion b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
 
-            float expected = 70.0f;
+            var expected = 70.0f;
             float actual;
 
             actual = Quaternion.Dot(a, b);
@@ -28,13 +28,13 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionLengthTest()
         {
-            Vector3 v = new Vector3(1.0f, 2.0f, 3.0f);
+            var v = new Vector3(1.0f, 2.0f, 3.0f);
 
-            float w = 4.0f;
+            var w = 4.0f;
 
-            Quaternion target = new Quaternion(v, w);
+            var target = new Quaternion(v, w);
 
-            float expected = 5.477226f;
+            var expected = 5.477226f;
             float actual;
 
             actual = target.Length();
@@ -46,12 +46,12 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionLengthSquaredTest()
         {
-            Vector3 v = new Vector3(1.0f, 2.0f, 3.0f);
-            float w = 4.0f;
+            var v = new Vector3(1.0f, 2.0f, 3.0f);
+            var w = 4.0f;
 
-            Quaternion target = new Quaternion(v, w);
+            var target = new Quaternion(v, w);
 
-            float expected = 30.0f;
+            var expected = 30.0f;
             float actual;
 
             actual = target.LengthSquared();
@@ -63,13 +63,13 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionLerpTest()
         {
-            Vector3 axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
-            Quaternion a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
-            Quaternion b = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
+            var axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
+            var a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
+            var b = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
 
-            float t = 0.5f;
+            var t = 0.5f;
 
-            Quaternion expected = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(20.0f));
+            var expected = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(20.0f));
             Quaternion actual;
 
             actual = Quaternion.Lerp(a, b, t);
@@ -86,14 +86,14 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionLerpTest1()
         {
-            Vector3 axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
-            Quaternion a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
-            Quaternion b = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
+            var axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
+            var a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
+            var b = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
 
-            float t = 0.0f;
+            var t = 0.0f;
 
-            Quaternion expected = new Quaternion(a.X, a.Y, a.Z, a.W);
-            Quaternion actual = Quaternion.Lerp(a, b, t);
+            var expected = new Quaternion(a.X, a.Y, a.Z, a.W);
+            var actual = Quaternion.Lerp(a, b, t);
             Assert.True(MathHelper.Equal(expected, actual), $"Quaternion.Lerp did not return the expected value: expected {expected} actual {actual}");
         }
 
@@ -102,14 +102,14 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionLerpTest2()
         {
-            Vector3 axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
-            Quaternion a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
-            Quaternion b = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
+            var axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
+            var a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
+            var b = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
 
-            float t = 1.0f;
+            var t = 1.0f;
 
-            Quaternion expected = new Quaternion(b.X, b.Y, b.Z, b.W);
-            Quaternion actual = Quaternion.Lerp(a, b, t);
+            var expected = new Quaternion(b.X, b.Y, b.Z, b.W);
+            var actual = Quaternion.Lerp(a, b, t);
             Assert.True(MathHelper.Equal(expected, actual), $"Quaternion.Lerp did not return the expected value: expected {expected} actual {actual}");
         }
 
@@ -118,13 +118,13 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionLerpTest3()
         {
-            Vector3 axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
-            Quaternion a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
-            Quaternion b = -a;
+            var axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
+            var a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
+            var b = -a;
 
-            float t = 1.0f;
+            var t = 1.0f;
 
-            Quaternion actual = Quaternion.Lerp(a, b, t);
+            var actual = Quaternion.Lerp(a, b, t);
             // Note that in quaternion world, Q == -Q. In the case of quaternions dot product is zero, 
             // one of the quaternion will be flipped to compute the shortest distance. When t = 1, we
             // expect the result to be the same as quaternion b but flipped.
@@ -135,9 +135,9 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionConjugateTest1()
         {
-            Quaternion a = new Quaternion(1, 2, 3, 4);
+            var a = new Quaternion(1, 2, 3, 4);
 
-            Quaternion expected = new Quaternion(-1, -2, -3, 4);
+            var expected = new Quaternion(-1, -2, -3, 4);
             Quaternion actual;
 
             actual = a.Conjugate();
@@ -148,9 +148,9 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionNormalizeTest()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
 
-            Quaternion expected = new Quaternion(0.182574168f, 0.365148336f, 0.5477225f, 0.7302967f);
+            var expected = new Quaternion(0.182574168f, 0.365148336f, 0.5477225f, 0.7302967f);
             Quaternion actual;
 
             actual = a.Normalize();
@@ -162,9 +162,9 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionNormalizeTest1()
         {
-            Quaternion a = new Quaternion(0.0f, 0.0f, -0.0f, 0.0f);
+            var a = new Quaternion(0.0f, 0.0f, -0.0f, 0.0f);
 
-            Quaternion actual = a.Normalize();
+            var actual = a.Normalize();
             Assert.True(float.IsNaN(actual.X) && float.IsNaN(actual.Y) && float.IsNaN(actual.Z) && float.IsNaN(actual.W)
                 , $"Quaternion.Normalize did not return the expected value: expected {new Quaternion(float.NaN, float.NaN, float.NaN, float.NaN)} actual {actual}");
         }
@@ -173,10 +173,10 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionConcatenateTest1()
         {
-            Quaternion b = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            Quaternion a = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
+            var b = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var a = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
 
-            Quaternion expected = new Quaternion(24.0f, 48.0f, 48.0f, -6.0f);
+            var expected = new Quaternion(24.0f, 48.0f, 48.0f, -6.0f);
             Quaternion actual;
 
             actual = Quaternion.Concatenate(a, b);
@@ -187,10 +187,10 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionSubtractionTest()
         {
-            Quaternion a = new Quaternion(1.0f, 6.0f, 7.0f, 4.0f);
-            Quaternion b = new Quaternion(5.0f, 2.0f, 3.0f, 8.0f);
+            var a = new Quaternion(1.0f, 6.0f, 7.0f, 4.0f);
+            var b = new Quaternion(5.0f, 2.0f, 3.0f, 8.0f);
 
-            Quaternion expected = new Quaternion(-4.0f, 4.0f, 4.0f, -4.0f);
+            var expected = new Quaternion(-4.0f, 4.0f, 4.0f, -4.0f);
             Quaternion actual;
 
             actual = a - b;
@@ -202,10 +202,10 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionMultiplyTest()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            float factor = 0.5f;
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var factor = 0.5f;
 
-            Quaternion expected = new Quaternion(0.5f, 1.0f, 1.5f, 2.0f);
+            var expected = new Quaternion(0.5f, 1.0f, 1.5f, 2.0f);
             Quaternion actual;
 
             actual = a * factor;
@@ -217,10 +217,10 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionMultiplyTest1()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            Quaternion b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
 
-            Quaternion expected = new Quaternion(24.0f, 48.0f, 48.0f, -6.0f);
+            var expected = new Quaternion(24.0f, 48.0f, 48.0f, -6.0f);
             Quaternion actual;
 
             actual = a * b;
@@ -232,10 +232,10 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionDivisionTest1()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            Quaternion b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
 
-            Quaternion expected = new Quaternion(-0.045977015f, -0.09195402f, -7.450581E-9f, 0.402298868f);
+            var expected = new Quaternion(-0.045977015f, -0.09195402f, -7.450581E-9f, 0.402298868f);
             Quaternion actual;
 
             actual = a / b;
@@ -247,10 +247,10 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionAdditionTest()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            Quaternion b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
 
-            Quaternion expected = new Quaternion(6.0f, 8.0f, 10.0f, 12.0f);
+            var expected = new Quaternion(6.0f, 8.0f, 10.0f, 12.0f);
             Quaternion actual;
 
             actual = a + b;
@@ -262,12 +262,12 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionConstructorTest()
         {
-            float x = 1.0f;
-            float y = 2.0f;
-            float z = 3.0f;
-            float w = 4.0f;
+            var x = 1.0f;
+            var y = 2.0f;
+            var z = 3.0f;
+            var w = 4.0f;
 
-            Quaternion target = new Quaternion(x, y, z, w);
+            var target = new Quaternion(x, y, z, w);
 
             Assert.True(MathHelper.Equal(target.X, x) && MathHelper.Equal(target.Y, y) && MathHelper.Equal(target.Z, z) && MathHelper.Equal(target.W, w),
                 "Quaternion.constructor (x,y,z,w) did not return the expected value.");
@@ -277,10 +277,10 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionConstructorTest1()
         {
-            Vector3 v = new Vector3(1.0f, 2.0f, 3.0f);
-            float w = 4.0f;
+            var v = new Vector3(1.0f, 2.0f, 3.0f);
+            var w = 4.0f;
 
-            Quaternion target = new Quaternion(v, w);
+            var target = new Quaternion(v, w);
             Assert.True(MathHelper.Equal(target.X, v.X) && MathHelper.Equal(target.Y, v.Y) && MathHelper.Equal(target.Z, v.Z) && MathHelper.Equal(target.W, w),
                 "Quaternion.constructor (Vector3f,w) did not return the expected value.");
         }
@@ -289,10 +289,10 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionCreateFromAxisAngleTest()
         {
-            Vector3 axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
-            float angle = MathHelper.ToRadians(30.0f);
+            var axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
+            var angle = MathHelper.ToRadians(30.0f);
 
-            Quaternion expected = new Quaternion(0.0691723f, 0.1383446f, 0.207516879f, 0.9659258f);
+            var expected = new Quaternion(0.0691723f, 0.1383446f, 0.207516879f, 0.9659258f);
             Quaternion actual;
 
             actual = Quaternion.CreateFromAxisAngle(axis, angle);
@@ -304,11 +304,11 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionCreateFromAxisAngleTest1()
         {
-            Vector3 axis = new Vector3();
-            float angle = MathHelper.ToRadians(-30.0f);
+            var axis = new Vector3();
+            var angle = MathHelper.ToRadians(-30.0f);
 
-            float cos = (float)System.Math.Cos(angle / 2.0f);
-            Quaternion actual = Quaternion.CreateFromAxisAngle(axis, angle);
+            var cos = (float)System.Math.Cos(angle / 2.0f);
+            var actual = Quaternion.CreateFromAxisAngle(axis, angle);
 
             Assert.True(actual.X == 0.0f && actual.Y == 0.0f && actual.Z == 0.0f && MathHelper.Equal(cos, actual.W)
                 , "Quaternion.CreateFromAxisAngle did not return the expected value.");
@@ -319,12 +319,12 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionCreateFromAxisAngleTest2()
         {
-            Vector3 axis = new Vector3(1, 0, 0);
-            float angle1 = MathHelper.ToRadians(30.0f);
-            float angle2 = MathHelper.ToRadians(750.0f);
+            var axis = new Vector3(1, 0, 0);
+            var angle1 = MathHelper.ToRadians(30.0f);
+            var angle2 = MathHelper.ToRadians(750.0f);
 
-            Quaternion actual1 = Quaternion.CreateFromAxisAngle(axis, angle1);
-            Quaternion actual2 = Quaternion.CreateFromAxisAngle(axis, angle2);
+            var actual1 = Quaternion.CreateFromAxisAngle(axis, angle1);
+            var actual2 = Quaternion.CreateFromAxisAngle(axis, angle2);
             Assert.True(MathHelper.Equal(actual1, actual2), $"Quaternion.CreateFromAxisAngle did not return the expected value: actual1 {actual1} actual2 {actual2}");
         }
 
@@ -333,12 +333,12 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionCreateFromAxisAngleTest3()
         {
-            Vector3 axis = new Vector3(1, 0, 0);
-            float angle1 = MathHelper.ToRadians(30.0f);
-            float angle2 = MathHelper.ToRadians(390.0f);
+            var axis = new Vector3(1, 0, 0);
+            var angle1 = MathHelper.ToRadians(30.0f);
+            var angle2 = MathHelper.ToRadians(390.0f);
 
-            Quaternion actual1 = Quaternion.CreateFromAxisAngle(axis, angle1);
-            Quaternion actual2 = Quaternion.CreateFromAxisAngle(axis, angle2);
+            var actual1 = Quaternion.CreateFromAxisAngle(axis, angle1);
+            var actual2 = Quaternion.CreateFromAxisAngle(axis, angle2);
             actual1 = actual1.SetX(-actual1.X);
             actual1 = actual1.SetW(-actual1.W);
 
@@ -348,16 +348,16 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionCreateFromYawPitchRollTest1()
         {
-            float yawAngle = MathHelper.ToRadians(30.0f);
-            float pitchAngle = MathHelper.ToRadians(40.0f);
-            float rollAngle = MathHelper.ToRadians(50.0f);
+            var yawAngle = MathHelper.ToRadians(30.0f);
+            var pitchAngle = MathHelper.ToRadians(40.0f);
+            var rollAngle = MathHelper.ToRadians(50.0f);
 
-            Quaternion yaw = Quaternion.CreateFromAxisAngle(Vector3.UnitY, yawAngle);
-            Quaternion pitch = Quaternion.CreateFromAxisAngle(Vector3.UnitX, pitchAngle);
-            Quaternion roll = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, rollAngle);
+            var yaw = Quaternion.CreateFromAxisAngle(Vector3.UnitY, yawAngle);
+            var pitch = Quaternion.CreateFromAxisAngle(Vector3.UnitX, pitchAngle);
+            var roll = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, rollAngle);
 
-            Quaternion expected = yaw * pitch * roll;
-            Quaternion actual = Quaternion.CreateFromYawPitchRoll(yawAngle, pitchAngle, rollAngle);
+            var expected = yaw * pitch * roll;
+            var actual = Quaternion.CreateFromYawPitchRoll(yawAngle, pitchAngle, rollAngle);
             Assert.True(MathHelper.Equal(expected, actual), $"Quaternion.QuaternionCreateFromYawPitchRollTest1 did not return the expected value: expected {expected} actual {actual}");
         }
 
@@ -367,22 +367,22 @@ namespace Ara3D.Tests
         {
             const float step = 35.0f;
 
-            for (float yawAngle = -720.0f; yawAngle <= 720.0f; yawAngle += step)
+            for (var yawAngle = -720.0f; yawAngle <= 720.0f; yawAngle += step)
             {
-                for (float pitchAngle = -720.0f; pitchAngle <= 720.0f; pitchAngle += step)
+                for (var pitchAngle = -720.0f; pitchAngle <= 720.0f; pitchAngle += step)
                 {
-                    for (float rollAngle = -720.0f; rollAngle <= 720.0f; rollAngle += step)
+                    for (var rollAngle = -720.0f; rollAngle <= 720.0f; rollAngle += step)
                     {
-                        float yawRad = MathHelper.ToRadians(yawAngle);
-                        float pitchRad = MathHelper.ToRadians(pitchAngle);
-                        float rollRad = MathHelper.ToRadians(rollAngle);
+                        var yawRad = MathHelper.ToRadians(yawAngle);
+                        var pitchRad = MathHelper.ToRadians(pitchAngle);
+                        var rollRad = MathHelper.ToRadians(rollAngle);
 
-                        Quaternion yaw = Quaternion.CreateFromAxisAngle(Vector3.UnitY, yawRad);
-                        Quaternion pitch = Quaternion.CreateFromAxisAngle(Vector3.UnitX, pitchRad);
-                        Quaternion roll = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, rollRad);
+                        var yaw = Quaternion.CreateFromAxisAngle(Vector3.UnitY, yawRad);
+                        var pitch = Quaternion.CreateFromAxisAngle(Vector3.UnitX, pitchRad);
+                        var roll = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, rollRad);
 
-                        Quaternion expected = yaw * pitch * roll;
-                        Quaternion actual = Quaternion.CreateFromYawPitchRoll(yawRad, pitchRad, rollRad);
+                        var expected = yaw * pitch * roll;
+                        var actual = Quaternion.CreateFromYawPitchRoll(yawRad, pitchRad, rollRad);
                         Assert.True(MathHelper.Equal(expected, actual), $"Quaternion.QuaternionCreateFromYawPitchRollTest2 Yaw:{yawAngle} Pitch:{pitchAngle} Roll:{rollAngle} did not return the expected value: expected {expected} actual {actual}");
                     }
                 }
@@ -393,13 +393,13 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionSlerpTest()
         {
-            Vector3 axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
-            Quaternion a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
-            Quaternion b = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
+            var axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
+            var a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
+            var b = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
 
-            float t = 0.5f;
+            var t = 0.5f;
 
-            Quaternion expected = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(20.0f));
+            var expected = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(20.0f));
             Quaternion actual;
 
             actual = Quaternion.Slerp(a, b, t);
@@ -416,14 +416,14 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionSlerpTest1()
         {
-            Vector3 axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
-            Quaternion a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
-            Quaternion b = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
+            var axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
+            var a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
+            var b = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
 
-            float t = 0.0f;
+            var t = 0.0f;
 
-            Quaternion expected = new Quaternion(a.X, a.Y, a.Z, a.W);
-            Quaternion actual = Quaternion.Slerp(a, b, t);
+            var expected = new Quaternion(a.X, a.Y, a.Z, a.W);
+            var actual = Quaternion.Slerp(a, b, t);
             Assert.True(MathHelper.Equal(expected, actual), $"Quaternion.Slerp did not return the expected value: expected {expected} actual {actual}");
         }
 
@@ -432,14 +432,14 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionSlerpTest2()
         {
-            Vector3 axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
-            Quaternion a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
-            Quaternion b = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
+            var axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
+            var a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
+            var b = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
 
-            float t = 1.0f;
+            var t = 1.0f;
 
-            Quaternion expected = new Quaternion(b.X, b.Y, b.Z, b.W);
-            Quaternion actual = Quaternion.Slerp(a, b, t);
+            var expected = new Quaternion(b.X, b.Y, b.Z, b.W);
+            var actual = Quaternion.Slerp(a, b, t);
             Assert.True(MathHelper.Equal(expected, actual), $"Quaternion.Slerp did not return the expected value: expected {expected} actual {actual}");
         }
 
@@ -448,14 +448,14 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionSlerpTest3()
         {
-            Vector3 axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
-            Quaternion a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
-            Quaternion b = -a;
+            var axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
+            var a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
+            var b = -a;
 
-            float t = 1.0f;
+            var t = 1.0f;
 
-            Quaternion expected = a;
-            Quaternion actual = Quaternion.Slerp(a, b, t);
+            var expected = a;
+            var actual = Quaternion.Slerp(a, b, t);
             // Note that in quaternion world, Q == -Q. In the case of quaternions dot product is zero, 
             // one of the quaternion will be flipped to compute the shortest distance. When t = 1, we
             // expect the result to be the same as quaternion b but flipped.
@@ -467,14 +467,14 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionSlerpTest4()
         {
-            Vector3 axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
-            Quaternion a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
-            Quaternion b = -Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
+            var axis = MathOps.Normalize(new Vector3(1.0f, 2.0f, 3.0f));
+            var a = Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(10.0f));
+            var b = -Quaternion.CreateFromAxisAngle(axis, MathHelper.ToRadians(30.0f));
 
-            float t = 0.0f;
+            var t = 0.0f;
 
-            Quaternion expected = new Quaternion(a.X, a.Y, a.Z, a.W);
-            Quaternion actual = Quaternion.Slerp(a, b, t);
+            var expected = new Quaternion(a.X, a.Y, a.Z, a.W);
+            var actual = Quaternion.Slerp(a, b, t);
             Assert.True(MathHelper.Equal(expected, actual), $"Quaternion.Slerp did not return the expected value: expected {expected} actual {actual}");
         }
 
@@ -482,9 +482,9 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionUnaryNegationTest()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
 
-            Quaternion expected = new Quaternion(-1.0f, -2.0f, -3.0f, -4.0f);
+            var expected = new Quaternion(-1.0f, -2.0f, -3.0f, -4.0f);
             Quaternion actual;
 
             actual = -a;
@@ -496,9 +496,9 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionInverseTest()
         {
-            Quaternion a = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
+            var a = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
 
-            Quaternion expected = new Quaternion(-0.0287356321f, -0.03448276f, -0.0402298868f, 0.04597701f);
+            var expected = new Quaternion(-0.0287356321f, -0.03448276f, -0.0402298868f, 0.04597701f);
             Quaternion actual;
 
             actual = a.Inverse();
@@ -510,8 +510,8 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionInverseTest1()
         {
-            Quaternion a = new Quaternion();
-            Quaternion actual = a.Inverse();
+            var a = new Quaternion();
+            var actual = a.Inverse();
 
             Assert.True(float.IsNaN(actual.X) && float.IsNaN(actual.Y) && float.IsNaN(actual.Z) && float.IsNaN(actual.W)
                 , $"Quaternion.Inverse - did not return the expected value: expected {new Quaternion(float.NaN, float.NaN, float.NaN, float.NaN)} actual {actual}");
@@ -521,9 +521,9 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionAddTest()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            Quaternion b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
-            Quaternion expected = new Quaternion(6.0f, 8.0f, 10.0f, 12.0f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
+            var expected = new Quaternion(6.0f, 8.0f, 10.0f, 12.0f);
             Assert.AreEqual(expected, a + b);
         }
 
@@ -531,9 +531,9 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionDivideTest()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            Quaternion b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
-            Quaternion expected = new Quaternion(-0.045977015f, -0.09195402f, -7.450581E-9f, 0.402298868f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
+            var expected = new Quaternion(-0.045977015f, -0.09195402f, -7.450581E-9f, 0.402298868f);
             Assert.IsTrue(MathHelper.Equal(expected, a / b));
         }
 
@@ -541,9 +541,9 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionMultiplyTest2()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            float factor = 0.5f;
-            Quaternion expected = new Quaternion(0.5f, 1.0f, 1.5f, 2.0f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var factor = 0.5f;
+            var expected = new Quaternion(0.5f, 1.0f, 1.5f, 2.0f);
             Assert.AreEqual(expected, a * factor);
         }
 
@@ -551,9 +551,9 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionMultiplyTest3()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            Quaternion b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
-            Quaternion expected = new Quaternion(24.0f, 48.0f, 48.0f, -6.0f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var b = new Quaternion(5.0f, 6.0f, 7.0f, 8.0f);
+            var expected = new Quaternion(24.0f, 48.0f, 48.0f, -6.0f);
             Assert.AreEqual(expected, a * b);
         }
 
@@ -561,8 +561,8 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionNegateTest()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            Quaternion expected = new Quaternion(-1.0f, -2.0f, -3.0f, -4.0f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var expected = new Quaternion(-1.0f, -2.0f, -3.0f, -4.0f);
             Assert.AreEqual(expected, -a);
         }
 
@@ -570,10 +570,10 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionSubtractTest()
         {
-            Quaternion a = new Quaternion(1.0f, 6.0f, 7.0f, 4.0f);
-            Quaternion b = new Quaternion(5.0f, 2.0f, 3.0f, 8.0f);
+            var a = new Quaternion(1.0f, 6.0f, 7.0f, 4.0f);
+            var b = new Quaternion(5.0f, 2.0f, 3.0f, 8.0f);
 
-            Quaternion expected = new Quaternion(-4.0f, 4.0f, 4.0f, -4.0f);
+            var expected = new Quaternion(-4.0f, 4.0f, 4.0f, -4.0f);
             Assert.AreEqual(expected, a - b);
         }
 
@@ -581,12 +581,12 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionInequalityTest()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            Quaternion b = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var b = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
 
             // case 1: compare between same values
-            bool expected = false;
-            bool actual = a != b;
+            var expected = false;
+            var actual = a != b;
             Assert.AreEqual(expected, actual);
 
             // case 2: compare between different values
@@ -599,12 +599,12 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionEqualityTest()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            Quaternion b = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var b = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
 
             // case 1: compare between same values
-            bool expected = true;
-            bool actual = a == b;
+            var expected = true;
+            var actual = a == b;
             Assert.AreEqual(expected, actual);
 
             // case 2: compare between different values
@@ -619,16 +619,16 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionFromRotationMatrixTest1()
         {
-            Matrix4x4 matrix = Matrix4x4.Identity;
+            var matrix = Matrix4x4.Identity;
 
-            Quaternion expected = new Quaternion(0.0f, 0.0f, 0.0f, 1.0f);
-            Quaternion actual = Quaternion.CreateFromRotationMatrix(matrix);
-            Assert.True(MathHelper.Equal(expected, actual), 
+            var expected = new Quaternion(0.0f, 0.0f, 0.0f, 1.0f);
+            var actual = Quaternion.CreateFromRotationMatrix(matrix);
+            Assert.True(MathHelper.Equal(expected, actual),
                 $"Quaternion.CreateFromRotationMatrix did not return the expected value: expected {expected} actual {actual}");
 
             // make sure convert back to matrix is same as we passed matrix.
-            Matrix4x4 m2 = Matrix4x4.CreateFromQuaternion(actual);
-            Assert.True(MathHelper.Equal(matrix, m2), 
+            var m2 = Matrix4x4.CreateFromQuaternion(actual);
+            Assert.True(MathHelper.Equal(matrix, m2),
                 $"Quaternion.CreateFromQuaternion did not return the expected value: matrix {matrix} m2 {m2}");
         }
 
@@ -637,17 +637,17 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionFromRotationMatrixTest2()
         {
-            for (float angle = 0.0f; angle < 720.0f; angle += 10.0f)
+            for (var angle = 0.0f; angle < 720.0f; angle += 10.0f)
             {
-                Matrix4x4 matrix = Matrix4x4.CreateRotationX(angle);
+                var matrix = Matrix4x4.CreateRotationX(angle);
 
-                Quaternion expected = Quaternion.CreateFromAxisAngle(Vector3.UnitX, angle);
-                Quaternion actual = Quaternion.CreateFromRotationMatrix(matrix);
+                var expected = Quaternion.CreateFromAxisAngle(Vector3.UnitX, angle);
+                var actual = Quaternion.CreateFromRotationMatrix(matrix);
                 Assert.True(MathHelper.EqualRotation(expected, actual),
                     $"Quaternion.CreateFromRotationMatrix angle:{angle} did not return the expected value: expected {expected} actual {actual}");
 
                 // make sure convert back to matrix is same as we passed matrix.
-                Matrix4x4 m2 = Matrix4x4.CreateFromQuaternion(actual);
+                var m2 = Matrix4x4.CreateFromQuaternion(actual);
                 Assert.True(MathHelper.Equal(matrix, m2),
                     $"Quaternion.CreateFromQuaternion angle:{angle} did not return the expected value: matrix {matrix} m2 {m2}");
             }
@@ -658,17 +658,17 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionFromRotationMatrixTest3()
         {
-            for (float angle = 0.0f; angle < 720.0f; angle += 10.0f)
+            for (var angle = 0.0f; angle < 720.0f; angle += 10.0f)
             {
-                Matrix4x4 matrix = Matrix4x4.CreateRotationY(angle);
+                var matrix = Matrix4x4.CreateRotationY(angle);
 
-                Quaternion expected = Quaternion.CreateFromAxisAngle(Vector3.UnitY, angle);
-                Quaternion actual = Quaternion.CreateFromRotationMatrix(matrix);
+                var expected = Quaternion.CreateFromAxisAngle(Vector3.UnitY, angle);
+                var actual = Quaternion.CreateFromRotationMatrix(matrix);
                 Assert.True(MathHelper.EqualRotation(expected, actual),
                     $"Quaternion.CreateFromRotationMatrix angle:{angle} did not return the expected value: expected {expected} actual {actual}");
 
                 // make sure convert back to matrix is same as we passed matrix.
-                Matrix4x4 m2 = Matrix4x4.CreateFromQuaternion(actual);
+                var m2 = Matrix4x4.CreateFromQuaternion(actual);
                 Assert.True(MathHelper.Equal(matrix, m2),
                     $"Quaternion.CreateFromQuaternion angle:{angle} did not return the expected value: matrix {matrix} m2 {m2}");
             }
@@ -679,17 +679,17 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionFromRotationMatrixTest4()
         {
-            for (float angle = 0.0f; angle < 720.0f; angle += 10.0f)
+            for (var angle = 0.0f; angle < 720.0f; angle += 10.0f)
             {
-                Matrix4x4 matrix = Matrix4x4.CreateRotationZ(angle);
+                var matrix = Matrix4x4.CreateRotationZ(angle);
 
-                Quaternion expected = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, angle);
-                Quaternion actual = Quaternion.CreateFromRotationMatrix(matrix);
+                var expected = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, angle);
+                var actual = Quaternion.CreateFromRotationMatrix(matrix);
                 Assert.True(MathHelper.EqualRotation(expected, actual),
                     $"Quaternion.CreateFromRotationMatrix angle:{angle} did not return the expected value: expected {expected} actual {actual}");
 
                 // make sure convert back to matrix is same as we passed matrix.
-                Matrix4x4 m2 = Matrix4x4.CreateFromQuaternion(actual);
+                var m2 = Matrix4x4.CreateFromQuaternion(actual);
                 Assert.True(MathHelper.Equal(matrix, m2),
                     $"Quaternion.CreateFromQuaternion angle:{angle} did not return the expected value: matrix {matrix} m2 {m2}");
             }
@@ -700,21 +700,21 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionFromRotationMatrixTest5()
         {
-            for (float angle = 0.0f; angle < 720.0f; angle += 10.0f)
+            for (var angle = 0.0f; angle < 720.0f; angle += 10.0f)
             {
-                Matrix4x4 matrix = Matrix4x4.CreateRotationX(angle) * Matrix4x4.CreateRotationY(angle) * Matrix4x4.CreateRotationZ(angle);
+                var matrix = Matrix4x4.CreateRotationX(angle) * Matrix4x4.CreateRotationY(angle) * Matrix4x4.CreateRotationZ(angle);
 
-                Quaternion expected =
+                var expected =
                     Quaternion.CreateFromAxisAngle(Vector3.UnitZ, angle) *
                     Quaternion.CreateFromAxisAngle(Vector3.UnitY, angle) *
                     Quaternion.CreateFromAxisAngle(Vector3.UnitX, angle);
 
-                Quaternion actual = Quaternion.CreateFromRotationMatrix(matrix);
+                var actual = Quaternion.CreateFromRotationMatrix(matrix);
                 Assert.True(MathHelper.EqualRotation(expected, actual),
                     $"Quaternion.CreateFromRotationMatrix angle:{angle} did not return the expected value: expected {expected} actual {actual}");
 
                 // make sure convert back to matrix is same as we passed matrix.
-                Matrix4x4 m2 = Matrix4x4.CreateFromQuaternion(actual);
+                var m2 = Matrix4x4.CreateFromQuaternion(actual);
                 Assert.True(MathHelper.Equal(matrix, m2),
                     $"Quaternion.CreateFromQuaternion angle:{angle} did not return the expected value: matrix {matrix} m2 {m2}");
             }
@@ -725,16 +725,16 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionFromRotationMatrixWithScaledMatrixTest1()
         {
-            float angle = MathHelper.ToRadians(180.0f);
-            Matrix4x4 matrix = Matrix4x4.CreateRotationY(angle) * Matrix4x4.CreateRotationZ(angle);
+            var angle = MathHelper.ToRadians(180.0f);
+            var matrix = Matrix4x4.CreateRotationY(angle) * Matrix4x4.CreateRotationZ(angle);
 
-            Quaternion expected = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, angle) * Quaternion.CreateFromAxisAngle(Vector3.UnitY, angle);
-            Quaternion actual = Quaternion.CreateFromRotationMatrix(matrix);
+            var expected = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, angle) * Quaternion.CreateFromAxisAngle(Vector3.UnitY, angle);
+            var actual = Quaternion.CreateFromRotationMatrix(matrix);
             Assert.True(MathHelper.EqualRotation(expected, actual),
                 $"Quaternion.CreateFromRotationMatrix did not return the expected value: expected {expected} actual {actual}");
 
             // make sure convert back to matrix is same as we passed matrix.
-            Matrix4x4 m2 = Matrix4x4.CreateFromQuaternion(actual);
+            var m2 = Matrix4x4.CreateFromQuaternion(actual);
             Assert.True(MathHelper.Equal(matrix, m2),
                 $"Quaternion.CreateFromQuaternion did not return the expected value: matrix {matrix} m2 {m2}");
         }
@@ -744,16 +744,16 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionFromRotationMatrixWithScaledMatrixTest2()
         {
-            float angle = MathHelper.ToRadians(180.0f);
-            Matrix4x4 matrix = Matrix4x4.CreateRotationX(angle) * Matrix4x4.CreateRotationZ(angle);
+            var angle = MathHelper.ToRadians(180.0f);
+            var matrix = Matrix4x4.CreateRotationX(angle) * Matrix4x4.CreateRotationZ(angle);
 
-            Quaternion expected = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, angle) * Quaternion.CreateFromAxisAngle(Vector3.UnitX, angle);
-            Quaternion actual = Quaternion.CreateFromRotationMatrix(matrix);
+            var expected = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, angle) * Quaternion.CreateFromAxisAngle(Vector3.UnitX, angle);
+            var actual = Quaternion.CreateFromRotationMatrix(matrix);
             Assert.True(MathHelper.EqualRotation(expected, actual),
                 $"Quaternion.CreateFromRotationMatrix did not return the expected value: expected {expected} actual {actual}");
 
             // make sure convert back to matrix is same as we passed matrix.
-            Matrix4x4 m2 = Matrix4x4.CreateFromQuaternion(actual);
+            var m2 = Matrix4x4.CreateFromQuaternion(actual);
             Assert.True(MathHelper.Equal(matrix, m2),
                 $"Quaternion.CreateFromQuaternion did not return the expected value: matrix {matrix} m2 {m2}");
         }
@@ -763,16 +763,16 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionFromRotationMatrixWithScaledMatrixTest3()
         {
-            float angle = MathHelper.ToRadians(180.0f);
-            Matrix4x4 matrix = Matrix4x4.CreateRotationX(angle) * Matrix4x4.CreateRotationY(angle);
+            var angle = MathHelper.ToRadians(180.0f);
+            var matrix = Matrix4x4.CreateRotationX(angle) * Matrix4x4.CreateRotationY(angle);
 
-            Quaternion expected = Quaternion.CreateFromAxisAngle(Vector3.UnitY, angle) * Quaternion.CreateFromAxisAngle(Vector3.UnitX, angle);
-            Quaternion actual = Quaternion.CreateFromRotationMatrix(matrix);
+            var expected = Quaternion.CreateFromAxisAngle(Vector3.UnitY, angle) * Quaternion.CreateFromAxisAngle(Vector3.UnitX, angle);
+            var actual = Quaternion.CreateFromRotationMatrix(matrix);
             Assert.True(MathHelper.EqualRotation(expected, actual),
                 $"Quaternion.CreateFromRotationMatrix did not return the expected value: expected {expected} actual {actual}");
 
             // make sure convert back to matrix is same as we passed matrix.
-            Matrix4x4 m2 = Matrix4x4.CreateFromQuaternion(actual);
+            var m2 = Matrix4x4.CreateFromQuaternion(actual);
             Assert.True(MathHelper.Equal(matrix, m2),
                 $"Quaternion.CreateFromQuaternion did not return the expected value: matrix {matrix} m2 {m2}");
         }
@@ -781,12 +781,12 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionEqualsTest1()
         {
-            Quaternion a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
-            Quaternion b = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var a = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
+            var b = new Quaternion(1.0f, 2.0f, 3.0f, 4.0f);
 
             // case 1: compare between same values
-            bool expected = true;
-            bool actual = a.Equals(b);
+            var expected = true;
+            var actual = a.Equals(b);
             Assert.AreEqual(expected, actual);
 
             // case 2: compare between different values
@@ -800,7 +800,7 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionIdentityTest()
         {
-            Quaternion val = new Quaternion(0, 0, 0, 1);
+            var val = new Quaternion(0, 0, 0, 1);
             Assert.AreEqual(val, Quaternion.Identity);
         }
 
@@ -820,10 +820,10 @@ namespace Ara3D.Tests
         [Test]
         public void QuaternionEqualsNanTest()
         {
-            Quaternion a = new Quaternion(float.NaN, 0, 0, 0);
-            Quaternion b = new Quaternion(0, float.NaN, 0, 0);
-            Quaternion c = new Quaternion(0, 0, float.NaN, 0);
-            Quaternion d = new Quaternion(0, 0, 0, float.NaN);
+            var a = new Quaternion(float.NaN, 0, 0, 0);
+            var b = new Quaternion(0, float.NaN, 0, 0);
+            var c = new Quaternion(0, 0, float.NaN, 0);
+            var d = new Quaternion(0, 0, 0, float.NaN);
 
             Assert.False(a == new Quaternion(0, 0, 0, 0));
             Assert.False(b == new Quaternion(0, 0, 0, 0));
@@ -871,6 +871,20 @@ namespace Ara3D.Tests
         {
             private QuaternionPlusFloat _a;
             private QuaternionPlusFloat _b;
+        }
+
+        [Test]
+        public static void ToEulerAndBack()
+        {
+            var x = (float)Math.PI / 5f;
+            var y = (float)Math.PI * 2f / 7f;
+            var z = (float)Math.PI / 3f;
+            var euler = new Vector3(x, y, z);
+            var quat = Quaternion.CreateFromEulerAngles(euler);
+            var euler2 = quat.ToEulerAngles();
+            Assert.AreEqual(euler.X, euler2.X, 0.001f);
+            Assert.AreEqual(euler.Y, euler2.Y, 0.001f);
+            Assert.AreEqual(euler.Z, euler2.Z, 0.001f);
         }
     }
 }

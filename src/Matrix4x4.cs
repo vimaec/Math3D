@@ -1,4 +1,5 @@
 // MIT License 
+// Copyright (C) 2019 VIMaec LLC.
 // Copyright (C) 2019 Ara 3D. Inc
 // https://ara3d.com
 // Licensed to the .NET Foundation under one or more agreements.
@@ -6,12 +7,13 @@
 // See the LICENSE file in the project root for more information.
 
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 
-namespace Ara3D
+namespace Vim.Math3d
 {
     /// <summary>
     /// A structure encapsulating a 4x4 matrix.
@@ -29,7 +31,7 @@ namespace Ara3D
         public Vector3 Row2 => new Vector3(M31, M32, M33);
         public Vector3 Row3 => new Vector3(M41, M42, M43);
 
-        public Vector3 GetRow(int row) 
+        public Vector3 GetRow(int row)
             => row == 0 ? Row0 : row == 1 ? Row1 : row == 2 ? Row2 : Row3;
 
         public Vector3 GetCol(int col)
@@ -117,7 +119,7 @@ namespace Ara3D
         /// <summary>
         /// Returns whether the matrix is the identity matrix.
         /// </summary>
-        public bool IsIdentity => 
+        public bool IsIdentity =>
             M11 == 1f && M22 == 1f && M33 == 1f && M44 == 1f && // Check diagonal element first for early out.
             M12 == 0f && M13 == 0f && M14 == 0f &&
             M21 == 0f && M23 == 0f && M24 == 0f &&
@@ -135,7 +137,7 @@ namespace Ara3D
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Matrix4x4 SetTranslation(Vector3 v)
-            => FromRows(Row0, Row1, Row2, v);
+            => CreateFromRows(Row0, Row1, Row2, v);
 
         /// <summary>
         /// Constructs a Matrix4x4 from the given components.
@@ -168,15 +170,23 @@ namespace Ara3D
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Matrix4x4 FromRows(Vector3 row0, Vector3 row1, Vector3 row2)
-            => FromRows(row0, row1, row2, Vector3.Zero);
+        public static Matrix4x4 CreateFromRows(Vector3 row0, Vector3 row1, Vector3 row2)
+            => CreateFromRows(row0.ToVector4(), row1.ToVector4(), row2.ToVector4(), new Vector4(0, 0, 0, 1));
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Matrix4x4 FromRows(Vector3 row0, Vector3 row1, Vector3 row2, Vector3 pos)
-            => new Matrix4x4(row0.X, row0.Y, row0.Z, 0f,
-                row1.X, row1.Y, row1.Z, 0f,
-                row2.X, row2.Y, row2.Z, 0f,
-                pos.X, pos.Y, pos.Z, 1f);
+        public static Matrix4x4 CreateFromRows(Vector3 row0, Vector3 row1, Vector3 row2, Vector3 row3)
+            => CreateFromRows(row0.ToVector4(), row1.ToVector4(), row2.ToVector4(), new Vector4(row3.X, row3.Y, row3.Z, 1));
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Matrix4x4 CreateFromRows(Vector4 row0, Vector4 row1, Vector4 row2)
+            => CreateFromRows(row0.ToVector3(), row1.ToVector3(), row2.ToVector3(), Vector3.Zero);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Matrix4x4 CreateFromRows(Vector4 row0, Vector4 row1, Vector4 row2, Vector4 row3)
+            => new Matrix4x4(row0.X, row0.Y, row0.Z, row0.W,
+                row1.X, row1.Y, row1.Z, row1.W,
+                row2.X, row2.Y, row2.Z, row2.W,
+                row3.X, row3.Y, row3.Z, row3.W);
 
         /// <summary>
         /// Creates a spherical billboard that rotates around a specified object position.
@@ -419,60 +429,14 @@ namespace Ara3D
         /// <returns>The scaling matrix.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Matrix4x4 CreateScale(Vector3 scales)
-        {
-            Matrix4x4 result;
-
-            result.M11 = scales.X;
-            result.M12 = 0.0f;
-            result.M13 = 0.0f;
-            result.M14 = 0.0f;
-            result.M21 = 0.0f;
-            result.M22 = scales.Y;
-            result.M23 = 0.0f;
-            result.M24 = 0.0f;
-            result.M31 = 0.0f;
-            result.M32 = 0.0f;
-            result.M33 = scales.Z;
-            result.M34 = 0.0f;
-            result.M41 = 0.0f;
-            result.M42 = 0.0f;
-            result.M43 = 0.0f;
-            result.M44 = 1.0f;
-
-            return result;
-        }
+            => CreateScale(scales.X, scales.Y, scales.Z);
 
         /// <summary>
         /// Creates a scaling matrix with a center point.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Matrix4x4 CreateScale(Vector3 scales, Vector3 centerPoint)
-        {
-            Matrix4x4 result;
-
-            var tx = centerPoint.X * (1 - scales.X);
-            var ty = centerPoint.Y * (1 - scales.Y);
-            var tz = centerPoint.Z * (1 - scales.Z);
-
-            result.M11 = scales.X;
-            result.M12 = 0.0f;
-            result.M13 = 0.0f;
-            result.M14 = 0.0f;
-            result.M21 = 0.0f;
-            result.M22 = scales.Y;
-            result.M23 = 0.0f;
-            result.M24 = 0.0f;
-            result.M31 = 0.0f;
-            result.M32 = 0.0f;
-            result.M33 = scales.Z;
-            result.M34 = 0.0f;
-            result.M41 = tx;
-            result.M42 = ty;
-            result.M43 = tz;
-            result.M44 = 1.0f;
-
-            return result;
-        }
+            => CreateScale(scales.X, scales.Y, scales.Z, centerPoint);
 
         /// <summary>
         /// Creates a uniform scaling matrix that scales equally on each axis.
@@ -480,29 +444,8 @@ namespace Ara3D
         /// <param name="scale">The uniform scaling factor.</param>
         /// <returns>The scaling matrix.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Matrix4x4 CreateScale(float scale)            
-        {
-            Matrix4x4 result;
-
-            result.M11 = scale;
-            result.M12 = 0.0f;
-            result.M13 = 0.0f;
-            result.M14 = 0.0f;
-            result.M21 = 0.0f;
-            result.M22 = scale;
-            result.M23 = 0.0f;
-            result.M24 = 0.0f;
-            result.M31 = 0.0f;
-            result.M32 = 0.0f;
-            result.M33 = scale;
-            result.M34 = 0.0f;
-            result.M41 = 0.0f;
-            result.M42 = 0.0f;
-            result.M43 = 0.0f;
-            result.M44 = 1.0f;
-
-            return result;
-        }
+        public static Matrix4x4 CreateScale(float scale)
+            => CreateScale(scale, scale, scale);
 
         /// <summary>
         /// Creates a uniform scaling matrix that scales equally on each axis with a center point.
@@ -512,32 +455,7 @@ namespace Ara3D
         /// <returns>The scaling matrix.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Matrix4x4 CreateScale(float scale, Vector3 centerPoint)
-        {
-            Matrix4x4 result;
-
-            var tx = centerPoint.X * (1 - scale);
-            var ty = centerPoint.Y * (1 - scale);
-            var tz = centerPoint.Z * (1 - scale);
-
-            result.M11 = scale;
-            result.M12 = 0.0f;
-            result.M13 = 0.0f;
-            result.M14 = 0.0f;
-            result.M21 = 0.0f;
-            result.M22 = scale;
-            result.M23 = 0.0f;
-            result.M24 = 0.0f;
-            result.M31 = 0.0f;
-            result.M32 = 0.0f;
-            result.M33 = scale;
-            result.M34 = 0.0f;
-            result.M41 = tx;
-            result.M42 = ty;
-            result.M43 = tz;
-            result.M44 = 1.0f;
-
-            return result;
-        }
+            => CreateScale(scale, scale, scale, centerPoint);
 
         /// <summary>
         /// Creates a matrix for rotating points around the X-axis.
@@ -1234,6 +1152,51 @@ namespace Ara3D
         }
 
         /// <summary>
+        /// Calculates the determinant of the 3x3 rotational component of the matrix.
+        /// </summary>
+        /// <returns>The determinant of the 3x3 rotational component matrix.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public float Get3x3RotationDeterminant()
+        {
+            // | a b c |
+            // | d e f | = a | e f | - b | d f | + c | d e |
+            // | g h i |     | h i |     | g i |     | g h |
+            //
+            // a | e f | = a ( ei - fh )
+            //   | h i | 
+            //
+            // b | d f | = b ( di - gf )
+            //   | g i |
+            //
+            // c | d e | = c ( dh - eg )
+            //   | g h |
+
+            float a = M11, b = M12, c = M13;
+            float d = M21, e = M22, f = M23;
+            float g = M31, h = M32, i = M33;
+
+            var ei_fh = e * i - f * h;
+            var di_gf = d * i - g * f;
+            var dh_eg = d * h - e * g;
+
+            return a * ei_fh -
+                   b * di_gf +
+                   c * dh_eg;
+        }
+
+        /// <summary>
+        /// Returns true if the 3x3 rotation determinant of the matrix is less than 0. This assumes the matrix represents
+        /// an affine transform.
+        /// </summary>
+        // From: https://math.stackexchange.com/a/1064759
+        // "If your matrix is the augmented matrix representing an affine transformation in 3D, then yes,
+        // the proper thing to do to see if it switches orientation is checking the sign of the top 3×3 determinant.
+        // This is easy to see: if your transformation is Ax+b, then the +b part is a translation and does not
+        // affect orientation, and x->Ax switches orientation iff detA < 0."
+        public bool IsReflection
+            => Get3x3RotationDeterminant() < 0;
+
+        /// <summary>
         /// Calculates the determinant of the matrix.
         /// </summary>
         /// <returns>The determinant of the matrix.</returns>
@@ -1545,6 +1508,13 @@ namespace Ara3D
         }
 
         /// <summary>
+        /// Transposes the rows and columns of a matrix.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public Matrix4x4 Transpose()
+            => Transpose(this);
+
+        /// <summary>
         /// Linearly interpolates between the corresponding values of two matrices.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -1772,24 +1742,20 @@ namespace Ara3D
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator ==(Matrix4x4 value1, Matrix4x4 value2)
-        {
-            return (value1.M11 == value2.M11 && value1.M22 == value2.M22 && value1.M33 == value2.M33 && value1.M44 == value2.M44 && // Check diagonal element first for early out.
-                    value1.M12 == value2.M12 && value1.M13 == value2.M13 && value1.M14 == value2.M14 && value1.M21 == value2.M21 && 
-                    value1.M23 == value2.M23 && value1.M24 == value2.M24 && value1.M31 == value2.M31 && value1.M32 == value2.M32 && 
-                    value1.M34 == value2.M34 && value1.M41 == value2.M41 && value1.M42 == value2.M42 && value1.M43 == value2.M43);
-        }
+            => (value1.M11 == value2.M11 && value1.M22 == value2.M22 && value1.M33 == value2.M33 && value1.M44 == value2.M44 && // Check diagonal element first for early out.
+                value1.M12 == value2.M12 && value1.M13 == value2.M13 && value1.M14 == value2.M14 && value1.M21 == value2.M21 &&
+                value1.M23 == value2.M23 && value1.M24 == value2.M24 && value1.M31 == value2.M31 && value1.M32 == value2.M32 &&
+                value1.M34 == value2.M34 && value1.M41 == value2.M41 && value1.M42 == value2.M42 && value1.M43 == value2.M43);
 
         /// <summary>
         /// Returns a boolean indicating whether the given two matrices are not equal.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator !=(Matrix4x4 value1, Matrix4x4 value2)
-        {
-            return (value1.M11 != value2.M11 || value1.M12 != value2.M12 || value1.M13 != value2.M13 || value1.M14 != value2.M14 ||
-                    value1.M21 != value2.M21 || value1.M22 != value2.M22 || value1.M23 != value2.M23 || value1.M24 != value2.M24 ||
-                    value1.M31 != value2.M31 || value1.M32 != value2.M32 || value1.M33 != value2.M33 || value1.M34 != value2.M34 ||
-                    value1.M41 != value2.M41 || value1.M42 != value2.M42 || value1.M43 != value2.M43 || value1.M44 != value2.M44);
-        }
+            => (value1.M11 != value2.M11 || value1.M12 != value2.M12 || value1.M13 != value2.M13 || value1.M14 != value2.M14 ||
+                value1.M21 != value2.M21 || value1.M22 != value2.M22 || value1.M23 != value2.M23 || value1.M24 != value2.M24 ||
+                value1.M31 != value2.M31 || value1.M32 != value2.M32 || value1.M33 != value2.M33 || value1.M34 != value2.M34 ||
+                value1.M41 != value2.M41 || value1.M42 != value2.M42 || value1.M43 != value2.M43 || value1.M44 != value2.M44);
 
         /// <summary>
         /// Returns a boolean indicating whether this matrix instance is equal to the other given matrix.
@@ -1843,7 +1809,16 @@ namespace Ara3D
         /// Attempts to extract the scale, translation, and rotation components from the given scale/rotation/translation matrix.
         /// If successful, the out parameters will contained the extracted values.
         /// https://referencesource.microsoft.com/#System.Numerics/System/Numerics/Matrix4x4.cs
-        /// </summary>        
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool Decompose(out Vector3 scale, out Quaternion rotation, out Vector3 translation)
+            => Decompose(this, out scale, out rotation, out translation);
+
+        /// <summary>
+        /// Attempts to extract the scale, translation, and rotation components from the given scale/rotation/translation matrix.
+        /// If successful, the out parameters will contained the extracted values.
+        /// https://referencesource.microsoft.com/#System.Numerics/System/Numerics/Matrix4x4.cs
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool Decompose(Matrix4x4 matrix, out Vector3 scale, out Quaternion rotation,
             out Vector3 translation)
@@ -1972,7 +1947,7 @@ namespace Ara3D
             pVectorBasis[c] = pVectorBasis[c].Normalize();
 
             // Update mat tmp;
-            var det = FromRows(pVectorBasis[0], pVectorBasis[1], pVectorBasis[2])
+            var det = CreateFromRows(pVectorBasis[0], pVectorBasis[1], pVectorBasis[2])
                 .GetDeterminant();
 
             // use Kramer's rule to check for handedness of coordinate system
@@ -1996,7 +1971,7 @@ namespace Ara3D
             else
             {
                 // generate the quaternion from the matrix
-                var matTemp = FromRows(pVectorBasis[0], pVectorBasis[1], pVectorBasis[2]);
+                var matTemp = CreateFromRows(pVectorBasis[0], pVectorBasis[1], pVectorBasis[2]);
                 rotation = Quaternion.CreateFromRotationMatrix(matTemp);
             }
 
@@ -2012,5 +1987,28 @@ namespace Ara3D
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Matrix4x4 CreateTRS(Vector3 translation, Quaternion rotation, Vector3 scale)
             => CreateTranslation(translation) * CreateRotation(rotation) * CreateScale(scale);
-    }    
+
+        /// <summary>
+        /// Get's the scale factor of each axis.  This implementation extracts the scale exclusively,
+        /// so it attempts to ignore rotation.  This is contrary to most math libraries
+        /// that use decompose, so a negation on Y becomes a 90 degree rotation and a negation on X.
+        /// We have implemented this extraction to be able to quickly remove scaling from matrices.
+        /// Multiplying a matrix by the inverse of it's direct scale will preserve it's current rotation.
+        /// It's implemented this way mostly so we can get easy testing on unit tests, and because this
+        /// implementation is equally valid.
+        /// NOTE: This could probably be improved to handle more generic cases by using
+        /// CrossProduct to determine axis flipping: (X Cross Y) Dot Z < 0 == Flip
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public Vector3 ExtractDirectScale()
+        => new Vector3(
+                Row0.Length() * (M11 > 0 ? 1 : -1),
+                Row1.Length() * (M22 > 0 ? 1 : -1),
+                Row2.Length() * (M33 > 0 ? 1 : -1)
+            );
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public Matrix4x4 ScaleTranslation(float amount)
+            => SetTranslation(Translation * amount);
+    }
 }

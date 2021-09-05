@@ -1,4 +1,5 @@
-// MIT License 
+// MIT License
+// Copyright (C) 2019 VIMaec LLC.
 // Copyright (C) 2019 Ara 3D. Inc
 // https://ara3d.com
 // Licensed to the .NET Foundation under one or more agreements.
@@ -7,7 +8,7 @@
 
 using System.Runtime.CompilerServices;
 
-namespace Ara3D
+namespace Vim.Math3d
 {
     /// <summary>
     /// A structure encapsulating a 3D Plane
@@ -35,6 +36,18 @@ namespace Ara3D
             var n = a.Cross(b);
             var d = -n.Normalize().Dot(point1);
             return new Plane(n.Normalize(), d);
+        }
+
+        /// <summary>
+        /// Creates a Plane with the given normal that contains the point
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Plane CreateFromNormalAndPoint(Vector3 normal, Vector3 point)
+        {
+            var n = normal.Normalize();
+            var d = n.Dot(point);
+
+            return new Plane(n, d);
         }
 
         /// <summary>
@@ -112,6 +125,16 @@ namespace Ara3D
                 x * m12 + y * m22 + z * m32,
                 x * m13 + y * m23 + z * m33,
                 D);
+        }
+
+        /// <summary>
+        /// Projects a point onto the plane
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector3 ProjectPointOntoPlane(Plane plane, Vector3 point)
+        {
+            var dist = point.Dot(plane.Normal) - plane.D;
+            return point - plane.Normal * dist;
         }
 
         /// <summary>

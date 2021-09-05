@@ -1,4 +1,5 @@
-// MIT License 
+// MIT License
+// Copyright (C) 2019 VIMaec LLC.
 // Copyright (C) 2019 Ara 3D. Inc
 // https://ara3d.com
 // Copyright (C) The Mono.Xna Team
@@ -7,7 +8,7 @@
 
 using System;
 
-namespace Ara3D
+namespace Vim.Math3d
 {
     public static class Constants
     {
@@ -27,7 +28,9 @@ namespace Ara3D
         public const double DegreesToRadians = 0.017453292519943295769236907684886;
 
         public const double OneTenthOfADegree = DegreesToRadians / 10;
-        public const double FeetToMm = 0.00328084;
-        public const double MmToFeet = 1 / FeetToMm;
+
+        // TODO: BUG: these two values are inverted dumb-dumb
+        public const double MmToFeet = 0.00328084;
+        public const double FeetToMm = 1 / MmToFeet;
     }
 }

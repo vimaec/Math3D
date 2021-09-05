@@ -1,4 +1,4 @@
-﻿namespace Ara3D
+﻿namespace Vim.Math3d
 {
     public interface IPoints
     {

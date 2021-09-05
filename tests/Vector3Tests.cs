@@ -2,11 +2,10 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-using System.Globalization;
 using System.Runtime.InteropServices;
 using NUnit.Framework;
 
-namespace Ara3D.Tests
+namespace Vim.Math3d.Tests
 {
     public class Vector3Tests
     {
@@ -20,19 +19,19 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3GetHashCodeTest()
         {
-            Vector3 v1 = new Vector3(2.0f, 3.0f, 3.3f);
-            Vector3 v2 = new Vector3(2.0f, 3.0f, 3.3f);
-            Vector3 v3 = new Vector3(2.0f, 3.0f, 3.3f);
-            Vector3 v5 = new Vector3(3.0f, 2.0f, 3.3f);
+            var v1 = new Vector3(2.0f, 3.0f, 3.3f);
+            var v2 = new Vector3(2.0f, 3.0f, 3.3f);
+            var v3 = new Vector3(2.0f, 3.0f, 3.3f);
+            var v5 = new Vector3(3.0f, 2.0f, 3.3f);
             Assert.AreEqual(v1.GetHashCode(), v1.GetHashCode());
             Assert.AreEqual(v1.GetHashCode(), v2.GetHashCode());
             Assert.AreNotEqual(v1.GetHashCode(), v5.GetHashCode());
             Assert.AreEqual(v1.GetHashCode(), v3.GetHashCode());
-            Vector3 v4 = new Vector3(0.0f, 0.0f, 0.0f);
-            Vector3 v6 = new Vector3(1.0f, 0.0f, 0.0f);
-            Vector3 v7 = new Vector3(0.0f, 1.0f, 0.0f);
-            Vector3 v8 = new Vector3(1.0f, 1.0f, 1.0f);
-            Vector3 v9 = new Vector3(1.0f, 1.0f, 0.0f);
+            var v4 = new Vector3(0.0f, 0.0f, 0.0f);
+            var v6 = new Vector3(1.0f, 0.0f, 0.0f);
+            var v7 = new Vector3(0.0f, 1.0f, 0.0f);
+            var v8 = new Vector3(1.0f, 1.0f, 1.0f);
+            var v9 = new Vector3(1.0f, 1.0f, 0.0f);
             Assert.AreNotEqual(v4.GetHashCode(), v6.GetHashCode());
             Assert.AreNotEqual(v4.GetHashCode(), v7.GetHashCode());
             Assert.AreNotEqual(v4.GetHashCode(), v8.GetHashCode());
@@ -46,10 +45,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3CrossTest()
         {
-            Vector3 a = new Vector3(1.0f, 0.0f, 0.0f);
-            Vector3 b = new Vector3(0.0f, 1.0f, 0.0f);
+            var a = new Vector3(1.0f, 0.0f, 0.0f);
+            var b = new Vector3(0.0f, 1.0f, 0.0f);
 
-            Vector3 expected = new Vector3(0.0f, 0.0f, 1.0f);
+            var expected = new Vector3(0.0f, 0.0f, 1.0f);
             Vector3 actual;
 
             actual = MathOps.Cross(a, b);
@@ -61,11 +60,11 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3CrossTest1()
         {
-            Vector3 a = new Vector3(0.0f, 1.0f, 0.0f);
-            Vector3 b = new Vector3(0.0f, 1.0f, 0.0f);
+            var a = new Vector3(0.0f, 1.0f, 0.0f);
+            var b = new Vector3(0.0f, 1.0f, 0.0f);
 
-            Vector3 expected = new Vector3(0.0f, 0.0f, 0.0f);
-            Vector3 actual = MathOps.Cross(a, b);
+            var expected = new Vector3(0.0f, 0.0f, 0.0f);
+            var actual = MathOps.Cross(a, b);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Cross did not return the expected value.");
         }
 
@@ -73,10 +72,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3DistanceTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 b = new Vector3(4.0f, 5.0f, 6.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var b = new Vector3(4.0f, 5.0f, 6.0f);
 
-            float expected = (float)System.Math.Sqrt(27);
+            var expected = (float)System.Math.Sqrt(27);
             float actual;
 
             actual = MathOps.Distance(a, b);
@@ -88,10 +87,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3DistanceTest1()
         {
-            Vector3 a = new Vector3(1.051f, 2.05f, 3.478f);
-            Vector3 b = new Vector3(1.051f, 2.05f, 3.478f);
+            var a = new Vector3(1.051f, 2.05f, 3.478f);
+            var b = new Vector3(1.051f, 2.05f, 3.478f);
 
-            float actual = MathOps.Distance(a, b);
+            var actual = MathOps.Distance(a, b);
             Assert.AreEqual(0.0f, actual);
         }
 
@@ -99,10 +98,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3DistanceSquaredTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 b = new Vector3(4.0f, 5.0f, 6.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var b = new Vector3(4.0f, 5.0f, 6.0f);
 
-            float expected = 27.0f;
+            var expected = 27.0f;
             float actual;
 
             actual = MathOps.DistanceSquared(a, b);
@@ -113,10 +112,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3DotTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 b = new Vector3(4.0f, 5.0f, 6.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var b = new Vector3(4.0f, 5.0f, 6.0f);
 
-            float expected = 32.0f;
+            var expected = 32.0f;
             float actual;
 
             actual = MathOps.Dot(a, b);
@@ -128,13 +127,13 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3DotTest1()
         {
-            Vector3 a = new Vector3(1.55f, 1.55f, 1);
-            Vector3 b = new Vector3(2.5f, 3, 1.5f);
-            Vector3 c = MathOps.Cross(a, b);
+            var a = new Vector3(1.55f, 1.55f, 1);
+            var b = new Vector3(2.5f, 3, 1.5f);
+            var c = MathOps.Cross(a, b);
 
-            float expected = 0.0f;
-            float actual1 = MathOps.Dot(a, c);
-            float actual2 = MathOps.Dot(b, c);
+            var expected = 0.0f;
+            var actual1 = MathOps.Dot(a, c);
+            var actual2 = MathOps.Dot(b, c);
             Assert.True(MathHelper.Equal(expected, actual1), "Vector3f.Dot did not return the expected value.");
             Assert.True(MathHelper.Equal(expected, actual2), "Vector3f.Dot did not return the expected value.");
         }
@@ -143,13 +142,13 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3LengthTest()
         {
-            Vector2 a = new Vector2(1.0f, 2.0f);
+            var a = new Vector2(1.0f, 2.0f);
 
-            float z = 3.0f;
+            var z = 3.0f;
 
-            Vector3 target = new Vector3(a, z);
+            var target = new Vector3(a, z);
 
-            float expected = (float)System.Math.Sqrt(14.0f);
+            var expected = (float)System.Math.Sqrt(14.0f);
             float actual;
 
             actual = target.Length();
@@ -161,10 +160,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3LengthTest1()
         {
-            Vector3 target = new Vector3();
+            var target = new Vector3();
 
-            float expected = 0.0f;
-            float actual = target.Length();
+            var expected = 0.0f;
+            var actual = target.Length();
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Length did not return the expected value.");
         }
 
@@ -172,13 +171,13 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3LengthSquaredTest()
         {
-            Vector2 a = new Vector2(1.0f, 2.0f);
+            var a = new Vector2(1.0f, 2.0f);
 
-            float z = 3.0f;
+            var z = 3.0f;
 
-            Vector3 target = new Vector3(a, z);
+            var target = new Vector3(a, z);
 
-            float expected = 14.0f;
+            var expected = 14.0f;
             float actual;
 
             actual = target.LengthSquared();
@@ -189,10 +188,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3MinTest()
         {
-            Vector3 a = new Vector3(-1.0f, 4.0f, -3.0f);
-            Vector3 b = new Vector3(2.0f, 1.0f, -1.0f);
+            var a = new Vector3(-1.0f, 4.0f, -3.0f);
+            var b = new Vector3(2.0f, 1.0f, -1.0f);
 
-            Vector3 expected = new Vector3(-1.0f, 1.0f, -3.0f);
+            var expected = new Vector3(-1.0f, 1.0f, -3.0f);
             Vector3 actual;
             actual = MathOps.Min(a, b);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Min did not return the expected value.");
@@ -202,10 +201,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3MaxTest()
         {
-            Vector3 a = new Vector3(-1.0f, 4.0f, -3.0f);
-            Vector3 b = new Vector3(2.0f, 1.0f, -1.0f);
+            var a = new Vector3(-1.0f, 4.0f, -3.0f);
+            var b = new Vector3(2.0f, 1.0f, -1.0f);
 
-            Vector3 expected = new Vector3(2.0f, 4.0f, -1.0f);
+            var expected = new Vector3(2.0f, 4.0f, -1.0f);
             Vector3 actual;
             actual = MathOps.Max(a, b);
             Assert.True(MathHelper.Equal(expected, actual), "MathOps.Max did not return the expected value.");
@@ -214,8 +213,8 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3MinMaxCodeCoverageTest()
         {
-            Vector3 min = Vector3.Zero;
-            Vector3 max = Vector3.One;
+            var min = Vector3.Zero;
+            var max = Vector3.One;
             Vector3 actual;
 
             // Min.
@@ -237,12 +236,12 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3LerpTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 b = new Vector3(4.0f, 5.0f, 6.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var b = new Vector3(4.0f, 5.0f, 6.0f);
 
-            float t = 0.5f;
+            var t = 0.5f;
 
-            Vector3 expected = new Vector3(2.5f, 3.5f, 4.5f);
+            var expected = new Vector3(2.5f, 3.5f, 4.5f);
             Vector3 actual;
 
             actual = MathOps.Lerp(a, b, t);
@@ -254,12 +253,12 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3LerpTest1()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 b = new Vector3(4.0f, 5.0f, 6.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var b = new Vector3(4.0f, 5.0f, 6.0f);
 
-            float t = 0.0f;
-            Vector3 expected = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 actual = MathOps.Lerp(a, b, t);
+            var t = 0.0f;
+            var expected = new Vector3(1.0f, 2.0f, 3.0f);
+            var actual = MathOps.Lerp(a, b, t);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Lerp did not return the expected value.");
         }
 
@@ -268,12 +267,12 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3LerpTest2()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 b = new Vector3(4.0f, 5.0f, 6.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var b = new Vector3(4.0f, 5.0f, 6.0f);
 
-            float t = 1.0f;
-            Vector3 expected = new Vector3(4.0f, 5.0f, 6.0f);
-            Vector3 actual = MathOps.Lerp(a, b, t);
+            var t = 1.0f;
+            var expected = new Vector3(4.0f, 5.0f, 6.0f);
+            var actual = MathOps.Lerp(a, b, t);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Lerp did not return the expected value.");
         }
 
@@ -282,12 +281,12 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3LerpTest3()
         {
-            Vector3 a = new Vector3(0.0f, 0.0f, 0.0f);
-            Vector3 b = new Vector3(4.0f, 5.0f, 6.0f);
+            var a = new Vector3(0.0f, 0.0f, 0.0f);
+            var b = new Vector3(4.0f, 5.0f, 6.0f);
 
-            float t = 2.0f;
-            Vector3 expected = new Vector3(8.0f, 10.0f, 12.0f);
-            Vector3 actual = MathOps.Lerp(a, b, t);
+            var t = 2.0f;
+            var expected = new Vector3(8.0f, 10.0f, 12.0f);
+            var actual = MathOps.Lerp(a, b, t);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Lerp did not return the expected value.");
         }
 
@@ -296,12 +295,12 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3LerpTest4()
         {
-            Vector3 a = new Vector3(0.0f, 0.0f, 0.0f);
-            Vector3 b = new Vector3(4.0f, 5.0f, 6.0f);
+            var a = new Vector3(0.0f, 0.0f, 0.0f);
+            var b = new Vector3(4.0f, 5.0f, 6.0f);
 
-            float t = -2.0f;
-            Vector3 expected = new Vector3(-8.0f, -10.0f, -12.0f);
-            Vector3 actual = MathOps.Lerp(a, b, t);
+            var t = -2.0f;
+            var expected = new Vector3(-8.0f, -10.0f, -12.0f);
+            var actual = MathOps.Lerp(a, b, t);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Lerp did not return the expected value.");
         }
 
@@ -310,12 +309,12 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3LerpTest5()
         {
-            Vector3 a = new Vector3(1.68f, 2.34f, 5.43f);
-            Vector3 b = a;
+            var a = new Vector3(1.68f, 2.34f, 5.43f);
+            var b = a;
 
-            float t = 0.18f;
-            Vector3 expected = new Vector3(1.68f, 2.34f, 5.43f);
-            Vector3 actual = MathOps.Lerp(a, b, t);
+            var t = 0.18f;
+            var expected = new Vector3(1.68f, 2.34f, 5.43f);
+            var actual = MathOps.Lerp(a, b, t);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Lerp did not return the expected value.");
         }
 
@@ -323,12 +322,12 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3ReflectTest()
         {
-            Vector3 a = MathOps.Normalize(new Vector3(1.0f, 1.0f, 1.0f));
+            var a = MathOps.Normalize(new Vector3(1.0f, 1.0f, 1.0f));
 
             // Reflect on XZ plane.
-            Vector3 n = new Vector3(0.0f, 1.0f, 0.0f);
-            Vector3 expected = new Vector3(a.X, -a.Y, a.Z);
-            Vector3 actual = MathOps.Reflect(a, n);
+            var n = new Vector3(0.0f, 1.0f, 0.0f);
+            var expected = new Vector3(a.X, -a.Y, a.Z);
+            var actual = MathOps.Reflect(a, n);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Reflect did not return the expected value.");
 
             // Reflect on XY plane.
@@ -349,12 +348,12 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3ReflectTest1()
         {
-            Vector3 n = new Vector3(0.45f, 1.28f, 0.86f);
+            var n = new Vector3(0.45f, 1.28f, 0.86f);
             n = MathOps.Normalize(n);
-            Vector3 a = n;
+            var a = n;
 
-            Vector3 expected = -n;
-            Vector3 actual = MathOps.Reflect(a, n);
+            var expected = -n;
+            var actual = MathOps.Reflect(a, n);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Reflect did not return the expected value.");
         }
 
@@ -363,12 +362,12 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3ReflectTest2()
         {
-            Vector3 n = new Vector3(0.45f, 1.28f, 0.86f);
+            var n = new Vector3(0.45f, 1.28f, 0.86f);
             n = MathOps.Normalize(n);
-            Vector3 a = -n;
+            var a = -n;
 
-            Vector3 expected = n;
-            Vector3 actual = MathOps.Reflect(a, n);
+            var expected = n;
+            var actual = MathOps.Reflect(a, n);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Reflect did not return the expected value.");
         }
 
@@ -377,13 +376,13 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3ReflectTest3()
         {
-            Vector3 n = new Vector3(0.45f, 1.28f, 0.86f);
-            Vector3 temp = new Vector3(1.28f, 0.45f, 0.01f);
+            var n = new Vector3(0.45f, 1.28f, 0.86f);
+            var temp = new Vector3(1.28f, 0.45f, 0.01f);
             // find a perpendicular vector of n
-            Vector3 a = MathOps.Cross(temp, n);
+            var a = MathOps.Cross(temp, n);
 
-            Vector3 expected = a;
-            Vector3 actual = MathOps.Reflect(a, n);
+            var expected = a;
+            var actual = MathOps.Reflect(a, n);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Reflect did not return the expected value.");
         }
 
@@ -391,8 +390,8 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3TransformTest()
         {
-            Vector3 v = new Vector3(1.0f, 2.0f, 3.0f);
-            Matrix4x4 m =
+            var v = new Vector3(1.0f, 2.0f, 3.0f);
+            var m =
                 Matrix4x4.CreateRotationX(MathHelper.ToRadians(30.0f)) *
                 Matrix4x4.CreateRotationY(MathHelper.ToRadians(30.0f)) *
                 Matrix4x4.CreateRotationZ(MathHelper.ToRadians(30.0f));
@@ -400,10 +399,10 @@ namespace Ara3D.Tests
             m.M42 = 20.0f;
             m.M43 = 30.0f;
 
-            Vector3 expected = new Vector3(12.191987f, 21.533493f, 32.616024f);
+            var expected = new Vector3(12.191987f, 21.533493f, 32.616024f);
             Vector3 actual;
 
-            actual = MathOps.Transform(v, m);
+            actual = v.Transform(m);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Transform did not return the expected value.");
         }
 
@@ -411,14 +410,14 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3ClampTest()
         {
-            Vector3 a = new Vector3(0.5f, 0.3f, 0.33f);
-            Vector3 min = new Vector3(0.0f, 0.1f, 0.13f);
-            Vector3 max = new Vector3(1.0f, 1.1f, 1.13f);
+            var a = new Vector3(0.5f, 0.3f, 0.33f);
+            var min = new Vector3(0.0f, 0.1f, 0.13f);
+            var max = new Vector3(1.0f, 1.1f, 1.13f);
 
             // Normal case.
             // Case N1: specified value is in the range.
-            Vector3 expected = new Vector3(0.5f, 0.3f, 0.33f);
-            Vector3 actual = MathOps.Clamp(a, min, max);
+            var expected = new Vector3(0.5f, 0.3f, 0.33f);
+            var actual = MathOps.Clamp(a, min, max);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Clamp did not return the expected value.");
 
             // Normal case.
@@ -468,8 +467,8 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3TransformNormalTest()
         {
-            Vector3 v = new Vector3(1.0f, 2.0f, 3.0f);
-            Matrix4x4 m =
+            var v = new Vector3(1.0f, 2.0f, 3.0f);
+            var m =
                 Matrix4x4.CreateRotationX(MathHelper.ToRadians(30.0f)) *
                 Matrix4x4.CreateRotationY(MathHelper.ToRadians(30.0f)) *
                 Matrix4x4.CreateRotationZ(MathHelper.ToRadians(30.0f));
@@ -477,7 +476,7 @@ namespace Ara3D.Tests
             m.M42 = 20.0f;
             m.M43 = 30.0f;
 
-            Vector3 expected = new Vector3(2.19198728f, 1.53349364f, 2.61602545f);
+            var expected = new Vector3(2.19198728f, 1.53349364f, 2.61602545f);
             Vector3 actual;
 
             actual = MathOps.TransformNormal(v, m);
@@ -488,16 +487,16 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3TransformByQuaternionTest()
         {
-            Vector3 v = new Vector3(1.0f, 2.0f, 3.0f);
+            var v = new Vector3(1.0f, 2.0f, 3.0f);
 
-            Matrix4x4 m =
+            var m =
                 Matrix4x4.CreateRotationX(MathHelper.ToRadians(30.0f)) *
                 Matrix4x4.CreateRotationY(MathHelper.ToRadians(30.0f)) *
                 Matrix4x4.CreateRotationZ(MathHelper.ToRadians(30.0f));
-            Quaternion q = Quaternion.CreateFromRotationMatrix(m);
+            var q = Quaternion.CreateFromRotationMatrix(m);
 
-            Vector3 expected = MathOps.Transform(v, m);
-            Vector3 actual = MathOps.Transform(v, q);
+            var expected = v.Transform(m);
+            var actual = v.Transform(q);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Transform did not return the expected value.");
         }
 
@@ -506,11 +505,11 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3TransformByQuaternionTest1()
         {
-            Vector3 v = new Vector3(1.0f, 2.0f, 3.0f);
-            Quaternion q = new Quaternion();
-            Vector3 expected = v;
+            var v = new Vector3(1.0f, 2.0f, 3.0f);
+            var q = new Quaternion();
+            var expected = v;
 
-            Vector3 actual = MathOps.Transform(v, q);
+            var actual = MathOps.Transform(v, q);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Transform did not return the expected value.");
         }
 
@@ -519,11 +518,11 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3TransformByQuaternionTest2()
         {
-            Vector3 v = new Vector3(1.0f, 2.0f, 3.0f);
-            Quaternion q = Quaternion.Identity;
-            Vector3 expected = v;
+            var v = new Vector3(1.0f, 2.0f, 3.0f);
+            var q = Quaternion.Identity;
+            var expected = v;
 
-            Vector3 actual = MathOps.Transform(v, q);
+            var actual = MathOps.Transform(v, q);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Transform did not return the expected value.");
         }
 
@@ -531,9 +530,9 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3NormalizeTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
 
-            Vector3 expected = new Vector3(
+            var expected = new Vector3(
                 0.26726124191242438468455348087975f,
                 0.53452248382484876936910696175951f,
                 0.80178372573727315405366044263926f);
@@ -548,10 +547,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3NormalizeTest1()
         {
-            Vector3 a = new Vector3(1.0f, 0.0f, 0.0f);
+            var a = new Vector3(1.0f, 0.0f, 0.0f);
 
-            Vector3 expected = new Vector3(1.0f, 0.0f, 0.0f);
-            Vector3 actual = MathOps.Normalize(a);
+            var expected = new Vector3(1.0f, 0.0f, 0.0f);
+            var actual = MathOps.Normalize(a);
             Assert.True(MathHelper.Equal(expected, actual), "Vector3f.Normalize did not return the expected value.");
         }
 
@@ -560,10 +559,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3NormalizeTest2()
         {
-            Vector3 a = new Vector3(0.0f, 0.0f, 0.0f);
+            var a = new Vector3(0.0f, 0.0f, 0.0f);
 
-            Vector3 expected = new Vector3(0.0f, 0.0f, 0.0f);
-            Vector3 actual = MathOps.Normalize(a);
+            var expected = new Vector3(0.0f, 0.0f, 0.0f);
+            var actual = MathOps.Normalize(a);
             Assert.True(float.IsNaN(actual.X) && float.IsNaN(actual.Y) && float.IsNaN(actual.Z), "Vector3f.Normalize did not return the expected value.");
         }
 
@@ -571,9 +570,9 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3UnaryNegationTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
 
-            Vector3 expected = new Vector3(-1.0f, -2.0f, -3.0f);
+            var expected = new Vector3(-1.0f, -2.0f, -3.0f);
             Vector3 actual;
 
             actual = -a;
@@ -584,8 +583,8 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3UnaryNegationTest1()
         {
-            Vector3 a = -new Vector3(float.NaN, float.PositiveInfinity, float.NegativeInfinity);
-            Vector3 b = -new Vector3(0.0f, 0.0f, 0.0f);
+            var a = -new Vector3(float.NaN, float.PositiveInfinity, float.NegativeInfinity);
+            var b = -new Vector3(0.0f, 0.0f, 0.0f);
             Assert.AreEqual(float.NaN, a.X);
             Assert.AreEqual(float.NegativeInfinity, a.Y);
             Assert.AreEqual(float.PositiveInfinity, a.Z);
@@ -598,11 +597,11 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3SubtractionTest()
         {
-            Vector3 a = new Vector3(4.0f, 2.0f, 3.0f);
+            var a = new Vector3(4.0f, 2.0f, 3.0f);
 
-            Vector3 b = new Vector3(1.0f, 5.0f, 7.0f);
+            var b = new Vector3(1.0f, 5.0f, 7.0f);
 
-            Vector3 expected = new Vector3(3.0f, -3.0f, -4.0f);
+            var expected = new Vector3(3.0f, -3.0f, -4.0f);
             Vector3 actual;
 
             actual = a - b;
@@ -614,11 +613,11 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3MultiplyOperatorTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
 
-            float factor = 2.0f;
+            var factor = 2.0f;
 
-            Vector3 expected = new Vector3(2.0f, 4.0f, 6.0f);
+            var expected = new Vector3(2.0f, 4.0f, 6.0f);
             Vector3 actual;
 
             actual = a * factor;
@@ -630,11 +629,11 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3MultiplyOperatorTest2()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
 
             const float factor = 2.0f;
 
-            Vector3 expected = new Vector3(2.0f, 4.0f, 6.0f);
+            var expected = new Vector3(2.0f, 4.0f, 6.0f);
             Vector3 actual;
 
             actual = factor * a;
@@ -646,11 +645,11 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3MultiplyOperatorTest3()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
 
-            Vector3 b = new Vector3(4.0f, 5.0f, 6.0f);
+            var b = new Vector3(4.0f, 5.0f, 6.0f);
 
-            Vector3 expected = new Vector3(4.0f, 10.0f, 18.0f);
+            var expected = new Vector3(4.0f, 10.0f, 18.0f);
             Vector3 actual;
 
             actual = a * b;
@@ -662,11 +661,11 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3DivisionTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
 
-            float div = 2.0f;
+            var div = 2.0f;
 
-            Vector3 expected = new Vector3(0.5f, 1.0f, 1.5f);
+            var expected = new Vector3(0.5f, 1.0f, 1.5f);
             Vector3 actual;
 
             actual = a / div;
@@ -678,11 +677,11 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3DivisionTest1()
         {
-            Vector3 a = new Vector3(4.0f, 2.0f, 3.0f);
+            var a = new Vector3(4.0f, 2.0f, 3.0f);
 
-            Vector3 b = new Vector3(1.0f, 5.0f, 6.0f);
+            var b = new Vector3(1.0f, 5.0f, 6.0f);
 
-            Vector3 expected = new Vector3(4.0f, 0.4f, 0.5f);
+            var expected = new Vector3(4.0f, 0.4f, 0.5f);
             Vector3 actual;
 
             actual = a / b;
@@ -695,11 +694,11 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3DivisionTest2()
         {
-            Vector3 a = new Vector3(-2.0f, 3.0f, float.MaxValue);
+            var a = new Vector3(-2.0f, 3.0f, float.MaxValue);
 
-            float div = 0.0f;
+            var div = 0.0f;
 
-            Vector3 actual = a / div;
+            var actual = a / div;
 
             Assert.True(float.IsNegativeInfinity(actual.X), "Vector3f.operator / did not return the expected value.");
             Assert.True(float.IsPositiveInfinity(actual.Y), "Vector3f.operator / did not return the expected value.");
@@ -711,10 +710,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3DivisionTest3()
         {
-            Vector3 a = new Vector3(0.047f, -3.0f, float.NegativeInfinity);
-            Vector3 b = new Vector3();
+            var a = new Vector3(0.047f, -3.0f, float.NegativeInfinity);
+            var b = new Vector3();
 
-            Vector3 actual = a / b;
+            var actual = a / b;
 
             Assert.True(float.IsPositiveInfinity(actual.X), "Vector3f.operator / did not return the expected value.");
             Assert.True(float.IsNegativeInfinity(actual.Y), "Vector3f.operator / did not return the expected value.");
@@ -725,10 +724,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3AdditionTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 b = new Vector3(4.0f, 5.0f, 6.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var b = new Vector3(4.0f, 5.0f, 6.0f);
 
-            Vector3 expected = new Vector3(5.0f, 7.0f, 9.0f);
+            var expected = new Vector3(5.0f, 7.0f, 9.0f);
             Vector3 actual;
 
             actual = a + b;
@@ -740,11 +739,11 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3ConstructorTest()
         {
-            float x = 1.0f;
-            float y = 2.0f;
-            float z = 3.0f;
+            var x = 1.0f;
+            var y = 2.0f;
+            var z = 3.0f;
 
-            Vector3 target = new Vector3(x, y, z);
+            var target = new Vector3(x, y, z);
             Assert.True(MathHelper.Equal(target.X, x) && MathHelper.Equal(target.Y, y) && MathHelper.Equal(target.Z, z), "Vector3f.constructor (x,y,z) did not return the expected value.");
         }
 
@@ -752,11 +751,11 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3ConstructorTest1()
         {
-            Vector2 a = new Vector2(1.0f, 2.0f);
+            var a = new Vector2(1.0f, 2.0f);
 
-            float z = 3.0f;
+            var z = 3.0f;
 
-            Vector3 target = new Vector3(a, z);
+            var target = new Vector3(a, z);
             Assert.True(MathHelper.Equal(target.X, a.X) && MathHelper.Equal(target.Y, a.Y) && MathHelper.Equal(target.Z, z), "Vector3f.constructor (Vector2f,z) did not return the expected value.");
         }
 
@@ -765,7 +764,7 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3ConstructorTest3()
         {
-            Vector3 a = new Vector3();
+            var a = new Vector3();
 
             Assert.AreEqual(a.X, 0.0f);
             Assert.AreEqual(a.Y, 0.0f);
@@ -777,7 +776,7 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3ConstructorTest4()
         {
-            Vector3 target = new Vector3(float.NaN, float.MaxValue, float.PositiveInfinity);
+            var target = new Vector3(float.NaN, float.MaxValue, float.PositiveInfinity);
 
             Assert.True(float.IsNaN(target.X), "Vector3f.constructor (Vector3f) did not return the expected value.");
             Assert.True(float.Equals(float.MaxValue, target.Y), "Vector3f.constructor (Vector3f) did not return the expected value.");
@@ -788,10 +787,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3AddTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 b = new Vector3(5.0f, 6.0f, 7.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var b = new Vector3(5.0f, 6.0f, 7.0f);
 
-            Vector3 expected = new Vector3(6.0f, 8.0f, 10.0f);
+            var expected = new Vector3(6.0f, 8.0f, 10.0f);
             Vector3 actual;
 
             actual = MathOps.Add(a, b);
@@ -802,9 +801,9 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3DivideTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            float div = 2.0f;
-            Vector3 expected = new Vector3(0.5f, 1.0f, 1.5f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var div = 2.0f;
+            var expected = new Vector3(0.5f, 1.0f, 1.5f);
             Assert.AreEqual(expected, a / div);
         }
 
@@ -812,10 +811,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3DivideTest1()
         {
-            Vector3 a = new Vector3(1.0f, 6.0f, 7.0f);
-            Vector3 b = new Vector3(5.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 6.0f, 7.0f);
+            var b = new Vector3(5.0f, 2.0f, 3.0f);
 
-            Vector3 expected = new Vector3(1.0f / 5.0f, 6.0f / 2.0f, 7.0f / 3.0f);
+            var expected = new Vector3(1.0f / 5.0f, 6.0f / 2.0f, 7.0f / 3.0f);
             Vector3 actual;
 
             actual = MathOps.Divide(a, b);
@@ -826,14 +825,14 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3EqualsTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 b = new Vector3(1.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var b = new Vector3(1.0f, 2.0f, 3.0f);
 
             // case 1: compare between same values
             object obj = b;
 
-            bool expected = true;
-            bool actual = a.Equals(obj);
+            var expected = true;
+            var actual = a.Equals(obj);
             Assert.AreEqual(expected, actual);
 
             // case 2: compare between different values
@@ -860,9 +859,9 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3MultiplyTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
             const float factor = 2.0f;
-            Vector3 expected = new Vector3(2.0f, 4.0f, 6.0f);
+            var expected = new Vector3(2.0f, 4.0f, 6.0f);
             Assert.AreEqual(expected, a * factor);
         }
 
@@ -870,9 +869,9 @@ namespace Ara3D.Tests
         [Test]
         public static void Vector3MultiplyTest2()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
             const float factor = 2.0f;
-            Vector3 expected = new Vector3(2.0f, 4.0f, 6.0f);
+            var expected = new Vector3(2.0f, 4.0f, 6.0f);
             Assert.AreEqual(expected, factor * a);
         }
 
@@ -880,10 +879,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3MultiplyTest3()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 b = new Vector3(5.0f, 6.0f, 7.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var b = new Vector3(5.0f, 6.0f, 7.0f);
 
-            Vector3 expected = new Vector3(5.0f, 12.0f, 21.0f);
+            var expected = new Vector3(5.0f, 12.0f, 21.0f);
             Vector3 actual;
 
             actual = MathOps.Multiply(a, b);
@@ -894,9 +893,9 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3NegateTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
 
-            Vector3 expected = new Vector3(-1.0f, -2.0f, -3.0f);
+            var expected = new Vector3(-1.0f, -2.0f, -3.0f);
             Vector3 actual;
 
             actual = MathOps.Negate(a);
@@ -907,12 +906,12 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3InequalityTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 b = new Vector3(1.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var b = new Vector3(1.0f, 2.0f, 3.0f);
 
             // case 1: compare between same values
-            bool expected = false;
-            bool actual = a != b;
+            var expected = false;
+            var actual = a != b;
             Assert.AreEqual(expected, actual);
 
             // case 2: compare between different values
@@ -926,12 +925,12 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3EqualityTest()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 b = new Vector3(1.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var b = new Vector3(1.0f, 2.0f, 3.0f);
 
             // case 1: compare between same values
-            bool expected = true;
-            bool actual = a == b;
+            var expected = true;
+            var actual = a == b;
             Assert.AreEqual(expected, actual);
 
             // case 2: compare between different values
@@ -945,10 +944,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3SubtractTest()
         {
-            Vector3 a = new Vector3(1.0f, 6.0f, 3.0f);
-            Vector3 b = new Vector3(5.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 6.0f, 3.0f);
+            var b = new Vector3(5.0f, 2.0f, 3.0f);
 
-            Vector3 expected = new Vector3(-4.0f, 4.0f, 0.0f);
+            var expected = new Vector3(-4.0f, 4.0f, 0.0f);
             Vector3 actual;
 
             actual = MathOps.Subtract(a, b);
@@ -959,7 +958,7 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3OneTest()
         {
-            Vector3 val = new Vector3(1.0f, 1.0f, 1.0f);
+            var val = new Vector3(1.0f, 1.0f, 1.0f);
             Assert.AreEqual(val, Vector3.One);
         }
 
@@ -967,7 +966,7 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3UnitXTest()
         {
-            Vector3 val = new Vector3(1.0f, 0.0f, 0.0f);
+            var val = new Vector3(1.0f, 0.0f, 0.0f);
             Assert.AreEqual(val, Vector3.UnitX);
         }
 
@@ -975,7 +974,7 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3UnitYTest()
         {
-            Vector3 val = new Vector3(0.0f, 1.0f, 0.0f);
+            var val = new Vector3(0.0f, 1.0f, 0.0f);
             Assert.AreEqual(val, Vector3.UnitY);
         }
 
@@ -983,7 +982,7 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3UnitZTest()
         {
-            Vector3 val = new Vector3(0.0f, 0.0f, 1.0f);
+            var val = new Vector3(0.0f, 0.0f, 1.0f);
             Assert.AreEqual(val, Vector3.UnitZ);
         }
 
@@ -991,7 +990,7 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3ZeroTest()
         {
-            Vector3 val = new Vector3(0.0f, 0.0f, 0.0f);
+            var val = new Vector3(0.0f, 0.0f, 0.0f);
             Assert.AreEqual(val, Vector3.Zero);
         }
 
@@ -999,12 +998,12 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3EqualsTest1()
         {
-            Vector3 a = new Vector3(1.0f, 2.0f, 3.0f);
-            Vector3 b = new Vector3(1.0f, 2.0f, 3.0f);
+            var a = new Vector3(1.0f, 2.0f, 3.0f);
+            var b = new Vector3(1.0f, 2.0f, 3.0f);
 
             // case 1: compare between same values
-            bool expected = true;
-            bool actual = a.Equals(b);
+            var expected = true;
+            var actual = a.Equals(b);
             Assert.AreEqual(expected, actual);
 
             // case 2: compare between different values
@@ -1018,10 +1017,10 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3ConstructorTest5()
         {
-            float value = 1.0f;
-            Vector3 target = new Vector3(value);
+            var value = 1.0f;
+            var target = new Vector3(value);
 
-            Vector3 expected = new Vector3(value, value, value);
+            var expected = new Vector3(value, value, value);
             Assert.AreEqual(expected, target);
 
             value = 2.0f;
@@ -1034,9 +1033,9 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3EqualsNanTest()
         {
-            Vector3 a = new Vector3(float.NaN, 0, 0);
-            Vector3 b = new Vector3(0, float.NaN, 0);
-            Vector3 c = new Vector3(0, 0, float.NaN);
+            var a = new Vector3(float.NaN, 0, 0);
+            var b = new Vector3(0, float.NaN, 0);
+            var c = new Vector3(0, 0, float.NaN);
 
             Assert.False(a == Vector3.Zero);
             Assert.False(b == Vector3.Zero);
@@ -1059,9 +1058,9 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3AbsTest()
         {
-            Vector3 v1 = new Vector3(-2.5f, 2.0f, 0.5f);
-            Vector3 v3 = MathOps.Abs(new Vector3(0.0f, float.NegativeInfinity, float.NaN));
-            Vector3 v = MathOps.Abs(v1);
+            var v1 = new Vector3(-2.5f, 2.0f, 0.5f);
+            var v3 = MathOps.Abs(new Vector3(0.0f, float.NegativeInfinity, float.NaN));
+            var v = MathOps.Abs(v1);
             Assert.AreEqual(2.5f, v.X);
             Assert.AreEqual(2.0f, v.Y);
             Assert.AreEqual(0.5f, v.Z);
@@ -1073,8 +1072,8 @@ namespace Ara3D.Tests
         [Test]
         public void Vector3SqrtTest()
         {
-            Vector3 a = new Vector3(-2.5f, 2.0f, 0.5f);
-            Vector3 b = new Vector3(5.5f, 4.5f, 16.5f);
+            var a = new Vector3(-2.5f, 2.0f, 0.5f);
+            var b = new Vector3(5.5f, 4.5f, 16.5f);
             Assert.AreEqual(2, (int)MathOps.SquareRoot(b).X);
             Assert.AreEqual(2, (int)MathOps.SquareRoot(b).Y);
             Assert.AreEqual(4, (int)MathOps.SquareRoot(b).Z);
@@ -1100,6 +1099,6 @@ namespace Ara3D.Tests
         {
             private Vector3PlusFloat _a;
             private Vector3PlusFloat _b;
-        }        
+        }
     }
 }

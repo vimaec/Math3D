@@ -1,30 +1,31 @@
-﻿// MIT License 
+﻿// MIT License
+// Copyright (C) 2019 VIMaec LLC.
 // Copyright (C) 2019 Ara 3D. Inc
 // https://ara3d.com
 // This file is subject to the terms and conditions defined in
 // file 'LICENSE.txt', which is part of this source code package.
 
-namespace Ara3D
+namespace Vim.Math3d
 {
     public partial struct Triangle2D
     {
         public int Count => 3;
 
         public Vector2 this[int n] => n == 0 ? A : n == 1 ? B : C;
-    
+
         // Compute the signed area of a triangle.
         public float Area => 0.5f * (A.X * (C.Y - B.Y) + B.X * (A.Y - C.Y) + C.X * (B.Y - A.Y));
 
         // Test if a given point p2 is on the left side of the line formed by p0-p1.
         public static bool OnLeftSideOfLine(Vector2 p0, Vector2 p1, Vector2 p2)
-            => new Triangle2D(p0, p2, p1).Area > 0;        
+            => new Triangle2D(p0, p2, p1).Area > 0;
 
         // Test if a given point is inside a given triangle in R2.
         public bool Contains(Vector2 pp)
         {
             // Point in triangle test using barycentric coordinates
-            var v0 = B-A;
-            var v1 = C-A;
+            var v0 = B - A;
+            var v1 = C - A;
             var v2 = pp - A;
 
             var dot00 = v0.Dot(v0);

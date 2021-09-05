@@ -1,4 +1,5 @@
-﻿// MIT License 
+﻿// MIT License
+// Copyright (C) 2019 VIMaec LLC.
 // Copyright (C) 2019 Ara 3D. Inc
 // https://ara3d.com
 // Copyright (C) The Mono.Xna Team
@@ -8,7 +9,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace Ara3D
+namespace Vim.Math3d
 {
     public partial struct Ray : ITransformable3D<Ray>
     {
@@ -148,5 +149,37 @@ namespace Ara3D
 
         public Ray Transform(Matrix4x4 mat)
             => new Ray(Position.Transform(mat), Direction.TransformNormal(mat));
+
+        // Adapted from https://en.wikipedia.org/wiki/M%C3%B6ller%E2%80%93Trumbore_intersection_algorithm
+        // Does not require or benefit from precomputed normals.
+        public float? Intersects(Triangle tri, float tolerance = Constants.Tolerance)
+        {
+            var edge1 = tri.B - tri.A;
+            var edge2 = tri.C - tri.A;
+
+            var h = Direction.Cross(edge2);
+            var a = edge1.Dot(h);
+            if (a > -tolerance && a < tolerance)
+                return null; // This ray is parallel to this triangle.
+
+            var f = 1.0f / a;
+            var s = Position - tri.A;
+            var u = f * s.Dot(h);
+            if (u < 0.0 || u > 1.0)
+                return null;
+
+            var q = s.Cross(edge1);
+            var v = f * Direction.Dot(q);
+            if (v < 0.0 || u + v > 1.0)
+                return null;
+
+            // At this stage we can compute t to find out where the intersection point is on the line.
+            var t = f * edge2.Dot(q);
+            if (t > tolerance)
+                return t;
+
+            // This means that there is a line intersection but not a ray intersection.
+            return null;
+        }
     }
 }

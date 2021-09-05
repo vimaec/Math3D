@@ -1,12 +1,24 @@
-﻿// MIT License 
+﻿// MIT License
+// Copyright (C) 2019 VIMaec LLC.
 // Copyright (C) 2019 Ara 3D. Inc
 // https://ara3d.com
 
 using System;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 
-namespace Ara3D
+namespace Vim.Math3d
 {
+    public partial struct ColorRGBA
+    {
+       public static readonly ColorRGBA LightRed = new ColorRGBA(255, 128, 128, 255);
+       public static readonly ColorRGBA DarkRed = new ColorRGBA(255, 0, 0, 255);
+       public static readonly ColorRGBA LightGreen = new ColorRGBA(128, 255, 128, 255);
+       public static readonly ColorRGBA DarkGreen = new ColorRGBA(0, 255, 0, 255);
+       public static readonly ColorRGBA LightBlue = new ColorRGBA(128, 128, 255, 255);
+       public static readonly ColorRGBA DarkBlue = new ColorRGBA(0, 0, 255, 255);
+    }
+
     public partial struct Vector4 : ITransformable3D<Vector4>
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -90,7 +102,18 @@ namespace Ara3D
                 X * matrix.M12 + Y * matrix.M22 + Z * matrix.M32,
                 X * matrix.M13 + Y * matrix.M23 + Z * matrix.M33);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public Vector3 Clamp(AABox box)
+            => this.Clamp(box.Min, box.Max);
+
         public Vector2 XY => new Vector2(X, Y);
+        public Vector2 XZ => new Vector2(X, Z);
+        public Vector2 YZ => new Vector2(Y, Z);
+        public Vector3 XZY => new Vector3(X, Z, Y);
+        public Vector3 ZXY => new Vector3(Z, X, Y);
+        public Vector3 ZYX => new Vector3(Z, Y, Z);
+        public Vector3 YXZ => new Vector3(Y, X, Z);
+        public Vector3 YZX => new Vector3(Y, Z, X);
     }
 
     public partial struct Line : ITransformable3D<Line>, IPoints, IMappable<Line, Vector3>
@@ -101,17 +124,18 @@ namespace Ara3D
         public float LengthSquared => A.DistanceSquared(B);
         public Vector3 MidPoint => A.Average(B);
         public Line Normal => new Line(A, A + Vector.Normalize());
+        public Line Inverse => new Line(B, A);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Vector3 Lerp(float amount) 
+        public Vector3 Lerp(float amount)
             => A.Lerp(B, amount);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Line SetLength(float length) 
+        public Line SetLength(float length)
             => new Line(A, A + Vector.Along(length));
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Line Transform(Matrix4x4 mat) 
+        public Line Transform(Matrix4x4 mat)
             => new Line(A.Transform(mat), B.Transform(mat));
 
         public int NumPoints => 2;
@@ -120,49 +144,121 @@ namespace Ara3D
         public Vector3 GetPoint(int n) => n == 0 ? A : B;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Line Map(Func<Vector3, Vector3> f) 
+        public Line Map(Func<Vector3, Vector3> f)
             => new Line(f(A), f(B));
     }
 
-    public partial struct Quad : ITransformable3D<Quad>, IPoints, IMappable<Quad, Vector3>
+    public partial struct Vector2
     {
-        public Quad Transform(Matrix4x4 mat) => Map(x => x.Transform(mat));
-        public int NumPoints => 4;
-        public Vector3 GetPoint(int n) => n == 0 ? A : n == 1 ? B : n == 2 ? C : D;
-        public Quad Map(Func<Vector3, Vector3> f) => new Quad(f(A), f(B), f(C), f(D));
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public double PointCrossProduct(Vector2 other) => X * other.Y - other.X * Y;
+
+        /// <summary>
+        /// Computes the cross product of two vectors.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public float Cross(Vector2 v2) => X * v2.Y - Y * v2.X;
     }
 
-    public partial struct Triangle : ITransformable3D<Triangle>, IPoints, IMappable<Triangle, Vector3>
+    public partial struct Line2D
     {
-        public Triangle Transform(Matrix4x4 mat) => Map(x => x.Transform(mat));
-        public int NumPoints => 3;
-        public Vector3 GetPoint(int n) => n == 0 ? A : n == 1 ? B : C;
-        public Triangle Map(Func<Vector3, Vector3> f) => new Triangle(f(A), f(B), f(C));
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public AABox2D BoundingBox() => AABox2D.Create(A, B);
 
-        public float LengthA => A.Distance(B);
-        public float LengthB => B.Distance(C);
-        public float LengthC => C.Distance(A);
-
-        public bool HasArea => A != B && B != C && C != A;
-
-        public float Area
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public double LinePointCrossProduct(Vector2 point)
         {
-            get
-            {
-                var s = (LengthA + LengthB + LengthC) / 2;
-                return (s * (s - LengthA) * (s - LengthB) * (s - LengthC)).Sqrt();
-            }
+            var tmpLine = new Line2D(Vector2.Zero, B - A);
+            var tmpPoint = point - A;
+            return tmpLine.B.PointCrossProduct(tmpPoint);
         }
 
-        public float Perimeter => LengthA + LengthB + LengthC;
-        public Vector3 MidPoint => (A + B + C) / 3f;
-        public Vector3 NormalDirection => (B - A).Cross(C - A);
-        public Vector3 Normal => NormalDirection.Normalize();
-        public AABox BoundingBox => AABox.Create(A, B, C);
-        public Sphere BoundingSphere => Sphere.Create(A, B, C);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool IsPointOnLine(Vector2 point)
+            => Math.Abs(LinePointCrossProduct(point)) < Math3d.Constants.Tolerance;
 
-        public bool IsSliver(float tolerance = Constants.Tolerance)
-            => LengthA <= tolerance || LengthB <= tolerance || LengthC <= tolerance;
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool IsPointRightOfLine(Vector2 point)
+            => LinePointCrossProduct(point) < 0;
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool TouchesOrCrosses(Line2D other)
+            => IsPointOnLine(other.A)
+               || IsPointOnLine(other.B)
+               || (IsPointRightOfLine(other.A) ^ IsPointRightOfLine(other.B));
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool Intersects(AABox2D thisBox, Line2D otherLine, AABox2D otherBox)
+            => thisBox.Intersects(otherBox)
+               && TouchesOrCrosses(otherLine)
+               && otherLine.TouchesOrCrosses(this);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool Intersects(Line2D other) =>
+            // Inspired by: https://martin-thoma.com/how-to-check-if-two-line-segments-intersect/
+            Intersects(BoundingBox(), other, other.BoundingBox());
     }
 
+    public partial struct DVector2
+    {
+        public Vector2 Vector2
+            => new Vector2((float)X, (float)Y);
+    }
+
+    public partial struct DVector3
+    {
+        public Vector3 Vector3
+            => new Vector3((float)X, (float)Y, (float)Z);
+    }
+
+    public partial struct DVector4
+    {
+        public Vector4 Vector4
+            => new Vector4((float)X, (float)Y, (float)Z, (float)W);
+    }
+
+    public partial struct DAABox
+    {
+        public AABox AABox
+            => new AABox(Min.Vector3, Max.Vector3);
+    }
+
+    public partial struct DQuaternion
+    {
+        public Quaternion Quaternion
+            => new Quaternion((float)X, (float)Y, (float)Z, (float)W);
+
+        public DVector4 DVector4
+            => new DVector4(X, Y, Z, W);
+    }
+
+    public partial struct Transform
+    {
+        public static Transform Identity => new Transform(Vector3.Zero, Quaternion.Identity);
+    }
+
+    public static class MovementExtensions
+    {
+        /*
+        public static int CompareLength(this Vector3 self, Vector3 other)
+            => (self.LengthSquared() - other.LengthSquared()).Sign();
+
+        public static bool LargerThan(this Vector3 self, Vector3 other)
+            => self.LengthSquared()
+
+        public static Vector3 ComputeFrictionVector(this LinearMotion motion)
+        {
+            var f = motion.Velocity.Normalize() * motion.Friction;
+            if (f.LengthSquared() > f.)
+
+        public static LinearMotion Update(this LinearMotion self, float amount)
+            => self.SetVelocity(self.Velocity + self.Acceleration * amount - self.Velocity * self.Friction * amount);
+
+        public static AngularMotion Update(this AngularMotion self, float amount)
+            => self.SetVelocity(self.Velocity + self.Acceleration * amount - self.Velocity.Normalize() * self.Friction * amount);
+
+        public static Motion Update(this Motion self, float amount)
+            => self.SetLinear(self.Linear.Update(amount)).SetAngular(self.Angular.Update(amount));
+        */
+    }
 }

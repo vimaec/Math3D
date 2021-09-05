@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Ara3D
+namespace Vim.Math3d
 {
     public interface ITransformable3D<TSelf>
     {
@@ -12,7 +12,7 @@ namespace Ara3D
         public static Matrix4x4 Multiply(params Matrix4x4[] matrices)
             => matrices.Aggregate(Matrix4x4.Identity, (m1, m2) => m1 * m2);
 
-        public static T Transform<T>(this ITransformable3D<T> self, params Matrix4x4[] matrices) 
+        public static T Transform<T>(this ITransformable3D<T> self, params Matrix4x4[] matrices)
             => self.Transform(Multiply(matrices));
 
         public static T Translate<T>(this ITransformable3D<T> self, Vector3 offset)
@@ -23,6 +23,9 @@ namespace Ara3D
 
         public static T Rotate<T>(this ITransformable3D<T> self, Quaternion q)
             => self.Transform(Matrix4x4.CreateRotation(q));
+
+        public static T Scale<T>(this ITransformable3D<T> self, float scale)
+            => self.Scale(new Vector3(scale, scale, scale));
 
         public static T Scale<T>(this ITransformable3D<T> self, Vector3 scales)
             => self.Transform(Matrix4x4.CreateScale(scales));

@@ -1,14 +1,17 @@
-// MIT License 
+// MIT License
+// Copyright (C) 2019 VIMaec LLC.
 // Copyright (C) 2019 Ara 3D. Inc
 // https://ara3d.com
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
+using System;
 using System.Runtime.CompilerServices;
 
-namespace Ara3D
+namespace Vim.Math3d
 {
+    // TODO: many of these functions are static and should be member functions.
     /// <summary>
     /// A structure encapsulating a four-dimensional vector (x,y,z,w), 
     /// which is used to efficiently rotate an object about the (x,y,z) vector by the angle theta, where w = cos(theta/2).
@@ -18,13 +21,13 @@ namespace Ara3D
         /// <summary>
         /// Returns a Quaternion representing no rotation. 
         /// </summary>
-        public static Quaternion Identity 
+        public static Quaternion Identity
             => new Quaternion(0, 0, 0, 1);
 
         /// <summary>
         /// Returns whether the Quaternion is the identity Quaternion.
         /// </summary>
-        public bool IsIdentity 
+        public bool IsIdentity
             => this == Identity;
 
         /// <summary>
@@ -33,7 +36,7 @@ namespace Ara3D
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Quaternion(Vector3 vectorPart, float scalarPart)
             : this(vectorPart.X, vectorPart.Y, vectorPart.Z, scalarPart)
-        {  }
+        { }
 
         /// <summary>
         /// Calculates the length of the Quaternion.
@@ -78,15 +81,84 @@ namespace Ara3D
             => new Quaternion(axis * (angle * 0.5f).Sin(), (angle * 0.5f).Cos());
 
         /// <summary>
-        /// Creates a new Quaternion from the given yaw, pitch, and roll, in radians.
-        /// TODO: should we have "Euler" as a separate input? I am not sure.
+        /// Creates a new Quaternion from the given rotation around X, Y, and Z
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Quaternion CreateFromYawPitchRoll(Vector3 v)
-            => CreateFromYawPitchRoll(v.X, v.Y, v.Z);
+        public static Quaternion CreateFromEulerAngles(Vector3 v)
+        {
+            var c1 = Math.Cos(v.X / 2);
+            var s1 = Math.Sin(v.X / 2);
+            var c2 = Math.Cos(v.Y / 2);
+            var s2 = Math.Sin(v.Y / 2);
+            var c3 = Math.Cos(v.Z / 2);
+            var s3 = Math.Sin(v.Z / 2);
+
+            var qw = c1 * c2 * c3 - s1 * s2 * s3;
+            var qx = s1 * c2 * c3 + c1 * s2 * s3;
+            var qy = c1 * s2 * c3 - s1 * c2 * s3;
+            var qz = c1 * c2 * s3 + s1 * s2 * c3;
+            return new Quaternion((float)qx, (float)qy, (float)qz, (float)qw);
+        }
+
+        /// <summary>
+        /// Creates a new Quaternion from the given rotation around the X axis
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Quaternion CreateXRotation(float theta)
+            => new Quaternion((float)Math.Sin(theta * 0.5f), 0.0f, 0.0f, (float)Math.Cos(theta * 0.5f));
+
+        /// <summary>
+        /// Creates a new Quaternion from the given rotation around the Y axis
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Quaternion CreateYRotation(float theta)
+            => new Quaternion(0.0f, (float)Math.Sin(theta * 0.5f), 0.0f, (float)Math.Cos(theta * 0.5f));
+
+        /// <summary>
+        /// Creates a new Quaternion from the given rotation around the Z axis
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Quaternion CreateZRotation(float theta)
+            => new Quaternion(0.0f, 0.0f, (float)Math.Sin(theta * 0.5f), (float)Math.Cos(theta * 0.5f));
+
+        /// <summary>
+        /// Creates a new look-at Quaternion
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Quaternion LookAt(Vector3 position, Vector3 targetPosition, Vector3 up, Vector3 forward)
+        {
+            var plane = Plane.CreateFromNormalAndPoint(up, position);
+
+            var projectedTarget = Plane.ProjectPointOntoPlane(plane, targetPosition);
+            var projectedDirection = (projectedTarget - position).Normalize();
+
+            var q1 = CreateRotationFromAToB(forward, projectedDirection);
+            var q2 = CreateRotationFromAToB(projectedDirection, (targetPosition - position).Normalize());
+
+            return q2 * q1;
+        }
+
+        /// <summary>
+        /// Creates a new Quaternion rotating vector 'fromA' to 'toB'
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Quaternion CreateRotationFromAToB(Vector3 fromA, Vector3 toB)
+        {
+            var axis = fromA.Cross(toB);
+            var lengthSquared = axis.LengthSquared();
+            if (lengthSquared > 0.0f)
+            {
+                return CreateFromAxisAngle(axis / (float)Math.Sqrt(lengthSquared), (float)Math.Acos(fromA.Dot(toB)));
+            }
+
+            return Identity;
+        }
 
         /// <summary>
         /// Creates a new Quaternion from the given yaw, pitch, and roll, in radians.
+        ///  Roll first, about axis the object is facing, then
+        ///  pitch upward, then yaw to face into the new heading
+        ///  1. Z(roll), 2. X (pitch), 3. Y (yaw)  
         /// </summary>
         /// <param name="yaw">The yaw angle, in radians, around the Y-axis.</param>
         /// <param name="pitch">The pitch angle, in radians, around the X-axis.</param>
@@ -94,8 +166,6 @@ namespace Ara3D
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Quaternion CreateFromYawPitchRoll(float yaw, float pitch, float roll)
         {
-            //  Roll first, about axis the object is facing, then
-            //  pitch upward, then yaw to face into the new heading
 
             var halfRoll = roll * 0.5f;
             var sr = halfRoll.Sin();
@@ -158,8 +228,8 @@ namespace Ara3D
                 var s = (1.0f + matrix.M33 - matrix.M11 - matrix.M22).Sqrt();
                 var invS = 0.5f / s;
                 return new Quaternion(
-                    (matrix.M31 + matrix.M13) * invS, 
-                    (matrix.M32 + matrix.M23) * invS, 
+                    (matrix.M31 + matrix.M13) * invS,
+                    (matrix.M32 + matrix.M23) * invS,
                     0.5f * s,
                     (matrix.M12 - matrix.M21) * invS);
             }
@@ -170,23 +240,21 @@ namespace Ara3D
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static float Dot(Quaternion quaternion1, Quaternion quaternion2)
-        {
-            return quaternion1.X * quaternion2.X +
+            => quaternion1.X * quaternion2.X +
                    quaternion1.Y * quaternion2.Y +
                    quaternion1.Z * quaternion2.Z +
                    quaternion1.W * quaternion2.W;
-        }
 
         /// <summary>
         /// Interpolates between two quaternions, using spherical linear interpolation.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Quaternion Slerp(Quaternion quaternion1, Quaternion quaternion2, float t)
+        public static Quaternion Slerp(Quaternion q1, Quaternion q2, float t)
         {
             const float epsilon = 1e-6f;
 
-            var cosOmega = quaternion1.X * quaternion2.X + quaternion1.Y * quaternion2.Y +
-                             quaternion1.Z * quaternion2.Z + quaternion1.W * quaternion2.W;
+            var cosOmega = q1.X * q2.X + q1.Y * q2.Y +
+                             q1.Z * q2.Z + q1.W * q2.W;
 
             var flip = false;
 
@@ -215,7 +283,7 @@ namespace Ara3D
                     : (t * omega).Sin() * invSinOmega;
             }
 
-            return quaternion1 * s1 + quaternion2 * s2;
+            return q1 * s1 + q2 * s2;
         }
 
         /// <summary>
@@ -254,8 +322,8 @@ namespace Ara3D
             var dot = q1x * q2x + q1y * q2y + q1z * q2z;
 
             return new Quaternion(
-                q1x * q2w + q2x * q1w + cx, 
-                q1y * q2w + q2y * q1w + cy, 
+                q1x * q2w + q2x * q1w + cx,
+                q1y * q2w + q2y * q1w + cy,
                 q1z * q2w + q2z * q1w + cz,
                 q1w * q2w - dot);
         }
@@ -286,28 +354,24 @@ namespace Ara3D
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Quaternion operator *(Quaternion value1, Quaternion value2)
         {
-            var q1x = value1.X;
-            var q1y = value1.Y;
-            var q1z = value1.Z;
-            var q1w = value1.W;
-
-            var q2x = value2.X;
-            var q2y = value2.Y;
-            var q2z = value2.Z;
-            var q2w = value2.W;
-
-            // cross(av, bv)
-            var cx = q1y * q2z - q1z * q2y;
-            var cy = q1z * q2x - q1x * q2z;
-            var cz = q1x * q2y - q1y * q2x;
-
-            var dot = q1x * q2x + q1y * q2y + q1z * q2z;
+            // 9 muls, 27 adds
+            var tmp_00 = (value1.Z - value1.Y) * (value2.Y - value2.Z);
+            var tmp_01 = (value1.W + value1.X) * (value2.W + value2.X);
+            var tmp_02 = (value1.W - value1.X) * (value2.Y + value2.Z);
+            var tmp_03 = (value1.Y + value1.Z) * (value2.W - value2.X);
+            var tmp_04 = (value1.Z - value1.X) * (value2.X - value2.Y);
+            var tmp_05 = (value1.Z + value1.X) * (value2.X + value2.Y);
+            var tmp_06 = (value1.W + value1.Y) * (value2.W - value2.Z);
+            var tmp_07 = (value1.W - value1.Y) * (value2.W + value2.Z);
+            var tmp_08 = tmp_05 + tmp_06 + tmp_07;
+            var tmp_09 = (tmp_04 + tmp_08) * 0.5f;
 
             return new Quaternion(
-                q1x * q2w + q2x * q1w + cx, 
-                q1y * q2w + q2y * q1w + cy, 
-                q1z * q2w + q2z * q1w + cz,
-                q1w * q2w - dot);
+                tmp_01 + tmp_09 - tmp_08,
+                tmp_02 + tmp_09 - tmp_07,
+                tmp_03 + tmp_09 - tmp_06,
+                tmp_00 + tmp_09 - tmp_05
+                );
         }
 
         /// <summary>
@@ -323,5 +387,54 @@ namespace Ara3D
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Quaternion operator /(Quaternion value1, Quaternion value2)
             => value1 * value2.Inverse();
+
+        /// <summary>
+        /// Returns Euler123 angles (rotate around, X, then Y, then Z).
+        /// </summary>
+        /// <returns></returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public Vector3 ToEulerAngles()
+        {
+            /*
+            // https://stackoverflow.com/questions/5782658/extracting-yaw-from-a-quaternion
+            // This should fit for intrinsic tait-bryan rotation of xyz-order.
+            var yaw = (float)Math.Atan2(2.0 * (Y * Z + W * X), W * W - X * X - Y * Y + Z * Z);
+            var pitch = (float)Math.Asin(-2.0 * (X * Z - W * Y));
+            var roll = (float)Math.Atan2(2.0 * (X * Y + W * Z), W * W + X * X - Y * Y - Z * Z);
+            */
+
+            /*
+            // https://community.monogame.net/t/solved-reverse-createfromyawpitchroll-or-how-to-get-the-vector-that-would-produce-the-matrix-given-only-the-matrix/9054/3
+            var matrix = Matrix4x4.CreateFromQuaternion(this);
+            var yaw = (float)System.Math.Atan2(matrix.M13, matrix.M33);
+            var pitch = (float)System.Math.Asin(-matrix.M23);
+            var roll = (float)System.Math.Atan2(matrix.M21, matrix.M22);
+            */
+
+            /*
+            // https://stackoverflow.com/questions/11492299/quaternion-to-euler-angles-algorithm-how-to-convert-to-y-up-and-between-ha
+            var yaw = (float)Math.Atan2(2f * q.X * q.W + 2f * q.Y * q.Z, 1 - 2f * (sqz + sqw));     // Yaw 
+            var pitch = (float)Math.Asin(2f * (q.X * q.Z - q.W * q.Y));                             // Pitch 
+            var roll = (float)Math.Atan2(2f * q.X * q.Y + 2f * q.Z * q.W, 1 - 2f * (sqy + sqz));      // Roll
+            */
+
+            /*
+            //This is the code from  http://www.mawsoft.com/blog/?p=197
+            var yaw = (float)Math.Atan2(2 * (W * X + Y * Z), 1 - 2 * (Math.Pow(X, 2) + Math.Pow(Y, 2)));
+            var pitch = (float)Math.Asin(2 * (W * Y - Z * X));
+            var roll = (float)Math.Atan2(2 * (W * Z + X * Y), 1 - 2 * (Math.Pow(Y, 2) + Math.Pow(Z, 2)));
+            */
+
+            //return new Vector3(pitch, yaw, roll);
+
+            //https://www.gamedev.net/forums/topic/597324-quaternion-to-euler-angles-and-back-why-is-the-rotation-changing/
+            var x = (float)Math.Atan2(-2 * (Y * Z - W * X), W * W - X * X - Y * Y + Z * Z);
+            var y = (float)Math.Asin(2 * (X * Z + W * Y));
+            var z = (float)Math.Atan2(-2 * (X * Y - W * Z), W * W + X * X - Y * Y - Z * Z);
+            return new Vector3(x, y, z);
+        }
+
+        public Vector4 Vector4
+            => new Vector4(X, Y, Z, W);
     }
 }

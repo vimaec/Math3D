@@ -1,5 +1,6 @@
 MIT License
 
+Copyright (c) 2019 VIMaec LLC.
 Copyright (c) 2018 Ara3d
 Copyright (c) XNA
 Copyright (c) MonoGame team
