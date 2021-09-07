@@ -50,7 +50,7 @@
         ]
       }
     ],
-    "dest": "../doc",
+    "dest": "../docs",
     "globalMetadataFiles": [],
     "globalMetadata": {
       "_appTitle": "Vim.Math3D",
