@@ -1,0 +1,135 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.IPoints
+  commentId: T:Vim.Math3d.IPoints
+  id: IPoints
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.IPoints.GetPoint(System.Int32)
+  - Vim.Math3d.IPoints.NumPoints
+  langs:
+  - csharp
+  - vb
+  name: IPoints
+  nameWithType: IPoints
+  fullName: Vim.Math3d.IPoints
+  type: Interface
+  source:
+    remote:
+      path: src/IPoints.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: IPoints
+    path: ../src/IPoints.cs
+    startLine: 2
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public interface IPoints
+    content.vb: Public Interface IPoints
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Vim.Math3d.IPoints.NumPoints
+  commentId: P:Vim.Math3d.IPoints.NumPoints
+  id: NumPoints
+  parent: Vim.Math3d.IPoints
+  langs:
+  - csharp
+  - vb
+  name: NumPoints
+  nameWithType: IPoints.NumPoints
+  fullName: Vim.Math3d.IPoints.NumPoints
+  type: Property
+  source:
+    remote:
+      path: src/IPoints.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: NumPoints
+    path: ../src/IPoints.cs
+    startLine: 4
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: int NumPoints { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property NumPoints As Integer
+  overload: Vim.Math3d.IPoints.NumPoints*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Vim.Math3d.IPoints.GetPoint(System.Int32)
+  commentId: M:Vim.Math3d.IPoints.GetPoint(System.Int32)
+  id: GetPoint(System.Int32)
+  parent: Vim.Math3d.IPoints
+  langs:
+  - csharp
+  - vb
+  name: GetPoint(Int32)
+  nameWithType: IPoints.GetPoint(Int32)
+  fullName: Vim.Math3d.IPoints.GetPoint(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/IPoints.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetPoint
+    path: ../src/IPoints.cs
+    startLine: 5
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: Vector3 GetPoint(int n)
+    parameters:
+    - id: n
+      type: System.Int32
+    return:
+      type: Vim.Math3d.Vector3
+    content.vb: Function GetPoint(n As Integer) As Vector3
+  overload: Vim.Math3d.IPoints.GetPoint*
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: Vim.Math3d.IPoints.NumPoints*
+  commentId: Overload:Vim.Math3d.IPoints.NumPoints
+  name: NumPoints
+  nameWithType: IPoints.NumPoints
+  fullName: Vim.Math3d.IPoints.NumPoints
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vim.Math3d.IPoints.GetPoint*
+  commentId: Overload:Vim.Math3d.IPoints.GetPoint
+  name: GetPoint
+  nameWithType: IPoints.GetPoint
+  fullName: Vim.Math3d.IPoints.GetPoint
+- uid: Vim.Math3d.Vector3
+  commentId: T:Vim.Math3d.Vector3
+  parent: Vim.Math3d
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vim.Math3d.Vector3

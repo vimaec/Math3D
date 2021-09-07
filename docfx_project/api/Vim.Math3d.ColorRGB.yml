@@ -1,0 +1,6663 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.ColorRGB
+  commentId: T:Vim.Math3d.ColorRGB
+  id: ColorRGB
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.ColorRGB.#ctor(System.Byte,System.Byte,System.Byte)
+  - Vim.Math3d.ColorRGB.#ctor(System.Int64)
+  - Vim.Math3d.ColorRGB.#ctor(System.ValueTuple{System.Byte,System.Byte,System.Byte})
+  - Vim.Math3d.ColorRGB.AliceBlue
+  - Vim.Math3d.ColorRGB.AntiqueWhite
+  - Vim.Math3d.ColorRGB.Aqua
+  - Vim.Math3d.ColorRGB.Aquamarine
+  - Vim.Math3d.ColorRGB.Azure
+  - Vim.Math3d.ColorRGB.B
+  - Vim.Math3d.ColorRGB.Beige
+  - Vim.Math3d.ColorRGB.Bisque
+  - Vim.Math3d.ColorRGB.Black
+  - Vim.Math3d.ColorRGB.BlanchedAlmond
+  - Vim.Math3d.ColorRGB.Blue
+  - Vim.Math3d.ColorRGB.BlueViolet
+  - Vim.Math3d.ColorRGB.Brown
+  - Vim.Math3d.ColorRGB.BurlyWood
+  - Vim.Math3d.ColorRGB.CadetBlue
+  - Vim.Math3d.ColorRGB.Chartreuse
+  - Vim.Math3d.ColorRGB.Chocolate
+  - Vim.Math3d.ColorRGB.Coral
+  - Vim.Math3d.ColorRGB.CornflowerBlue
+  - Vim.Math3d.ColorRGB.Cornsilk
+  - Vim.Math3d.ColorRGB.Create(System.Byte,System.Byte,System.Byte)
+  - Vim.Math3d.ColorRGB.Create(System.ValueTuple{System.Byte,System.Byte,System.Byte})
+  - Vim.Math3d.ColorRGB.Crimson
+  - Vim.Math3d.ColorRGB.Cyan
+  - Vim.Math3d.ColorRGB.DarkBlue
+  - Vim.Math3d.ColorRGB.DarkCyan
+  - Vim.Math3d.ColorRGB.DarkGoldenrod
+  - Vim.Math3d.ColorRGB.DarkGray
+  - Vim.Math3d.ColorRGB.DarkGreen
+  - Vim.Math3d.ColorRGB.DarkKhaki
+  - Vim.Math3d.ColorRGB.DarkMagenta
+  - Vim.Math3d.ColorRGB.DarkOliveGreen
+  - Vim.Math3d.ColorRGB.DarkOrange
+  - Vim.Math3d.ColorRGB.DarkOrchid
+  - Vim.Math3d.ColorRGB.DarkRed
+  - Vim.Math3d.ColorRGB.DarkSalmon
+  - Vim.Math3d.ColorRGB.DarkSeaGreen
+  - Vim.Math3d.ColorRGB.DarkSlateBlue
+  - Vim.Math3d.ColorRGB.DarkSlateGray
+  - Vim.Math3d.ColorRGB.DarkTurquoise
+  - Vim.Math3d.ColorRGB.DarkViolet
+  - Vim.Math3d.ColorRGB.Deconstruct(System.Byte@,System.Byte@,System.Byte@)
+  - Vim.Math3d.ColorRGB.DeepPink
+  - Vim.Math3d.ColorRGB.DeepSkyBlue
+  - Vim.Math3d.ColorRGB.DimGray
+  - Vim.Math3d.ColorRGB.DodgerBlue
+  - Vim.Math3d.ColorRGB.Equals(System.Object)
+  - Vim.Math3d.ColorRGB.Equals(Vim.Math3d.ColorRGB)
+  - Vim.Math3d.ColorRGB.Firebrick
+  - Vim.Math3d.ColorRGB.FloralWhite
+  - Vim.Math3d.ColorRGB.ForestGreen
+  - Vim.Math3d.ColorRGB.Fuchsia
+  - Vim.Math3d.ColorRGB.G
+  - Vim.Math3d.ColorRGB.Gainsboro
+  - Vim.Math3d.ColorRGB.GetHashCode
+  - Vim.Math3d.ColorRGB.GhostWhite
+  - Vim.Math3d.ColorRGB.Gold
+  - Vim.Math3d.ColorRGB.Goldenrod
+  - Vim.Math3d.ColorRGB.Gray
+  - Vim.Math3d.ColorRGB.Green
+  - Vim.Math3d.ColorRGB.GreenYellow
+  - Vim.Math3d.ColorRGB.Honeydew
+  - Vim.Math3d.ColorRGB.HotPink
+  - Vim.Math3d.ColorRGB.IndianRed
+  - Vim.Math3d.ColorRGB.Indigo
+  - Vim.Math3d.ColorRGB.Ivory
+  - Vim.Math3d.ColorRGB.Khaki
+  - Vim.Math3d.ColorRGB.Lavender
+  - Vim.Math3d.ColorRGB.LavenderBlush
+  - Vim.Math3d.ColorRGB.LawnGreen
+  - Vim.Math3d.ColorRGB.LemonChiffon
+  - Vim.Math3d.ColorRGB.LightBlue
+  - Vim.Math3d.ColorRGB.LightCoral
+  - Vim.Math3d.ColorRGB.LightCyan
+  - Vim.Math3d.ColorRGB.LightGoldenrodYellow
+  - Vim.Math3d.ColorRGB.LightGray
+  - Vim.Math3d.ColorRGB.LightGreen
+  - Vim.Math3d.ColorRGB.LightPink
+  - Vim.Math3d.ColorRGB.LightSalmon
+  - Vim.Math3d.ColorRGB.LightSeaGreen
+  - Vim.Math3d.ColorRGB.LightSkyBlue
+  - Vim.Math3d.ColorRGB.LightSlateGray
+  - Vim.Math3d.ColorRGB.LightSteelBlue
+  - Vim.Math3d.ColorRGB.LightYellow
+  - Vim.Math3d.ColorRGB.Lime
+  - Vim.Math3d.ColorRGB.LimeGreen
+  - Vim.Math3d.ColorRGB.Linen
+  - Vim.Math3d.ColorRGB.Magenta
+  - Vim.Math3d.ColorRGB.Maroon
+  - Vim.Math3d.ColorRGB.MaxValue
+  - Vim.Math3d.ColorRGB.MediumAquamarine
+  - Vim.Math3d.ColorRGB.MediumBlue
+  - Vim.Math3d.ColorRGB.MediumOrchid
+  - Vim.Math3d.ColorRGB.MediumPurple
+  - Vim.Math3d.ColorRGB.MediumSeaGreen
+  - Vim.Math3d.ColorRGB.MediumSlateBlue
+  - Vim.Math3d.ColorRGB.MediumSpringGreen
+  - Vim.Math3d.ColorRGB.MediumTurquoise
+  - Vim.Math3d.ColorRGB.MediumVioletRed
+  - Vim.Math3d.ColorRGB.MidnightBlue
+  - Vim.Math3d.ColorRGB.MintCream
+  - Vim.Math3d.ColorRGB.MinValue
+  - Vim.Math3d.ColorRGB.MistyRose
+  - Vim.Math3d.ColorRGB.Moccasin
+  - Vim.Math3d.ColorRGB.NavajoWhite
+  - Vim.Math3d.ColorRGB.Navy
+  - Vim.Math3d.ColorRGB.OldLace
+  - Vim.Math3d.ColorRGB.Olive
+  - Vim.Math3d.ColorRGB.OliveDrab
+  - Vim.Math3d.ColorRGB.op_Equality(Vim.Math3d.ColorRGB,Vim.Math3d.ColorRGB)
+  - Vim.Math3d.ColorRGB.op_Implicit(System.ValueTuple{System.Byte,System.Byte,System.Byte})~Vim.Math3d.ColorRGB
+  - Vim.Math3d.ColorRGB.op_Implicit(Vim.Math3d.ColorRGB)~System.ValueTuple{System.Byte,System.Byte,System.Byte}
+  - Vim.Math3d.ColorRGB.op_Inequality(Vim.Math3d.ColorRGB,Vim.Math3d.ColorRGB)
+  - Vim.Math3d.ColorRGB.Orange
+  - Vim.Math3d.ColorRGB.OrangeRed
+  - Vim.Math3d.ColorRGB.Orchid
+  - Vim.Math3d.ColorRGB.PaleGoldenrod
+  - Vim.Math3d.ColorRGB.PaleGreen
+  - Vim.Math3d.ColorRGB.PaleTurquoise
+  - Vim.Math3d.ColorRGB.PaleVioletRed
+  - Vim.Math3d.ColorRGB.PapayaWhip
+  - Vim.Math3d.ColorRGB.PeachPuff
+  - Vim.Math3d.ColorRGB.Peru
+  - Vim.Math3d.ColorRGB.Pink
+  - Vim.Math3d.ColorRGB.Plum
+  - Vim.Math3d.ColorRGB.PowderBlue
+  - Vim.Math3d.ColorRGB.Purple
+  - Vim.Math3d.ColorRGB.R
+  - Vim.Math3d.ColorRGB.Red
+  - Vim.Math3d.ColorRGB.RosyBrown
+  - Vim.Math3d.ColorRGB.RoyalBlue
+  - Vim.Math3d.ColorRGB.SaddleBrown
+  - Vim.Math3d.ColorRGB.Salmon
+  - Vim.Math3d.ColorRGB.SandyBrown
+  - Vim.Math3d.ColorRGB.SeaGreen
+  - Vim.Math3d.ColorRGB.SeaShell
+  - Vim.Math3d.ColorRGB.SetB(System.Byte)
+  - Vim.Math3d.ColorRGB.SetG(System.Byte)
+  - Vim.Math3d.ColorRGB.SetR(System.Byte)
+  - Vim.Math3d.ColorRGB.Sienna
+  - Vim.Math3d.ColorRGB.Silver
+  - Vim.Math3d.ColorRGB.SkyBlue
+  - Vim.Math3d.ColorRGB.SlateBlue
+  - Vim.Math3d.ColorRGB.SlateGray
+  - Vim.Math3d.ColorRGB.Snow
+  - Vim.Math3d.ColorRGB.SpringGreen
+  - Vim.Math3d.ColorRGB.SteelBlue
+  - Vim.Math3d.ColorRGB.Tan
+  - Vim.Math3d.ColorRGB.Teal
+  - Vim.Math3d.ColorRGB.Thistle
+  - Vim.Math3d.ColorRGB.Tomato
+  - Vim.Math3d.ColorRGB.ToString
+  - Vim.Math3d.ColorRGB.Turquoise
+  - Vim.Math3d.ColorRGB.Violet
+  - Vim.Math3d.ColorRGB.Wheat
+  - Vim.Math3d.ColorRGB.White
+  - Vim.Math3d.ColorRGB.WhiteSmoke
+  - Vim.Math3d.ColorRGB.Yellow
+  - Vim.Math3d.ColorRGB.YellowGreen
+  - Vim.Math3d.ColorRGB.Zero
+  langs:
+  - csharp
+  - vb
+  name: ColorRGB
+  nameWithType: ColorRGB
+  fullName: Vim.Math3d.ColorRGB
+  type: Struct
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ColorRGB
+    path: ../src/Structs.cs
+    startLine: 1701
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataContract]
+
+      public readonly struct ColorRGB : IEquatable<ColorRGB>
+    content.vb: >-
+      <DataContract>
+
+      Public Structure ColorRGB
+          Implements IEquatable(Of ColorRGB)
+  implements:
+  - System.IEquatable{Vim.Math3d.ColorRGB}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Vim.Math3d.ColorRGB.#ctor(System.Int64)
+  commentId: M:Vim.Math3d.ColorRGB.#ctor(System.Int64)
+  id: '#ctor(System.Int64)'
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: ColorRGB(Int64)
+  nameWithType: ColorRGB.ColorRGB(Int64)
+  fullName: Vim.Math3d.ColorRGB.ColorRGB(System.Int64)
+  type: Constructor
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/ColorRGB.cs
+    startLine: 4
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public ColorRGB(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+    content.vb: Public Sub New(value As Long)
+  overload: Vim.Math3d.ColorRGB.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.ColorRGB.AliceBlue
+  commentId: F:Vim.Math3d.ColorRGB.AliceBlue
+  id: AliceBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: AliceBlue
+  nameWithType: ColorRGB.AliceBlue
+  fullName: Vim.Math3d.ColorRGB.AliceBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AliceBlue
+    path: ../src/ColorRGB.cs
+    startLine: 8
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB AliceBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly AliceBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.AntiqueWhite
+  commentId: F:Vim.Math3d.ColorRGB.AntiqueWhite
+  id: AntiqueWhite
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: AntiqueWhite
+  nameWithType: ColorRGB.AntiqueWhite
+  fullName: Vim.Math3d.ColorRGB.AntiqueWhite
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AntiqueWhite
+    path: ../src/ColorRGB.cs
+    startLine: 9
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB AntiqueWhite
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly AntiqueWhite As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Aqua
+  commentId: F:Vim.Math3d.ColorRGB.Aqua
+  id: Aqua
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Aqua
+  nameWithType: ColorRGB.Aqua
+  fullName: Vim.Math3d.ColorRGB.Aqua
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Aqua
+    path: ../src/ColorRGB.cs
+    startLine: 10
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Aqua
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Aqua As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Aquamarine
+  commentId: F:Vim.Math3d.ColorRGB.Aquamarine
+  id: Aquamarine
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Aquamarine
+  nameWithType: ColorRGB.Aquamarine
+  fullName: Vim.Math3d.ColorRGB.Aquamarine
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Aquamarine
+    path: ../src/ColorRGB.cs
+    startLine: 11
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Aquamarine
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Aquamarine As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Azure
+  commentId: F:Vim.Math3d.ColorRGB.Azure
+  id: Azure
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Azure
+  nameWithType: ColorRGB.Azure
+  fullName: Vim.Math3d.ColorRGB.Azure
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Azure
+    path: ../src/ColorRGB.cs
+    startLine: 12
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Azure
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Azure As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Beige
+  commentId: F:Vim.Math3d.ColorRGB.Beige
+  id: Beige
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Beige
+  nameWithType: ColorRGB.Beige
+  fullName: Vim.Math3d.ColorRGB.Beige
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Beige
+    path: ../src/ColorRGB.cs
+    startLine: 13
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Beige
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Beige As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Bisque
+  commentId: F:Vim.Math3d.ColorRGB.Bisque
+  id: Bisque
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Bisque
+  nameWithType: ColorRGB.Bisque
+  fullName: Vim.Math3d.ColorRGB.Bisque
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Bisque
+    path: ../src/ColorRGB.cs
+    startLine: 14
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Bisque
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Bisque As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Black
+  commentId: F:Vim.Math3d.ColorRGB.Black
+  id: Black
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Black
+  nameWithType: ColorRGB.Black
+  fullName: Vim.Math3d.ColorRGB.Black
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Black
+    path: ../src/ColorRGB.cs
+    startLine: 15
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Black
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Black As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.BlanchedAlmond
+  commentId: F:Vim.Math3d.ColorRGB.BlanchedAlmond
+  id: BlanchedAlmond
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: BlanchedAlmond
+  nameWithType: ColorRGB.BlanchedAlmond
+  fullName: Vim.Math3d.ColorRGB.BlanchedAlmond
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: BlanchedAlmond
+    path: ../src/ColorRGB.cs
+    startLine: 16
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB BlanchedAlmond
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly BlanchedAlmond As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Blue
+  commentId: F:Vim.Math3d.ColorRGB.Blue
+  id: Blue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Blue
+  nameWithType: ColorRGB.Blue
+  fullName: Vim.Math3d.ColorRGB.Blue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Blue
+    path: ../src/ColorRGB.cs
+    startLine: 17
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Blue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Blue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.BlueViolet
+  commentId: F:Vim.Math3d.ColorRGB.BlueViolet
+  id: BlueViolet
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: BlueViolet
+  nameWithType: ColorRGB.BlueViolet
+  fullName: Vim.Math3d.ColorRGB.BlueViolet
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: BlueViolet
+    path: ../src/ColorRGB.cs
+    startLine: 18
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB BlueViolet
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly BlueViolet As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Brown
+  commentId: F:Vim.Math3d.ColorRGB.Brown
+  id: Brown
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Brown
+  nameWithType: ColorRGB.Brown
+  fullName: Vim.Math3d.ColorRGB.Brown
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Brown
+    path: ../src/ColorRGB.cs
+    startLine: 19
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Brown
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Brown As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.BurlyWood
+  commentId: F:Vim.Math3d.ColorRGB.BurlyWood
+  id: BurlyWood
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: BurlyWood
+  nameWithType: ColorRGB.BurlyWood
+  fullName: Vim.Math3d.ColorRGB.BurlyWood
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: BurlyWood
+    path: ../src/ColorRGB.cs
+    startLine: 20
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB BurlyWood
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly BurlyWood As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.CadetBlue
+  commentId: F:Vim.Math3d.ColorRGB.CadetBlue
+  id: CadetBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: CadetBlue
+  nameWithType: ColorRGB.CadetBlue
+  fullName: Vim.Math3d.ColorRGB.CadetBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CadetBlue
+    path: ../src/ColorRGB.cs
+    startLine: 21
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB CadetBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly CadetBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Chartreuse
+  commentId: F:Vim.Math3d.ColorRGB.Chartreuse
+  id: Chartreuse
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Chartreuse
+  nameWithType: ColorRGB.Chartreuse
+  fullName: Vim.Math3d.ColorRGB.Chartreuse
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Chartreuse
+    path: ../src/ColorRGB.cs
+    startLine: 22
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Chartreuse
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Chartreuse As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Chocolate
+  commentId: F:Vim.Math3d.ColorRGB.Chocolate
+  id: Chocolate
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Chocolate
+  nameWithType: ColorRGB.Chocolate
+  fullName: Vim.Math3d.ColorRGB.Chocolate
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Chocolate
+    path: ../src/ColorRGB.cs
+    startLine: 23
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Chocolate
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Chocolate As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Coral
+  commentId: F:Vim.Math3d.ColorRGB.Coral
+  id: Coral
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Coral
+  nameWithType: ColorRGB.Coral
+  fullName: Vim.Math3d.ColorRGB.Coral
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Coral
+    path: ../src/ColorRGB.cs
+    startLine: 24
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Coral
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Coral As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.CornflowerBlue
+  commentId: F:Vim.Math3d.ColorRGB.CornflowerBlue
+  id: CornflowerBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: CornflowerBlue
+  nameWithType: ColorRGB.CornflowerBlue
+  fullName: Vim.Math3d.ColorRGB.CornflowerBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CornflowerBlue
+    path: ../src/ColorRGB.cs
+    startLine: 25
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB CornflowerBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly CornflowerBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Cornsilk
+  commentId: F:Vim.Math3d.ColorRGB.Cornsilk
+  id: Cornsilk
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Cornsilk
+  nameWithType: ColorRGB.Cornsilk
+  fullName: Vim.Math3d.ColorRGB.Cornsilk
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Cornsilk
+    path: ../src/ColorRGB.cs
+    startLine: 26
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Cornsilk
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Cornsilk As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Crimson
+  commentId: F:Vim.Math3d.ColorRGB.Crimson
+  id: Crimson
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Crimson
+  nameWithType: ColorRGB.Crimson
+  fullName: Vim.Math3d.ColorRGB.Crimson
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Crimson
+    path: ../src/ColorRGB.cs
+    startLine: 27
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Crimson
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Crimson As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Cyan
+  commentId: F:Vim.Math3d.ColorRGB.Cyan
+  id: Cyan
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Cyan
+  nameWithType: ColorRGB.Cyan
+  fullName: Vim.Math3d.ColorRGB.Cyan
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Cyan
+    path: ../src/ColorRGB.cs
+    startLine: 28
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Cyan
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Cyan As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkBlue
+  commentId: F:Vim.Math3d.ColorRGB.DarkBlue
+  id: DarkBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkBlue
+  nameWithType: ColorRGB.DarkBlue
+  fullName: Vim.Math3d.ColorRGB.DarkBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkBlue
+    path: ../src/ColorRGB.cs
+    startLine: 29
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkCyan
+  commentId: F:Vim.Math3d.ColorRGB.DarkCyan
+  id: DarkCyan
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkCyan
+  nameWithType: ColorRGB.DarkCyan
+  fullName: Vim.Math3d.ColorRGB.DarkCyan
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkCyan
+    path: ../src/ColorRGB.cs
+    startLine: 30
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkCyan
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkCyan As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkGoldenrod
+  commentId: F:Vim.Math3d.ColorRGB.DarkGoldenrod
+  id: DarkGoldenrod
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkGoldenrod
+  nameWithType: ColorRGB.DarkGoldenrod
+  fullName: Vim.Math3d.ColorRGB.DarkGoldenrod
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkGoldenrod
+    path: ../src/ColorRGB.cs
+    startLine: 31
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkGoldenrod
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkGoldenrod As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkGray
+  commentId: F:Vim.Math3d.ColorRGB.DarkGray
+  id: DarkGray
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkGray
+  nameWithType: ColorRGB.DarkGray
+  fullName: Vim.Math3d.ColorRGB.DarkGray
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkGray
+    path: ../src/ColorRGB.cs
+    startLine: 32
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkGray
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkGray As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkGreen
+  commentId: F:Vim.Math3d.ColorRGB.DarkGreen
+  id: DarkGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkGreen
+  nameWithType: ColorRGB.DarkGreen
+  fullName: Vim.Math3d.ColorRGB.DarkGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkGreen
+    path: ../src/ColorRGB.cs
+    startLine: 33
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkKhaki
+  commentId: F:Vim.Math3d.ColorRGB.DarkKhaki
+  id: DarkKhaki
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkKhaki
+  nameWithType: ColorRGB.DarkKhaki
+  fullName: Vim.Math3d.ColorRGB.DarkKhaki
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkKhaki
+    path: ../src/ColorRGB.cs
+    startLine: 34
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkKhaki
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkKhaki As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkMagenta
+  commentId: F:Vim.Math3d.ColorRGB.DarkMagenta
+  id: DarkMagenta
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkMagenta
+  nameWithType: ColorRGB.DarkMagenta
+  fullName: Vim.Math3d.ColorRGB.DarkMagenta
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkMagenta
+    path: ../src/ColorRGB.cs
+    startLine: 35
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkMagenta
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkMagenta As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkOliveGreen
+  commentId: F:Vim.Math3d.ColorRGB.DarkOliveGreen
+  id: DarkOliveGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkOliveGreen
+  nameWithType: ColorRGB.DarkOliveGreen
+  fullName: Vim.Math3d.ColorRGB.DarkOliveGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkOliveGreen
+    path: ../src/ColorRGB.cs
+    startLine: 36
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkOliveGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkOliveGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkOrange
+  commentId: F:Vim.Math3d.ColorRGB.DarkOrange
+  id: DarkOrange
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkOrange
+  nameWithType: ColorRGB.DarkOrange
+  fullName: Vim.Math3d.ColorRGB.DarkOrange
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkOrange
+    path: ../src/ColorRGB.cs
+    startLine: 37
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkOrange
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkOrange As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkOrchid
+  commentId: F:Vim.Math3d.ColorRGB.DarkOrchid
+  id: DarkOrchid
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkOrchid
+  nameWithType: ColorRGB.DarkOrchid
+  fullName: Vim.Math3d.ColorRGB.DarkOrchid
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkOrchid
+    path: ../src/ColorRGB.cs
+    startLine: 38
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkOrchid
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkOrchid As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkRed
+  commentId: F:Vim.Math3d.ColorRGB.DarkRed
+  id: DarkRed
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkRed
+  nameWithType: ColorRGB.DarkRed
+  fullName: Vim.Math3d.ColorRGB.DarkRed
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkRed
+    path: ../src/ColorRGB.cs
+    startLine: 39
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkRed
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkRed As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkSalmon
+  commentId: F:Vim.Math3d.ColorRGB.DarkSalmon
+  id: DarkSalmon
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkSalmon
+  nameWithType: ColorRGB.DarkSalmon
+  fullName: Vim.Math3d.ColorRGB.DarkSalmon
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkSalmon
+    path: ../src/ColorRGB.cs
+    startLine: 40
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkSalmon
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkSalmon As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkSeaGreen
+  commentId: F:Vim.Math3d.ColorRGB.DarkSeaGreen
+  id: DarkSeaGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkSeaGreen
+  nameWithType: ColorRGB.DarkSeaGreen
+  fullName: Vim.Math3d.ColorRGB.DarkSeaGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkSeaGreen
+    path: ../src/ColorRGB.cs
+    startLine: 41
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkSeaGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkSeaGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkSlateBlue
+  commentId: F:Vim.Math3d.ColorRGB.DarkSlateBlue
+  id: DarkSlateBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkSlateBlue
+  nameWithType: ColorRGB.DarkSlateBlue
+  fullName: Vim.Math3d.ColorRGB.DarkSlateBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkSlateBlue
+    path: ../src/ColorRGB.cs
+    startLine: 42
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkSlateBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkSlateBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkSlateGray
+  commentId: F:Vim.Math3d.ColorRGB.DarkSlateGray
+  id: DarkSlateGray
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkSlateGray
+  nameWithType: ColorRGB.DarkSlateGray
+  fullName: Vim.Math3d.ColorRGB.DarkSlateGray
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkSlateGray
+    path: ../src/ColorRGB.cs
+    startLine: 43
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkSlateGray
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkSlateGray As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkTurquoise
+  commentId: F:Vim.Math3d.ColorRGB.DarkTurquoise
+  id: DarkTurquoise
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkTurquoise
+  nameWithType: ColorRGB.DarkTurquoise
+  fullName: Vim.Math3d.ColorRGB.DarkTurquoise
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkTurquoise
+    path: ../src/ColorRGB.cs
+    startLine: 44
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkTurquoise
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkTurquoise As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DarkViolet
+  commentId: F:Vim.Math3d.ColorRGB.DarkViolet
+  id: DarkViolet
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DarkViolet
+  nameWithType: ColorRGB.DarkViolet
+  fullName: Vim.Math3d.ColorRGB.DarkViolet
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkViolet
+    path: ../src/ColorRGB.cs
+    startLine: 45
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DarkViolet
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DarkViolet As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DeepPink
+  commentId: F:Vim.Math3d.ColorRGB.DeepPink
+  id: DeepPink
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DeepPink
+  nameWithType: ColorRGB.DeepPink
+  fullName: Vim.Math3d.ColorRGB.DeepPink
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DeepPink
+    path: ../src/ColorRGB.cs
+    startLine: 46
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DeepPink
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DeepPink As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DeepSkyBlue
+  commentId: F:Vim.Math3d.ColorRGB.DeepSkyBlue
+  id: DeepSkyBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DeepSkyBlue
+  nameWithType: ColorRGB.DeepSkyBlue
+  fullName: Vim.Math3d.ColorRGB.DeepSkyBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DeepSkyBlue
+    path: ../src/ColorRGB.cs
+    startLine: 47
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DeepSkyBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DeepSkyBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DimGray
+  commentId: F:Vim.Math3d.ColorRGB.DimGray
+  id: DimGray
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DimGray
+  nameWithType: ColorRGB.DimGray
+  fullName: Vim.Math3d.ColorRGB.DimGray
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DimGray
+    path: ../src/ColorRGB.cs
+    startLine: 48
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DimGray
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DimGray As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.DodgerBlue
+  commentId: F:Vim.Math3d.ColorRGB.DodgerBlue
+  id: DodgerBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: DodgerBlue
+  nameWithType: ColorRGB.DodgerBlue
+  fullName: Vim.Math3d.ColorRGB.DodgerBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DodgerBlue
+    path: ../src/ColorRGB.cs
+    startLine: 49
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB DodgerBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly DodgerBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Firebrick
+  commentId: F:Vim.Math3d.ColorRGB.Firebrick
+  id: Firebrick
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Firebrick
+  nameWithType: ColorRGB.Firebrick
+  fullName: Vim.Math3d.ColorRGB.Firebrick
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Firebrick
+    path: ../src/ColorRGB.cs
+    startLine: 50
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Firebrick
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Firebrick As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.FloralWhite
+  commentId: F:Vim.Math3d.ColorRGB.FloralWhite
+  id: FloralWhite
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: FloralWhite
+  nameWithType: ColorRGB.FloralWhite
+  fullName: Vim.Math3d.ColorRGB.FloralWhite
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: FloralWhite
+    path: ../src/ColorRGB.cs
+    startLine: 51
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB FloralWhite
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly FloralWhite As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.ForestGreen
+  commentId: F:Vim.Math3d.ColorRGB.ForestGreen
+  id: ForestGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: ForestGreen
+  nameWithType: ColorRGB.ForestGreen
+  fullName: Vim.Math3d.ColorRGB.ForestGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ForestGreen
+    path: ../src/ColorRGB.cs
+    startLine: 52
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB ForestGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly ForestGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Fuchsia
+  commentId: F:Vim.Math3d.ColorRGB.Fuchsia
+  id: Fuchsia
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Fuchsia
+  nameWithType: ColorRGB.Fuchsia
+  fullName: Vim.Math3d.ColorRGB.Fuchsia
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Fuchsia
+    path: ../src/ColorRGB.cs
+    startLine: 53
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Fuchsia
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Fuchsia As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Gainsboro
+  commentId: F:Vim.Math3d.ColorRGB.Gainsboro
+  id: Gainsboro
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Gainsboro
+  nameWithType: ColorRGB.Gainsboro
+  fullName: Vim.Math3d.ColorRGB.Gainsboro
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Gainsboro
+    path: ../src/ColorRGB.cs
+    startLine: 54
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Gainsboro
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Gainsboro As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.GhostWhite
+  commentId: F:Vim.Math3d.ColorRGB.GhostWhite
+  id: GhostWhite
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: GhostWhite
+  nameWithType: ColorRGB.GhostWhite
+  fullName: Vim.Math3d.ColorRGB.GhostWhite
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GhostWhite
+    path: ../src/ColorRGB.cs
+    startLine: 55
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB GhostWhite
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly GhostWhite As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Gold
+  commentId: F:Vim.Math3d.ColorRGB.Gold
+  id: Gold
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Gold
+  nameWithType: ColorRGB.Gold
+  fullName: Vim.Math3d.ColorRGB.Gold
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Gold
+    path: ../src/ColorRGB.cs
+    startLine: 56
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Gold
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Gold As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Goldenrod
+  commentId: F:Vim.Math3d.ColorRGB.Goldenrod
+  id: Goldenrod
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Goldenrod
+  nameWithType: ColorRGB.Goldenrod
+  fullName: Vim.Math3d.ColorRGB.Goldenrod
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Goldenrod
+    path: ../src/ColorRGB.cs
+    startLine: 57
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Goldenrod
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Goldenrod As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Gray
+  commentId: F:Vim.Math3d.ColorRGB.Gray
+  id: Gray
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Gray
+  nameWithType: ColorRGB.Gray
+  fullName: Vim.Math3d.ColorRGB.Gray
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Gray
+    path: ../src/ColorRGB.cs
+    startLine: 58
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Gray
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Gray As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Green
+  commentId: F:Vim.Math3d.ColorRGB.Green
+  id: Green
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Green
+  nameWithType: ColorRGB.Green
+  fullName: Vim.Math3d.ColorRGB.Green
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Green
+    path: ../src/ColorRGB.cs
+    startLine: 59
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Green
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Green As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.GreenYellow
+  commentId: F:Vim.Math3d.ColorRGB.GreenYellow
+  id: GreenYellow
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: GreenYellow
+  nameWithType: ColorRGB.GreenYellow
+  fullName: Vim.Math3d.ColorRGB.GreenYellow
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GreenYellow
+    path: ../src/ColorRGB.cs
+    startLine: 60
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB GreenYellow
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly GreenYellow As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Honeydew
+  commentId: F:Vim.Math3d.ColorRGB.Honeydew
+  id: Honeydew
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Honeydew
+  nameWithType: ColorRGB.Honeydew
+  fullName: Vim.Math3d.ColorRGB.Honeydew
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Honeydew
+    path: ../src/ColorRGB.cs
+    startLine: 61
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Honeydew
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Honeydew As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.HotPink
+  commentId: F:Vim.Math3d.ColorRGB.HotPink
+  id: HotPink
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: HotPink
+  nameWithType: ColorRGB.HotPink
+  fullName: Vim.Math3d.ColorRGB.HotPink
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: HotPink
+    path: ../src/ColorRGB.cs
+    startLine: 62
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB HotPink
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly HotPink As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.IndianRed
+  commentId: F:Vim.Math3d.ColorRGB.IndianRed
+  id: IndianRed
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: IndianRed
+  nameWithType: ColorRGB.IndianRed
+  fullName: Vim.Math3d.ColorRGB.IndianRed
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: IndianRed
+    path: ../src/ColorRGB.cs
+    startLine: 63
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB IndianRed
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly IndianRed As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Indigo
+  commentId: F:Vim.Math3d.ColorRGB.Indigo
+  id: Indigo
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Indigo
+  nameWithType: ColorRGB.Indigo
+  fullName: Vim.Math3d.ColorRGB.Indigo
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Indigo
+    path: ../src/ColorRGB.cs
+    startLine: 64
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Indigo
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Indigo As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Ivory
+  commentId: F:Vim.Math3d.ColorRGB.Ivory
+  id: Ivory
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Ivory
+  nameWithType: ColorRGB.Ivory
+  fullName: Vim.Math3d.ColorRGB.Ivory
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Ivory
+    path: ../src/ColorRGB.cs
+    startLine: 65
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Ivory
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Ivory As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Khaki
+  commentId: F:Vim.Math3d.ColorRGB.Khaki
+  id: Khaki
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Khaki
+  nameWithType: ColorRGB.Khaki
+  fullName: Vim.Math3d.ColorRGB.Khaki
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Khaki
+    path: ../src/ColorRGB.cs
+    startLine: 66
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Khaki
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Khaki As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Lavender
+  commentId: F:Vim.Math3d.ColorRGB.Lavender
+  id: Lavender
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Lavender
+  nameWithType: ColorRGB.Lavender
+  fullName: Vim.Math3d.ColorRGB.Lavender
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Lavender
+    path: ../src/ColorRGB.cs
+    startLine: 67
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Lavender
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Lavender As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LavenderBlush
+  commentId: F:Vim.Math3d.ColorRGB.LavenderBlush
+  id: LavenderBlush
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LavenderBlush
+  nameWithType: ColorRGB.LavenderBlush
+  fullName: Vim.Math3d.ColorRGB.LavenderBlush
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LavenderBlush
+    path: ../src/ColorRGB.cs
+    startLine: 68
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LavenderBlush
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LavenderBlush As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LawnGreen
+  commentId: F:Vim.Math3d.ColorRGB.LawnGreen
+  id: LawnGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LawnGreen
+  nameWithType: ColorRGB.LawnGreen
+  fullName: Vim.Math3d.ColorRGB.LawnGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LawnGreen
+    path: ../src/ColorRGB.cs
+    startLine: 69
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LawnGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LawnGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LemonChiffon
+  commentId: F:Vim.Math3d.ColorRGB.LemonChiffon
+  id: LemonChiffon
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LemonChiffon
+  nameWithType: ColorRGB.LemonChiffon
+  fullName: Vim.Math3d.ColorRGB.LemonChiffon
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LemonChiffon
+    path: ../src/ColorRGB.cs
+    startLine: 70
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LemonChiffon
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LemonChiffon As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LightBlue
+  commentId: F:Vim.Math3d.ColorRGB.LightBlue
+  id: LightBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LightBlue
+  nameWithType: ColorRGB.LightBlue
+  fullName: Vim.Math3d.ColorRGB.LightBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightBlue
+    path: ../src/ColorRGB.cs
+    startLine: 71
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LightBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LightBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LightCoral
+  commentId: F:Vim.Math3d.ColorRGB.LightCoral
+  id: LightCoral
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LightCoral
+  nameWithType: ColorRGB.LightCoral
+  fullName: Vim.Math3d.ColorRGB.LightCoral
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightCoral
+    path: ../src/ColorRGB.cs
+    startLine: 72
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LightCoral
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LightCoral As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LightCyan
+  commentId: F:Vim.Math3d.ColorRGB.LightCyan
+  id: LightCyan
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LightCyan
+  nameWithType: ColorRGB.LightCyan
+  fullName: Vim.Math3d.ColorRGB.LightCyan
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightCyan
+    path: ../src/ColorRGB.cs
+    startLine: 73
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LightCyan
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LightCyan As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LightGoldenrodYellow
+  commentId: F:Vim.Math3d.ColorRGB.LightGoldenrodYellow
+  id: LightGoldenrodYellow
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LightGoldenrodYellow
+  nameWithType: ColorRGB.LightGoldenrodYellow
+  fullName: Vim.Math3d.ColorRGB.LightGoldenrodYellow
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightGoldenrodYellow
+    path: ../src/ColorRGB.cs
+    startLine: 74
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LightGoldenrodYellow
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LightGoldenrodYellow As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LightGreen
+  commentId: F:Vim.Math3d.ColorRGB.LightGreen
+  id: LightGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LightGreen
+  nameWithType: ColorRGB.LightGreen
+  fullName: Vim.Math3d.ColorRGB.LightGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightGreen
+    path: ../src/ColorRGB.cs
+    startLine: 75
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LightGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LightGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LightGray
+  commentId: F:Vim.Math3d.ColorRGB.LightGray
+  id: LightGray
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LightGray
+  nameWithType: ColorRGB.LightGray
+  fullName: Vim.Math3d.ColorRGB.LightGray
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightGray
+    path: ../src/ColorRGB.cs
+    startLine: 76
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LightGray
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LightGray As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LightPink
+  commentId: F:Vim.Math3d.ColorRGB.LightPink
+  id: LightPink
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LightPink
+  nameWithType: ColorRGB.LightPink
+  fullName: Vim.Math3d.ColorRGB.LightPink
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightPink
+    path: ../src/ColorRGB.cs
+    startLine: 77
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LightPink
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LightPink As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LightSalmon
+  commentId: F:Vim.Math3d.ColorRGB.LightSalmon
+  id: LightSalmon
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LightSalmon
+  nameWithType: ColorRGB.LightSalmon
+  fullName: Vim.Math3d.ColorRGB.LightSalmon
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightSalmon
+    path: ../src/ColorRGB.cs
+    startLine: 78
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LightSalmon
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LightSalmon As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LightSeaGreen
+  commentId: F:Vim.Math3d.ColorRGB.LightSeaGreen
+  id: LightSeaGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LightSeaGreen
+  nameWithType: ColorRGB.LightSeaGreen
+  fullName: Vim.Math3d.ColorRGB.LightSeaGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightSeaGreen
+    path: ../src/ColorRGB.cs
+    startLine: 79
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LightSeaGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LightSeaGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LightSkyBlue
+  commentId: F:Vim.Math3d.ColorRGB.LightSkyBlue
+  id: LightSkyBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LightSkyBlue
+  nameWithType: ColorRGB.LightSkyBlue
+  fullName: Vim.Math3d.ColorRGB.LightSkyBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightSkyBlue
+    path: ../src/ColorRGB.cs
+    startLine: 80
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LightSkyBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LightSkyBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LightSlateGray
+  commentId: F:Vim.Math3d.ColorRGB.LightSlateGray
+  id: LightSlateGray
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LightSlateGray
+  nameWithType: ColorRGB.LightSlateGray
+  fullName: Vim.Math3d.ColorRGB.LightSlateGray
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightSlateGray
+    path: ../src/ColorRGB.cs
+    startLine: 81
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LightSlateGray
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LightSlateGray As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LightSteelBlue
+  commentId: F:Vim.Math3d.ColorRGB.LightSteelBlue
+  id: LightSteelBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LightSteelBlue
+  nameWithType: ColorRGB.LightSteelBlue
+  fullName: Vim.Math3d.ColorRGB.LightSteelBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightSteelBlue
+    path: ../src/ColorRGB.cs
+    startLine: 82
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LightSteelBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LightSteelBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LightYellow
+  commentId: F:Vim.Math3d.ColorRGB.LightYellow
+  id: LightYellow
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LightYellow
+  nameWithType: ColorRGB.LightYellow
+  fullName: Vim.Math3d.ColorRGB.LightYellow
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightYellow
+    path: ../src/ColorRGB.cs
+    startLine: 83
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LightYellow
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LightYellow As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Lime
+  commentId: F:Vim.Math3d.ColorRGB.Lime
+  id: Lime
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Lime
+  nameWithType: ColorRGB.Lime
+  fullName: Vim.Math3d.ColorRGB.Lime
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Lime
+    path: ../src/ColorRGB.cs
+    startLine: 84
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Lime
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Lime As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.LimeGreen
+  commentId: F:Vim.Math3d.ColorRGB.LimeGreen
+  id: LimeGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: LimeGreen
+  nameWithType: ColorRGB.LimeGreen
+  fullName: Vim.Math3d.ColorRGB.LimeGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LimeGreen
+    path: ../src/ColorRGB.cs
+    startLine: 85
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB LimeGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly LimeGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Linen
+  commentId: F:Vim.Math3d.ColorRGB.Linen
+  id: Linen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Linen
+  nameWithType: ColorRGB.Linen
+  fullName: Vim.Math3d.ColorRGB.Linen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Linen
+    path: ../src/ColorRGB.cs
+    startLine: 86
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Linen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Linen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Magenta
+  commentId: F:Vim.Math3d.ColorRGB.Magenta
+  id: Magenta
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Magenta
+  nameWithType: ColorRGB.Magenta
+  fullName: Vim.Math3d.ColorRGB.Magenta
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Magenta
+    path: ../src/ColorRGB.cs
+    startLine: 87
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Magenta
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Magenta As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Maroon
+  commentId: F:Vim.Math3d.ColorRGB.Maroon
+  id: Maroon
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Maroon
+  nameWithType: ColorRGB.Maroon
+  fullName: Vim.Math3d.ColorRGB.Maroon
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Maroon
+    path: ../src/ColorRGB.cs
+    startLine: 88
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Maroon
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Maroon As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.MediumAquamarine
+  commentId: F:Vim.Math3d.ColorRGB.MediumAquamarine
+  id: MediumAquamarine
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MediumAquamarine
+  nameWithType: ColorRGB.MediumAquamarine
+  fullName: Vim.Math3d.ColorRGB.MediumAquamarine
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MediumAquamarine
+    path: ../src/ColorRGB.cs
+    startLine: 89
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB MediumAquamarine
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly MediumAquamarine As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.MediumBlue
+  commentId: F:Vim.Math3d.ColorRGB.MediumBlue
+  id: MediumBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MediumBlue
+  nameWithType: ColorRGB.MediumBlue
+  fullName: Vim.Math3d.ColorRGB.MediumBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MediumBlue
+    path: ../src/ColorRGB.cs
+    startLine: 90
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB MediumBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly MediumBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.MediumOrchid
+  commentId: F:Vim.Math3d.ColorRGB.MediumOrchid
+  id: MediumOrchid
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MediumOrchid
+  nameWithType: ColorRGB.MediumOrchid
+  fullName: Vim.Math3d.ColorRGB.MediumOrchid
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MediumOrchid
+    path: ../src/ColorRGB.cs
+    startLine: 91
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB MediumOrchid
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly MediumOrchid As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.MediumPurple
+  commentId: F:Vim.Math3d.ColorRGB.MediumPurple
+  id: MediumPurple
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MediumPurple
+  nameWithType: ColorRGB.MediumPurple
+  fullName: Vim.Math3d.ColorRGB.MediumPurple
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MediumPurple
+    path: ../src/ColorRGB.cs
+    startLine: 92
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB MediumPurple
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly MediumPurple As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.MediumSeaGreen
+  commentId: F:Vim.Math3d.ColorRGB.MediumSeaGreen
+  id: MediumSeaGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MediumSeaGreen
+  nameWithType: ColorRGB.MediumSeaGreen
+  fullName: Vim.Math3d.ColorRGB.MediumSeaGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MediumSeaGreen
+    path: ../src/ColorRGB.cs
+    startLine: 93
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB MediumSeaGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly MediumSeaGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.MediumSlateBlue
+  commentId: F:Vim.Math3d.ColorRGB.MediumSlateBlue
+  id: MediumSlateBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MediumSlateBlue
+  nameWithType: ColorRGB.MediumSlateBlue
+  fullName: Vim.Math3d.ColorRGB.MediumSlateBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MediumSlateBlue
+    path: ../src/ColorRGB.cs
+    startLine: 94
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB MediumSlateBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly MediumSlateBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.MediumSpringGreen
+  commentId: F:Vim.Math3d.ColorRGB.MediumSpringGreen
+  id: MediumSpringGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MediumSpringGreen
+  nameWithType: ColorRGB.MediumSpringGreen
+  fullName: Vim.Math3d.ColorRGB.MediumSpringGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MediumSpringGreen
+    path: ../src/ColorRGB.cs
+    startLine: 95
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB MediumSpringGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly MediumSpringGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.MediumTurquoise
+  commentId: F:Vim.Math3d.ColorRGB.MediumTurquoise
+  id: MediumTurquoise
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MediumTurquoise
+  nameWithType: ColorRGB.MediumTurquoise
+  fullName: Vim.Math3d.ColorRGB.MediumTurquoise
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MediumTurquoise
+    path: ../src/ColorRGB.cs
+    startLine: 96
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB MediumTurquoise
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly MediumTurquoise As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.MediumVioletRed
+  commentId: F:Vim.Math3d.ColorRGB.MediumVioletRed
+  id: MediumVioletRed
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MediumVioletRed
+  nameWithType: ColorRGB.MediumVioletRed
+  fullName: Vim.Math3d.ColorRGB.MediumVioletRed
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MediumVioletRed
+    path: ../src/ColorRGB.cs
+    startLine: 97
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB MediumVioletRed
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly MediumVioletRed As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.MidnightBlue
+  commentId: F:Vim.Math3d.ColorRGB.MidnightBlue
+  id: MidnightBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MidnightBlue
+  nameWithType: ColorRGB.MidnightBlue
+  fullName: Vim.Math3d.ColorRGB.MidnightBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MidnightBlue
+    path: ../src/ColorRGB.cs
+    startLine: 98
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB MidnightBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly MidnightBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.MintCream
+  commentId: F:Vim.Math3d.ColorRGB.MintCream
+  id: MintCream
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MintCream
+  nameWithType: ColorRGB.MintCream
+  fullName: Vim.Math3d.ColorRGB.MintCream
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MintCream
+    path: ../src/ColorRGB.cs
+    startLine: 99
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB MintCream
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly MintCream As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.MistyRose
+  commentId: F:Vim.Math3d.ColorRGB.MistyRose
+  id: MistyRose
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MistyRose
+  nameWithType: ColorRGB.MistyRose
+  fullName: Vim.Math3d.ColorRGB.MistyRose
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MistyRose
+    path: ../src/ColorRGB.cs
+    startLine: 100
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB MistyRose
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly MistyRose As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Moccasin
+  commentId: F:Vim.Math3d.ColorRGB.Moccasin
+  id: Moccasin
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Moccasin
+  nameWithType: ColorRGB.Moccasin
+  fullName: Vim.Math3d.ColorRGB.Moccasin
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Moccasin
+    path: ../src/ColorRGB.cs
+    startLine: 101
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Moccasin
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Moccasin As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.NavajoWhite
+  commentId: F:Vim.Math3d.ColorRGB.NavajoWhite
+  id: NavajoWhite
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: NavajoWhite
+  nameWithType: ColorRGB.NavajoWhite
+  fullName: Vim.Math3d.ColorRGB.NavajoWhite
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: NavajoWhite
+    path: ../src/ColorRGB.cs
+    startLine: 102
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB NavajoWhite
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly NavajoWhite As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Navy
+  commentId: F:Vim.Math3d.ColorRGB.Navy
+  id: Navy
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Navy
+  nameWithType: ColorRGB.Navy
+  fullName: Vim.Math3d.ColorRGB.Navy
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Navy
+    path: ../src/ColorRGB.cs
+    startLine: 103
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Navy
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Navy As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.OldLace
+  commentId: F:Vim.Math3d.ColorRGB.OldLace
+  id: OldLace
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: OldLace
+  nameWithType: ColorRGB.OldLace
+  fullName: Vim.Math3d.ColorRGB.OldLace
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: OldLace
+    path: ../src/ColorRGB.cs
+    startLine: 104
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB OldLace
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly OldLace As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Olive
+  commentId: F:Vim.Math3d.ColorRGB.Olive
+  id: Olive
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Olive
+  nameWithType: ColorRGB.Olive
+  fullName: Vim.Math3d.ColorRGB.Olive
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Olive
+    path: ../src/ColorRGB.cs
+    startLine: 105
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Olive
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Olive As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.OliveDrab
+  commentId: F:Vim.Math3d.ColorRGB.OliveDrab
+  id: OliveDrab
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: OliveDrab
+  nameWithType: ColorRGB.OliveDrab
+  fullName: Vim.Math3d.ColorRGB.OliveDrab
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: OliveDrab
+    path: ../src/ColorRGB.cs
+    startLine: 106
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB OliveDrab
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly OliveDrab As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Orange
+  commentId: F:Vim.Math3d.ColorRGB.Orange
+  id: Orange
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Orange
+  nameWithType: ColorRGB.Orange
+  fullName: Vim.Math3d.ColorRGB.Orange
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Orange
+    path: ../src/ColorRGB.cs
+    startLine: 107
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Orange
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Orange As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.OrangeRed
+  commentId: F:Vim.Math3d.ColorRGB.OrangeRed
+  id: OrangeRed
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: OrangeRed
+  nameWithType: ColorRGB.OrangeRed
+  fullName: Vim.Math3d.ColorRGB.OrangeRed
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: OrangeRed
+    path: ../src/ColorRGB.cs
+    startLine: 108
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB OrangeRed
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly OrangeRed As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Orchid
+  commentId: F:Vim.Math3d.ColorRGB.Orchid
+  id: Orchid
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Orchid
+  nameWithType: ColorRGB.Orchid
+  fullName: Vim.Math3d.ColorRGB.Orchid
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Orchid
+    path: ../src/ColorRGB.cs
+    startLine: 109
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Orchid
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Orchid As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.PaleGoldenrod
+  commentId: F:Vim.Math3d.ColorRGB.PaleGoldenrod
+  id: PaleGoldenrod
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: PaleGoldenrod
+  nameWithType: ColorRGB.PaleGoldenrod
+  fullName: Vim.Math3d.ColorRGB.PaleGoldenrod
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: PaleGoldenrod
+    path: ../src/ColorRGB.cs
+    startLine: 110
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB PaleGoldenrod
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly PaleGoldenrod As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.PaleGreen
+  commentId: F:Vim.Math3d.ColorRGB.PaleGreen
+  id: PaleGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: PaleGreen
+  nameWithType: ColorRGB.PaleGreen
+  fullName: Vim.Math3d.ColorRGB.PaleGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: PaleGreen
+    path: ../src/ColorRGB.cs
+    startLine: 111
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB PaleGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly PaleGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.PaleTurquoise
+  commentId: F:Vim.Math3d.ColorRGB.PaleTurquoise
+  id: PaleTurquoise
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: PaleTurquoise
+  nameWithType: ColorRGB.PaleTurquoise
+  fullName: Vim.Math3d.ColorRGB.PaleTurquoise
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: PaleTurquoise
+    path: ../src/ColorRGB.cs
+    startLine: 112
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB PaleTurquoise
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly PaleTurquoise As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.PaleVioletRed
+  commentId: F:Vim.Math3d.ColorRGB.PaleVioletRed
+  id: PaleVioletRed
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: PaleVioletRed
+  nameWithType: ColorRGB.PaleVioletRed
+  fullName: Vim.Math3d.ColorRGB.PaleVioletRed
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: PaleVioletRed
+    path: ../src/ColorRGB.cs
+    startLine: 113
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB PaleVioletRed
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly PaleVioletRed As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.PapayaWhip
+  commentId: F:Vim.Math3d.ColorRGB.PapayaWhip
+  id: PapayaWhip
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: PapayaWhip
+  nameWithType: ColorRGB.PapayaWhip
+  fullName: Vim.Math3d.ColorRGB.PapayaWhip
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: PapayaWhip
+    path: ../src/ColorRGB.cs
+    startLine: 114
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB PapayaWhip
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly PapayaWhip As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.PeachPuff
+  commentId: F:Vim.Math3d.ColorRGB.PeachPuff
+  id: PeachPuff
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: PeachPuff
+  nameWithType: ColorRGB.PeachPuff
+  fullName: Vim.Math3d.ColorRGB.PeachPuff
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: PeachPuff
+    path: ../src/ColorRGB.cs
+    startLine: 115
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB PeachPuff
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly PeachPuff As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Peru
+  commentId: F:Vim.Math3d.ColorRGB.Peru
+  id: Peru
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Peru
+  nameWithType: ColorRGB.Peru
+  fullName: Vim.Math3d.ColorRGB.Peru
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Peru
+    path: ../src/ColorRGB.cs
+    startLine: 116
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Peru
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Peru As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Pink
+  commentId: F:Vim.Math3d.ColorRGB.Pink
+  id: Pink
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Pink
+  nameWithType: ColorRGB.Pink
+  fullName: Vim.Math3d.ColorRGB.Pink
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Pink
+    path: ../src/ColorRGB.cs
+    startLine: 117
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Pink
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Pink As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Plum
+  commentId: F:Vim.Math3d.ColorRGB.Plum
+  id: Plum
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Plum
+  nameWithType: ColorRGB.Plum
+  fullName: Vim.Math3d.ColorRGB.Plum
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Plum
+    path: ../src/ColorRGB.cs
+    startLine: 118
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Plum
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Plum As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.PowderBlue
+  commentId: F:Vim.Math3d.ColorRGB.PowderBlue
+  id: PowderBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: PowderBlue
+  nameWithType: ColorRGB.PowderBlue
+  fullName: Vim.Math3d.ColorRGB.PowderBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: PowderBlue
+    path: ../src/ColorRGB.cs
+    startLine: 119
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB PowderBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly PowderBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Purple
+  commentId: F:Vim.Math3d.ColorRGB.Purple
+  id: Purple
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Purple
+  nameWithType: ColorRGB.Purple
+  fullName: Vim.Math3d.ColorRGB.Purple
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Purple
+    path: ../src/ColorRGB.cs
+    startLine: 120
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Purple
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Purple As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Red
+  commentId: F:Vim.Math3d.ColorRGB.Red
+  id: Red
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Red
+  nameWithType: ColorRGB.Red
+  fullName: Vim.Math3d.ColorRGB.Red
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Red
+    path: ../src/ColorRGB.cs
+    startLine: 121
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Red
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Red As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.RosyBrown
+  commentId: F:Vim.Math3d.ColorRGB.RosyBrown
+  id: RosyBrown
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: RosyBrown
+  nameWithType: ColorRGB.RosyBrown
+  fullName: Vim.Math3d.ColorRGB.RosyBrown
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: RosyBrown
+    path: ../src/ColorRGB.cs
+    startLine: 122
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB RosyBrown
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly RosyBrown As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.RoyalBlue
+  commentId: F:Vim.Math3d.ColorRGB.RoyalBlue
+  id: RoyalBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: RoyalBlue
+  nameWithType: ColorRGB.RoyalBlue
+  fullName: Vim.Math3d.ColorRGB.RoyalBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: RoyalBlue
+    path: ../src/ColorRGB.cs
+    startLine: 123
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB RoyalBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly RoyalBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.SaddleBrown
+  commentId: F:Vim.Math3d.ColorRGB.SaddleBrown
+  id: SaddleBrown
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: SaddleBrown
+  nameWithType: ColorRGB.SaddleBrown
+  fullName: Vim.Math3d.ColorRGB.SaddleBrown
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SaddleBrown
+    path: ../src/ColorRGB.cs
+    startLine: 124
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB SaddleBrown
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly SaddleBrown As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Salmon
+  commentId: F:Vim.Math3d.ColorRGB.Salmon
+  id: Salmon
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Salmon
+  nameWithType: ColorRGB.Salmon
+  fullName: Vim.Math3d.ColorRGB.Salmon
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Salmon
+    path: ../src/ColorRGB.cs
+    startLine: 125
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Salmon
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Salmon As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.SandyBrown
+  commentId: F:Vim.Math3d.ColorRGB.SandyBrown
+  id: SandyBrown
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: SandyBrown
+  nameWithType: ColorRGB.SandyBrown
+  fullName: Vim.Math3d.ColorRGB.SandyBrown
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SandyBrown
+    path: ../src/ColorRGB.cs
+    startLine: 126
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB SandyBrown
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly SandyBrown As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.SeaGreen
+  commentId: F:Vim.Math3d.ColorRGB.SeaGreen
+  id: SeaGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: SeaGreen
+  nameWithType: ColorRGB.SeaGreen
+  fullName: Vim.Math3d.ColorRGB.SeaGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SeaGreen
+    path: ../src/ColorRGB.cs
+    startLine: 127
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB SeaGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly SeaGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.SeaShell
+  commentId: F:Vim.Math3d.ColorRGB.SeaShell
+  id: SeaShell
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: SeaShell
+  nameWithType: ColorRGB.SeaShell
+  fullName: Vim.Math3d.ColorRGB.SeaShell
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SeaShell
+    path: ../src/ColorRGB.cs
+    startLine: 128
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB SeaShell
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly SeaShell As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Sienna
+  commentId: F:Vim.Math3d.ColorRGB.Sienna
+  id: Sienna
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Sienna
+  nameWithType: ColorRGB.Sienna
+  fullName: Vim.Math3d.ColorRGB.Sienna
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Sienna
+    path: ../src/ColorRGB.cs
+    startLine: 129
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Sienna
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Sienna As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Silver
+  commentId: F:Vim.Math3d.ColorRGB.Silver
+  id: Silver
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Silver
+  nameWithType: ColorRGB.Silver
+  fullName: Vim.Math3d.ColorRGB.Silver
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Silver
+    path: ../src/ColorRGB.cs
+    startLine: 130
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Silver
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Silver As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.SkyBlue
+  commentId: F:Vim.Math3d.ColorRGB.SkyBlue
+  id: SkyBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: SkyBlue
+  nameWithType: ColorRGB.SkyBlue
+  fullName: Vim.Math3d.ColorRGB.SkyBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SkyBlue
+    path: ../src/ColorRGB.cs
+    startLine: 131
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB SkyBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly SkyBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.SlateBlue
+  commentId: F:Vim.Math3d.ColorRGB.SlateBlue
+  id: SlateBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: SlateBlue
+  nameWithType: ColorRGB.SlateBlue
+  fullName: Vim.Math3d.ColorRGB.SlateBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SlateBlue
+    path: ../src/ColorRGB.cs
+    startLine: 132
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB SlateBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly SlateBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.SlateGray
+  commentId: F:Vim.Math3d.ColorRGB.SlateGray
+  id: SlateGray
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: SlateGray
+  nameWithType: ColorRGB.SlateGray
+  fullName: Vim.Math3d.ColorRGB.SlateGray
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SlateGray
+    path: ../src/ColorRGB.cs
+    startLine: 133
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB SlateGray
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly SlateGray As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Snow
+  commentId: F:Vim.Math3d.ColorRGB.Snow
+  id: Snow
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Snow
+  nameWithType: ColorRGB.Snow
+  fullName: Vim.Math3d.ColorRGB.Snow
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Snow
+    path: ../src/ColorRGB.cs
+    startLine: 134
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Snow
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Snow As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.SpringGreen
+  commentId: F:Vim.Math3d.ColorRGB.SpringGreen
+  id: SpringGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: SpringGreen
+  nameWithType: ColorRGB.SpringGreen
+  fullName: Vim.Math3d.ColorRGB.SpringGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SpringGreen
+    path: ../src/ColorRGB.cs
+    startLine: 135
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB SpringGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly SpringGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.SteelBlue
+  commentId: F:Vim.Math3d.ColorRGB.SteelBlue
+  id: SteelBlue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: SteelBlue
+  nameWithType: ColorRGB.SteelBlue
+  fullName: Vim.Math3d.ColorRGB.SteelBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SteelBlue
+    path: ../src/ColorRGB.cs
+    startLine: 136
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB SteelBlue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly SteelBlue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Tan
+  commentId: F:Vim.Math3d.ColorRGB.Tan
+  id: Tan
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Tan
+  nameWithType: ColorRGB.Tan
+  fullName: Vim.Math3d.ColorRGB.Tan
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Tan
+    path: ../src/ColorRGB.cs
+    startLine: 137
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Tan
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Tan As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Teal
+  commentId: F:Vim.Math3d.ColorRGB.Teal
+  id: Teal
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Teal
+  nameWithType: ColorRGB.Teal
+  fullName: Vim.Math3d.ColorRGB.Teal
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Teal
+    path: ../src/ColorRGB.cs
+    startLine: 138
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Teal
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Teal As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Thistle
+  commentId: F:Vim.Math3d.ColorRGB.Thistle
+  id: Thistle
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Thistle
+  nameWithType: ColorRGB.Thistle
+  fullName: Vim.Math3d.ColorRGB.Thistle
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Thistle
+    path: ../src/ColorRGB.cs
+    startLine: 139
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Thistle
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Thistle As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Tomato
+  commentId: F:Vim.Math3d.ColorRGB.Tomato
+  id: Tomato
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Tomato
+  nameWithType: ColorRGB.Tomato
+  fullName: Vim.Math3d.ColorRGB.Tomato
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Tomato
+    path: ../src/ColorRGB.cs
+    startLine: 140
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Tomato
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Tomato As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Turquoise
+  commentId: F:Vim.Math3d.ColorRGB.Turquoise
+  id: Turquoise
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Turquoise
+  nameWithType: ColorRGB.Turquoise
+  fullName: Vim.Math3d.ColorRGB.Turquoise
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Turquoise
+    path: ../src/ColorRGB.cs
+    startLine: 141
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Turquoise
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Turquoise As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Violet
+  commentId: F:Vim.Math3d.ColorRGB.Violet
+  id: Violet
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Violet
+  nameWithType: ColorRGB.Violet
+  fullName: Vim.Math3d.ColorRGB.Violet
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Violet
+    path: ../src/ColorRGB.cs
+    startLine: 142
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Violet
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Violet As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Wheat
+  commentId: F:Vim.Math3d.ColorRGB.Wheat
+  id: Wheat
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Wheat
+  nameWithType: ColorRGB.Wheat
+  fullName: Vim.Math3d.ColorRGB.Wheat
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Wheat
+    path: ../src/ColorRGB.cs
+    startLine: 143
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Wheat
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Wheat As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.White
+  commentId: F:Vim.Math3d.ColorRGB.White
+  id: White
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: White
+  nameWithType: ColorRGB.White
+  fullName: Vim.Math3d.ColorRGB.White
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: White
+    path: ../src/ColorRGB.cs
+    startLine: 144
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB White
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly White As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.WhiteSmoke
+  commentId: F:Vim.Math3d.ColorRGB.WhiteSmoke
+  id: WhiteSmoke
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: WhiteSmoke
+  nameWithType: ColorRGB.WhiteSmoke
+  fullName: Vim.Math3d.ColorRGB.WhiteSmoke
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: WhiteSmoke
+    path: ../src/ColorRGB.cs
+    startLine: 145
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB WhiteSmoke
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly WhiteSmoke As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.Yellow
+  commentId: F:Vim.Math3d.ColorRGB.Yellow
+  id: Yellow
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Yellow
+  nameWithType: ColorRGB.Yellow
+  fullName: Vim.Math3d.ColorRGB.Yellow
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Yellow
+    path: ../src/ColorRGB.cs
+    startLine: 146
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB Yellow
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly Yellow As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.YellowGreen
+  commentId: F:Vim.Math3d.ColorRGB.YellowGreen
+  id: YellowGreen
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: YellowGreen
+  nameWithType: ColorRGB.YellowGreen
+  fullName: Vim.Math3d.ColorRGB.YellowGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGB.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: YellowGreen
+    path: ../src/ColorRGB.cs
+    startLine: 147
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGB YellowGreen
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared ReadOnly YellowGreen As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.R
+  commentId: F:Vim.Math3d.ColorRGB.R
+  id: R
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: R
+  nameWithType: ColorRGB.R
+  fullName: Vim.Math3d.ColorRGB.R
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: R
+    path: ../src/Structs.cs
+    startLine: 1707
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly byte R
+    return:
+      type: System.Byte
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly R As Byte
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.G
+  commentId: F:Vim.Math3d.ColorRGB.G
+  id: G
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: G
+  nameWithType: ColorRGB.G
+  fullName: Vim.Math3d.ColorRGB.G
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: G
+    path: ../src/Structs.cs
+    startLine: 1709
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly byte G
+    return:
+      type: System.Byte
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly G As Byte
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.B
+  commentId: F:Vim.Math3d.ColorRGB.B
+  id: B
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: B
+  nameWithType: ColorRGB.B
+  fullName: Vim.Math3d.ColorRGB.B
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: B
+    path: ../src/Structs.cs
+    startLine: 1711
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly byte B
+    return:
+      type: System.Byte
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly B As Byte
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGB.#ctor(System.ValueTuple{System.Byte,System.Byte,System.Byte})
+  commentId: M:Vim.Math3d.ColorRGB.#ctor(System.ValueTuple{System.Byte,System.Byte,System.Byte})
+  id: '#ctor(System.ValueTuple{System.Byte,System.Byte,System.Byte})'
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: ColorRGB((Byte r, Byte g, Byte b))
+  nameWithType: ColorRGB.ColorRGB((Byte r, Byte g, Byte b))
+  fullName: Vim.Math3d.ColorRGB.ColorRGB(System.ValueTuple<System.Byte, System.Byte, System.Byte>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1712
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public ColorRGB((byte r, byte g, byte b) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Byte,System.Byte,System.Byte}
+    content.vb: Public Sub New(tuple As(r As Byte, g As Byte, b As Byte)(Of Byte , Byte, Byte))
+  overload: Vim.Math3d.ColorRGB.#ctor*
+  nameWithType.vb: ColorRGB.ColorRGB((r As Byte, g As Byte, b As Byte)(Of Byte, Byte, Byte))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.ColorRGB.ColorRGB(System.ValueTuple(Of System.Byte, System.Byte, System.Byte))
+  name.vb: ColorRGB((r As Byte, g As Byte, b As Byte)(Of Byte, Byte, Byte))
+- uid: Vim.Math3d.ColorRGB.#ctor(System.Byte,System.Byte,System.Byte)
+  commentId: M:Vim.Math3d.ColorRGB.#ctor(System.Byte,System.Byte,System.Byte)
+  id: '#ctor(System.Byte,System.Byte,System.Byte)'
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: ColorRGB(Byte, Byte, Byte)
+  nameWithType: ColorRGB.ColorRGB(Byte, Byte, Byte)
+  fullName: Vim.Math3d.ColorRGB.ColorRGB(System.Byte, System.Byte, System.Byte)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1713
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public ColorRGB(byte r, byte g, byte b)
+    parameters:
+    - id: r
+      type: System.Byte
+    - id: g
+      type: System.Byte
+    - id: b
+      type: System.Byte
+    content.vb: Public Sub New(r As Byte, g As Byte, b As Byte)
+  overload: Vim.Math3d.ColorRGB.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.ColorRGB.Create(System.Byte,System.Byte,System.Byte)
+  commentId: M:Vim.Math3d.ColorRGB.Create(System.Byte,System.Byte,System.Byte)
+  id: Create(System.Byte,System.Byte,System.Byte)
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Create(Byte, Byte, Byte)
+  nameWithType: ColorRGB.Create(Byte, Byte, Byte)
+  fullName: Vim.Math3d.ColorRGB.Create(System.Byte, System.Byte, System.Byte)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1714
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static ColorRGB Create(byte r, byte g, byte b)
+    parameters:
+    - id: r
+      type: System.Byte
+    - id: g
+      type: System.Byte
+    - id: b
+      type: System.Byte
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared Function Create(r As Byte, g As Byte, b As Byte) As ColorRGB
+  overload: Vim.Math3d.ColorRGB.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.ColorRGB.Create(System.ValueTuple{System.Byte,System.Byte,System.Byte})
+  commentId: M:Vim.Math3d.ColorRGB.Create(System.ValueTuple{System.Byte,System.Byte,System.Byte})
+  id: Create(System.ValueTuple{System.Byte,System.Byte,System.Byte})
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Create((Byte r, Byte g, Byte b))
+  nameWithType: ColorRGB.Create((Byte r, Byte g, Byte b))
+  fullName: Vim.Math3d.ColorRGB.Create(System.ValueTuple<System.Byte, System.Byte, System.Byte>)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1715
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static ColorRGB Create((byte r, byte g, byte b) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Byte,System.Byte,System.Byte}
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared Function Create(tuple As(r As Byte, g As Byte, b As Byte)(Of Byte , Byte, Byte)) As ColorRGB
+  overload: Vim.Math3d.ColorRGB.Create*
+  nameWithType.vb: ColorRGB.Create((r As Byte, g As Byte, b As Byte)(Of Byte, Byte, Byte))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.ColorRGB.Create(System.ValueTuple(Of System.Byte, System.Byte, System.Byte))
+  name.vb: Create((r As Byte, g As Byte, b As Byte)(Of Byte, Byte, Byte))
+- uid: Vim.Math3d.ColorRGB.Equals(System.Object)
+  commentId: M:Vim.Math3d.ColorRGB.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: ColorRGB.Equals(Object)
+  fullName: Vim.Math3d.ColorRGB.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1716
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Vim.Math3d.ColorRGB.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.ColorRGB.GetHashCode
+  commentId: M:Vim.Math3d.ColorRGB.GetHashCode
+  id: GetHashCode
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: ColorRGB.GetHashCode()
+  fullName: Vim.Math3d.ColorRGB.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetHashCode
+    path: ../src/Structs.cs
+    startLine: 1717
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Vim.Math3d.ColorRGB.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.ColorRGB.ToString
+  commentId: M:Vim.Math3d.ColorRGB.ToString
+  id: ToString
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ColorRGB.ToString()
+  fullName: Vim.Math3d.ColorRGB.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToString
+    path: ../src/Structs.cs
+    startLine: 1718
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: Vim.Math3d.ColorRGB.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.ColorRGB.Deconstruct(System.Byte@,System.Byte@,System.Byte@)
+  commentId: M:Vim.Math3d.ColorRGB.Deconstruct(System.Byte@,System.Byte@,System.Byte@)
+  id: Deconstruct(System.Byte@,System.Byte@,System.Byte@)
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Byte, out Byte, out Byte)
+  nameWithType: ColorRGB.Deconstruct(out Byte, out Byte, out Byte)
+  fullName: Vim.Math3d.ColorRGB.Deconstruct(out System.Byte, out System.Byte, out System.Byte)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Deconstruct
+    path: ../src/Structs.cs
+    startLine: 1719
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly void Deconstruct(out byte r, out byte g, out byte b)
+    parameters:
+    - id: r
+      type: System.Byte
+    - id: g
+      type: System.Byte
+    - id: b
+      type: System.Byte
+    content.vb: Public Sub Deconstruct(ByRef r As Byte, ByRef g As Byte, ByRef b As Byte)
+  overload: Vim.Math3d.ColorRGB.Deconstruct*
+  nameWithType.vb: ColorRGB.Deconstruct(ByRef Byte, ByRef Byte, ByRef Byte)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.ColorRGB.Deconstruct(ByRef System.Byte, ByRef System.Byte, ByRef System.Byte)
+  name.vb: Deconstruct(ByRef Byte, ByRef Byte, ByRef Byte)
+- uid: Vim.Math3d.ColorRGB.Equals(Vim.Math3d.ColorRGB)
+  commentId: M:Vim.Math3d.ColorRGB.Equals(Vim.Math3d.ColorRGB)
+  id: Equals(Vim.Math3d.ColorRGB)
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Equals(ColorRGB)
+  nameWithType: ColorRGB.Equals(ColorRGB)
+  fullName: Vim.Math3d.ColorRGB.Equals(Vim.Math3d.ColorRGB)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1720
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool Equals(ColorRGB x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.ColorRGB
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(x As ColorRGB) As Boolean
+  overload: Vim.Math3d.ColorRGB.Equals*
+  implements:
+  - System.IEquatable{Vim.Math3d.ColorRGB}.Equals(Vim.Math3d.ColorRGB)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.ColorRGB.op_Equality(Vim.Math3d.ColorRGB,Vim.Math3d.ColorRGB)
+  commentId: M:Vim.Math3d.ColorRGB.op_Equality(Vim.Math3d.ColorRGB,Vim.Math3d.ColorRGB)
+  id: op_Equality(Vim.Math3d.ColorRGB,Vim.Math3d.ColorRGB)
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Equality(ColorRGB, ColorRGB)
+  nameWithType: ColorRGB.Equality(ColorRGB, ColorRGB)
+  fullName: Vim.Math3d.ColorRGB.Equality(Vim.Math3d.ColorRGB, Vim.Math3d.ColorRGB)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Equality
+    path: ../src/Structs.cs
+    startLine: 1721
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator ==(ColorRGB x0, ColorRGB x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.ColorRGB
+    - id: x1
+      type: Vim.Math3d.ColorRGB
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(x0 As ColorRGB, x1 As ColorRGB) As Boolean
+  overload: Vim.Math3d.ColorRGB.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.ColorRGB.op_Inequality(Vim.Math3d.ColorRGB,Vim.Math3d.ColorRGB)
+  commentId: M:Vim.Math3d.ColorRGB.op_Inequality(Vim.Math3d.ColorRGB,Vim.Math3d.ColorRGB)
+  id: op_Inequality(Vim.Math3d.ColorRGB,Vim.Math3d.ColorRGB)
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Inequality(ColorRGB, ColorRGB)
+  nameWithType: ColorRGB.Inequality(ColorRGB, ColorRGB)
+  fullName: Vim.Math3d.ColorRGB.Inequality(Vim.Math3d.ColorRGB, Vim.Math3d.ColorRGB)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Inequality
+    path: ../src/Structs.cs
+    startLine: 1722
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator !=(ColorRGB x0, ColorRGB x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.ColorRGB
+    - id: x1
+      type: Vim.Math3d.ColorRGB
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(x0 As ColorRGB, x1 As ColorRGB) As Boolean
+  overload: Vim.Math3d.ColorRGB.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.ColorRGB.op_Implicit(System.ValueTuple{System.Byte,System.Byte,System.Byte})~Vim.Math3d.ColorRGB
+  commentId: M:Vim.Math3d.ColorRGB.op_Implicit(System.ValueTuple{System.Byte,System.Byte,System.Byte})~Vim.Math3d.ColorRGB
+  id: op_Implicit(System.ValueTuple{System.Byte,System.Byte,System.Byte})~Vim.Math3d.ColorRGB
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Implicit((Byte r, Byte g, Byte b) to ColorRGB)
+  nameWithType: ColorRGB.Implicit((Byte r, Byte g, Byte b) to ColorRGB)
+  fullName: Vim.Math3d.ColorRGB.Implicit(System.ValueTuple<System.Byte, System.Byte, System.Byte> to Vim.Math3d.ColorRGB)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1723
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator ColorRGB((byte r, byte g, byte b) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Byte,System.Byte,System.Byte}
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared Widening Operator CType(tuple As(r As Byte, g As Byte, b As Byte)(Of Byte , Byte, Byte)) As ColorRGB
+  overload: Vim.Math3d.ColorRGB.op_Implicit*
+  nameWithType.vb: ColorRGB.Widening((r As Byte, g As Byte, b As Byte)(Of Byte, Byte, Byte) to ColorRGB)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.ColorRGB.Widening(System.ValueTuple(Of System.Byte, System.Byte, System.Byte) to Vim.Math3d.ColorRGB)
+  name.vb: Widening((r As Byte, g As Byte, b As Byte)(Of Byte, Byte, Byte) to ColorRGB)
+- uid: Vim.Math3d.ColorRGB.op_Implicit(Vim.Math3d.ColorRGB)~System.ValueTuple{System.Byte,System.Byte,System.Byte}
+  commentId: M:Vim.Math3d.ColorRGB.op_Implicit(Vim.Math3d.ColorRGB)~System.ValueTuple{System.Byte,System.Byte,System.Byte}
+  id: op_Implicit(Vim.Math3d.ColorRGB)~System.ValueTuple{System.Byte,System.Byte,System.Byte}
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Implicit(ColorRGB to (Byte r, Byte g, Byte b))
+  nameWithType: ColorRGB.Implicit(ColorRGB to (Byte r, Byte g, Byte b))
+  fullName: Vim.Math3d.ColorRGB.Implicit(Vim.Math3d.ColorRGB to System.ValueTuple<System.Byte, System.Byte, System.Byte>)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1724
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator (byte r, byte g, byte b)(ColorRGB self)
+    parameters:
+    - id: self
+      type: Vim.Math3d.ColorRGB
+    return:
+      type: System.ValueTuple{System.Byte,System.Byte,System.Byte}
+    content.vb: Public Shared Widening Operator CType(self As ColorRGB) As(r As Byte, g As Byte, b As Byte)(Of Byte , Byte, Byte)
+  overload: Vim.Math3d.ColorRGB.op_Implicit*
+  nameWithType.vb: ColorRGB.Widening(ColorRGB to (r As Byte, g As Byte, b As Byte)(Of Byte, Byte, Byte))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.ColorRGB.Widening(Vim.Math3d.ColorRGB to System.ValueTuple(Of System.Byte, System.Byte, System.Byte))
+  name.vb: Widening(ColorRGB to (r As Byte, g As Byte, b As Byte)(Of Byte, Byte, Byte))
+- uid: Vim.Math3d.ColorRGB.Zero
+  commentId: F:Vim.Math3d.ColorRGB.Zero
+  id: Zero
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: ColorRGB.Zero
+  fullName: Vim.Math3d.ColorRGB.Zero
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Zero
+    path: ../src/Structs.cs
+    startLine: 1726
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static ColorRGB Zero
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared Zero As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.ColorRGB.MinValue
+  commentId: F:Vim.Math3d.ColorRGB.MinValue
+  id: MinValue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: ColorRGB.MinValue
+  fullName: Vim.Math3d.ColorRGB.MinValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MinValue
+    path: ../src/Structs.cs
+    startLine: 1727
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static ColorRGB MinValue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared MinValue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.ColorRGB.MaxValue
+  commentId: F:Vim.Math3d.ColorRGB.MaxValue
+  id: MaxValue
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: ColorRGB.MaxValue
+  fullName: Vim.Math3d.ColorRGB.MaxValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MaxValue
+    path: ../src/Structs.cs
+    startLine: 1728
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static ColorRGB MaxValue
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Shared MaxValue As ColorRGB
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.ColorRGB.SetR(System.Byte)
+  commentId: M:Vim.Math3d.ColorRGB.SetR(System.Byte)
+  id: SetR(System.Byte)
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: SetR(Byte)
+  nameWithType: ColorRGB.SetR(Byte)
+  fullName: Vim.Math3d.ColorRGB.SetR(System.Byte)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetR
+    path: ../src/Structs.cs
+    startLine: 1729
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly ColorRGB SetR(byte x)
+    parameters:
+    - id: x
+      type: System.Byte
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Function SetR(x As Byte) As ColorRGB
+  overload: Vim.Math3d.ColorRGB.SetR*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.ColorRGB.SetG(System.Byte)
+  commentId: M:Vim.Math3d.ColorRGB.SetG(System.Byte)
+  id: SetG(System.Byte)
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: SetG(Byte)
+  nameWithType: ColorRGB.SetG(Byte)
+  fullName: Vim.Math3d.ColorRGB.SetG(System.Byte)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetG
+    path: ../src/Structs.cs
+    startLine: 1730
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly ColorRGB SetG(byte x)
+    parameters:
+    - id: x
+      type: System.Byte
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Function SetG(x As Byte) As ColorRGB
+  overload: Vim.Math3d.ColorRGB.SetG*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.ColorRGB.SetB(System.Byte)
+  commentId: M:Vim.Math3d.ColorRGB.SetB(System.Byte)
+  id: SetB(System.Byte)
+  parent: Vim.Math3d.ColorRGB
+  langs:
+  - csharp
+  - vb
+  name: SetB(Byte)
+  nameWithType: ColorRGB.SetB(Byte)
+  fullName: Vim.Math3d.ColorRGB.SetB(System.Byte)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetB
+    path: ../src/Structs.cs
+    startLine: 1731
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly ColorRGB SetB(byte x)
+    parameters:
+    - id: x
+      type: System.Byte
+    return:
+      type: Vim.Math3d.ColorRGB
+    content.vb: Public Function SetB(x As Byte) As ColorRGB
+  overload: Vim.Math3d.ColorRGB.SetB*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.IEquatable{Vim.Math3d.ColorRGB}
+  commentId: T:System.IEquatable{Vim.Math3d.ColorRGB}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<ColorRGB>
+  nameWithType: IEquatable<ColorRGB>
+  fullName: System.IEquatable<Vim.Math3d.ColorRGB>
+  nameWithType.vb: IEquatable(Of ColorRGB)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.ColorRGB)
+  name.vb: IEquatable(Of ColorRGB)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.ColorRGB
+    name: ColorRGB
+    nameWithType: ColorRGB
+    fullName: Vim.Math3d.ColorRGB
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.ColorRGB
+    name: ColorRGB
+    nameWithType: ColorRGB
+    fullName: Vim.Math3d.ColorRGB
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Vim.Math3d.ColorRGB.#ctor*
+  commentId: Overload:Vim.Math3d.ColorRGB.#ctor
+  name: ColorRGB
+  nameWithType: ColorRGB.ColorRGB
+  fullName: Vim.Math3d.ColorRGB.ColorRGB
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Vim.Math3d.ColorRGB
+  commentId: T:Vim.Math3d.ColorRGB
+  parent: Vim.Math3d
+  name: ColorRGB
+  nameWithType: ColorRGB
+  fullName: Vim.Math3d.ColorRGB
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: System.ValueTuple{System.Byte,System.Byte,System.Byte}
+  commentId: T:System.ValueTuple{System.Byte,System.Byte,System.Byte}
+  parent: System
+  definition: System.ValueTuple`3
+  name: (T1, T2, T3)<Byte, Byte, Byte>
+  nameWithType: (T1, T2, T3)<Byte, Byte, Byte>
+  fullName: System.ValueTuple<System.Byte, System.Byte, System.Byte>
+  nameWithType.vb: (T1, T2, T3)(Of Byte, Byte, Byte)
+  fullName.vb: System.ValueTuple(Of System.Byte, System.Byte, System.Byte)
+  name.vb: (T1, T2, T3)(Of Byte, Byte, Byte)
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`3
+  commentId: T:System.ValueTuple`3
+  isExternal: true
+  name: (T1, T2, T3)<T1, T2, T3>
+  nameWithType: (T1, T2, T3)<T1, T2, T3>
+  fullName: System.ValueTuple<T1, T2, T3>
+  nameWithType.vb: (T1, T2, T3)(Of T1, T2, T3)
+  fullName.vb: System.ValueTuple(Of T1, T2, T3)
+  name.vb: (T1, T2, T3)(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ColorRGB.Create*
+  commentId: Overload:Vim.Math3d.ColorRGB.Create
+  name: Create
+  nameWithType: ColorRGB.Create
+  fullName: Vim.Math3d.ColorRGB.Create
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ColorRGB.Equals*
+  commentId: Overload:Vim.Math3d.ColorRGB.Equals
+  name: Equals
+  nameWithType: ColorRGB.Equals
+  fullName: Vim.Math3d.ColorRGB.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ColorRGB.GetHashCode*
+  commentId: Overload:Vim.Math3d.ColorRGB.GetHashCode
+  name: GetHashCode
+  nameWithType: ColorRGB.GetHashCode
+  fullName: Vim.Math3d.ColorRGB.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ColorRGB.ToString*
+  commentId: Overload:Vim.Math3d.ColorRGB.ToString
+  name: ToString
+  nameWithType: ColorRGB.ToString
+  fullName: Vim.Math3d.ColorRGB.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vim.Math3d.ColorRGB.Deconstruct*
+  commentId: Overload:Vim.Math3d.ColorRGB.Deconstruct
+  name: Deconstruct
+  nameWithType: ColorRGB.Deconstruct
+  fullName: Vim.Math3d.ColorRGB.Deconstruct
+- uid: System.IEquatable{Vim.Math3d.ColorRGB}.Equals(Vim.Math3d.ColorRGB)
+  commentId: M:System.IEquatable{Vim.Math3d.ColorRGB}.Equals(Vim.Math3d.ColorRGB)
+  parent: System.IEquatable{Vim.Math3d.ColorRGB}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(ColorRGB)
+  nameWithType: IEquatable<ColorRGB>.Equals(ColorRGB)
+  fullName: System.IEquatable<Vim.Math3d.ColorRGB>.Equals(Vim.Math3d.ColorRGB)
+  nameWithType.vb: IEquatable(Of ColorRGB).Equals(ColorRGB)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.ColorRGB).Equals(Vim.Math3d.ColorRGB)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<ColorRGB>.Equals
+    fullName: System.IEquatable<Vim.Math3d.ColorRGB>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ColorRGB
+    name: ColorRGB
+    nameWithType: ColorRGB
+    fullName: Vim.Math3d.ColorRGB
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of ColorRGB).Equals
+    fullName: System.IEquatable(Of Vim.Math3d.ColorRGB).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ColorRGB
+    name: ColorRGB
+    nameWithType: ColorRGB
+    fullName: Vim.Math3d.ColorRGB
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ColorRGB.op_Equality*
+  commentId: Overload:Vim.Math3d.ColorRGB.op_Equality
+  name: Equality
+  nameWithType: ColorRGB.Equality
+  fullName: Vim.Math3d.ColorRGB.Equality
+- uid: Vim.Math3d.ColorRGB.op_Inequality*
+  commentId: Overload:Vim.Math3d.ColorRGB.op_Inequality
+  name: Inequality
+  nameWithType: ColorRGB.Inequality
+  fullName: Vim.Math3d.ColorRGB.Inequality
+- uid: Vim.Math3d.ColorRGB.op_Implicit*
+  commentId: Overload:Vim.Math3d.ColorRGB.op_Implicit
+  name: Implicit
+  nameWithType: ColorRGB.Implicit
+  fullName: Vim.Math3d.ColorRGB.Implicit
+  nameWithType.vb: ColorRGB.Widening
+  fullName.vb: Vim.Math3d.ColorRGB.Widening
+  name.vb: Widening
+- uid: Vim.Math3d.ColorRGB.SetR*
+  commentId: Overload:Vim.Math3d.ColorRGB.SetR
+  name: SetR
+  nameWithType: ColorRGB.SetR
+  fullName: Vim.Math3d.ColorRGB.SetR
+- uid: Vim.Math3d.ColorRGB.SetG*
+  commentId: Overload:Vim.Math3d.ColorRGB.SetG
+  name: SetG
+  nameWithType: ColorRGB.SetG
+  fullName: Vim.Math3d.ColorRGB.SetG
+- uid: Vim.Math3d.ColorRGB.SetB*
+  commentId: Overload:Vim.Math3d.ColorRGB.SetB
+  name: SetB
+  nameWithType: ColorRGB.SetB
+  fullName: Vim.Math3d.ColorRGB.SetB

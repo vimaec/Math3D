@@ -1,0 +1,153 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.ContainmentType
+  commentId: T:Vim.Math3d.ContainmentType
+  id: ContainmentType
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.ContainmentType.Contains
+  - Vim.Math3d.ContainmentType.Disjoint
+  - Vim.Math3d.ContainmentType.Intersects
+  langs:
+  - csharp
+  - vb
+  name: ContainmentType
+  nameWithType: ContainmentType
+  fullName: Vim.Math3d.ContainmentType
+  type: Enum
+  source:
+    remote:
+      path: src/ContainmentType.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ContainmentType
+    path: ../src/ContainmentType.cs
+    startLine: 13
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nDefines how the bounding volumes intersects or contain one another.\n"
+  example: []
+  syntax:
+    content: public enum ContainmentType
+    content.vb: Public Enum ContainmentType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Vim.Math3d.ContainmentType.Disjoint
+  commentId: F:Vim.Math3d.ContainmentType.Disjoint
+  id: Disjoint
+  parent: Vim.Math3d.ContainmentType
+  langs:
+  - csharp
+  - vb
+  name: Disjoint
+  nameWithType: ContainmentType.Disjoint
+  fullName: Vim.Math3d.ContainmentType.Disjoint
+  type: Field
+  source:
+    remote:
+      path: src/ContainmentType.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Disjoint
+    path: ../src/ContainmentType.cs
+    startLine: 18
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nIndicates that there is no overlap between two bounding volumes.\n"
+  example: []
+  syntax:
+    content: Disjoint = 0
+    return:
+      type: Vim.Math3d.ContainmentType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Vim.Math3d.ContainmentType.Contains
+  commentId: F:Vim.Math3d.ContainmentType.Contains
+  id: Contains
+  parent: Vim.Math3d.ContainmentType
+  langs:
+  - csharp
+  - vb
+  name: Contains
+  nameWithType: ContainmentType.Contains
+  fullName: Vim.Math3d.ContainmentType.Contains
+  type: Field
+  source:
+    remote:
+      path: src/ContainmentType.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Contains
+    path: ../src/ContainmentType.cs
+    startLine: 22
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nIndicates that one bounding volume completely contains another volume.\n"
+  example: []
+  syntax:
+    content: Contains = 1
+    return:
+      type: Vim.Math3d.ContainmentType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Vim.Math3d.ContainmentType.Intersects
+  commentId: F:Vim.Math3d.ContainmentType.Intersects
+  id: Intersects
+  parent: Vim.Math3d.ContainmentType
+  langs:
+  - csharp
+  - vb
+  name: Intersects
+  nameWithType: ContainmentType.Intersects
+  fullName: Vim.Math3d.ContainmentType.Intersects
+  type: Field
+  source:
+    remote:
+      path: src/ContainmentType.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Intersects
+    path: ../src/ContainmentType.cs
+    startLine: 26
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nIndicates that bounding volumes partially overlap one another.\n"
+  example: []
+  syntax:
+    content: Intersects = 2
+    return:
+      type: Vim.Math3d.ContainmentType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: Vim.Math3d.ContainmentType
+  commentId: T:Vim.Math3d.ContainmentType
+  parent: Vim.Math3d
+  name: ContainmentType
+  nameWithType: ContainmentType
+  fullName: Vim.Math3d.ContainmentType

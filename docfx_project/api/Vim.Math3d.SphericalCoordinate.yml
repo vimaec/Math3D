@@ -1,0 +1,1633 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.SphericalCoordinate
+  commentId: T:Vim.Math3d.SphericalCoordinate
+  id: SphericalCoordinate
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.SphericalCoordinate.#ctor(System.Double,System.Double,System.Double)
+  - Vim.Math3d.SphericalCoordinate.#ctor(System.ValueTuple{System.Double,System.Double,System.Double})
+  - Vim.Math3d.SphericalCoordinate.AlmostEquals(Vim.Math3d.SphericalCoordinate,System.Single)
+  - Vim.Math3d.SphericalCoordinate.Azimuth
+  - Vim.Math3d.SphericalCoordinate.Create(System.Double,System.Double,System.Double)
+  - Vim.Math3d.SphericalCoordinate.Create(System.ValueTuple{System.Double,System.Double,System.Double})
+  - Vim.Math3d.SphericalCoordinate.Deconstruct(System.Double@,System.Double@,System.Double@)
+  - Vim.Math3d.SphericalCoordinate.Equals(System.Object)
+  - Vim.Math3d.SphericalCoordinate.Equals(Vim.Math3d.SphericalCoordinate)
+  - Vim.Math3d.SphericalCoordinate.GetHashCode
+  - Vim.Math3d.SphericalCoordinate.Inclination
+  - Vim.Math3d.SphericalCoordinate.MaxValue
+  - Vim.Math3d.SphericalCoordinate.MinValue
+  - Vim.Math3d.SphericalCoordinate.op_Equality(Vim.Math3d.SphericalCoordinate,Vim.Math3d.SphericalCoordinate)
+  - Vim.Math3d.SphericalCoordinate.op_Implicit(System.ValueTuple{System.Double,System.Double,System.Double})~Vim.Math3d.SphericalCoordinate
+  - Vim.Math3d.SphericalCoordinate.op_Implicit(Vim.Math3d.SphericalCoordinate)~System.ValueTuple{System.Double,System.Double,System.Double}
+  - Vim.Math3d.SphericalCoordinate.op_Inequality(Vim.Math3d.SphericalCoordinate,Vim.Math3d.SphericalCoordinate)
+  - Vim.Math3d.SphericalCoordinate.Radius
+  - Vim.Math3d.SphericalCoordinate.SetAzimuth(System.Double)
+  - Vim.Math3d.SphericalCoordinate.SetInclination(System.Double)
+  - Vim.Math3d.SphericalCoordinate.SetRadius(System.Double)
+  - Vim.Math3d.SphericalCoordinate.ToString
+  - Vim.Math3d.SphericalCoordinate.Zero
+  langs:
+  - csharp
+  - vb
+  name: SphericalCoordinate
+  nameWithType: SphericalCoordinate
+  fullName: Vim.Math3d.SphericalCoordinate
+  type: Struct
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SphericalCoordinate
+    path: ../src/Structs.cs
+    startLine: 1804
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataContract]
+
+      public readonly struct SphericalCoordinate : IEquatable<SphericalCoordinate>
+    content.vb: >-
+      <DataContract>
+
+      Public Structure SphericalCoordinate
+          Implements IEquatable(Of SphericalCoordinate)
+  implements:
+  - System.IEquatable{Vim.Math3d.SphericalCoordinate}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Vim.Math3d.SphericalCoordinate.Radius
+  commentId: F:Vim.Math3d.SphericalCoordinate.Radius
+  id: Radius
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Radius
+  nameWithType: SphericalCoordinate.Radius
+  fullName: Vim.Math3d.SphericalCoordinate.Radius
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Radius
+    path: ../src/Structs.cs
+    startLine: 1810
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly double Radius
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Radius As Double
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.SphericalCoordinate.Azimuth
+  commentId: F:Vim.Math3d.SphericalCoordinate.Azimuth
+  id: Azimuth
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Azimuth
+  nameWithType: SphericalCoordinate.Azimuth
+  fullName: Vim.Math3d.SphericalCoordinate.Azimuth
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Azimuth
+    path: ../src/Structs.cs
+    startLine: 1812
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly double Azimuth
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Azimuth As Double
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.SphericalCoordinate.Inclination
+  commentId: F:Vim.Math3d.SphericalCoordinate.Inclination
+  id: Inclination
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Inclination
+  nameWithType: SphericalCoordinate.Inclination
+  fullName: Vim.Math3d.SphericalCoordinate.Inclination
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Inclination
+    path: ../src/Structs.cs
+    startLine: 1814
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly double Inclination
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Inclination As Double
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.SphericalCoordinate.#ctor(System.ValueTuple{System.Double,System.Double,System.Double})
+  commentId: M:Vim.Math3d.SphericalCoordinate.#ctor(System.ValueTuple{System.Double,System.Double,System.Double})
+  id: '#ctor(System.ValueTuple{System.Double,System.Double,System.Double})'
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SphericalCoordinate((Double radius, Double azimuth, Double inclination))
+  nameWithType: SphericalCoordinate.SphericalCoordinate((Double radius, Double azimuth, Double inclination))
+  fullName: Vim.Math3d.SphericalCoordinate.SphericalCoordinate(System.ValueTuple<System.Double, System.Double, System.Double>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1815
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public SphericalCoordinate((double radius, double azimuth, double inclination) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Double,System.Double,System.Double}
+    content.vb: Public Sub New(tuple As(radius As Double, azimuth As Double, inclination As Double)(Of Double , Double, Double))
+  overload: Vim.Math3d.SphericalCoordinate.#ctor*
+  nameWithType.vb: SphericalCoordinate.SphericalCoordinate((radius As Double, azimuth As Double, inclination As Double)(Of Double, Double, Double))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.SphericalCoordinate.SphericalCoordinate(System.ValueTuple(Of System.Double, System.Double, System.Double))
+  name.vb: SphericalCoordinate((radius As Double, azimuth As Double, inclination As Double)(Of Double, Double, Double))
+- uid: Vim.Math3d.SphericalCoordinate.#ctor(System.Double,System.Double,System.Double)
+  commentId: M:Vim.Math3d.SphericalCoordinate.#ctor(System.Double,System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double,System.Double)'
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SphericalCoordinate(Double, Double, Double)
+  nameWithType: SphericalCoordinate.SphericalCoordinate(Double, Double, Double)
+  fullName: Vim.Math3d.SphericalCoordinate.SphericalCoordinate(System.Double, System.Double, System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1816
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public SphericalCoordinate(double radius, double azimuth, double inclination)
+    parameters:
+    - id: radius
+      type: System.Double
+    - id: azimuth
+      type: System.Double
+    - id: inclination
+      type: System.Double
+    content.vb: Public Sub New(radius As Double, azimuth As Double, inclination As Double)
+  overload: Vim.Math3d.SphericalCoordinate.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.SphericalCoordinate.Create(System.Double,System.Double,System.Double)
+  commentId: M:Vim.Math3d.SphericalCoordinate.Create(System.Double,System.Double,System.Double)
+  id: Create(System.Double,System.Double,System.Double)
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Create(Double, Double, Double)
+  nameWithType: SphericalCoordinate.Create(Double, Double, Double)
+  fullName: Vim.Math3d.SphericalCoordinate.Create(System.Double, System.Double, System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1817
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static SphericalCoordinate Create(double radius, double azimuth, double inclination)
+    parameters:
+    - id: radius
+      type: System.Double
+    - id: azimuth
+      type: System.Double
+    - id: inclination
+      type: System.Double
+    return:
+      type: Vim.Math3d.SphericalCoordinate
+    content.vb: Public Shared Function Create(radius As Double, azimuth As Double, inclination As Double) As SphericalCoordinate
+  overload: Vim.Math3d.SphericalCoordinate.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.SphericalCoordinate.Create(System.ValueTuple{System.Double,System.Double,System.Double})
+  commentId: M:Vim.Math3d.SphericalCoordinate.Create(System.ValueTuple{System.Double,System.Double,System.Double})
+  id: Create(System.ValueTuple{System.Double,System.Double,System.Double})
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Create((Double radius, Double azimuth, Double inclination))
+  nameWithType: SphericalCoordinate.Create((Double radius, Double azimuth, Double inclination))
+  fullName: Vim.Math3d.SphericalCoordinate.Create(System.ValueTuple<System.Double, System.Double, System.Double>)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1818
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static SphericalCoordinate Create((double radius, double azimuth, double inclination) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Double,System.Double,System.Double}
+    return:
+      type: Vim.Math3d.SphericalCoordinate
+    content.vb: Public Shared Function Create(tuple As(radius As Double, azimuth As Double, inclination As Double)(Of Double , Double, Double)) As SphericalCoordinate
+  overload: Vim.Math3d.SphericalCoordinate.Create*
+  nameWithType.vb: SphericalCoordinate.Create((radius As Double, azimuth As Double, inclination As Double)(Of Double, Double, Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.SphericalCoordinate.Create(System.ValueTuple(Of System.Double, System.Double, System.Double))
+  name.vb: Create((radius As Double, azimuth As Double, inclination As Double)(Of Double, Double, Double))
+- uid: Vim.Math3d.SphericalCoordinate.Equals(System.Object)
+  commentId: M:Vim.Math3d.SphericalCoordinate.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: SphericalCoordinate.Equals(Object)
+  fullName: Vim.Math3d.SphericalCoordinate.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1819
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Vim.Math3d.SphericalCoordinate.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.SphericalCoordinate.GetHashCode
+  commentId: M:Vim.Math3d.SphericalCoordinate.GetHashCode
+  id: GetHashCode
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: SphericalCoordinate.GetHashCode()
+  fullName: Vim.Math3d.SphericalCoordinate.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetHashCode
+    path: ../src/Structs.cs
+    startLine: 1820
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Vim.Math3d.SphericalCoordinate.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.SphericalCoordinate.ToString
+  commentId: M:Vim.Math3d.SphericalCoordinate.ToString
+  id: ToString
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: SphericalCoordinate.ToString()
+  fullName: Vim.Math3d.SphericalCoordinate.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToString
+    path: ../src/Structs.cs
+    startLine: 1821
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: Vim.Math3d.SphericalCoordinate.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.SphericalCoordinate.Deconstruct(System.Double@,System.Double@,System.Double@)
+  commentId: M:Vim.Math3d.SphericalCoordinate.Deconstruct(System.Double@,System.Double@,System.Double@)
+  id: Deconstruct(System.Double@,System.Double@,System.Double@)
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Double, out Double, out Double)
+  nameWithType: SphericalCoordinate.Deconstruct(out Double, out Double, out Double)
+  fullName: Vim.Math3d.SphericalCoordinate.Deconstruct(out System.Double, out System.Double, out System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Deconstruct
+    path: ../src/Structs.cs
+    startLine: 1822
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly void Deconstruct(out double radius, out double azimuth, out double inclination)
+    parameters:
+    - id: radius
+      type: System.Double
+    - id: azimuth
+      type: System.Double
+    - id: inclination
+      type: System.Double
+    content.vb: Public Sub Deconstruct(ByRef radius As Double, ByRef azimuth As Double, ByRef inclination As Double)
+  overload: Vim.Math3d.SphericalCoordinate.Deconstruct*
+  nameWithType.vb: SphericalCoordinate.Deconstruct(ByRef Double, ByRef Double, ByRef Double)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.SphericalCoordinate.Deconstruct(ByRef System.Double, ByRef System.Double, ByRef System.Double)
+  name.vb: Deconstruct(ByRef Double, ByRef Double, ByRef Double)
+- uid: Vim.Math3d.SphericalCoordinate.Equals(Vim.Math3d.SphericalCoordinate)
+  commentId: M:Vim.Math3d.SphericalCoordinate.Equals(Vim.Math3d.SphericalCoordinate)
+  id: Equals(Vim.Math3d.SphericalCoordinate)
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equals(SphericalCoordinate)
+  nameWithType: SphericalCoordinate.Equals(SphericalCoordinate)
+  fullName: Vim.Math3d.SphericalCoordinate.Equals(Vim.Math3d.SphericalCoordinate)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1823
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool Equals(SphericalCoordinate x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.SphericalCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(x As SphericalCoordinate) As Boolean
+  overload: Vim.Math3d.SphericalCoordinate.Equals*
+  implements:
+  - System.IEquatable{Vim.Math3d.SphericalCoordinate}.Equals(Vim.Math3d.SphericalCoordinate)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.SphericalCoordinate.op_Equality(Vim.Math3d.SphericalCoordinate,Vim.Math3d.SphericalCoordinate)
+  commentId: M:Vim.Math3d.SphericalCoordinate.op_Equality(Vim.Math3d.SphericalCoordinate,Vim.Math3d.SphericalCoordinate)
+  id: op_Equality(Vim.Math3d.SphericalCoordinate,Vim.Math3d.SphericalCoordinate)
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equality(SphericalCoordinate, SphericalCoordinate)
+  nameWithType: SphericalCoordinate.Equality(SphericalCoordinate, SphericalCoordinate)
+  fullName: Vim.Math3d.SphericalCoordinate.Equality(Vim.Math3d.SphericalCoordinate, Vim.Math3d.SphericalCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Equality
+    path: ../src/Structs.cs
+    startLine: 1824
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator ==(SphericalCoordinate x0, SphericalCoordinate x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.SphericalCoordinate
+    - id: x1
+      type: Vim.Math3d.SphericalCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(x0 As SphericalCoordinate, x1 As SphericalCoordinate) As Boolean
+  overload: Vim.Math3d.SphericalCoordinate.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.SphericalCoordinate.op_Inequality(Vim.Math3d.SphericalCoordinate,Vim.Math3d.SphericalCoordinate)
+  commentId: M:Vim.Math3d.SphericalCoordinate.op_Inequality(Vim.Math3d.SphericalCoordinate,Vim.Math3d.SphericalCoordinate)
+  id: op_Inequality(Vim.Math3d.SphericalCoordinate,Vim.Math3d.SphericalCoordinate)
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Inequality(SphericalCoordinate, SphericalCoordinate)
+  nameWithType: SphericalCoordinate.Inequality(SphericalCoordinate, SphericalCoordinate)
+  fullName: Vim.Math3d.SphericalCoordinate.Inequality(Vim.Math3d.SphericalCoordinate, Vim.Math3d.SphericalCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Inequality
+    path: ../src/Structs.cs
+    startLine: 1825
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator !=(SphericalCoordinate x0, SphericalCoordinate x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.SphericalCoordinate
+    - id: x1
+      type: Vim.Math3d.SphericalCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(x0 As SphericalCoordinate, x1 As SphericalCoordinate) As Boolean
+  overload: Vim.Math3d.SphericalCoordinate.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.SphericalCoordinate.op_Implicit(System.ValueTuple{System.Double,System.Double,System.Double})~Vim.Math3d.SphericalCoordinate
+  commentId: M:Vim.Math3d.SphericalCoordinate.op_Implicit(System.ValueTuple{System.Double,System.Double,System.Double})~Vim.Math3d.SphericalCoordinate
+  id: op_Implicit(System.ValueTuple{System.Double,System.Double,System.Double})~Vim.Math3d.SphericalCoordinate
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Implicit((Double radius, Double azimuth, Double inclination) to SphericalCoordinate)
+  nameWithType: SphericalCoordinate.Implicit((Double radius, Double azimuth, Double inclination) to SphericalCoordinate)
+  fullName: Vim.Math3d.SphericalCoordinate.Implicit(System.ValueTuple<System.Double, System.Double, System.Double> to Vim.Math3d.SphericalCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1826
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator SphericalCoordinate((double radius, double azimuth, double inclination) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Double,System.Double,System.Double}
+    return:
+      type: Vim.Math3d.SphericalCoordinate
+    content.vb: Public Shared Widening Operator CType(tuple As(radius As Double, azimuth As Double, inclination As Double)(Of Double , Double, Double)) As SphericalCoordinate
+  overload: Vim.Math3d.SphericalCoordinate.op_Implicit*
+  nameWithType.vb: SphericalCoordinate.Widening((radius As Double, azimuth As Double, inclination As Double)(Of Double, Double, Double) to SphericalCoordinate)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.SphericalCoordinate.Widening(System.ValueTuple(Of System.Double, System.Double, System.Double) to Vim.Math3d.SphericalCoordinate)
+  name.vb: Widening((radius As Double, azimuth As Double, inclination As Double)(Of Double, Double, Double) to SphericalCoordinate)
+- uid: Vim.Math3d.SphericalCoordinate.op_Implicit(Vim.Math3d.SphericalCoordinate)~System.ValueTuple{System.Double,System.Double,System.Double}
+  commentId: M:Vim.Math3d.SphericalCoordinate.op_Implicit(Vim.Math3d.SphericalCoordinate)~System.ValueTuple{System.Double,System.Double,System.Double}
+  id: op_Implicit(Vim.Math3d.SphericalCoordinate)~System.ValueTuple{System.Double,System.Double,System.Double}
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Implicit(SphericalCoordinate to (Double radius, Double azimuth, Double inclination))
+  nameWithType: SphericalCoordinate.Implicit(SphericalCoordinate to (Double radius, Double azimuth, Double inclination))
+  fullName: Vim.Math3d.SphericalCoordinate.Implicit(Vim.Math3d.SphericalCoordinate to System.ValueTuple<System.Double, System.Double, System.Double>)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1827
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator (double radius, double azimuth, double inclination)(SphericalCoordinate self)
+    parameters:
+    - id: self
+      type: Vim.Math3d.SphericalCoordinate
+    return:
+      type: System.ValueTuple{System.Double,System.Double,System.Double}
+    content.vb: Public Shared Widening Operator CType(self As SphericalCoordinate) As(radius As Double, azimuth As Double, inclination As Double)(Of Double , Double, Double)
+  overload: Vim.Math3d.SphericalCoordinate.op_Implicit*
+  nameWithType.vb: SphericalCoordinate.Widening(SphericalCoordinate to (radius As Double, azimuth As Double, inclination As Double)(Of Double, Double, Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.SphericalCoordinate.Widening(Vim.Math3d.SphericalCoordinate to System.ValueTuple(Of System.Double, System.Double, System.Double))
+  name.vb: Widening(SphericalCoordinate to (radius As Double, azimuth As Double, inclination As Double)(Of Double, Double, Double))
+- uid: Vim.Math3d.SphericalCoordinate.AlmostEquals(Vim.Math3d.SphericalCoordinate,System.Single)
+  commentId: M:Vim.Math3d.SphericalCoordinate.AlmostEquals(Vim.Math3d.SphericalCoordinate,System.Single)
+  id: AlmostEquals(Vim.Math3d.SphericalCoordinate,System.Single)
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: AlmostEquals(SphericalCoordinate, Single)
+  nameWithType: SphericalCoordinate.AlmostEquals(SphericalCoordinate, Single)
+  fullName: Vim.Math3d.SphericalCoordinate.AlmostEquals(Vim.Math3d.SphericalCoordinate, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AlmostEquals
+    path: ../src/Structs.cs
+    startLine: 1829
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool AlmostEquals(SphericalCoordinate x, float tolerance = 1E-07F)
+    parameters:
+    - id: x
+      type: Vim.Math3d.SphericalCoordinate
+    - id: tolerance
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Function AlmostEquals(x As SphericalCoordinate, tolerance As Single = 1E-07F) As Boolean
+  overload: Vim.Math3d.SphericalCoordinate.AlmostEquals*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.SphericalCoordinate.Zero
+  commentId: F:Vim.Math3d.SphericalCoordinate.Zero
+  id: Zero
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: SphericalCoordinate.Zero
+  fullName: Vim.Math3d.SphericalCoordinate.Zero
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Zero
+    path: ../src/Structs.cs
+    startLine: 1830
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static SphericalCoordinate Zero
+    return:
+      type: Vim.Math3d.SphericalCoordinate
+    content.vb: Public Shared Zero As SphericalCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.SphericalCoordinate.MinValue
+  commentId: F:Vim.Math3d.SphericalCoordinate.MinValue
+  id: MinValue
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: SphericalCoordinate.MinValue
+  fullName: Vim.Math3d.SphericalCoordinate.MinValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MinValue
+    path: ../src/Structs.cs
+    startLine: 1831
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static SphericalCoordinate MinValue
+    return:
+      type: Vim.Math3d.SphericalCoordinate
+    content.vb: Public Shared MinValue As SphericalCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.SphericalCoordinate.MaxValue
+  commentId: F:Vim.Math3d.SphericalCoordinate.MaxValue
+  id: MaxValue
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: SphericalCoordinate.MaxValue
+  fullName: Vim.Math3d.SphericalCoordinate.MaxValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MaxValue
+    path: ../src/Structs.cs
+    startLine: 1832
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static SphericalCoordinate MaxValue
+    return:
+      type: Vim.Math3d.SphericalCoordinate
+    content.vb: Public Shared MaxValue As SphericalCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.SphericalCoordinate.SetRadius(System.Double)
+  commentId: M:Vim.Math3d.SphericalCoordinate.SetRadius(System.Double)
+  id: SetRadius(System.Double)
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SetRadius(Double)
+  nameWithType: SphericalCoordinate.SetRadius(Double)
+  fullName: Vim.Math3d.SphericalCoordinate.SetRadius(System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetRadius
+    path: ../src/Structs.cs
+    startLine: 1833
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly SphericalCoordinate SetRadius(double x)
+    parameters:
+    - id: x
+      type: System.Double
+    return:
+      type: Vim.Math3d.SphericalCoordinate
+    content.vb: Public Function SetRadius(x As Double) As SphericalCoordinate
+  overload: Vim.Math3d.SphericalCoordinate.SetRadius*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.SphericalCoordinate.SetAzimuth(System.Double)
+  commentId: M:Vim.Math3d.SphericalCoordinate.SetAzimuth(System.Double)
+  id: SetAzimuth(System.Double)
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SetAzimuth(Double)
+  nameWithType: SphericalCoordinate.SetAzimuth(Double)
+  fullName: Vim.Math3d.SphericalCoordinate.SetAzimuth(System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetAzimuth
+    path: ../src/Structs.cs
+    startLine: 1834
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly SphericalCoordinate SetAzimuth(double x)
+    parameters:
+    - id: x
+      type: System.Double
+    return:
+      type: Vim.Math3d.SphericalCoordinate
+    content.vb: Public Function SetAzimuth(x As Double) As SphericalCoordinate
+  overload: Vim.Math3d.SphericalCoordinate.SetAzimuth*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.SphericalCoordinate.SetInclination(System.Double)
+  commentId: M:Vim.Math3d.SphericalCoordinate.SetInclination(System.Double)
+  id: SetInclination(System.Double)
+  parent: Vim.Math3d.SphericalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SetInclination(Double)
+  nameWithType: SphericalCoordinate.SetInclination(Double)
+  fullName: Vim.Math3d.SphericalCoordinate.SetInclination(System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetInclination
+    path: ../src/Structs.cs
+    startLine: 1835
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly SphericalCoordinate SetInclination(double x)
+    parameters:
+    - id: x
+      type: System.Double
+    return:
+      type: Vim.Math3d.SphericalCoordinate
+    content.vb: Public Function SetInclination(x As Double) As SphericalCoordinate
+  overload: Vim.Math3d.SphericalCoordinate.SetInclination*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.IEquatable{Vim.Math3d.SphericalCoordinate}
+  commentId: T:System.IEquatable{Vim.Math3d.SphericalCoordinate}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<SphericalCoordinate>
+  nameWithType: IEquatable<SphericalCoordinate>
+  fullName: System.IEquatable<Vim.Math3d.SphericalCoordinate>
+  nameWithType.vb: IEquatable(Of SphericalCoordinate)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.SphericalCoordinate)
+  name.vb: IEquatable(Of SphericalCoordinate)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.SphericalCoordinate
+    name: SphericalCoordinate
+    nameWithType: SphericalCoordinate
+    fullName: Vim.Math3d.SphericalCoordinate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.SphericalCoordinate
+    name: SphericalCoordinate
+    nameWithType: SphericalCoordinate
+    fullName: Vim.Math3d.SphericalCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Vim.Math3d.SphericalCoordinate.#ctor*
+  commentId: Overload:Vim.Math3d.SphericalCoordinate.#ctor
+  name: SphericalCoordinate
+  nameWithType: SphericalCoordinate.SphericalCoordinate
+  fullName: Vim.Math3d.SphericalCoordinate.SphericalCoordinate
+- uid: System.ValueTuple{System.Double,System.Double,System.Double}
+  commentId: T:System.ValueTuple{System.Double,System.Double,System.Double}
+  parent: System
+  definition: System.ValueTuple`3
+  name: (T1, T2, T3)<Double, Double, Double>
+  nameWithType: (T1, T2, T3)<Double, Double, Double>
+  fullName: System.ValueTuple<System.Double, System.Double, System.Double>
+  nameWithType.vb: (T1, T2, T3)(Of Double, Double, Double)
+  fullName.vb: System.ValueTuple(Of System.Double, System.Double, System.Double)
+  name.vb: (T1, T2, T3)(Of Double, Double, Double)
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`3
+  commentId: T:System.ValueTuple`3
+  isExternal: true
+  name: (T1, T2, T3)<T1, T2, T3>
+  nameWithType: (T1, T2, T3)<T1, T2, T3>
+  fullName: System.ValueTuple<T1, T2, T3>
+  nameWithType.vb: (T1, T2, T3)(Of T1, T2, T3)
+  fullName.vb: System.ValueTuple(Of T1, T2, T3)
+  name.vb: (T1, T2, T3)(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.SphericalCoordinate.Create*
+  commentId: Overload:Vim.Math3d.SphericalCoordinate.Create
+  name: Create
+  nameWithType: SphericalCoordinate.Create
+  fullName: Vim.Math3d.SphericalCoordinate.Create
+- uid: Vim.Math3d.SphericalCoordinate
+  commentId: T:Vim.Math3d.SphericalCoordinate
+  parent: Vim.Math3d
+  name: SphericalCoordinate
+  nameWithType: SphericalCoordinate
+  fullName: Vim.Math3d.SphericalCoordinate
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.SphericalCoordinate.Equals*
+  commentId: Overload:Vim.Math3d.SphericalCoordinate.Equals
+  name: Equals
+  nameWithType: SphericalCoordinate.Equals
+  fullName: Vim.Math3d.SphericalCoordinate.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.SphericalCoordinate.GetHashCode*
+  commentId: Overload:Vim.Math3d.SphericalCoordinate.GetHashCode
+  name: GetHashCode
+  nameWithType: SphericalCoordinate.GetHashCode
+  fullName: Vim.Math3d.SphericalCoordinate.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.SphericalCoordinate.ToString*
+  commentId: Overload:Vim.Math3d.SphericalCoordinate.ToString
+  name: ToString
+  nameWithType: SphericalCoordinate.ToString
+  fullName: Vim.Math3d.SphericalCoordinate.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vim.Math3d.SphericalCoordinate.Deconstruct*
+  commentId: Overload:Vim.Math3d.SphericalCoordinate.Deconstruct
+  name: Deconstruct
+  nameWithType: SphericalCoordinate.Deconstruct
+  fullName: Vim.Math3d.SphericalCoordinate.Deconstruct
+- uid: System.IEquatable{Vim.Math3d.SphericalCoordinate}.Equals(Vim.Math3d.SphericalCoordinate)
+  commentId: M:System.IEquatable{Vim.Math3d.SphericalCoordinate}.Equals(Vim.Math3d.SphericalCoordinate)
+  parent: System.IEquatable{Vim.Math3d.SphericalCoordinate}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(SphericalCoordinate)
+  nameWithType: IEquatable<SphericalCoordinate>.Equals(SphericalCoordinate)
+  fullName: System.IEquatable<Vim.Math3d.SphericalCoordinate>.Equals(Vim.Math3d.SphericalCoordinate)
+  nameWithType.vb: IEquatable(Of SphericalCoordinate).Equals(SphericalCoordinate)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.SphericalCoordinate).Equals(Vim.Math3d.SphericalCoordinate)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<SphericalCoordinate>.Equals
+    fullName: System.IEquatable<Vim.Math3d.SphericalCoordinate>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.SphericalCoordinate
+    name: SphericalCoordinate
+    nameWithType: SphericalCoordinate
+    fullName: Vim.Math3d.SphericalCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of SphericalCoordinate).Equals
+    fullName: System.IEquatable(Of Vim.Math3d.SphericalCoordinate).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.SphericalCoordinate
+    name: SphericalCoordinate
+    nameWithType: SphericalCoordinate
+    fullName: Vim.Math3d.SphericalCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.SphericalCoordinate.op_Equality*
+  commentId: Overload:Vim.Math3d.SphericalCoordinate.op_Equality
+  name: Equality
+  nameWithType: SphericalCoordinate.Equality
+  fullName: Vim.Math3d.SphericalCoordinate.Equality
+- uid: Vim.Math3d.SphericalCoordinate.op_Inequality*
+  commentId: Overload:Vim.Math3d.SphericalCoordinate.op_Inequality
+  name: Inequality
+  nameWithType: SphericalCoordinate.Inequality
+  fullName: Vim.Math3d.SphericalCoordinate.Inequality
+- uid: Vim.Math3d.SphericalCoordinate.op_Implicit*
+  commentId: Overload:Vim.Math3d.SphericalCoordinate.op_Implicit
+  name: Implicit
+  nameWithType: SphericalCoordinate.Implicit
+  fullName: Vim.Math3d.SphericalCoordinate.Implicit
+  nameWithType.vb: SphericalCoordinate.Widening
+  fullName.vb: Vim.Math3d.SphericalCoordinate.Widening
+  name.vb: Widening
+- uid: Vim.Math3d.SphericalCoordinate.AlmostEquals*
+  commentId: Overload:Vim.Math3d.SphericalCoordinate.AlmostEquals
+  name: AlmostEquals
+  nameWithType: SphericalCoordinate.AlmostEquals
+  fullName: Vim.Math3d.SphericalCoordinate.AlmostEquals
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Vim.Math3d.SphericalCoordinate.SetRadius*
+  commentId: Overload:Vim.Math3d.SphericalCoordinate.SetRadius
+  name: SetRadius
+  nameWithType: SphericalCoordinate.SetRadius
+  fullName: Vim.Math3d.SphericalCoordinate.SetRadius
+- uid: Vim.Math3d.SphericalCoordinate.SetAzimuth*
+  commentId: Overload:Vim.Math3d.SphericalCoordinate.SetAzimuth
+  name: SetAzimuth
+  nameWithType: SphericalCoordinate.SetAzimuth
+  fullName: Vim.Math3d.SphericalCoordinate.SetAzimuth
+- uid: Vim.Math3d.SphericalCoordinate.SetInclination*
+  commentId: Overload:Vim.Math3d.SphericalCoordinate.SetInclination
+  name: SetInclination
+  nameWithType: SphericalCoordinate.SetInclination
+  fullName: Vim.Math3d.SphericalCoordinate.SetInclination

@@ -1,0 +1,945 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.Stats`1
+  commentId: T:Vim.Math3d.Stats`1
+  id: Stats`1
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.Stats`1.#ctor(System.Int32,`0,`0,`0)
+  - Vim.Math3d.Stats`1.Count
+  - Vim.Math3d.Stats`1.Default
+  - Vim.Math3d.Stats`1.Equals(System.Object)
+  - Vim.Math3d.Stats`1.Equals(Vim.Math3d.Stats{`0})
+  - Vim.Math3d.Stats`1.GetHashCode
+  - Vim.Math3d.Stats`1.Max
+  - Vim.Math3d.Stats`1.Min
+  - Vim.Math3d.Stats`1.op_Equality(Vim.Math3d.Stats{`0},Vim.Math3d.Stats{`0})
+  - Vim.Math3d.Stats`1.op_Inequality(Vim.Math3d.Stats{`0},Vim.Math3d.Stats{`0})
+  - Vim.Math3d.Stats`1.Sum
+  - Vim.Math3d.Stats`1.ToString
+  langs:
+  - csharp
+  - vb
+  name: Stats<T>
+  nameWithType: Stats<T>
+  fullName: Vim.Math3d.Stats<T>
+  type: Struct
+  source:
+    remote:
+      path: src/Stats.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Stats
+    path: ../src/Stats.cs
+    startLine: 17
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nContains basic statistics that can be computed in a single pass over a collection.\n"
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public struct Stats<T>
+    typeParameters:
+    - id: T
+    content.vb: >-
+      <DataContract>
+
+      Public Structure Stats(Of T)
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  nameWithType.vb: Stats(Of T)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+  fullName.vb: Vim.Math3d.Stats(Of T)
+  name.vb: Stats(Of T)
+- uid: Vim.Math3d.Stats`1.#ctor(System.Int32,`0,`0,`0)
+  commentId: M:Vim.Math3d.Stats`1.#ctor(System.Int32,`0,`0,`0)
+  id: '#ctor(System.Int32,`0,`0,`0)'
+  parent: Vim.Math3d.Stats`1
+  langs:
+  - csharp
+  - vb
+  name: Stats(Int32, T, T, T)
+  nameWithType: Stats<T>.Stats(Int32, T, T, T)
+  fullName: Vim.Math3d.Stats<T>.Stats(System.Int32, T, T, T)
+  type: Constructor
+  source:
+    remote:
+      path: src/Stats.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Stats.cs
+    startLine: 21
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public Stats(int count, T min, T max, T sum)
+    parameters:
+    - id: count
+      type: System.Int32
+    - id: min
+      type: '{T}'
+    - id: max
+      type: '{T}'
+    - id: sum
+      type: '{T}'
+    content.vb: Public Sub New(count As Integer, min As T, max As T, sum As T)
+  overload: Vim.Math3d.Stats`1.#ctor*
+  nameWithType.vb: Stats(Of T).Stats(Int32, T, T, T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Stats(Of T).Stats(System.Int32, T, T, T)
+- uid: Vim.Math3d.Stats`1.Count
+  commentId: F:Vim.Math3d.Stats`1.Count
+  id: Count
+  parent: Vim.Math3d.Stats`1
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: Stats<T>.Count
+  fullName: Vim.Math3d.Stats<T>.Count
+  type: Field
+  source:
+    remote:
+      path: src/Stats.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Count
+    path: ../src/Stats.cs
+    startLine: 25
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly int Count
+    return:
+      type: System.Int32
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Count As Integer
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  nameWithType.vb: Stats(Of T).Count
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Vim.Math3d.Stats(Of T).Count
+- uid: Vim.Math3d.Stats`1.Min
+  commentId: F:Vim.Math3d.Stats`1.Min
+  id: Min
+  parent: Vim.Math3d.Stats`1
+  langs:
+  - csharp
+  - vb
+  name: Min
+  nameWithType: Stats<T>.Min
+  fullName: Vim.Math3d.Stats<T>.Min
+  type: Field
+  source:
+    remote:
+      path: src/Stats.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Min
+    path: ../src/Stats.cs
+    startLine: 26
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly T Min
+    return:
+      type: '{T}'
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Min As T
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  nameWithType.vb: Stats(Of T).Min
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Vim.Math3d.Stats(Of T).Min
+- uid: Vim.Math3d.Stats`1.Max
+  commentId: F:Vim.Math3d.Stats`1.Max
+  id: Max
+  parent: Vim.Math3d.Stats`1
+  langs:
+  - csharp
+  - vb
+  name: Max
+  nameWithType: Stats<T>.Max
+  fullName: Vim.Math3d.Stats<T>.Max
+  type: Field
+  source:
+    remote:
+      path: src/Stats.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Max
+    path: ../src/Stats.cs
+    startLine: 27
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly T Max
+    return:
+      type: '{T}'
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Max As T
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  nameWithType.vb: Stats(Of T).Max
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Vim.Math3d.Stats(Of T).Max
+- uid: Vim.Math3d.Stats`1.Sum
+  commentId: F:Vim.Math3d.Stats`1.Sum
+  id: Sum
+  parent: Vim.Math3d.Stats`1
+  langs:
+  - csharp
+  - vb
+  name: Sum
+  nameWithType: Stats<T>.Sum
+  fullName: Vim.Math3d.Stats<T>.Sum
+  type: Field
+  source:
+    remote:
+      path: src/Stats.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Sum
+    path: ../src/Stats.cs
+    startLine: 28
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly T Sum
+    return:
+      type: '{T}'
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Sum As T
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  nameWithType.vb: Stats(Of T).Sum
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Vim.Math3d.Stats(Of T).Sum
+- uid: Vim.Math3d.Stats`1.Equals(System.Object)
+  commentId: M:Vim.Math3d.Stats`1.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Vim.Math3d.Stats`1
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: Stats<T>.Equals(Object)
+  fullName: Vim.Math3d.Stats<T>.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Stats.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Stats.cs
+    startLine: 30
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Vim.Math3d.Stats`1.Equals*
+  nameWithType.vb: Stats(Of T).Equals(Object)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: Vim.Math3d.Stats(Of T).Equals(System.Object)
+- uid: Vim.Math3d.Stats`1.Equals(Vim.Math3d.Stats{`0})
+  commentId: M:Vim.Math3d.Stats`1.Equals(Vim.Math3d.Stats{`0})
+  id: Equals(Vim.Math3d.Stats{`0})
+  parent: Vim.Math3d.Stats`1
+  langs:
+  - csharp
+  - vb
+  name: Equals(Stats<T>)
+  nameWithType: Stats<T>.Equals(Stats<T>)
+  fullName: Vim.Math3d.Stats<T>.Equals(Vim.Math3d.Stats<T>)
+  type: Method
+  source:
+    remote:
+      path: src/Stats.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Stats.cs
+    startLine: 34
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public bool Equals(Stats<T> other)
+    parameters:
+    - id: other
+      type: Vim.Math3d.Stats`1
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As Stats(Of T)) As Boolean
+  overload: Vim.Math3d.Stats`1.Equals*
+  nameWithType.vb: Stats(Of T).Equals(Stats(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Stats(Of T).Equals(Vim.Math3d.Stats(Of T))
+  name.vb: Equals(Stats(Of T))
+- uid: Vim.Math3d.Stats`1.GetHashCode
+  commentId: M:Vim.Math3d.Stats`1.GetHashCode
+  id: GetHashCode
+  parent: Vim.Math3d.Stats`1
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Stats<T>.GetHashCode()
+  fullName: Vim.Math3d.Stats<T>.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Stats.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetHashCode
+    path: ../src/Stats.cs
+    startLine: 38
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Vim.Math3d.Stats`1.GetHashCode*
+  nameWithType.vb: Stats(Of T).GetHashCode()
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: Vim.Math3d.Stats(Of T).GetHashCode()
+- uid: Vim.Math3d.Stats`1.op_Equality(Vim.Math3d.Stats{`0},Vim.Math3d.Stats{`0})
+  commentId: M:Vim.Math3d.Stats`1.op_Equality(Vim.Math3d.Stats{`0},Vim.Math3d.Stats{`0})
+  id: op_Equality(Vim.Math3d.Stats{`0},Vim.Math3d.Stats{`0})
+  parent: Vim.Math3d.Stats`1
+  langs:
+  - csharp
+  - vb
+  name: Equality(Stats<T>, Stats<T>)
+  nameWithType: Stats<T>.Equality(Stats<T>, Stats<T>)
+  fullName: Vim.Math3d.Stats<T>.Equality(Vim.Math3d.Stats<T>, Vim.Math3d.Stats<T>)
+  type: Operator
+  source:
+    remote:
+      path: src/Stats.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Equality
+    path: ../src/Stats.cs
+    startLine: 42
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator ==(Stats<T> left, Stats<T> right)
+    parameters:
+    - id: left
+      type: Vim.Math3d.Stats`1
+    - id: right
+      type: Vim.Math3d.Stats`1
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As Stats(Of T), right As Stats(Of T)) As Boolean
+  overload: Vim.Math3d.Stats`1.op_Equality*
+  nameWithType.vb: Stats(Of T).Equality(Stats(Of T), Stats(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Stats(Of T).Equality(Vim.Math3d.Stats(Of T), Vim.Math3d.Stats(Of T))
+  name.vb: Equality(Stats(Of T), Stats(Of T))
+- uid: Vim.Math3d.Stats`1.op_Inequality(Vim.Math3d.Stats{`0},Vim.Math3d.Stats{`0})
+  commentId: M:Vim.Math3d.Stats`1.op_Inequality(Vim.Math3d.Stats{`0},Vim.Math3d.Stats{`0})
+  id: op_Inequality(Vim.Math3d.Stats{`0},Vim.Math3d.Stats{`0})
+  parent: Vim.Math3d.Stats`1
+  langs:
+  - csharp
+  - vb
+  name: Inequality(Stats<T>, Stats<T>)
+  nameWithType: Stats<T>.Inequality(Stats<T>, Stats<T>)
+  fullName: Vim.Math3d.Stats<T>.Inequality(Vim.Math3d.Stats<T>, Vim.Math3d.Stats<T>)
+  type: Operator
+  source:
+    remote:
+      path: src/Stats.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Inequality
+    path: ../src/Stats.cs
+    startLine: 46
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator !=(Stats<T> left, Stats<T> right)
+    parameters:
+    - id: left
+      type: Vim.Math3d.Stats`1
+    - id: right
+      type: Vim.Math3d.Stats`1
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As Stats(Of T), right As Stats(Of T)) As Boolean
+  overload: Vim.Math3d.Stats`1.op_Inequality*
+  nameWithType.vb: Stats(Of T).Inequality(Stats(Of T), Stats(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Stats(Of T).Inequality(Vim.Math3d.Stats(Of T), Vim.Math3d.Stats(Of T))
+  name.vb: Inequality(Stats(Of T), Stats(Of T))
+- uid: Vim.Math3d.Stats`1.Default
+  commentId: F:Vim.Math3d.Stats`1.Default
+  id: Default
+  parent: Vim.Math3d.Stats`1
+  langs:
+  - csharp
+  - vb
+  name: Default
+  nameWithType: Stats<T>.Default
+  fullName: Vim.Math3d.Stats<T>.Default
+  type: Field
+  source:
+    remote:
+      path: src/Stats.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Default
+    path: ../src/Stats.cs
+    startLine: 50
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly Stats<T> Default
+    return:
+      type: Vim.Math3d.Stats`1
+    content.vb: Public Shared ReadOnly Default As Stats(Of T)
+  nameWithType.vb: Stats(Of T).Default
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+  fullName.vb: Vim.Math3d.Stats(Of T).Default
+- uid: Vim.Math3d.Stats`1.ToString
+  commentId: M:Vim.Math3d.Stats`1.ToString
+  id: ToString
+  parent: Vim.Math3d.Stats`1
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Stats<T>.ToString()
+  fullName: Vim.Math3d.Stats<T>.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Stats.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToString
+    path: ../src/Stats.cs
+    startLine: 53
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: Vim.Math3d.Stats`1.ToString*
+  nameWithType.vb: Stats(Of T).ToString()
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: Vim.Math3d.Stats(Of T).ToString()
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vim.Math3d.Stats`1.#ctor*
+  commentId: Overload:Vim.Math3d.Stats`1.#ctor
+  name: Stats
+  nameWithType: Stats<T>.Stats
+  fullName: Vim.Math3d.Stats<T>.Stats
+  nameWithType.vb: Stats(Of T).Stats
+  fullName.vb: Vim.Math3d.Stats(Of T).Stats
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Stats`1.Equals*
+  commentId: Overload:Vim.Math3d.Stats`1.Equals
+  name: Equals
+  nameWithType: Stats<T>.Equals
+  fullName: Vim.Math3d.Stats<T>.Equals
+  nameWithType.vb: Stats(Of T).Equals
+  fullName.vb: Vim.Math3d.Stats(Of T).Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: Vim.Math3d.Stats`1
+  commentId: T:Vim.Math3d.Stats`1
+  parent: Vim.Math3d
+  name: Stats<T>
+  nameWithType: Stats<T>
+  fullName: Vim.Math3d.Stats<T>
+  nameWithType.vb: Stats(Of T)
+  fullName.vb: Vim.Math3d.Stats(Of T)
+  name.vb: Stats(Of T)
+  spec.csharp:
+  - uid: Vim.Math3d.Stats`1
+    name: Stats
+    nameWithType: Stats
+    fullName: Vim.Math3d.Stats
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Vim.Math3d.Stats`1
+    name: Stats
+    nameWithType: Stats
+    fullName: Vim.Math3d.Stats
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Stats`1.GetHashCode*
+  commentId: Overload:Vim.Math3d.Stats`1.GetHashCode
+  name: GetHashCode
+  nameWithType: Stats<T>.GetHashCode
+  fullName: Vim.Math3d.Stats<T>.GetHashCode
+  nameWithType.vb: Stats(Of T).GetHashCode
+  fullName.vb: Vim.Math3d.Stats(Of T).GetHashCode
+- uid: Vim.Math3d.Stats`1.op_Equality*
+  commentId: Overload:Vim.Math3d.Stats`1.op_Equality
+  name: Equality
+  nameWithType: Stats<T>.Equality
+  fullName: Vim.Math3d.Stats<T>.Equality
+  nameWithType.vb: Stats(Of T).Equality
+  fullName.vb: Vim.Math3d.Stats(Of T).Equality
+- uid: Vim.Math3d.Stats`1.op_Inequality*
+  commentId: Overload:Vim.Math3d.Stats`1.op_Inequality
+  name: Inequality
+  nameWithType: Stats<T>.Inequality
+  fullName: Vim.Math3d.Stats<T>.Inequality
+  nameWithType.vb: Stats(Of T).Inequality
+  fullName.vb: Vim.Math3d.Stats(Of T).Inequality
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Stats`1.ToString*
+  commentId: Overload:Vim.Math3d.Stats`1.ToString
+  name: ToString
+  nameWithType: Stats<T>.ToString
+  fullName: Vim.Math3d.Stats<T>.ToString
+  nameWithType.vb: Stats(Of T).ToString
+  fullName.vb: Vim.Math3d.Stats(Of T).ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

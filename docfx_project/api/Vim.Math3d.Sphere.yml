@@ -1,0 +1,4959 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.Sphere
+  commentId: T:Vim.Math3d.Sphere
+  id: Sphere
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.Sphere.#ctor(System.ValueTuple{Vim.Math3d.Vector3,System.Single})
+  - Vim.Math3d.Sphere.#ctor(Vim.Math3d.Vector3,System.Single)
+  - Vim.Math3d.Sphere.AlmostEquals(Vim.Math3d.Sphere,System.Single)
+  - Vim.Math3d.Sphere.Center
+  - Vim.Math3d.Sphere.Contains(Vim.Math3d.AABox)
+  - Vim.Math3d.Sphere.Contains(Vim.Math3d.Sphere)
+  - Vim.Math3d.Sphere.Contains(Vim.Math3d.Vector3)
+  - Vim.Math3d.Sphere.Contains(Vim.Math3d.Vector3,Vim.Math3d.ContainmentType@)
+  - Vim.Math3d.Sphere.Create(System.Collections.Generic.IEnumerable{Vim.Math3d.Vector3})
+  - Vim.Math3d.Sphere.Create(System.ValueTuple{Vim.Math3d.Vector3,System.Single})
+  - Vim.Math3d.Sphere.Create(Vim.Math3d.AABox)
+  - Vim.Math3d.Sphere.Create(Vim.Math3d.Vector3,System.Single)
+  - Vim.Math3d.Sphere.Create(Vim.Math3d.Vector3[])
+  - Vim.Math3d.Sphere.Deconstruct(Vim.Math3d.Vector3@,System.Single@)
+  - Vim.Math3d.Sphere.Distance(Vim.Math3d.Sphere)
+  - Vim.Math3d.Sphere.Distance(Vim.Math3d.Vector3)
+  - Vim.Math3d.Sphere.Equals(System.Object)
+  - Vim.Math3d.Sphere.Equals(Vim.Math3d.Sphere)
+  - Vim.Math3d.Sphere.GetHashCode
+  - Vim.Math3d.Sphere.Intersects(Vim.Math3d.AABox)
+  - Vim.Math3d.Sphere.Intersects(Vim.Math3d.Plane)
+  - Vim.Math3d.Sphere.Intersects(Vim.Math3d.Ray)
+  - Vim.Math3d.Sphere.Intersects(Vim.Math3d.Sphere)
+  - Vim.Math3d.Sphere.MaxValue
+  - Vim.Math3d.Sphere.Merge(Vim.Math3d.Sphere)
+  - Vim.Math3d.Sphere.MinValue
+  - Vim.Math3d.Sphere.op_Equality(Vim.Math3d.Sphere,Vim.Math3d.Sphere)
+  - Vim.Math3d.Sphere.op_Implicit(System.ValueTuple{Vim.Math3d.Vector3,System.Single})~Vim.Math3d.Sphere
+  - Vim.Math3d.Sphere.op_Implicit(Vim.Math3d.Sphere)~System.ValueTuple{Vim.Math3d.Vector3,System.Single}
+  - Vim.Math3d.Sphere.op_Inequality(Vim.Math3d.Sphere,Vim.Math3d.Sphere)
+  - Vim.Math3d.Sphere.Radius
+  - Vim.Math3d.Sphere.SetCenter(Vim.Math3d.Vector3)
+  - Vim.Math3d.Sphere.SetRadius(System.Single)
+  - Vim.Math3d.Sphere.ToString
+  - Vim.Math3d.Sphere.Transform(Vim.Math3d.Matrix4x4)
+  - Vim.Math3d.Sphere.Translate(Vim.Math3d.Vector3)
+  - Vim.Math3d.Sphere.Zero
+  langs:
+  - csharp
+  - vb
+  name: Sphere
+  nameWithType: Sphere
+  fullName: Vim.Math3d.Sphere
+  type: Struct
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Sphere
+    path: ../src/Structs.cs
+    startLine: 1101
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nDescribes a sphere in 3D-space for bounding operations.\n"
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public readonly struct Sphere : ITransformable3D<Sphere>, IEquatable<Sphere>
+    content.vb: >-
+      <DataContract>
+
+      Public Structure Sphere
+          Implements ITransformable3D(Of Sphere), IEquatable(Of Sphere)
+  implements:
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}
+  - System.IEquatable{Vim.Math3d.Sphere}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.Matrix4x4[])
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.Vector3)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Translate``1(System.Single,System.Single,System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.Quaternion)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Scale``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.Vector3)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Scale``1(System.Single,System.Single,System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.ScaleX``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.ScaleY``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.ScaleZ``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.Vector3,System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Rotate``1(System.Single,System.Single,System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.Plane)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.RotateX``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.RotateY``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.RotateZ``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Vim.Math3d.Sphere.Contains(Vim.Math3d.AABox)
+  commentId: M:Vim.Math3d.Sphere.Contains(Vim.Math3d.AABox)
+  id: Contains(Vim.Math3d.AABox)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Contains(AABox)
+  nameWithType: Sphere.Contains(AABox)
+  fullName: Vim.Math3d.Sphere.Contains(Vim.Math3d.AABox)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Contains
+    path: ../src/Sphere.cs
+    startLine: 22
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nTest if a bounding box is fully inside, outside, or just intersecting the sphere.\n"
+  example: []
+  syntax:
+    content: public readonly ContainmentType Contains(AABox box)
+    parameters:
+    - id: box
+      type: Vim.Math3d.AABox
+    return:
+      type: Vim.Math3d.ContainmentType
+    content.vb: Public Function Contains(box As AABox) As ContainmentType
+  overload: Vim.Math3d.Sphere.Contains*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Contains(Vim.Math3d.Sphere)
+  commentId: M:Vim.Math3d.Sphere.Contains(Vim.Math3d.Sphere)
+  id: Contains(Vim.Math3d.Sphere)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Contains(Sphere)
+  nameWithType: Sphere.Contains(Sphere)
+  fullName: Vim.Math3d.Sphere.Contains(Vim.Math3d.Sphere)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Contains
+    path: ../src/Sphere.cs
+    startLine: 69
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nTest if a sphere is fully inside, outside, or just intersecting the sphere.\n"
+  example: []
+  syntax:
+    content: public readonly ContainmentType Contains(Sphere sphere)
+    parameters:
+    - id: sphere
+      type: Vim.Math3d.Sphere
+    return:
+      type: Vim.Math3d.ContainmentType
+    content.vb: Public Function Contains(sphere As Sphere) As ContainmentType
+  overload: Vim.Math3d.Sphere.Contains*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Contains(Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Sphere.Contains(Vim.Math3d.Vector3)
+  id: Contains(Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Contains(Vector3)
+  nameWithType: Sphere.Contains(Vector3)
+  fullName: Vim.Math3d.Sphere.Contains(Vim.Math3d.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Contains
+    path: ../src/Sphere.cs
+    startLine: 85
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nTest if a point is fully inside, outside, or just intersecting the sphere.\n"
+  example: []
+  syntax:
+    content: public readonly ContainmentType Contains(Vector3 point)
+    parameters:
+    - id: point
+      type: Vim.Math3d.Vector3
+    return:
+      type: Vim.Math3d.ContainmentType
+    content.vb: Public Function Contains(point As Vector3) As ContainmentType
+  overload: Vim.Math3d.Sphere.Contains*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Contains(Vim.Math3d.Vector3,Vim.Math3d.ContainmentType@)
+  commentId: M:Vim.Math3d.Sphere.Contains(Vim.Math3d.Vector3,Vim.Math3d.ContainmentType@)
+  id: Contains(Vim.Math3d.Vector3,Vim.Math3d.ContainmentType@)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Contains(Vector3, out ContainmentType)
+  nameWithType: Sphere.Contains(Vector3, out ContainmentType)
+  fullName: Vim.Math3d.Sphere.Contains(Vim.Math3d.Vector3, out Vim.Math3d.ContainmentType)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Contains
+    path: ../src/Sphere.cs
+    startLine: 94
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nTest if a point is fully inside, outside, or just intersecting the sphere.\n"
+  example: []
+  syntax:
+    content: public readonly void Contains(Vector3 point, out ContainmentType result)
+    parameters:
+    - id: point
+      type: Vim.Math3d.Vector3
+    - id: result
+      type: Vim.Math3d.ContainmentType
+    content.vb: Public Sub Contains(point As Vector3, ByRef result As ContainmentType)
+  overload: Vim.Math3d.Sphere.Contains*
+  nameWithType.vb: Sphere.Contains(Vector3, ByRef ContainmentType)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Sphere.Contains(Vim.Math3d.Vector3, ByRef Vim.Math3d.ContainmentType)
+  name.vb: Contains(Vector3, ByRef ContainmentType)
+- uid: Vim.Math3d.Sphere.Create(Vim.Math3d.AABox)
+  commentId: M:Vim.Math3d.Sphere.Create(Vim.Math3d.AABox)
+  id: Create(Vim.Math3d.AABox)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Create(AABox)
+  nameWithType: Sphere.Create(AABox)
+  fullName: Vim.Math3d.Sphere.Create(Vim.Math3d.AABox)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Sphere.cs
+    startLine: 112
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCreates the smallest sphere that contains the box. \n"
+  example: []
+  syntax:
+    content: public static Sphere Create(AABox box)
+    parameters:
+    - id: box
+      type: Vim.Math3d.AABox
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Shared Function Create(box As AABox) As Sphere
+  overload: Vim.Math3d.Sphere.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Sphere.Create(System.Collections.Generic.IEnumerable{Vim.Math3d.Vector3})
+  commentId: M:Vim.Math3d.Sphere.Create(System.Collections.Generic.IEnumerable{Vim.Math3d.Vector3})
+  id: Create(System.Collections.Generic.IEnumerable{Vim.Math3d.Vector3})
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Create(IEnumerable<Vector3>)
+  nameWithType: Sphere.Create(IEnumerable<Vector3>)
+  fullName: Vim.Math3d.Sphere.Create(System.Collections.Generic.IEnumerable<Vim.Math3d.Vector3>)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Sphere.cs
+    startLine: 122
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCreates the smallest Sphere that contains the given points \n"
+  example: []
+  syntax:
+    content: public static Sphere Create(IEnumerable<Vector3> points)
+    parameters:
+    - id: points
+      type: System.Collections.Generic.IEnumerable{Vim.Math3d.Vector3}
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Shared Function Create(points As IEnumerable(Of Vector3)) As Sphere
+  overload: Vim.Math3d.Sphere.Create*
+  nameWithType.vb: Sphere.Create(IEnumerable(Of Vector3))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Sphere.Create(System.Collections.Generic.IEnumerable(Of Vim.Math3d.Vector3))
+  name.vb: Create(IEnumerable(Of Vector3))
+- uid: Vim.Math3d.Sphere.Create(Vim.Math3d.Vector3[])
+  commentId: M:Vim.Math3d.Sphere.Create(Vim.Math3d.Vector3[])
+  id: Create(Vim.Math3d.Vector3[])
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Create(Vector3[])
+  nameWithType: Sphere.Create(Vector3[])
+  fullName: Vim.Math3d.Sphere.Create(Vim.Math3d.Vector3[])
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Sphere.cs
+    startLine: 206
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCreates a sphere from the given points\n"
+  example: []
+  syntax:
+    content: public static Sphere Create(params Vector3[] points)
+    parameters:
+    - id: points
+      type: Vim.Math3d.Vector3[]
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Shared Function Create(ParamArray points As Vector3()) As Sphere
+  overload: Vim.Math3d.Sphere.Create*
+  nameWithType.vb: Sphere.Create(Vector3())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Sphere.Create(Vim.Math3d.Vector3())
+  name.vb: Create(Vector3())
+- uid: Vim.Math3d.Sphere.Merge(Vim.Math3d.Sphere)
+  commentId: M:Vim.Math3d.Sphere.Merge(Vim.Math3d.Sphere)
+  id: Merge(Vim.Math3d.Sphere)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Merge(Sphere)
+  nameWithType: Sphere.Merge(Sphere)
+  fullName: Vim.Math3d.Sphere.Merge(Vim.Math3d.Sphere)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Merge
+    path: ../src/Sphere.cs
+    startLine: 212
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCreates a sphere merging it with another \n"
+  example: []
+  syntax:
+    content: public readonly Sphere Merge(Sphere additional)
+    parameters:
+    - id: additional
+      type: Vim.Math3d.Sphere
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Function Merge(additional As Sphere) As Sphere
+  overload: Vim.Math3d.Sphere.Merge*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Intersects(Vim.Math3d.AABox)
+  commentId: M:Vim.Math3d.Sphere.Intersects(Vim.Math3d.AABox)
+  id: Intersects(Vim.Math3d.AABox)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Intersects(AABox)
+  nameWithType: Sphere.Intersects(AABox)
+  fullName: Vim.Math3d.Sphere.Intersects(Vim.Math3d.AABox)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Intersects
+    path: ../src/Sphere.cs
+    startLine: 237
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nGets whether or not a specified <xref href=\"Vim.Math3d.AABox\" data-throw-if-not-resolved=\"false\"></xref> intersects with this sphere.\n"
+  example: []
+  syntax:
+    content: public readonly bool Intersects(AABox box)
+    parameters:
+    - id: box
+      type: Vim.Math3d.AABox
+    return:
+      type: System.Boolean
+    content.vb: Public Function Intersects(box As AABox) As Boolean
+  overload: Vim.Math3d.Sphere.Intersects*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Intersects(Vim.Math3d.Sphere)
+  commentId: M:Vim.Math3d.Sphere.Intersects(Vim.Math3d.Sphere)
+  id: Intersects(Vim.Math3d.Sphere)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Intersects(Sphere)
+  nameWithType: Sphere.Intersects(Sphere)
+  fullName: Vim.Math3d.Sphere.Intersects(Vim.Math3d.Sphere)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Intersects
+    path: ../src/Sphere.cs
+    startLine: 243
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nGets whether or not the other <xref href=\"Vim.Math3d.Sphere\" data-throw-if-not-resolved=\"false\"></xref> intersects with this sphere.\n"
+  example: []
+  syntax:
+    content: public readonly bool Intersects(Sphere sphere)
+    parameters:
+    - id: sphere
+      type: Vim.Math3d.Sphere
+    return:
+      type: System.Boolean
+    content.vb: Public Function Intersects(sphere As Sphere) As Boolean
+  overload: Vim.Math3d.Sphere.Intersects*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Intersects(Vim.Math3d.Plane)
+  commentId: M:Vim.Math3d.Sphere.Intersects(Vim.Math3d.Plane)
+  id: Intersects(Vim.Math3d.Plane)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Intersects(Plane)
+  nameWithType: Sphere.Intersects(Plane)
+  fullName: Vim.Math3d.Sphere.Intersects(Vim.Math3d.Plane)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Intersects
+    path: ../src/Sphere.cs
+    startLine: 252
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nGets whether or not a specified <xref href=\"Vim.Math3d.Plane\" data-throw-if-not-resolved=\"false\"></xref> intersects with this sphere.\n"
+  example: []
+  syntax:
+    content: public readonly PlaneIntersectionType Intersects(Plane plane)
+    parameters:
+    - id: plane
+      type: Vim.Math3d.Plane
+    return:
+      type: Vim.Math3d.PlaneIntersectionType
+    content.vb: Public Function Intersects(plane As Plane) As PlaneIntersectionType
+  overload: Vim.Math3d.Sphere.Intersects*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Intersects(Vim.Math3d.Ray)
+  commentId: M:Vim.Math3d.Sphere.Intersects(Vim.Math3d.Ray)
+  id: Intersects(Vim.Math3d.Ray)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Intersects(Ray)
+  nameWithType: Sphere.Intersects(Ray)
+  fullName: Vim.Math3d.Sphere.Intersects(Vim.Math3d.Ray)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Intersects
+    path: ../src/Sphere.cs
+    startLine: 266
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nGets whether or not a specified <xref href=\"Vim.Math3d.Ray\" data-throw-if-not-resolved=\"false\"></xref> intersects with this sphere.\n"
+  example: []
+  syntax:
+    content: public readonly float? Intersects(Ray ray)
+    parameters:
+    - id: ray
+      type: Vim.Math3d.Ray
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public Function Intersects(ray As Ray) As Single?
+  overload: Vim.Math3d.Sphere.Intersects*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Transform(Vim.Math3d.Matrix4x4)
+  commentId: M:Vim.Math3d.Sphere.Transform(Vim.Math3d.Matrix4x4)
+  id: Transform(Vim.Math3d.Matrix4x4)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Transform(Matrix4x4)
+  nameWithType: Sphere.Transform(Matrix4x4)
+  fullName: Vim.Math3d.Sphere.Transform(Vim.Math3d.Matrix4x4)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Transform
+    path: ../src/Sphere.cs
+    startLine: 269
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Sphere Transform(Matrix4x4 m)
+    parameters:
+    - id: m
+      type: Vim.Math3d.Matrix4x4
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Function Transform(m As Matrix4x4) As Sphere
+  overload: Vim.Math3d.Sphere.Transform*
+  implements:
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Transform(Vim.Math3d.Matrix4x4)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Translate(Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Sphere.Translate(Vim.Math3d.Vector3)
+  id: Translate(Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Translate(Vector3)
+  nameWithType: Sphere.Translate(Vector3)
+  fullName: Vim.Math3d.Sphere.Translate(Vim.Math3d.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Translate
+    path: ../src/Sphere.cs
+    startLine: 276
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Sphere Translate(Vector3 offset)
+    parameters:
+    - id: offset
+      type: Vim.Math3d.Vector3
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Function Translate(offset As Vector3) As Sphere
+  overload: Vim.Math3d.Sphere.Translate*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Distance(Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Sphere.Distance(Vim.Math3d.Vector3)
+  id: Distance(Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Distance(Vector3)
+  nameWithType: Sphere.Distance(Vector3)
+  fullName: Vim.Math3d.Sphere.Distance(Vim.Math3d.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Distance
+    path: ../src/Sphere.cs
+    startLine: 279
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly float Distance(Vector3 point)
+    parameters:
+    - id: point
+      type: Vim.Math3d.Vector3
+    return:
+      type: System.Single
+    content.vb: Public Function Distance(point As Vector3) As Single
+  overload: Vim.Math3d.Sphere.Distance*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Distance(Vim.Math3d.Sphere)
+  commentId: M:Vim.Math3d.Sphere.Distance(Vim.Math3d.Sphere)
+  id: Distance(Vim.Math3d.Sphere)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Distance(Sphere)
+  nameWithType: Sphere.Distance(Sphere)
+  fullName: Vim.Math3d.Sphere.Distance(Vim.Math3d.Sphere)
+  type: Method
+  source:
+    remote:
+      path: src/Sphere.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Distance
+    path: ../src/Sphere.cs
+    startLine: 282
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly float Distance(Sphere other)
+    parameters:
+    - id: other
+      type: Vim.Math3d.Sphere
+    return:
+      type: System.Single
+    content.vb: Public Function Distance(other As Sphere) As Single
+  overload: Vim.Math3d.Sphere.Distance*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Center
+  commentId: F:Vim.Math3d.Sphere.Center
+  id: Center
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: Sphere.Center
+  fullName: Vim.Math3d.Sphere.Center
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Center
+    path: ../src/Structs.cs
+    startLine: 1107
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly Vector3 Center
+    return:
+      type: Vim.Math3d.Vector3
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Center As Vector3
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Sphere.Radius
+  commentId: F:Vim.Math3d.Sphere.Radius
+  id: Radius
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Radius
+  nameWithType: Sphere.Radius
+  fullName: Vim.Math3d.Sphere.Radius
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Radius
+    path: ../src/Structs.cs
+    startLine: 1109
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly float Radius
+    return:
+      type: System.Single
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Radius As Single
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Sphere.#ctor(System.ValueTuple{Vim.Math3d.Vector3,System.Single})
+  commentId: M:Vim.Math3d.Sphere.#ctor(System.ValueTuple{Vim.Math3d.Vector3,System.Single})
+  id: '#ctor(System.ValueTuple{Vim.Math3d.Vector3,System.Single})'
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Sphere((Vector3 center, Single radius))
+  nameWithType: Sphere.Sphere((Vector3 center, Single radius))
+  fullName: Vim.Math3d.Sphere.Sphere(System.ValueTuple<Vim.Math3d.Vector3, System.Single>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1110
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public Sphere((Vector3 center, float radius) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Vim.Math3d.Vector3,System.Single}
+    content.vb: Public Sub New(tuple As(center As Vector3, radius As Single)(Of Vector3 , Single))
+  overload: Vim.Math3d.Sphere.#ctor*
+  nameWithType.vb: Sphere.Sphere((center As Vector3, radius As Single)(Of Vector3, Single))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Sphere.Sphere(System.ValueTuple(Of Vim.Math3d.Vector3, System.Single))
+  name.vb: Sphere((center As Vector3, radius As Single)(Of Vector3, Single))
+- uid: Vim.Math3d.Sphere.#ctor(Vim.Math3d.Vector3,System.Single)
+  commentId: M:Vim.Math3d.Sphere.#ctor(Vim.Math3d.Vector3,System.Single)
+  id: '#ctor(Vim.Math3d.Vector3,System.Single)'
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Sphere(Vector3, Single)
+  nameWithType: Sphere.Sphere(Vector3, Single)
+  fullName: Vim.Math3d.Sphere.Sphere(Vim.Math3d.Vector3, System.Single)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1111
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public Sphere(Vector3 center, float radius)
+    parameters:
+    - id: center
+      type: Vim.Math3d.Vector3
+    - id: radius
+      type: System.Single
+    content.vb: Public Sub New(center As Vector3, radius As Single)
+  overload: Vim.Math3d.Sphere.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Create(Vim.Math3d.Vector3,System.Single)
+  commentId: M:Vim.Math3d.Sphere.Create(Vim.Math3d.Vector3,System.Single)
+  id: Create(Vim.Math3d.Vector3,System.Single)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Create(Vector3, Single)
+  nameWithType: Sphere.Create(Vector3, Single)
+  fullName: Vim.Math3d.Sphere.Create(Vim.Math3d.Vector3, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1112
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Sphere Create(Vector3 center, float radius)
+    parameters:
+    - id: center
+      type: Vim.Math3d.Vector3
+    - id: radius
+      type: System.Single
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Shared Function Create(center As Vector3, radius As Single) As Sphere
+  overload: Vim.Math3d.Sphere.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Sphere.Create(System.ValueTuple{Vim.Math3d.Vector3,System.Single})
+  commentId: M:Vim.Math3d.Sphere.Create(System.ValueTuple{Vim.Math3d.Vector3,System.Single})
+  id: Create(System.ValueTuple{Vim.Math3d.Vector3,System.Single})
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Create((Vector3 center, Single radius))
+  nameWithType: Sphere.Create((Vector3 center, Single radius))
+  fullName: Vim.Math3d.Sphere.Create(System.ValueTuple<Vim.Math3d.Vector3, System.Single>)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1113
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Sphere Create((Vector3 center, float radius) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Vim.Math3d.Vector3,System.Single}
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Shared Function Create(tuple As(center As Vector3, radius As Single)(Of Vector3 , Single)) As Sphere
+  overload: Vim.Math3d.Sphere.Create*
+  nameWithType.vb: Sphere.Create((center As Vector3, radius As Single)(Of Vector3, Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Sphere.Create(System.ValueTuple(Of Vim.Math3d.Vector3, System.Single))
+  name.vb: Create((center As Vector3, radius As Single)(Of Vector3, Single))
+- uid: Vim.Math3d.Sphere.Equals(System.Object)
+  commentId: M:Vim.Math3d.Sphere.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: Sphere.Equals(Object)
+  fullName: Vim.Math3d.Sphere.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1114
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Vim.Math3d.Sphere.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Sphere.GetHashCode
+  commentId: M:Vim.Math3d.Sphere.GetHashCode
+  id: GetHashCode
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Sphere.GetHashCode()
+  fullName: Vim.Math3d.Sphere.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetHashCode
+    path: ../src/Structs.cs
+    startLine: 1115
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Vim.Math3d.Sphere.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Sphere.ToString
+  commentId: M:Vim.Math3d.Sphere.ToString
+  id: ToString
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Sphere.ToString()
+  fullName: Vim.Math3d.Sphere.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToString
+    path: ../src/Structs.cs
+    startLine: 1116
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: Vim.Math3d.Sphere.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Sphere.Deconstruct(Vim.Math3d.Vector3@,System.Single@)
+  commentId: M:Vim.Math3d.Sphere.Deconstruct(Vim.Math3d.Vector3@,System.Single@)
+  id: Deconstruct(Vim.Math3d.Vector3@,System.Single@)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Vector3, out Single)
+  nameWithType: Sphere.Deconstruct(out Vector3, out Single)
+  fullName: Vim.Math3d.Sphere.Deconstruct(out Vim.Math3d.Vector3, out System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Deconstruct
+    path: ../src/Structs.cs
+    startLine: 1117
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly void Deconstruct(out Vector3 center, out float radius)
+    parameters:
+    - id: center
+      type: Vim.Math3d.Vector3
+    - id: radius
+      type: System.Single
+    content.vb: Public Sub Deconstruct(ByRef center As Vector3, ByRef radius As Single)
+  overload: Vim.Math3d.Sphere.Deconstruct*
+  nameWithType.vb: Sphere.Deconstruct(ByRef Vector3, ByRef Single)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Sphere.Deconstruct(ByRef Vim.Math3d.Vector3, ByRef System.Single)
+  name.vb: Deconstruct(ByRef Vector3, ByRef Single)
+- uid: Vim.Math3d.Sphere.Equals(Vim.Math3d.Sphere)
+  commentId: M:Vim.Math3d.Sphere.Equals(Vim.Math3d.Sphere)
+  id: Equals(Vim.Math3d.Sphere)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Equals(Sphere)
+  nameWithType: Sphere.Equals(Sphere)
+  fullName: Vim.Math3d.Sphere.Equals(Vim.Math3d.Sphere)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1118
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool Equals(Sphere x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Sphere
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(x As Sphere) As Boolean
+  overload: Vim.Math3d.Sphere.Equals*
+  implements:
+  - System.IEquatable{Vim.Math3d.Sphere}.Equals(Vim.Math3d.Sphere)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.op_Equality(Vim.Math3d.Sphere,Vim.Math3d.Sphere)
+  commentId: M:Vim.Math3d.Sphere.op_Equality(Vim.Math3d.Sphere,Vim.Math3d.Sphere)
+  id: op_Equality(Vim.Math3d.Sphere,Vim.Math3d.Sphere)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Equality(Sphere, Sphere)
+  nameWithType: Sphere.Equality(Sphere, Sphere)
+  fullName: Vim.Math3d.Sphere.Equality(Vim.Math3d.Sphere, Vim.Math3d.Sphere)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Equality
+    path: ../src/Structs.cs
+    startLine: 1119
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator ==(Sphere x0, Sphere x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Sphere
+    - id: x1
+      type: Vim.Math3d.Sphere
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(x0 As Sphere, x1 As Sphere) As Boolean
+  overload: Vim.Math3d.Sphere.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Sphere.op_Inequality(Vim.Math3d.Sphere,Vim.Math3d.Sphere)
+  commentId: M:Vim.Math3d.Sphere.op_Inequality(Vim.Math3d.Sphere,Vim.Math3d.Sphere)
+  id: op_Inequality(Vim.Math3d.Sphere,Vim.Math3d.Sphere)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Inequality(Sphere, Sphere)
+  nameWithType: Sphere.Inequality(Sphere, Sphere)
+  fullName: Vim.Math3d.Sphere.Inequality(Vim.Math3d.Sphere, Vim.Math3d.Sphere)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Inequality
+    path: ../src/Structs.cs
+    startLine: 1120
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator !=(Sphere x0, Sphere x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Sphere
+    - id: x1
+      type: Vim.Math3d.Sphere
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(x0 As Sphere, x1 As Sphere) As Boolean
+  overload: Vim.Math3d.Sphere.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Sphere.op_Implicit(System.ValueTuple{Vim.Math3d.Vector3,System.Single})~Vim.Math3d.Sphere
+  commentId: M:Vim.Math3d.Sphere.op_Implicit(System.ValueTuple{Vim.Math3d.Vector3,System.Single})~Vim.Math3d.Sphere
+  id: op_Implicit(System.ValueTuple{Vim.Math3d.Vector3,System.Single})~Vim.Math3d.Sphere
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Implicit((Vector3 center, Single radius) to Sphere)
+  nameWithType: Sphere.Implicit((Vector3 center, Single radius) to Sphere)
+  fullName: Vim.Math3d.Sphere.Implicit(System.ValueTuple<Vim.Math3d.Vector3, System.Single> to Vim.Math3d.Sphere)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1121
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator Sphere((Vector3 center, float radius) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Vim.Math3d.Vector3,System.Single}
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Shared Widening Operator CType(tuple As(center As Vector3, radius As Single)(Of Vector3 , Single)) As Sphere
+  overload: Vim.Math3d.Sphere.op_Implicit*
+  nameWithType.vb: Sphere.Widening((center As Vector3, radius As Single)(Of Vector3, Single) to Sphere)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Sphere.Widening(System.ValueTuple(Of Vim.Math3d.Vector3, System.Single) to Vim.Math3d.Sphere)
+  name.vb: Widening((center As Vector3, radius As Single)(Of Vector3, Single) to Sphere)
+- uid: Vim.Math3d.Sphere.op_Implicit(Vim.Math3d.Sphere)~System.ValueTuple{Vim.Math3d.Vector3,System.Single}
+  commentId: M:Vim.Math3d.Sphere.op_Implicit(Vim.Math3d.Sphere)~System.ValueTuple{Vim.Math3d.Vector3,System.Single}
+  id: op_Implicit(Vim.Math3d.Sphere)~System.ValueTuple{Vim.Math3d.Vector3,System.Single}
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Implicit(Sphere to (Vector3 center, Single radius))
+  nameWithType: Sphere.Implicit(Sphere to (Vector3 center, Single radius))
+  fullName: Vim.Math3d.Sphere.Implicit(Vim.Math3d.Sphere to System.ValueTuple<Vim.Math3d.Vector3, System.Single>)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1122
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator (Vector3 center, float radius)(Sphere self)
+    parameters:
+    - id: self
+      type: Vim.Math3d.Sphere
+    return:
+      type: System.ValueTuple{Vim.Math3d.Vector3,System.Single}
+    content.vb: Public Shared Widening Operator CType(self As Sphere) As(center As Vector3, radius As Single)(Of Vector3 , Single)
+  overload: Vim.Math3d.Sphere.op_Implicit*
+  nameWithType.vb: Sphere.Widening(Sphere to (center As Vector3, radius As Single)(Of Vector3, Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Sphere.Widening(Vim.Math3d.Sphere to System.ValueTuple(Of Vim.Math3d.Vector3, System.Single))
+  name.vb: Widening(Sphere to (center As Vector3, radius As Single)(Of Vector3, Single))
+- uid: Vim.Math3d.Sphere.AlmostEquals(Vim.Math3d.Sphere,System.Single)
+  commentId: M:Vim.Math3d.Sphere.AlmostEquals(Vim.Math3d.Sphere,System.Single)
+  id: AlmostEquals(Vim.Math3d.Sphere,System.Single)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: AlmostEquals(Sphere, Single)
+  nameWithType: Sphere.AlmostEquals(Sphere, Single)
+  fullName: Vim.Math3d.Sphere.AlmostEquals(Vim.Math3d.Sphere, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AlmostEquals
+    path: ../src/Structs.cs
+    startLine: 1124
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool AlmostEquals(Sphere x, float tolerance = 1E-07F)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Sphere
+    - id: tolerance
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Function AlmostEquals(x As Sphere, tolerance As Single = 1E-07F) As Boolean
+  overload: Vim.Math3d.Sphere.AlmostEquals*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.Zero
+  commentId: F:Vim.Math3d.Sphere.Zero
+  id: Zero
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: Sphere.Zero
+  fullName: Vim.Math3d.Sphere.Zero
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Zero
+    path: ../src/Structs.cs
+    startLine: 1125
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Sphere Zero
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Shared Zero As Sphere
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Sphere.MinValue
+  commentId: F:Vim.Math3d.Sphere.MinValue
+  id: MinValue
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: Sphere.MinValue
+  fullName: Vim.Math3d.Sphere.MinValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MinValue
+    path: ../src/Structs.cs
+    startLine: 1126
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Sphere MinValue
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Shared MinValue As Sphere
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Sphere.MaxValue
+  commentId: F:Vim.Math3d.Sphere.MaxValue
+  id: MaxValue
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: Sphere.MaxValue
+  fullName: Vim.Math3d.Sphere.MaxValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MaxValue
+    path: ../src/Structs.cs
+    startLine: 1127
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Sphere MaxValue
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Shared MaxValue As Sphere
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Sphere.SetCenter(Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Sphere.SetCenter(Vim.Math3d.Vector3)
+  id: SetCenter(Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: SetCenter(Vector3)
+  nameWithType: Sphere.SetCenter(Vector3)
+  fullName: Vim.Math3d.Sphere.SetCenter(Vim.Math3d.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetCenter
+    path: ../src/Structs.cs
+    startLine: 1128
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Sphere SetCenter(Vector3 x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Vector3
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Function SetCenter(x As Vector3) As Sphere
+  overload: Vim.Math3d.Sphere.SetCenter*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Sphere.SetRadius(System.Single)
+  commentId: M:Vim.Math3d.Sphere.SetRadius(System.Single)
+  id: SetRadius(System.Single)
+  parent: Vim.Math3d.Sphere
+  langs:
+  - csharp
+  - vb
+  name: SetRadius(Single)
+  nameWithType: Sphere.SetRadius(Single)
+  fullName: Vim.Math3d.Sphere.SetRadius(System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetRadius
+    path: ../src/Structs.cs
+    startLine: 1129
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Sphere SetRadius(float x)
+    parameters:
+    - id: x
+      type: System.Single
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public Function SetRadius(x As Single) As Sphere
+  overload: Vim.Math3d.Sphere.SetRadius*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}
+  commentId: T:Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}
+  parent: Vim.Math3d
+  definition: Vim.Math3d.ITransformable3D`1
+  name: ITransformable3D<Sphere>
+  nameWithType: ITransformable3D<Sphere>
+  fullName: Vim.Math3d.ITransformable3D<Vim.Math3d.Sphere>
+  nameWithType.vb: ITransformable3D(Of Sphere)
+  fullName.vb: Vim.Math3d.ITransformable3D(Of Vim.Math3d.Sphere)
+  name.vb: ITransformable3D(Of Sphere)
+  spec.csharp:
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Sphere
+    name: Sphere
+    nameWithType: Sphere
+    fullName: Vim.Math3d.Sphere
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Sphere
+    name: Sphere
+    nameWithType: Sphere
+    fullName: Vim.Math3d.Sphere
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable{Vim.Math3d.Sphere}
+  commentId: T:System.IEquatable{Vim.Math3d.Sphere}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<Sphere>
+  nameWithType: IEquatable<Sphere>
+  fullName: System.IEquatable<Vim.Math3d.Sphere>
+  nameWithType.vb: IEquatable(Of Sphere)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.Sphere)
+  name.vb: IEquatable(Of Sphere)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Sphere
+    name: Sphere
+    nameWithType: Sphere
+    fullName: Vim.Math3d.Sphere
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Sphere
+    name: Sphere
+    nameWithType: Sphere
+    fullName: Vim.Math3d.Sphere
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.Matrix4x4[])
+  commentId: M:Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Matrix4x4[])
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Matrix4x4[])
+  name: Transform<Sphere>(Matrix4x4[])
+  nameWithType: Transformable3D.Transform<Sphere>(Matrix4x4[])
+  fullName: Vim.Math3d.Transformable3D.Transform<Vim.Math3d.Sphere>(Vim.Math3d.Matrix4x4[])
+  nameWithType.vb: Transformable3D.Transform(Of Sphere)(Matrix4x4())
+  fullName.vb: Vim.Math3d.Transformable3D.Transform(Of Vim.Math3d.Sphere)(Vim.Math3d.Matrix4x4())
+  name.vb: Transform(Of Sphere)(Matrix4x4())
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.Matrix4x4[])
+    name: Transform<Sphere>
+    nameWithType: Transformable3D.Transform<Sphere>
+    fullName: Vim.Math3d.Transformable3D.Transform<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.Matrix4x4[])
+    name: Transform(Of Sphere)
+    nameWithType: Transformable3D.Transform(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.Transform(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  name: Translate<Sphere>(Vector3)
+  nameWithType: Transformable3D.Translate<Sphere>(Vector3)
+  fullName: Vim.Math3d.Transformable3D.Translate<Vim.Math3d.Sphere>(Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.Translate(Of Sphere)(Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.Translate(Of Vim.Math3d.Sphere)(Vim.Math3d.Vector3)
+  name.vb: Translate(Of Sphere)(Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.Vector3)
+    name: Translate<Sphere>
+    nameWithType: Transformable3D.Translate<Sphere>
+    fullName: Vim.Math3d.Transformable3D.Translate<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.Vector3)
+    name: Translate(Of Sphere)
+    nameWithType: Transformable3D.Translate(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.Translate(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Translate``1(System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  name: Translate<Sphere>(Single, Single, Single)
+  nameWithType: Transformable3D.Translate<Sphere>(Single, Single, Single)
+  fullName: Vim.Math3d.Transformable3D.Translate<Vim.Math3d.Sphere>(System.Single, System.Single, System.Single)
+  nameWithType.vb: Transformable3D.Translate(Of Sphere)(Single, Single, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Translate(Of Vim.Math3d.Sphere)(System.Single, System.Single, System.Single)
+  name.vb: Translate(Of Sphere)(Single, Single, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(System.Single,System.Single,System.Single)
+    name: Translate<Sphere>
+    nameWithType: Transformable3D.Translate<Sphere>
+    fullName: Vim.Math3d.Transformable3D.Translate<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(System.Single,System.Single,System.Single)
+    name: Translate(Of Sphere)
+    nameWithType: Transformable3D.Translate(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.Translate(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Quaternion)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Quaternion)
+  name: Rotate<Sphere>(Quaternion)
+  nameWithType: Transformable3D.Rotate<Sphere>(Quaternion)
+  fullName: Vim.Math3d.Transformable3D.Rotate<Vim.Math3d.Sphere>(Vim.Math3d.Quaternion)
+  nameWithType.vb: Transformable3D.Rotate(Of Sphere)(Quaternion)
+  fullName.vb: Vim.Math3d.Transformable3D.Rotate(Of Vim.Math3d.Sphere)(Vim.Math3d.Quaternion)
+  name.vb: Rotate(Of Sphere)(Quaternion)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.Quaternion)
+    name: Rotate<Sphere>
+    nameWithType: Transformable3D.Rotate<Sphere>
+    fullName: Vim.Math3d.Transformable3D.Rotate<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.Quaternion)
+    name: Rotate(Of Sphere)
+    nameWithType: Transformable3D.Rotate(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.Rotate(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Scale``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: Scale<Sphere>(Single)
+  nameWithType: Transformable3D.Scale<Sphere>(Single)
+  fullName: Vim.Math3d.Transformable3D.Scale<Vim.Math3d.Sphere>(System.Single)
+  nameWithType.vb: Transformable3D.Scale(Of Sphere)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Scale(Of Vim.Math3d.Sphere)(System.Single)
+  name.vb: Scale(Of Sphere)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(System.Single)
+    name: Scale<Sphere>
+    nameWithType: Transformable3D.Scale<Sphere>
+    fullName: Vim.Math3d.Transformable3D.Scale<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(System.Single)
+    name: Scale(Of Sphere)
+    nameWithType: Transformable3D.Scale(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.Scale(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  name: Scale<Sphere>(Vector3)
+  nameWithType: Transformable3D.Scale<Sphere>(Vector3)
+  fullName: Vim.Math3d.Transformable3D.Scale<Vim.Math3d.Sphere>(Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.Scale(Of Sphere)(Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.Scale(Of Vim.Math3d.Sphere)(Vim.Math3d.Vector3)
+  name.vb: Scale(Of Sphere)(Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.Vector3)
+    name: Scale<Sphere>
+    nameWithType: Transformable3D.Scale<Sphere>
+    fullName: Vim.Math3d.Transformable3D.Scale<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.Vector3)
+    name: Scale(Of Sphere)
+    nameWithType: Transformable3D.Scale(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.Scale(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Scale``1(System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  name: Scale<Sphere>(Single, Single, Single)
+  nameWithType: Transformable3D.Scale<Sphere>(Single, Single, Single)
+  fullName: Vim.Math3d.Transformable3D.Scale<Vim.Math3d.Sphere>(System.Single, System.Single, System.Single)
+  nameWithType.vb: Transformable3D.Scale(Of Sphere)(Single, Single, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Scale(Of Vim.Math3d.Sphere)(System.Single, System.Single, System.Single)
+  name.vb: Scale(Of Sphere)(Single, Single, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(System.Single,System.Single,System.Single)
+    name: Scale<Sphere>
+    nameWithType: Transformable3D.Scale<Sphere>
+    fullName: Vim.Math3d.Transformable3D.Scale<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(System.Single,System.Single,System.Single)
+    name: Scale(Of Sphere)
+    nameWithType: Transformable3D.Scale(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.Scale(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.ScaleX``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.ScaleX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.ScaleX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: ScaleX<Sphere>(Single)
+  nameWithType: Transformable3D.ScaleX<Sphere>(Single)
+  fullName: Vim.Math3d.Transformable3D.ScaleX<Vim.Math3d.Sphere>(System.Single)
+  nameWithType.vb: Transformable3D.ScaleX(Of Sphere)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.ScaleX(Of Vim.Math3d.Sphere)(System.Single)
+  name.vb: ScaleX(Of Sphere)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.ScaleX``1(System.Single)
+    name: ScaleX<Sphere>
+    nameWithType: Transformable3D.ScaleX<Sphere>
+    fullName: Vim.Math3d.Transformable3D.ScaleX<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.ScaleX``1(System.Single)
+    name: ScaleX(Of Sphere)
+    nameWithType: Transformable3D.ScaleX(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.ScaleX(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.ScaleY``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.ScaleY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.ScaleY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: ScaleY<Sphere>(Single)
+  nameWithType: Transformable3D.ScaleY<Sphere>(Single)
+  fullName: Vim.Math3d.Transformable3D.ScaleY<Vim.Math3d.Sphere>(System.Single)
+  nameWithType.vb: Transformable3D.ScaleY(Of Sphere)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.ScaleY(Of Vim.Math3d.Sphere)(System.Single)
+  name.vb: ScaleY(Of Sphere)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.ScaleY``1(System.Single)
+    name: ScaleY<Sphere>
+    nameWithType: Transformable3D.ScaleY<Sphere>
+    fullName: Vim.Math3d.Transformable3D.ScaleY<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.ScaleY``1(System.Single)
+    name: ScaleY(Of Sphere)
+    nameWithType: Transformable3D.ScaleY(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.ScaleY(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.ScaleZ``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.ScaleZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.ScaleZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: ScaleZ<Sphere>(Single)
+  nameWithType: Transformable3D.ScaleZ<Sphere>(Single)
+  fullName: Vim.Math3d.Transformable3D.ScaleZ<Vim.Math3d.Sphere>(System.Single)
+  nameWithType.vb: Transformable3D.ScaleZ(Of Sphere)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.ScaleZ(Of Vim.Math3d.Sphere)(System.Single)
+  name.vb: ScaleZ(Of Sphere)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.ScaleZ``1(System.Single)
+    name: ScaleZ<Sphere>
+    nameWithType: Transformable3D.ScaleZ<Sphere>
+    fullName: Vim.Math3d.Transformable3D.ScaleZ<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.ScaleZ``1(System.Single)
+    name: ScaleZ(Of Sphere)
+    nameWithType: Transformable3D.ScaleZ(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.ScaleZ(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  name: LookAt<Sphere>(Vector3, Vector3, Vector3)
+  nameWithType: Transformable3D.LookAt<Sphere>(Vector3, Vector3, Vector3)
+  fullName: Vim.Math3d.Transformable3D.LookAt<Vim.Math3d.Sphere>(Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.LookAt(Of Sphere)(Vector3, Vector3, Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.LookAt(Of Vim.Math3d.Sphere)(Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  name.vb: LookAt(Of Sphere)(Vector3, Vector3, Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+    name: LookAt<Sphere>
+    nameWithType: Transformable3D.LookAt<Sphere>
+    fullName: Vim.Math3d.Transformable3D.LookAt<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+    name: LookAt(Of Sphere)
+    nameWithType: Transformable3D.LookAt(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.LookAt(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.Vector3,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,System.Single)
+  name: RotateAround<Sphere>(Vector3, Single)
+  nameWithType: Transformable3D.RotateAround<Sphere>(Vector3, Single)
+  fullName: Vim.Math3d.Transformable3D.RotateAround<Vim.Math3d.Sphere>(Vim.Math3d.Vector3, System.Single)
+  nameWithType.vb: Transformable3D.RotateAround(Of Sphere)(Vector3, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateAround(Of Vim.Math3d.Sphere)(Vim.Math3d.Vector3, System.Single)
+  name.vb: RotateAround(Of Sphere)(Vector3, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.Vector3,System.Single)
+    name: RotateAround<Sphere>
+    nameWithType: Transformable3D.RotateAround<Sphere>
+    fullName: Vim.Math3d.Transformable3D.RotateAround<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.Vector3,System.Single)
+    name: RotateAround(Of Sphere)
+    nameWithType: Transformable3D.RotateAround(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.RotateAround(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Rotate``1(System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  name: Rotate<Sphere>(Single, Single, Single)
+  nameWithType: Transformable3D.Rotate<Sphere>(Single, Single, Single)
+  fullName: Vim.Math3d.Transformable3D.Rotate<Vim.Math3d.Sphere>(System.Single, System.Single, System.Single)
+  nameWithType.vb: Transformable3D.Rotate(Of Sphere)(Single, Single, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Rotate(Of Vim.Math3d.Sphere)(System.Single, System.Single, System.Single)
+  name.vb: Rotate(Of Sphere)(Single, Single, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(System.Single,System.Single,System.Single)
+    name: Rotate<Sphere>
+    nameWithType: Transformable3D.Rotate<Sphere>
+    fullName: Vim.Math3d.Transformable3D.Rotate<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(System.Single,System.Single,System.Single)
+    name: Rotate(Of Sphere)
+    nameWithType: Transformable3D.Rotate(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.Rotate(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.Plane)
+  commentId: M:Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Plane)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Plane)
+  name: Reflect<Sphere>(Plane)
+  nameWithType: Transformable3D.Reflect<Sphere>(Plane)
+  fullName: Vim.Math3d.Transformable3D.Reflect<Vim.Math3d.Sphere>(Vim.Math3d.Plane)
+  nameWithType.vb: Transformable3D.Reflect(Of Sphere)(Plane)
+  fullName.vb: Vim.Math3d.Transformable3D.Reflect(Of Vim.Math3d.Sphere)(Vim.Math3d.Plane)
+  name.vb: Reflect(Of Sphere)(Plane)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.Plane)
+    name: Reflect<Sphere>
+    nameWithType: Transformable3D.Reflect<Sphere>
+    fullName: Vim.Math3d.Transformable3D.Reflect<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Plane
+    name: Plane
+    nameWithType: Plane
+    fullName: Vim.Math3d.Plane
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.Plane)
+    name: Reflect(Of Sphere)
+    nameWithType: Transformable3D.Reflect(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.Reflect(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Plane
+    name: Plane
+    nameWithType: Plane
+    fullName: Vim.Math3d.Plane
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.RotateX``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.RotateX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: RotateX<Sphere>(Single)
+  nameWithType: Transformable3D.RotateX<Sphere>(Single)
+  fullName: Vim.Math3d.Transformable3D.RotateX<Vim.Math3d.Sphere>(System.Single)
+  nameWithType.vb: Transformable3D.RotateX(Of Sphere)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateX(Of Vim.Math3d.Sphere)(System.Single)
+  name.vb: RotateX(Of Sphere)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateX``1(System.Single)
+    name: RotateX<Sphere>
+    nameWithType: Transformable3D.RotateX<Sphere>
+    fullName: Vim.Math3d.Transformable3D.RotateX<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateX``1(System.Single)
+    name: RotateX(Of Sphere)
+    nameWithType: Transformable3D.RotateX(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.RotateX(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.RotateY``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.RotateY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: RotateY<Sphere>(Single)
+  nameWithType: Transformable3D.RotateY<Sphere>(Single)
+  fullName: Vim.Math3d.Transformable3D.RotateY<Vim.Math3d.Sphere>(System.Single)
+  nameWithType.vb: Transformable3D.RotateY(Of Sphere)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateY(Of Vim.Math3d.Sphere)(System.Single)
+  name.vb: RotateY(Of Sphere)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateY``1(System.Single)
+    name: RotateY<Sphere>
+    nameWithType: Transformable3D.RotateY<Sphere>
+    fullName: Vim.Math3d.Transformable3D.RotateY<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateY``1(System.Single)
+    name: RotateY(Of Sphere)
+    nameWithType: Transformable3D.RotateY(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.RotateY(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.RotateZ``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.RotateZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: RotateZ<Sphere>(Single)
+  nameWithType: Transformable3D.RotateZ<Sphere>(Single)
+  fullName: Vim.Math3d.Transformable3D.RotateZ<Vim.Math3d.Sphere>(System.Single)
+  nameWithType.vb: Transformable3D.RotateZ(Of Sphere)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateZ(Of Vim.Math3d.Sphere)(System.Single)
+  name.vb: RotateZ(Of Sphere)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateZ``1(System.Single)
+    name: RotateZ<Sphere>
+    nameWithType: Transformable3D.RotateZ<Sphere>
+    fullName: Vim.Math3d.Transformable3D.RotateZ<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateZ``1(System.Single)
+    name: RotateZ(Of Sphere)
+    nameWithType: Transformable3D.RotateZ(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.RotateZ(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+  name: TranslateRotateScale<Sphere>(Vector3, Quaternion, Vector3)
+  nameWithType: Transformable3D.TranslateRotateScale<Sphere>(Vector3, Quaternion, Vector3)
+  fullName: Vim.Math3d.Transformable3D.TranslateRotateScale<Vim.Math3d.Sphere>(Vim.Math3d.Vector3, Vim.Math3d.Quaternion, Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.TranslateRotateScale(Of Sphere)(Vector3, Quaternion, Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.TranslateRotateScale(Of Vim.Math3d.Sphere)(Vim.Math3d.Vector3, Vim.Math3d.Quaternion, Vim.Math3d.Vector3)
+  name.vb: TranslateRotateScale(Of Sphere)(Vector3, Quaternion, Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+    name: TranslateRotateScale<Sphere>
+    nameWithType: Transformable3D.TranslateRotateScale<Sphere>
+    fullName: Vim.Math3d.Transformable3D.TranslateRotateScale<Vim.Math3d.Sphere>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+    name: TranslateRotateScale(Of Sphere)
+    nameWithType: Transformable3D.TranslateRotateScale(Of Sphere)
+    fullName: Vim.Math3d.Transformable3D.TranslateRotateScale(Of Vim.Math3d.Sphere)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D`1
+  commentId: T:Vim.Math3d.ITransformable3D`1
+  name: ITransformable3D<TSelf>
+  nameWithType: ITransformable3D<TSelf>
+  fullName: Vim.Math3d.ITransformable3D<TSelf>
+  nameWithType.vb: ITransformable3D(Of TSelf)
+  fullName.vb: Vim.Math3d.ITransformable3D(Of TSelf)
+  name.vb: ITransformable3D(Of TSelf)
+  spec.csharp:
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TSelf
+    nameWithType: TSelf
+    fullName: TSelf
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TSelf
+    nameWithType: TSelf
+    fullName: TSelf
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Matrix4x4[])
+  commentId: M:Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Matrix4x4[])
+  name: Transform<T>(ITransformable3D<T>, Matrix4x4[])
+  nameWithType: Transformable3D.Transform<T>(ITransformable3D<T>, Matrix4x4[])
+  fullName: Vim.Math3d.Transformable3D.Transform<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Matrix4x4[])
+  nameWithType.vb: Transformable3D.Transform(Of T)(ITransformable3D(Of T), Matrix4x4())
+  fullName.vb: Vim.Math3d.Transformable3D.Transform(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Matrix4x4())
+  name.vb: Transform(Of T)(ITransformable3D(Of T), Matrix4x4())
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Matrix4x4[])
+    name: Transform<T>
+    nameWithType: Transformable3D.Transform<T>
+    fullName: Vim.Math3d.Transformable3D.Transform<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Matrix4x4[])
+    name: Transform(Of T)
+    nameWithType: Transformable3D.Transform(Of T)
+    fullName: Vim.Math3d.Transformable3D.Transform(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D
+  commentId: T:Vim.Math3d.Transformable3D
+  parent: Vim.Math3d
+  name: Transformable3D
+  nameWithType: Transformable3D
+  fullName: Vim.Math3d.Transformable3D
+- uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  name: Translate<T>(ITransformable3D<T>, Vector3)
+  nameWithType: Transformable3D.Translate<T>(ITransformable3D<T>, Vector3)
+  fullName: Vim.Math3d.Transformable3D.Translate<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.Translate(Of T)(ITransformable3D(Of T), Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.Translate(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Vector3)
+  name.vb: Translate(Of T)(ITransformable3D(Of T), Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+    name: Translate<T>
+    nameWithType: Transformable3D.Translate<T>
+    fullName: Vim.Math3d.Transformable3D.Translate<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+    name: Translate(Of T)
+    nameWithType: Transformable3D.Translate(Of T)
+    fullName: Vim.Math3d.Transformable3D.Translate(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  isExternal: true
+  name: Translate<T>(ITransformable3D<T>, Single, Single, Single)
+  nameWithType: Transformable3D.Translate<T>(ITransformable3D<T>, Single, Single, Single)
+  fullName: Vim.Math3d.Transformable3D.Translate<T>(Vim.Math3d.ITransformable3D<T>, System.Single, System.Single, System.Single)
+  nameWithType.vb: Transformable3D.Translate(Of T)(ITransformable3D(Of T), Single, Single, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Translate(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single, System.Single, System.Single)
+  name.vb: Translate(Of T)(ITransformable3D(Of T), Single, Single, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+    name: Translate<T>
+    nameWithType: Transformable3D.Translate<T>
+    fullName: Vim.Math3d.Transformable3D.Translate<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+    name: Translate(Of T)
+    nameWithType: Transformable3D.Translate(Of T)
+    fullName: Vim.Math3d.Transformable3D.Translate(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Quaternion)
+  name: Rotate<T>(ITransformable3D<T>, Quaternion)
+  nameWithType: Transformable3D.Rotate<T>(ITransformable3D<T>, Quaternion)
+  fullName: Vim.Math3d.Transformable3D.Rotate<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Quaternion)
+  nameWithType.vb: Transformable3D.Rotate(Of T)(ITransformable3D(Of T), Quaternion)
+  fullName.vb: Vim.Math3d.Transformable3D.Rotate(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Quaternion)
+  name.vb: Rotate(Of T)(ITransformable3D(Of T), Quaternion)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Quaternion)
+    name: Rotate<T>
+    nameWithType: Transformable3D.Rotate<T>
+    fullName: Vim.Math3d.Transformable3D.Rotate<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Quaternion)
+    name: Rotate(Of T)
+    nameWithType: Transformable3D.Rotate(Of T)
+    fullName: Vim.Math3d.Transformable3D.Rotate(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: Scale<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.Scale<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.Scale<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.Scale(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Scale(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: Scale(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: Scale<T>
+    nameWithType: Transformable3D.Scale<T>
+    fullName: Vim.Math3d.Transformable3D.Scale<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: Scale(Of T)
+    nameWithType: Transformable3D.Scale(Of T)
+    fullName: Vim.Math3d.Transformable3D.Scale(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  name: Scale<T>(ITransformable3D<T>, Vector3)
+  nameWithType: Transformable3D.Scale<T>(ITransformable3D<T>, Vector3)
+  fullName: Vim.Math3d.Transformable3D.Scale<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.Scale(Of T)(ITransformable3D(Of T), Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.Scale(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Vector3)
+  name.vb: Scale(Of T)(ITransformable3D(Of T), Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+    name: Scale<T>
+    nameWithType: Transformable3D.Scale<T>
+    fullName: Vim.Math3d.Transformable3D.Scale<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+    name: Scale(Of T)
+    nameWithType: Transformable3D.Scale(Of T)
+    fullName: Vim.Math3d.Transformable3D.Scale(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  isExternal: true
+  name: Scale<T>(ITransformable3D<T>, Single, Single, Single)
+  nameWithType: Transformable3D.Scale<T>(ITransformable3D<T>, Single, Single, Single)
+  fullName: Vim.Math3d.Transformable3D.Scale<T>(Vim.Math3d.ITransformable3D<T>, System.Single, System.Single, System.Single)
+  nameWithType.vb: Transformable3D.Scale(Of T)(ITransformable3D(Of T), Single, Single, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Scale(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single, System.Single, System.Single)
+  name.vb: Scale(Of T)(ITransformable3D(Of T), Single, Single, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+    name: Scale<T>
+    nameWithType: Transformable3D.Scale<T>
+    fullName: Vim.Math3d.Transformable3D.Scale<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+    name: Scale(Of T)
+    nameWithType: Transformable3D.Scale(Of T)
+    fullName: Vim.Math3d.Transformable3D.Scale(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.ScaleX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.ScaleX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: ScaleX<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.ScaleX<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.ScaleX<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.ScaleX(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.ScaleX(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: ScaleX(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.ScaleX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: ScaleX<T>
+    nameWithType: Transformable3D.ScaleX<T>
+    fullName: Vim.Math3d.Transformable3D.ScaleX<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.ScaleX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: ScaleX(Of T)
+    nameWithType: Transformable3D.ScaleX(Of T)
+    fullName: Vim.Math3d.Transformable3D.ScaleX(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.ScaleY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.ScaleY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: ScaleY<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.ScaleY<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.ScaleY<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.ScaleY(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.ScaleY(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: ScaleY(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.ScaleY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: ScaleY<T>
+    nameWithType: Transformable3D.ScaleY<T>
+    fullName: Vim.Math3d.Transformable3D.ScaleY<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.ScaleY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: ScaleY(Of T)
+    nameWithType: Transformable3D.ScaleY(Of T)
+    fullName: Vim.Math3d.Transformable3D.ScaleY(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.ScaleZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.ScaleZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: ScaleZ<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.ScaleZ<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.ScaleZ<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.ScaleZ(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.ScaleZ(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: ScaleZ(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.ScaleZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: ScaleZ<T>
+    nameWithType: Transformable3D.ScaleZ<T>
+    fullName: Vim.Math3d.Transformable3D.ScaleZ<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.ScaleZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: ScaleZ(Of T)
+    nameWithType: Transformable3D.ScaleZ(Of T)
+    fullName: Vim.Math3d.Transformable3D.ScaleZ(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  name: LookAt<T>(ITransformable3D<T>, Vector3, Vector3, Vector3)
+  nameWithType: Transformable3D.LookAt<T>(ITransformable3D<T>, Vector3, Vector3, Vector3)
+  fullName: Vim.Math3d.Transformable3D.LookAt<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.LookAt(Of T)(ITransformable3D(Of T), Vector3, Vector3, Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.LookAt(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  name.vb: LookAt(Of T)(ITransformable3D(Of T), Vector3, Vector3, Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+    name: LookAt<T>
+    nameWithType: Transformable3D.LookAt<T>
+    fullName: Vim.Math3d.Transformable3D.LookAt<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+    name: LookAt(Of T)
+    nameWithType: Transformable3D.LookAt(Of T)
+    fullName: Vim.Math3d.Transformable3D.LookAt(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,System.Single)
+  isExternal: true
+  name: RotateAround<T>(ITransformable3D<T>, Vector3, Single)
+  nameWithType: Transformable3D.RotateAround<T>(ITransformable3D<T>, Vector3, Single)
+  fullName: Vim.Math3d.Transformable3D.RotateAround<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Vector3, System.Single)
+  nameWithType.vb: Transformable3D.RotateAround(Of T)(ITransformable3D(Of T), Vector3, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateAround(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Vector3, System.Single)
+  name.vb: RotateAround(Of T)(ITransformable3D(Of T), Vector3, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,System.Single)
+    name: RotateAround<T>
+    nameWithType: Transformable3D.RotateAround<T>
+    fullName: Vim.Math3d.Transformable3D.RotateAround<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,System.Single)
+    name: RotateAround(Of T)
+    nameWithType: Transformable3D.RotateAround(Of T)
+    fullName: Vim.Math3d.Transformable3D.RotateAround(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  isExternal: true
+  name: Rotate<T>(ITransformable3D<T>, Single, Single, Single)
+  nameWithType: Transformable3D.Rotate<T>(ITransformable3D<T>, Single, Single, Single)
+  fullName: Vim.Math3d.Transformable3D.Rotate<T>(Vim.Math3d.ITransformable3D<T>, System.Single, System.Single, System.Single)
+  nameWithType.vb: Transformable3D.Rotate(Of T)(ITransformable3D(Of T), Single, Single, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Rotate(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single, System.Single, System.Single)
+  name.vb: Rotate(Of T)(ITransformable3D(Of T), Single, Single, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+    name: Rotate<T>
+    nameWithType: Transformable3D.Rotate<T>
+    fullName: Vim.Math3d.Transformable3D.Rotate<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+    name: Rotate(Of T)
+    nameWithType: Transformable3D.Rotate(Of T)
+    fullName: Vim.Math3d.Transformable3D.Rotate(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Plane)
+  commentId: M:Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Plane)
+  name: Reflect<T>(ITransformable3D<T>, Plane)
+  nameWithType: Transformable3D.Reflect<T>(ITransformable3D<T>, Plane)
+  fullName: Vim.Math3d.Transformable3D.Reflect<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Plane)
+  nameWithType.vb: Transformable3D.Reflect(Of T)(ITransformable3D(Of T), Plane)
+  fullName.vb: Vim.Math3d.Transformable3D.Reflect(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Plane)
+  name.vb: Reflect(Of T)(ITransformable3D(Of T), Plane)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Plane)
+    name: Reflect<T>
+    nameWithType: Transformable3D.Reflect<T>
+    fullName: Vim.Math3d.Transformable3D.Reflect<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Plane
+    name: Plane
+    nameWithType: Plane
+    fullName: Vim.Math3d.Plane
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Plane)
+    name: Reflect(Of T)
+    nameWithType: Transformable3D.Reflect(Of T)
+    fullName: Vim.Math3d.Transformable3D.Reflect(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Plane
+    name: Plane
+    nameWithType: Plane
+    fullName: Vim.Math3d.Plane
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.RotateX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: RotateX<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.RotateX<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.RotateX<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.RotateX(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateX(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: RotateX(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: RotateX<T>
+    nameWithType: Transformable3D.RotateX<T>
+    fullName: Vim.Math3d.Transformable3D.RotateX<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: RotateX(Of T)
+    nameWithType: Transformable3D.RotateX(Of T)
+    fullName: Vim.Math3d.Transformable3D.RotateX(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.RotateY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: RotateY<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.RotateY<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.RotateY<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.RotateY(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateY(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: RotateY(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: RotateY<T>
+    nameWithType: Transformable3D.RotateY<T>
+    fullName: Vim.Math3d.Transformable3D.RotateY<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: RotateY(Of T)
+    nameWithType: Transformable3D.RotateY(Of T)
+    fullName: Vim.Math3d.Transformable3D.RotateY(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.RotateZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: RotateZ<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.RotateZ<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.RotateZ<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.RotateZ(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateZ(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: RotateZ(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: RotateZ<T>
+    nameWithType: Transformable3D.RotateZ<T>
+    fullName: Vim.Math3d.Transformable3D.RotateZ<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: RotateZ(Of T)
+    nameWithType: Transformable3D.RotateZ(Of T)
+    fullName: Vim.Math3d.Transformable3D.RotateZ(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+  name: TranslateRotateScale<T>(ITransformable3D<T>, Vector3, Quaternion, Vector3)
+  nameWithType: Transformable3D.TranslateRotateScale<T>(ITransformable3D<T>, Vector3, Quaternion, Vector3)
+  fullName: Vim.Math3d.Transformable3D.TranslateRotateScale<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Vector3, Vim.Math3d.Quaternion, Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.TranslateRotateScale(Of T)(ITransformable3D(Of T), Vector3, Quaternion, Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.TranslateRotateScale(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Vector3, Vim.Math3d.Quaternion, Vim.Math3d.Vector3)
+  name.vb: TranslateRotateScale(Of T)(ITransformable3D(Of T), Vector3, Quaternion, Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+    name: TranslateRotateScale<T>
+    nameWithType: Transformable3D.TranslateRotateScale<T>
+    fullName: Vim.Math3d.Transformable3D.TranslateRotateScale<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+    name: TranslateRotateScale(Of T)
+    nameWithType: Transformable3D.TranslateRotateScale(Of T)
+    fullName: Vim.Math3d.Transformable3D.TranslateRotateScale(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Sphere.Contains*
+  commentId: Overload:Vim.Math3d.Sphere.Contains
+  name: Contains
+  nameWithType: Sphere.Contains
+  fullName: Vim.Math3d.Sphere.Contains
+- uid: Vim.Math3d.AABox
+  commentId: T:Vim.Math3d.AABox
+  parent: Vim.Math3d
+  name: AABox
+  nameWithType: AABox
+  fullName: Vim.Math3d.AABox
+- uid: Vim.Math3d.ContainmentType
+  commentId: T:Vim.Math3d.ContainmentType
+  parent: Vim.Math3d
+  name: ContainmentType
+  nameWithType: ContainmentType
+  fullName: Vim.Math3d.ContainmentType
+- uid: Vim.Math3d.Sphere
+  commentId: T:Vim.Math3d.Sphere
+  parent: Vim.Math3d
+  name: Sphere
+  nameWithType: Sphere
+  fullName: Vim.Math3d.Sphere
+- uid: Vim.Math3d.Vector3
+  commentId: T:Vim.Math3d.Vector3
+  parent: Vim.Math3d
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vim.Math3d.Vector3
+- uid: Vim.Math3d.Sphere.Create*
+  commentId: Overload:Vim.Math3d.Sphere.Create
+  name: Create
+  nameWithType: Sphere.Create
+  fullName: Vim.Math3d.Sphere.Create
+- uid: System.Collections.Generic.IEnumerable{Vim.Math3d.Vector3}
+  commentId: T:System.Collections.Generic.IEnumerable{Vim.Math3d.Vector3}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Vector3>
+  nameWithType: IEnumerable<Vector3>
+  fullName: System.Collections.Generic.IEnumerable<Vim.Math3d.Vector3>
+  nameWithType.vb: IEnumerable(Of Vector3)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Vim.Math3d.Vector3)
+  name.vb: IEnumerable(Of Vector3)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Vim.Math3d.Vector3[]
+  isExternal: true
+  name: Vector3[]
+  nameWithType: Vector3[]
+  fullName: Vim.Math3d.Vector3[]
+  nameWithType.vb: Vector3()
+  fullName.vb: Vim.Math3d.Vector3()
+  name.vb: Vector3()
+  spec.csharp:
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Vim.Math3d.Sphere.Merge*
+  commentId: Overload:Vim.Math3d.Sphere.Merge
+  name: Merge
+  nameWithType: Sphere.Merge
+  fullName: Vim.Math3d.Sphere.Merge
+- uid: Vim.Math3d.Sphere.Intersects*
+  commentId: Overload:Vim.Math3d.Sphere.Intersects
+  name: Intersects
+  nameWithType: Sphere.Intersects
+  fullName: Vim.Math3d.Sphere.Intersects
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Vim.Math3d.Plane
+  commentId: T:Vim.Math3d.Plane
+  parent: Vim.Math3d
+  name: Plane
+  nameWithType: Plane
+  fullName: Vim.Math3d.Plane
+- uid: Vim.Math3d.PlaneIntersectionType
+  commentId: T:Vim.Math3d.PlaneIntersectionType
+  parent: Vim.Math3d
+  name: PlaneIntersectionType
+  nameWithType: PlaneIntersectionType
+  fullName: Vim.Math3d.PlaneIntersectionType
+- uid: Vim.Math3d.Ray
+  commentId: T:Vim.Math3d.Ray
+  parent: Vim.Math3d
+  name: Ray
+  nameWithType: Ray
+  fullName: Vim.Math3d.Ray
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Single>
+  nameWithType: Nullable<Single>
+  fullName: System.Nullable<System.Single>
+  nameWithType.vb: Nullable(Of Single)
+  fullName.vb: System.Nullable(Of System.Single)
+  name.vb: Nullable(Of Single)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Sphere.Transform*
+  commentId: Overload:Vim.Math3d.Sphere.Transform
+  name: Transform
+  nameWithType: Sphere.Transform
+  fullName: Vim.Math3d.Sphere.Transform
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Transform(Vim.Math3d.Matrix4x4)
+  commentId: M:Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}.Transform(Vim.Math3d.Matrix4x4)
+  parent: Vim.Math3d.ITransformable3D{Vim.Math3d.Sphere}
+  definition: Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+  name: Transform(Matrix4x4)
+  nameWithType: ITransformable3D<Sphere>.Transform(Matrix4x4)
+  fullName: Vim.Math3d.ITransformable3D<Vim.Math3d.Sphere>.Transform(Vim.Math3d.Matrix4x4)
+  nameWithType.vb: ITransformable3D(Of Sphere).Transform(Matrix4x4)
+  fullName.vb: Vim.Math3d.ITransformable3D(Of Vim.Math3d.Sphere).Transform(Vim.Math3d.Matrix4x4)
+  spec.csharp:
+  - uid: Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+    name: Transform
+    nameWithType: ITransformable3D<Sphere>.Transform
+    fullName: Vim.Math3d.ITransformable3D<Vim.Math3d.Sphere>.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+    name: Transform
+    nameWithType: ITransformable3D(Of Sphere).Transform
+    fullName: Vim.Math3d.ITransformable3D(Of Vim.Math3d.Sphere).Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Matrix4x4
+  commentId: T:Vim.Math3d.Matrix4x4
+  parent: Vim.Math3d
+  name: Matrix4x4
+  nameWithType: Matrix4x4
+  fullName: Vim.Math3d.Matrix4x4
+- uid: Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+  commentId: M:Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+  name: Transform(Matrix4x4)
+  nameWithType: ITransformable3D<TSelf>.Transform(Matrix4x4)
+  fullName: Vim.Math3d.ITransformable3D<TSelf>.Transform(Vim.Math3d.Matrix4x4)
+  nameWithType.vb: ITransformable3D(Of TSelf).Transform(Matrix4x4)
+  fullName.vb: Vim.Math3d.ITransformable3D(Of TSelf).Transform(Vim.Math3d.Matrix4x4)
+  spec.csharp:
+  - uid: Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+    name: Transform
+    nameWithType: ITransformable3D<TSelf>.Transform
+    fullName: Vim.Math3d.ITransformable3D<TSelf>.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+    name: Transform
+    nameWithType: ITransformable3D(Of TSelf).Transform
+    fullName: Vim.Math3d.ITransformable3D(Of TSelf).Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Sphere.Translate*
+  commentId: Overload:Vim.Math3d.Sphere.Translate
+  name: Translate
+  nameWithType: Sphere.Translate
+  fullName: Vim.Math3d.Sphere.Translate
+- uid: Vim.Math3d.Sphere.Distance*
+  commentId: Overload:Vim.Math3d.Sphere.Distance
+  name: Distance
+  nameWithType: Sphere.Distance
+  fullName: Vim.Math3d.Sphere.Distance
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Vim.Math3d.Sphere.#ctor*
+  commentId: Overload:Vim.Math3d.Sphere.#ctor
+  name: Sphere
+  nameWithType: Sphere.Sphere
+  fullName: Vim.Math3d.Sphere.Sphere
+- uid: System.ValueTuple{Vim.Math3d.Vector3,System.Single}
+  commentId: T:System.ValueTuple{Vim.Math3d.Vector3,System.Single}
+  parent: System
+  definition: System.ValueTuple`2
+  name: (T1, T2)<Vector3, Single>
+  nameWithType: (T1, T2)<Vector3, Single>
+  fullName: System.ValueTuple<Vim.Math3d.Vector3, System.Single>
+  nameWithType.vb: (T1, T2)(Of Vector3, Single)
+  fullName.vb: System.ValueTuple(Of Vim.Math3d.Vector3, System.Single)
+  name.vb: (T1, T2)(Of Vector3, Single)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  isExternal: true
+  name: (T1, T2)<T1, T2>
+  nameWithType: (T1, T2)<T1, T2>
+  fullName: System.ValueTuple<T1, T2>
+  nameWithType.vb: (T1, T2)(Of T1, T2)
+  fullName.vb: System.ValueTuple(Of T1, T2)
+  name.vb: (T1, T2)(Of T1, T2)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Sphere.Equals*
+  commentId: Overload:Vim.Math3d.Sphere.Equals
+  name: Equals
+  nameWithType: Sphere.Equals
+  fullName: Vim.Math3d.Sphere.Equals
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Sphere.GetHashCode*
+  commentId: Overload:Vim.Math3d.Sphere.GetHashCode
+  name: GetHashCode
+  nameWithType: Sphere.GetHashCode
+  fullName: Vim.Math3d.Sphere.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Sphere.ToString*
+  commentId: Overload:Vim.Math3d.Sphere.ToString
+  name: ToString
+  nameWithType: Sphere.ToString
+  fullName: Vim.Math3d.Sphere.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vim.Math3d.Sphere.Deconstruct*
+  commentId: Overload:Vim.Math3d.Sphere.Deconstruct
+  name: Deconstruct
+  nameWithType: Sphere.Deconstruct
+  fullName: Vim.Math3d.Sphere.Deconstruct
+- uid: System.IEquatable{Vim.Math3d.Sphere}.Equals(Vim.Math3d.Sphere)
+  commentId: M:System.IEquatable{Vim.Math3d.Sphere}.Equals(Vim.Math3d.Sphere)
+  parent: System.IEquatable{Vim.Math3d.Sphere}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(Sphere)
+  nameWithType: IEquatable<Sphere>.Equals(Sphere)
+  fullName: System.IEquatable<Vim.Math3d.Sphere>.Equals(Vim.Math3d.Sphere)
+  nameWithType.vb: IEquatable(Of Sphere).Equals(Sphere)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.Sphere).Equals(Vim.Math3d.Sphere)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<Sphere>.Equals
+    fullName: System.IEquatable<Vim.Math3d.Sphere>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Sphere
+    name: Sphere
+    nameWithType: Sphere
+    fullName: Vim.Math3d.Sphere
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of Sphere).Equals
+    fullName: System.IEquatable(Of Vim.Math3d.Sphere).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Sphere
+    name: Sphere
+    nameWithType: Sphere
+    fullName: Vim.Math3d.Sphere
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Sphere.op_Equality*
+  commentId: Overload:Vim.Math3d.Sphere.op_Equality
+  name: Equality
+  nameWithType: Sphere.Equality
+  fullName: Vim.Math3d.Sphere.Equality
+- uid: Vim.Math3d.Sphere.op_Inequality*
+  commentId: Overload:Vim.Math3d.Sphere.op_Inequality
+  name: Inequality
+  nameWithType: Sphere.Inequality
+  fullName: Vim.Math3d.Sphere.Inequality
+- uid: Vim.Math3d.Sphere.op_Implicit*
+  commentId: Overload:Vim.Math3d.Sphere.op_Implicit
+  name: Implicit
+  nameWithType: Sphere.Implicit
+  fullName: Vim.Math3d.Sphere.Implicit
+  nameWithType.vb: Sphere.Widening
+  fullName.vb: Vim.Math3d.Sphere.Widening
+  name.vb: Widening
+- uid: Vim.Math3d.Sphere.AlmostEquals*
+  commentId: Overload:Vim.Math3d.Sphere.AlmostEquals
+  name: AlmostEquals
+  nameWithType: Sphere.AlmostEquals
+  fullName: Vim.Math3d.Sphere.AlmostEquals
+- uid: Vim.Math3d.Sphere.SetCenter*
+  commentId: Overload:Vim.Math3d.Sphere.SetCenter
+  name: SetCenter
+  nameWithType: Sphere.SetCenter
+  fullName: Vim.Math3d.Sphere.SetCenter
+- uid: Vim.Math3d.Sphere.SetRadius*
+  commentId: Overload:Vim.Math3d.Sphere.SetRadius
+  name: SetRadius
+  nameWithType: Sphere.SetRadius
+  fullName: Vim.Math3d.Sphere.SetRadius

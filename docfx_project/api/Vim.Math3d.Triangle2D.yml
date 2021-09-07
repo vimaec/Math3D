@@ -1,0 +1,1846 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.Triangle2D
+  commentId: T:Vim.Math3d.Triangle2D
+  id: Triangle2D
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.Triangle2D.#ctor(System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2})
+  - Vim.Math3d.Triangle2D.#ctor(Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2)
+  - Vim.Math3d.Triangle2D.A
+  - Vim.Math3d.Triangle2D.AlmostEquals(Vim.Math3d.Triangle2D,System.Single)
+  - Vim.Math3d.Triangle2D.Area
+  - Vim.Math3d.Triangle2D.B
+  - Vim.Math3d.Triangle2D.C
+  - Vim.Math3d.Triangle2D.Contains(Vim.Math3d.Vector2)
+  - Vim.Math3d.Triangle2D.Count
+  - Vim.Math3d.Triangle2D.Create(System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2})
+  - Vim.Math3d.Triangle2D.Create(Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2)
+  - Vim.Math3d.Triangle2D.Deconstruct(Vim.Math3d.Vector2@,Vim.Math3d.Vector2@,Vim.Math3d.Vector2@)
+  - Vim.Math3d.Triangle2D.Equals(System.Object)
+  - Vim.Math3d.Triangle2D.Equals(Vim.Math3d.Triangle2D)
+  - Vim.Math3d.Triangle2D.GetHashCode
+  - Vim.Math3d.Triangle2D.Item(System.Int32)
+  - Vim.Math3d.Triangle2D.MaxValue
+  - Vim.Math3d.Triangle2D.MinValue
+  - Vim.Math3d.Triangle2D.OnLeftSideOfLine(Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2)
+  - Vim.Math3d.Triangle2D.op_Equality(Vim.Math3d.Triangle2D,Vim.Math3d.Triangle2D)
+  - Vim.Math3d.Triangle2D.op_Implicit(System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2})~Vim.Math3d.Triangle2D
+  - Vim.Math3d.Triangle2D.op_Implicit(Vim.Math3d.Triangle2D)~System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2}
+  - Vim.Math3d.Triangle2D.op_Inequality(Vim.Math3d.Triangle2D,Vim.Math3d.Triangle2D)
+  - Vim.Math3d.Triangle2D.SetA(Vim.Math3d.Vector2)
+  - Vim.Math3d.Triangle2D.SetB(Vim.Math3d.Vector2)
+  - Vim.Math3d.Triangle2D.SetC(Vim.Math3d.Vector2)
+  - Vim.Math3d.Triangle2D.ToString
+  - Vim.Math3d.Triangle2D.Zero
+  langs:
+  - csharp
+  - vb
+  name: Triangle2D
+  nameWithType: Triangle2D
+  fullName: Vim.Math3d.Triangle2D
+  type: Struct
+  source:
+    remote:
+      path: src/Triangle2D.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Triangle2D
+    path: ../src/Triangle2D.cs
+    startLine: 9
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataContract]
+
+      public readonly struct Triangle2D : IEquatable<Triangle2D>
+    content.vb: >-
+      <DataContract>
+
+      Public Structure Triangle2D
+          Implements IEquatable(Of Triangle2D)
+  implements:
+  - System.IEquatable{Vim.Math3d.Triangle2D}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Vim.Math3d.Triangle2D.A
+  commentId: F:Vim.Math3d.Triangle2D.A
+  id: A
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: A
+  nameWithType: Triangle2D.A
+  fullName: Vim.Math3d.Triangle2D.A
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: A
+    path: ../src/Structs.cs
+    startLine: 1290
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly Vector2 A
+    return:
+      type: Vim.Math3d.Vector2
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly A As Vector2
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle2D.B
+  commentId: F:Vim.Math3d.Triangle2D.B
+  id: B
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: B
+  nameWithType: Triangle2D.B
+  fullName: Vim.Math3d.Triangle2D.B
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: B
+    path: ../src/Structs.cs
+    startLine: 1292
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly Vector2 B
+    return:
+      type: Vim.Math3d.Vector2
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly B As Vector2
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle2D.C
+  commentId: F:Vim.Math3d.Triangle2D.C
+  id: C
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: C
+  nameWithType: Triangle2D.C
+  fullName: Vim.Math3d.Triangle2D.C
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: C
+    path: ../src/Structs.cs
+    startLine: 1294
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly Vector2 C
+    return:
+      type: Vim.Math3d.Vector2
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly C As Vector2
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle2D.#ctor(System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2})
+  commentId: M:Vim.Math3d.Triangle2D.#ctor(System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2})
+  id: '#ctor(System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2})'
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Triangle2D((Vector2 a, Vector2 b, Vector2 c))
+  nameWithType: Triangle2D.Triangle2D((Vector2 a, Vector2 b, Vector2 c))
+  fullName: Vim.Math3d.Triangle2D.Triangle2D(System.ValueTuple<Vim.Math3d.Vector2, Vim.Math3d.Vector2, Vim.Math3d.Vector2>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1295
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public Triangle2D((Vector2 a, Vector2 b, Vector2 c) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2}
+    content.vb: Public Sub New(tuple As(a As Vector2, b As Vector2, c As Vector2)(Of Vector2 , Vector2, Vector2))
+  overload: Vim.Math3d.Triangle2D.#ctor*
+  nameWithType.vb: Triangle2D.Triangle2D((a As Vector2, b As Vector2, c As Vector2)(Of Vector2, Vector2, Vector2))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Triangle2D.Triangle2D(System.ValueTuple(Of Vim.Math3d.Vector2, Vim.Math3d.Vector2, Vim.Math3d.Vector2))
+  name.vb: Triangle2D((a As Vector2, b As Vector2, c As Vector2)(Of Vector2, Vector2, Vector2))
+- uid: Vim.Math3d.Triangle2D.#ctor(Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2)
+  commentId: M:Vim.Math3d.Triangle2D.#ctor(Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2)
+  id: '#ctor(Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2)'
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Triangle2D(Vector2, Vector2, Vector2)
+  nameWithType: Triangle2D.Triangle2D(Vector2, Vector2, Vector2)
+  fullName: Vim.Math3d.Triangle2D.Triangle2D(Vim.Math3d.Vector2, Vim.Math3d.Vector2, Vim.Math3d.Vector2)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1296
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public Triangle2D(Vector2 a, Vector2 b, Vector2 c)
+    parameters:
+    - id: a
+      type: Vim.Math3d.Vector2
+    - id: b
+      type: Vim.Math3d.Vector2
+    - id: c
+      type: Vim.Math3d.Vector2
+    content.vb: Public Sub New(a As Vector2, b As Vector2, c As Vector2)
+  overload: Vim.Math3d.Triangle2D.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle2D.Create(Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2)
+  commentId: M:Vim.Math3d.Triangle2D.Create(Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2)
+  id: Create(Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2)
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Create(Vector2, Vector2, Vector2)
+  nameWithType: Triangle2D.Create(Vector2, Vector2, Vector2)
+  fullName: Vim.Math3d.Triangle2D.Create(Vim.Math3d.Vector2, Vim.Math3d.Vector2, Vim.Math3d.Vector2)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1297
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Triangle2D Create(Vector2 a, Vector2 b, Vector2 c)
+    parameters:
+    - id: a
+      type: Vim.Math3d.Vector2
+    - id: b
+      type: Vim.Math3d.Vector2
+    - id: c
+      type: Vim.Math3d.Vector2
+    return:
+      type: Vim.Math3d.Triangle2D
+    content.vb: Public Shared Function Create(a As Vector2, b As Vector2, c As Vector2) As Triangle2D
+  overload: Vim.Math3d.Triangle2D.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Triangle2D.Create(System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2})
+  commentId: M:Vim.Math3d.Triangle2D.Create(System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2})
+  id: Create(System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2})
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Create((Vector2 a, Vector2 b, Vector2 c))
+  nameWithType: Triangle2D.Create((Vector2 a, Vector2 b, Vector2 c))
+  fullName: Vim.Math3d.Triangle2D.Create(System.ValueTuple<Vim.Math3d.Vector2, Vim.Math3d.Vector2, Vim.Math3d.Vector2>)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1298
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Triangle2D Create((Vector2 a, Vector2 b, Vector2 c) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2}
+    return:
+      type: Vim.Math3d.Triangle2D
+    content.vb: Public Shared Function Create(tuple As(a As Vector2, b As Vector2, c As Vector2)(Of Vector2 , Vector2, Vector2)) As Triangle2D
+  overload: Vim.Math3d.Triangle2D.Create*
+  nameWithType.vb: Triangle2D.Create((a As Vector2, b As Vector2, c As Vector2)(Of Vector2, Vector2, Vector2))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Triangle2D.Create(System.ValueTuple(Of Vim.Math3d.Vector2, Vim.Math3d.Vector2, Vim.Math3d.Vector2))
+  name.vb: Create((a As Vector2, b As Vector2, c As Vector2)(Of Vector2, Vector2, Vector2))
+- uid: Vim.Math3d.Triangle2D.Equals(System.Object)
+  commentId: M:Vim.Math3d.Triangle2D.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: Triangle2D.Equals(Object)
+  fullName: Vim.Math3d.Triangle2D.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1299
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Vim.Math3d.Triangle2D.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Triangle2D.GetHashCode
+  commentId: M:Vim.Math3d.Triangle2D.GetHashCode
+  id: GetHashCode
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Triangle2D.GetHashCode()
+  fullName: Vim.Math3d.Triangle2D.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetHashCode
+    path: ../src/Structs.cs
+    startLine: 1300
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Vim.Math3d.Triangle2D.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Triangle2D.ToString
+  commentId: M:Vim.Math3d.Triangle2D.ToString
+  id: ToString
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Triangle2D.ToString()
+  fullName: Vim.Math3d.Triangle2D.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToString
+    path: ../src/Structs.cs
+    startLine: 1301
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: Vim.Math3d.Triangle2D.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Triangle2D.Deconstruct(Vim.Math3d.Vector2@,Vim.Math3d.Vector2@,Vim.Math3d.Vector2@)
+  commentId: M:Vim.Math3d.Triangle2D.Deconstruct(Vim.Math3d.Vector2@,Vim.Math3d.Vector2@,Vim.Math3d.Vector2@)
+  id: Deconstruct(Vim.Math3d.Vector2@,Vim.Math3d.Vector2@,Vim.Math3d.Vector2@)
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Vector2, out Vector2, out Vector2)
+  nameWithType: Triangle2D.Deconstruct(out Vector2, out Vector2, out Vector2)
+  fullName: Vim.Math3d.Triangle2D.Deconstruct(out Vim.Math3d.Vector2, out Vim.Math3d.Vector2, out Vim.Math3d.Vector2)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Deconstruct
+    path: ../src/Structs.cs
+    startLine: 1302
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly void Deconstruct(out Vector2 a, out Vector2 b, out Vector2 c)
+    parameters:
+    - id: a
+      type: Vim.Math3d.Vector2
+    - id: b
+      type: Vim.Math3d.Vector2
+    - id: c
+      type: Vim.Math3d.Vector2
+    content.vb: Public Sub Deconstruct(ByRef a As Vector2, ByRef b As Vector2, ByRef c As Vector2)
+  overload: Vim.Math3d.Triangle2D.Deconstruct*
+  nameWithType.vb: Triangle2D.Deconstruct(ByRef Vector2, ByRef Vector2, ByRef Vector2)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Triangle2D.Deconstruct(ByRef Vim.Math3d.Vector2, ByRef Vim.Math3d.Vector2, ByRef Vim.Math3d.Vector2)
+  name.vb: Deconstruct(ByRef Vector2, ByRef Vector2, ByRef Vector2)
+- uid: Vim.Math3d.Triangle2D.Equals(Vim.Math3d.Triangle2D)
+  commentId: M:Vim.Math3d.Triangle2D.Equals(Vim.Math3d.Triangle2D)
+  id: Equals(Vim.Math3d.Triangle2D)
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Equals(Triangle2D)
+  nameWithType: Triangle2D.Equals(Triangle2D)
+  fullName: Vim.Math3d.Triangle2D.Equals(Vim.Math3d.Triangle2D)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1303
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool Equals(Triangle2D x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Triangle2D
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(x As Triangle2D) As Boolean
+  overload: Vim.Math3d.Triangle2D.Equals*
+  implements:
+  - System.IEquatable{Vim.Math3d.Triangle2D}.Equals(Vim.Math3d.Triangle2D)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle2D.op_Equality(Vim.Math3d.Triangle2D,Vim.Math3d.Triangle2D)
+  commentId: M:Vim.Math3d.Triangle2D.op_Equality(Vim.Math3d.Triangle2D,Vim.Math3d.Triangle2D)
+  id: op_Equality(Vim.Math3d.Triangle2D,Vim.Math3d.Triangle2D)
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Equality(Triangle2D, Triangle2D)
+  nameWithType: Triangle2D.Equality(Triangle2D, Triangle2D)
+  fullName: Vim.Math3d.Triangle2D.Equality(Vim.Math3d.Triangle2D, Vim.Math3d.Triangle2D)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Equality
+    path: ../src/Structs.cs
+    startLine: 1304
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator ==(Triangle2D x0, Triangle2D x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Triangle2D
+    - id: x1
+      type: Vim.Math3d.Triangle2D
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(x0 As Triangle2D, x1 As Triangle2D) As Boolean
+  overload: Vim.Math3d.Triangle2D.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Triangle2D.op_Inequality(Vim.Math3d.Triangle2D,Vim.Math3d.Triangle2D)
+  commentId: M:Vim.Math3d.Triangle2D.op_Inequality(Vim.Math3d.Triangle2D,Vim.Math3d.Triangle2D)
+  id: op_Inequality(Vim.Math3d.Triangle2D,Vim.Math3d.Triangle2D)
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Inequality(Triangle2D, Triangle2D)
+  nameWithType: Triangle2D.Inequality(Triangle2D, Triangle2D)
+  fullName: Vim.Math3d.Triangle2D.Inequality(Vim.Math3d.Triangle2D, Vim.Math3d.Triangle2D)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Inequality
+    path: ../src/Structs.cs
+    startLine: 1305
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator !=(Triangle2D x0, Triangle2D x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Triangle2D
+    - id: x1
+      type: Vim.Math3d.Triangle2D
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(x0 As Triangle2D, x1 As Triangle2D) As Boolean
+  overload: Vim.Math3d.Triangle2D.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Triangle2D.op_Implicit(System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2})~Vim.Math3d.Triangle2D
+  commentId: M:Vim.Math3d.Triangle2D.op_Implicit(System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2})~Vim.Math3d.Triangle2D
+  id: op_Implicit(System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2})~Vim.Math3d.Triangle2D
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Implicit((Vector2 a, Vector2 b, Vector2 c) to Triangle2D)
+  nameWithType: Triangle2D.Implicit((Vector2 a, Vector2 b, Vector2 c) to Triangle2D)
+  fullName: Vim.Math3d.Triangle2D.Implicit(System.ValueTuple<Vim.Math3d.Vector2, Vim.Math3d.Vector2, Vim.Math3d.Vector2> to Vim.Math3d.Triangle2D)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1306
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator Triangle2D((Vector2 a, Vector2 b, Vector2 c) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2}
+    return:
+      type: Vim.Math3d.Triangle2D
+    content.vb: Public Shared Widening Operator CType(tuple As(a As Vector2, b As Vector2, c As Vector2)(Of Vector2 , Vector2, Vector2)) As Triangle2D
+  overload: Vim.Math3d.Triangle2D.op_Implicit*
+  nameWithType.vb: Triangle2D.Widening((a As Vector2, b As Vector2, c As Vector2)(Of Vector2, Vector2, Vector2) to Triangle2D)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Triangle2D.Widening(System.ValueTuple(Of Vim.Math3d.Vector2, Vim.Math3d.Vector2, Vim.Math3d.Vector2) to Vim.Math3d.Triangle2D)
+  name.vb: Widening((a As Vector2, b As Vector2, c As Vector2)(Of Vector2, Vector2, Vector2) to Triangle2D)
+- uid: Vim.Math3d.Triangle2D.op_Implicit(Vim.Math3d.Triangle2D)~System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2}
+  commentId: M:Vim.Math3d.Triangle2D.op_Implicit(Vim.Math3d.Triangle2D)~System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2}
+  id: op_Implicit(Vim.Math3d.Triangle2D)~System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2}
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Implicit(Triangle2D to (Vector2 a, Vector2 b, Vector2 c))
+  nameWithType: Triangle2D.Implicit(Triangle2D to (Vector2 a, Vector2 b, Vector2 c))
+  fullName: Vim.Math3d.Triangle2D.Implicit(Vim.Math3d.Triangle2D to System.ValueTuple<Vim.Math3d.Vector2, Vim.Math3d.Vector2, Vim.Math3d.Vector2>)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1307
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator (Vector2 a, Vector2 b, Vector2 c)(Triangle2D self)
+    parameters:
+    - id: self
+      type: Vim.Math3d.Triangle2D
+    return:
+      type: System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2}
+    content.vb: Public Shared Widening Operator CType(self As Triangle2D) As(a As Vector2, b As Vector2, c As Vector2)(Of Vector2 , Vector2, Vector2)
+  overload: Vim.Math3d.Triangle2D.op_Implicit*
+  nameWithType.vb: Triangle2D.Widening(Triangle2D to (a As Vector2, b As Vector2, c As Vector2)(Of Vector2, Vector2, Vector2))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Triangle2D.Widening(Vim.Math3d.Triangle2D to System.ValueTuple(Of Vim.Math3d.Vector2, Vim.Math3d.Vector2, Vim.Math3d.Vector2))
+  name.vb: Widening(Triangle2D to (a As Vector2, b As Vector2, c As Vector2)(Of Vector2, Vector2, Vector2))
+- uid: Vim.Math3d.Triangle2D.AlmostEquals(Vim.Math3d.Triangle2D,System.Single)
+  commentId: M:Vim.Math3d.Triangle2D.AlmostEquals(Vim.Math3d.Triangle2D,System.Single)
+  id: AlmostEquals(Vim.Math3d.Triangle2D,System.Single)
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: AlmostEquals(Triangle2D, Single)
+  nameWithType: Triangle2D.AlmostEquals(Triangle2D, Single)
+  fullName: Vim.Math3d.Triangle2D.AlmostEquals(Vim.Math3d.Triangle2D, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AlmostEquals
+    path: ../src/Structs.cs
+    startLine: 1309
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool AlmostEquals(Triangle2D x, float tolerance = 1E-07F)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Triangle2D
+    - id: tolerance
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Function AlmostEquals(x As Triangle2D, tolerance As Single = 1E-07F) As Boolean
+  overload: Vim.Math3d.Triangle2D.AlmostEquals*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle2D.Zero
+  commentId: F:Vim.Math3d.Triangle2D.Zero
+  id: Zero
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: Triangle2D.Zero
+  fullName: Vim.Math3d.Triangle2D.Zero
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Zero
+    path: ../src/Structs.cs
+    startLine: 1310
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Triangle2D Zero
+    return:
+      type: Vim.Math3d.Triangle2D
+    content.vb: Public Shared Zero As Triangle2D
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Triangle2D.MinValue
+  commentId: F:Vim.Math3d.Triangle2D.MinValue
+  id: MinValue
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: Triangle2D.MinValue
+  fullName: Vim.Math3d.Triangle2D.MinValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MinValue
+    path: ../src/Structs.cs
+    startLine: 1311
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Triangle2D MinValue
+    return:
+      type: Vim.Math3d.Triangle2D
+    content.vb: Public Shared MinValue As Triangle2D
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Triangle2D.MaxValue
+  commentId: F:Vim.Math3d.Triangle2D.MaxValue
+  id: MaxValue
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: Triangle2D.MaxValue
+  fullName: Vim.Math3d.Triangle2D.MaxValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MaxValue
+    path: ../src/Structs.cs
+    startLine: 1312
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Triangle2D MaxValue
+    return:
+      type: Vim.Math3d.Triangle2D
+    content.vb: Public Shared MaxValue As Triangle2D
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Triangle2D.SetA(Vim.Math3d.Vector2)
+  commentId: M:Vim.Math3d.Triangle2D.SetA(Vim.Math3d.Vector2)
+  id: SetA(Vim.Math3d.Vector2)
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: SetA(Vector2)
+  nameWithType: Triangle2D.SetA(Vector2)
+  fullName: Vim.Math3d.Triangle2D.SetA(Vim.Math3d.Vector2)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetA
+    path: ../src/Structs.cs
+    startLine: 1313
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Triangle2D SetA(Vector2 x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Vector2
+    return:
+      type: Vim.Math3d.Triangle2D
+    content.vb: Public Function SetA(x As Vector2) As Triangle2D
+  overload: Vim.Math3d.Triangle2D.SetA*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle2D.SetB(Vim.Math3d.Vector2)
+  commentId: M:Vim.Math3d.Triangle2D.SetB(Vim.Math3d.Vector2)
+  id: SetB(Vim.Math3d.Vector2)
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: SetB(Vector2)
+  nameWithType: Triangle2D.SetB(Vector2)
+  fullName: Vim.Math3d.Triangle2D.SetB(Vim.Math3d.Vector2)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetB
+    path: ../src/Structs.cs
+    startLine: 1314
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Triangle2D SetB(Vector2 x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Vector2
+    return:
+      type: Vim.Math3d.Triangle2D
+    content.vb: Public Function SetB(x As Vector2) As Triangle2D
+  overload: Vim.Math3d.Triangle2D.SetB*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle2D.SetC(Vim.Math3d.Vector2)
+  commentId: M:Vim.Math3d.Triangle2D.SetC(Vim.Math3d.Vector2)
+  id: SetC(Vim.Math3d.Vector2)
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: SetC(Vector2)
+  nameWithType: Triangle2D.SetC(Vector2)
+  fullName: Vim.Math3d.Triangle2D.SetC(Vim.Math3d.Vector2)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetC
+    path: ../src/Structs.cs
+    startLine: 1315
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Triangle2D SetC(Vector2 x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Vector2
+    return:
+      type: Vim.Math3d.Triangle2D
+    content.vb: Public Function SetC(x As Vector2) As Triangle2D
+  overload: Vim.Math3d.Triangle2D.SetC*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle2D.Count
+  commentId: P:Vim.Math3d.Triangle2D.Count
+  id: Count
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: Triangle2D.Count
+  fullName: Vim.Math3d.Triangle2D.Count
+  type: Property
+  source:
+    remote:
+      path: src/Triangle2D.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Count
+    path: ../src/Triangle2D.cs
+    startLine: 11
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: Vim.Math3d.Triangle2D.Count*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle2D.Item(System.Int32)
+  commentId: P:Vim.Math3d.Triangle2D.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Item[Int32]
+  nameWithType: Triangle2D.Item[Int32]
+  fullName: Vim.Math3d.Triangle2D.Item[System.Int32]
+  type: Property
+  source:
+    remote:
+      path: src/Triangle2D.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: this[]
+    path: ../src/Triangle2D.cs
+    startLine: 13
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Vector2 this[int n] { get; }
+    parameters:
+    - id: n
+      type: System.Int32
+    return:
+      type: Vim.Math3d.Vector2
+    content.vb: Public ReadOnly Property Item(n As Integer) As Vector2
+  overload: Vim.Math3d.Triangle2D.Item*
+  nameWithType.vb: Triangle2D.Item(Int32)
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Vim.Math3d.Triangle2D.Item(System.Int32)
+  name.vb: Item(Int32)
+- uid: Vim.Math3d.Triangle2D.Area
+  commentId: P:Vim.Math3d.Triangle2D.Area
+  id: Area
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Area
+  nameWithType: Triangle2D.Area
+  fullName: Vim.Math3d.Triangle2D.Area
+  type: Property
+  source:
+    remote:
+      path: src/Triangle2D.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Area
+    path: ../src/Triangle2D.cs
+    startLine: 16
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly float Area { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Area As Single
+  overload: Vim.Math3d.Triangle2D.Area*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle2D.OnLeftSideOfLine(Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2)
+  commentId: M:Vim.Math3d.Triangle2D.OnLeftSideOfLine(Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2)
+  id: OnLeftSideOfLine(Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2)
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: OnLeftSideOfLine(Vector2, Vector2, Vector2)
+  nameWithType: Triangle2D.OnLeftSideOfLine(Vector2, Vector2, Vector2)
+  fullName: Vim.Math3d.Triangle2D.OnLeftSideOfLine(Vim.Math3d.Vector2, Vim.Math3d.Vector2, Vim.Math3d.Vector2)
+  type: Method
+  source:
+    remote:
+      path: src/Triangle2D.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: OnLeftSideOfLine
+    path: ../src/Triangle2D.cs
+    startLine: 19
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool OnLeftSideOfLine(Vector2 p0, Vector2 p1, Vector2 p2)
+    parameters:
+    - id: p0
+      type: Vim.Math3d.Vector2
+    - id: p1
+      type: Vim.Math3d.Vector2
+    - id: p2
+      type: Vim.Math3d.Vector2
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function OnLeftSideOfLine(p0 As Vector2, p1 As Vector2, p2 As Vector2) As Boolean
+  overload: Vim.Math3d.Triangle2D.OnLeftSideOfLine*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Triangle2D.Contains(Vim.Math3d.Vector2)
+  commentId: M:Vim.Math3d.Triangle2D.Contains(Vim.Math3d.Vector2)
+  id: Contains(Vim.Math3d.Vector2)
+  parent: Vim.Math3d.Triangle2D
+  langs:
+  - csharp
+  - vb
+  name: Contains(Vector2)
+  nameWithType: Triangle2D.Contains(Vector2)
+  fullName: Vim.Math3d.Triangle2D.Contains(Vim.Math3d.Vector2)
+  type: Method
+  source:
+    remote:
+      path: src/Triangle2D.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Contains
+    path: ../src/Triangle2D.cs
+    startLine: 23
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool Contains(Vector2 pp)
+    parameters:
+    - id: pp
+      type: Vim.Math3d.Vector2
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(pp As Vector2) As Boolean
+  overload: Vim.Math3d.Triangle2D.Contains*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.IEquatable{Vim.Math3d.Triangle2D}
+  commentId: T:System.IEquatable{Vim.Math3d.Triangle2D}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<Triangle2D>
+  nameWithType: IEquatable<Triangle2D>
+  fullName: System.IEquatable<Vim.Math3d.Triangle2D>
+  nameWithType.vb: IEquatable(Of Triangle2D)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.Triangle2D)
+  name.vb: IEquatable(Of Triangle2D)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Triangle2D
+    name: Triangle2D
+    nameWithType: Triangle2D
+    fullName: Vim.Math3d.Triangle2D
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Triangle2D
+    name: Triangle2D
+    nameWithType: Triangle2D
+    fullName: Vim.Math3d.Triangle2D
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Vim.Math3d.Vector2
+  commentId: T:Vim.Math3d.Vector2
+  parent: Vim.Math3d
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Vim.Math3d.Vector2
+- uid: Vim.Math3d.Triangle2D.#ctor*
+  commentId: Overload:Vim.Math3d.Triangle2D.#ctor
+  name: Triangle2D
+  nameWithType: Triangle2D.Triangle2D
+  fullName: Vim.Math3d.Triangle2D.Triangle2D
+- uid: System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2}
+  commentId: T:System.ValueTuple{Vim.Math3d.Vector2,Vim.Math3d.Vector2,Vim.Math3d.Vector2}
+  parent: System
+  definition: System.ValueTuple`3
+  name: (T1, T2, T3)<Vector2, Vector2, Vector2>
+  nameWithType: (T1, T2, T3)<Vector2, Vector2, Vector2>
+  fullName: System.ValueTuple<Vim.Math3d.Vector2, Vim.Math3d.Vector2, Vim.Math3d.Vector2>
+  nameWithType.vb: (T1, T2, T3)(Of Vector2, Vector2, Vector2)
+  fullName.vb: System.ValueTuple(Of Vim.Math3d.Vector2, Vim.Math3d.Vector2, Vim.Math3d.Vector2)
+  name.vb: (T1, T2, T3)(Of Vector2, Vector2, Vector2)
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vim.Math3d.Vector2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vim.Math3d.Vector2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vim.Math3d.Vector2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vim.Math3d.Vector2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vim.Math3d.Vector2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vim.Math3d.Vector2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`3
+  commentId: T:System.ValueTuple`3
+  isExternal: true
+  name: (T1, T2, T3)<T1, T2, T3>
+  nameWithType: (T1, T2, T3)<T1, T2, T3>
+  fullName: System.ValueTuple<T1, T2, T3>
+  nameWithType.vb: (T1, T2, T3)(Of T1, T2, T3)
+  fullName.vb: System.ValueTuple(Of T1, T2, T3)
+  name.vb: (T1, T2, T3)(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Triangle2D.Create*
+  commentId: Overload:Vim.Math3d.Triangle2D.Create
+  name: Create
+  nameWithType: Triangle2D.Create
+  fullName: Vim.Math3d.Triangle2D.Create
+- uid: Vim.Math3d.Triangle2D
+  commentId: T:Vim.Math3d.Triangle2D
+  parent: Vim.Math3d
+  name: Triangle2D
+  nameWithType: Triangle2D
+  fullName: Vim.Math3d.Triangle2D
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Triangle2D.Equals*
+  commentId: Overload:Vim.Math3d.Triangle2D.Equals
+  name: Equals
+  nameWithType: Triangle2D.Equals
+  fullName: Vim.Math3d.Triangle2D.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Triangle2D.GetHashCode*
+  commentId: Overload:Vim.Math3d.Triangle2D.GetHashCode
+  name: GetHashCode
+  nameWithType: Triangle2D.GetHashCode
+  fullName: Vim.Math3d.Triangle2D.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Triangle2D.ToString*
+  commentId: Overload:Vim.Math3d.Triangle2D.ToString
+  name: ToString
+  nameWithType: Triangle2D.ToString
+  fullName: Vim.Math3d.Triangle2D.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vim.Math3d.Triangle2D.Deconstruct*
+  commentId: Overload:Vim.Math3d.Triangle2D.Deconstruct
+  name: Deconstruct
+  nameWithType: Triangle2D.Deconstruct
+  fullName: Vim.Math3d.Triangle2D.Deconstruct
+- uid: System.IEquatable{Vim.Math3d.Triangle2D}.Equals(Vim.Math3d.Triangle2D)
+  commentId: M:System.IEquatable{Vim.Math3d.Triangle2D}.Equals(Vim.Math3d.Triangle2D)
+  parent: System.IEquatable{Vim.Math3d.Triangle2D}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(Triangle2D)
+  nameWithType: IEquatable<Triangle2D>.Equals(Triangle2D)
+  fullName: System.IEquatable<Vim.Math3d.Triangle2D>.Equals(Vim.Math3d.Triangle2D)
+  nameWithType.vb: IEquatable(Of Triangle2D).Equals(Triangle2D)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.Triangle2D).Equals(Vim.Math3d.Triangle2D)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<Triangle2D>.Equals
+    fullName: System.IEquatable<Vim.Math3d.Triangle2D>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Triangle2D
+    name: Triangle2D
+    nameWithType: Triangle2D
+    fullName: Vim.Math3d.Triangle2D
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of Triangle2D).Equals
+    fullName: System.IEquatable(Of Vim.Math3d.Triangle2D).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Triangle2D
+    name: Triangle2D
+    nameWithType: Triangle2D
+    fullName: Vim.Math3d.Triangle2D
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Triangle2D.op_Equality*
+  commentId: Overload:Vim.Math3d.Triangle2D.op_Equality
+  name: Equality
+  nameWithType: Triangle2D.Equality
+  fullName: Vim.Math3d.Triangle2D.Equality
+- uid: Vim.Math3d.Triangle2D.op_Inequality*
+  commentId: Overload:Vim.Math3d.Triangle2D.op_Inequality
+  name: Inequality
+  nameWithType: Triangle2D.Inequality
+  fullName: Vim.Math3d.Triangle2D.Inequality
+- uid: Vim.Math3d.Triangle2D.op_Implicit*
+  commentId: Overload:Vim.Math3d.Triangle2D.op_Implicit
+  name: Implicit
+  nameWithType: Triangle2D.Implicit
+  fullName: Vim.Math3d.Triangle2D.Implicit
+  nameWithType.vb: Triangle2D.Widening
+  fullName.vb: Vim.Math3d.Triangle2D.Widening
+  name.vb: Widening
+- uid: Vim.Math3d.Triangle2D.AlmostEquals*
+  commentId: Overload:Vim.Math3d.Triangle2D.AlmostEquals
+  name: AlmostEquals
+  nameWithType: Triangle2D.AlmostEquals
+  fullName: Vim.Math3d.Triangle2D.AlmostEquals
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Vim.Math3d.Triangle2D.SetA*
+  commentId: Overload:Vim.Math3d.Triangle2D.SetA
+  name: SetA
+  nameWithType: Triangle2D.SetA
+  fullName: Vim.Math3d.Triangle2D.SetA
+- uid: Vim.Math3d.Triangle2D.SetB*
+  commentId: Overload:Vim.Math3d.Triangle2D.SetB
+  name: SetB
+  nameWithType: Triangle2D.SetB
+  fullName: Vim.Math3d.Triangle2D.SetB
+- uid: Vim.Math3d.Triangle2D.SetC*
+  commentId: Overload:Vim.Math3d.Triangle2D.SetC
+  name: SetC
+  nameWithType: Triangle2D.SetC
+  fullName: Vim.Math3d.Triangle2D.SetC
+- uid: Vim.Math3d.Triangle2D.Count*
+  commentId: Overload:Vim.Math3d.Triangle2D.Count
+  name: Count
+  nameWithType: Triangle2D.Count
+  fullName: Vim.Math3d.Triangle2D.Count
+- uid: Vim.Math3d.Triangle2D.Item*
+  commentId: Overload:Vim.Math3d.Triangle2D.Item
+  name: Item
+  nameWithType: Triangle2D.Item
+  fullName: Vim.Math3d.Triangle2D.Item
+- uid: Vim.Math3d.Triangle2D.Area*
+  commentId: Overload:Vim.Math3d.Triangle2D.Area
+  name: Area
+  nameWithType: Triangle2D.Area
+  fullName: Vim.Math3d.Triangle2D.Area
+- uid: Vim.Math3d.Triangle2D.OnLeftSideOfLine*
+  commentId: Overload:Vim.Math3d.Triangle2D.OnLeftSideOfLine
+  name: OnLeftSideOfLine
+  nameWithType: Triangle2D.OnLeftSideOfLine
+  fullName: Vim.Math3d.Triangle2D.OnLeftSideOfLine
+- uid: Vim.Math3d.Triangle2D.Contains*
+  commentId: Overload:Vim.Math3d.Triangle2D.Contains
+  name: Contains
+  nameWithType: Triangle2D.Contains
+  fullName: Vim.Math3d.Triangle2D.Contains

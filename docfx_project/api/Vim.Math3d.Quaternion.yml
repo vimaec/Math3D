@@ -1,0 +1,3144 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.Quaternion
+  commentId: T:Vim.Math3d.Quaternion
+  id: Quaternion
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.Quaternion.#ctor(System.Single,System.Single,System.Single,System.Single)
+  - Vim.Math3d.Quaternion.#ctor(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})
+  - Vim.Math3d.Quaternion.#ctor(Vim.Math3d.Vector3,System.Single)
+  - Vim.Math3d.Quaternion.AlmostEquals(Vim.Math3d.Quaternion,System.Single)
+  - Vim.Math3d.Quaternion.Concatenate(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  - Vim.Math3d.Quaternion.Conjugate
+  - Vim.Math3d.Quaternion.Create(System.Single,System.Single,System.Single,System.Single)
+  - Vim.Math3d.Quaternion.Create(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})
+  - Vim.Math3d.Quaternion.CreateFromAxisAngle(Vim.Math3d.Vector3,System.Single)
+  - Vim.Math3d.Quaternion.CreateFromEulerAngles(Vim.Math3d.Vector3)
+  - Vim.Math3d.Quaternion.CreateFromRotationMatrix(Vim.Math3d.Matrix4x4)
+  - Vim.Math3d.Quaternion.CreateFromYawPitchRoll(System.Single,System.Single,System.Single)
+  - Vim.Math3d.Quaternion.CreateRotationFromAToB(Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  - Vim.Math3d.Quaternion.CreateXRotation(System.Single)
+  - Vim.Math3d.Quaternion.CreateYRotation(System.Single)
+  - Vim.Math3d.Quaternion.CreateZRotation(System.Single)
+  - Vim.Math3d.Quaternion.Deconstruct(System.Single@,System.Single@,System.Single@,System.Single@)
+  - Vim.Math3d.Quaternion.Dot(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  - Vim.Math3d.Quaternion.Equals(System.Object)
+  - Vim.Math3d.Quaternion.Equals(Vim.Math3d.Quaternion)
+  - Vim.Math3d.Quaternion.GetHashCode
+  - Vim.Math3d.Quaternion.Identity
+  - Vim.Math3d.Quaternion.Inverse
+  - Vim.Math3d.Quaternion.IsIdentity
+  - Vim.Math3d.Quaternion.Length
+  - Vim.Math3d.Quaternion.LengthSquared
+  - Vim.Math3d.Quaternion.Lerp(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion,System.Single)
+  - Vim.Math3d.Quaternion.LookAt(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  - Vim.Math3d.Quaternion.MaxValue
+  - Vim.Math3d.Quaternion.MinValue
+  - Vim.Math3d.Quaternion.Normalize
+  - Vim.Math3d.Quaternion.op_Addition(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  - Vim.Math3d.Quaternion.op_Division(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  - Vim.Math3d.Quaternion.op_Equality(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  - Vim.Math3d.Quaternion.op_Implicit(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})~Vim.Math3d.Quaternion
+  - Vim.Math3d.Quaternion.op_Implicit(Vim.Math3d.Quaternion)~System.ValueTuple{System.Single,System.Single,System.Single,System.Single}
+  - Vim.Math3d.Quaternion.op_Inequality(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  - Vim.Math3d.Quaternion.op_Multiply(Vim.Math3d.Quaternion,System.Single)
+  - Vim.Math3d.Quaternion.op_Multiply(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  - Vim.Math3d.Quaternion.op_Subtraction(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  - Vim.Math3d.Quaternion.op_UnaryNegation(Vim.Math3d.Quaternion)
+  - Vim.Math3d.Quaternion.SetW(System.Single)
+  - Vim.Math3d.Quaternion.SetX(System.Single)
+  - Vim.Math3d.Quaternion.SetY(System.Single)
+  - Vim.Math3d.Quaternion.SetZ(System.Single)
+  - Vim.Math3d.Quaternion.Slerp(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion,System.Single)
+  - Vim.Math3d.Quaternion.ToEulerAngles
+  - Vim.Math3d.Quaternion.ToString
+  - Vim.Math3d.Quaternion.Vector4
+  - Vim.Math3d.Quaternion.W
+  - Vim.Math3d.Quaternion.X
+  - Vim.Math3d.Quaternion.Y
+  - Vim.Math3d.Quaternion.Z
+  - Vim.Math3d.Quaternion.Zero
+  langs:
+  - csharp
+  - vb
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: Vim.Math3d.Quaternion
+  type: Struct
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Quaternion
+    path: ../src/Structs.cs
+    startLine: 577
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nA structure encapsulating a four-dimensional vector (x,y,z,w), \nwhich is used to efficiently rotate an object about the (x,y,z) vector by the angle theta, where w = cos(theta/2).\n"
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public readonly struct Quaternion : IEquatable<Quaternion>
+    content.vb: >-
+      <DataContract>
+
+      Public Structure Quaternion
+          Implements IEquatable(Of Quaternion)
+  implements:
+  - System.IEquatable{Vim.Math3d.Quaternion}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Vim.Math3d.Quaternion.Vim.Math3d.MathOps.ToMatrix
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Vim.Math3d.Quaternion.Identity
+  commentId: P:Vim.Math3d.Quaternion.Identity
+  id: Identity
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Identity
+  nameWithType: Quaternion.Identity
+  fullName: Vim.Math3d.Quaternion.Identity
+  type: Property
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Identity
+    path: ../src/Quaternion.cs
+    startLine: 23
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nReturns a Quaternion representing no rotation. \n"
+  example: []
+  syntax:
+    content: public static readonly Quaternion Identity { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared ReadOnly Property Identity As Quaternion
+  overload: Vim.Math3d.Quaternion.Identity*
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.Quaternion.IsIdentity
+  commentId: P:Vim.Math3d.Quaternion.IsIdentity
+  id: IsIdentity
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: IsIdentity
+  nameWithType: Quaternion.IsIdentity
+  fullName: Vim.Math3d.Quaternion.IsIdentity
+  type: Property
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: IsIdentity
+    path: ../src/Quaternion.cs
+    startLine: 29
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nReturns whether the Quaternion is the identity Quaternion.\n"
+  example: []
+  syntax:
+    content: public readonly bool IsIdentity { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIdentity As Boolean
+  overload: Vim.Math3d.Quaternion.IsIdentity*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Quaternion.#ctor(Vim.Math3d.Vector3,System.Single)
+  commentId: M:Vim.Math3d.Quaternion.#ctor(Vim.Math3d.Vector3,System.Single)
+  id: '#ctor(Vim.Math3d.Vector3,System.Single)'
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Quaternion(Vector3, Single)
+  nameWithType: Quaternion.Quaternion(Vector3, Single)
+  fullName: Vim.Math3d.Quaternion.Quaternion(Vim.Math3d.Vector3, System.Single)
+  type: Constructor
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Quaternion.cs
+    startLine: 35
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nConstructs a Quaternion from the given vector and rotation parts.\n"
+  example: []
+  syntax:
+    content: public Quaternion(Vector3 vectorPart, float scalarPart)
+    parameters:
+    - id: vectorPart
+      type: Vim.Math3d.Vector3
+    - id: scalarPart
+      type: System.Single
+    content.vb: Public Sub New(vectorPart As Vector3, scalarPart As Single)
+  overload: Vim.Math3d.Quaternion.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Quaternion.Length
+  commentId: M:Vim.Math3d.Quaternion.Length
+  id: Length
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Length()
+  nameWithType: Quaternion.Length()
+  fullName: Vim.Math3d.Quaternion.Length()
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Length
+    path: ../src/Quaternion.cs
+    startLine: 43
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCalculates the length of the Quaternion.\n"
+  example: []
+  syntax:
+    content: public readonly float Length()
+    return:
+      type: System.Single
+    content.vb: Public Function Length As Single
+  overload: Vim.Math3d.Quaternion.Length*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Quaternion.LengthSquared
+  commentId: M:Vim.Math3d.Quaternion.LengthSquared
+  id: LengthSquared
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: LengthSquared()
+  nameWithType: Quaternion.LengthSquared()
+  fullName: Vim.Math3d.Quaternion.LengthSquared()
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LengthSquared
+    path: ../src/Quaternion.cs
+    startLine: 50
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCalculates the length squared of the Quaternion. This operation is cheaper than Length().\n"
+  example: []
+  syntax:
+    content: public readonly float LengthSquared()
+    return:
+      type: System.Single
+    content.vb: Public Function LengthSquared As Single
+  overload: Vim.Math3d.Quaternion.LengthSquared*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Quaternion.Normalize
+  commentId: M:Vim.Math3d.Quaternion.Normalize
+  id: Normalize
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Normalize()
+  nameWithType: Quaternion.Normalize()
+  fullName: Vim.Math3d.Quaternion.Normalize()
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Normalize
+    path: ../src/Quaternion.cs
+    startLine: 57
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nDivides each component of the Quaternion by the length of the Quaternion.\n"
+  example: []
+  syntax:
+    content: public readonly Quaternion Normalize()
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Function Normalize As Quaternion
+  overload: Vim.Math3d.Quaternion.Normalize*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Quaternion.Conjugate
+  commentId: M:Vim.Math3d.Quaternion.Conjugate
+  id: Conjugate
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Conjugate()
+  nameWithType: Quaternion.Conjugate()
+  fullName: Vim.Math3d.Quaternion.Conjugate()
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Conjugate
+    path: ../src/Quaternion.cs
+    startLine: 64
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nReturns the conjugate of the quaternion\n"
+  example: []
+  syntax:
+    content: public readonly Quaternion Conjugate()
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Function Conjugate As Quaternion
+  overload: Vim.Math3d.Quaternion.Conjugate*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Quaternion.Inverse
+  commentId: M:Vim.Math3d.Quaternion.Inverse
+  id: Inverse
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Inverse()
+  nameWithType: Quaternion.Inverse()
+  fullName: Vim.Math3d.Quaternion.Inverse()
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Inverse
+    path: ../src/Quaternion.cs
+    startLine: 71
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nReturns the inverse of a Quaternion.\n"
+  example: []
+  syntax:
+    content: public readonly Quaternion Inverse()
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Function Inverse As Quaternion
+  overload: Vim.Math3d.Quaternion.Inverse*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Quaternion.CreateFromAxisAngle(Vim.Math3d.Vector3,System.Single)
+  commentId: M:Vim.Math3d.Quaternion.CreateFromAxisAngle(Vim.Math3d.Vector3,System.Single)
+  id: CreateFromAxisAngle(Vim.Math3d.Vector3,System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: CreateFromAxisAngle(Vector3, Single)
+  nameWithType: Quaternion.CreateFromAxisAngle(Vector3, Single)
+  fullName: Vim.Math3d.Quaternion.CreateFromAxisAngle(Vim.Math3d.Vector3, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CreateFromAxisAngle
+    path: ../src/Quaternion.cs
+    startLine: 78
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCreates a Quaternion from a normalized vector axis and an angle to rotate about the vector.\n"
+  example: []
+  syntax:
+    content: public static Quaternion CreateFromAxisAngle(Vector3 axis, float angle)
+    parameters:
+    - id: axis
+      type: Vim.Math3d.Vector3
+    - id: angle
+      type: System.Single
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function CreateFromAxisAngle(axis As Vector3, angle As Single) As Quaternion
+  overload: Vim.Math3d.Quaternion.CreateFromAxisAngle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.CreateFromEulerAngles(Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Quaternion.CreateFromEulerAngles(Vim.Math3d.Vector3)
+  id: CreateFromEulerAngles(Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: CreateFromEulerAngles(Vector3)
+  nameWithType: Quaternion.CreateFromEulerAngles(Vector3)
+  fullName: Vim.Math3d.Quaternion.CreateFromEulerAngles(Vim.Math3d.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CreateFromEulerAngles
+    path: ../src/Quaternion.cs
+    startLine: 85
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCreates a new Quaternion from the given rotation around X, Y, and Z\n"
+  example: []
+  syntax:
+    content: public static Quaternion CreateFromEulerAngles(Vector3 v)
+    parameters:
+    - id: v
+      type: Vim.Math3d.Vector3
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function CreateFromEulerAngles(v As Vector3) As Quaternion
+  overload: Vim.Math3d.Quaternion.CreateFromEulerAngles*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.CreateXRotation(System.Single)
+  commentId: M:Vim.Math3d.Quaternion.CreateXRotation(System.Single)
+  id: CreateXRotation(System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: CreateXRotation(Single)
+  nameWithType: Quaternion.CreateXRotation(Single)
+  fullName: Vim.Math3d.Quaternion.CreateXRotation(System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CreateXRotation
+    path: ../src/Quaternion.cs
+    startLine: 105
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCreates a new Quaternion from the given rotation around the X axis\n"
+  example: []
+  syntax:
+    content: public static Quaternion CreateXRotation(float theta)
+    parameters:
+    - id: theta
+      type: System.Single
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function CreateXRotation(theta As Single) As Quaternion
+  overload: Vim.Math3d.Quaternion.CreateXRotation*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.CreateYRotation(System.Single)
+  commentId: M:Vim.Math3d.Quaternion.CreateYRotation(System.Single)
+  id: CreateYRotation(System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: CreateYRotation(Single)
+  nameWithType: Quaternion.CreateYRotation(Single)
+  fullName: Vim.Math3d.Quaternion.CreateYRotation(System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CreateYRotation
+    path: ../src/Quaternion.cs
+    startLine: 112
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCreates a new Quaternion from the given rotation around the Y axis\n"
+  example: []
+  syntax:
+    content: public static Quaternion CreateYRotation(float theta)
+    parameters:
+    - id: theta
+      type: System.Single
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function CreateYRotation(theta As Single) As Quaternion
+  overload: Vim.Math3d.Quaternion.CreateYRotation*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.CreateZRotation(System.Single)
+  commentId: M:Vim.Math3d.Quaternion.CreateZRotation(System.Single)
+  id: CreateZRotation(System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: CreateZRotation(Single)
+  nameWithType: Quaternion.CreateZRotation(Single)
+  fullName: Vim.Math3d.Quaternion.CreateZRotation(System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CreateZRotation
+    path: ../src/Quaternion.cs
+    startLine: 119
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCreates a new Quaternion from the given rotation around the Z axis\n"
+  example: []
+  syntax:
+    content: public static Quaternion CreateZRotation(float theta)
+    parameters:
+    - id: theta
+      type: System.Single
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function CreateZRotation(theta As Single) As Quaternion
+  overload: Vim.Math3d.Quaternion.CreateZRotation*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.LookAt(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Quaternion.LookAt(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  id: LookAt(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: LookAt(Vector3, Vector3, Vector3, Vector3)
+  nameWithType: Quaternion.LookAt(Vector3, Vector3, Vector3, Vector3)
+  fullName: Vim.Math3d.Quaternion.LookAt(Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LookAt
+    path: ../src/Quaternion.cs
+    startLine: 126
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCreates a new look-at Quaternion\n"
+  example: []
+  syntax:
+    content: public static Quaternion LookAt(Vector3 position, Vector3 targetPosition, Vector3 up, Vector3 forward)
+    parameters:
+    - id: position
+      type: Vim.Math3d.Vector3
+    - id: targetPosition
+      type: Vim.Math3d.Vector3
+    - id: up
+      type: Vim.Math3d.Vector3
+    - id: forward
+      type: Vim.Math3d.Vector3
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function LookAt(position As Vector3, targetPosition As Vector3, up As Vector3, forward As Vector3) As Quaternion
+  overload: Vim.Math3d.Quaternion.LookAt*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.CreateRotationFromAToB(Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Quaternion.CreateRotationFromAToB(Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  id: CreateRotationFromAToB(Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: CreateRotationFromAToB(Vector3, Vector3)
+  nameWithType: Quaternion.CreateRotationFromAToB(Vector3, Vector3)
+  fullName: Vim.Math3d.Quaternion.CreateRotationFromAToB(Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CreateRotationFromAToB
+    path: ../src/Quaternion.cs
+    startLine: 143
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCreates a new Quaternion rotating vector &apos;fromA&apos; to &apos;toB&apos;\n"
+  example: []
+  syntax:
+    content: public static Quaternion CreateRotationFromAToB(Vector3 fromA, Vector3 toB)
+    parameters:
+    - id: fromA
+      type: Vim.Math3d.Vector3
+    - id: toB
+      type: Vim.Math3d.Vector3
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function CreateRotationFromAToB(fromA As Vector3, toB As Vector3) As Quaternion
+  overload: Vim.Math3d.Quaternion.CreateRotationFromAToB*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.CreateFromYawPitchRoll(System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Quaternion.CreateFromYawPitchRoll(System.Single,System.Single,System.Single)
+  id: CreateFromYawPitchRoll(System.Single,System.Single,System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: CreateFromYawPitchRoll(Single, Single, Single)
+  nameWithType: Quaternion.CreateFromYawPitchRoll(Single, Single, Single)
+  fullName: Vim.Math3d.Quaternion.CreateFromYawPitchRoll(System.Single, System.Single, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CreateFromYawPitchRoll
+    path: ../src/Quaternion.cs
+    startLine: 165
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCreates a new Quaternion from the given yaw, pitch, and roll, in radians.\nRoll first, about axis the object is facing, then\npitch upward, then yaw to face into the new heading\n1. Z(roll), 2. X (pitch), 3. Y (yaw)  \n"
+  example: []
+  syntax:
+    content: public static Quaternion CreateFromYawPitchRoll(float yaw, float pitch, float roll)
+    parameters:
+    - id: yaw
+      type: System.Single
+      description: The yaw angle, in radians, around the Y-axis.
+    - id: pitch
+      type: System.Single
+      description: The pitch angle, in radians, around the X-axis.
+    - id: roll
+      type: System.Single
+      description: The roll angle, in radians, around the Z-axis.
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function CreateFromYawPitchRoll(yaw As Single, pitch As Single, roll As Single) As Quaternion
+  overload: Vim.Math3d.Quaternion.CreateFromYawPitchRoll*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.CreateFromRotationMatrix(Vim.Math3d.Matrix4x4)
+  commentId: M:Vim.Math3d.Quaternion.CreateFromRotationMatrix(Vim.Math3d.Matrix4x4)
+  id: CreateFromRotationMatrix(Vim.Math3d.Matrix4x4)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: CreateFromRotationMatrix(Matrix4x4)
+  nameWithType: Quaternion.CreateFromRotationMatrix(Matrix4x4)
+  fullName: Vim.Math3d.Quaternion.CreateFromRotationMatrix(Vim.Math3d.Matrix4x4)
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CreateFromRotationMatrix
+    path: ../src/Quaternion.cs
+    startLine: 191
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCreates a Quaternion from the given rotation matrix.\n"
+  example: []
+  syntax:
+    content: public static Quaternion CreateFromRotationMatrix(Matrix4x4 matrix)
+    parameters:
+    - id: matrix
+      type: Vim.Math3d.Matrix4x4
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function CreateFromRotationMatrix(matrix As Matrix4x4) As Quaternion
+  overload: Vim.Math3d.Quaternion.CreateFromRotationMatrix*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.Dot(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Quaternion.Dot(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  id: Dot(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Dot(Quaternion, Quaternion)
+  nameWithType: Quaternion.Dot(Quaternion, Quaternion)
+  fullName: Vim.Math3d.Quaternion.Dot(Vim.Math3d.Quaternion, Vim.Math3d.Quaternion)
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Dot
+    path: ../src/Quaternion.cs
+    startLine: 240
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nCalculates the dot product of two Quaternions.\n"
+  example: []
+  syntax:
+    content: public static float Dot(Quaternion quaternion1, Quaternion quaternion2)
+    parameters:
+    - id: quaternion1
+      type: Vim.Math3d.Quaternion
+    - id: quaternion2
+      type: Vim.Math3d.Quaternion
+    return:
+      type: System.Single
+    content.vb: Public Shared Function Dot(quaternion1 As Quaternion, quaternion2 As Quaternion) As Single
+  overload: Vim.Math3d.Quaternion.Dot*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.Slerp(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion,System.Single)
+  commentId: M:Vim.Math3d.Quaternion.Slerp(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion,System.Single)
+  id: Slerp(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion,System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Slerp(Quaternion, Quaternion, Single)
+  nameWithType: Quaternion.Slerp(Quaternion, Quaternion, Single)
+  fullName: Vim.Math3d.Quaternion.Slerp(Vim.Math3d.Quaternion, Vim.Math3d.Quaternion, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Slerp
+    path: ../src/Quaternion.cs
+    startLine: 250
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nInterpolates between two quaternions, using spherical linear interpolation.\n"
+  example: []
+  syntax:
+    content: public static Quaternion Slerp(Quaternion q1, Quaternion q2, float t)
+    parameters:
+    - id: q1
+      type: Vim.Math3d.Quaternion
+    - id: q2
+      type: Vim.Math3d.Quaternion
+    - id: t
+      type: System.Single
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function Slerp(q1 As Quaternion, q2 As Quaternion, t As Single) As Quaternion
+  overload: Vim.Math3d.Quaternion.Slerp*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.Lerp(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion,System.Single)
+  commentId: M:Vim.Math3d.Quaternion.Lerp(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion,System.Single)
+  id: Lerp(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion,System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Lerp(Quaternion, Quaternion, Single)
+  nameWithType: Quaternion.Lerp(Quaternion, Quaternion, Single)
+  fullName: Vim.Math3d.Quaternion.Lerp(Vim.Math3d.Quaternion, Vim.Math3d.Quaternion, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Lerp
+    path: ../src/Quaternion.cs
+    startLine: 292
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nLinearly interpolates between two quaternions.\n"
+  example: []
+  syntax:
+    content: public static Quaternion Lerp(Quaternion q1, Quaternion q2, float t)
+    parameters:
+    - id: q1
+      type: Vim.Math3d.Quaternion
+    - id: q2
+      type: Vim.Math3d.Quaternion
+    - id: t
+      type: System.Single
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function Lerp(q1 As Quaternion, q2 As Quaternion, t As Single) As Quaternion
+  overload: Vim.Math3d.Quaternion.Lerp*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.Concatenate(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Quaternion.Concatenate(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  id: Concatenate(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Concatenate(Quaternion, Quaternion)
+  nameWithType: Quaternion.Concatenate(Quaternion, Quaternion)
+  fullName: Vim.Math3d.Quaternion.Concatenate(Vim.Math3d.Quaternion, Vim.Math3d.Quaternion)
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Concatenate
+    path: ../src/Quaternion.cs
+    startLine: 301
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nConcatenates two Quaternions; the result represents the value1 rotation followed by the value2 rotation.\n"
+  example: []
+  syntax:
+    content: public static Quaternion Concatenate(Quaternion value1, Quaternion value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.Quaternion
+    - id: value2
+      type: Vim.Math3d.Quaternion
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function Concatenate(value1 As Quaternion, value2 As Quaternion) As Quaternion
+  overload: Vim.Math3d.Quaternion.Concatenate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.op_UnaryNegation(Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Quaternion.op_UnaryNegation(Vim.Math3d.Quaternion)
+  id: op_UnaryNegation(Vim.Math3d.Quaternion)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: UnaryNegation(Quaternion)
+  nameWithType: Quaternion.UnaryNegation(Quaternion)
+  fullName: Vim.Math3d.Quaternion.UnaryNegation(Vim.Math3d.Quaternion)
+  type: Operator
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_UnaryNegation
+    path: ../src/Quaternion.cs
+    startLine: 333
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nFlips the sign of each component of the quaternion.\n"
+  example: []
+  syntax:
+    content: public static Quaternion operator -(Quaternion value)
+    parameters:
+    - id: value
+      type: Vim.Math3d.Quaternion
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Operator -(value As Quaternion) As Quaternion
+  overload: Vim.Math3d.Quaternion.op_UnaryNegation*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.op_Addition(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Quaternion.op_Addition(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  id: op_Addition(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Addition(Quaternion, Quaternion)
+  nameWithType: Quaternion.Addition(Quaternion, Quaternion)
+  fullName: Vim.Math3d.Quaternion.Addition(Vim.Math3d.Quaternion, Vim.Math3d.Quaternion)
+  type: Operator
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Addition
+    path: ../src/Quaternion.cs
+    startLine: 339
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nAdds two Quaternions element-by-element.\n"
+  example: []
+  syntax:
+    content: public static Quaternion operator +(Quaternion value1, Quaternion value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.Quaternion
+    - id: value2
+      type: Vim.Math3d.Quaternion
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Operator +(value1 As Quaternion, value2 As Quaternion) As Quaternion
+  overload: Vim.Math3d.Quaternion.op_Addition*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.op_Subtraction(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Quaternion.op_Subtraction(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  id: op_Subtraction(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Subtraction(Quaternion, Quaternion)
+  nameWithType: Quaternion.Subtraction(Quaternion, Quaternion)
+  fullName: Vim.Math3d.Quaternion.Subtraction(Vim.Math3d.Quaternion, Vim.Math3d.Quaternion)
+  type: Operator
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Subtraction
+    path: ../src/Quaternion.cs
+    startLine: 346
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nSubtracts one Quaternion from another.\n"
+  example: []
+  syntax:
+    content: public static Quaternion operator -(Quaternion value1, Quaternion value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.Quaternion
+    - id: value2
+      type: Vim.Math3d.Quaternion
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Operator -(value1 As Quaternion, value2 As Quaternion) As Quaternion
+  overload: Vim.Math3d.Quaternion.op_Subtraction*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.op_Multiply(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Quaternion.op_Multiply(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  id: op_Multiply(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Multiply(Quaternion, Quaternion)
+  nameWithType: Quaternion.Multiply(Quaternion, Quaternion)
+  fullName: Vim.Math3d.Quaternion.Multiply(Vim.Math3d.Quaternion, Vim.Math3d.Quaternion)
+  type: Operator
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Multiply
+    path: ../src/Quaternion.cs
+    startLine: 353
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nMultiplies two Quaternions together.\n"
+  example: []
+  syntax:
+    content: public static Quaternion operator *(Quaternion value1, Quaternion value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.Quaternion
+    - id: value2
+      type: Vim.Math3d.Quaternion
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Operator *(value1 As Quaternion, value2 As Quaternion) As Quaternion
+  overload: Vim.Math3d.Quaternion.op_Multiply*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.op_Multiply(Vim.Math3d.Quaternion,System.Single)
+  commentId: M:Vim.Math3d.Quaternion.op_Multiply(Vim.Math3d.Quaternion,System.Single)
+  id: op_Multiply(Vim.Math3d.Quaternion,System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Multiply(Quaternion, Single)
+  nameWithType: Quaternion.Multiply(Quaternion, Single)
+  fullName: Vim.Math3d.Quaternion.Multiply(Vim.Math3d.Quaternion, System.Single)
+  type: Operator
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Multiply
+    path: ../src/Quaternion.cs
+    startLine: 379
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nMultiplies a Quaternion by a scalar value.\n"
+  example: []
+  syntax:
+    content: public static Quaternion operator *(Quaternion value1, float value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.Quaternion
+    - id: value2
+      type: System.Single
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Operator *(value1 As Quaternion, value2 As Single) As Quaternion
+  overload: Vim.Math3d.Quaternion.op_Multiply*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.op_Division(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Quaternion.op_Division(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  id: op_Division(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Division(Quaternion, Quaternion)
+  nameWithType: Quaternion.Division(Quaternion, Quaternion)
+  fullName: Vim.Math3d.Quaternion.Division(Vim.Math3d.Quaternion, Vim.Math3d.Quaternion)
+  type: Operator
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Division
+    path: ../src/Quaternion.cs
+    startLine: 386
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nDivides a Quaternion by another Quaternion.\n"
+  example: []
+  syntax:
+    content: public static Quaternion operator /(Quaternion value1, Quaternion value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.Quaternion
+    - id: value2
+      type: Vim.Math3d.Quaternion
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Operator /(value1 As Quaternion, value2 As Quaternion) As Quaternion
+  overload: Vim.Math3d.Quaternion.op_Division*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.ToEulerAngles
+  commentId: M:Vim.Math3d.Quaternion.ToEulerAngles
+  id: ToEulerAngles
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: ToEulerAngles()
+  nameWithType: Quaternion.ToEulerAngles()
+  fullName: Vim.Math3d.Quaternion.ToEulerAngles()
+  type: Method
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToEulerAngles
+    path: ../src/Quaternion.cs
+    startLine: 394
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  summary: "\nReturns Euler123 angles (rotate around, X, then Y, then Z).\n"
+  example: []
+  syntax:
+    content: public readonly Vector3 ToEulerAngles()
+    return:
+      type: Vim.Math3d.Vector3
+      description: ''
+    content.vb: Public Function ToEulerAngles As Vector3
+  overload: Vim.Math3d.Quaternion.ToEulerAngles*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Quaternion.Vector4
+  commentId: P:Vim.Math3d.Quaternion.Vector4
+  id: Vector4
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Vector4
+  nameWithType: Quaternion.Vector4
+  fullName: Vim.Math3d.Quaternion.Vector4
+  type: Property
+  source:
+    remote:
+      path: src/Quaternion.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Vector4
+    path: ../src/Quaternion.cs
+    startLine: 436
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Vector4 Vector4 { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Vector4
+    content.vb: Public ReadOnly Property Vector4 As Vector4
+  overload: Vim.Math3d.Quaternion.Vector4*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Quaternion.X
+  commentId: F:Vim.Math3d.Quaternion.X
+  id: X
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: Quaternion.X
+  fullName: Vim.Math3d.Quaternion.X
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: X
+    path: ../src/Structs.cs
+    startLine: 583
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly float X
+    return:
+      type: System.Single
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly X As Single
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Quaternion.Y
+  commentId: F:Vim.Math3d.Quaternion.Y
+  id: Y
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: Quaternion.Y
+  fullName: Vim.Math3d.Quaternion.Y
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Y
+    path: ../src/Structs.cs
+    startLine: 585
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly float Y
+    return:
+      type: System.Single
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Y As Single
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Quaternion.Z
+  commentId: F:Vim.Math3d.Quaternion.Z
+  id: Z
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Z
+  nameWithType: Quaternion.Z
+  fullName: Vim.Math3d.Quaternion.Z
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Z
+    path: ../src/Structs.cs
+    startLine: 587
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly float Z
+    return:
+      type: System.Single
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Z As Single
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Quaternion.W
+  commentId: F:Vim.Math3d.Quaternion.W
+  id: W
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: W
+  nameWithType: Quaternion.W
+  fullName: Vim.Math3d.Quaternion.W
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: W
+    path: ../src/Structs.cs
+    startLine: 589
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly float W
+    return:
+      type: System.Single
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly W As Single
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Quaternion.#ctor(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})
+  commentId: M:Vim.Math3d.Quaternion.#ctor(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})
+  id: '#ctor(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})'
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Quaternion((Single x, Single y, Single z, Single w))
+  nameWithType: Quaternion.Quaternion((Single x, Single y, Single z, Single w))
+  fullName: Vim.Math3d.Quaternion.Quaternion(System.ValueTuple<System.Single, System.Single, System.Single, System.Single>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 590
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public Quaternion((float x, float y, float z, float w) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Single,System.Single,System.Single,System.Single}
+    content.vb: Public Sub New(tuple As(x As Single, y As Single, z As Single, w As Single)(Of Single , Single, Single, Single))
+  overload: Vim.Math3d.Quaternion.#ctor*
+  nameWithType.vb: Quaternion.Quaternion((x As Single, y As Single, z As Single, w As Single)(Of Single, Single, Single, Single))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Quaternion.Quaternion(System.ValueTuple(Of System.Single, System.Single, System.Single, System.Single))
+  name.vb: Quaternion((x As Single, y As Single, z As Single, w As Single)(Of Single, Single, Single, Single))
+- uid: Vim.Math3d.Quaternion.#ctor(System.Single,System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Quaternion.#ctor(System.Single,System.Single,System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single,System.Single,System.Single)'
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Quaternion(Single, Single, Single, Single)
+  nameWithType: Quaternion.Quaternion(Single, Single, Single, Single)
+  fullName: Vim.Math3d.Quaternion.Quaternion(System.Single, System.Single, System.Single, System.Single)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 591
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public Quaternion(float x, float y, float z, float w)
+    parameters:
+    - id: x
+      type: System.Single
+    - id: y
+      type: System.Single
+    - id: z
+      type: System.Single
+    - id: w
+      type: System.Single
+    content.vb: Public Sub New(x As Single, y As Single, z As Single, w As Single)
+  overload: Vim.Math3d.Quaternion.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Quaternion.Create(System.Single,System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Quaternion.Create(System.Single,System.Single,System.Single,System.Single)
+  id: Create(System.Single,System.Single,System.Single,System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Create(Single, Single, Single, Single)
+  nameWithType: Quaternion.Create(Single, Single, Single, Single)
+  fullName: Vim.Math3d.Quaternion.Create(System.Single, System.Single, System.Single, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 592
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Quaternion Create(float x, float y, float z, float w)
+    parameters:
+    - id: x
+      type: System.Single
+    - id: y
+      type: System.Single
+    - id: z
+      type: System.Single
+    - id: w
+      type: System.Single
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function Create(x As Single, y As Single, z As Single, w As Single) As Quaternion
+  overload: Vim.Math3d.Quaternion.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.Create(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})
+  commentId: M:Vim.Math3d.Quaternion.Create(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})
+  id: Create(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Create((Single x, Single y, Single z, Single w))
+  nameWithType: Quaternion.Create((Single x, Single y, Single z, Single w))
+  fullName: Vim.Math3d.Quaternion.Create(System.ValueTuple<System.Single, System.Single, System.Single, System.Single>)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 593
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Quaternion Create((float x, float y, float z, float w) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Single,System.Single,System.Single,System.Single}
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Function Create(tuple As(x As Single, y As Single, z As Single, w As Single)(Of Single , Single, Single, Single)) As Quaternion
+  overload: Vim.Math3d.Quaternion.Create*
+  nameWithType.vb: Quaternion.Create((x As Single, y As Single, z As Single, w As Single)(Of Single, Single, Single, Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Quaternion.Create(System.ValueTuple(Of System.Single, System.Single, System.Single, System.Single))
+  name.vb: Create((x As Single, y As Single, z As Single, w As Single)(Of Single, Single, Single, Single))
+- uid: Vim.Math3d.Quaternion.Equals(System.Object)
+  commentId: M:Vim.Math3d.Quaternion.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: Quaternion.Equals(Object)
+  fullName: Vim.Math3d.Quaternion.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 594
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Vim.Math3d.Quaternion.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Quaternion.GetHashCode
+  commentId: M:Vim.Math3d.Quaternion.GetHashCode
+  id: GetHashCode
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Quaternion.GetHashCode()
+  fullName: Vim.Math3d.Quaternion.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetHashCode
+    path: ../src/Structs.cs
+    startLine: 595
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Vim.Math3d.Quaternion.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Quaternion.ToString
+  commentId: M:Vim.Math3d.Quaternion.ToString
+  id: ToString
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Quaternion.ToString()
+  fullName: Vim.Math3d.Quaternion.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToString
+    path: ../src/Structs.cs
+    startLine: 596
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: Vim.Math3d.Quaternion.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Quaternion.Deconstruct(System.Single@,System.Single@,System.Single@,System.Single@)
+  commentId: M:Vim.Math3d.Quaternion.Deconstruct(System.Single@,System.Single@,System.Single@,System.Single@)
+  id: Deconstruct(System.Single@,System.Single@,System.Single@,System.Single@)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Single, out Single, out Single, out Single)
+  nameWithType: Quaternion.Deconstruct(out Single, out Single, out Single, out Single)
+  fullName: Vim.Math3d.Quaternion.Deconstruct(out System.Single, out System.Single, out System.Single, out System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Deconstruct
+    path: ../src/Structs.cs
+    startLine: 597
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly void Deconstruct(out float x, out float y, out float z, out float w)
+    parameters:
+    - id: x
+      type: System.Single
+    - id: y
+      type: System.Single
+    - id: z
+      type: System.Single
+    - id: w
+      type: System.Single
+    content.vb: Public Sub Deconstruct(ByRef x As Single, ByRef y As Single, ByRef z As Single, ByRef w As Single)
+  overload: Vim.Math3d.Quaternion.Deconstruct*
+  nameWithType.vb: Quaternion.Deconstruct(ByRef Single, ByRef Single, ByRef Single, ByRef Single)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Quaternion.Deconstruct(ByRef System.Single, ByRef System.Single, ByRef System.Single, ByRef System.Single)
+  name.vb: Deconstruct(ByRef Single, ByRef Single, ByRef Single, ByRef Single)
+- uid: Vim.Math3d.Quaternion.Equals(Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Quaternion.Equals(Vim.Math3d.Quaternion)
+  id: Equals(Vim.Math3d.Quaternion)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Equals(Quaternion)
+  nameWithType: Quaternion.Equals(Quaternion)
+  fullName: Vim.Math3d.Quaternion.Equals(Vim.Math3d.Quaternion)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 598
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool Equals(Quaternion x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Quaternion
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(x As Quaternion) As Boolean
+  overload: Vim.Math3d.Quaternion.Equals*
+  implements:
+  - System.IEquatable{Vim.Math3d.Quaternion}.Equals(Vim.Math3d.Quaternion)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Quaternion.op_Equality(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Quaternion.op_Equality(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  id: op_Equality(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Equality(Quaternion, Quaternion)
+  nameWithType: Quaternion.Equality(Quaternion, Quaternion)
+  fullName: Vim.Math3d.Quaternion.Equality(Vim.Math3d.Quaternion, Vim.Math3d.Quaternion)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Equality
+    path: ../src/Structs.cs
+    startLine: 599
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator ==(Quaternion x0, Quaternion x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Quaternion
+    - id: x1
+      type: Vim.Math3d.Quaternion
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(x0 As Quaternion, x1 As Quaternion) As Boolean
+  overload: Vim.Math3d.Quaternion.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.op_Inequality(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Quaternion.op_Inequality(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  id: op_Inequality(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Inequality(Quaternion, Quaternion)
+  nameWithType: Quaternion.Inequality(Quaternion, Quaternion)
+  fullName: Vim.Math3d.Quaternion.Inequality(Vim.Math3d.Quaternion, Vim.Math3d.Quaternion)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Inequality
+    path: ../src/Structs.cs
+    startLine: 600
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator !=(Quaternion x0, Quaternion x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Quaternion
+    - id: x1
+      type: Vim.Math3d.Quaternion
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(x0 As Quaternion, x1 As Quaternion) As Boolean
+  overload: Vim.Math3d.Quaternion.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.op_Implicit(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})~Vim.Math3d.Quaternion
+  commentId: M:Vim.Math3d.Quaternion.op_Implicit(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})~Vim.Math3d.Quaternion
+  id: op_Implicit(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})~Vim.Math3d.Quaternion
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Implicit((Single x, Single y, Single z, Single w) to Quaternion)
+  nameWithType: Quaternion.Implicit((Single x, Single y, Single z, Single w) to Quaternion)
+  fullName: Vim.Math3d.Quaternion.Implicit(System.ValueTuple<System.Single, System.Single, System.Single, System.Single> to Vim.Math3d.Quaternion)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 601
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator Quaternion((float x, float y, float z, float w) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Single,System.Single,System.Single,System.Single}
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Widening Operator CType(tuple As(x As Single, y As Single, z As Single, w As Single)(Of Single , Single, Single, Single)) As Quaternion
+  overload: Vim.Math3d.Quaternion.op_Implicit*
+  nameWithType.vb: Quaternion.Widening((x As Single, y As Single, z As Single, w As Single)(Of Single, Single, Single, Single) to Quaternion)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Quaternion.Widening(System.ValueTuple(Of System.Single, System.Single, System.Single, System.Single) to Vim.Math3d.Quaternion)
+  name.vb: Widening((x As Single, y As Single, z As Single, w As Single)(Of Single, Single, Single, Single) to Quaternion)
+- uid: Vim.Math3d.Quaternion.op_Implicit(Vim.Math3d.Quaternion)~System.ValueTuple{System.Single,System.Single,System.Single,System.Single}
+  commentId: M:Vim.Math3d.Quaternion.op_Implicit(Vim.Math3d.Quaternion)~System.ValueTuple{System.Single,System.Single,System.Single,System.Single}
+  id: op_Implicit(Vim.Math3d.Quaternion)~System.ValueTuple{System.Single,System.Single,System.Single,System.Single}
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Implicit(Quaternion to (Single x, Single y, Single z, Single w))
+  nameWithType: Quaternion.Implicit(Quaternion to (Single x, Single y, Single z, Single w))
+  fullName: Vim.Math3d.Quaternion.Implicit(Vim.Math3d.Quaternion to System.ValueTuple<System.Single, System.Single, System.Single, System.Single>)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 602
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator (float x, float y, float z, float w)(Quaternion self)
+    parameters:
+    - id: self
+      type: Vim.Math3d.Quaternion
+    return:
+      type: System.ValueTuple{System.Single,System.Single,System.Single,System.Single}
+    content.vb: Public Shared Widening Operator CType(self As Quaternion) As(x As Single, y As Single, z As Single, w As Single)(Of Single , Single, Single, Single)
+  overload: Vim.Math3d.Quaternion.op_Implicit*
+  nameWithType.vb: Quaternion.Widening(Quaternion to (x As Single, y As Single, z As Single, w As Single)(Of Single, Single, Single, Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Quaternion.Widening(Vim.Math3d.Quaternion to System.ValueTuple(Of System.Single, System.Single, System.Single, System.Single))
+  name.vb: Widening(Quaternion to (x As Single, y As Single, z As Single, w As Single)(Of Single, Single, Single, Single))
+- uid: Vim.Math3d.Quaternion.AlmostEquals(Vim.Math3d.Quaternion,System.Single)
+  commentId: M:Vim.Math3d.Quaternion.AlmostEquals(Vim.Math3d.Quaternion,System.Single)
+  id: AlmostEquals(Vim.Math3d.Quaternion,System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: AlmostEquals(Quaternion, Single)
+  nameWithType: Quaternion.AlmostEquals(Quaternion, Single)
+  fullName: Vim.Math3d.Quaternion.AlmostEquals(Vim.Math3d.Quaternion, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AlmostEquals
+    path: ../src/Structs.cs
+    startLine: 604
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool AlmostEquals(Quaternion x, float tolerance = 1E-07F)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Quaternion
+    - id: tolerance
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Function AlmostEquals(x As Quaternion, tolerance As Single = 1E-07F) As Boolean
+  overload: Vim.Math3d.Quaternion.AlmostEquals*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Quaternion.Zero
+  commentId: F:Vim.Math3d.Quaternion.Zero
+  id: Zero
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: Quaternion.Zero
+  fullName: Vim.Math3d.Quaternion.Zero
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Zero
+    path: ../src/Structs.cs
+    startLine: 605
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Quaternion Zero
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared Zero As Quaternion
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.MinValue
+  commentId: F:Vim.Math3d.Quaternion.MinValue
+  id: MinValue
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: Quaternion.MinValue
+  fullName: Vim.Math3d.Quaternion.MinValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MinValue
+    path: ../src/Structs.cs
+    startLine: 606
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Quaternion MinValue
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared MinValue As Quaternion
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.MaxValue
+  commentId: F:Vim.Math3d.Quaternion.MaxValue
+  id: MaxValue
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: Quaternion.MaxValue
+  fullName: Vim.Math3d.Quaternion.MaxValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MaxValue
+    path: ../src/Structs.cs
+    startLine: 607
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Quaternion MaxValue
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Shared MaxValue As Quaternion
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Quaternion.SetX(System.Single)
+  commentId: M:Vim.Math3d.Quaternion.SetX(System.Single)
+  id: SetX(System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: SetX(Single)
+  nameWithType: Quaternion.SetX(Single)
+  fullName: Vim.Math3d.Quaternion.SetX(System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetX
+    path: ../src/Structs.cs
+    startLine: 608
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Quaternion SetX(float x)
+    parameters:
+    - id: x
+      type: System.Single
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Function SetX(x As Single) As Quaternion
+  overload: Vim.Math3d.Quaternion.SetX*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Quaternion.SetY(System.Single)
+  commentId: M:Vim.Math3d.Quaternion.SetY(System.Single)
+  id: SetY(System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: SetY(Single)
+  nameWithType: Quaternion.SetY(Single)
+  fullName: Vim.Math3d.Quaternion.SetY(System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetY
+    path: ../src/Structs.cs
+    startLine: 609
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Quaternion SetY(float x)
+    parameters:
+    - id: x
+      type: System.Single
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Function SetY(x As Single) As Quaternion
+  overload: Vim.Math3d.Quaternion.SetY*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Quaternion.SetZ(System.Single)
+  commentId: M:Vim.Math3d.Quaternion.SetZ(System.Single)
+  id: SetZ(System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: SetZ(Single)
+  nameWithType: Quaternion.SetZ(Single)
+  fullName: Vim.Math3d.Quaternion.SetZ(System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetZ
+    path: ../src/Structs.cs
+    startLine: 610
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Quaternion SetZ(float x)
+    parameters:
+    - id: x
+      type: System.Single
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Function SetZ(x As Single) As Quaternion
+  overload: Vim.Math3d.Quaternion.SetZ*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Quaternion.SetW(System.Single)
+  commentId: M:Vim.Math3d.Quaternion.SetW(System.Single)
+  id: SetW(System.Single)
+  parent: Vim.Math3d.Quaternion
+  langs:
+  - csharp
+  - vb
+  name: SetW(Single)
+  nameWithType: Quaternion.SetW(Single)
+  fullName: Vim.Math3d.Quaternion.SetW(System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetW
+    path: ../src/Structs.cs
+    startLine: 611
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Quaternion SetW(float x)
+    parameters:
+    - id: x
+      type: System.Single
+    return:
+      type: Vim.Math3d.Quaternion
+    content.vb: Public Function SetW(x As Single) As Quaternion
+  overload: Vim.Math3d.Quaternion.SetW*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.IEquatable{Vim.Math3d.Quaternion}
+  commentId: T:System.IEquatable{Vim.Math3d.Quaternion}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<Quaternion>
+  nameWithType: IEquatable<Quaternion>
+  fullName: System.IEquatable<Vim.Math3d.Quaternion>
+  nameWithType.vb: IEquatable(Of Quaternion)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.Quaternion)
+  name.vb: IEquatable(Of Quaternion)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Quaternion.Vim.Math3d.MathOps.ToMatrix
+  commentId: M:Vim.Math3d.MathOps.ToMatrix(Vim.Math3d.Quaternion)
+  parent: Vim.Math3d.MathOps
+  definition: Vim.Math3d.MathOps.ToMatrix(Vim.Math3d.Quaternion)
+  name: ToMatrix()
+  nameWithType: MathOps.ToMatrix()
+  fullName: Vim.Math3d.MathOps.ToMatrix()
+  spec.csharp:
+  - uid: Vim.Math3d.MathOps.ToMatrix
+    name: ToMatrix
+    nameWithType: MathOps.ToMatrix
+    fullName: Vim.Math3d.MathOps.ToMatrix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.MathOps.ToMatrix
+    name: ToMatrix
+    nameWithType: MathOps.ToMatrix
+    fullName: Vim.Math3d.MathOps.ToMatrix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Vim.Math3d.MathOps.ToMatrix(Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.MathOps.ToMatrix(Vim.Math3d.Quaternion)
+  name: ToMatrix(Quaternion)
+  nameWithType: MathOps.ToMatrix(Quaternion)
+  fullName: Vim.Math3d.MathOps.ToMatrix(Vim.Math3d.Quaternion)
+  spec.csharp:
+  - uid: Vim.Math3d.MathOps.ToMatrix(Vim.Math3d.Quaternion)
+    name: ToMatrix
+    nameWithType: MathOps.ToMatrix
+    fullName: Vim.Math3d.MathOps.ToMatrix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.MathOps.ToMatrix(Vim.Math3d.Quaternion)
+    name: ToMatrix
+    nameWithType: MathOps.ToMatrix
+    fullName: Vim.Math3d.MathOps.ToMatrix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.MathOps
+  commentId: T:Vim.Math3d.MathOps
+  parent: Vim.Math3d
+  name: MathOps
+  nameWithType: MathOps
+  fullName: Vim.Math3d.MathOps
+- uid: Vim.Math3d.Quaternion.Identity*
+  commentId: Overload:Vim.Math3d.Quaternion.Identity
+  name: Identity
+  nameWithType: Quaternion.Identity
+  fullName: Vim.Math3d.Quaternion.Identity
+- uid: Vim.Math3d.Quaternion
+  commentId: T:Vim.Math3d.Quaternion
+  parent: Vim.Math3d
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: Vim.Math3d.Quaternion
+- uid: Vim.Math3d.Quaternion.IsIdentity*
+  commentId: Overload:Vim.Math3d.Quaternion.IsIdentity
+  name: IsIdentity
+  nameWithType: Quaternion.IsIdentity
+  fullName: Vim.Math3d.Quaternion.IsIdentity
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Vim.Math3d.Quaternion.#ctor*
+  commentId: Overload:Vim.Math3d.Quaternion.#ctor
+  name: Quaternion
+  nameWithType: Quaternion.Quaternion
+  fullName: Vim.Math3d.Quaternion.Quaternion
+- uid: Vim.Math3d.Vector3
+  commentId: T:Vim.Math3d.Vector3
+  parent: Vim.Math3d
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vim.Math3d.Vector3
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Vim.Math3d.Quaternion.Length*
+  commentId: Overload:Vim.Math3d.Quaternion.Length
+  name: Length
+  nameWithType: Quaternion.Length
+  fullName: Vim.Math3d.Quaternion.Length
+- uid: Vim.Math3d.Quaternion.LengthSquared*
+  commentId: Overload:Vim.Math3d.Quaternion.LengthSquared
+  name: LengthSquared
+  nameWithType: Quaternion.LengthSquared
+  fullName: Vim.Math3d.Quaternion.LengthSquared
+- uid: Vim.Math3d.Quaternion.Normalize*
+  commentId: Overload:Vim.Math3d.Quaternion.Normalize
+  name: Normalize
+  nameWithType: Quaternion.Normalize
+  fullName: Vim.Math3d.Quaternion.Normalize
+- uid: Vim.Math3d.Quaternion.Conjugate*
+  commentId: Overload:Vim.Math3d.Quaternion.Conjugate
+  name: Conjugate
+  nameWithType: Quaternion.Conjugate
+  fullName: Vim.Math3d.Quaternion.Conjugate
+- uid: Vim.Math3d.Quaternion.Inverse*
+  commentId: Overload:Vim.Math3d.Quaternion.Inverse
+  name: Inverse
+  nameWithType: Quaternion.Inverse
+  fullName: Vim.Math3d.Quaternion.Inverse
+- uid: Vim.Math3d.Quaternion.CreateFromAxisAngle*
+  commentId: Overload:Vim.Math3d.Quaternion.CreateFromAxisAngle
+  name: CreateFromAxisAngle
+  nameWithType: Quaternion.CreateFromAxisAngle
+  fullName: Vim.Math3d.Quaternion.CreateFromAxisAngle
+- uid: Vim.Math3d.Quaternion.CreateFromEulerAngles*
+  commentId: Overload:Vim.Math3d.Quaternion.CreateFromEulerAngles
+  name: CreateFromEulerAngles
+  nameWithType: Quaternion.CreateFromEulerAngles
+  fullName: Vim.Math3d.Quaternion.CreateFromEulerAngles
+- uid: Vim.Math3d.Quaternion.CreateXRotation*
+  commentId: Overload:Vim.Math3d.Quaternion.CreateXRotation
+  name: CreateXRotation
+  nameWithType: Quaternion.CreateXRotation
+  fullName: Vim.Math3d.Quaternion.CreateXRotation
+- uid: Vim.Math3d.Quaternion.CreateYRotation*
+  commentId: Overload:Vim.Math3d.Quaternion.CreateYRotation
+  name: CreateYRotation
+  nameWithType: Quaternion.CreateYRotation
+  fullName: Vim.Math3d.Quaternion.CreateYRotation
+- uid: Vim.Math3d.Quaternion.CreateZRotation*
+  commentId: Overload:Vim.Math3d.Quaternion.CreateZRotation
+  name: CreateZRotation
+  nameWithType: Quaternion.CreateZRotation
+  fullName: Vim.Math3d.Quaternion.CreateZRotation
+- uid: Vim.Math3d.Quaternion.LookAt*
+  commentId: Overload:Vim.Math3d.Quaternion.LookAt
+  name: LookAt
+  nameWithType: Quaternion.LookAt
+  fullName: Vim.Math3d.Quaternion.LookAt
+- uid: Vim.Math3d.Quaternion.CreateRotationFromAToB*
+  commentId: Overload:Vim.Math3d.Quaternion.CreateRotationFromAToB
+  name: CreateRotationFromAToB
+  nameWithType: Quaternion.CreateRotationFromAToB
+  fullName: Vim.Math3d.Quaternion.CreateRotationFromAToB
+- uid: Vim.Math3d.Quaternion.CreateFromYawPitchRoll*
+  commentId: Overload:Vim.Math3d.Quaternion.CreateFromYawPitchRoll
+  name: CreateFromYawPitchRoll
+  nameWithType: Quaternion.CreateFromYawPitchRoll
+  fullName: Vim.Math3d.Quaternion.CreateFromYawPitchRoll
+- uid: Vim.Math3d.Quaternion.CreateFromRotationMatrix*
+  commentId: Overload:Vim.Math3d.Quaternion.CreateFromRotationMatrix
+  name: CreateFromRotationMatrix
+  nameWithType: Quaternion.CreateFromRotationMatrix
+  fullName: Vim.Math3d.Quaternion.CreateFromRotationMatrix
+- uid: Vim.Math3d.Matrix4x4
+  commentId: T:Vim.Math3d.Matrix4x4
+  parent: Vim.Math3d
+  name: Matrix4x4
+  nameWithType: Matrix4x4
+  fullName: Vim.Math3d.Matrix4x4
+- uid: Vim.Math3d.Quaternion.Dot*
+  commentId: Overload:Vim.Math3d.Quaternion.Dot
+  name: Dot
+  nameWithType: Quaternion.Dot
+  fullName: Vim.Math3d.Quaternion.Dot
+- uid: Vim.Math3d.Quaternion.Slerp*
+  commentId: Overload:Vim.Math3d.Quaternion.Slerp
+  name: Slerp
+  nameWithType: Quaternion.Slerp
+  fullName: Vim.Math3d.Quaternion.Slerp
+- uid: Vim.Math3d.Quaternion.Lerp*
+  commentId: Overload:Vim.Math3d.Quaternion.Lerp
+  name: Lerp
+  nameWithType: Quaternion.Lerp
+  fullName: Vim.Math3d.Quaternion.Lerp
+- uid: Vim.Math3d.Quaternion.Concatenate*
+  commentId: Overload:Vim.Math3d.Quaternion.Concatenate
+  name: Concatenate
+  nameWithType: Quaternion.Concatenate
+  fullName: Vim.Math3d.Quaternion.Concatenate
+- uid: Vim.Math3d.Quaternion.op_UnaryNegation*
+  commentId: Overload:Vim.Math3d.Quaternion.op_UnaryNegation
+  name: UnaryNegation
+  nameWithType: Quaternion.UnaryNegation
+  fullName: Vim.Math3d.Quaternion.UnaryNegation
+- uid: Vim.Math3d.Quaternion.op_Addition*
+  commentId: Overload:Vim.Math3d.Quaternion.op_Addition
+  name: Addition
+  nameWithType: Quaternion.Addition
+  fullName: Vim.Math3d.Quaternion.Addition
+- uid: Vim.Math3d.Quaternion.op_Subtraction*
+  commentId: Overload:Vim.Math3d.Quaternion.op_Subtraction
+  name: Subtraction
+  nameWithType: Quaternion.Subtraction
+  fullName: Vim.Math3d.Quaternion.Subtraction
+- uid: Vim.Math3d.Quaternion.op_Multiply*
+  commentId: Overload:Vim.Math3d.Quaternion.op_Multiply
+  name: Multiply
+  nameWithType: Quaternion.Multiply
+  fullName: Vim.Math3d.Quaternion.Multiply
+- uid: Vim.Math3d.Quaternion.op_Division*
+  commentId: Overload:Vim.Math3d.Quaternion.op_Division
+  name: Division
+  nameWithType: Quaternion.Division
+  fullName: Vim.Math3d.Quaternion.Division
+- uid: Vim.Math3d.Quaternion.ToEulerAngles*
+  commentId: Overload:Vim.Math3d.Quaternion.ToEulerAngles
+  name: ToEulerAngles
+  nameWithType: Quaternion.ToEulerAngles
+  fullName: Vim.Math3d.Quaternion.ToEulerAngles
+- uid: Vim.Math3d.Quaternion.Vector4*
+  commentId: Overload:Vim.Math3d.Quaternion.Vector4
+  name: Vector4
+  nameWithType: Quaternion.Vector4
+  fullName: Vim.Math3d.Quaternion.Vector4
+- uid: Vim.Math3d.Vector4
+  commentId: T:Vim.Math3d.Vector4
+  parent: Vim.Math3d
+  name: Vector4
+  nameWithType: Vector4
+  fullName: Vim.Math3d.Vector4
+- uid: System.ValueTuple{System.Single,System.Single,System.Single,System.Single}
+  commentId: T:System.ValueTuple{System.Single,System.Single,System.Single,System.Single}
+  parent: System
+  definition: System.ValueTuple`4
+  name: (T1, T2, T3, T4)<Single, Single, Single, Single>
+  nameWithType: (T1, T2, T3, T4)<Single, Single, Single, Single>
+  fullName: System.ValueTuple<System.Single, System.Single, System.Single, System.Single>
+  nameWithType.vb: (T1, T2, T3, T4)(Of Single, Single, Single, Single)
+  fullName.vb: System.ValueTuple(Of System.Single, System.Single, System.Single, System.Single)
+  name.vb: (T1, T2, T3, T4)(Of Single, Single, Single, Single)
+  spec.csharp:
+  - uid: System.ValueTuple`4
+    name: (T1, T2, T3, T4)
+    nameWithType: (T1, T2, T3, T4)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`4
+    name: (T1, T2, T3, T4)
+    nameWithType: (T1, T2, T3, T4)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`4
+  commentId: T:System.ValueTuple`4
+  isExternal: true
+  name: (T1, T2, T3, T4)<T1, T2, T3, T4>
+  nameWithType: (T1, T2, T3, T4)<T1, T2, T3, T4>
+  fullName: System.ValueTuple<T1, T2, T3, T4>
+  nameWithType.vb: (T1, T2, T3, T4)(Of T1, T2, T3, T4)
+  fullName.vb: System.ValueTuple(Of T1, T2, T3, T4)
+  name.vb: (T1, T2, T3, T4)(Of T1, T2, T3, T4)
+  spec.csharp:
+  - uid: System.ValueTuple`4
+    name: (T1, T2, T3, T4)
+    nameWithType: (T1, T2, T3, T4)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`4
+    name: (T1, T2, T3, T4)
+    nameWithType: (T1, T2, T3, T4)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Quaternion.Create*
+  commentId: Overload:Vim.Math3d.Quaternion.Create
+  name: Create
+  nameWithType: Quaternion.Create
+  fullName: Vim.Math3d.Quaternion.Create
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Quaternion.Equals*
+  commentId: Overload:Vim.Math3d.Quaternion.Equals
+  name: Equals
+  nameWithType: Quaternion.Equals
+  fullName: Vim.Math3d.Quaternion.Equals
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Quaternion.GetHashCode*
+  commentId: Overload:Vim.Math3d.Quaternion.GetHashCode
+  name: GetHashCode
+  nameWithType: Quaternion.GetHashCode
+  fullName: Vim.Math3d.Quaternion.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Quaternion.ToString*
+  commentId: Overload:Vim.Math3d.Quaternion.ToString
+  name: ToString
+  nameWithType: Quaternion.ToString
+  fullName: Vim.Math3d.Quaternion.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vim.Math3d.Quaternion.Deconstruct*
+  commentId: Overload:Vim.Math3d.Quaternion.Deconstruct
+  name: Deconstruct
+  nameWithType: Quaternion.Deconstruct
+  fullName: Vim.Math3d.Quaternion.Deconstruct
+- uid: System.IEquatable{Vim.Math3d.Quaternion}.Equals(Vim.Math3d.Quaternion)
+  commentId: M:System.IEquatable{Vim.Math3d.Quaternion}.Equals(Vim.Math3d.Quaternion)
+  parent: System.IEquatable{Vim.Math3d.Quaternion}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(Quaternion)
+  nameWithType: IEquatable<Quaternion>.Equals(Quaternion)
+  fullName: System.IEquatable<Vim.Math3d.Quaternion>.Equals(Vim.Math3d.Quaternion)
+  nameWithType.vb: IEquatable(Of Quaternion).Equals(Quaternion)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.Quaternion).Equals(Vim.Math3d.Quaternion)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<Quaternion>.Equals
+    fullName: System.IEquatable<Vim.Math3d.Quaternion>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of Quaternion).Equals
+    fullName: System.IEquatable(Of Vim.Math3d.Quaternion).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Quaternion.op_Equality*
+  commentId: Overload:Vim.Math3d.Quaternion.op_Equality
+  name: Equality
+  nameWithType: Quaternion.Equality
+  fullName: Vim.Math3d.Quaternion.Equality
+- uid: Vim.Math3d.Quaternion.op_Inequality*
+  commentId: Overload:Vim.Math3d.Quaternion.op_Inequality
+  name: Inequality
+  nameWithType: Quaternion.Inequality
+  fullName: Vim.Math3d.Quaternion.Inequality
+- uid: Vim.Math3d.Quaternion.op_Implicit*
+  commentId: Overload:Vim.Math3d.Quaternion.op_Implicit
+  name: Implicit
+  nameWithType: Quaternion.Implicit
+  fullName: Vim.Math3d.Quaternion.Implicit
+  nameWithType.vb: Quaternion.Widening
+  fullName.vb: Vim.Math3d.Quaternion.Widening
+  name.vb: Widening
+- uid: Vim.Math3d.Quaternion.AlmostEquals*
+  commentId: Overload:Vim.Math3d.Quaternion.AlmostEquals
+  name: AlmostEquals
+  nameWithType: Quaternion.AlmostEquals
+  fullName: Vim.Math3d.Quaternion.AlmostEquals
+- uid: Vim.Math3d.Quaternion.SetX*
+  commentId: Overload:Vim.Math3d.Quaternion.SetX
+  name: SetX
+  nameWithType: Quaternion.SetX
+  fullName: Vim.Math3d.Quaternion.SetX
+- uid: Vim.Math3d.Quaternion.SetY*
+  commentId: Overload:Vim.Math3d.Quaternion.SetY
+  name: SetY
+  nameWithType: Quaternion.SetY
+  fullName: Vim.Math3d.Quaternion.SetY
+- uid: Vim.Math3d.Quaternion.SetZ*
+  commentId: Overload:Vim.Math3d.Quaternion.SetZ
+  name: SetZ
+  nameWithType: Quaternion.SetZ
+  fullName: Vim.Math3d.Quaternion.SetZ
+- uid: Vim.Math3d.Quaternion.SetW*
+  commentId: Overload:Vim.Math3d.Quaternion.SetW
+  name: SetW
+  nameWithType: Quaternion.SetW
+  fullName: Vim.Math3d.Quaternion.SetW

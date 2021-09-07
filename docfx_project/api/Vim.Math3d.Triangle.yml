@@ -1,0 +1,5719 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.Triangle
+  commentId: T:Vim.Math3d.Triangle
+  id: Triangle
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.Triangle.#ctor(System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  - Vim.Math3d.Triangle.#ctor(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  - Vim.Math3d.Triangle.A
+  - Vim.Math3d.Triangle.AB
+  - Vim.Math3d.Triangle.AC
+  - Vim.Math3d.Triangle.AlmostEquals(Vim.Math3d.Triangle,System.Single)
+  - Vim.Math3d.Triangle.Area
+  - Vim.Math3d.Triangle.B
+  - Vim.Math3d.Triangle.BA
+  - Vim.Math3d.Triangle.BC
+  - Vim.Math3d.Triangle.Binormal
+  - Vim.Math3d.Triangle.BoundingBox
+  - Vim.Math3d.Triangle.BoundingSphere
+  - Vim.Math3d.Triangle.C
+  - Vim.Math3d.Triangle.CA
+  - Vim.Math3d.Triangle.CB
+  - Vim.Math3d.Triangle.Create(System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  - Vim.Math3d.Triangle.Create(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  - Vim.Math3d.Triangle.Deconstruct(Vim.Math3d.Vector3@,Vim.Math3d.Vector3@,Vim.Math3d.Vector3@)
+  - Vim.Math3d.Triangle.Equals(System.Object)
+  - Vim.Math3d.Triangle.Equals(Vim.Math3d.Triangle)
+  - Vim.Math3d.Triangle.GetHashCode
+  - Vim.Math3d.Triangle.GetPoint(System.Int32)
+  - Vim.Math3d.Triangle.HasArea
+  - Vim.Math3d.Triangle.IsSliver(System.Single)
+  - Vim.Math3d.Triangle.LengthA
+  - Vim.Math3d.Triangle.LengthB
+  - Vim.Math3d.Triangle.LengthC
+  - Vim.Math3d.Triangle.Map(System.Func{Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  - Vim.Math3d.Triangle.MaxValue
+  - Vim.Math3d.Triangle.MidPoint
+  - Vim.Math3d.Triangle.MinValue
+  - Vim.Math3d.Triangle.Normal
+  - Vim.Math3d.Triangle.NormalDirection
+  - Vim.Math3d.Triangle.NumPoints
+  - Vim.Math3d.Triangle.op_Equality(Vim.Math3d.Triangle,Vim.Math3d.Triangle)
+  - Vim.Math3d.Triangle.op_Implicit(System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3})~Vim.Math3d.Triangle
+  - Vim.Math3d.Triangle.op_Implicit(Vim.Math3d.Triangle)~System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3}
+  - Vim.Math3d.Triangle.op_Inequality(Vim.Math3d.Triangle,Vim.Math3d.Triangle)
+  - Vim.Math3d.Triangle.Perimeter
+  - Vim.Math3d.Triangle.SafeNormal
+  - Vim.Math3d.Triangle.SetA(Vim.Math3d.Vector3)
+  - Vim.Math3d.Triangle.SetB(Vim.Math3d.Vector3)
+  - Vim.Math3d.Triangle.SetC(Vim.Math3d.Vector3)
+  - Vim.Math3d.Triangle.Side(System.Int32)
+  - Vim.Math3d.Triangle.Tangent
+  - Vim.Math3d.Triangle.ToString
+  - Vim.Math3d.Triangle.Transform(Vim.Math3d.Matrix4x4)
+  - Vim.Math3d.Triangle.Zero
+  langs:
+  - csharp
+  - vb
+  name: Triangle
+  nameWithType: Triangle
+  fullName: Vim.Math3d.Triangle
+  type: Struct
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Triangle
+    path: ../src/Triangle.cs
+    startLine: 10
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataContract]
+
+      public readonly struct Triangle : IEquatable<Triangle>, ITransformable3D<Triangle>, IPoints, IMappable<Triangle, Vector3>
+    content.vb: >-
+      <DataContract>
+
+      Public Structure Triangle
+          Implements IEquatable(Of Triangle), ITransformable3D(Of Triangle), IPoints, IMappable(Of Triangle, Vector3)
+  implements:
+  - System.IEquatable{Vim.Math3d.Triangle}
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}
+  - Vim.Math3d.IPoints
+  - Vim.Math3d.IMappable{Vim.Math3d.Triangle,Vim.Math3d.Vector3}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.Matrix4x4[])
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.Vector3)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Translate``1(System.Single,System.Single,System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.Quaternion)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Scale``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.Vector3)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Scale``1(System.Single,System.Single,System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.ScaleX``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.ScaleY``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.ScaleZ``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.Vector3,System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Rotate``1(System.Single,System.Single,System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.Plane)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.RotateX``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.RotateY``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.RotateZ``1(System.Single)
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Vim.Math3d.Triangle.A
+  commentId: F:Vim.Math3d.Triangle.A
+  id: A
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: A
+  nameWithType: Triangle.A
+  fullName: Vim.Math3d.Triangle.A
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: A
+    path: ../src/Structs.cs
+    startLine: 1257
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly Vector3 A
+    return:
+      type: Vim.Math3d.Vector3
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly A As Vector3
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.B
+  commentId: F:Vim.Math3d.Triangle.B
+  id: B
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: B
+  nameWithType: Triangle.B
+  fullName: Vim.Math3d.Triangle.B
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: B
+    path: ../src/Structs.cs
+    startLine: 1259
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly Vector3 B
+    return:
+      type: Vim.Math3d.Vector3
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly B As Vector3
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.C
+  commentId: F:Vim.Math3d.Triangle.C
+  id: C
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: C
+  nameWithType: Triangle.C
+  fullName: Vim.Math3d.Triangle.C
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: C
+    path: ../src/Structs.cs
+    startLine: 1261
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly Vector3 C
+    return:
+      type: Vim.Math3d.Vector3
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly C As Vector3
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.#ctor(System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  commentId: M:Vim.Math3d.Triangle.#ctor(System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  id: '#ctor(System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3})'
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Triangle((Vector3 a, Vector3 b, Vector3 c))
+  nameWithType: Triangle.Triangle((Vector3 a, Vector3 b, Vector3 c))
+  fullName: Vim.Math3d.Triangle.Triangle(System.ValueTuple<Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1262
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public Triangle((Vector3 a, Vector3 b, Vector3 c) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3}
+    content.vb: Public Sub New(tuple As(a As Vector3, b As Vector3, c As Vector3)(Of Vector3 , Vector3, Vector3))
+  overload: Vim.Math3d.Triangle.#ctor*
+  nameWithType.vb: Triangle.Triangle((a As Vector3, b As Vector3, c As Vector3)(Of Vector3, Vector3, Vector3))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Triangle.Triangle(System.ValueTuple(Of Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3))
+  name.vb: Triangle((a As Vector3, b As Vector3, c As Vector3)(Of Vector3, Vector3, Vector3))
+- uid: Vim.Math3d.Triangle.#ctor(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Triangle.#ctor(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  id: '#ctor(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)'
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Triangle(Vector3, Vector3, Vector3)
+  nameWithType: Triangle.Triangle(Vector3, Vector3, Vector3)
+  fullName: Vim.Math3d.Triangle.Triangle(Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1263
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public Triangle(Vector3 a, Vector3 b, Vector3 c)
+    parameters:
+    - id: a
+      type: Vim.Math3d.Vector3
+    - id: b
+      type: Vim.Math3d.Vector3
+    - id: c
+      type: Vim.Math3d.Vector3
+    content.vb: Public Sub New(a As Vector3, b As Vector3, c As Vector3)
+  overload: Vim.Math3d.Triangle.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle.Create(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Triangle.Create(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  id: Create(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Create(Vector3, Vector3, Vector3)
+  nameWithType: Triangle.Create(Vector3, Vector3, Vector3)
+  fullName: Vim.Math3d.Triangle.Create(Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1264
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Triangle Create(Vector3 a, Vector3 b, Vector3 c)
+    parameters:
+    - id: a
+      type: Vim.Math3d.Vector3
+    - id: b
+      type: Vim.Math3d.Vector3
+    - id: c
+      type: Vim.Math3d.Vector3
+    return:
+      type: Vim.Math3d.Triangle
+    content.vb: Public Shared Function Create(a As Vector3, b As Vector3, c As Vector3) As Triangle
+  overload: Vim.Math3d.Triangle.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Triangle.Create(System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  commentId: M:Vim.Math3d.Triangle.Create(System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  id: Create(System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Create((Vector3 a, Vector3 b, Vector3 c))
+  nameWithType: Triangle.Create((Vector3 a, Vector3 b, Vector3 c))
+  fullName: Vim.Math3d.Triangle.Create(System.ValueTuple<Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3>)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1265
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Triangle Create((Vector3 a, Vector3 b, Vector3 c) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3}
+    return:
+      type: Vim.Math3d.Triangle
+    content.vb: Public Shared Function Create(tuple As(a As Vector3, b As Vector3, c As Vector3)(Of Vector3 , Vector3, Vector3)) As Triangle
+  overload: Vim.Math3d.Triangle.Create*
+  nameWithType.vb: Triangle.Create((a As Vector3, b As Vector3, c As Vector3)(Of Vector3, Vector3, Vector3))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Triangle.Create(System.ValueTuple(Of Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3))
+  name.vb: Create((a As Vector3, b As Vector3, c As Vector3)(Of Vector3, Vector3, Vector3))
+- uid: Vim.Math3d.Triangle.Equals(System.Object)
+  commentId: M:Vim.Math3d.Triangle.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: Triangle.Equals(Object)
+  fullName: Vim.Math3d.Triangle.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1266
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Vim.Math3d.Triangle.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Triangle.GetHashCode
+  commentId: M:Vim.Math3d.Triangle.GetHashCode
+  id: GetHashCode
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Triangle.GetHashCode()
+  fullName: Vim.Math3d.Triangle.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetHashCode
+    path: ../src/Structs.cs
+    startLine: 1267
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Vim.Math3d.Triangle.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Triangle.ToString
+  commentId: M:Vim.Math3d.Triangle.ToString
+  id: ToString
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Triangle.ToString()
+  fullName: Vim.Math3d.Triangle.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToString
+    path: ../src/Structs.cs
+    startLine: 1268
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: Vim.Math3d.Triangle.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Triangle.Deconstruct(Vim.Math3d.Vector3@,Vim.Math3d.Vector3@,Vim.Math3d.Vector3@)
+  commentId: M:Vim.Math3d.Triangle.Deconstruct(Vim.Math3d.Vector3@,Vim.Math3d.Vector3@,Vim.Math3d.Vector3@)
+  id: Deconstruct(Vim.Math3d.Vector3@,Vim.Math3d.Vector3@,Vim.Math3d.Vector3@)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Vector3, out Vector3, out Vector3)
+  nameWithType: Triangle.Deconstruct(out Vector3, out Vector3, out Vector3)
+  fullName: Vim.Math3d.Triangle.Deconstruct(out Vim.Math3d.Vector3, out Vim.Math3d.Vector3, out Vim.Math3d.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Deconstruct
+    path: ../src/Structs.cs
+    startLine: 1269
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly void Deconstruct(out Vector3 a, out Vector3 b, out Vector3 c)
+    parameters:
+    - id: a
+      type: Vim.Math3d.Vector3
+    - id: b
+      type: Vim.Math3d.Vector3
+    - id: c
+      type: Vim.Math3d.Vector3
+    content.vb: Public Sub Deconstruct(ByRef a As Vector3, ByRef b As Vector3, ByRef c As Vector3)
+  overload: Vim.Math3d.Triangle.Deconstruct*
+  nameWithType.vb: Triangle.Deconstruct(ByRef Vector3, ByRef Vector3, ByRef Vector3)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Triangle.Deconstruct(ByRef Vim.Math3d.Vector3, ByRef Vim.Math3d.Vector3, ByRef Vim.Math3d.Vector3)
+  name.vb: Deconstruct(ByRef Vector3, ByRef Vector3, ByRef Vector3)
+- uid: Vim.Math3d.Triangle.Equals(Vim.Math3d.Triangle)
+  commentId: M:Vim.Math3d.Triangle.Equals(Vim.Math3d.Triangle)
+  id: Equals(Vim.Math3d.Triangle)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Equals(Triangle)
+  nameWithType: Triangle.Equals(Triangle)
+  fullName: Vim.Math3d.Triangle.Equals(Vim.Math3d.Triangle)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1270
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool Equals(Triangle x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Triangle
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(x As Triangle) As Boolean
+  overload: Vim.Math3d.Triangle.Equals*
+  implements:
+  - System.IEquatable{Vim.Math3d.Triangle}.Equals(Vim.Math3d.Triangle)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle.op_Equality(Vim.Math3d.Triangle,Vim.Math3d.Triangle)
+  commentId: M:Vim.Math3d.Triangle.op_Equality(Vim.Math3d.Triangle,Vim.Math3d.Triangle)
+  id: op_Equality(Vim.Math3d.Triangle,Vim.Math3d.Triangle)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Equality(Triangle, Triangle)
+  nameWithType: Triangle.Equality(Triangle, Triangle)
+  fullName: Vim.Math3d.Triangle.Equality(Vim.Math3d.Triangle, Vim.Math3d.Triangle)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Equality
+    path: ../src/Structs.cs
+    startLine: 1271
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator ==(Triangle x0, Triangle x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Triangle
+    - id: x1
+      type: Vim.Math3d.Triangle
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(x0 As Triangle, x1 As Triangle) As Boolean
+  overload: Vim.Math3d.Triangle.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Triangle.op_Inequality(Vim.Math3d.Triangle,Vim.Math3d.Triangle)
+  commentId: M:Vim.Math3d.Triangle.op_Inequality(Vim.Math3d.Triangle,Vim.Math3d.Triangle)
+  id: op_Inequality(Vim.Math3d.Triangle,Vim.Math3d.Triangle)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Inequality(Triangle, Triangle)
+  nameWithType: Triangle.Inequality(Triangle, Triangle)
+  fullName: Vim.Math3d.Triangle.Inequality(Vim.Math3d.Triangle, Vim.Math3d.Triangle)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Inequality
+    path: ../src/Structs.cs
+    startLine: 1272
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator !=(Triangle x0, Triangle x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Triangle
+    - id: x1
+      type: Vim.Math3d.Triangle
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(x0 As Triangle, x1 As Triangle) As Boolean
+  overload: Vim.Math3d.Triangle.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Triangle.op_Implicit(System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3})~Vim.Math3d.Triangle
+  commentId: M:Vim.Math3d.Triangle.op_Implicit(System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3})~Vim.Math3d.Triangle
+  id: op_Implicit(System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3})~Vim.Math3d.Triangle
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Implicit((Vector3 a, Vector3 b, Vector3 c) to Triangle)
+  nameWithType: Triangle.Implicit((Vector3 a, Vector3 b, Vector3 c) to Triangle)
+  fullName: Vim.Math3d.Triangle.Implicit(System.ValueTuple<Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3> to Vim.Math3d.Triangle)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1273
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator Triangle((Vector3 a, Vector3 b, Vector3 c) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3}
+    return:
+      type: Vim.Math3d.Triangle
+    content.vb: Public Shared Widening Operator CType(tuple As(a As Vector3, b As Vector3, c As Vector3)(Of Vector3 , Vector3, Vector3)) As Triangle
+  overload: Vim.Math3d.Triangle.op_Implicit*
+  nameWithType.vb: Triangle.Widening((a As Vector3, b As Vector3, c As Vector3)(Of Vector3, Vector3, Vector3) to Triangle)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Triangle.Widening(System.ValueTuple(Of Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3) to Vim.Math3d.Triangle)
+  name.vb: Widening((a As Vector3, b As Vector3, c As Vector3)(Of Vector3, Vector3, Vector3) to Triangle)
+- uid: Vim.Math3d.Triangle.op_Implicit(Vim.Math3d.Triangle)~System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3}
+  commentId: M:Vim.Math3d.Triangle.op_Implicit(Vim.Math3d.Triangle)~System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3}
+  id: op_Implicit(Vim.Math3d.Triangle)~System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3}
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Implicit(Triangle to (Vector3 a, Vector3 b, Vector3 c))
+  nameWithType: Triangle.Implicit(Triangle to (Vector3 a, Vector3 b, Vector3 c))
+  fullName: Vim.Math3d.Triangle.Implicit(Vim.Math3d.Triangle to System.ValueTuple<Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3>)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1274
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator (Vector3 a, Vector3 b, Vector3 c)(Triangle self)
+    parameters:
+    - id: self
+      type: Vim.Math3d.Triangle
+    return:
+      type: System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3}
+    content.vb: Public Shared Widening Operator CType(self As Triangle) As(a As Vector3, b As Vector3, c As Vector3)(Of Vector3 , Vector3, Vector3)
+  overload: Vim.Math3d.Triangle.op_Implicit*
+  nameWithType.vb: Triangle.Widening(Triangle to (a As Vector3, b As Vector3, c As Vector3)(Of Vector3, Vector3, Vector3))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Triangle.Widening(Vim.Math3d.Triangle to System.ValueTuple(Of Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3))
+  name.vb: Widening(Triangle to (a As Vector3, b As Vector3, c As Vector3)(Of Vector3, Vector3, Vector3))
+- uid: Vim.Math3d.Triangle.AlmostEquals(Vim.Math3d.Triangle,System.Single)
+  commentId: M:Vim.Math3d.Triangle.AlmostEquals(Vim.Math3d.Triangle,System.Single)
+  id: AlmostEquals(Vim.Math3d.Triangle,System.Single)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: AlmostEquals(Triangle, Single)
+  nameWithType: Triangle.AlmostEquals(Triangle, Single)
+  fullName: Vim.Math3d.Triangle.AlmostEquals(Vim.Math3d.Triangle, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AlmostEquals
+    path: ../src/Structs.cs
+    startLine: 1276
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool AlmostEquals(Triangle x, float tolerance = 1E-07F)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Triangle
+    - id: tolerance
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Function AlmostEquals(x As Triangle, tolerance As Single = 1E-07F) As Boolean
+  overload: Vim.Math3d.Triangle.AlmostEquals*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle.Zero
+  commentId: F:Vim.Math3d.Triangle.Zero
+  id: Zero
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: Triangle.Zero
+  fullName: Vim.Math3d.Triangle.Zero
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Zero
+    path: ../src/Structs.cs
+    startLine: 1277
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Triangle Zero
+    return:
+      type: Vim.Math3d.Triangle
+    content.vb: Public Shared Zero As Triangle
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Triangle.MinValue
+  commentId: F:Vim.Math3d.Triangle.MinValue
+  id: MinValue
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: Triangle.MinValue
+  fullName: Vim.Math3d.Triangle.MinValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MinValue
+    path: ../src/Structs.cs
+    startLine: 1278
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Triangle MinValue
+    return:
+      type: Vim.Math3d.Triangle
+    content.vb: Public Shared MinValue As Triangle
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Triangle.MaxValue
+  commentId: F:Vim.Math3d.Triangle.MaxValue
+  id: MaxValue
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: Triangle.MaxValue
+  fullName: Vim.Math3d.Triangle.MaxValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MaxValue
+    path: ../src/Structs.cs
+    startLine: 1279
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Triangle MaxValue
+    return:
+      type: Vim.Math3d.Triangle
+    content.vb: Public Shared MaxValue As Triangle
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Triangle.SetA(Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Triangle.SetA(Vim.Math3d.Vector3)
+  id: SetA(Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: SetA(Vector3)
+  nameWithType: Triangle.SetA(Vector3)
+  fullName: Vim.Math3d.Triangle.SetA(Vim.Math3d.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetA
+    path: ../src/Structs.cs
+    startLine: 1280
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Triangle SetA(Vector3 x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Vector3
+    return:
+      type: Vim.Math3d.Triangle
+    content.vb: Public Function SetA(x As Vector3) As Triangle
+  overload: Vim.Math3d.Triangle.SetA*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle.SetB(Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Triangle.SetB(Vim.Math3d.Vector3)
+  id: SetB(Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: SetB(Vector3)
+  nameWithType: Triangle.SetB(Vector3)
+  fullName: Vim.Math3d.Triangle.SetB(Vim.Math3d.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetB
+    path: ../src/Structs.cs
+    startLine: 1281
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Triangle SetB(Vector3 x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Vector3
+    return:
+      type: Vim.Math3d.Triangle
+    content.vb: Public Function SetB(x As Vector3) As Triangle
+  overload: Vim.Math3d.Triangle.SetB*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle.SetC(Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Triangle.SetC(Vim.Math3d.Vector3)
+  id: SetC(Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: SetC(Vector3)
+  nameWithType: Triangle.SetC(Vector3)
+  fullName: Vim.Math3d.Triangle.SetC(Vim.Math3d.Vector3)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetC
+    path: ../src/Structs.cs
+    startLine: 1282
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Triangle SetC(Vector3 x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Vector3
+    return:
+      type: Vim.Math3d.Triangle
+    content.vb: Public Function SetC(x As Vector3) As Triangle
+  overload: Vim.Math3d.Triangle.SetC*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle.Transform(Vim.Math3d.Matrix4x4)
+  commentId: M:Vim.Math3d.Triangle.Transform(Vim.Math3d.Matrix4x4)
+  id: Transform(Vim.Math3d.Matrix4x4)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Transform(Matrix4x4)
+  nameWithType: Triangle.Transform(Matrix4x4)
+  fullName: Vim.Math3d.Triangle.Transform(Vim.Math3d.Matrix4x4)
+  type: Method
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Transform
+    path: ../src/Triangle.cs
+    startLine: 12
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Triangle Transform(Matrix4x4 mat)
+    parameters:
+    - id: mat
+      type: Vim.Math3d.Matrix4x4
+    return:
+      type: Vim.Math3d.Triangle
+    content.vb: Public Function Transform(mat As Matrix4x4) As Triangle
+  overload: Vim.Math3d.Triangle.Transform*
+  implements:
+  - Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Transform(Vim.Math3d.Matrix4x4)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle.NumPoints
+  commentId: P:Vim.Math3d.Triangle.NumPoints
+  id: NumPoints
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: NumPoints
+  nameWithType: Triangle.NumPoints
+  fullName: Vim.Math3d.Triangle.NumPoints
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: NumPoints
+    path: ../src/Triangle.cs
+    startLine: 13
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly int NumPoints { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property NumPoints As Integer
+  overload: Vim.Math3d.Triangle.NumPoints*
+  implements:
+  - Vim.Math3d.IPoints.NumPoints
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.GetPoint(System.Int32)
+  commentId: M:Vim.Math3d.Triangle.GetPoint(System.Int32)
+  id: GetPoint(System.Int32)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: GetPoint(Int32)
+  nameWithType: Triangle.GetPoint(Int32)
+  fullName: Vim.Math3d.Triangle.GetPoint(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetPoint
+    path: ../src/Triangle.cs
+    startLine: 14
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Vector3 GetPoint(int n)
+    parameters:
+    - id: n
+      type: System.Int32
+    return:
+      type: Vim.Math3d.Vector3
+    content.vb: Public Function GetPoint(n As Integer) As Vector3
+  overload: Vim.Math3d.Triangle.GetPoint*
+  implements:
+  - Vim.Math3d.IPoints.GetPoint(System.Int32)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle.Map(System.Func{Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  commentId: M:Vim.Math3d.Triangle.Map(System.Func{Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  id: Map(System.Func{Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Map(Func<Vector3, Vector3>)
+  nameWithType: Triangle.Map(Func<Vector3, Vector3>)
+  fullName: Vim.Math3d.Triangle.Map(System.Func<Vim.Math3d.Vector3, Vim.Math3d.Vector3>)
+  type: Method
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Map
+    path: ../src/Triangle.cs
+    startLine: 15
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Triangle Map(Func<Vector3, Vector3> f)
+    parameters:
+    - id: f
+      type: System.Func{Vim.Math3d.Vector3,Vim.Math3d.Vector3}
+    return:
+      type: Vim.Math3d.Triangle
+    content.vb: Public Function Map(f As Func(Of Vector3, Vector3)) As Triangle
+  overload: Vim.Math3d.Triangle.Map*
+  implements:
+  - Vim.Math3d.IMappable{Vim.Math3d.Triangle,Vim.Math3d.Vector3}.Map(System.Func{Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  nameWithType.vb: Triangle.Map(Func(Of Vector3, Vector3))
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Triangle.Map(System.Func(Of Vim.Math3d.Vector3, Vim.Math3d.Vector3))
+  name.vb: Map(Func(Of Vector3, Vector3))
+- uid: Vim.Math3d.Triangle.LengthA
+  commentId: P:Vim.Math3d.Triangle.LengthA
+  id: LengthA
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: LengthA
+  nameWithType: Triangle.LengthA
+  fullName: Vim.Math3d.Triangle.LengthA
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LengthA
+    path: ../src/Triangle.cs
+    startLine: 17
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly float LengthA { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property LengthA As Single
+  overload: Vim.Math3d.Triangle.LengthA*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.LengthB
+  commentId: P:Vim.Math3d.Triangle.LengthB
+  id: LengthB
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: LengthB
+  nameWithType: Triangle.LengthB
+  fullName: Vim.Math3d.Triangle.LengthB
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LengthB
+    path: ../src/Triangle.cs
+    startLine: 18
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly float LengthB { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property LengthB As Single
+  overload: Vim.Math3d.Triangle.LengthB*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.LengthC
+  commentId: P:Vim.Math3d.Triangle.LengthC
+  id: LengthC
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: LengthC
+  nameWithType: Triangle.LengthC
+  fullName: Vim.Math3d.Triangle.LengthC
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LengthC
+    path: ../src/Triangle.cs
+    startLine: 19
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly float LengthC { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property LengthC As Single
+  overload: Vim.Math3d.Triangle.LengthC*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.HasArea
+  commentId: P:Vim.Math3d.Triangle.HasArea
+  id: HasArea
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: HasArea
+  nameWithType: Triangle.HasArea
+  fullName: Vim.Math3d.Triangle.HasArea
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: HasArea
+    path: ../src/Triangle.cs
+    startLine: 21
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool HasArea { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasArea As Boolean
+  overload: Vim.Math3d.Triangle.HasArea*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.Area
+  commentId: P:Vim.Math3d.Triangle.Area
+  id: Area
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Area
+  nameWithType: Triangle.Area
+  fullName: Vim.Math3d.Triangle.Area
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Area
+    path: ../src/Triangle.cs
+    startLine: 23
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly float Area { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Area As Single
+  overload: Vim.Math3d.Triangle.Area*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.Perimeter
+  commentId: P:Vim.Math3d.Triangle.Perimeter
+  id: Perimeter
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Perimeter
+  nameWithType: Triangle.Perimeter
+  fullName: Vim.Math3d.Triangle.Perimeter
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Perimeter
+    path: ../src/Triangle.cs
+    startLine: 25
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly float Perimeter { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Perimeter As Single
+  overload: Vim.Math3d.Triangle.Perimeter*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.MidPoint
+  commentId: P:Vim.Math3d.Triangle.MidPoint
+  id: MidPoint
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: MidPoint
+  nameWithType: Triangle.MidPoint
+  fullName: Vim.Math3d.Triangle.MidPoint
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MidPoint
+    path: ../src/Triangle.cs
+    startLine: 26
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Vector3 MidPoint { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Vector3
+    content.vb: Public ReadOnly Property MidPoint As Vector3
+  overload: Vim.Math3d.Triangle.MidPoint*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.NormalDirection
+  commentId: P:Vim.Math3d.Triangle.NormalDirection
+  id: NormalDirection
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: NormalDirection
+  nameWithType: Triangle.NormalDirection
+  fullName: Vim.Math3d.Triangle.NormalDirection
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: NormalDirection
+    path: ../src/Triangle.cs
+    startLine: 27
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Vector3 NormalDirection { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Vector3
+    content.vb: Public ReadOnly Property NormalDirection As Vector3
+  overload: Vim.Math3d.Triangle.NormalDirection*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.Normal
+  commentId: P:Vim.Math3d.Triangle.Normal
+  id: Normal
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Normal
+  nameWithType: Triangle.Normal
+  fullName: Vim.Math3d.Triangle.Normal
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Normal
+    path: ../src/Triangle.cs
+    startLine: 28
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Vector3 Normal { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Vector3
+    content.vb: Public ReadOnly Property Normal As Vector3
+  overload: Vim.Math3d.Triangle.Normal*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.SafeNormal
+  commentId: P:Vim.Math3d.Triangle.SafeNormal
+  id: SafeNormal
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: SafeNormal
+  nameWithType: Triangle.SafeNormal
+  fullName: Vim.Math3d.Triangle.SafeNormal
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SafeNormal
+    path: ../src/Triangle.cs
+    startLine: 29
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Vector3 SafeNormal { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Vector3
+    content.vb: Public ReadOnly Property SafeNormal As Vector3
+  overload: Vim.Math3d.Triangle.SafeNormal*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.BoundingBox
+  commentId: P:Vim.Math3d.Triangle.BoundingBox
+  id: BoundingBox
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: BoundingBox
+  nameWithType: Triangle.BoundingBox
+  fullName: Vim.Math3d.Triangle.BoundingBox
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: BoundingBox
+    path: ../src/Triangle.cs
+    startLine: 30
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly AABox BoundingBox { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.AABox
+    content.vb: Public ReadOnly Property BoundingBox As AABox
+  overload: Vim.Math3d.Triangle.BoundingBox*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.BoundingSphere
+  commentId: P:Vim.Math3d.Triangle.BoundingSphere
+  id: BoundingSphere
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: BoundingSphere
+  nameWithType: Triangle.BoundingSphere
+  fullName: Vim.Math3d.Triangle.BoundingSphere
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: BoundingSphere
+    path: ../src/Triangle.cs
+    startLine: 31
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Sphere BoundingSphere { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Sphere
+    content.vb: Public ReadOnly Property BoundingSphere As Sphere
+  overload: Vim.Math3d.Triangle.BoundingSphere*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.IsSliver(System.Single)
+  commentId: M:Vim.Math3d.Triangle.IsSliver(System.Single)
+  id: IsSliver(System.Single)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: IsSliver(Single)
+  nameWithType: Triangle.IsSliver(Single)
+  fullName: Vim.Math3d.Triangle.IsSliver(System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: IsSliver
+    path: ../src/Triangle.cs
+    startLine: 33
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool IsSliver(float tolerance = 1E-07F)
+    parameters:
+    - id: tolerance
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsSliver(tolerance As Single = 1E-07F) As Boolean
+  overload: Vim.Math3d.Triangle.IsSliver*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle.Side(System.Int32)
+  commentId: M:Vim.Math3d.Triangle.Side(System.Int32)
+  id: Side(System.Int32)
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Side(Int32)
+  nameWithType: Triangle.Side(Int32)
+  fullName: Vim.Math3d.Triangle.Side(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Side
+    path: ../src/Triangle.cs
+    startLine: 37
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Line Side(int n)
+    parameters:
+    - id: n
+      type: System.Int32
+    return:
+      type: Vim.Math3d.Line
+    content.vb: Public Function Side(n As Integer) As Line
+  overload: Vim.Math3d.Triangle.Side*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Triangle.Binormal
+  commentId: P:Vim.Math3d.Triangle.Binormal
+  id: Binormal
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Binormal
+  nameWithType: Triangle.Binormal
+  fullName: Vim.Math3d.Triangle.Binormal
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Binormal
+    path: ../src/Triangle.cs
+    startLine: 38
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Vector3 Binormal { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Vector3
+    content.vb: Public ReadOnly Property Binormal As Vector3
+  overload: Vim.Math3d.Triangle.Binormal*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.Tangent
+  commentId: P:Vim.Math3d.Triangle.Tangent
+  id: Tangent
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: Tangent
+  nameWithType: Triangle.Tangent
+  fullName: Vim.Math3d.Triangle.Tangent
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Tangent
+    path: ../src/Triangle.cs
+    startLine: 39
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Vector3 Tangent { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Vector3
+    content.vb: Public ReadOnly Property Tangent As Vector3
+  overload: Vim.Math3d.Triangle.Tangent*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.AB
+  commentId: P:Vim.Math3d.Triangle.AB
+  id: AB
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: AB
+  nameWithType: Triangle.AB
+  fullName: Vim.Math3d.Triangle.AB
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AB
+    path: ../src/Triangle.cs
+    startLine: 41
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Line AB { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Line
+    content.vb: Public ReadOnly Property AB As Line
+  overload: Vim.Math3d.Triangle.AB*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.BC
+  commentId: P:Vim.Math3d.Triangle.BC
+  id: BC
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: BC
+  nameWithType: Triangle.BC
+  fullName: Vim.Math3d.Triangle.BC
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: BC
+    path: ../src/Triangle.cs
+    startLine: 42
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Line BC { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Line
+    content.vb: Public ReadOnly Property BC As Line
+  overload: Vim.Math3d.Triangle.BC*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.CA
+  commentId: P:Vim.Math3d.Triangle.CA
+  id: CA
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: CA
+  nameWithType: Triangle.CA
+  fullName: Vim.Math3d.Triangle.CA
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CA
+    path: ../src/Triangle.cs
+    startLine: 43
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Line CA { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Line
+    content.vb: Public ReadOnly Property CA As Line
+  overload: Vim.Math3d.Triangle.CA*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.BA
+  commentId: P:Vim.Math3d.Triangle.BA
+  id: BA
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: BA
+  nameWithType: Triangle.BA
+  fullName: Vim.Math3d.Triangle.BA
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: BA
+    path: ../src/Triangle.cs
+    startLine: 45
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Line BA { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Line
+    content.vb: Public ReadOnly Property BA As Line
+  overload: Vim.Math3d.Triangle.BA*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.CB
+  commentId: P:Vim.Math3d.Triangle.CB
+  id: CB
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: CB
+  nameWithType: Triangle.CB
+  fullName: Vim.Math3d.Triangle.CB
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CB
+    path: ../src/Triangle.cs
+    startLine: 46
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Line CB { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Line
+    content.vb: Public ReadOnly Property CB As Line
+  overload: Vim.Math3d.Triangle.CB*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Triangle.AC
+  commentId: P:Vim.Math3d.Triangle.AC
+  id: AC
+  parent: Vim.Math3d.Triangle
+  langs:
+  - csharp
+  - vb
+  name: AC
+  nameWithType: Triangle.AC
+  fullName: Vim.Math3d.Triangle.AC
+  type: Property
+  source:
+    remote:
+      path: src/Triangle.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AC
+    path: ../src/Triangle.cs
+    startLine: 47
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Line AC { get; }
+    parameters: []
+    return:
+      type: Vim.Math3d.Line
+    content.vb: Public ReadOnly Property AC As Line
+  overload: Vim.Math3d.Triangle.AC*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.IEquatable{Vim.Math3d.Triangle}
+  commentId: T:System.IEquatable{Vim.Math3d.Triangle}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<Triangle>
+  nameWithType: IEquatable<Triangle>
+  fullName: System.IEquatable<Vim.Math3d.Triangle>
+  nameWithType.vb: IEquatable(Of Triangle)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.Triangle)
+  name.vb: IEquatable(Of Triangle)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Triangle
+    name: Triangle
+    nameWithType: Triangle
+    fullName: Vim.Math3d.Triangle
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Triangle
+    name: Triangle
+    nameWithType: Triangle
+    fullName: Vim.Math3d.Triangle
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}
+  commentId: T:Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}
+  parent: Vim.Math3d
+  definition: Vim.Math3d.ITransformable3D`1
+  name: ITransformable3D<Triangle>
+  nameWithType: ITransformable3D<Triangle>
+  fullName: Vim.Math3d.ITransformable3D<Vim.Math3d.Triangle>
+  nameWithType.vb: ITransformable3D(Of Triangle)
+  fullName.vb: Vim.Math3d.ITransformable3D(Of Vim.Math3d.Triangle)
+  name.vb: ITransformable3D(Of Triangle)
+  spec.csharp:
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Triangle
+    name: Triangle
+    nameWithType: Triangle
+    fullName: Vim.Math3d.Triangle
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Triangle
+    name: Triangle
+    nameWithType: Triangle
+    fullName: Vim.Math3d.Triangle
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.IPoints
+  commentId: T:Vim.Math3d.IPoints
+  parent: Vim.Math3d
+  name: IPoints
+  nameWithType: IPoints
+  fullName: Vim.Math3d.IPoints
+- uid: Vim.Math3d.IMappable{Vim.Math3d.Triangle,Vim.Math3d.Vector3}
+  commentId: T:Vim.Math3d.IMappable{Vim.Math3d.Triangle,Vim.Math3d.Vector3}
+  parent: Vim.Math3d
+  definition: Vim.Math3d.IMappable`2
+  name: IMappable<Triangle, Vector3>
+  nameWithType: IMappable<Triangle, Vector3>
+  fullName: Vim.Math3d.IMappable<Vim.Math3d.Triangle, Vim.Math3d.Vector3>
+  nameWithType.vb: IMappable(Of Triangle, Vector3)
+  fullName.vb: Vim.Math3d.IMappable(Of Vim.Math3d.Triangle, Vim.Math3d.Vector3)
+  name.vb: IMappable(Of Triangle, Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.IMappable`2
+    name: IMappable
+    nameWithType: IMappable
+    fullName: Vim.Math3d.IMappable
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Triangle
+    name: Triangle
+    nameWithType: Triangle
+    fullName: Vim.Math3d.Triangle
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Vim.Math3d.IMappable`2
+    name: IMappable
+    nameWithType: IMappable
+    fullName: Vim.Math3d.IMappable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Triangle
+    name: Triangle
+    nameWithType: Triangle
+    fullName: Vim.Math3d.Triangle
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.Matrix4x4[])
+  commentId: M:Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Matrix4x4[])
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Matrix4x4[])
+  name: Transform<Triangle>(Matrix4x4[])
+  nameWithType: Transformable3D.Transform<Triangle>(Matrix4x4[])
+  fullName: Vim.Math3d.Transformable3D.Transform<Vim.Math3d.Triangle>(Vim.Math3d.Matrix4x4[])
+  nameWithType.vb: Transformable3D.Transform(Of Triangle)(Matrix4x4())
+  fullName.vb: Vim.Math3d.Transformable3D.Transform(Of Vim.Math3d.Triangle)(Vim.Math3d.Matrix4x4())
+  name.vb: Transform(Of Triangle)(Matrix4x4())
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.Matrix4x4[])
+    name: Transform<Triangle>
+    nameWithType: Transformable3D.Transform<Triangle>
+    fullName: Vim.Math3d.Transformable3D.Transform<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.Matrix4x4[])
+    name: Transform(Of Triangle)
+    nameWithType: Transformable3D.Transform(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.Transform(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  name: Translate<Triangle>(Vector3)
+  nameWithType: Transformable3D.Translate<Triangle>(Vector3)
+  fullName: Vim.Math3d.Transformable3D.Translate<Vim.Math3d.Triangle>(Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.Translate(Of Triangle)(Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.Translate(Of Vim.Math3d.Triangle)(Vim.Math3d.Vector3)
+  name.vb: Translate(Of Triangle)(Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.Vector3)
+    name: Translate<Triangle>
+    nameWithType: Transformable3D.Translate<Triangle>
+    fullName: Vim.Math3d.Transformable3D.Translate<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.Vector3)
+    name: Translate(Of Triangle)
+    nameWithType: Transformable3D.Translate(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.Translate(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Translate``1(System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  name: Translate<Triangle>(Single, Single, Single)
+  nameWithType: Transformable3D.Translate<Triangle>(Single, Single, Single)
+  fullName: Vim.Math3d.Transformable3D.Translate<Vim.Math3d.Triangle>(System.Single, System.Single, System.Single)
+  nameWithType.vb: Transformable3D.Translate(Of Triangle)(Single, Single, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Translate(Of Vim.Math3d.Triangle)(System.Single, System.Single, System.Single)
+  name.vb: Translate(Of Triangle)(Single, Single, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(System.Single,System.Single,System.Single)
+    name: Translate<Triangle>
+    nameWithType: Transformable3D.Translate<Triangle>
+    fullName: Vim.Math3d.Transformable3D.Translate<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(System.Single,System.Single,System.Single)
+    name: Translate(Of Triangle)
+    nameWithType: Transformable3D.Translate(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.Translate(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Quaternion)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Quaternion)
+  name: Rotate<Triangle>(Quaternion)
+  nameWithType: Transformable3D.Rotate<Triangle>(Quaternion)
+  fullName: Vim.Math3d.Transformable3D.Rotate<Vim.Math3d.Triangle>(Vim.Math3d.Quaternion)
+  nameWithType.vb: Transformable3D.Rotate(Of Triangle)(Quaternion)
+  fullName.vb: Vim.Math3d.Transformable3D.Rotate(Of Vim.Math3d.Triangle)(Vim.Math3d.Quaternion)
+  name.vb: Rotate(Of Triangle)(Quaternion)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.Quaternion)
+    name: Rotate<Triangle>
+    nameWithType: Transformable3D.Rotate<Triangle>
+    fullName: Vim.Math3d.Transformable3D.Rotate<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.Quaternion)
+    name: Rotate(Of Triangle)
+    nameWithType: Transformable3D.Rotate(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.Rotate(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Scale``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: Scale<Triangle>(Single)
+  nameWithType: Transformable3D.Scale<Triangle>(Single)
+  fullName: Vim.Math3d.Transformable3D.Scale<Vim.Math3d.Triangle>(System.Single)
+  nameWithType.vb: Transformable3D.Scale(Of Triangle)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Scale(Of Vim.Math3d.Triangle)(System.Single)
+  name.vb: Scale(Of Triangle)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(System.Single)
+    name: Scale<Triangle>
+    nameWithType: Transformable3D.Scale<Triangle>
+    fullName: Vim.Math3d.Transformable3D.Scale<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(System.Single)
+    name: Scale(Of Triangle)
+    nameWithType: Transformable3D.Scale(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.Scale(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  name: Scale<Triangle>(Vector3)
+  nameWithType: Transformable3D.Scale<Triangle>(Vector3)
+  fullName: Vim.Math3d.Transformable3D.Scale<Vim.Math3d.Triangle>(Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.Scale(Of Triangle)(Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.Scale(Of Vim.Math3d.Triangle)(Vim.Math3d.Vector3)
+  name.vb: Scale(Of Triangle)(Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.Vector3)
+    name: Scale<Triangle>
+    nameWithType: Transformable3D.Scale<Triangle>
+    fullName: Vim.Math3d.Transformable3D.Scale<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.Vector3)
+    name: Scale(Of Triangle)
+    nameWithType: Transformable3D.Scale(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.Scale(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Scale``1(System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  name: Scale<Triangle>(Single, Single, Single)
+  nameWithType: Transformable3D.Scale<Triangle>(Single, Single, Single)
+  fullName: Vim.Math3d.Transformable3D.Scale<Vim.Math3d.Triangle>(System.Single, System.Single, System.Single)
+  nameWithType.vb: Transformable3D.Scale(Of Triangle)(Single, Single, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Scale(Of Vim.Math3d.Triangle)(System.Single, System.Single, System.Single)
+  name.vb: Scale(Of Triangle)(Single, Single, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(System.Single,System.Single,System.Single)
+    name: Scale<Triangle>
+    nameWithType: Transformable3D.Scale<Triangle>
+    fullName: Vim.Math3d.Transformable3D.Scale<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(System.Single,System.Single,System.Single)
+    name: Scale(Of Triangle)
+    nameWithType: Transformable3D.Scale(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.Scale(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.ScaleX``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.ScaleX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.ScaleX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: ScaleX<Triangle>(Single)
+  nameWithType: Transformable3D.ScaleX<Triangle>(Single)
+  fullName: Vim.Math3d.Transformable3D.ScaleX<Vim.Math3d.Triangle>(System.Single)
+  nameWithType.vb: Transformable3D.ScaleX(Of Triangle)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.ScaleX(Of Vim.Math3d.Triangle)(System.Single)
+  name.vb: ScaleX(Of Triangle)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.ScaleX``1(System.Single)
+    name: ScaleX<Triangle>
+    nameWithType: Transformable3D.ScaleX<Triangle>
+    fullName: Vim.Math3d.Transformable3D.ScaleX<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.ScaleX``1(System.Single)
+    name: ScaleX(Of Triangle)
+    nameWithType: Transformable3D.ScaleX(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.ScaleX(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.ScaleY``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.ScaleY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.ScaleY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: ScaleY<Triangle>(Single)
+  nameWithType: Transformable3D.ScaleY<Triangle>(Single)
+  fullName: Vim.Math3d.Transformable3D.ScaleY<Vim.Math3d.Triangle>(System.Single)
+  nameWithType.vb: Transformable3D.ScaleY(Of Triangle)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.ScaleY(Of Vim.Math3d.Triangle)(System.Single)
+  name.vb: ScaleY(Of Triangle)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.ScaleY``1(System.Single)
+    name: ScaleY<Triangle>
+    nameWithType: Transformable3D.ScaleY<Triangle>
+    fullName: Vim.Math3d.Transformable3D.ScaleY<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.ScaleY``1(System.Single)
+    name: ScaleY(Of Triangle)
+    nameWithType: Transformable3D.ScaleY(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.ScaleY(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.ScaleZ``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.ScaleZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.ScaleZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: ScaleZ<Triangle>(Single)
+  nameWithType: Transformable3D.ScaleZ<Triangle>(Single)
+  fullName: Vim.Math3d.Transformable3D.ScaleZ<Vim.Math3d.Triangle>(System.Single)
+  nameWithType.vb: Transformable3D.ScaleZ(Of Triangle)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.ScaleZ(Of Vim.Math3d.Triangle)(System.Single)
+  name.vb: ScaleZ(Of Triangle)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.ScaleZ``1(System.Single)
+    name: ScaleZ<Triangle>
+    nameWithType: Transformable3D.ScaleZ<Triangle>
+    fullName: Vim.Math3d.Transformable3D.ScaleZ<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.ScaleZ``1(System.Single)
+    name: ScaleZ(Of Triangle)
+    nameWithType: Transformable3D.ScaleZ(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.ScaleZ(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  name: LookAt<Triangle>(Vector3, Vector3, Vector3)
+  nameWithType: Transformable3D.LookAt<Triangle>(Vector3, Vector3, Vector3)
+  fullName: Vim.Math3d.Transformable3D.LookAt<Vim.Math3d.Triangle>(Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.LookAt(Of Triangle)(Vector3, Vector3, Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.LookAt(Of Vim.Math3d.Triangle)(Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  name.vb: LookAt(Of Triangle)(Vector3, Vector3, Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+    name: LookAt<Triangle>
+    nameWithType: Transformable3D.LookAt<Triangle>
+    fullName: Vim.Math3d.Transformable3D.LookAt<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+    name: LookAt(Of Triangle)
+    nameWithType: Transformable3D.LookAt(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.LookAt(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.Vector3,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,System.Single)
+  name: RotateAround<Triangle>(Vector3, Single)
+  nameWithType: Transformable3D.RotateAround<Triangle>(Vector3, Single)
+  fullName: Vim.Math3d.Transformable3D.RotateAround<Vim.Math3d.Triangle>(Vim.Math3d.Vector3, System.Single)
+  nameWithType.vb: Transformable3D.RotateAround(Of Triangle)(Vector3, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateAround(Of Vim.Math3d.Triangle)(Vim.Math3d.Vector3, System.Single)
+  name.vb: RotateAround(Of Triangle)(Vector3, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.Vector3,System.Single)
+    name: RotateAround<Triangle>
+    nameWithType: Transformable3D.RotateAround<Triangle>
+    fullName: Vim.Math3d.Transformable3D.RotateAround<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.Vector3,System.Single)
+    name: RotateAround(Of Triangle)
+    nameWithType: Transformable3D.RotateAround(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.RotateAround(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Rotate``1(System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  name: Rotate<Triangle>(Single, Single, Single)
+  nameWithType: Transformable3D.Rotate<Triangle>(Single, Single, Single)
+  fullName: Vim.Math3d.Transformable3D.Rotate<Vim.Math3d.Triangle>(System.Single, System.Single, System.Single)
+  nameWithType.vb: Transformable3D.Rotate(Of Triangle)(Single, Single, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Rotate(Of Vim.Math3d.Triangle)(System.Single, System.Single, System.Single)
+  name.vb: Rotate(Of Triangle)(Single, Single, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(System.Single,System.Single,System.Single)
+    name: Rotate<Triangle>
+    nameWithType: Transformable3D.Rotate<Triangle>
+    fullName: Vim.Math3d.Transformable3D.Rotate<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(System.Single,System.Single,System.Single)
+    name: Rotate(Of Triangle)
+    nameWithType: Transformable3D.Rotate(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.Rotate(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.Plane)
+  commentId: M:Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Plane)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Plane)
+  name: Reflect<Triangle>(Plane)
+  nameWithType: Transformable3D.Reflect<Triangle>(Plane)
+  fullName: Vim.Math3d.Transformable3D.Reflect<Vim.Math3d.Triangle>(Vim.Math3d.Plane)
+  nameWithType.vb: Transformable3D.Reflect(Of Triangle)(Plane)
+  fullName.vb: Vim.Math3d.Transformable3D.Reflect(Of Vim.Math3d.Triangle)(Vim.Math3d.Plane)
+  name.vb: Reflect(Of Triangle)(Plane)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.Plane)
+    name: Reflect<Triangle>
+    nameWithType: Transformable3D.Reflect<Triangle>
+    fullName: Vim.Math3d.Transformable3D.Reflect<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Plane
+    name: Plane
+    nameWithType: Plane
+    fullName: Vim.Math3d.Plane
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.Plane)
+    name: Reflect(Of Triangle)
+    nameWithType: Transformable3D.Reflect(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.Reflect(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Plane
+    name: Plane
+    nameWithType: Plane
+    fullName: Vim.Math3d.Plane
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.RotateX``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.RotateX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: RotateX<Triangle>(Single)
+  nameWithType: Transformable3D.RotateX<Triangle>(Single)
+  fullName: Vim.Math3d.Transformable3D.RotateX<Vim.Math3d.Triangle>(System.Single)
+  nameWithType.vb: Transformable3D.RotateX(Of Triangle)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateX(Of Vim.Math3d.Triangle)(System.Single)
+  name.vb: RotateX(Of Triangle)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateX``1(System.Single)
+    name: RotateX<Triangle>
+    nameWithType: Transformable3D.RotateX<Triangle>
+    fullName: Vim.Math3d.Transformable3D.RotateX<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateX``1(System.Single)
+    name: RotateX(Of Triangle)
+    nameWithType: Transformable3D.RotateX(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.RotateX(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.RotateY``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.RotateY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: RotateY<Triangle>(Single)
+  nameWithType: Transformable3D.RotateY<Triangle>(Single)
+  fullName: Vim.Math3d.Transformable3D.RotateY<Vim.Math3d.Triangle>(System.Single)
+  nameWithType.vb: Transformable3D.RotateY(Of Triangle)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateY(Of Vim.Math3d.Triangle)(System.Single)
+  name.vb: RotateY(Of Triangle)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateY``1(System.Single)
+    name: RotateY<Triangle>
+    nameWithType: Transformable3D.RotateY<Triangle>
+    fullName: Vim.Math3d.Transformable3D.RotateY<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateY``1(System.Single)
+    name: RotateY(Of Triangle)
+    nameWithType: Transformable3D.RotateY(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.RotateY(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.RotateZ``1(System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.RotateZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  name: RotateZ<Triangle>(Single)
+  nameWithType: Transformable3D.RotateZ<Triangle>(Single)
+  fullName: Vim.Math3d.Transformable3D.RotateZ<Vim.Math3d.Triangle>(System.Single)
+  nameWithType.vb: Transformable3D.RotateZ(Of Triangle)(Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateZ(Of Vim.Math3d.Triangle)(System.Single)
+  name.vb: RotateZ(Of Triangle)(Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateZ``1(System.Single)
+    name: RotateZ<Triangle>
+    nameWithType: Transformable3D.RotateZ<Triangle>
+    fullName: Vim.Math3d.Transformable3D.RotateZ<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateZ``1(System.Single)
+    name: RotateZ(Of Triangle)
+    nameWithType: Transformable3D.RotateZ(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.RotateZ(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+  parent: Vim.Math3d.Transformable3D
+  definition: Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+  name: TranslateRotateScale<Triangle>(Vector3, Quaternion, Vector3)
+  nameWithType: Transformable3D.TranslateRotateScale<Triangle>(Vector3, Quaternion, Vector3)
+  fullName: Vim.Math3d.Transformable3D.TranslateRotateScale<Vim.Math3d.Triangle>(Vim.Math3d.Vector3, Vim.Math3d.Quaternion, Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.TranslateRotateScale(Of Triangle)(Vector3, Quaternion, Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.TranslateRotateScale(Of Vim.Math3d.Triangle)(Vim.Math3d.Vector3, Vim.Math3d.Quaternion, Vim.Math3d.Vector3)
+  name.vb: TranslateRotateScale(Of Triangle)(Vector3, Quaternion, Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+    name: TranslateRotateScale<Triangle>
+    nameWithType: Transformable3D.TranslateRotateScale<Triangle>
+    fullName: Vim.Math3d.Transformable3D.TranslateRotateScale<Vim.Math3d.Triangle>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+    name: TranslateRotateScale(Of Triangle)
+    nameWithType: Transformable3D.TranslateRotateScale(Of Triangle)
+    fullName: Vim.Math3d.Transformable3D.TranslateRotateScale(Of Vim.Math3d.Triangle)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vim.Math3d.ITransformable3D`1
+  commentId: T:Vim.Math3d.ITransformable3D`1
+  name: ITransformable3D<TSelf>
+  nameWithType: ITransformable3D<TSelf>
+  fullName: Vim.Math3d.ITransformable3D<TSelf>
+  nameWithType.vb: ITransformable3D(Of TSelf)
+  fullName.vb: Vim.Math3d.ITransformable3D(Of TSelf)
+  name.vb: ITransformable3D(Of TSelf)
+  spec.csharp:
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TSelf
+    nameWithType: TSelf
+    fullName: TSelf
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TSelf
+    nameWithType: TSelf
+    fullName: TSelf
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.IMappable`2
+  commentId: T:Vim.Math3d.IMappable`2
+  name: IMappable<TContainer, TPart>
+  nameWithType: IMappable<TContainer, TPart>
+  fullName: Vim.Math3d.IMappable<TContainer, TPart>
+  nameWithType.vb: IMappable(Of TContainer, TPart)
+  fullName.vb: Vim.Math3d.IMappable(Of TContainer, TPart)
+  name.vb: IMappable(Of TContainer, TPart)
+  spec.csharp:
+  - uid: Vim.Math3d.IMappable`2
+    name: IMappable
+    nameWithType: IMappable
+    fullName: Vim.Math3d.IMappable
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContainer
+    nameWithType: TContainer
+    fullName: TContainer
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TPart
+    nameWithType: TPart
+    fullName: TPart
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Vim.Math3d.IMappable`2
+    name: IMappable
+    nameWithType: IMappable
+    fullName: Vim.Math3d.IMappable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContainer
+    nameWithType: TContainer
+    fullName: TContainer
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TPart
+    nameWithType: TPart
+    fullName: TPart
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Matrix4x4[])
+  commentId: M:Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Matrix4x4[])
+  name: Transform<T>(ITransformable3D<T>, Matrix4x4[])
+  nameWithType: Transformable3D.Transform<T>(ITransformable3D<T>, Matrix4x4[])
+  fullName: Vim.Math3d.Transformable3D.Transform<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Matrix4x4[])
+  nameWithType.vb: Transformable3D.Transform(Of T)(ITransformable3D(Of T), Matrix4x4())
+  fullName.vb: Vim.Math3d.Transformable3D.Transform(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Matrix4x4())
+  name.vb: Transform(Of T)(ITransformable3D(Of T), Matrix4x4())
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Matrix4x4[])
+    name: Transform<T>
+    nameWithType: Transformable3D.Transform<T>
+    fullName: Vim.Math3d.Transformable3D.Transform<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Transform``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Matrix4x4[])
+    name: Transform(Of T)
+    nameWithType: Transformable3D.Transform(Of T)
+    fullName: Vim.Math3d.Transformable3D.Transform(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D
+  commentId: T:Vim.Math3d.Transformable3D
+  parent: Vim.Math3d
+  name: Transformable3D
+  nameWithType: Transformable3D
+  fullName: Vim.Math3d.Transformable3D
+- uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  name: Translate<T>(ITransformable3D<T>, Vector3)
+  nameWithType: Transformable3D.Translate<T>(ITransformable3D<T>, Vector3)
+  fullName: Vim.Math3d.Transformable3D.Translate<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.Translate(Of T)(ITransformable3D(Of T), Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.Translate(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Vector3)
+  name.vb: Translate(Of T)(ITransformable3D(Of T), Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+    name: Translate<T>
+    nameWithType: Transformable3D.Translate<T>
+    fullName: Vim.Math3d.Transformable3D.Translate<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+    name: Translate(Of T)
+    nameWithType: Transformable3D.Translate(Of T)
+    fullName: Vim.Math3d.Transformable3D.Translate(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  isExternal: true
+  name: Translate<T>(ITransformable3D<T>, Single, Single, Single)
+  nameWithType: Transformable3D.Translate<T>(ITransformable3D<T>, Single, Single, Single)
+  fullName: Vim.Math3d.Transformable3D.Translate<T>(Vim.Math3d.ITransformable3D<T>, System.Single, System.Single, System.Single)
+  nameWithType.vb: Transformable3D.Translate(Of T)(ITransformable3D(Of T), Single, Single, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Translate(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single, System.Single, System.Single)
+  name.vb: Translate(Of T)(ITransformable3D(Of T), Single, Single, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+    name: Translate<T>
+    nameWithType: Transformable3D.Translate<T>
+    fullName: Vim.Math3d.Transformable3D.Translate<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Translate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+    name: Translate(Of T)
+    nameWithType: Transformable3D.Translate(Of T)
+    fullName: Vim.Math3d.Transformable3D.Translate(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Quaternion)
+  commentId: M:Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Quaternion)
+  name: Rotate<T>(ITransformable3D<T>, Quaternion)
+  nameWithType: Transformable3D.Rotate<T>(ITransformable3D<T>, Quaternion)
+  fullName: Vim.Math3d.Transformable3D.Rotate<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Quaternion)
+  nameWithType.vb: Transformable3D.Rotate(Of T)(ITransformable3D(Of T), Quaternion)
+  fullName.vb: Vim.Math3d.Transformable3D.Rotate(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Quaternion)
+  name.vb: Rotate(Of T)(ITransformable3D(Of T), Quaternion)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Quaternion)
+    name: Rotate<T>
+    nameWithType: Transformable3D.Rotate<T>
+    fullName: Vim.Math3d.Transformable3D.Rotate<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Quaternion)
+    name: Rotate(Of T)
+    nameWithType: Transformable3D.Rotate(Of T)
+    fullName: Vim.Math3d.Transformable3D.Rotate(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: Scale<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.Scale<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.Scale<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.Scale(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Scale(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: Scale(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: Scale<T>
+    nameWithType: Transformable3D.Scale<T>
+    fullName: Vim.Math3d.Transformable3D.Scale<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: Scale(Of T)
+    nameWithType: Transformable3D.Scale(Of T)
+    fullName: Vim.Math3d.Transformable3D.Scale(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+  name: Scale<T>(ITransformable3D<T>, Vector3)
+  nameWithType: Transformable3D.Scale<T>(ITransformable3D<T>, Vector3)
+  fullName: Vim.Math3d.Transformable3D.Scale<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.Scale(Of T)(ITransformable3D(Of T), Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.Scale(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Vector3)
+  name.vb: Scale(Of T)(ITransformable3D(Of T), Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+    name: Scale<T>
+    nameWithType: Transformable3D.Scale<T>
+    fullName: Vim.Math3d.Transformable3D.Scale<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3)
+    name: Scale(Of T)
+    nameWithType: Transformable3D.Scale(Of T)
+    fullName: Vim.Math3d.Transformable3D.Scale(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  isExternal: true
+  name: Scale<T>(ITransformable3D<T>, Single, Single, Single)
+  nameWithType: Transformable3D.Scale<T>(ITransformable3D<T>, Single, Single, Single)
+  fullName: Vim.Math3d.Transformable3D.Scale<T>(Vim.Math3d.ITransformable3D<T>, System.Single, System.Single, System.Single)
+  nameWithType.vb: Transformable3D.Scale(Of T)(ITransformable3D(Of T), Single, Single, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Scale(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single, System.Single, System.Single)
+  name.vb: Scale(Of T)(ITransformable3D(Of T), Single, Single, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+    name: Scale<T>
+    nameWithType: Transformable3D.Scale<T>
+    fullName: Vim.Math3d.Transformable3D.Scale<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Scale``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+    name: Scale(Of T)
+    nameWithType: Transformable3D.Scale(Of T)
+    fullName: Vim.Math3d.Transformable3D.Scale(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.ScaleX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.ScaleX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: ScaleX<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.ScaleX<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.ScaleX<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.ScaleX(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.ScaleX(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: ScaleX(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.ScaleX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: ScaleX<T>
+    nameWithType: Transformable3D.ScaleX<T>
+    fullName: Vim.Math3d.Transformable3D.ScaleX<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.ScaleX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: ScaleX(Of T)
+    nameWithType: Transformable3D.ScaleX(Of T)
+    fullName: Vim.Math3d.Transformable3D.ScaleX(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.ScaleY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.ScaleY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: ScaleY<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.ScaleY<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.ScaleY<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.ScaleY(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.ScaleY(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: ScaleY(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.ScaleY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: ScaleY<T>
+    nameWithType: Transformable3D.ScaleY<T>
+    fullName: Vim.Math3d.Transformable3D.ScaleY<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.ScaleY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: ScaleY(Of T)
+    nameWithType: Transformable3D.ScaleY(Of T)
+    fullName: Vim.Math3d.Transformable3D.ScaleY(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.ScaleZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.ScaleZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: ScaleZ<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.ScaleZ<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.ScaleZ<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.ScaleZ(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.ScaleZ(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: ScaleZ(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.ScaleZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: ScaleZ<T>
+    nameWithType: Transformable3D.ScaleZ<T>
+    fullName: Vim.Math3d.Transformable3D.ScaleZ<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.ScaleZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: ScaleZ(Of T)
+    nameWithType: Transformable3D.ScaleZ(Of T)
+    fullName: Vim.Math3d.Transformable3D.ScaleZ(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+  name: LookAt<T>(ITransformable3D<T>, Vector3, Vector3, Vector3)
+  nameWithType: Transformable3D.LookAt<T>(ITransformable3D<T>, Vector3, Vector3, Vector3)
+  fullName: Vim.Math3d.Transformable3D.LookAt<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.LookAt(Of T)(ITransformable3D(Of T), Vector3, Vector3, Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.LookAt(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  name.vb: LookAt(Of T)(ITransformable3D(Of T), Vector3, Vector3, Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+    name: LookAt<T>
+    nameWithType: Transformable3D.LookAt<T>
+    fullName: Vim.Math3d.Transformable3D.LookAt<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.LookAt``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)
+    name: LookAt(Of T)
+    nameWithType: Transformable3D.LookAt(Of T)
+    fullName: Vim.Math3d.Transformable3D.LookAt(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,System.Single)
+  isExternal: true
+  name: RotateAround<T>(ITransformable3D<T>, Vector3, Single)
+  nameWithType: Transformable3D.RotateAround<T>(ITransformable3D<T>, Vector3, Single)
+  fullName: Vim.Math3d.Transformable3D.RotateAround<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Vector3, System.Single)
+  nameWithType.vb: Transformable3D.RotateAround(Of T)(ITransformable3D(Of T), Vector3, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateAround(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Vector3, System.Single)
+  name.vb: RotateAround(Of T)(ITransformable3D(Of T), Vector3, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,System.Single)
+    name: RotateAround<T>
+    nameWithType: Transformable3D.RotateAround<T>
+    fullName: Vim.Math3d.Transformable3D.RotateAround<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateAround``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,System.Single)
+    name: RotateAround(Of T)
+    nameWithType: Transformable3D.RotateAround(Of T)
+    fullName: Vim.Math3d.Transformable3D.RotateAround(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+  isExternal: true
+  name: Rotate<T>(ITransformable3D<T>, Single, Single, Single)
+  nameWithType: Transformable3D.Rotate<T>(ITransformable3D<T>, Single, Single, Single)
+  fullName: Vim.Math3d.Transformable3D.Rotate<T>(Vim.Math3d.ITransformable3D<T>, System.Single, System.Single, System.Single)
+  nameWithType.vb: Transformable3D.Rotate(Of T)(ITransformable3D(Of T), Single, Single, Single)
+  fullName.vb: Vim.Math3d.Transformable3D.Rotate(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single, System.Single, System.Single)
+  name.vb: Rotate(Of T)(ITransformable3D(Of T), Single, Single, Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+    name: Rotate<T>
+    nameWithType: Transformable3D.Rotate<T>
+    fullName: Vim.Math3d.Transformable3D.Rotate<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Rotate``1(Vim.Math3d.ITransformable3D{``0},System.Single,System.Single,System.Single)
+    name: Rotate(Of T)
+    nameWithType: Transformable3D.Rotate(Of T)
+    fullName: Vim.Math3d.Transformable3D.Rotate(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Plane)
+  commentId: M:Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Plane)
+  name: Reflect<T>(ITransformable3D<T>, Plane)
+  nameWithType: Transformable3D.Reflect<T>(ITransformable3D<T>, Plane)
+  fullName: Vim.Math3d.Transformable3D.Reflect<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Plane)
+  nameWithType.vb: Transformable3D.Reflect(Of T)(ITransformable3D(Of T), Plane)
+  fullName.vb: Vim.Math3d.Transformable3D.Reflect(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Plane)
+  name.vb: Reflect(Of T)(ITransformable3D(Of T), Plane)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Plane)
+    name: Reflect<T>
+    nameWithType: Transformable3D.Reflect<T>
+    fullName: Vim.Math3d.Transformable3D.Reflect<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Plane
+    name: Plane
+    nameWithType: Plane
+    fullName: Vim.Math3d.Plane
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.Reflect``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Plane)
+    name: Reflect(Of T)
+    nameWithType: Transformable3D.Reflect(Of T)
+    fullName: Vim.Math3d.Transformable3D.Reflect(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Plane
+    name: Plane
+    nameWithType: Plane
+    fullName: Vim.Math3d.Plane
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.RotateX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: RotateX<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.RotateX<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.RotateX<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.RotateX(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateX(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: RotateX(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: RotateX<T>
+    nameWithType: Transformable3D.RotateX<T>
+    fullName: Vim.Math3d.Transformable3D.RotateX<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateX``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: RotateX(Of T)
+    nameWithType: Transformable3D.RotateX(Of T)
+    fullName: Vim.Math3d.Transformable3D.RotateX(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.RotateY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: RotateY<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.RotateY<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.RotateY<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.RotateY(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateY(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: RotateY(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: RotateY<T>
+    nameWithType: Transformable3D.RotateY<T>
+    fullName: Vim.Math3d.Transformable3D.RotateY<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateY``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: RotateY(Of T)
+    nameWithType: Transformable3D.RotateY(Of T)
+    fullName: Vim.Math3d.Transformable3D.RotateY(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.RotateZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  commentId: M:Vim.Math3d.Transformable3D.RotateZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+  isExternal: true
+  name: RotateZ<T>(ITransformable3D<T>, Single)
+  nameWithType: Transformable3D.RotateZ<T>(ITransformable3D<T>, Single)
+  fullName: Vim.Math3d.Transformable3D.RotateZ<T>(Vim.Math3d.ITransformable3D<T>, System.Single)
+  nameWithType.vb: Transformable3D.RotateZ(Of T)(ITransformable3D(Of T), Single)
+  fullName.vb: Vim.Math3d.Transformable3D.RotateZ(Of T)(Vim.Math3d.ITransformable3D(Of T), System.Single)
+  name.vb: RotateZ(Of T)(ITransformable3D(Of T), Single)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.RotateZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: RotateZ<T>
+    nameWithType: Transformable3D.RotateZ<T>
+    fullName: Vim.Math3d.Transformable3D.RotateZ<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.RotateZ``1(Vim.Math3d.ITransformable3D{``0},System.Single)
+    name: RotateZ(Of T)
+    nameWithType: Transformable3D.RotateZ(Of T)
+    fullName: Vim.Math3d.Transformable3D.RotateZ(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+  commentId: M:Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+  name: TranslateRotateScale<T>(ITransformable3D<T>, Vector3, Quaternion, Vector3)
+  nameWithType: Transformable3D.TranslateRotateScale<T>(ITransformable3D<T>, Vector3, Quaternion, Vector3)
+  fullName: Vim.Math3d.Transformable3D.TranslateRotateScale<T>(Vim.Math3d.ITransformable3D<T>, Vim.Math3d.Vector3, Vim.Math3d.Quaternion, Vim.Math3d.Vector3)
+  nameWithType.vb: Transformable3D.TranslateRotateScale(Of T)(ITransformable3D(Of T), Vector3, Quaternion, Vector3)
+  fullName.vb: Vim.Math3d.Transformable3D.TranslateRotateScale(Of T)(Vim.Math3d.ITransformable3D(Of T), Vim.Math3d.Vector3, Vim.Math3d.Quaternion, Vim.Math3d.Vector3)
+  name.vb: TranslateRotateScale(Of T)(ITransformable3D(Of T), Vector3, Quaternion, Vector3)
+  spec.csharp:
+  - uid: Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+    name: TranslateRotateScale<T>
+    nameWithType: Transformable3D.TranslateRotateScale<T>
+    fullName: Vim.Math3d.Transformable3D.TranslateRotateScale<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.Transformable3D.TranslateRotateScale``1(Vim.Math3d.ITransformable3D{``0},Vim.Math3d.Vector3,Vim.Math3d.Quaternion,Vim.Math3d.Vector3)
+    name: TranslateRotateScale(Of T)
+    nameWithType: Transformable3D.TranslateRotateScale(Of T)
+    fullName: Vim.Math3d.Transformable3D.TranslateRotateScale(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ITransformable3D`1
+    name: ITransformable3D
+    nameWithType: ITransformable3D
+    fullName: Vim.Math3d.ITransformable3D
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Quaternion
+    name: Quaternion
+    nameWithType: Quaternion
+    fullName: Vim.Math3d.Quaternion
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Vector3
+  commentId: T:Vim.Math3d.Vector3
+  parent: Vim.Math3d
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vim.Math3d.Vector3
+- uid: Vim.Math3d.Triangle.#ctor*
+  commentId: Overload:Vim.Math3d.Triangle.#ctor
+  name: Triangle
+  nameWithType: Triangle.Triangle
+  fullName: Vim.Math3d.Triangle.Triangle
+- uid: System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3}
+  commentId: T:System.ValueTuple{Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3}
+  parent: System
+  definition: System.ValueTuple`3
+  name: (T1, T2, T3)<Vector3, Vector3, Vector3>
+  nameWithType: (T1, T2, T3)<Vector3, Vector3, Vector3>
+  fullName: System.ValueTuple<Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3>
+  nameWithType.vb: (T1, T2, T3)(Of Vector3, Vector3, Vector3)
+  fullName.vb: System.ValueTuple(Of Vim.Math3d.Vector3, Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  name.vb: (T1, T2, T3)(Of Vector3, Vector3, Vector3)
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`3
+  commentId: T:System.ValueTuple`3
+  isExternal: true
+  name: (T1, T2, T3)<T1, T2, T3>
+  nameWithType: (T1, T2, T3)<T1, T2, T3>
+  fullName: System.ValueTuple<T1, T2, T3>
+  nameWithType.vb: (T1, T2, T3)(Of T1, T2, T3)
+  fullName.vb: System.ValueTuple(Of T1, T2, T3)
+  name.vb: (T1, T2, T3)(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Triangle.Create*
+  commentId: Overload:Vim.Math3d.Triangle.Create
+  name: Create
+  nameWithType: Triangle.Create
+  fullName: Vim.Math3d.Triangle.Create
+- uid: Vim.Math3d.Triangle
+  commentId: T:Vim.Math3d.Triangle
+  parent: Vim.Math3d
+  name: Triangle
+  nameWithType: Triangle
+  fullName: Vim.Math3d.Triangle
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Triangle.Equals*
+  commentId: Overload:Vim.Math3d.Triangle.Equals
+  name: Equals
+  nameWithType: Triangle.Equals
+  fullName: Vim.Math3d.Triangle.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Triangle.GetHashCode*
+  commentId: Overload:Vim.Math3d.Triangle.GetHashCode
+  name: GetHashCode
+  nameWithType: Triangle.GetHashCode
+  fullName: Vim.Math3d.Triangle.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Triangle.ToString*
+  commentId: Overload:Vim.Math3d.Triangle.ToString
+  name: ToString
+  nameWithType: Triangle.ToString
+  fullName: Vim.Math3d.Triangle.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vim.Math3d.Triangle.Deconstruct*
+  commentId: Overload:Vim.Math3d.Triangle.Deconstruct
+  name: Deconstruct
+  nameWithType: Triangle.Deconstruct
+  fullName: Vim.Math3d.Triangle.Deconstruct
+- uid: System.IEquatable{Vim.Math3d.Triangle}.Equals(Vim.Math3d.Triangle)
+  commentId: M:System.IEquatable{Vim.Math3d.Triangle}.Equals(Vim.Math3d.Triangle)
+  parent: System.IEquatable{Vim.Math3d.Triangle}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(Triangle)
+  nameWithType: IEquatable<Triangle>.Equals(Triangle)
+  fullName: System.IEquatable<Vim.Math3d.Triangle>.Equals(Vim.Math3d.Triangle)
+  nameWithType.vb: IEquatable(Of Triangle).Equals(Triangle)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.Triangle).Equals(Vim.Math3d.Triangle)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<Triangle>.Equals
+    fullName: System.IEquatable<Vim.Math3d.Triangle>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Triangle
+    name: Triangle
+    nameWithType: Triangle
+    fullName: Vim.Math3d.Triangle
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of Triangle).Equals
+    fullName: System.IEquatable(Of Vim.Math3d.Triangle).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Triangle
+    name: Triangle
+    nameWithType: Triangle
+    fullName: Vim.Math3d.Triangle
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Triangle.op_Equality*
+  commentId: Overload:Vim.Math3d.Triangle.op_Equality
+  name: Equality
+  nameWithType: Triangle.Equality
+  fullName: Vim.Math3d.Triangle.Equality
+- uid: Vim.Math3d.Triangle.op_Inequality*
+  commentId: Overload:Vim.Math3d.Triangle.op_Inequality
+  name: Inequality
+  nameWithType: Triangle.Inequality
+  fullName: Vim.Math3d.Triangle.Inequality
+- uid: Vim.Math3d.Triangle.op_Implicit*
+  commentId: Overload:Vim.Math3d.Triangle.op_Implicit
+  name: Implicit
+  nameWithType: Triangle.Implicit
+  fullName: Vim.Math3d.Triangle.Implicit
+  nameWithType.vb: Triangle.Widening
+  fullName.vb: Vim.Math3d.Triangle.Widening
+  name.vb: Widening
+- uid: Vim.Math3d.Triangle.AlmostEquals*
+  commentId: Overload:Vim.Math3d.Triangle.AlmostEquals
+  name: AlmostEquals
+  nameWithType: Triangle.AlmostEquals
+  fullName: Vim.Math3d.Triangle.AlmostEquals
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Vim.Math3d.Triangle.SetA*
+  commentId: Overload:Vim.Math3d.Triangle.SetA
+  name: SetA
+  nameWithType: Triangle.SetA
+  fullName: Vim.Math3d.Triangle.SetA
+- uid: Vim.Math3d.Triangle.SetB*
+  commentId: Overload:Vim.Math3d.Triangle.SetB
+  name: SetB
+  nameWithType: Triangle.SetB
+  fullName: Vim.Math3d.Triangle.SetB
+- uid: Vim.Math3d.Triangle.SetC*
+  commentId: Overload:Vim.Math3d.Triangle.SetC
+  name: SetC
+  nameWithType: Triangle.SetC
+  fullName: Vim.Math3d.Triangle.SetC
+- uid: Vim.Math3d.Triangle.Transform*
+  commentId: Overload:Vim.Math3d.Triangle.Transform
+  name: Transform
+  nameWithType: Triangle.Transform
+  fullName: Vim.Math3d.Triangle.Transform
+- uid: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Transform(Vim.Math3d.Matrix4x4)
+  commentId: M:Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}.Transform(Vim.Math3d.Matrix4x4)
+  parent: Vim.Math3d.ITransformable3D{Vim.Math3d.Triangle}
+  definition: Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+  name: Transform(Matrix4x4)
+  nameWithType: ITransformable3D<Triangle>.Transform(Matrix4x4)
+  fullName: Vim.Math3d.ITransformable3D<Vim.Math3d.Triangle>.Transform(Vim.Math3d.Matrix4x4)
+  nameWithType.vb: ITransformable3D(Of Triangle).Transform(Matrix4x4)
+  fullName.vb: Vim.Math3d.ITransformable3D(Of Vim.Math3d.Triangle).Transform(Vim.Math3d.Matrix4x4)
+  spec.csharp:
+  - uid: Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+    name: Transform
+    nameWithType: ITransformable3D<Triangle>.Transform
+    fullName: Vim.Math3d.ITransformable3D<Vim.Math3d.Triangle>.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+    name: Transform
+    nameWithType: ITransformable3D(Of Triangle).Transform
+    fullName: Vim.Math3d.ITransformable3D(Of Vim.Math3d.Triangle).Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Matrix4x4
+  commentId: T:Vim.Math3d.Matrix4x4
+  parent: Vim.Math3d
+  name: Matrix4x4
+  nameWithType: Matrix4x4
+  fullName: Vim.Math3d.Matrix4x4
+- uid: Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+  commentId: M:Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+  name: Transform(Matrix4x4)
+  nameWithType: ITransformable3D<TSelf>.Transform(Matrix4x4)
+  fullName: Vim.Math3d.ITransformable3D<TSelf>.Transform(Vim.Math3d.Matrix4x4)
+  nameWithType.vb: ITransformable3D(Of TSelf).Transform(Matrix4x4)
+  fullName.vb: Vim.Math3d.ITransformable3D(Of TSelf).Transform(Vim.Math3d.Matrix4x4)
+  spec.csharp:
+  - uid: Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+    name: Transform
+    nameWithType: ITransformable3D<TSelf>.Transform
+    fullName: Vim.Math3d.ITransformable3D<TSelf>.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.ITransformable3D`1.Transform(Vim.Math3d.Matrix4x4)
+    name: Transform
+    nameWithType: ITransformable3D(Of TSelf).Transform
+    fullName: Vim.Math3d.ITransformable3D(Of TSelf).Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Matrix4x4
+    name: Matrix4x4
+    nameWithType: Matrix4x4
+    fullName: Vim.Math3d.Matrix4x4
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Triangle.NumPoints*
+  commentId: Overload:Vim.Math3d.Triangle.NumPoints
+  name: NumPoints
+  nameWithType: Triangle.NumPoints
+  fullName: Vim.Math3d.Triangle.NumPoints
+- uid: Vim.Math3d.IPoints.NumPoints
+  commentId: P:Vim.Math3d.IPoints.NumPoints
+  parent: Vim.Math3d.IPoints
+  name: NumPoints
+  nameWithType: IPoints.NumPoints
+  fullName: Vim.Math3d.IPoints.NumPoints
+- uid: Vim.Math3d.Triangle.GetPoint*
+  commentId: Overload:Vim.Math3d.Triangle.GetPoint
+  name: GetPoint
+  nameWithType: Triangle.GetPoint
+  fullName: Vim.Math3d.Triangle.GetPoint
+- uid: Vim.Math3d.IPoints.GetPoint(System.Int32)
+  commentId: M:Vim.Math3d.IPoints.GetPoint(System.Int32)
+  parent: Vim.Math3d.IPoints
+  isExternal: true
+  name: GetPoint(Int32)
+  nameWithType: IPoints.GetPoint(Int32)
+  fullName: Vim.Math3d.IPoints.GetPoint(System.Int32)
+  spec.csharp:
+  - uid: Vim.Math3d.IPoints.GetPoint(System.Int32)
+    name: GetPoint
+    nameWithType: IPoints.GetPoint
+    fullName: Vim.Math3d.IPoints.GetPoint
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.IPoints.GetPoint(System.Int32)
+    name: GetPoint
+    nameWithType: IPoints.GetPoint
+    fullName: Vim.Math3d.IPoints.GetPoint
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Triangle.Map*
+  commentId: Overload:Vim.Math3d.Triangle.Map
+  name: Map
+  nameWithType: Triangle.Map
+  fullName: Vim.Math3d.Triangle.Map
+- uid: Vim.Math3d.IMappable{Vim.Math3d.Triangle,Vim.Math3d.Vector3}.Map(System.Func{Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  commentId: M:Vim.Math3d.IMappable{Vim.Math3d.Triangle,Vim.Math3d.Vector3}.Map(System.Func{Vim.Math3d.Vector3,Vim.Math3d.Vector3})
+  parent: Vim.Math3d.IMappable{Vim.Math3d.Triangle,Vim.Math3d.Vector3}
+  definition: Vim.Math3d.IMappable`2.Map(System.Func{`1,`1})
+  name: Map(Func<Vector3, Vector3>)
+  nameWithType: IMappable<Triangle, Vector3>.Map(Func<Vector3, Vector3>)
+  fullName: Vim.Math3d.IMappable<Vim.Math3d.Triangle, Vim.Math3d.Vector3>.Map(System.Func<Vim.Math3d.Vector3, Vim.Math3d.Vector3>)
+  nameWithType.vb: IMappable(Of Triangle, Vector3).Map(Func(Of Vector3, Vector3))
+  fullName.vb: Vim.Math3d.IMappable(Of Vim.Math3d.Triangle, Vim.Math3d.Vector3).Map(System.Func(Of Vim.Math3d.Vector3, Vim.Math3d.Vector3))
+  name.vb: Map(Func(Of Vector3, Vector3))
+  spec.csharp:
+  - uid: Vim.Math3d.IMappable`2.Map(System.Func{`1,`1})
+    name: Map
+    nameWithType: IMappable<Triangle, Vector3>.Map
+    fullName: Vim.Math3d.IMappable<Vim.Math3d.Triangle, Vim.Math3d.Vector3>.Map
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.IMappable`2.Map(System.Func{`1,`1})
+    name: Map
+    nameWithType: IMappable(Of Triangle, Vector3).Map
+    fullName: Vim.Math3d.IMappable(Of Vim.Math3d.Triangle, Vim.Math3d.Vector3).Map
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func{Vim.Math3d.Vector3,Vim.Math3d.Vector3}
+  commentId: T:System.Func{Vim.Math3d.Vector3,Vim.Math3d.Vector3}
+  parent: System
+  definition: System.Func`2
+  name: Func<Vector3, Vector3>
+  nameWithType: Func<Vector3, Vector3>
+  fullName: System.Func<Vim.Math3d.Vector3, Vim.Math3d.Vector3>
+  nameWithType.vb: Func(Of Vector3, Vector3)
+  fullName.vb: System.Func(Of Vim.Math3d.Vector3, Vim.Math3d.Vector3)
+  name.vb: Func(Of Vector3, Vector3)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Vim.Math3d.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vim.Math3d.Vector3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.IMappable`2.Map(System.Func{`1,`1})
+  commentId: M:Vim.Math3d.IMappable`2.Map(System.Func{`1,`1})
+  isExternal: true
+  name: Map(Func<TPart, TPart>)
+  nameWithType: IMappable<TContainer, TPart>.Map(Func<TPart, TPart>)
+  fullName: Vim.Math3d.IMappable<TContainer, TPart>.Map(System.Func<TPart, TPart>)
+  nameWithType.vb: IMappable(Of TContainer, TPart).Map(Func(Of TPart, TPart))
+  fullName.vb: Vim.Math3d.IMappable(Of TContainer, TPart).Map(System.Func(Of TPart, TPart))
+  name.vb: Map(Func(Of TPart, TPart))
+  spec.csharp:
+  - uid: Vim.Math3d.IMappable`2.Map(System.Func{`1,`1})
+    name: Map
+    nameWithType: IMappable<TContainer, TPart>.Map
+    fullName: Vim.Math3d.IMappable<TContainer, TPart>.Map
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPart
+    nameWithType: TPart
+    fullName: TPart
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TPart
+    nameWithType: TPart
+    fullName: TPart
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Vim.Math3d.IMappable`2.Map(System.Func{`1,`1})
+    name: Map
+    nameWithType: IMappable(Of TContainer, TPart).Map
+    fullName: Vim.Math3d.IMappable(Of TContainer, TPart).Map
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPart
+    nameWithType: TPart
+    fullName: TPart
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TPart
+    nameWithType: TPart
+    fullName: TPart
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Triangle.LengthA*
+  commentId: Overload:Vim.Math3d.Triangle.LengthA
+  name: LengthA
+  nameWithType: Triangle.LengthA
+  fullName: Vim.Math3d.Triangle.LengthA
+- uid: Vim.Math3d.Triangle.LengthB*
+  commentId: Overload:Vim.Math3d.Triangle.LengthB
+  name: LengthB
+  nameWithType: Triangle.LengthB
+  fullName: Vim.Math3d.Triangle.LengthB
+- uid: Vim.Math3d.Triangle.LengthC*
+  commentId: Overload:Vim.Math3d.Triangle.LengthC
+  name: LengthC
+  nameWithType: Triangle.LengthC
+  fullName: Vim.Math3d.Triangle.LengthC
+- uid: Vim.Math3d.Triangle.HasArea*
+  commentId: Overload:Vim.Math3d.Triangle.HasArea
+  name: HasArea
+  nameWithType: Triangle.HasArea
+  fullName: Vim.Math3d.Triangle.HasArea
+- uid: Vim.Math3d.Triangle.Area*
+  commentId: Overload:Vim.Math3d.Triangle.Area
+  name: Area
+  nameWithType: Triangle.Area
+  fullName: Vim.Math3d.Triangle.Area
+- uid: Vim.Math3d.Triangle.Perimeter*
+  commentId: Overload:Vim.Math3d.Triangle.Perimeter
+  name: Perimeter
+  nameWithType: Triangle.Perimeter
+  fullName: Vim.Math3d.Triangle.Perimeter
+- uid: Vim.Math3d.Triangle.MidPoint*
+  commentId: Overload:Vim.Math3d.Triangle.MidPoint
+  name: MidPoint
+  nameWithType: Triangle.MidPoint
+  fullName: Vim.Math3d.Triangle.MidPoint
+- uid: Vim.Math3d.Triangle.NormalDirection*
+  commentId: Overload:Vim.Math3d.Triangle.NormalDirection
+  name: NormalDirection
+  nameWithType: Triangle.NormalDirection
+  fullName: Vim.Math3d.Triangle.NormalDirection
+- uid: Vim.Math3d.Triangle.Normal*
+  commentId: Overload:Vim.Math3d.Triangle.Normal
+  name: Normal
+  nameWithType: Triangle.Normal
+  fullName: Vim.Math3d.Triangle.Normal
+- uid: Vim.Math3d.Triangle.SafeNormal*
+  commentId: Overload:Vim.Math3d.Triangle.SafeNormal
+  name: SafeNormal
+  nameWithType: Triangle.SafeNormal
+  fullName: Vim.Math3d.Triangle.SafeNormal
+- uid: Vim.Math3d.Triangle.BoundingBox*
+  commentId: Overload:Vim.Math3d.Triangle.BoundingBox
+  name: BoundingBox
+  nameWithType: Triangle.BoundingBox
+  fullName: Vim.Math3d.Triangle.BoundingBox
+- uid: Vim.Math3d.AABox
+  commentId: T:Vim.Math3d.AABox
+  parent: Vim.Math3d
+  name: AABox
+  nameWithType: AABox
+  fullName: Vim.Math3d.AABox
+- uid: Vim.Math3d.Triangle.BoundingSphere*
+  commentId: Overload:Vim.Math3d.Triangle.BoundingSphere
+  name: BoundingSphere
+  nameWithType: Triangle.BoundingSphere
+  fullName: Vim.Math3d.Triangle.BoundingSphere
+- uid: Vim.Math3d.Sphere
+  commentId: T:Vim.Math3d.Sphere
+  parent: Vim.Math3d
+  name: Sphere
+  nameWithType: Sphere
+  fullName: Vim.Math3d.Sphere
+- uid: Vim.Math3d.Triangle.IsSliver*
+  commentId: Overload:Vim.Math3d.Triangle.IsSliver
+  name: IsSliver
+  nameWithType: Triangle.IsSliver
+  fullName: Vim.Math3d.Triangle.IsSliver
+- uid: Vim.Math3d.Triangle.Side*
+  commentId: Overload:Vim.Math3d.Triangle.Side
+  name: Side
+  nameWithType: Triangle.Side
+  fullName: Vim.Math3d.Triangle.Side
+- uid: Vim.Math3d.Line
+  commentId: T:Vim.Math3d.Line
+  parent: Vim.Math3d
+  name: Line
+  nameWithType: Line
+  fullName: Vim.Math3d.Line
+- uid: Vim.Math3d.Triangle.Binormal*
+  commentId: Overload:Vim.Math3d.Triangle.Binormal
+  name: Binormal
+  nameWithType: Triangle.Binormal
+  fullName: Vim.Math3d.Triangle.Binormal
+- uid: Vim.Math3d.Triangle.Tangent*
+  commentId: Overload:Vim.Math3d.Triangle.Tangent
+  name: Tangent
+  nameWithType: Triangle.Tangent
+  fullName: Vim.Math3d.Triangle.Tangent
+- uid: Vim.Math3d.Triangle.AB*
+  commentId: Overload:Vim.Math3d.Triangle.AB
+  name: AB
+  nameWithType: Triangle.AB
+  fullName: Vim.Math3d.Triangle.AB
+- uid: Vim.Math3d.Triangle.BC*
+  commentId: Overload:Vim.Math3d.Triangle.BC
+  name: BC
+  nameWithType: Triangle.BC
+  fullName: Vim.Math3d.Triangle.BC
+- uid: Vim.Math3d.Triangle.CA*
+  commentId: Overload:Vim.Math3d.Triangle.CA
+  name: CA
+  nameWithType: Triangle.CA
+  fullName: Vim.Math3d.Triangle.CA
+- uid: Vim.Math3d.Triangle.BA*
+  commentId: Overload:Vim.Math3d.Triangle.BA
+  name: BA
+  nameWithType: Triangle.BA
+  fullName: Vim.Math3d.Triangle.BA
+- uid: Vim.Math3d.Triangle.CB*
+  commentId: Overload:Vim.Math3d.Triangle.CB
+  name: CB
+  nameWithType: Triangle.CB
+  fullName: Vim.Math3d.Triangle.CB
+- uid: Vim.Math3d.Triangle.AC*
+  commentId: Overload:Vim.Math3d.Triangle.AC
+  name: AC
+  nameWithType: Triangle.AC
+  fullName: Vim.Math3d.Triangle.AC

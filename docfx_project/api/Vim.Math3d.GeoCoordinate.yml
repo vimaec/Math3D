@@ -1,0 +1,3167 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.GeoCoordinate
+  commentId: T:Vim.Math3d.GeoCoordinate
+  id: GeoCoordinate
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.GeoCoordinate.#ctor(System.Double)
+  - Vim.Math3d.GeoCoordinate.#ctor(System.Double,System.Double)
+  - Vim.Math3d.GeoCoordinate.#ctor(System.ValueTuple{System.Double,System.Double})
+  - Vim.Math3d.GeoCoordinate.AlmostEquals(Vim.Math3d.GeoCoordinate,System.Single)
+  - Vim.Math3d.GeoCoordinate.AlmostZero(System.Single)
+  - Vim.Math3d.GeoCoordinate.AnyComponentNegative
+  - Vim.Math3d.GeoCoordinate.CompareTo(Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.Create(System.Double,System.Double)
+  - Vim.Math3d.GeoCoordinate.Create(System.ValueTuple{System.Double,System.Double})
+  - Vim.Math3d.GeoCoordinate.Deconstruct(System.Double@,System.Double@)
+  - Vim.Math3d.GeoCoordinate.Dot(Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.Dot(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.Equals(System.Object)
+  - Vim.Math3d.GeoCoordinate.Equals(Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.GetComponent(System.Int32)
+  - Vim.Math3d.GeoCoordinate.GetHashCode
+  - Vim.Math3d.GeoCoordinate.IsInfinity
+  - Vim.Math3d.GeoCoordinate.IsNaN
+  - Vim.Math3d.GeoCoordinate.Latitude
+  - Vim.Math3d.GeoCoordinate.Longitude
+  - Vim.Math3d.GeoCoordinate.Magnitude
+  - Vim.Math3d.GeoCoordinate.MagnitudeSquared
+  - Vim.Math3d.GeoCoordinate.MaxComponent
+  - Vim.Math3d.GeoCoordinate.MaxValue
+  - Vim.Math3d.GeoCoordinate.MinComponent
+  - Vim.Math3d.GeoCoordinate.MinValue
+  - Vim.Math3d.GeoCoordinate.NumComponents
+  - Vim.Math3d.GeoCoordinate.One
+  - Vim.Math3d.GeoCoordinate.op_Addition(System.Double,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_Addition(Vim.Math3d.GeoCoordinate,System.Double)
+  - Vim.Math3d.GeoCoordinate.op_Addition(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_Division(System.Double,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_Division(Vim.Math3d.GeoCoordinate,System.Double)
+  - Vim.Math3d.GeoCoordinate.op_Division(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_Equality(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_GreaterThan(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_GreaterThanOrEqual(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_Implicit(System.ValueTuple{System.Double,System.Double})~Vim.Math3d.GeoCoordinate
+  - Vim.Math3d.GeoCoordinate.op_Implicit(Vim.Math3d.GeoCoordinate)~System.ValueTuple{System.Double,System.Double}
+  - Vim.Math3d.GeoCoordinate.op_Inequality(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_LessThan(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_LessThanOrEqual(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_Multiply(System.Double,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_Multiply(Vim.Math3d.GeoCoordinate,System.Double)
+  - Vim.Math3d.GeoCoordinate.op_Multiply(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_Subtraction(System.Double,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_Subtraction(Vim.Math3d.GeoCoordinate,System.Double)
+  - Vim.Math3d.GeoCoordinate.op_Subtraction(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.op_UnaryNegation(Vim.Math3d.GeoCoordinate)
+  - Vim.Math3d.GeoCoordinate.ProductComponents
+  - Vim.Math3d.GeoCoordinate.SetLatitude(System.Double)
+  - Vim.Math3d.GeoCoordinate.SetLongitude(System.Double)
+  - Vim.Math3d.GeoCoordinate.SumComponents
+  - Vim.Math3d.GeoCoordinate.SumSqrComponents
+  - Vim.Math3d.GeoCoordinate.ToString
+  - Vim.Math3d.GeoCoordinate.UnitLatitude
+  - Vim.Math3d.GeoCoordinate.UnitLongitude
+  - Vim.Math3d.GeoCoordinate.Zero
+  langs:
+  - csharp
+  - vb
+  name: GeoCoordinate
+  nameWithType: GeoCoordinate
+  fullName: Vim.Math3d.GeoCoordinate
+  type: Struct
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GeoCoordinate
+    path: ../src/Structs.cs
+    startLine: 1999
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataContract]
+
+      public readonly struct GeoCoordinate : IEquatable<GeoCoordinate>, IComparable<GeoCoordinate>
+    content.vb: >-
+      <DataContract>
+
+      Public Structure GeoCoordinate
+          Implements IEquatable(Of GeoCoordinate), IComparable(Of GeoCoordinate)
+  implements:
+  - System.IEquatable{Vim.Math3d.GeoCoordinate}
+  - System.IComparable{Vim.Math3d.GeoCoordinate}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Vim.Math3d.GeoCoordinate.Latitude
+  commentId: F:Vim.Math3d.GeoCoordinate.Latitude
+  id: Latitude
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Latitude
+  nameWithType: GeoCoordinate.Latitude
+  fullName: Vim.Math3d.GeoCoordinate.Latitude
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Latitude
+    path: ../src/Structs.cs
+    startLine: 2006
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly double Latitude
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Latitude As Double
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.GeoCoordinate.Longitude
+  commentId: F:Vim.Math3d.GeoCoordinate.Longitude
+  id: Longitude
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Longitude
+  nameWithType: GeoCoordinate.Longitude
+  fullName: Vim.Math3d.GeoCoordinate.Longitude
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Longitude
+    path: ../src/Structs.cs
+    startLine: 2008
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly double Longitude
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Longitude As Double
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.GeoCoordinate.#ctor(System.ValueTuple{System.Double,System.Double})
+  commentId: M:Vim.Math3d.GeoCoordinate.#ctor(System.ValueTuple{System.Double,System.Double})
+  id: '#ctor(System.ValueTuple{System.Double,System.Double})'
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: GeoCoordinate((Double latitude, Double longitude))
+  nameWithType: GeoCoordinate.GeoCoordinate((Double latitude, Double longitude))
+  fullName: Vim.Math3d.GeoCoordinate.GeoCoordinate(System.ValueTuple<System.Double, System.Double>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 2009
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public GeoCoordinate((double latitude, double longitude) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Double,System.Double}
+    content.vb: Public Sub New(tuple As(latitude As Double, longitude As Double)(Of Double , Double))
+  overload: Vim.Math3d.GeoCoordinate.#ctor*
+  nameWithType.vb: GeoCoordinate.GeoCoordinate((latitude As Double, longitude As Double)(Of Double, Double))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.GeoCoordinate.GeoCoordinate(System.ValueTuple(Of System.Double, System.Double))
+  name.vb: GeoCoordinate((latitude As Double, longitude As Double)(Of Double, Double))
+- uid: Vim.Math3d.GeoCoordinate.#ctor(System.Double,System.Double)
+  commentId: M:Vim.Math3d.GeoCoordinate.#ctor(System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double)'
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: GeoCoordinate(Double, Double)
+  nameWithType: GeoCoordinate.GeoCoordinate(Double, Double)
+  fullName: Vim.Math3d.GeoCoordinate.GeoCoordinate(System.Double, System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 2010
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public GeoCoordinate(double latitude, double longitude)
+    parameters:
+    - id: latitude
+      type: System.Double
+    - id: longitude
+      type: System.Double
+    content.vb: Public Sub New(latitude As Double, longitude As Double)
+  overload: Vim.Math3d.GeoCoordinate.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.Create(System.Double,System.Double)
+  commentId: M:Vim.Math3d.GeoCoordinate.Create(System.Double,System.Double)
+  id: Create(System.Double,System.Double)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Create(Double, Double)
+  nameWithType: GeoCoordinate.Create(Double, Double)
+  fullName: Vim.Math3d.GeoCoordinate.Create(System.Double, System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 2011
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate Create(double latitude, double longitude)
+    parameters:
+    - id: latitude
+      type: System.Double
+    - id: longitude
+      type: System.Double
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Function Create(latitude As Double, longitude As Double) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.Create(System.ValueTuple{System.Double,System.Double})
+  commentId: M:Vim.Math3d.GeoCoordinate.Create(System.ValueTuple{System.Double,System.Double})
+  id: Create(System.ValueTuple{System.Double,System.Double})
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Create((Double latitude, Double longitude))
+  nameWithType: GeoCoordinate.Create((Double latitude, Double longitude))
+  fullName: Vim.Math3d.GeoCoordinate.Create(System.ValueTuple<System.Double, System.Double>)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 2012
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate Create((double latitude, double longitude) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Double,System.Double}
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Function Create(tuple As(latitude As Double, longitude As Double)(Of Double , Double)) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.Create*
+  nameWithType.vb: GeoCoordinate.Create((latitude As Double, longitude As Double)(Of Double, Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.GeoCoordinate.Create(System.ValueTuple(Of System.Double, System.Double))
+  name.vb: Create((latitude As Double, longitude As Double)(Of Double, Double))
+- uid: Vim.Math3d.GeoCoordinate.Equals(System.Object)
+  commentId: M:Vim.Math3d.GeoCoordinate.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: GeoCoordinate.Equals(Object)
+  fullName: Vim.Math3d.GeoCoordinate.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 2013
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Vim.Math3d.GeoCoordinate.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.GeoCoordinate.GetHashCode
+  commentId: M:Vim.Math3d.GeoCoordinate.GetHashCode
+  id: GetHashCode
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: GeoCoordinate.GetHashCode()
+  fullName: Vim.Math3d.GeoCoordinate.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetHashCode
+    path: ../src/Structs.cs
+    startLine: 2014
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Vim.Math3d.GeoCoordinate.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.GeoCoordinate.ToString
+  commentId: M:Vim.Math3d.GeoCoordinate.ToString
+  id: ToString
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: GeoCoordinate.ToString()
+  fullName: Vim.Math3d.GeoCoordinate.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToString
+    path: ../src/Structs.cs
+    startLine: 2015
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: Vim.Math3d.GeoCoordinate.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.GeoCoordinate.Deconstruct(System.Double@,System.Double@)
+  commentId: M:Vim.Math3d.GeoCoordinate.Deconstruct(System.Double@,System.Double@)
+  id: Deconstruct(System.Double@,System.Double@)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Double, out Double)
+  nameWithType: GeoCoordinate.Deconstruct(out Double, out Double)
+  fullName: Vim.Math3d.GeoCoordinate.Deconstruct(out System.Double, out System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Deconstruct
+    path: ../src/Structs.cs
+    startLine: 2016
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly void Deconstruct(out double latitude, out double longitude)
+    parameters:
+    - id: latitude
+      type: System.Double
+    - id: longitude
+      type: System.Double
+    content.vb: Public Sub Deconstruct(ByRef latitude As Double, ByRef longitude As Double)
+  overload: Vim.Math3d.GeoCoordinate.Deconstruct*
+  nameWithType.vb: GeoCoordinate.Deconstruct(ByRef Double, ByRef Double)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.GeoCoordinate.Deconstruct(ByRef System.Double, ByRef System.Double)
+  name.vb: Deconstruct(ByRef Double, ByRef Double)
+- uid: Vim.Math3d.GeoCoordinate.Equals(Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.Equals(Vim.Math3d.GeoCoordinate)
+  id: Equals(Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equals(GeoCoordinate)
+  nameWithType: GeoCoordinate.Equals(GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Equals(Vim.Math3d.GeoCoordinate)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 2017
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool Equals(GeoCoordinate x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(x As GeoCoordinate) As Boolean
+  overload: Vim.Math3d.GeoCoordinate.Equals*
+  implements:
+  - System.IEquatable{Vim.Math3d.GeoCoordinate}.Equals(Vim.Math3d.GeoCoordinate)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.op_Equality(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Equality(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  id: op_Equality(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equality(GeoCoordinate, GeoCoordinate)
+  nameWithType: GeoCoordinate.Equality(GeoCoordinate, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Equality(Vim.Math3d.GeoCoordinate, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Equality
+    path: ../src/Structs.cs
+    startLine: 2018
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator ==(GeoCoordinate x0, GeoCoordinate x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.GeoCoordinate
+    - id: x1
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(x0 As GeoCoordinate, x1 As GeoCoordinate) As Boolean
+  overload: Vim.Math3d.GeoCoordinate.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_Inequality(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Inequality(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  id: op_Inequality(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Inequality(GeoCoordinate, GeoCoordinate)
+  nameWithType: GeoCoordinate.Inequality(GeoCoordinate, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Inequality(Vim.Math3d.GeoCoordinate, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Inequality
+    path: ../src/Structs.cs
+    startLine: 2019
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator !=(GeoCoordinate x0, GeoCoordinate x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.GeoCoordinate
+    - id: x1
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(x0 As GeoCoordinate, x1 As GeoCoordinate) As Boolean
+  overload: Vim.Math3d.GeoCoordinate.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_Implicit(System.ValueTuple{System.Double,System.Double})~Vim.Math3d.GeoCoordinate
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Implicit(System.ValueTuple{System.Double,System.Double})~Vim.Math3d.GeoCoordinate
+  id: op_Implicit(System.ValueTuple{System.Double,System.Double})~Vim.Math3d.GeoCoordinate
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Implicit((Double latitude, Double longitude) to GeoCoordinate)
+  nameWithType: GeoCoordinate.Implicit((Double latitude, Double longitude) to GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Implicit(System.ValueTuple<System.Double, System.Double> to Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 2020
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator GeoCoordinate((double latitude, double longitude) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Double,System.Double}
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Widening Operator CType(tuple As(latitude As Double, longitude As Double)(Of Double , Double)) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_Implicit*
+  nameWithType.vb: GeoCoordinate.Widening((latitude As Double, longitude As Double)(Of Double, Double) to GeoCoordinate)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.GeoCoordinate.Widening(System.ValueTuple(Of System.Double, System.Double) to Vim.Math3d.GeoCoordinate)
+  name.vb: Widening((latitude As Double, longitude As Double)(Of Double, Double) to GeoCoordinate)
+- uid: Vim.Math3d.GeoCoordinate.op_Implicit(Vim.Math3d.GeoCoordinate)~System.ValueTuple{System.Double,System.Double}
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Implicit(Vim.Math3d.GeoCoordinate)~System.ValueTuple{System.Double,System.Double}
+  id: op_Implicit(Vim.Math3d.GeoCoordinate)~System.ValueTuple{System.Double,System.Double}
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Implicit(GeoCoordinate to (Double latitude, Double longitude))
+  nameWithType: GeoCoordinate.Implicit(GeoCoordinate to (Double latitude, Double longitude))
+  fullName: Vim.Math3d.GeoCoordinate.Implicit(Vim.Math3d.GeoCoordinate to System.ValueTuple<System.Double, System.Double>)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 2021
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator (double latitude, double longitude)(GeoCoordinate self)
+    parameters:
+    - id: self
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: System.ValueTuple{System.Double,System.Double}
+    content.vb: Public Shared Widening Operator CType(self As GeoCoordinate) As(latitude As Double, longitude As Double)(Of Double , Double)
+  overload: Vim.Math3d.GeoCoordinate.op_Implicit*
+  nameWithType.vb: GeoCoordinate.Widening(GeoCoordinate to (latitude As Double, longitude As Double)(Of Double, Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.GeoCoordinate.Widening(Vim.Math3d.GeoCoordinate to System.ValueTuple(Of System.Double, System.Double))
+  name.vb: Widening(GeoCoordinate to (latitude As Double, longitude As Double)(Of Double, Double))
+- uid: Vim.Math3d.GeoCoordinate.AlmostEquals(Vim.Math3d.GeoCoordinate,System.Single)
+  commentId: M:Vim.Math3d.GeoCoordinate.AlmostEquals(Vim.Math3d.GeoCoordinate,System.Single)
+  id: AlmostEquals(Vim.Math3d.GeoCoordinate,System.Single)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: AlmostEquals(GeoCoordinate, Single)
+  nameWithType: GeoCoordinate.AlmostEquals(GeoCoordinate, Single)
+  fullName: Vim.Math3d.GeoCoordinate.AlmostEquals(Vim.Math3d.GeoCoordinate, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AlmostEquals
+    path: ../src/Structs.cs
+    startLine: 2023
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool AlmostEquals(GeoCoordinate x, float tolerance = 1E-07F)
+    parameters:
+    - id: x
+      type: Vim.Math3d.GeoCoordinate
+    - id: tolerance
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Function AlmostEquals(x As GeoCoordinate, tolerance As Single = 1E-07F) As Boolean
+  overload: Vim.Math3d.GeoCoordinate.AlmostEquals*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.Zero
+  commentId: F:Vim.Math3d.GeoCoordinate.Zero
+  id: Zero
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: GeoCoordinate.Zero
+  fullName: Vim.Math3d.GeoCoordinate.Zero
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Zero
+    path: ../src/Structs.cs
+    startLine: 2024
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate Zero
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Zero As GeoCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.MinValue
+  commentId: F:Vim.Math3d.GeoCoordinate.MinValue
+  id: MinValue
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: GeoCoordinate.MinValue
+  fullName: Vim.Math3d.GeoCoordinate.MinValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MinValue
+    path: ../src/Structs.cs
+    startLine: 2025
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate MinValue
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared MinValue As GeoCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.MaxValue
+  commentId: F:Vim.Math3d.GeoCoordinate.MaxValue
+  id: MaxValue
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: GeoCoordinate.MaxValue
+  fullName: Vim.Math3d.GeoCoordinate.MaxValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MaxValue
+    path: ../src/Structs.cs
+    startLine: 2026
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate MaxValue
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared MaxValue As GeoCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.SetLatitude(System.Double)
+  commentId: M:Vim.Math3d.GeoCoordinate.SetLatitude(System.Double)
+  id: SetLatitude(System.Double)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SetLatitude(Double)
+  nameWithType: GeoCoordinate.SetLatitude(Double)
+  fullName: Vim.Math3d.GeoCoordinate.SetLatitude(System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetLatitude
+    path: ../src/Structs.cs
+    startLine: 2027
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly GeoCoordinate SetLatitude(double x)
+    parameters:
+    - id: x
+      type: System.Double
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Function SetLatitude(x As Double) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.SetLatitude*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.SetLongitude(System.Double)
+  commentId: M:Vim.Math3d.GeoCoordinate.SetLongitude(System.Double)
+  id: SetLongitude(System.Double)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SetLongitude(Double)
+  nameWithType: GeoCoordinate.SetLongitude(Double)
+  fullName: Vim.Math3d.GeoCoordinate.SetLongitude(System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetLongitude
+    path: ../src/Structs.cs
+    startLine: 2028
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly GeoCoordinate SetLongitude(double x)
+    parameters:
+    - id: x
+      type: System.Double
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Function SetLongitude(x As Double) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.SetLongitude*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.op_Addition(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Addition(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  id: op_Addition(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Addition(GeoCoordinate, GeoCoordinate)
+  nameWithType: GeoCoordinate.Addition(GeoCoordinate, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Addition(Vim.Math3d.GeoCoordinate, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Addition
+    path: ../src/Structs.cs
+    startLine: 2029
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate operator +(GeoCoordinate value1, GeoCoordinate value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.GeoCoordinate
+    - id: value2
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Operator +(value1 As GeoCoordinate, value2 As GeoCoordinate) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_Addition*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_Addition(Vim.Math3d.GeoCoordinate,System.Double)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Addition(Vim.Math3d.GeoCoordinate,System.Double)
+  id: op_Addition(Vim.Math3d.GeoCoordinate,System.Double)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Addition(GeoCoordinate, Double)
+  nameWithType: GeoCoordinate.Addition(GeoCoordinate, Double)
+  fullName: Vim.Math3d.GeoCoordinate.Addition(Vim.Math3d.GeoCoordinate, System.Double)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Addition
+    path: ../src/Structs.cs
+    startLine: 2030
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate operator +(GeoCoordinate value1, double value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.GeoCoordinate
+    - id: value2
+      type: System.Double
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Operator +(value1 As GeoCoordinate, value2 As Double) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_Addition*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_Addition(System.Double,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Addition(System.Double,Vim.Math3d.GeoCoordinate)
+  id: op_Addition(System.Double,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Addition(Double, GeoCoordinate)
+  nameWithType: GeoCoordinate.Addition(Double, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Addition(System.Double, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Addition
+    path: ../src/Structs.cs
+    startLine: 2031
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate operator +(double value1, GeoCoordinate value2)
+    parameters:
+    - id: value1
+      type: System.Double
+    - id: value2
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Operator +(value1 As Double, value2 As GeoCoordinate) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_Addition*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_Subtraction(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Subtraction(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  id: op_Subtraction(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Subtraction(GeoCoordinate, GeoCoordinate)
+  nameWithType: GeoCoordinate.Subtraction(GeoCoordinate, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Subtraction(Vim.Math3d.GeoCoordinate, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Subtraction
+    path: ../src/Structs.cs
+    startLine: 2032
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate operator -(GeoCoordinate value1, GeoCoordinate value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.GeoCoordinate
+    - id: value2
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Operator -(value1 As GeoCoordinate, value2 As GeoCoordinate) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_Subtraction*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_Subtraction(Vim.Math3d.GeoCoordinate,System.Double)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Subtraction(Vim.Math3d.GeoCoordinate,System.Double)
+  id: op_Subtraction(Vim.Math3d.GeoCoordinate,System.Double)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Subtraction(GeoCoordinate, Double)
+  nameWithType: GeoCoordinate.Subtraction(GeoCoordinate, Double)
+  fullName: Vim.Math3d.GeoCoordinate.Subtraction(Vim.Math3d.GeoCoordinate, System.Double)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Subtraction
+    path: ../src/Structs.cs
+    startLine: 2033
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate operator -(GeoCoordinate value1, double value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.GeoCoordinate
+    - id: value2
+      type: System.Double
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Operator -(value1 As GeoCoordinate, value2 As Double) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_Subtraction*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_Subtraction(System.Double,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Subtraction(System.Double,Vim.Math3d.GeoCoordinate)
+  id: op_Subtraction(System.Double,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Subtraction(Double, GeoCoordinate)
+  nameWithType: GeoCoordinate.Subtraction(Double, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Subtraction(System.Double, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Subtraction
+    path: ../src/Structs.cs
+    startLine: 2034
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate operator -(double value1, GeoCoordinate value2)
+    parameters:
+    - id: value1
+      type: System.Double
+    - id: value2
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Operator -(value1 As Double, value2 As GeoCoordinate) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_Subtraction*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_Multiply(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Multiply(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  id: op_Multiply(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Multiply(GeoCoordinate, GeoCoordinate)
+  nameWithType: GeoCoordinate.Multiply(GeoCoordinate, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Multiply(Vim.Math3d.GeoCoordinate, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Multiply
+    path: ../src/Structs.cs
+    startLine: 2035
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate operator *(GeoCoordinate value1, GeoCoordinate value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.GeoCoordinate
+    - id: value2
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Operator *(value1 As GeoCoordinate, value2 As GeoCoordinate) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_Multiply*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_Multiply(Vim.Math3d.GeoCoordinate,System.Double)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Multiply(Vim.Math3d.GeoCoordinate,System.Double)
+  id: op_Multiply(Vim.Math3d.GeoCoordinate,System.Double)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Multiply(GeoCoordinate, Double)
+  nameWithType: GeoCoordinate.Multiply(GeoCoordinate, Double)
+  fullName: Vim.Math3d.GeoCoordinate.Multiply(Vim.Math3d.GeoCoordinate, System.Double)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Multiply
+    path: ../src/Structs.cs
+    startLine: 2036
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate operator *(GeoCoordinate value1, double value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.GeoCoordinate
+    - id: value2
+      type: System.Double
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Operator *(value1 As GeoCoordinate, value2 As Double) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_Multiply*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_Multiply(System.Double,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Multiply(System.Double,Vim.Math3d.GeoCoordinate)
+  id: op_Multiply(System.Double,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Multiply(Double, GeoCoordinate)
+  nameWithType: GeoCoordinate.Multiply(Double, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Multiply(System.Double, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Multiply
+    path: ../src/Structs.cs
+    startLine: 2037
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate operator *(double value1, GeoCoordinate value2)
+    parameters:
+    - id: value1
+      type: System.Double
+    - id: value2
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Operator *(value1 As Double, value2 As GeoCoordinate) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_Multiply*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_Division(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Division(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  id: op_Division(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Division(GeoCoordinate, GeoCoordinate)
+  nameWithType: GeoCoordinate.Division(GeoCoordinate, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Division(Vim.Math3d.GeoCoordinate, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Division
+    path: ../src/Structs.cs
+    startLine: 2038
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate operator /(GeoCoordinate value1, GeoCoordinate value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.GeoCoordinate
+    - id: value2
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Operator /(value1 As GeoCoordinate, value2 As GeoCoordinate) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_Division*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_Division(Vim.Math3d.GeoCoordinate,System.Double)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Division(Vim.Math3d.GeoCoordinate,System.Double)
+  id: op_Division(Vim.Math3d.GeoCoordinate,System.Double)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Division(GeoCoordinate, Double)
+  nameWithType: GeoCoordinate.Division(GeoCoordinate, Double)
+  fullName: Vim.Math3d.GeoCoordinate.Division(Vim.Math3d.GeoCoordinate, System.Double)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Division
+    path: ../src/Structs.cs
+    startLine: 2039
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate operator /(GeoCoordinate value1, double value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.GeoCoordinate
+    - id: value2
+      type: System.Double
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Operator /(value1 As GeoCoordinate, value2 As Double) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_Division*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_Division(System.Double,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_Division(System.Double,Vim.Math3d.GeoCoordinate)
+  id: op_Division(System.Double,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Division(Double, GeoCoordinate)
+  nameWithType: GeoCoordinate.Division(Double, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Division(System.Double, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Division
+    path: ../src/Structs.cs
+    startLine: 2040
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate operator /(double value1, GeoCoordinate value2)
+    parameters:
+    - id: value1
+      type: System.Double
+    - id: value2
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Operator /(value1 As Double, value2 As GeoCoordinate) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_Division*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.One
+  commentId: F:Vim.Math3d.GeoCoordinate.One
+  id: One
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: One
+  nameWithType: GeoCoordinate.One
+  fullName: Vim.Math3d.GeoCoordinate.One
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: One
+    path: ../src/Structs.cs
+    startLine: 2041
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate One
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared One As GeoCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.UnitLatitude
+  commentId: F:Vim.Math3d.GeoCoordinate.UnitLatitude
+  id: UnitLatitude
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: UnitLatitude
+  nameWithType: GeoCoordinate.UnitLatitude
+  fullName: Vim.Math3d.GeoCoordinate.UnitLatitude
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: UnitLatitude
+    path: ../src/Structs.cs
+    startLine: 2042
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate UnitLatitude
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared UnitLatitude As GeoCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.UnitLongitude
+  commentId: F:Vim.Math3d.GeoCoordinate.UnitLongitude
+  id: UnitLongitude
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: UnitLongitude
+  nameWithType: GeoCoordinate.UnitLongitude
+  fullName: Vim.Math3d.GeoCoordinate.UnitLongitude
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: UnitLongitude
+    path: ../src/Structs.cs
+    startLine: 2043
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate UnitLongitude
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared UnitLongitude As GeoCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.#ctor(System.Double)
+  commentId: M:Vim.Math3d.GeoCoordinate.#ctor(System.Double)
+  id: '#ctor(System.Double)'
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: GeoCoordinate(Double)
+  nameWithType: GeoCoordinate.GeoCoordinate(Double)
+  fullName: Vim.Math3d.GeoCoordinate.GeoCoordinate(System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 2044
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public GeoCoordinate(double value)
+    parameters:
+    - id: value
+      type: System.Double
+    content.vb: Public Sub New(value As Double)
+  overload: Vim.Math3d.GeoCoordinate.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.op_UnaryNegation(Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_UnaryNegation(Vim.Math3d.GeoCoordinate)
+  id: op_UnaryNegation(Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: UnaryNegation(GeoCoordinate)
+  nameWithType: GeoCoordinate.UnaryNegation(GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.UnaryNegation(Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_UnaryNegation
+    path: ../src/Structs.cs
+    startLine: 2045
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static GeoCoordinate operator -(GeoCoordinate value)
+    parameters:
+    - id: value
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: Vim.Math3d.GeoCoordinate
+    content.vb: Public Shared Operator -(value As GeoCoordinate) As GeoCoordinate
+  overload: Vim.Math3d.GeoCoordinate.op_UnaryNegation*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.Dot(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.Dot(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  id: Dot(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Dot(GeoCoordinate, GeoCoordinate)
+  nameWithType: GeoCoordinate.Dot(GeoCoordinate, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Dot(Vim.Math3d.GeoCoordinate, Vim.Math3d.GeoCoordinate)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Dot
+    path: ../src/Structs.cs
+    startLine: 2046
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static double Dot(GeoCoordinate value1, GeoCoordinate value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.GeoCoordinate
+    - id: value2
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: System.Double
+    content.vb: Public Shared Function Dot(value1 As GeoCoordinate, value2 As GeoCoordinate) As Double
+  overload: Vim.Math3d.GeoCoordinate.Dot*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.Dot(Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.Dot(Vim.Math3d.GeoCoordinate)
+  id: Dot(Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Dot(GeoCoordinate)
+  nameWithType: GeoCoordinate.Dot(GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.Dot(Vim.Math3d.GeoCoordinate)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Dot
+    path: ../src/Structs.cs
+    startLine: 2047
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly double Dot(GeoCoordinate value)
+    parameters:
+    - id: value
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: System.Double
+    content.vb: Public Function Dot(value As GeoCoordinate) As Double
+  overload: Vim.Math3d.GeoCoordinate.Dot*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.AlmostZero(System.Single)
+  commentId: M:Vim.Math3d.GeoCoordinate.AlmostZero(System.Single)
+  id: AlmostZero(System.Single)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: AlmostZero(Single)
+  nameWithType: GeoCoordinate.AlmostZero(Single)
+  fullName: Vim.Math3d.GeoCoordinate.AlmostZero(System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AlmostZero
+    path: ../src/Structs.cs
+    startLine: 2048
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool AlmostZero(float tolerance = 1E-07F)
+    parameters:
+    - id: tolerance
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Function AlmostZero(tolerance As Single = 1E-07F) As Boolean
+  overload: Vim.Math3d.GeoCoordinate.AlmostZero*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.AnyComponentNegative
+  commentId: M:Vim.Math3d.GeoCoordinate.AnyComponentNegative
+  id: AnyComponentNegative
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: AnyComponentNegative()
+  nameWithType: GeoCoordinate.AnyComponentNegative()
+  fullName: Vim.Math3d.GeoCoordinate.AnyComponentNegative()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AnyComponentNegative
+    path: ../src/Structs.cs
+    startLine: 2049
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool AnyComponentNegative()
+    return:
+      type: System.Boolean
+    content.vb: Public Function AnyComponentNegative As Boolean
+  overload: Vim.Math3d.GeoCoordinate.AnyComponentNegative*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.MinComponent
+  commentId: M:Vim.Math3d.GeoCoordinate.MinComponent
+  id: MinComponent
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: MinComponent()
+  nameWithType: GeoCoordinate.MinComponent()
+  fullName: Vim.Math3d.GeoCoordinate.MinComponent()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MinComponent
+    path: ../src/Structs.cs
+    startLine: 2050
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly double MinComponent()
+    return:
+      type: System.Double
+    content.vb: Public Function MinComponent As Double
+  overload: Vim.Math3d.GeoCoordinate.MinComponent*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.MaxComponent
+  commentId: M:Vim.Math3d.GeoCoordinate.MaxComponent
+  id: MaxComponent
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: MaxComponent()
+  nameWithType: GeoCoordinate.MaxComponent()
+  fullName: Vim.Math3d.GeoCoordinate.MaxComponent()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MaxComponent
+    path: ../src/Structs.cs
+    startLine: 2051
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly double MaxComponent()
+    return:
+      type: System.Double
+    content.vb: Public Function MaxComponent As Double
+  overload: Vim.Math3d.GeoCoordinate.MaxComponent*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.SumComponents
+  commentId: M:Vim.Math3d.GeoCoordinate.SumComponents
+  id: SumComponents
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SumComponents()
+  nameWithType: GeoCoordinate.SumComponents()
+  fullName: Vim.Math3d.GeoCoordinate.SumComponents()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SumComponents
+    path: ../src/Structs.cs
+    startLine: 2052
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly double SumComponents()
+    return:
+      type: System.Double
+    content.vb: Public Function SumComponents As Double
+  overload: Vim.Math3d.GeoCoordinate.SumComponents*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.SumSqrComponents
+  commentId: M:Vim.Math3d.GeoCoordinate.SumSqrComponents
+  id: SumSqrComponents
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SumSqrComponents()
+  nameWithType: GeoCoordinate.SumSqrComponents()
+  fullName: Vim.Math3d.GeoCoordinate.SumSqrComponents()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SumSqrComponents
+    path: ../src/Structs.cs
+    startLine: 2053
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly double SumSqrComponents()
+    return:
+      type: System.Double
+    content.vb: Public Function SumSqrComponents As Double
+  overload: Vim.Math3d.GeoCoordinate.SumSqrComponents*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.ProductComponents
+  commentId: M:Vim.Math3d.GeoCoordinate.ProductComponents
+  id: ProductComponents
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: ProductComponents()
+  nameWithType: GeoCoordinate.ProductComponents()
+  fullName: Vim.Math3d.GeoCoordinate.ProductComponents()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ProductComponents
+    path: ../src/Structs.cs
+    startLine: 2054
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly double ProductComponents()
+    return:
+      type: System.Double
+    content.vb: Public Function ProductComponents As Double
+  overload: Vim.Math3d.GeoCoordinate.ProductComponents*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.GetComponent(System.Int32)
+  commentId: M:Vim.Math3d.GeoCoordinate.GetComponent(System.Int32)
+  id: GetComponent(System.Int32)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: GetComponent(Int32)
+  nameWithType: GeoCoordinate.GetComponent(Int32)
+  fullName: Vim.Math3d.GeoCoordinate.GetComponent(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetComponent
+    path: ../src/Structs.cs
+    startLine: 2055
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly double GetComponent(int n)
+    parameters:
+    - id: n
+      type: System.Int32
+    return:
+      type: System.Double
+    content.vb: Public Function GetComponent(n As Integer) As Double
+  overload: Vim.Math3d.GeoCoordinate.GetComponent*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.MagnitudeSquared
+  commentId: M:Vim.Math3d.GeoCoordinate.MagnitudeSquared
+  id: MagnitudeSquared
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: MagnitudeSquared()
+  nameWithType: GeoCoordinate.MagnitudeSquared()
+  fullName: Vim.Math3d.GeoCoordinate.MagnitudeSquared()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MagnitudeSquared
+    path: ../src/Structs.cs
+    startLine: 2056
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly double MagnitudeSquared()
+    return:
+      type: System.Double
+    content.vb: Public Function MagnitudeSquared As Double
+  overload: Vim.Math3d.GeoCoordinate.MagnitudeSquared*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.Magnitude
+  commentId: M:Vim.Math3d.GeoCoordinate.Magnitude
+  id: Magnitude
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Magnitude()
+  nameWithType: GeoCoordinate.Magnitude()
+  fullName: Vim.Math3d.GeoCoordinate.Magnitude()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Magnitude
+    path: ../src/Structs.cs
+    startLine: 2057
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly double Magnitude()
+    return:
+      type: System.Double
+    content.vb: Public Function Magnitude As Double
+  overload: Vim.Math3d.GeoCoordinate.Magnitude*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.NumComponents
+  commentId: F:Vim.Math3d.GeoCoordinate.NumComponents
+  id: NumComponents
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: NumComponents
+  nameWithType: GeoCoordinate.NumComponents
+  fullName: Vim.Math3d.GeoCoordinate.NumComponents
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: NumComponents
+    path: ../src/Structs.cs
+    startLine: 2058
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public const int NumComponents = 2
+    return:
+      type: System.Int32
+    content.vb: Public Const NumComponents As Integer = 2
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Vim.Math3d.GeoCoordinate.IsNaN
+  commentId: M:Vim.Math3d.GeoCoordinate.IsNaN
+  id: IsNaN
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: IsNaN()
+  nameWithType: GeoCoordinate.IsNaN()
+  fullName: Vim.Math3d.GeoCoordinate.IsNaN()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: IsNaN
+    path: ../src/Structs.cs
+    startLine: 2060
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool IsNaN()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsNaN As Boolean
+  overload: Vim.Math3d.GeoCoordinate.IsNaN*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.IsInfinity
+  commentId: M:Vim.Math3d.GeoCoordinate.IsInfinity
+  id: IsInfinity
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: IsInfinity()
+  nameWithType: GeoCoordinate.IsInfinity()
+  fullName: Vim.Math3d.GeoCoordinate.IsInfinity()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: IsInfinity
+    path: ../src/Structs.cs
+    startLine: 2061
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool IsInfinity()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsInfinity As Boolean
+  overload: Vim.Math3d.GeoCoordinate.IsInfinity*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.CompareTo(Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.CompareTo(Vim.Math3d.GeoCoordinate)
+  id: CompareTo(Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: CompareTo(GeoCoordinate)
+  nameWithType: GeoCoordinate.CompareTo(GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.CompareTo(Vim.Math3d.GeoCoordinate)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CompareTo
+    path: ../src/Structs.cs
+    startLine: 2062
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly int CompareTo(GeoCoordinate x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: System.Int32
+    content.vb: Public Function CompareTo(x As GeoCoordinate) As Integer
+  overload: Vim.Math3d.GeoCoordinate.CompareTo*
+  implements:
+  - System.IComparable{Vim.Math3d.GeoCoordinate}.CompareTo(Vim.Math3d.GeoCoordinate)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.GeoCoordinate.op_LessThan(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_LessThan(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  id: op_LessThan(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: LessThan(GeoCoordinate, GeoCoordinate)
+  nameWithType: GeoCoordinate.LessThan(GeoCoordinate, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.LessThan(Vim.Math3d.GeoCoordinate, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_LessThan
+    path: ../src/Structs.cs
+    startLine: 2063
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator <(GeoCoordinate x0, GeoCoordinate x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.GeoCoordinate
+    - id: x1
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <(x0 As GeoCoordinate, x1 As GeoCoordinate) As Boolean
+  overload: Vim.Math3d.GeoCoordinate.op_LessThan*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_LessThanOrEqual(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_LessThanOrEqual(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  id: op_LessThanOrEqual(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: LessThanOrEqual(GeoCoordinate, GeoCoordinate)
+  nameWithType: GeoCoordinate.LessThanOrEqual(GeoCoordinate, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.LessThanOrEqual(Vim.Math3d.GeoCoordinate, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_LessThanOrEqual
+    path: ../src/Structs.cs
+    startLine: 2064
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator <=(GeoCoordinate x0, GeoCoordinate x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.GeoCoordinate
+    - id: x1
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <=(x0 As GeoCoordinate, x1 As GeoCoordinate) As Boolean
+  overload: Vim.Math3d.GeoCoordinate.op_LessThanOrEqual*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_GreaterThan(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_GreaterThan(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  id: op_GreaterThan(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: GreaterThan(GeoCoordinate, GeoCoordinate)
+  nameWithType: GeoCoordinate.GreaterThan(GeoCoordinate, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.GreaterThan(Vim.Math3d.GeoCoordinate, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_GreaterThan
+    path: ../src/Structs.cs
+    startLine: 2065
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator>(GeoCoordinate x0, GeoCoordinate x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.GeoCoordinate
+    - id: x1
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator>(x0 As GeoCoordinate, x1 As GeoCoordinate) As Boolean
+  overload: Vim.Math3d.GeoCoordinate.op_GreaterThan*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.GeoCoordinate.op_GreaterThanOrEqual(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  commentId: M:Vim.Math3d.GeoCoordinate.op_GreaterThanOrEqual(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  id: op_GreaterThanOrEqual(Vim.Math3d.GeoCoordinate,Vim.Math3d.GeoCoordinate)
+  parent: Vim.Math3d.GeoCoordinate
+  langs:
+  - csharp
+  - vb
+  name: GreaterThanOrEqual(GeoCoordinate, GeoCoordinate)
+  nameWithType: GeoCoordinate.GreaterThanOrEqual(GeoCoordinate, GeoCoordinate)
+  fullName: Vim.Math3d.GeoCoordinate.GreaterThanOrEqual(Vim.Math3d.GeoCoordinate, Vim.Math3d.GeoCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_GreaterThanOrEqual
+    path: ../src/Structs.cs
+    startLine: 2066
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator >=(GeoCoordinate x0, GeoCoordinate x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.GeoCoordinate
+    - id: x1
+      type: Vim.Math3d.GeoCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator >=(x0 As GeoCoordinate, x1 As GeoCoordinate) As Boolean
+  overload: Vim.Math3d.GeoCoordinate.op_GreaterThanOrEqual*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.IEquatable{Vim.Math3d.GeoCoordinate}
+  commentId: T:System.IEquatable{Vim.Math3d.GeoCoordinate}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<GeoCoordinate>
+  nameWithType: IEquatable<GeoCoordinate>
+  fullName: System.IEquatable<Vim.Math3d.GeoCoordinate>
+  nameWithType.vb: IEquatable(Of GeoCoordinate)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.GeoCoordinate)
+  name.vb: IEquatable(Of GeoCoordinate)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.GeoCoordinate
+    name: GeoCoordinate
+    nameWithType: GeoCoordinate
+    fullName: Vim.Math3d.GeoCoordinate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.GeoCoordinate
+    name: GeoCoordinate
+    nameWithType: GeoCoordinate
+    fullName: Vim.Math3d.GeoCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IComparable{Vim.Math3d.GeoCoordinate}
+  commentId: T:System.IComparable{Vim.Math3d.GeoCoordinate}
+  parent: System
+  definition: System.IComparable`1
+  name: IComparable<GeoCoordinate>
+  nameWithType: IComparable<GeoCoordinate>
+  fullName: System.IComparable<Vim.Math3d.GeoCoordinate>
+  nameWithType.vb: IComparable(Of GeoCoordinate)
+  fullName.vb: System.IComparable(Of Vim.Math3d.GeoCoordinate)
+  name.vb: IComparable(Of GeoCoordinate)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.GeoCoordinate
+    name: GeoCoordinate
+    nameWithType: GeoCoordinate
+    fullName: Vim.Math3d.GeoCoordinate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.GeoCoordinate
+    name: GeoCoordinate
+    nameWithType: GeoCoordinate
+    fullName: Vim.Math3d.GeoCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IComparable`1
+  commentId: T:System.IComparable`1
+  isExternal: true
+  name: IComparable<T>
+  nameWithType: IComparable<T>
+  fullName: System.IComparable<T>
+  nameWithType.vb: IComparable(Of T)
+  fullName.vb: System.IComparable(Of T)
+  name.vb: IComparable(Of T)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Vim.Math3d.GeoCoordinate.#ctor*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.#ctor
+  name: GeoCoordinate
+  nameWithType: GeoCoordinate.GeoCoordinate
+  fullName: Vim.Math3d.GeoCoordinate.GeoCoordinate
+- uid: System.ValueTuple{System.Double,System.Double}
+  commentId: T:System.ValueTuple{System.Double,System.Double}
+  parent: System
+  definition: System.ValueTuple`2
+  name: (T1, T2)<Double, Double>
+  nameWithType: (T1, T2)<Double, Double>
+  fullName: System.ValueTuple<System.Double, System.Double>
+  nameWithType.vb: (T1, T2)(Of Double, Double)
+  fullName.vb: System.ValueTuple(Of System.Double, System.Double)
+  name.vb: (T1, T2)(Of Double, Double)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  isExternal: true
+  name: (T1, T2)<T1, T2>
+  nameWithType: (T1, T2)<T1, T2>
+  fullName: System.ValueTuple<T1, T2>
+  nameWithType.vb: (T1, T2)(Of T1, T2)
+  fullName.vb: System.ValueTuple(Of T1, T2)
+  name.vb: (T1, T2)(Of T1, T2)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.GeoCoordinate.Create*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.Create
+  name: Create
+  nameWithType: GeoCoordinate.Create
+  fullName: Vim.Math3d.GeoCoordinate.Create
+- uid: Vim.Math3d.GeoCoordinate
+  commentId: T:Vim.Math3d.GeoCoordinate
+  parent: Vim.Math3d
+  name: GeoCoordinate
+  nameWithType: GeoCoordinate
+  fullName: Vim.Math3d.GeoCoordinate
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.GeoCoordinate.Equals*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.Equals
+  name: Equals
+  nameWithType: GeoCoordinate.Equals
+  fullName: Vim.Math3d.GeoCoordinate.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.GeoCoordinate.GetHashCode*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.GetHashCode
+  name: GetHashCode
+  nameWithType: GeoCoordinate.GetHashCode
+  fullName: Vim.Math3d.GeoCoordinate.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.GeoCoordinate.ToString*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.ToString
+  name: ToString
+  nameWithType: GeoCoordinate.ToString
+  fullName: Vim.Math3d.GeoCoordinate.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vim.Math3d.GeoCoordinate.Deconstruct*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.Deconstruct
+  name: Deconstruct
+  nameWithType: GeoCoordinate.Deconstruct
+  fullName: Vim.Math3d.GeoCoordinate.Deconstruct
+- uid: System.IEquatable{Vim.Math3d.GeoCoordinate}.Equals(Vim.Math3d.GeoCoordinate)
+  commentId: M:System.IEquatable{Vim.Math3d.GeoCoordinate}.Equals(Vim.Math3d.GeoCoordinate)
+  parent: System.IEquatable{Vim.Math3d.GeoCoordinate}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(GeoCoordinate)
+  nameWithType: IEquatable<GeoCoordinate>.Equals(GeoCoordinate)
+  fullName: System.IEquatable<Vim.Math3d.GeoCoordinate>.Equals(Vim.Math3d.GeoCoordinate)
+  nameWithType.vb: IEquatable(Of GeoCoordinate).Equals(GeoCoordinate)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.GeoCoordinate).Equals(Vim.Math3d.GeoCoordinate)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<GeoCoordinate>.Equals
+    fullName: System.IEquatable<Vim.Math3d.GeoCoordinate>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.GeoCoordinate
+    name: GeoCoordinate
+    nameWithType: GeoCoordinate
+    fullName: Vim.Math3d.GeoCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of GeoCoordinate).Equals
+    fullName: System.IEquatable(Of Vim.Math3d.GeoCoordinate).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.GeoCoordinate
+    name: GeoCoordinate
+    nameWithType: GeoCoordinate
+    fullName: Vim.Math3d.GeoCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.GeoCoordinate.op_Equality*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.op_Equality
+  name: Equality
+  nameWithType: GeoCoordinate.Equality
+  fullName: Vim.Math3d.GeoCoordinate.Equality
+- uid: Vim.Math3d.GeoCoordinate.op_Inequality*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.op_Inequality
+  name: Inequality
+  nameWithType: GeoCoordinate.Inequality
+  fullName: Vim.Math3d.GeoCoordinate.Inequality
+- uid: Vim.Math3d.GeoCoordinate.op_Implicit*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.op_Implicit
+  name: Implicit
+  nameWithType: GeoCoordinate.Implicit
+  fullName: Vim.Math3d.GeoCoordinate.Implicit
+  nameWithType.vb: GeoCoordinate.Widening
+  fullName.vb: Vim.Math3d.GeoCoordinate.Widening
+  name.vb: Widening
+- uid: Vim.Math3d.GeoCoordinate.AlmostEquals*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.AlmostEquals
+  name: AlmostEquals
+  nameWithType: GeoCoordinate.AlmostEquals
+  fullName: Vim.Math3d.GeoCoordinate.AlmostEquals
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Vim.Math3d.GeoCoordinate.SetLatitude*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.SetLatitude
+  name: SetLatitude
+  nameWithType: GeoCoordinate.SetLatitude
+  fullName: Vim.Math3d.GeoCoordinate.SetLatitude
+- uid: Vim.Math3d.GeoCoordinate.SetLongitude*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.SetLongitude
+  name: SetLongitude
+  nameWithType: GeoCoordinate.SetLongitude
+  fullName: Vim.Math3d.GeoCoordinate.SetLongitude
+- uid: Vim.Math3d.GeoCoordinate.op_Addition*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.op_Addition
+  name: Addition
+  nameWithType: GeoCoordinate.Addition
+  fullName: Vim.Math3d.GeoCoordinate.Addition
+- uid: Vim.Math3d.GeoCoordinate.op_Subtraction*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.op_Subtraction
+  name: Subtraction
+  nameWithType: GeoCoordinate.Subtraction
+  fullName: Vim.Math3d.GeoCoordinate.Subtraction
+- uid: Vim.Math3d.GeoCoordinate.op_Multiply*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.op_Multiply
+  name: Multiply
+  nameWithType: GeoCoordinate.Multiply
+  fullName: Vim.Math3d.GeoCoordinate.Multiply
+- uid: Vim.Math3d.GeoCoordinate.op_Division*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.op_Division
+  name: Division
+  nameWithType: GeoCoordinate.Division
+  fullName: Vim.Math3d.GeoCoordinate.Division
+- uid: Vim.Math3d.GeoCoordinate.op_UnaryNegation*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.op_UnaryNegation
+  name: UnaryNegation
+  nameWithType: GeoCoordinate.UnaryNegation
+  fullName: Vim.Math3d.GeoCoordinate.UnaryNegation
+- uid: Vim.Math3d.GeoCoordinate.Dot*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.Dot
+  name: Dot
+  nameWithType: GeoCoordinate.Dot
+  fullName: Vim.Math3d.GeoCoordinate.Dot
+- uid: Vim.Math3d.GeoCoordinate.AlmostZero*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.AlmostZero
+  name: AlmostZero
+  nameWithType: GeoCoordinate.AlmostZero
+  fullName: Vim.Math3d.GeoCoordinate.AlmostZero
+- uid: Vim.Math3d.GeoCoordinate.AnyComponentNegative*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.AnyComponentNegative
+  name: AnyComponentNegative
+  nameWithType: GeoCoordinate.AnyComponentNegative
+  fullName: Vim.Math3d.GeoCoordinate.AnyComponentNegative
+- uid: Vim.Math3d.GeoCoordinate.MinComponent*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.MinComponent
+  name: MinComponent
+  nameWithType: GeoCoordinate.MinComponent
+  fullName: Vim.Math3d.GeoCoordinate.MinComponent
+- uid: Vim.Math3d.GeoCoordinate.MaxComponent*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.MaxComponent
+  name: MaxComponent
+  nameWithType: GeoCoordinate.MaxComponent
+  fullName: Vim.Math3d.GeoCoordinate.MaxComponent
+- uid: Vim.Math3d.GeoCoordinate.SumComponents*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.SumComponents
+  name: SumComponents
+  nameWithType: GeoCoordinate.SumComponents
+  fullName: Vim.Math3d.GeoCoordinate.SumComponents
+- uid: Vim.Math3d.GeoCoordinate.SumSqrComponents*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.SumSqrComponents
+  name: SumSqrComponents
+  nameWithType: GeoCoordinate.SumSqrComponents
+  fullName: Vim.Math3d.GeoCoordinate.SumSqrComponents
+- uid: Vim.Math3d.GeoCoordinate.ProductComponents*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.ProductComponents
+  name: ProductComponents
+  nameWithType: GeoCoordinate.ProductComponents
+  fullName: Vim.Math3d.GeoCoordinate.ProductComponents
+- uid: Vim.Math3d.GeoCoordinate.GetComponent*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.GetComponent
+  name: GetComponent
+  nameWithType: GeoCoordinate.GetComponent
+  fullName: Vim.Math3d.GeoCoordinate.GetComponent
+- uid: Vim.Math3d.GeoCoordinate.MagnitudeSquared*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.MagnitudeSquared
+  name: MagnitudeSquared
+  nameWithType: GeoCoordinate.MagnitudeSquared
+  fullName: Vim.Math3d.GeoCoordinate.MagnitudeSquared
+- uid: Vim.Math3d.GeoCoordinate.Magnitude*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.Magnitude
+  name: Magnitude
+  nameWithType: GeoCoordinate.Magnitude
+  fullName: Vim.Math3d.GeoCoordinate.Magnitude
+- uid: Vim.Math3d.GeoCoordinate.IsNaN*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.IsNaN
+  name: IsNaN
+  nameWithType: GeoCoordinate.IsNaN
+  fullName: Vim.Math3d.GeoCoordinate.IsNaN
+- uid: Vim.Math3d.GeoCoordinate.IsInfinity*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.IsInfinity
+  name: IsInfinity
+  nameWithType: GeoCoordinate.IsInfinity
+  fullName: Vim.Math3d.GeoCoordinate.IsInfinity
+- uid: Vim.Math3d.GeoCoordinate.CompareTo*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.CompareTo
+  name: CompareTo
+  nameWithType: GeoCoordinate.CompareTo
+  fullName: Vim.Math3d.GeoCoordinate.CompareTo
+- uid: System.IComparable{Vim.Math3d.GeoCoordinate}.CompareTo(Vim.Math3d.GeoCoordinate)
+  commentId: M:System.IComparable{Vim.Math3d.GeoCoordinate}.CompareTo(Vim.Math3d.GeoCoordinate)
+  parent: System.IComparable{Vim.Math3d.GeoCoordinate}
+  definition: System.IComparable`1.CompareTo(`0)
+  name: CompareTo(GeoCoordinate)
+  nameWithType: IComparable<GeoCoordinate>.CompareTo(GeoCoordinate)
+  fullName: System.IComparable<Vim.Math3d.GeoCoordinate>.CompareTo(Vim.Math3d.GeoCoordinate)
+  nameWithType.vb: IComparable(Of GeoCoordinate).CompareTo(GeoCoordinate)
+  fullName.vb: System.IComparable(Of Vim.Math3d.GeoCoordinate).CompareTo(Vim.Math3d.GeoCoordinate)
+  spec.csharp:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable<GeoCoordinate>.CompareTo
+    fullName: System.IComparable<Vim.Math3d.GeoCoordinate>.CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.GeoCoordinate
+    name: GeoCoordinate
+    nameWithType: GeoCoordinate
+    fullName: Vim.Math3d.GeoCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable(Of GeoCoordinate).CompareTo
+    fullName: System.IComparable(Of Vim.Math3d.GeoCoordinate).CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.GeoCoordinate
+    name: GeoCoordinate
+    nameWithType: GeoCoordinate
+    fullName: Vim.Math3d.GeoCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IComparable`1.CompareTo(`0)
+  commentId: M:System.IComparable`1.CompareTo(`0)
+  isExternal: true
+  name: CompareTo(T)
+  nameWithType: IComparable<T>.CompareTo(T)
+  fullName: System.IComparable<T>.CompareTo(T)
+  nameWithType.vb: IComparable(Of T).CompareTo(T)
+  fullName.vb: System.IComparable(Of T).CompareTo(T)
+  spec.csharp:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable<T>.CompareTo
+    fullName: System.IComparable<T>.CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable(Of T).CompareTo
+    fullName: System.IComparable(Of T).CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.GeoCoordinate.op_LessThan*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.op_LessThan
+  name: LessThan
+  nameWithType: GeoCoordinate.LessThan
+  fullName: Vim.Math3d.GeoCoordinate.LessThan
+- uid: Vim.Math3d.GeoCoordinate.op_LessThanOrEqual*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.op_LessThanOrEqual
+  name: LessThanOrEqual
+  nameWithType: GeoCoordinate.LessThanOrEqual
+  fullName: Vim.Math3d.GeoCoordinate.LessThanOrEqual
+- uid: Vim.Math3d.GeoCoordinate.op_GreaterThan*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.op_GreaterThan
+  name: GreaterThan
+  nameWithType: GeoCoordinate.GreaterThan
+  fullName: Vim.Math3d.GeoCoordinate.GreaterThan
+- uid: Vim.Math3d.GeoCoordinate.op_GreaterThanOrEqual*
+  commentId: Overload:Vim.Math3d.GeoCoordinate.op_GreaterThanOrEqual
+  name: GreaterThanOrEqual
+  nameWithType: GeoCoordinate.GreaterThanOrEqual
+  fullName: Vim.Math3d.GeoCoordinate.GreaterThanOrEqual

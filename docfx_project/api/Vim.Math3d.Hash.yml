@@ -1,0 +1,903 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.Hash
+  commentId: T:Vim.Math3d.Hash
+  id: Hash
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.Hash.Combine(System.Collections.Generic.IList{System.Int32})
+  - Vim.Math3d.Hash.Combine(System.Int32,System.Int32)
+  - Vim.Math3d.Hash.Combine(System.Int32,System.Int32,System.Int32)
+  - Vim.Math3d.Hash.Combine(System.Int32,System.Int32,System.Int32,System.Int32)
+  - Vim.Math3d.Hash.Combine(System.Int32[])
+  - Vim.Math3d.Hash.HashCodes``1(System.Collections.Generic.IEnumerable{``0})
+  - Vim.Math3d.Hash.HashValues(System.Collections.Generic.IEnumerable{System.Int32})
+  langs:
+  - csharp
+  - vb
+  name: Hash
+  nameWithType: Hash
+  fullName: Vim.Math3d.Hash
+  type: Class
+  source:
+    remote:
+      path: src/Hash.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Hash
+    path: ../src/Hash.cs
+    startLine: 13
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static class Hash
+    content.vb: Public Module Hash
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Vim.Math3d.Hash.Combine(System.Int32,System.Int32)
+  commentId: M:Vim.Math3d.Hash.Combine(System.Int32,System.Int32)
+  id: Combine(System.Int32,System.Int32)
+  parent: Vim.Math3d.Hash
+  langs:
+  - csharp
+  - vb
+  name: Combine(Int32, Int32)
+  nameWithType: Hash.Combine(Int32, Int32)
+  fullName: Vim.Math3d.Hash.Combine(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Hash.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Combine
+    path: ../src/Hash.cs
+    startLine: 22
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static int Combine(int h1, int h2)
+    parameters:
+    - id: h1
+      type: System.Int32
+    - id: h2
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Combine(h1 As Integer, h2 As Integer) As Integer
+  overload: Vim.Math3d.Hash.Combine*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Hash.Combine(System.Collections.Generic.IList{System.Int32})
+  commentId: M:Vim.Math3d.Hash.Combine(System.Collections.Generic.IList{System.Int32})
+  id: Combine(System.Collections.Generic.IList{System.Int32})
+  parent: Vim.Math3d.Hash
+  langs:
+  - csharp
+  - vb
+  name: Combine(IList<Int32>)
+  nameWithType: Hash.Combine(IList<Int32>)
+  fullName: Vim.Math3d.Hash.Combine(System.Collections.Generic.IList<System.Int32>)
+  type: Method
+  source:
+    remote:
+      path: src/Hash.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Combine
+    path: ../src/Hash.cs
+    startLine: 33
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static int Combine(IList<int> xs)
+    parameters:
+    - id: xs
+      type: System.Collections.Generic.IList{System.Int32}
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Combine(xs As IList(Of Integer)) As Integer
+  overload: Vim.Math3d.Hash.Combine*
+  nameWithType.vb: Hash.Combine(IList(Of Int32))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Hash.Combine(System.Collections.Generic.IList(Of System.Int32))
+  name.vb: Combine(IList(Of Int32))
+- uid: Vim.Math3d.Hash.Combine(System.Int32[])
+  commentId: M:Vim.Math3d.Hash.Combine(System.Int32[])
+  id: Combine(System.Int32[])
+  parent: Vim.Math3d.Hash
+  langs:
+  - csharp
+  - vb
+  name: Combine(Int32[])
+  nameWithType: Hash.Combine(Int32[])
+  fullName: Vim.Math3d.Hash.Combine(System.Int32[])
+  type: Method
+  source:
+    remote:
+      path: src/Hash.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Combine
+    path: ../src/Hash.cs
+    startLine: 42
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static int Combine(params int[] xs)
+    parameters:
+    - id: xs
+      type: System.Int32[]
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Combine(ParamArray xs As Integer()) As Integer
+  overload: Vim.Math3d.Hash.Combine*
+  nameWithType.vb: Hash.Combine(Int32())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Hash.Combine(System.Int32())
+  name.vb: Combine(Int32())
+- uid: Vim.Math3d.Hash.Combine(System.Int32,System.Int32,System.Int32)
+  commentId: M:Vim.Math3d.Hash.Combine(System.Int32,System.Int32,System.Int32)
+  id: Combine(System.Int32,System.Int32,System.Int32)
+  parent: Vim.Math3d.Hash
+  langs:
+  - csharp
+  - vb
+  name: Combine(Int32, Int32, Int32)
+  nameWithType: Hash.Combine(Int32, Int32, Int32)
+  fullName: Vim.Math3d.Hash.Combine(System.Int32, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Hash.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Combine
+    path: ../src/Hash.cs
+    startLine: 45
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static int Combine(int x0, int x1, int x2)
+    parameters:
+    - id: x0
+      type: System.Int32
+    - id: x1
+      type: System.Int32
+    - id: x2
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Combine(x0 As Integer, x1 As Integer, x2 As Integer) As Integer
+  overload: Vim.Math3d.Hash.Combine*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Hash.Combine(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:Vim.Math3d.Hash.Combine(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: Combine(System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: Vim.Math3d.Hash
+  langs:
+  - csharp
+  - vb
+  name: Combine(Int32, Int32, Int32, Int32)
+  nameWithType: Hash.Combine(Int32, Int32, Int32, Int32)
+  fullName: Vim.Math3d.Hash.Combine(System.Int32, System.Int32, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Hash.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Combine
+    path: ../src/Hash.cs
+    startLine: 48
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static int Combine(int x0, int x1, int x2, int x3)
+    parameters:
+    - id: x0
+      type: System.Int32
+    - id: x1
+      type: System.Int32
+    - id: x2
+      type: System.Int32
+    - id: x3
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Combine(x0 As Integer, x1 As Integer, x2 As Integer, x3 As Integer) As Integer
+  overload: Vim.Math3d.Hash.Combine*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Hash.HashValues(System.Collections.Generic.IEnumerable{System.Int32})
+  commentId: M:Vim.Math3d.Hash.HashValues(System.Collections.Generic.IEnumerable{System.Int32})
+  id: HashValues(System.Collections.Generic.IEnumerable{System.Int32})
+  isExtensionMethod: true
+  parent: Vim.Math3d.Hash
+  langs:
+  - csharp
+  - vb
+  name: HashValues(IEnumerable<Int32>)
+  nameWithType: Hash.HashValues(IEnumerable<Int32>)
+  fullName: Vim.Math3d.Hash.HashValues(System.Collections.Generic.IEnumerable<System.Int32>)
+  type: Method
+  source:
+    remote:
+      path: src/Hash.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: HashValues
+    path: ../src/Hash.cs
+    startLine: 51
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static int HashValues(this IEnumerable<int> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.Int32}
+    return:
+      type: System.Int32
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function HashValues(values As IEnumerable(Of Integer)) As Integer
+  overload: Vim.Math3d.Hash.HashValues*
+  nameWithType.vb: Hash.HashValues(IEnumerable(Of Int32))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Hash.HashValues(System.Collections.Generic.IEnumerable(Of System.Int32))
+  name.vb: HashValues(IEnumerable(Of Int32))
+- uid: Vim.Math3d.Hash.HashCodes``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Vim.Math3d.Hash.HashCodes``1(System.Collections.Generic.IEnumerable{``0})
+  id: HashCodes``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Vim.Math3d.Hash
+  langs:
+  - csharp
+  - vb
+  name: HashCodes<T>(IEnumerable<T>)
+  nameWithType: Hash.HashCodes<T>(IEnumerable<T>)
+  fullName: Vim.Math3d.Hash.HashCodes<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: src/Hash.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: HashCodes
+    path: ../src/Hash.cs
+    startLine: 54
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static int HashCodes<T>(this IEnumerable<T> values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Int32
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function HashCodes(Of T)(values As IEnumerable(Of T)) As Integer
+  overload: Vim.Math3d.Hash.HashCodes*
+  nameWithType.vb: Hash.HashCodes(Of T)(IEnumerable(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Hash.HashCodes(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: HashCodes(Of T)(IEnumerable(Of T))
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vim.Math3d.Hash.Combine*
+  commentId: Overload:Vim.Math3d.Hash.Combine
+  name: Combine
+  nameWithType: Hash.Combine
+  fullName: Vim.Math3d.Hash.Combine
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Collections.Generic.IList{System.Int32}
+  commentId: T:System.Collections.Generic.IList{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<Int32>
+  nameWithType: IList<Int32>
+  fullName: System.Collections.Generic.IList<System.Int32>
+  nameWithType.vb: IList(Of Int32)
+  fullName.vb: System.Collections.Generic.IList(Of System.Int32)
+  name.vb: IList(Of Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Int32[]
+  isExternal: true
+  name: Int32[]
+  nameWithType: Int32[]
+  fullName: System.Int32[]
+  nameWithType.vb: Int32()
+  fullName.vb: System.Int32()
+  name.vb: Int32()
+  spec.csharp:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Vim.Math3d.Hash.HashValues*
+  commentId: Overload:Vim.Math3d.Hash.HashValues
+  name: HashValues
+  nameWithType: Hash.HashValues
+  fullName: Vim.Math3d.Hash.HashValues
+- uid: System.Collections.Generic.IEnumerable{System.Int32}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Int32>
+  nameWithType: IEnumerable<Int32>
+  fullName: System.Collections.Generic.IEnumerable<System.Int32>
+  nameWithType.vb: IEnumerable(Of Int32)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Int32)
+  name.vb: IEnumerable(Of Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Hash.HashCodes*
+  commentId: Overload:Vim.Math3d.Hash.HashCodes
+  name: HashCodes
+  nameWithType: Hash.HashCodes
+  fullName: Vim.Math3d.Hash.HashCodes
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

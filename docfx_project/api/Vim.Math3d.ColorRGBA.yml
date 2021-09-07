@@ -1,0 +1,2026 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.ColorRGBA
+  commentId: T:Vim.Math3d.ColorRGBA
+  id: ColorRGBA
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.ColorRGBA.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)
+  - Vim.Math3d.ColorRGBA.#ctor(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})
+  - Vim.Math3d.ColorRGBA.A
+  - Vim.Math3d.ColorRGBA.B
+  - Vim.Math3d.ColorRGBA.Black
+  - Vim.Math3d.ColorRGBA.Create(System.Byte,System.Byte,System.Byte,System.Byte)
+  - Vim.Math3d.ColorRGBA.Create(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})
+  - Vim.Math3d.ColorRGBA.DarkBlue
+  - Vim.Math3d.ColorRGBA.DarkGreen
+  - Vim.Math3d.ColorRGBA.DarkRed
+  - Vim.Math3d.ColorRGBA.Deconstruct(System.Byte@,System.Byte@,System.Byte@,System.Byte@)
+  - Vim.Math3d.ColorRGBA.Equals(System.Object)
+  - Vim.Math3d.ColorRGBA.Equals(Vim.Math3d.ColorRGBA)
+  - Vim.Math3d.ColorRGBA.G
+  - Vim.Math3d.ColorRGBA.GetHashCode
+  - Vim.Math3d.ColorRGBA.LightBlue
+  - Vim.Math3d.ColorRGBA.LightGreen
+  - Vim.Math3d.ColorRGBA.LightRed
+  - Vim.Math3d.ColorRGBA.MaxValue
+  - Vim.Math3d.ColorRGBA.MinValue
+  - Vim.Math3d.ColorRGBA.op_Equality(Vim.Math3d.ColorRGBA,Vim.Math3d.ColorRGBA)
+  - Vim.Math3d.ColorRGBA.op_Implicit(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})~Vim.Math3d.ColorRGBA
+  - Vim.Math3d.ColorRGBA.op_Implicit(Vim.Math3d.ColorRGBA)~System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte}
+  - Vim.Math3d.ColorRGBA.op_Inequality(Vim.Math3d.ColorRGBA,Vim.Math3d.ColorRGBA)
+  - Vim.Math3d.ColorRGBA.R
+  - Vim.Math3d.ColorRGBA.SetA(System.Byte)
+  - Vim.Math3d.ColorRGBA.SetB(System.Byte)
+  - Vim.Math3d.ColorRGBA.SetG(System.Byte)
+  - Vim.Math3d.ColorRGBA.SetR(System.Byte)
+  - Vim.Math3d.ColorRGBA.ToString
+  - Vim.Math3d.ColorRGBA.Transparent
+  - Vim.Math3d.ColorRGBA.White
+  - Vim.Math3d.ColorRGBA.Zero
+  langs:
+  - csharp
+  - vb
+  name: ColorRGBA
+  nameWithType: ColorRGBA
+  fullName: Vim.Math3d.ColorRGBA
+  type: Struct
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ColorRGBA
+    path: ../src/Structs.cs
+    startLine: 1733
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataContract]
+
+      public readonly struct ColorRGBA : IEquatable<ColorRGBA>
+    content.vb: >-
+      <DataContract>
+
+      Public Structure ColorRGBA
+          Implements IEquatable(Of ColorRGBA)
+  implements:
+  - System.IEquatable{Vim.Math3d.ColorRGBA}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Vim.Math3d.ColorRGBA.White
+  commentId: F:Vim.Math3d.ColorRGBA.White
+  id: White
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: White
+  nameWithType: ColorRGBA.White
+  fullName: Vim.Math3d.ColorRGBA.White
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGBA.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: White
+    path: ../src/ColorRGBA.cs
+    startLine: 4
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGBA White
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared ReadOnly White As ColorRGBA
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGBA.Black
+  commentId: F:Vim.Math3d.ColorRGBA.Black
+  id: Black
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: Black
+  nameWithType: ColorRGBA.Black
+  fullName: Vim.Math3d.ColorRGBA.Black
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGBA.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Black
+    path: ../src/ColorRGBA.cs
+    startLine: 5
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGBA Black
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared ReadOnly Black As ColorRGBA
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGBA.LightRed
+  commentId: F:Vim.Math3d.ColorRGBA.LightRed
+  id: LightRed
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: LightRed
+  nameWithType: ColorRGBA.LightRed
+  fullName: Vim.Math3d.ColorRGBA.LightRed
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGBA.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightRed
+    path: ../src/ColorRGBA.cs
+    startLine: 6
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGBA LightRed
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared ReadOnly LightRed As ColorRGBA
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGBA.Transparent
+  commentId: F:Vim.Math3d.ColorRGBA.Transparent
+  id: Transparent
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: Transparent
+  nameWithType: ColorRGBA.Transparent
+  fullName: Vim.Math3d.ColorRGBA.Transparent
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGBA.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Transparent
+    path: ../src/ColorRGBA.cs
+    startLine: 7
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGBA Transparent
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared ReadOnly Transparent As ColorRGBA
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGBA.DarkRed
+  commentId: F:Vim.Math3d.ColorRGBA.DarkRed
+  id: DarkRed
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: DarkRed
+  nameWithType: ColorRGBA.DarkRed
+  fullName: Vim.Math3d.ColorRGBA.DarkRed
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGBA.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkRed
+    path: ../src/ColorRGBA.cs
+    startLine: 8
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGBA DarkRed
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared ReadOnly DarkRed As ColorRGBA
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGBA.LightGreen
+  commentId: F:Vim.Math3d.ColorRGBA.LightGreen
+  id: LightGreen
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: LightGreen
+  nameWithType: ColorRGBA.LightGreen
+  fullName: Vim.Math3d.ColorRGBA.LightGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGBA.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightGreen
+    path: ../src/ColorRGBA.cs
+    startLine: 9
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGBA LightGreen
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared ReadOnly LightGreen As ColorRGBA
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGBA.DarkGreen
+  commentId: F:Vim.Math3d.ColorRGBA.DarkGreen
+  id: DarkGreen
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: DarkGreen
+  nameWithType: ColorRGBA.DarkGreen
+  fullName: Vim.Math3d.ColorRGBA.DarkGreen
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGBA.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkGreen
+    path: ../src/ColorRGBA.cs
+    startLine: 10
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGBA DarkGreen
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared ReadOnly DarkGreen As ColorRGBA
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGBA.LightBlue
+  commentId: F:Vim.Math3d.ColorRGBA.LightBlue
+  id: LightBlue
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: LightBlue
+  nameWithType: ColorRGBA.LightBlue
+  fullName: Vim.Math3d.ColorRGBA.LightBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGBA.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: LightBlue
+    path: ../src/ColorRGBA.cs
+    startLine: 11
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGBA LightBlue
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared ReadOnly LightBlue As ColorRGBA
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGBA.DarkBlue
+  commentId: F:Vim.Math3d.ColorRGBA.DarkBlue
+  id: DarkBlue
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: DarkBlue
+  nameWithType: ColorRGBA.DarkBlue
+  fullName: Vim.Math3d.ColorRGBA.DarkBlue
+  type: Field
+  source:
+    remote:
+      path: src/ColorRGBA.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DarkBlue
+    path: ../src/ColorRGBA.cs
+    startLine: 12
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static readonly ColorRGBA DarkBlue
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared ReadOnly DarkBlue As ColorRGBA
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGBA.R
+  commentId: F:Vim.Math3d.ColorRGBA.R
+  id: R
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: R
+  nameWithType: ColorRGBA.R
+  fullName: Vim.Math3d.ColorRGBA.R
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: R
+    path: ../src/Structs.cs
+    startLine: 1739
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly byte R
+    return:
+      type: System.Byte
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly R As Byte
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGBA.G
+  commentId: F:Vim.Math3d.ColorRGBA.G
+  id: G
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: G
+  nameWithType: ColorRGBA.G
+  fullName: Vim.Math3d.ColorRGBA.G
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: G
+    path: ../src/Structs.cs
+    startLine: 1741
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly byte G
+    return:
+      type: System.Byte
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly G As Byte
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGBA.B
+  commentId: F:Vim.Math3d.ColorRGBA.B
+  id: B
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: B
+  nameWithType: ColorRGBA.B
+  fullName: Vim.Math3d.ColorRGBA.B
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: B
+    path: ../src/Structs.cs
+    startLine: 1743
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly byte B
+    return:
+      type: System.Byte
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly B As Byte
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGBA.A
+  commentId: F:Vim.Math3d.ColorRGBA.A
+  id: A
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: A
+  nameWithType: ColorRGBA.A
+  fullName: Vim.Math3d.ColorRGBA.A
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: A
+    path: ../src/Structs.cs
+    startLine: 1745
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly byte A
+    return:
+      type: System.Byte
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly A As Byte
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.ColorRGBA.#ctor(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})
+  commentId: M:Vim.Math3d.ColorRGBA.#ctor(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})
+  id: '#ctor(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})'
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: ColorRGBA((Byte r, Byte g, Byte b, Byte a))
+  nameWithType: ColorRGBA.ColorRGBA((Byte r, Byte g, Byte b, Byte a))
+  fullName: Vim.Math3d.ColorRGBA.ColorRGBA(System.ValueTuple<System.Byte, System.Byte, System.Byte, System.Byte>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1746
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public ColorRGBA((byte r, byte g, byte b, byte a) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte}
+    content.vb: Public Sub New(tuple As(r As Byte, g As Byte, b As Byte, a As Byte)(Of Byte , Byte, Byte, Byte))
+  overload: Vim.Math3d.ColorRGBA.#ctor*
+  nameWithType.vb: ColorRGBA.ColorRGBA((r As Byte, g As Byte, b As Byte, a As Byte)(Of Byte, Byte, Byte, Byte))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.ColorRGBA.ColorRGBA(System.ValueTuple(Of System.Byte, System.Byte, System.Byte, System.Byte))
+  name.vb: ColorRGBA((r As Byte, g As Byte, b As Byte, a As Byte)(Of Byte, Byte, Byte, Byte))
+- uid: Vim.Math3d.ColorRGBA.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)
+  commentId: M:Vim.Math3d.ColorRGBA.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)
+  id: '#ctor(System.Byte,System.Byte,System.Byte,System.Byte)'
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: ColorRGBA(Byte, Byte, Byte, Byte)
+  nameWithType: ColorRGBA.ColorRGBA(Byte, Byte, Byte, Byte)
+  fullName: Vim.Math3d.ColorRGBA.ColorRGBA(System.Byte, System.Byte, System.Byte, System.Byte)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1747
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public ColorRGBA(byte r, byte g, byte b, byte a)
+    parameters:
+    - id: r
+      type: System.Byte
+    - id: g
+      type: System.Byte
+    - id: b
+      type: System.Byte
+    - id: a
+      type: System.Byte
+    content.vb: Public Sub New(r As Byte, g As Byte, b As Byte, a As Byte)
+  overload: Vim.Math3d.ColorRGBA.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.ColorRGBA.Create(System.Byte,System.Byte,System.Byte,System.Byte)
+  commentId: M:Vim.Math3d.ColorRGBA.Create(System.Byte,System.Byte,System.Byte,System.Byte)
+  id: Create(System.Byte,System.Byte,System.Byte,System.Byte)
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: Create(Byte, Byte, Byte, Byte)
+  nameWithType: ColorRGBA.Create(Byte, Byte, Byte, Byte)
+  fullName: Vim.Math3d.ColorRGBA.Create(System.Byte, System.Byte, System.Byte, System.Byte)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1748
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static ColorRGBA Create(byte r, byte g, byte b, byte a)
+    parameters:
+    - id: r
+      type: System.Byte
+    - id: g
+      type: System.Byte
+    - id: b
+      type: System.Byte
+    - id: a
+      type: System.Byte
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared Function Create(r As Byte, g As Byte, b As Byte, a As Byte) As ColorRGBA
+  overload: Vim.Math3d.ColorRGBA.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.ColorRGBA.Create(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})
+  commentId: M:Vim.Math3d.ColorRGBA.Create(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})
+  id: Create(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: Create((Byte r, Byte g, Byte b, Byte a))
+  nameWithType: ColorRGBA.Create((Byte r, Byte g, Byte b, Byte a))
+  fullName: Vim.Math3d.ColorRGBA.Create(System.ValueTuple<System.Byte, System.Byte, System.Byte, System.Byte>)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1749
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static ColorRGBA Create((byte r, byte g, byte b, byte a) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte}
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared Function Create(tuple As(r As Byte, g As Byte, b As Byte, a As Byte)(Of Byte , Byte, Byte, Byte)) As ColorRGBA
+  overload: Vim.Math3d.ColorRGBA.Create*
+  nameWithType.vb: ColorRGBA.Create((r As Byte, g As Byte, b As Byte, a As Byte)(Of Byte, Byte, Byte, Byte))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.ColorRGBA.Create(System.ValueTuple(Of System.Byte, System.Byte, System.Byte, System.Byte))
+  name.vb: Create((r As Byte, g As Byte, b As Byte, a As Byte)(Of Byte, Byte, Byte, Byte))
+- uid: Vim.Math3d.ColorRGBA.Equals(System.Object)
+  commentId: M:Vim.Math3d.ColorRGBA.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: ColorRGBA.Equals(Object)
+  fullName: Vim.Math3d.ColorRGBA.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1750
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Vim.Math3d.ColorRGBA.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.ColorRGBA.GetHashCode
+  commentId: M:Vim.Math3d.ColorRGBA.GetHashCode
+  id: GetHashCode
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: ColorRGBA.GetHashCode()
+  fullName: Vim.Math3d.ColorRGBA.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetHashCode
+    path: ../src/Structs.cs
+    startLine: 1751
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Vim.Math3d.ColorRGBA.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.ColorRGBA.ToString
+  commentId: M:Vim.Math3d.ColorRGBA.ToString
+  id: ToString
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ColorRGBA.ToString()
+  fullName: Vim.Math3d.ColorRGBA.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToString
+    path: ../src/Structs.cs
+    startLine: 1752
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: Vim.Math3d.ColorRGBA.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.ColorRGBA.Deconstruct(System.Byte@,System.Byte@,System.Byte@,System.Byte@)
+  commentId: M:Vim.Math3d.ColorRGBA.Deconstruct(System.Byte@,System.Byte@,System.Byte@,System.Byte@)
+  id: Deconstruct(System.Byte@,System.Byte@,System.Byte@,System.Byte@)
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Byte, out Byte, out Byte, out Byte)
+  nameWithType: ColorRGBA.Deconstruct(out Byte, out Byte, out Byte, out Byte)
+  fullName: Vim.Math3d.ColorRGBA.Deconstruct(out System.Byte, out System.Byte, out System.Byte, out System.Byte)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Deconstruct
+    path: ../src/Structs.cs
+    startLine: 1753
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly void Deconstruct(out byte r, out byte g, out byte b, out byte a)
+    parameters:
+    - id: r
+      type: System.Byte
+    - id: g
+      type: System.Byte
+    - id: b
+      type: System.Byte
+    - id: a
+      type: System.Byte
+    content.vb: Public Sub Deconstruct(ByRef r As Byte, ByRef g As Byte, ByRef b As Byte, ByRef a As Byte)
+  overload: Vim.Math3d.ColorRGBA.Deconstruct*
+  nameWithType.vb: ColorRGBA.Deconstruct(ByRef Byte, ByRef Byte, ByRef Byte, ByRef Byte)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.ColorRGBA.Deconstruct(ByRef System.Byte, ByRef System.Byte, ByRef System.Byte, ByRef System.Byte)
+  name.vb: Deconstruct(ByRef Byte, ByRef Byte, ByRef Byte, ByRef Byte)
+- uid: Vim.Math3d.ColorRGBA.Equals(Vim.Math3d.ColorRGBA)
+  commentId: M:Vim.Math3d.ColorRGBA.Equals(Vim.Math3d.ColorRGBA)
+  id: Equals(Vim.Math3d.ColorRGBA)
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: Equals(ColorRGBA)
+  nameWithType: ColorRGBA.Equals(ColorRGBA)
+  fullName: Vim.Math3d.ColorRGBA.Equals(Vim.Math3d.ColorRGBA)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1754
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool Equals(ColorRGBA x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.ColorRGBA
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(x As ColorRGBA) As Boolean
+  overload: Vim.Math3d.ColorRGBA.Equals*
+  implements:
+  - System.IEquatable{Vim.Math3d.ColorRGBA}.Equals(Vim.Math3d.ColorRGBA)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.ColorRGBA.op_Equality(Vim.Math3d.ColorRGBA,Vim.Math3d.ColorRGBA)
+  commentId: M:Vim.Math3d.ColorRGBA.op_Equality(Vim.Math3d.ColorRGBA,Vim.Math3d.ColorRGBA)
+  id: op_Equality(Vim.Math3d.ColorRGBA,Vim.Math3d.ColorRGBA)
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: Equality(ColorRGBA, ColorRGBA)
+  nameWithType: ColorRGBA.Equality(ColorRGBA, ColorRGBA)
+  fullName: Vim.Math3d.ColorRGBA.Equality(Vim.Math3d.ColorRGBA, Vim.Math3d.ColorRGBA)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Equality
+    path: ../src/Structs.cs
+    startLine: 1755
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator ==(ColorRGBA x0, ColorRGBA x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.ColorRGBA
+    - id: x1
+      type: Vim.Math3d.ColorRGBA
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(x0 As ColorRGBA, x1 As ColorRGBA) As Boolean
+  overload: Vim.Math3d.ColorRGBA.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.ColorRGBA.op_Inequality(Vim.Math3d.ColorRGBA,Vim.Math3d.ColorRGBA)
+  commentId: M:Vim.Math3d.ColorRGBA.op_Inequality(Vim.Math3d.ColorRGBA,Vim.Math3d.ColorRGBA)
+  id: op_Inequality(Vim.Math3d.ColorRGBA,Vim.Math3d.ColorRGBA)
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: Inequality(ColorRGBA, ColorRGBA)
+  nameWithType: ColorRGBA.Inequality(ColorRGBA, ColorRGBA)
+  fullName: Vim.Math3d.ColorRGBA.Inequality(Vim.Math3d.ColorRGBA, Vim.Math3d.ColorRGBA)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Inequality
+    path: ../src/Structs.cs
+    startLine: 1756
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator !=(ColorRGBA x0, ColorRGBA x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.ColorRGBA
+    - id: x1
+      type: Vim.Math3d.ColorRGBA
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(x0 As ColorRGBA, x1 As ColorRGBA) As Boolean
+  overload: Vim.Math3d.ColorRGBA.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.ColorRGBA.op_Implicit(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})~Vim.Math3d.ColorRGBA
+  commentId: M:Vim.Math3d.ColorRGBA.op_Implicit(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})~Vim.Math3d.ColorRGBA
+  id: op_Implicit(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})~Vim.Math3d.ColorRGBA
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: Implicit((Byte r, Byte g, Byte b, Byte a) to ColorRGBA)
+  nameWithType: ColorRGBA.Implicit((Byte r, Byte g, Byte b, Byte a) to ColorRGBA)
+  fullName: Vim.Math3d.ColorRGBA.Implicit(System.ValueTuple<System.Byte, System.Byte, System.Byte, System.Byte> to Vim.Math3d.ColorRGBA)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1757
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator ColorRGBA((byte r, byte g, byte b, byte a) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte}
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared Widening Operator CType(tuple As(r As Byte, g As Byte, b As Byte, a As Byte)(Of Byte , Byte, Byte, Byte)) As ColorRGBA
+  overload: Vim.Math3d.ColorRGBA.op_Implicit*
+  nameWithType.vb: ColorRGBA.Widening((r As Byte, g As Byte, b As Byte, a As Byte)(Of Byte, Byte, Byte, Byte) to ColorRGBA)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.ColorRGBA.Widening(System.ValueTuple(Of System.Byte, System.Byte, System.Byte, System.Byte) to Vim.Math3d.ColorRGBA)
+  name.vb: Widening((r As Byte, g As Byte, b As Byte, a As Byte)(Of Byte, Byte, Byte, Byte) to ColorRGBA)
+- uid: Vim.Math3d.ColorRGBA.op_Implicit(Vim.Math3d.ColorRGBA)~System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte}
+  commentId: M:Vim.Math3d.ColorRGBA.op_Implicit(Vim.Math3d.ColorRGBA)~System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte}
+  id: op_Implicit(Vim.Math3d.ColorRGBA)~System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte}
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: Implicit(ColorRGBA to (Byte r, Byte g, Byte b, Byte a))
+  nameWithType: ColorRGBA.Implicit(ColorRGBA to (Byte r, Byte g, Byte b, Byte a))
+  fullName: Vim.Math3d.ColorRGBA.Implicit(Vim.Math3d.ColorRGBA to System.ValueTuple<System.Byte, System.Byte, System.Byte, System.Byte>)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1758
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator (byte r, byte g, byte b, byte a)(ColorRGBA self)
+    parameters:
+    - id: self
+      type: Vim.Math3d.ColorRGBA
+    return:
+      type: System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte}
+    content.vb: Public Shared Widening Operator CType(self As ColorRGBA) As(r As Byte, g As Byte, b As Byte, a As Byte)(Of Byte , Byte, Byte, Byte)
+  overload: Vim.Math3d.ColorRGBA.op_Implicit*
+  nameWithType.vb: ColorRGBA.Widening(ColorRGBA to (r As Byte, g As Byte, b As Byte, a As Byte)(Of Byte, Byte, Byte, Byte))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.ColorRGBA.Widening(Vim.Math3d.ColorRGBA to System.ValueTuple(Of System.Byte, System.Byte, System.Byte, System.Byte))
+  name.vb: Widening(ColorRGBA to (r As Byte, g As Byte, b As Byte, a As Byte)(Of Byte, Byte, Byte, Byte))
+- uid: Vim.Math3d.ColorRGBA.Zero
+  commentId: F:Vim.Math3d.ColorRGBA.Zero
+  id: Zero
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: ColorRGBA.Zero
+  fullName: Vim.Math3d.ColorRGBA.Zero
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Zero
+    path: ../src/Structs.cs
+    startLine: 1760
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static ColorRGBA Zero
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared Zero As ColorRGBA
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.ColorRGBA.MinValue
+  commentId: F:Vim.Math3d.ColorRGBA.MinValue
+  id: MinValue
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: ColorRGBA.MinValue
+  fullName: Vim.Math3d.ColorRGBA.MinValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MinValue
+    path: ../src/Structs.cs
+    startLine: 1761
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static ColorRGBA MinValue
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared MinValue As ColorRGBA
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.ColorRGBA.MaxValue
+  commentId: F:Vim.Math3d.ColorRGBA.MaxValue
+  id: MaxValue
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: ColorRGBA.MaxValue
+  fullName: Vim.Math3d.ColorRGBA.MaxValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MaxValue
+    path: ../src/Structs.cs
+    startLine: 1762
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static ColorRGBA MaxValue
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Shared MaxValue As ColorRGBA
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.ColorRGBA.SetR(System.Byte)
+  commentId: M:Vim.Math3d.ColorRGBA.SetR(System.Byte)
+  id: SetR(System.Byte)
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: SetR(Byte)
+  nameWithType: ColorRGBA.SetR(Byte)
+  fullName: Vim.Math3d.ColorRGBA.SetR(System.Byte)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetR
+    path: ../src/Structs.cs
+    startLine: 1763
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly ColorRGBA SetR(byte x)
+    parameters:
+    - id: x
+      type: System.Byte
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Function SetR(x As Byte) As ColorRGBA
+  overload: Vim.Math3d.ColorRGBA.SetR*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.ColorRGBA.SetG(System.Byte)
+  commentId: M:Vim.Math3d.ColorRGBA.SetG(System.Byte)
+  id: SetG(System.Byte)
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: SetG(Byte)
+  nameWithType: ColorRGBA.SetG(Byte)
+  fullName: Vim.Math3d.ColorRGBA.SetG(System.Byte)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetG
+    path: ../src/Structs.cs
+    startLine: 1764
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly ColorRGBA SetG(byte x)
+    parameters:
+    - id: x
+      type: System.Byte
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Function SetG(x As Byte) As ColorRGBA
+  overload: Vim.Math3d.ColorRGBA.SetG*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.ColorRGBA.SetB(System.Byte)
+  commentId: M:Vim.Math3d.ColorRGBA.SetB(System.Byte)
+  id: SetB(System.Byte)
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: SetB(Byte)
+  nameWithType: ColorRGBA.SetB(Byte)
+  fullName: Vim.Math3d.ColorRGBA.SetB(System.Byte)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetB
+    path: ../src/Structs.cs
+    startLine: 1765
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly ColorRGBA SetB(byte x)
+    parameters:
+    - id: x
+      type: System.Byte
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Function SetB(x As Byte) As ColorRGBA
+  overload: Vim.Math3d.ColorRGBA.SetB*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.ColorRGBA.SetA(System.Byte)
+  commentId: M:Vim.Math3d.ColorRGBA.SetA(System.Byte)
+  id: SetA(System.Byte)
+  parent: Vim.Math3d.ColorRGBA
+  langs:
+  - csharp
+  - vb
+  name: SetA(Byte)
+  nameWithType: ColorRGBA.SetA(Byte)
+  fullName: Vim.Math3d.ColorRGBA.SetA(System.Byte)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetA
+    path: ../src/Structs.cs
+    startLine: 1766
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly ColorRGBA SetA(byte x)
+    parameters:
+    - id: x
+      type: System.Byte
+    return:
+      type: Vim.Math3d.ColorRGBA
+    content.vb: Public Function SetA(x As Byte) As ColorRGBA
+  overload: Vim.Math3d.ColorRGBA.SetA*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.IEquatable{Vim.Math3d.ColorRGBA}
+  commentId: T:System.IEquatable{Vim.Math3d.ColorRGBA}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<ColorRGBA>
+  nameWithType: IEquatable<ColorRGBA>
+  fullName: System.IEquatable<Vim.Math3d.ColorRGBA>
+  nameWithType.vb: IEquatable(Of ColorRGBA)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.ColorRGBA)
+  name.vb: IEquatable(Of ColorRGBA)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.ColorRGBA
+    name: ColorRGBA
+    nameWithType: ColorRGBA
+    fullName: Vim.Math3d.ColorRGBA
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.ColorRGBA
+    name: ColorRGBA
+    nameWithType: ColorRGBA
+    fullName: Vim.Math3d.ColorRGBA
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Vim.Math3d.ColorRGBA
+  commentId: T:Vim.Math3d.ColorRGBA
+  parent: Vim.Math3d
+  name: ColorRGBA
+  nameWithType: ColorRGBA
+  fullName: Vim.Math3d.ColorRGBA
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: Vim.Math3d.ColorRGBA.#ctor*
+  commentId: Overload:Vim.Math3d.ColorRGBA.#ctor
+  name: ColorRGBA
+  nameWithType: ColorRGBA.ColorRGBA
+  fullName: Vim.Math3d.ColorRGBA.ColorRGBA
+- uid: System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte}
+  commentId: T:System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte}
+  parent: System
+  definition: System.ValueTuple`4
+  name: (T1, T2, T3, T4)<Byte, Byte, Byte, Byte>
+  nameWithType: (T1, T2, T3, T4)<Byte, Byte, Byte, Byte>
+  fullName: System.ValueTuple<System.Byte, System.Byte, System.Byte, System.Byte>
+  nameWithType.vb: (T1, T2, T3, T4)(Of Byte, Byte, Byte, Byte)
+  fullName.vb: System.ValueTuple(Of System.Byte, System.Byte, System.Byte, System.Byte)
+  name.vb: (T1, T2, T3, T4)(Of Byte, Byte, Byte, Byte)
+  spec.csharp:
+  - uid: System.ValueTuple`4
+    name: (T1, T2, T3, T4)
+    nameWithType: (T1, T2, T3, T4)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`4
+    name: (T1, T2, T3, T4)
+    nameWithType: (T1, T2, T3, T4)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`4
+  commentId: T:System.ValueTuple`4
+  isExternal: true
+  name: (T1, T2, T3, T4)<T1, T2, T3, T4>
+  nameWithType: (T1, T2, T3, T4)<T1, T2, T3, T4>
+  fullName: System.ValueTuple<T1, T2, T3, T4>
+  nameWithType.vb: (T1, T2, T3, T4)(Of T1, T2, T3, T4)
+  fullName.vb: System.ValueTuple(Of T1, T2, T3, T4)
+  name.vb: (T1, T2, T3, T4)(Of T1, T2, T3, T4)
+  spec.csharp:
+  - uid: System.ValueTuple`4
+    name: (T1, T2, T3, T4)
+    nameWithType: (T1, T2, T3, T4)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`4
+    name: (T1, T2, T3, T4)
+    nameWithType: (T1, T2, T3, T4)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ColorRGBA.Create*
+  commentId: Overload:Vim.Math3d.ColorRGBA.Create
+  name: Create
+  nameWithType: ColorRGBA.Create
+  fullName: Vim.Math3d.ColorRGBA.Create
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ColorRGBA.Equals*
+  commentId: Overload:Vim.Math3d.ColorRGBA.Equals
+  name: Equals
+  nameWithType: ColorRGBA.Equals
+  fullName: Vim.Math3d.ColorRGBA.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ColorRGBA.GetHashCode*
+  commentId: Overload:Vim.Math3d.ColorRGBA.GetHashCode
+  name: GetHashCode
+  nameWithType: ColorRGBA.GetHashCode
+  fullName: Vim.Math3d.ColorRGBA.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ColorRGBA.ToString*
+  commentId: Overload:Vim.Math3d.ColorRGBA.ToString
+  name: ToString
+  nameWithType: ColorRGBA.ToString
+  fullName: Vim.Math3d.ColorRGBA.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vim.Math3d.ColorRGBA.Deconstruct*
+  commentId: Overload:Vim.Math3d.ColorRGBA.Deconstruct
+  name: Deconstruct
+  nameWithType: ColorRGBA.Deconstruct
+  fullName: Vim.Math3d.ColorRGBA.Deconstruct
+- uid: System.IEquatable{Vim.Math3d.ColorRGBA}.Equals(Vim.Math3d.ColorRGBA)
+  commentId: M:System.IEquatable{Vim.Math3d.ColorRGBA}.Equals(Vim.Math3d.ColorRGBA)
+  parent: System.IEquatable{Vim.Math3d.ColorRGBA}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(ColorRGBA)
+  nameWithType: IEquatable<ColorRGBA>.Equals(ColorRGBA)
+  fullName: System.IEquatable<Vim.Math3d.ColorRGBA>.Equals(Vim.Math3d.ColorRGBA)
+  nameWithType.vb: IEquatable(Of ColorRGBA).Equals(ColorRGBA)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.ColorRGBA).Equals(Vim.Math3d.ColorRGBA)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<ColorRGBA>.Equals
+    fullName: System.IEquatable<Vim.Math3d.ColorRGBA>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ColorRGBA
+    name: ColorRGBA
+    nameWithType: ColorRGBA
+    fullName: Vim.Math3d.ColorRGBA
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of ColorRGBA).Equals
+    fullName: System.IEquatable(Of Vim.Math3d.ColorRGBA).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.ColorRGBA
+    name: ColorRGBA
+    nameWithType: ColorRGBA
+    fullName: Vim.Math3d.ColorRGBA
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.ColorRGBA.op_Equality*
+  commentId: Overload:Vim.Math3d.ColorRGBA.op_Equality
+  name: Equality
+  nameWithType: ColorRGBA.Equality
+  fullName: Vim.Math3d.ColorRGBA.Equality
+- uid: Vim.Math3d.ColorRGBA.op_Inequality*
+  commentId: Overload:Vim.Math3d.ColorRGBA.op_Inequality
+  name: Inequality
+  nameWithType: ColorRGBA.Inequality
+  fullName: Vim.Math3d.ColorRGBA.Inequality
+- uid: Vim.Math3d.ColorRGBA.op_Implicit*
+  commentId: Overload:Vim.Math3d.ColorRGBA.op_Implicit
+  name: Implicit
+  nameWithType: ColorRGBA.Implicit
+  fullName: Vim.Math3d.ColorRGBA.Implicit
+  nameWithType.vb: ColorRGBA.Widening
+  fullName.vb: Vim.Math3d.ColorRGBA.Widening
+  name.vb: Widening
+- uid: Vim.Math3d.ColorRGBA.SetR*
+  commentId: Overload:Vim.Math3d.ColorRGBA.SetR
+  name: SetR
+  nameWithType: ColorRGBA.SetR
+  fullName: Vim.Math3d.ColorRGBA.SetR
+- uid: Vim.Math3d.ColorRGBA.SetG*
+  commentId: Overload:Vim.Math3d.ColorRGBA.SetG
+  name: SetG
+  nameWithType: ColorRGBA.SetG
+  fullName: Vim.Math3d.ColorRGBA.SetG
+- uid: Vim.Math3d.ColorRGBA.SetB*
+  commentId: Overload:Vim.Math3d.ColorRGBA.SetB
+  name: SetB
+  nameWithType: ColorRGBA.SetB
+  fullName: Vim.Math3d.ColorRGBA.SetB
+- uid: Vim.Math3d.ColorRGBA.SetA*
+  commentId: Overload:Vim.Math3d.ColorRGBA.SetA
+  name: SetA
+  nameWithType: ColorRGBA.SetA
+  fullName: Vim.Math3d.ColorRGBA.SetA

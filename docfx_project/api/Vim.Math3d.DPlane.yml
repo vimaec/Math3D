@@ -1,0 +1,1517 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.DPlane
+  commentId: T:Vim.Math3d.DPlane
+  id: DPlane
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.DPlane.#ctor(System.ValueTuple{Vim.Math3d.DVector3,System.Double})
+  - Vim.Math3d.DPlane.#ctor(Vim.Math3d.DVector3,System.Double)
+  - Vim.Math3d.DPlane.AlmostEquals(Vim.Math3d.DPlane,System.Single)
+  - Vim.Math3d.DPlane.Create(System.ValueTuple{Vim.Math3d.DVector3,System.Double})
+  - Vim.Math3d.DPlane.Create(Vim.Math3d.DVector3,System.Double)
+  - Vim.Math3d.DPlane.D
+  - Vim.Math3d.DPlane.Deconstruct(Vim.Math3d.DVector3@,System.Double@)
+  - Vim.Math3d.DPlane.Equals(System.Object)
+  - Vim.Math3d.DPlane.Equals(Vim.Math3d.DPlane)
+  - Vim.Math3d.DPlane.GetHashCode
+  - Vim.Math3d.DPlane.MaxValue
+  - Vim.Math3d.DPlane.MinValue
+  - Vim.Math3d.DPlane.Normal
+  - Vim.Math3d.DPlane.op_Equality(Vim.Math3d.DPlane,Vim.Math3d.DPlane)
+  - Vim.Math3d.DPlane.op_Implicit(System.ValueTuple{Vim.Math3d.DVector3,System.Double})~Vim.Math3d.DPlane
+  - Vim.Math3d.DPlane.op_Implicit(Vim.Math3d.DPlane)~System.ValueTuple{Vim.Math3d.DVector3,System.Double}
+  - Vim.Math3d.DPlane.op_Inequality(Vim.Math3d.DPlane,Vim.Math3d.DPlane)
+  - Vim.Math3d.DPlane.SetD(System.Double)
+  - Vim.Math3d.DPlane.SetNormal(Vim.Math3d.DVector3)
+  - Vim.Math3d.DPlane.ToString
+  - Vim.Math3d.DPlane.Zero
+  langs:
+  - csharp
+  - vb
+  name: DPlane
+  nameWithType: DPlane
+  fullName: Vim.Math3d.DPlane
+  type: Struct
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: DPlane
+    path: ../src/Structs.cs
+    startLine: 547
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataContract]
+
+      public readonly struct DPlane : IEquatable<DPlane>
+    content.vb: >-
+      <DataContract>
+
+      Public Structure DPlane
+          Implements IEquatable(Of DPlane)
+  implements:
+  - System.IEquatable{Vim.Math3d.DPlane}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Vim.Math3d.DPlane.Normal
+  commentId: F:Vim.Math3d.DPlane.Normal
+  id: Normal
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: Normal
+  nameWithType: DPlane.Normal
+  fullName: Vim.Math3d.DPlane.Normal
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Normal
+    path: ../src/Structs.cs
+    startLine: 553
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly DVector3 Normal
+    return:
+      type: Vim.Math3d.DVector3
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Normal As DVector3
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.DPlane.D
+  commentId: F:Vim.Math3d.DPlane.D
+  id: D
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: D
+  nameWithType: DPlane.D
+  fullName: Vim.Math3d.DPlane.D
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: D
+    path: ../src/Structs.cs
+    startLine: 555
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly double D
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly D As Double
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.DPlane.#ctor(System.ValueTuple{Vim.Math3d.DVector3,System.Double})
+  commentId: M:Vim.Math3d.DPlane.#ctor(System.ValueTuple{Vim.Math3d.DVector3,System.Double})
+  id: '#ctor(System.ValueTuple{Vim.Math3d.DVector3,System.Double})'
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: DPlane((DVector3 normal, Double d))
+  nameWithType: DPlane.DPlane((DVector3 normal, Double d))
+  fullName: Vim.Math3d.DPlane.DPlane(System.ValueTuple<Vim.Math3d.DVector3, System.Double>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 556
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public DPlane((DVector3 normal, double d) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Vim.Math3d.DVector3,System.Double}
+    content.vb: Public Sub New(tuple As(normal As DVector3, d As Double)(Of DVector3 , Double))
+  overload: Vim.Math3d.DPlane.#ctor*
+  nameWithType.vb: DPlane.DPlane((normal As DVector3, d As Double)(Of DVector3, Double))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.DPlane.DPlane(System.ValueTuple(Of Vim.Math3d.DVector3, System.Double))
+  name.vb: DPlane((normal As DVector3, d As Double)(Of DVector3, Double))
+- uid: Vim.Math3d.DPlane.#ctor(Vim.Math3d.DVector3,System.Double)
+  commentId: M:Vim.Math3d.DPlane.#ctor(Vim.Math3d.DVector3,System.Double)
+  id: '#ctor(Vim.Math3d.DVector3,System.Double)'
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: DPlane(DVector3, Double)
+  nameWithType: DPlane.DPlane(DVector3, Double)
+  fullName: Vim.Math3d.DPlane.DPlane(Vim.Math3d.DVector3, System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 557
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public DPlane(DVector3 normal, double d)
+    parameters:
+    - id: normal
+      type: Vim.Math3d.DVector3
+    - id: d
+      type: System.Double
+    content.vb: Public Sub New(normal As DVector3, d As Double)
+  overload: Vim.Math3d.DPlane.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.DPlane.Create(Vim.Math3d.DVector3,System.Double)
+  commentId: M:Vim.Math3d.DPlane.Create(Vim.Math3d.DVector3,System.Double)
+  id: Create(Vim.Math3d.DVector3,System.Double)
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: Create(DVector3, Double)
+  nameWithType: DPlane.Create(DVector3, Double)
+  fullName: Vim.Math3d.DPlane.Create(Vim.Math3d.DVector3, System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 558
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static DPlane Create(DVector3 normal, double d)
+    parameters:
+    - id: normal
+      type: Vim.Math3d.DVector3
+    - id: d
+      type: System.Double
+    return:
+      type: Vim.Math3d.DPlane
+    content.vb: Public Shared Function Create(normal As DVector3, d As Double) As DPlane
+  overload: Vim.Math3d.DPlane.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.DPlane.Create(System.ValueTuple{Vim.Math3d.DVector3,System.Double})
+  commentId: M:Vim.Math3d.DPlane.Create(System.ValueTuple{Vim.Math3d.DVector3,System.Double})
+  id: Create(System.ValueTuple{Vim.Math3d.DVector3,System.Double})
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: Create((DVector3 normal, Double d))
+  nameWithType: DPlane.Create((DVector3 normal, Double d))
+  fullName: Vim.Math3d.DPlane.Create(System.ValueTuple<Vim.Math3d.DVector3, System.Double>)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 559
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static DPlane Create((DVector3 normal, double d) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Vim.Math3d.DVector3,System.Double}
+    return:
+      type: Vim.Math3d.DPlane
+    content.vb: Public Shared Function Create(tuple As(normal As DVector3, d As Double)(Of DVector3 , Double)) As DPlane
+  overload: Vim.Math3d.DPlane.Create*
+  nameWithType.vb: DPlane.Create((normal As DVector3, d As Double)(Of DVector3, Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.DPlane.Create(System.ValueTuple(Of Vim.Math3d.DVector3, System.Double))
+  name.vb: Create((normal As DVector3, d As Double)(Of DVector3, Double))
+- uid: Vim.Math3d.DPlane.Equals(System.Object)
+  commentId: M:Vim.Math3d.DPlane.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: DPlane.Equals(Object)
+  fullName: Vim.Math3d.DPlane.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 560
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Vim.Math3d.DPlane.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.DPlane.GetHashCode
+  commentId: M:Vim.Math3d.DPlane.GetHashCode
+  id: GetHashCode
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: DPlane.GetHashCode()
+  fullName: Vim.Math3d.DPlane.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetHashCode
+    path: ../src/Structs.cs
+    startLine: 561
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Vim.Math3d.DPlane.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.DPlane.ToString
+  commentId: M:Vim.Math3d.DPlane.ToString
+  id: ToString
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: DPlane.ToString()
+  fullName: Vim.Math3d.DPlane.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToString
+    path: ../src/Structs.cs
+    startLine: 562
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: Vim.Math3d.DPlane.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.DPlane.Deconstruct(Vim.Math3d.DVector3@,System.Double@)
+  commentId: M:Vim.Math3d.DPlane.Deconstruct(Vim.Math3d.DVector3@,System.Double@)
+  id: Deconstruct(Vim.Math3d.DVector3@,System.Double@)
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out DVector3, out Double)
+  nameWithType: DPlane.Deconstruct(out DVector3, out Double)
+  fullName: Vim.Math3d.DPlane.Deconstruct(out Vim.Math3d.DVector3, out System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Deconstruct
+    path: ../src/Structs.cs
+    startLine: 563
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly void Deconstruct(out DVector3 normal, out double d)
+    parameters:
+    - id: normal
+      type: Vim.Math3d.DVector3
+    - id: d
+      type: System.Double
+    content.vb: Public Sub Deconstruct(ByRef normal As DVector3, ByRef d As Double)
+  overload: Vim.Math3d.DPlane.Deconstruct*
+  nameWithType.vb: DPlane.Deconstruct(ByRef DVector3, ByRef Double)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.DPlane.Deconstruct(ByRef Vim.Math3d.DVector3, ByRef System.Double)
+  name.vb: Deconstruct(ByRef DVector3, ByRef Double)
+- uid: Vim.Math3d.DPlane.Equals(Vim.Math3d.DPlane)
+  commentId: M:Vim.Math3d.DPlane.Equals(Vim.Math3d.DPlane)
+  id: Equals(Vim.Math3d.DPlane)
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: Equals(DPlane)
+  nameWithType: DPlane.Equals(DPlane)
+  fullName: Vim.Math3d.DPlane.Equals(Vim.Math3d.DPlane)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 564
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool Equals(DPlane x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.DPlane
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(x As DPlane) As Boolean
+  overload: Vim.Math3d.DPlane.Equals*
+  implements:
+  - System.IEquatable{Vim.Math3d.DPlane}.Equals(Vim.Math3d.DPlane)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.DPlane.op_Equality(Vim.Math3d.DPlane,Vim.Math3d.DPlane)
+  commentId: M:Vim.Math3d.DPlane.op_Equality(Vim.Math3d.DPlane,Vim.Math3d.DPlane)
+  id: op_Equality(Vim.Math3d.DPlane,Vim.Math3d.DPlane)
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: Equality(DPlane, DPlane)
+  nameWithType: DPlane.Equality(DPlane, DPlane)
+  fullName: Vim.Math3d.DPlane.Equality(Vim.Math3d.DPlane, Vim.Math3d.DPlane)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Equality
+    path: ../src/Structs.cs
+    startLine: 565
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator ==(DPlane x0, DPlane x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.DPlane
+    - id: x1
+      type: Vim.Math3d.DPlane
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(x0 As DPlane, x1 As DPlane) As Boolean
+  overload: Vim.Math3d.DPlane.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.DPlane.op_Inequality(Vim.Math3d.DPlane,Vim.Math3d.DPlane)
+  commentId: M:Vim.Math3d.DPlane.op_Inequality(Vim.Math3d.DPlane,Vim.Math3d.DPlane)
+  id: op_Inequality(Vim.Math3d.DPlane,Vim.Math3d.DPlane)
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: Inequality(DPlane, DPlane)
+  nameWithType: DPlane.Inequality(DPlane, DPlane)
+  fullName: Vim.Math3d.DPlane.Inequality(Vim.Math3d.DPlane, Vim.Math3d.DPlane)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Inequality
+    path: ../src/Structs.cs
+    startLine: 566
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator !=(DPlane x0, DPlane x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.DPlane
+    - id: x1
+      type: Vim.Math3d.DPlane
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(x0 As DPlane, x1 As DPlane) As Boolean
+  overload: Vim.Math3d.DPlane.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.DPlane.op_Implicit(System.ValueTuple{Vim.Math3d.DVector3,System.Double})~Vim.Math3d.DPlane
+  commentId: M:Vim.Math3d.DPlane.op_Implicit(System.ValueTuple{Vim.Math3d.DVector3,System.Double})~Vim.Math3d.DPlane
+  id: op_Implicit(System.ValueTuple{Vim.Math3d.DVector3,System.Double})~Vim.Math3d.DPlane
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: Implicit((DVector3 normal, Double d) to DPlane)
+  nameWithType: DPlane.Implicit((DVector3 normal, Double d) to DPlane)
+  fullName: Vim.Math3d.DPlane.Implicit(System.ValueTuple<Vim.Math3d.DVector3, System.Double> to Vim.Math3d.DPlane)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 567
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator DPlane((DVector3 normal, double d) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{Vim.Math3d.DVector3,System.Double}
+    return:
+      type: Vim.Math3d.DPlane
+    content.vb: Public Shared Widening Operator CType(tuple As(normal As DVector3, d As Double)(Of DVector3 , Double)) As DPlane
+  overload: Vim.Math3d.DPlane.op_Implicit*
+  nameWithType.vb: DPlane.Widening((normal As DVector3, d As Double)(Of DVector3, Double) to DPlane)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.DPlane.Widening(System.ValueTuple(Of Vim.Math3d.DVector3, System.Double) to Vim.Math3d.DPlane)
+  name.vb: Widening((normal As DVector3, d As Double)(Of DVector3, Double) to DPlane)
+- uid: Vim.Math3d.DPlane.op_Implicit(Vim.Math3d.DPlane)~System.ValueTuple{Vim.Math3d.DVector3,System.Double}
+  commentId: M:Vim.Math3d.DPlane.op_Implicit(Vim.Math3d.DPlane)~System.ValueTuple{Vim.Math3d.DVector3,System.Double}
+  id: op_Implicit(Vim.Math3d.DPlane)~System.ValueTuple{Vim.Math3d.DVector3,System.Double}
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: Implicit(DPlane to (DVector3 normal, Double d))
+  nameWithType: DPlane.Implicit(DPlane to (DVector3 normal, Double d))
+  fullName: Vim.Math3d.DPlane.Implicit(Vim.Math3d.DPlane to System.ValueTuple<Vim.Math3d.DVector3, System.Double>)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 568
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator (DVector3 normal, double d)(DPlane self)
+    parameters:
+    - id: self
+      type: Vim.Math3d.DPlane
+    return:
+      type: System.ValueTuple{Vim.Math3d.DVector3,System.Double}
+    content.vb: Public Shared Widening Operator CType(self As DPlane) As(normal As DVector3, d As Double)(Of DVector3 , Double)
+  overload: Vim.Math3d.DPlane.op_Implicit*
+  nameWithType.vb: DPlane.Widening(DPlane to (normal As DVector3, d As Double)(Of DVector3, Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.DPlane.Widening(Vim.Math3d.DPlane to System.ValueTuple(Of Vim.Math3d.DVector3, System.Double))
+  name.vb: Widening(DPlane to (normal As DVector3, d As Double)(Of DVector3, Double))
+- uid: Vim.Math3d.DPlane.AlmostEquals(Vim.Math3d.DPlane,System.Single)
+  commentId: M:Vim.Math3d.DPlane.AlmostEquals(Vim.Math3d.DPlane,System.Single)
+  id: AlmostEquals(Vim.Math3d.DPlane,System.Single)
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: AlmostEquals(DPlane, Single)
+  nameWithType: DPlane.AlmostEquals(DPlane, Single)
+  fullName: Vim.Math3d.DPlane.AlmostEquals(Vim.Math3d.DPlane, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AlmostEquals
+    path: ../src/Structs.cs
+    startLine: 570
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool AlmostEquals(DPlane x, float tolerance = 1E-07F)
+    parameters:
+    - id: x
+      type: Vim.Math3d.DPlane
+    - id: tolerance
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Function AlmostEquals(x As DPlane, tolerance As Single = 1E-07F) As Boolean
+  overload: Vim.Math3d.DPlane.AlmostEquals*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.DPlane.Zero
+  commentId: F:Vim.Math3d.DPlane.Zero
+  id: Zero
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: DPlane.Zero
+  fullName: Vim.Math3d.DPlane.Zero
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Zero
+    path: ../src/Structs.cs
+    startLine: 571
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static DPlane Zero
+    return:
+      type: Vim.Math3d.DPlane
+    content.vb: Public Shared Zero As DPlane
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.DPlane.MinValue
+  commentId: F:Vim.Math3d.DPlane.MinValue
+  id: MinValue
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: DPlane.MinValue
+  fullName: Vim.Math3d.DPlane.MinValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MinValue
+    path: ../src/Structs.cs
+    startLine: 572
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static DPlane MinValue
+    return:
+      type: Vim.Math3d.DPlane
+    content.vb: Public Shared MinValue As DPlane
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.DPlane.MaxValue
+  commentId: F:Vim.Math3d.DPlane.MaxValue
+  id: MaxValue
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: DPlane.MaxValue
+  fullName: Vim.Math3d.DPlane.MaxValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MaxValue
+    path: ../src/Structs.cs
+    startLine: 573
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static DPlane MaxValue
+    return:
+      type: Vim.Math3d.DPlane
+    content.vb: Public Shared MaxValue As DPlane
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.DPlane.SetNormal(Vim.Math3d.DVector3)
+  commentId: M:Vim.Math3d.DPlane.SetNormal(Vim.Math3d.DVector3)
+  id: SetNormal(Vim.Math3d.DVector3)
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: SetNormal(DVector3)
+  nameWithType: DPlane.SetNormal(DVector3)
+  fullName: Vim.Math3d.DPlane.SetNormal(Vim.Math3d.DVector3)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetNormal
+    path: ../src/Structs.cs
+    startLine: 574
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly DPlane SetNormal(DVector3 x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.DVector3
+    return:
+      type: Vim.Math3d.DPlane
+    content.vb: Public Function SetNormal(x As DVector3) As DPlane
+  overload: Vim.Math3d.DPlane.SetNormal*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.DPlane.SetD(System.Double)
+  commentId: M:Vim.Math3d.DPlane.SetD(System.Double)
+  id: SetD(System.Double)
+  parent: Vim.Math3d.DPlane
+  langs:
+  - csharp
+  - vb
+  name: SetD(Double)
+  nameWithType: DPlane.SetD(Double)
+  fullName: Vim.Math3d.DPlane.SetD(System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetD
+    path: ../src/Structs.cs
+    startLine: 575
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly DPlane SetD(double x)
+    parameters:
+    - id: x
+      type: System.Double
+    return:
+      type: Vim.Math3d.DPlane
+    content.vb: Public Function SetD(x As Double) As DPlane
+  overload: Vim.Math3d.DPlane.SetD*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.IEquatable{Vim.Math3d.DPlane}
+  commentId: T:System.IEquatable{Vim.Math3d.DPlane}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<DPlane>
+  nameWithType: IEquatable<DPlane>
+  fullName: System.IEquatable<Vim.Math3d.DPlane>
+  nameWithType.vb: IEquatable(Of DPlane)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.DPlane)
+  name.vb: IEquatable(Of DPlane)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.DPlane
+    name: DPlane
+    nameWithType: DPlane
+    fullName: Vim.Math3d.DPlane
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.DPlane
+    name: DPlane
+    nameWithType: DPlane
+    fullName: Vim.Math3d.DPlane
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Vim.Math3d.DVector3
+  commentId: T:Vim.Math3d.DVector3
+  parent: Vim.Math3d
+  name: DVector3
+  nameWithType: DVector3
+  fullName: Vim.Math3d.DVector3
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Vim.Math3d.DPlane.#ctor*
+  commentId: Overload:Vim.Math3d.DPlane.#ctor
+  name: DPlane
+  nameWithType: DPlane.DPlane
+  fullName: Vim.Math3d.DPlane.DPlane
+- uid: System.ValueTuple{Vim.Math3d.DVector3,System.Double}
+  commentId: T:System.ValueTuple{Vim.Math3d.DVector3,System.Double}
+  parent: System
+  definition: System.ValueTuple`2
+  name: (T1, T2)<DVector3, Double>
+  nameWithType: (T1, T2)<DVector3, Double>
+  fullName: System.ValueTuple<Vim.Math3d.DVector3, System.Double>
+  nameWithType.vb: (T1, T2)(Of DVector3, Double)
+  fullName.vb: System.ValueTuple(Of Vim.Math3d.DVector3, System.Double)
+  name.vb: (T1, T2)(Of DVector3, Double)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.DVector3
+    name: DVector3
+    nameWithType: DVector3
+    fullName: Vim.Math3d.DVector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.DVector3
+    name: DVector3
+    nameWithType: DVector3
+    fullName: Vim.Math3d.DVector3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  isExternal: true
+  name: (T1, T2)<T1, T2>
+  nameWithType: (T1, T2)<T1, T2>
+  fullName: System.ValueTuple<T1, T2>
+  nameWithType.vb: (T1, T2)(Of T1, T2)
+  fullName.vb: System.ValueTuple(Of T1, T2)
+  name.vb: (T1, T2)(Of T1, T2)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.DPlane.Create*
+  commentId: Overload:Vim.Math3d.DPlane.Create
+  name: Create
+  nameWithType: DPlane.Create
+  fullName: Vim.Math3d.DPlane.Create
+- uid: Vim.Math3d.DPlane
+  commentId: T:Vim.Math3d.DPlane
+  parent: Vim.Math3d
+  name: DPlane
+  nameWithType: DPlane
+  fullName: Vim.Math3d.DPlane
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.DPlane.Equals*
+  commentId: Overload:Vim.Math3d.DPlane.Equals
+  name: Equals
+  nameWithType: DPlane.Equals
+  fullName: Vim.Math3d.DPlane.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.DPlane.GetHashCode*
+  commentId: Overload:Vim.Math3d.DPlane.GetHashCode
+  name: GetHashCode
+  nameWithType: DPlane.GetHashCode
+  fullName: Vim.Math3d.DPlane.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.DPlane.ToString*
+  commentId: Overload:Vim.Math3d.DPlane.ToString
+  name: ToString
+  nameWithType: DPlane.ToString
+  fullName: Vim.Math3d.DPlane.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vim.Math3d.DPlane.Deconstruct*
+  commentId: Overload:Vim.Math3d.DPlane.Deconstruct
+  name: Deconstruct
+  nameWithType: DPlane.Deconstruct
+  fullName: Vim.Math3d.DPlane.Deconstruct
+- uid: System.IEquatable{Vim.Math3d.DPlane}.Equals(Vim.Math3d.DPlane)
+  commentId: M:System.IEquatable{Vim.Math3d.DPlane}.Equals(Vim.Math3d.DPlane)
+  parent: System.IEquatable{Vim.Math3d.DPlane}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(DPlane)
+  nameWithType: IEquatable<DPlane>.Equals(DPlane)
+  fullName: System.IEquatable<Vim.Math3d.DPlane>.Equals(Vim.Math3d.DPlane)
+  nameWithType.vb: IEquatable(Of DPlane).Equals(DPlane)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.DPlane).Equals(Vim.Math3d.DPlane)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<DPlane>.Equals
+    fullName: System.IEquatable<Vim.Math3d.DPlane>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.DPlane
+    name: DPlane
+    nameWithType: DPlane
+    fullName: Vim.Math3d.DPlane
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of DPlane).Equals
+    fullName: System.IEquatable(Of Vim.Math3d.DPlane).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.DPlane
+    name: DPlane
+    nameWithType: DPlane
+    fullName: Vim.Math3d.DPlane
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.DPlane.op_Equality*
+  commentId: Overload:Vim.Math3d.DPlane.op_Equality
+  name: Equality
+  nameWithType: DPlane.Equality
+  fullName: Vim.Math3d.DPlane.Equality
+- uid: Vim.Math3d.DPlane.op_Inequality*
+  commentId: Overload:Vim.Math3d.DPlane.op_Inequality
+  name: Inequality
+  nameWithType: DPlane.Inequality
+  fullName: Vim.Math3d.DPlane.Inequality
+- uid: Vim.Math3d.DPlane.op_Implicit*
+  commentId: Overload:Vim.Math3d.DPlane.op_Implicit
+  name: Implicit
+  nameWithType: DPlane.Implicit
+  fullName: Vim.Math3d.DPlane.Implicit
+  nameWithType.vb: DPlane.Widening
+  fullName.vb: Vim.Math3d.DPlane.Widening
+  name.vb: Widening
+- uid: Vim.Math3d.DPlane.AlmostEquals*
+  commentId: Overload:Vim.Math3d.DPlane.AlmostEquals
+  name: AlmostEquals
+  nameWithType: DPlane.AlmostEquals
+  fullName: Vim.Math3d.DPlane.AlmostEquals
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Vim.Math3d.DPlane.SetNormal*
+  commentId: Overload:Vim.Math3d.DPlane.SetNormal
+  name: SetNormal
+  nameWithType: DPlane.SetNormal
+  fullName: Vim.Math3d.DPlane.SetNormal
+- uid: Vim.Math3d.DPlane.SetD*
+  commentId: Overload:Vim.Math3d.DPlane.SetD
+  name: SetD
+  nameWithType: DPlane.SetD
+  fullName: Vim.Math3d.DPlane.SetD

@@ -1,0 +1,696 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.StatelessRandom
+  commentId: T:Vim.Math3d.StatelessRandom
+  id: StatelessRandom
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.StatelessRandom.RandomFloat(System.Int32,System.Int32)
+  - Vim.Math3d.StatelessRandom.RandomFloat(System.Single,System.Single,System.Int32,System.Int32)
+  - Vim.Math3d.StatelessRandom.RandomInt(System.Int32,System.Int32)
+  - Vim.Math3d.StatelessRandom.RandomUInt(System.Int32,System.Int32)
+  - Vim.Math3d.StatelessRandom.RandomVector2(System.Int32,System.Int32)
+  - Vim.Math3d.StatelessRandom.RandomVector3(System.Int32,System.Int32)
+  - Vim.Math3d.StatelessRandom.RandomVector4(System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: StatelessRandom
+  nameWithType: StatelessRandom
+  fullName: Vim.Math3d.StatelessRandom
+  type: Class
+  source:
+    remote:
+      path: src/Random.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: StatelessRandom
+    path: ../src/Random.cs
+    startLine: 7
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static class StatelessRandom
+    content.vb: Public Module StatelessRandom
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Vim.Math3d.StatelessRandom.RandomUInt(System.Int32,System.Int32)
+  commentId: M:Vim.Math3d.StatelessRandom.RandomUInt(System.Int32,System.Int32)
+  id: RandomUInt(System.Int32,System.Int32)
+  parent: Vim.Math3d.StatelessRandom
+  langs:
+  - csharp
+  - vb
+  name: RandomUInt(Int32, Int32)
+  nameWithType: StatelessRandom.RandomUInt(Int32, Int32)
+  fullName: Vim.Math3d.StatelessRandom.RandomUInt(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Random.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: RandomUInt
+    path: ../src/Random.cs
+    startLine: 9
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static uint RandomUInt(int index, int seed = 0)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: seed
+      type: System.Int32
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function RandomUInt(index As Integer, seed As Integer = 0) As UInteger
+  overload: Vim.Math3d.StatelessRandom.RandomUInt*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.StatelessRandom.RandomInt(System.Int32,System.Int32)
+  commentId: M:Vim.Math3d.StatelessRandom.RandomInt(System.Int32,System.Int32)
+  id: RandomInt(System.Int32,System.Int32)
+  parent: Vim.Math3d.StatelessRandom
+  langs:
+  - csharp
+  - vb
+  name: RandomInt(Int32, Int32)
+  nameWithType: StatelessRandom.RandomInt(Int32, Int32)
+  fullName: Vim.Math3d.StatelessRandom.RandomInt(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Random.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: RandomInt
+    path: ../src/Random.cs
+    startLine: 12
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static int RandomInt(int index, int seed = 0)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: seed
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function RandomInt(index As Integer, seed As Integer = 0) As Integer
+  overload: Vim.Math3d.StatelessRandom.RandomInt*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.StatelessRandom.RandomFloat(System.Single,System.Single,System.Int32,System.Int32)
+  commentId: M:Vim.Math3d.StatelessRandom.RandomFloat(System.Single,System.Single,System.Int32,System.Int32)
+  id: RandomFloat(System.Single,System.Single,System.Int32,System.Int32)
+  parent: Vim.Math3d.StatelessRandom
+  langs:
+  - csharp
+  - vb
+  name: RandomFloat(Single, Single, Int32, Int32)
+  nameWithType: StatelessRandom.RandomFloat(Single, Single, Int32, Int32)
+  fullName: Vim.Math3d.StatelessRandom.RandomFloat(System.Single, System.Single, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Random.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: RandomFloat
+    path: ../src/Random.cs
+    startLine: 15
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static float RandomFloat(float min, float max, int index, int seed)
+    parameters:
+    - id: min
+      type: System.Single
+    - id: max
+      type: System.Single
+    - id: index
+      type: System.Int32
+    - id: seed
+      type: System.Int32
+    return:
+      type: System.Single
+    content.vb: Public Shared Function RandomFloat(min As Single, max As Single, index As Integer, seed As Integer) As Single
+  overload: Vim.Math3d.StatelessRandom.RandomFloat*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.StatelessRandom.RandomFloat(System.Int32,System.Int32)
+  commentId: M:Vim.Math3d.StatelessRandom.RandomFloat(System.Int32,System.Int32)
+  id: RandomFloat(System.Int32,System.Int32)
+  parent: Vim.Math3d.StatelessRandom
+  langs:
+  - csharp
+  - vb
+  name: RandomFloat(Int32, Int32)
+  nameWithType: StatelessRandom.RandomFloat(Int32, Int32)
+  fullName: Vim.Math3d.StatelessRandom.RandomFloat(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Random.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: RandomFloat
+    path: ../src/Random.cs
+    startLine: 18
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static float RandomFloat(int index, int seed = 0)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: seed
+      type: System.Int32
+    return:
+      type: System.Single
+    content.vb: Public Shared Function RandomFloat(index As Integer, seed As Integer = 0) As Single
+  overload: Vim.Math3d.StatelessRandom.RandomFloat*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.StatelessRandom.RandomVector2(System.Int32,System.Int32)
+  commentId: M:Vim.Math3d.StatelessRandom.RandomVector2(System.Int32,System.Int32)
+  id: RandomVector2(System.Int32,System.Int32)
+  parent: Vim.Math3d.StatelessRandom
+  langs:
+  - csharp
+  - vb
+  name: RandomVector2(Int32, Int32)
+  nameWithType: StatelessRandom.RandomVector2(Int32, Int32)
+  fullName: Vim.Math3d.StatelessRandom.RandomVector2(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Random.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: RandomVector2
+    path: ../src/Random.cs
+    startLine: 21
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Vector2 RandomVector2(int index, int seed = 0)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: seed
+      type: System.Int32
+    return:
+      type: Vim.Math3d.Vector2
+    content.vb: Public Shared Function RandomVector2(index As Integer, seed As Integer = 0) As Vector2
+  overload: Vim.Math3d.StatelessRandom.RandomVector2*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.StatelessRandom.RandomVector3(System.Int32,System.Int32)
+  commentId: M:Vim.Math3d.StatelessRandom.RandomVector3(System.Int32,System.Int32)
+  id: RandomVector3(System.Int32,System.Int32)
+  parent: Vim.Math3d.StatelessRandom
+  langs:
+  - csharp
+  - vb
+  name: RandomVector3(Int32, Int32)
+  nameWithType: StatelessRandom.RandomVector3(Int32, Int32)
+  fullName: Vim.Math3d.StatelessRandom.RandomVector3(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Random.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: RandomVector3
+    path: ../src/Random.cs
+    startLine: 26
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Vector3 RandomVector3(int index, int seed = 0)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: seed
+      type: System.Int32
+    return:
+      type: Vim.Math3d.Vector3
+    content.vb: Public Shared Function RandomVector3(index As Integer, seed As Integer = 0) As Vector3
+  overload: Vim.Math3d.StatelessRandom.RandomVector3*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.StatelessRandom.RandomVector4(System.Int32,System.Int32)
+  commentId: M:Vim.Math3d.StatelessRandom.RandomVector4(System.Int32,System.Int32)
+  id: RandomVector4(System.Int32,System.Int32)
+  parent: Vim.Math3d.StatelessRandom
+  langs:
+  - csharp
+  - vb
+  name: RandomVector4(Int32, Int32)
+  nameWithType: StatelessRandom.RandomVector4(Int32, Int32)
+  fullName: Vim.Math3d.StatelessRandom.RandomVector4(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Random.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: RandomVector4
+    path: ../src/Random.cs
+    startLine: 32
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Vector4 RandomVector4(int index, int seed = 0)
+    parameters:
+    - id: index
+      type: System.Int32
+    - id: seed
+      type: System.Int32
+    return:
+      type: Vim.Math3d.Vector4
+    content.vb: Public Shared Function RandomVector4(index As Integer, seed As Integer = 0) As Vector4
+  overload: Vim.Math3d.StatelessRandom.RandomVector4*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Vim.Math3d.StatelessRandom.RandomUInt*
+  commentId: Overload:Vim.Math3d.StatelessRandom.RandomUInt
+  name: RandomUInt
+  nameWithType: StatelessRandom.RandomUInt
+  fullName: Vim.Math3d.StatelessRandom.RandomUInt
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: Vim.Math3d.StatelessRandom.RandomInt*
+  commentId: Overload:Vim.Math3d.StatelessRandom.RandomInt
+  name: RandomInt
+  nameWithType: StatelessRandom.RandomInt
+  fullName: Vim.Math3d.StatelessRandom.RandomInt
+- uid: Vim.Math3d.StatelessRandom.RandomFloat*
+  commentId: Overload:Vim.Math3d.StatelessRandom.RandomFloat
+  name: RandomFloat
+  nameWithType: StatelessRandom.RandomFloat
+  fullName: Vim.Math3d.StatelessRandom.RandomFloat
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Vim.Math3d.StatelessRandom.RandomVector2*
+  commentId: Overload:Vim.Math3d.StatelessRandom.RandomVector2
+  name: RandomVector2
+  nameWithType: StatelessRandom.RandomVector2
+  fullName: Vim.Math3d.StatelessRandom.RandomVector2
+- uid: Vim.Math3d.Vector2
+  commentId: T:Vim.Math3d.Vector2
+  parent: Vim.Math3d
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Vim.Math3d.Vector2
+- uid: Vim.Math3d.StatelessRandom.RandomVector3*
+  commentId: Overload:Vim.Math3d.StatelessRandom.RandomVector3
+  name: RandomVector3
+  nameWithType: StatelessRandom.RandomVector3
+  fullName: Vim.Math3d.StatelessRandom.RandomVector3
+- uid: Vim.Math3d.Vector3
+  commentId: T:Vim.Math3d.Vector3
+  parent: Vim.Math3d
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vim.Math3d.Vector3
+- uid: Vim.Math3d.StatelessRandom.RandomVector4*
+  commentId: Overload:Vim.Math3d.StatelessRandom.RandomVector4
+  name: RandomVector4
+  nameWithType: StatelessRandom.RandomVector4
+  fullName: Vim.Math3d.StatelessRandom.RandomVector4
+- uid: Vim.Math3d.Vector4
+  commentId: T:Vim.Math3d.Vector4
+  parent: Vim.Math3d
+  name: Vector4
+  nameWithType: Vector4
+  fullName: Vim.Math3d.Vector4

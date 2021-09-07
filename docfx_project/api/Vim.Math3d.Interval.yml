@@ -1,0 +1,2423 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.Interval
+  commentId: T:Vim.Math3d.Interval
+  id: Interval
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.Interval.#ctor(System.Single,System.Single)
+  - Vim.Math3d.Interval.#ctor(System.ValueTuple{System.Single,System.Single})
+  - Vim.Math3d.Interval.AlmostEquals(Vim.Math3d.Interval,System.Single)
+  - Vim.Math3d.Interval.Center
+  - Vim.Math3d.Interval.CompareTo(Vim.Math3d.Interval)
+  - Vim.Math3d.Interval.Create(System.Single,System.Single)
+  - Vim.Math3d.Interval.Create(System.ValueTuple{System.Single,System.Single})
+  - Vim.Math3d.Interval.Deconstruct(System.Single@,System.Single@)
+  - Vim.Math3d.Interval.Empty
+  - Vim.Math3d.Interval.Equals(System.Object)
+  - Vim.Math3d.Interval.Equals(Vim.Math3d.Interval)
+  - Vim.Math3d.Interval.Extent
+  - Vim.Math3d.Interval.GetHashCode
+  - Vim.Math3d.Interval.Intersection(Vim.Math3d.Interval)
+  - Vim.Math3d.Interval.IsInfinity
+  - Vim.Math3d.Interval.IsNaN
+  - Vim.Math3d.Interval.Magnitude
+  - Vim.Math3d.Interval.MagnitudeSquared
+  - Vim.Math3d.Interval.Max
+  - Vim.Math3d.Interval.MaxValue
+  - Vim.Math3d.Interval.Merge(System.Single)
+  - Vim.Math3d.Interval.Merge(Vim.Math3d.Interval)
+  - Vim.Math3d.Interval.Min
+  - Vim.Math3d.Interval.MinValue
+  - Vim.Math3d.Interval.op_Addition(Vim.Math3d.Interval,System.Single)
+  - Vim.Math3d.Interval.op_Addition(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  - Vim.Math3d.Interval.op_Equality(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  - Vim.Math3d.Interval.op_GreaterThan(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  - Vim.Math3d.Interval.op_GreaterThanOrEqual(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  - Vim.Math3d.Interval.op_Implicit(System.ValueTuple{System.Single,System.Single})~Vim.Math3d.Interval
+  - Vim.Math3d.Interval.op_Implicit(Vim.Math3d.Interval)~System.ValueTuple{System.Single,System.Single}
+  - Vim.Math3d.Interval.op_Inequality(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  - Vim.Math3d.Interval.op_LessThan(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  - Vim.Math3d.Interval.op_LessThanOrEqual(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  - Vim.Math3d.Interval.op_Subtraction(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  - Vim.Math3d.Interval.SetMax(System.Single)
+  - Vim.Math3d.Interval.SetMin(System.Single)
+  - Vim.Math3d.Interval.ToString
+  - Vim.Math3d.Interval.Zero
+  langs:
+  - csharp
+  - vb
+  name: Interval
+  nameWithType: Interval
+  fullName: Vim.Math3d.Interval
+  type: Struct
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Interval
+    path: ../src/Structs.cs
+    startLine: 649
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataContract]
+
+      public readonly struct Interval : IEquatable<Interval>, IComparable<Interval>
+    content.vb: >-
+      <DataContract>
+
+      Public Structure Interval
+          Implements IEquatable(Of Interval), IComparable(Of Interval)
+  implements:
+  - System.IEquatable{Vim.Math3d.Interval}
+  - System.IComparable{Vim.Math3d.Interval}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Vim.Math3d.Interval.Min
+  commentId: F:Vim.Math3d.Interval.Min
+  id: Min
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Min
+  nameWithType: Interval.Min
+  fullName: Vim.Math3d.Interval.Min
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Min
+    path: ../src/Structs.cs
+    startLine: 656
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly float Min
+    return:
+      type: System.Single
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Min As Single
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Interval.Max
+  commentId: F:Vim.Math3d.Interval.Max
+  id: Max
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Max
+  nameWithType: Interval.Max
+  fullName: Vim.Math3d.Interval.Max
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Max
+    path: ../src/Structs.cs
+    startLine: 658
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly float Max
+    return:
+      type: System.Single
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Max As Single
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Interval.#ctor(System.ValueTuple{System.Single,System.Single})
+  commentId: M:Vim.Math3d.Interval.#ctor(System.ValueTuple{System.Single,System.Single})
+  id: '#ctor(System.ValueTuple{System.Single,System.Single})'
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Interval((Single min, Single max))
+  nameWithType: Interval.Interval((Single min, Single max))
+  fullName: Vim.Math3d.Interval.Interval(System.ValueTuple<System.Single, System.Single>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 659
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public Interval((float min, float max) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Single,System.Single}
+    content.vb: Public Sub New(tuple As(min As Single, max As Single)(Of Single , Single))
+  overload: Vim.Math3d.Interval.#ctor*
+  nameWithType.vb: Interval.Interval((min As Single, max As Single)(Of Single, Single))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Interval.Interval(System.ValueTuple(Of System.Single, System.Single))
+  name.vb: Interval((min As Single, max As Single)(Of Single, Single))
+- uid: Vim.Math3d.Interval.#ctor(System.Single,System.Single)
+  commentId: M:Vim.Math3d.Interval.#ctor(System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single)'
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Interval(Single, Single)
+  nameWithType: Interval.Interval(Single, Single)
+  fullName: Vim.Math3d.Interval.Interval(System.Single, System.Single)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 660
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public Interval(float min, float max)
+    parameters:
+    - id: min
+      type: System.Single
+    - id: max
+      type: System.Single
+    content.vb: Public Sub New(min As Single, max As Single)
+  overload: Vim.Math3d.Interval.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Interval.Create(System.Single,System.Single)
+  commentId: M:Vim.Math3d.Interval.Create(System.Single,System.Single)
+  id: Create(System.Single,System.Single)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Create(Single, Single)
+  nameWithType: Interval.Create(Single, Single)
+  fullName: Vim.Math3d.Interval.Create(System.Single, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 661
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Interval Create(float min, float max)
+    parameters:
+    - id: min
+      type: System.Single
+    - id: max
+      type: System.Single
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Shared Function Create(min As Single, max As Single) As Interval
+  overload: Vim.Math3d.Interval.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Interval.Create(System.ValueTuple{System.Single,System.Single})
+  commentId: M:Vim.Math3d.Interval.Create(System.ValueTuple{System.Single,System.Single})
+  id: Create(System.ValueTuple{System.Single,System.Single})
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Create((Single min, Single max))
+  nameWithType: Interval.Create((Single min, Single max))
+  fullName: Vim.Math3d.Interval.Create(System.ValueTuple<System.Single, System.Single>)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 662
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Interval Create((float min, float max) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Single,System.Single}
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Shared Function Create(tuple As(min As Single, max As Single)(Of Single , Single)) As Interval
+  overload: Vim.Math3d.Interval.Create*
+  nameWithType.vb: Interval.Create((min As Single, max As Single)(Of Single, Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Interval.Create(System.ValueTuple(Of System.Single, System.Single))
+  name.vb: Create((min As Single, max As Single)(Of Single, Single))
+- uid: Vim.Math3d.Interval.Equals(System.Object)
+  commentId: M:Vim.Math3d.Interval.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: Interval.Equals(Object)
+  fullName: Vim.Math3d.Interval.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 663
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Vim.Math3d.Interval.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Interval.GetHashCode
+  commentId: M:Vim.Math3d.Interval.GetHashCode
+  id: GetHashCode
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Interval.GetHashCode()
+  fullName: Vim.Math3d.Interval.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetHashCode
+    path: ../src/Structs.cs
+    startLine: 664
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Vim.Math3d.Interval.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Interval.ToString
+  commentId: M:Vim.Math3d.Interval.ToString
+  id: ToString
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Interval.ToString()
+  fullName: Vim.Math3d.Interval.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToString
+    path: ../src/Structs.cs
+    startLine: 665
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: Vim.Math3d.Interval.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.Interval.Deconstruct(System.Single@,System.Single@)
+  commentId: M:Vim.Math3d.Interval.Deconstruct(System.Single@,System.Single@)
+  id: Deconstruct(System.Single@,System.Single@)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Single, out Single)
+  nameWithType: Interval.Deconstruct(out Single, out Single)
+  fullName: Vim.Math3d.Interval.Deconstruct(out System.Single, out System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Deconstruct
+    path: ../src/Structs.cs
+    startLine: 666
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly void Deconstruct(out float min, out float max)
+    parameters:
+    - id: min
+      type: System.Single
+    - id: max
+      type: System.Single
+    content.vb: Public Sub Deconstruct(ByRef min As Single, ByRef max As Single)
+  overload: Vim.Math3d.Interval.Deconstruct*
+  nameWithType.vb: Interval.Deconstruct(ByRef Single, ByRef Single)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.Interval.Deconstruct(ByRef System.Single, ByRef System.Single)
+  name.vb: Deconstruct(ByRef Single, ByRef Single)
+- uid: Vim.Math3d.Interval.Equals(Vim.Math3d.Interval)
+  commentId: M:Vim.Math3d.Interval.Equals(Vim.Math3d.Interval)
+  id: Equals(Vim.Math3d.Interval)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Equals(Interval)
+  nameWithType: Interval.Equals(Interval)
+  fullName: Vim.Math3d.Interval.Equals(Vim.Math3d.Interval)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 667
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool Equals(Interval x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Interval
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(x As Interval) As Boolean
+  overload: Vim.Math3d.Interval.Equals*
+  implements:
+  - System.IEquatable{Vim.Math3d.Interval}.Equals(Vim.Math3d.Interval)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Interval.op_Equality(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  commentId: M:Vim.Math3d.Interval.op_Equality(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  id: op_Equality(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Equality(Interval, Interval)
+  nameWithType: Interval.Equality(Interval, Interval)
+  fullName: Vim.Math3d.Interval.Equality(Vim.Math3d.Interval, Vim.Math3d.Interval)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Equality
+    path: ../src/Structs.cs
+    startLine: 668
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator ==(Interval x0, Interval x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Interval
+    - id: x1
+      type: Vim.Math3d.Interval
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(x0 As Interval, x1 As Interval) As Boolean
+  overload: Vim.Math3d.Interval.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Interval.op_Inequality(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  commentId: M:Vim.Math3d.Interval.op_Inequality(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  id: op_Inequality(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Inequality(Interval, Interval)
+  nameWithType: Interval.Inequality(Interval, Interval)
+  fullName: Vim.Math3d.Interval.Inequality(Vim.Math3d.Interval, Vim.Math3d.Interval)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Inequality
+    path: ../src/Structs.cs
+    startLine: 669
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator !=(Interval x0, Interval x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Interval
+    - id: x1
+      type: Vim.Math3d.Interval
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(x0 As Interval, x1 As Interval) As Boolean
+  overload: Vim.Math3d.Interval.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Interval.op_Implicit(System.ValueTuple{System.Single,System.Single})~Vim.Math3d.Interval
+  commentId: M:Vim.Math3d.Interval.op_Implicit(System.ValueTuple{System.Single,System.Single})~Vim.Math3d.Interval
+  id: op_Implicit(System.ValueTuple{System.Single,System.Single})~Vim.Math3d.Interval
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Implicit((Single min, Single max) to Interval)
+  nameWithType: Interval.Implicit((Single min, Single max) to Interval)
+  fullName: Vim.Math3d.Interval.Implicit(System.ValueTuple<System.Single, System.Single> to Vim.Math3d.Interval)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 670
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator Interval((float min, float max) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Single,System.Single}
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Shared Widening Operator CType(tuple As(min As Single, max As Single)(Of Single , Single)) As Interval
+  overload: Vim.Math3d.Interval.op_Implicit*
+  nameWithType.vb: Interval.Widening((min As Single, max As Single)(Of Single, Single) to Interval)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Interval.Widening(System.ValueTuple(Of System.Single, System.Single) to Vim.Math3d.Interval)
+  name.vb: Widening((min As Single, max As Single)(Of Single, Single) to Interval)
+- uid: Vim.Math3d.Interval.op_Implicit(Vim.Math3d.Interval)~System.ValueTuple{System.Single,System.Single}
+  commentId: M:Vim.Math3d.Interval.op_Implicit(Vim.Math3d.Interval)~System.ValueTuple{System.Single,System.Single}
+  id: op_Implicit(Vim.Math3d.Interval)~System.ValueTuple{System.Single,System.Single}
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Implicit(Interval to (Single min, Single max))
+  nameWithType: Interval.Implicit(Interval to (Single min, Single max))
+  fullName: Vim.Math3d.Interval.Implicit(Vim.Math3d.Interval to System.ValueTuple<System.Single, System.Single>)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 671
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator (float min, float max)(Interval self)
+    parameters:
+    - id: self
+      type: Vim.Math3d.Interval
+    return:
+      type: System.ValueTuple{System.Single,System.Single}
+    content.vb: Public Shared Widening Operator CType(self As Interval) As(min As Single, max As Single)(Of Single , Single)
+  overload: Vim.Math3d.Interval.op_Implicit*
+  nameWithType.vb: Interval.Widening(Interval to (min As Single, max As Single)(Of Single, Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.Interval.Widening(Vim.Math3d.Interval to System.ValueTuple(Of System.Single, System.Single))
+  name.vb: Widening(Interval to (min As Single, max As Single)(Of Single, Single))
+- uid: Vim.Math3d.Interval.AlmostEquals(Vim.Math3d.Interval,System.Single)
+  commentId: M:Vim.Math3d.Interval.AlmostEquals(Vim.Math3d.Interval,System.Single)
+  id: AlmostEquals(Vim.Math3d.Interval,System.Single)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: AlmostEquals(Interval, Single)
+  nameWithType: Interval.AlmostEquals(Interval, Single)
+  fullName: Vim.Math3d.Interval.AlmostEquals(Vim.Math3d.Interval, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AlmostEquals
+    path: ../src/Structs.cs
+    startLine: 673
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool AlmostEquals(Interval x, float tolerance = 1E-07F)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Interval
+    - id: tolerance
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Function AlmostEquals(x As Interval, tolerance As Single = 1E-07F) As Boolean
+  overload: Vim.Math3d.Interval.AlmostEquals*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Interval.Zero
+  commentId: F:Vim.Math3d.Interval.Zero
+  id: Zero
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: Interval.Zero
+  fullName: Vim.Math3d.Interval.Zero
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Zero
+    path: ../src/Structs.cs
+    startLine: 674
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Interval Zero
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Shared Zero As Interval
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Interval.MinValue
+  commentId: F:Vim.Math3d.Interval.MinValue
+  id: MinValue
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: Interval.MinValue
+  fullName: Vim.Math3d.Interval.MinValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MinValue
+    path: ../src/Structs.cs
+    startLine: 675
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Interval MinValue
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Shared MinValue As Interval
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Interval.MaxValue
+  commentId: F:Vim.Math3d.Interval.MaxValue
+  id: MaxValue
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: Interval.MaxValue
+  fullName: Vim.Math3d.Interval.MaxValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MaxValue
+    path: ../src/Structs.cs
+    startLine: 676
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Interval MaxValue
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Shared MaxValue As Interval
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Interval.SetMin(System.Single)
+  commentId: M:Vim.Math3d.Interval.SetMin(System.Single)
+  id: SetMin(System.Single)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: SetMin(Single)
+  nameWithType: Interval.SetMin(Single)
+  fullName: Vim.Math3d.Interval.SetMin(System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetMin
+    path: ../src/Structs.cs
+    startLine: 677
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Interval SetMin(float x)
+    parameters:
+    - id: x
+      type: System.Single
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Function SetMin(x As Single) As Interval
+  overload: Vim.Math3d.Interval.SetMin*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Interval.SetMax(System.Single)
+  commentId: M:Vim.Math3d.Interval.SetMax(System.Single)
+  id: SetMax(System.Single)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: SetMax(Single)
+  nameWithType: Interval.SetMax(Single)
+  fullName: Vim.Math3d.Interval.SetMax(System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetMax
+    path: ../src/Structs.cs
+    startLine: 678
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Interval SetMax(float x)
+    parameters:
+    - id: x
+      type: System.Single
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Function SetMax(x As Single) As Interval
+  overload: Vim.Math3d.Interval.SetMax*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Interval.Extent
+  commentId: P:Vim.Math3d.Interval.Extent
+  id: Extent
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Extent
+  nameWithType: Interval.Extent
+  fullName: Vim.Math3d.Interval.Extent
+  type: Property
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Extent
+    path: ../src/Structs.cs
+    startLine: 679
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly float Extent { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Extent As Single
+  overload: Vim.Math3d.Interval.Extent*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Interval.Center
+  commentId: P:Vim.Math3d.Interval.Center
+  id: Center
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: Interval.Center
+  fullName: Vim.Math3d.Interval.Center
+  type: Property
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Center
+    path: ../src/Structs.cs
+    startLine: 680
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly float Center { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Center As Single
+  overload: Vim.Math3d.Interval.Center*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.Interval.MagnitudeSquared
+  commentId: M:Vim.Math3d.Interval.MagnitudeSquared
+  id: MagnitudeSquared
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: MagnitudeSquared()
+  nameWithType: Interval.MagnitudeSquared()
+  fullName: Vim.Math3d.Interval.MagnitudeSquared()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MagnitudeSquared
+    path: ../src/Structs.cs
+    startLine: 681
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly double MagnitudeSquared()
+    return:
+      type: System.Double
+    content.vb: Public Function MagnitudeSquared As Double
+  overload: Vim.Math3d.Interval.MagnitudeSquared*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Interval.Magnitude
+  commentId: M:Vim.Math3d.Interval.Magnitude
+  id: Magnitude
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Magnitude()
+  nameWithType: Interval.Magnitude()
+  fullName: Vim.Math3d.Interval.Magnitude()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Magnitude
+    path: ../src/Structs.cs
+    startLine: 682
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly double Magnitude()
+    return:
+      type: System.Double
+    content.vb: Public Function Magnitude As Double
+  overload: Vim.Math3d.Interval.Magnitude*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Interval.Merge(Vim.Math3d.Interval)
+  commentId: M:Vim.Math3d.Interval.Merge(Vim.Math3d.Interval)
+  id: Merge(Vim.Math3d.Interval)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Merge(Interval)
+  nameWithType: Interval.Merge(Interval)
+  fullName: Vim.Math3d.Interval.Merge(Vim.Math3d.Interval)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Merge
+    path: ../src/Structs.cs
+    startLine: 683
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Interval Merge(Interval other)
+    parameters:
+    - id: other
+      type: Vim.Math3d.Interval
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Function Merge(other As Interval) As Interval
+  overload: Vim.Math3d.Interval.Merge*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Interval.Intersection(Vim.Math3d.Interval)
+  commentId: M:Vim.Math3d.Interval.Intersection(Vim.Math3d.Interval)
+  id: Intersection(Vim.Math3d.Interval)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Intersection(Interval)
+  nameWithType: Interval.Intersection(Interval)
+  fullName: Vim.Math3d.Interval.Intersection(Vim.Math3d.Interval)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Intersection
+    path: ../src/Structs.cs
+    startLine: 684
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Interval Intersection(Interval other)
+    parameters:
+    - id: other
+      type: Vim.Math3d.Interval
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Function Intersection(other As Interval) As Interval
+  overload: Vim.Math3d.Interval.Intersection*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Interval.op_Addition(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  commentId: M:Vim.Math3d.Interval.op_Addition(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  id: op_Addition(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Addition(Interval, Interval)
+  nameWithType: Interval.Addition(Interval, Interval)
+  fullName: Vim.Math3d.Interval.Addition(Vim.Math3d.Interval, Vim.Math3d.Interval)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Addition
+    path: ../src/Structs.cs
+    startLine: 685
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Interval operator +(Interval value1, Interval value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.Interval
+    - id: value2
+      type: Vim.Math3d.Interval
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Shared Operator +(value1 As Interval, value2 As Interval) As Interval
+  overload: Vim.Math3d.Interval.op_Addition*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Interval.op_Subtraction(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  commentId: M:Vim.Math3d.Interval.op_Subtraction(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  id: op_Subtraction(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Subtraction(Interval, Interval)
+  nameWithType: Interval.Subtraction(Interval, Interval)
+  fullName: Vim.Math3d.Interval.Subtraction(Vim.Math3d.Interval, Vim.Math3d.Interval)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Subtraction
+    path: ../src/Structs.cs
+    startLine: 686
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Interval operator -(Interval value1, Interval value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.Interval
+    - id: value2
+      type: Vim.Math3d.Interval
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Shared Operator -(value1 As Interval, value2 As Interval) As Interval
+  overload: Vim.Math3d.Interval.op_Subtraction*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Interval.Merge(System.Single)
+  commentId: M:Vim.Math3d.Interval.Merge(System.Single)
+  id: Merge(System.Single)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Merge(Single)
+  nameWithType: Interval.Merge(Single)
+  fullName: Vim.Math3d.Interval.Merge(System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Merge
+    path: ../src/Structs.cs
+    startLine: 687
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly Interval Merge(float other)
+    parameters:
+    - id: other
+      type: System.Single
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Function Merge(other As Single) As Interval
+  overload: Vim.Math3d.Interval.Merge*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Interval.op_Addition(Vim.Math3d.Interval,System.Single)
+  commentId: M:Vim.Math3d.Interval.op_Addition(Vim.Math3d.Interval,System.Single)
+  id: op_Addition(Vim.Math3d.Interval,System.Single)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Addition(Interval, Single)
+  nameWithType: Interval.Addition(Interval, Single)
+  fullName: Vim.Math3d.Interval.Addition(Vim.Math3d.Interval, System.Single)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Addition
+    path: ../src/Structs.cs
+    startLine: 688
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Interval operator +(Interval value1, float value2)
+    parameters:
+    - id: value1
+      type: Vim.Math3d.Interval
+    - id: value2
+      type: System.Single
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Shared Operator +(value1 As Interval, value2 As Single) As Interval
+  overload: Vim.Math3d.Interval.op_Addition*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Interval.Empty
+  commentId: F:Vim.Math3d.Interval.Empty
+  id: Empty
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: Interval.Empty
+  fullName: Vim.Math3d.Interval.Empty
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Empty
+    path: ../src/Structs.cs
+    startLine: 689
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static Interval Empty
+    return:
+      type: Vim.Math3d.Interval
+    content.vb: Public Shared Empty As Interval
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Interval.IsNaN
+  commentId: M:Vim.Math3d.Interval.IsNaN
+  id: IsNaN
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: IsNaN()
+  nameWithType: Interval.IsNaN()
+  fullName: Vim.Math3d.Interval.IsNaN()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: IsNaN
+    path: ../src/Structs.cs
+    startLine: 690
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool IsNaN()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsNaN As Boolean
+  overload: Vim.Math3d.Interval.IsNaN*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Interval.IsInfinity
+  commentId: M:Vim.Math3d.Interval.IsInfinity
+  id: IsInfinity
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: IsInfinity()
+  nameWithType: Interval.IsInfinity()
+  fullName: Vim.Math3d.Interval.IsInfinity()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: IsInfinity
+    path: ../src/Structs.cs
+    startLine: 691
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool IsInfinity()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsInfinity As Boolean
+  overload: Vim.Math3d.Interval.IsInfinity*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Interval.CompareTo(Vim.Math3d.Interval)
+  commentId: M:Vim.Math3d.Interval.CompareTo(Vim.Math3d.Interval)
+  id: CompareTo(Vim.Math3d.Interval)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: CompareTo(Interval)
+  nameWithType: Interval.CompareTo(Interval)
+  fullName: Vim.Math3d.Interval.CompareTo(Vim.Math3d.Interval)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CompareTo
+    path: ../src/Structs.cs
+    startLine: 692
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly int CompareTo(Interval x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.Interval
+    return:
+      type: System.Int32
+    content.vb: Public Function CompareTo(x As Interval) As Integer
+  overload: Vim.Math3d.Interval.CompareTo*
+  implements:
+  - System.IComparable{Vim.Math3d.Interval}.CompareTo(Vim.Math3d.Interval)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.Interval.op_LessThan(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  commentId: M:Vim.Math3d.Interval.op_LessThan(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  id: op_LessThan(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: LessThan(Interval, Interval)
+  nameWithType: Interval.LessThan(Interval, Interval)
+  fullName: Vim.Math3d.Interval.LessThan(Vim.Math3d.Interval, Vim.Math3d.Interval)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_LessThan
+    path: ../src/Structs.cs
+    startLine: 693
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator <(Interval x0, Interval x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Interval
+    - id: x1
+      type: Vim.Math3d.Interval
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <(x0 As Interval, x1 As Interval) As Boolean
+  overload: Vim.Math3d.Interval.op_LessThan*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Interval.op_LessThanOrEqual(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  commentId: M:Vim.Math3d.Interval.op_LessThanOrEqual(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  id: op_LessThanOrEqual(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: LessThanOrEqual(Interval, Interval)
+  nameWithType: Interval.LessThanOrEqual(Interval, Interval)
+  fullName: Vim.Math3d.Interval.LessThanOrEqual(Vim.Math3d.Interval, Vim.Math3d.Interval)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_LessThanOrEqual
+    path: ../src/Structs.cs
+    startLine: 694
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator <=(Interval x0, Interval x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Interval
+    - id: x1
+      type: Vim.Math3d.Interval
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <=(x0 As Interval, x1 As Interval) As Boolean
+  overload: Vim.Math3d.Interval.op_LessThanOrEqual*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Interval.op_GreaterThan(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  commentId: M:Vim.Math3d.Interval.op_GreaterThan(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  id: op_GreaterThan(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: GreaterThan(Interval, Interval)
+  nameWithType: Interval.GreaterThan(Interval, Interval)
+  fullName: Vim.Math3d.Interval.GreaterThan(Vim.Math3d.Interval, Vim.Math3d.Interval)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_GreaterThan
+    path: ../src/Structs.cs
+    startLine: 695
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator>(Interval x0, Interval x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Interval
+    - id: x1
+      type: Vim.Math3d.Interval
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator>(x0 As Interval, x1 As Interval) As Boolean
+  overload: Vim.Math3d.Interval.op_GreaterThan*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.Interval.op_GreaterThanOrEqual(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  commentId: M:Vim.Math3d.Interval.op_GreaterThanOrEqual(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  id: op_GreaterThanOrEqual(Vim.Math3d.Interval,Vim.Math3d.Interval)
+  parent: Vim.Math3d.Interval
+  langs:
+  - csharp
+  - vb
+  name: GreaterThanOrEqual(Interval, Interval)
+  nameWithType: Interval.GreaterThanOrEqual(Interval, Interval)
+  fullName: Vim.Math3d.Interval.GreaterThanOrEqual(Vim.Math3d.Interval, Vim.Math3d.Interval)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_GreaterThanOrEqual
+    path: ../src/Structs.cs
+    startLine: 696
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator >=(Interval x0, Interval x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.Interval
+    - id: x1
+      type: Vim.Math3d.Interval
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator >=(x0 As Interval, x1 As Interval) As Boolean
+  overload: Vim.Math3d.Interval.op_GreaterThanOrEqual*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.IEquatable{Vim.Math3d.Interval}
+  commentId: T:System.IEquatable{Vim.Math3d.Interval}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<Interval>
+  nameWithType: IEquatable<Interval>
+  fullName: System.IEquatable<Vim.Math3d.Interval>
+  nameWithType.vb: IEquatable(Of Interval)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.Interval)
+  name.vb: IEquatable(Of Interval)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Interval
+    name: Interval
+    nameWithType: Interval
+    fullName: Vim.Math3d.Interval
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Interval
+    name: Interval
+    nameWithType: Interval
+    fullName: Vim.Math3d.Interval
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IComparable{Vim.Math3d.Interval}
+  commentId: T:System.IComparable{Vim.Math3d.Interval}
+  parent: System
+  definition: System.IComparable`1
+  name: IComparable<Interval>
+  nameWithType: IComparable<Interval>
+  fullName: System.IComparable<Vim.Math3d.Interval>
+  nameWithType.vb: IComparable(Of Interval)
+  fullName.vb: System.IComparable(Of Vim.Math3d.Interval)
+  name.vb: IComparable(Of Interval)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.Interval
+    name: Interval
+    nameWithType: Interval
+    fullName: Vim.Math3d.Interval
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.Interval
+    name: Interval
+    nameWithType: Interval
+    fullName: Vim.Math3d.Interval
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IComparable`1
+  commentId: T:System.IComparable`1
+  isExternal: true
+  name: IComparable<T>
+  nameWithType: IComparable<T>
+  fullName: System.IComparable<T>
+  nameWithType.vb: IComparable(Of T)
+  fullName.vb: System.IComparable(Of T)
+  name.vb: IComparable(Of T)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Vim.Math3d.Interval.#ctor*
+  commentId: Overload:Vim.Math3d.Interval.#ctor
+  name: Interval
+  nameWithType: Interval.Interval
+  fullName: Vim.Math3d.Interval.Interval
+- uid: System.ValueTuple{System.Single,System.Single}
+  commentId: T:System.ValueTuple{System.Single,System.Single}
+  parent: System
+  definition: System.ValueTuple`2
+  name: (T1, T2)<Single, Single>
+  nameWithType: (T1, T2)<Single, Single>
+  fullName: System.ValueTuple<System.Single, System.Single>
+  nameWithType.vb: (T1, T2)(Of Single, Single)
+  fullName.vb: System.ValueTuple(Of System.Single, System.Single)
+  name.vb: (T1, T2)(Of Single, Single)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  isExternal: true
+  name: (T1, T2)<T1, T2>
+  nameWithType: (T1, T2)<T1, T2>
+  fullName: System.ValueTuple<T1, T2>
+  nameWithType.vb: (T1, T2)(Of T1, T2)
+  fullName.vb: System.ValueTuple(Of T1, T2)
+  name.vb: (T1, T2)(Of T1, T2)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Interval.Create*
+  commentId: Overload:Vim.Math3d.Interval.Create
+  name: Create
+  nameWithType: Interval.Create
+  fullName: Vim.Math3d.Interval.Create
+- uid: Vim.Math3d.Interval
+  commentId: T:Vim.Math3d.Interval
+  parent: Vim.Math3d
+  name: Interval
+  nameWithType: Interval
+  fullName: Vim.Math3d.Interval
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Interval.Equals*
+  commentId: Overload:Vim.Math3d.Interval.Equals
+  name: Equals
+  nameWithType: Interval.Equals
+  fullName: Vim.Math3d.Interval.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Interval.GetHashCode*
+  commentId: Overload:Vim.Math3d.Interval.GetHashCode
+  name: GetHashCode
+  nameWithType: Interval.GetHashCode
+  fullName: Vim.Math3d.Interval.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Interval.ToString*
+  commentId: Overload:Vim.Math3d.Interval.ToString
+  name: ToString
+  nameWithType: Interval.ToString
+  fullName: Vim.Math3d.Interval.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vim.Math3d.Interval.Deconstruct*
+  commentId: Overload:Vim.Math3d.Interval.Deconstruct
+  name: Deconstruct
+  nameWithType: Interval.Deconstruct
+  fullName: Vim.Math3d.Interval.Deconstruct
+- uid: System.IEquatable{Vim.Math3d.Interval}.Equals(Vim.Math3d.Interval)
+  commentId: M:System.IEquatable{Vim.Math3d.Interval}.Equals(Vim.Math3d.Interval)
+  parent: System.IEquatable{Vim.Math3d.Interval}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(Interval)
+  nameWithType: IEquatable<Interval>.Equals(Interval)
+  fullName: System.IEquatable<Vim.Math3d.Interval>.Equals(Vim.Math3d.Interval)
+  nameWithType.vb: IEquatable(Of Interval).Equals(Interval)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.Interval).Equals(Vim.Math3d.Interval)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<Interval>.Equals
+    fullName: System.IEquatable<Vim.Math3d.Interval>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Interval
+    name: Interval
+    nameWithType: Interval
+    fullName: Vim.Math3d.Interval
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of Interval).Equals
+    fullName: System.IEquatable(Of Vim.Math3d.Interval).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Interval
+    name: Interval
+    nameWithType: Interval
+    fullName: Vim.Math3d.Interval
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Interval.op_Equality*
+  commentId: Overload:Vim.Math3d.Interval.op_Equality
+  name: Equality
+  nameWithType: Interval.Equality
+  fullName: Vim.Math3d.Interval.Equality
+- uid: Vim.Math3d.Interval.op_Inequality*
+  commentId: Overload:Vim.Math3d.Interval.op_Inequality
+  name: Inequality
+  nameWithType: Interval.Inequality
+  fullName: Vim.Math3d.Interval.Inequality
+- uid: Vim.Math3d.Interval.op_Implicit*
+  commentId: Overload:Vim.Math3d.Interval.op_Implicit
+  name: Implicit
+  nameWithType: Interval.Implicit
+  fullName: Vim.Math3d.Interval.Implicit
+  nameWithType.vb: Interval.Widening
+  fullName.vb: Vim.Math3d.Interval.Widening
+  name.vb: Widening
+- uid: Vim.Math3d.Interval.AlmostEquals*
+  commentId: Overload:Vim.Math3d.Interval.AlmostEquals
+  name: AlmostEquals
+  nameWithType: Interval.AlmostEquals
+  fullName: Vim.Math3d.Interval.AlmostEquals
+- uid: Vim.Math3d.Interval.SetMin*
+  commentId: Overload:Vim.Math3d.Interval.SetMin
+  name: SetMin
+  nameWithType: Interval.SetMin
+  fullName: Vim.Math3d.Interval.SetMin
+- uid: Vim.Math3d.Interval.SetMax*
+  commentId: Overload:Vim.Math3d.Interval.SetMax
+  name: SetMax
+  nameWithType: Interval.SetMax
+  fullName: Vim.Math3d.Interval.SetMax
+- uid: Vim.Math3d.Interval.Extent*
+  commentId: Overload:Vim.Math3d.Interval.Extent
+  name: Extent
+  nameWithType: Interval.Extent
+  fullName: Vim.Math3d.Interval.Extent
+- uid: Vim.Math3d.Interval.Center*
+  commentId: Overload:Vim.Math3d.Interval.Center
+  name: Center
+  nameWithType: Interval.Center
+  fullName: Vim.Math3d.Interval.Center
+- uid: Vim.Math3d.Interval.MagnitudeSquared*
+  commentId: Overload:Vim.Math3d.Interval.MagnitudeSquared
+  name: MagnitudeSquared
+  nameWithType: Interval.MagnitudeSquared
+  fullName: Vim.Math3d.Interval.MagnitudeSquared
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Vim.Math3d.Interval.Magnitude*
+  commentId: Overload:Vim.Math3d.Interval.Magnitude
+  name: Magnitude
+  nameWithType: Interval.Magnitude
+  fullName: Vim.Math3d.Interval.Magnitude
+- uid: Vim.Math3d.Interval.Merge*
+  commentId: Overload:Vim.Math3d.Interval.Merge
+  name: Merge
+  nameWithType: Interval.Merge
+  fullName: Vim.Math3d.Interval.Merge
+- uid: Vim.Math3d.Interval.Intersection*
+  commentId: Overload:Vim.Math3d.Interval.Intersection
+  name: Intersection
+  nameWithType: Interval.Intersection
+  fullName: Vim.Math3d.Interval.Intersection
+- uid: Vim.Math3d.Interval.op_Addition*
+  commentId: Overload:Vim.Math3d.Interval.op_Addition
+  name: Addition
+  nameWithType: Interval.Addition
+  fullName: Vim.Math3d.Interval.Addition
+- uid: Vim.Math3d.Interval.op_Subtraction*
+  commentId: Overload:Vim.Math3d.Interval.op_Subtraction
+  name: Subtraction
+  nameWithType: Interval.Subtraction
+  fullName: Vim.Math3d.Interval.Subtraction
+- uid: Vim.Math3d.Interval.IsNaN*
+  commentId: Overload:Vim.Math3d.Interval.IsNaN
+  name: IsNaN
+  nameWithType: Interval.IsNaN
+  fullName: Vim.Math3d.Interval.IsNaN
+- uid: Vim.Math3d.Interval.IsInfinity*
+  commentId: Overload:Vim.Math3d.Interval.IsInfinity
+  name: IsInfinity
+  nameWithType: Interval.IsInfinity
+  fullName: Vim.Math3d.Interval.IsInfinity
+- uid: Vim.Math3d.Interval.CompareTo*
+  commentId: Overload:Vim.Math3d.Interval.CompareTo
+  name: CompareTo
+  nameWithType: Interval.CompareTo
+  fullName: Vim.Math3d.Interval.CompareTo
+- uid: System.IComparable{Vim.Math3d.Interval}.CompareTo(Vim.Math3d.Interval)
+  commentId: M:System.IComparable{Vim.Math3d.Interval}.CompareTo(Vim.Math3d.Interval)
+  parent: System.IComparable{Vim.Math3d.Interval}
+  definition: System.IComparable`1.CompareTo(`0)
+  name: CompareTo(Interval)
+  nameWithType: IComparable<Interval>.CompareTo(Interval)
+  fullName: System.IComparable<Vim.Math3d.Interval>.CompareTo(Vim.Math3d.Interval)
+  nameWithType.vb: IComparable(Of Interval).CompareTo(Interval)
+  fullName.vb: System.IComparable(Of Vim.Math3d.Interval).CompareTo(Vim.Math3d.Interval)
+  spec.csharp:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable<Interval>.CompareTo
+    fullName: System.IComparable<Vim.Math3d.Interval>.CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Interval
+    name: Interval
+    nameWithType: Interval
+    fullName: Vim.Math3d.Interval
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable(Of Interval).CompareTo
+    fullName: System.IComparable(Of Vim.Math3d.Interval).CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.Interval
+    name: Interval
+    nameWithType: Interval
+    fullName: Vim.Math3d.Interval
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IComparable`1.CompareTo(`0)
+  commentId: M:System.IComparable`1.CompareTo(`0)
+  isExternal: true
+  name: CompareTo(T)
+  nameWithType: IComparable<T>.CompareTo(T)
+  fullName: System.IComparable<T>.CompareTo(T)
+  nameWithType.vb: IComparable(Of T).CompareTo(T)
+  fullName.vb: System.IComparable(Of T).CompareTo(T)
+  spec.csharp:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable<T>.CompareTo
+    fullName: System.IComparable<T>.CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable(Of T).CompareTo
+    fullName: System.IComparable(Of T).CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.Interval.op_LessThan*
+  commentId: Overload:Vim.Math3d.Interval.op_LessThan
+  name: LessThan
+  nameWithType: Interval.LessThan
+  fullName: Vim.Math3d.Interval.LessThan
+- uid: Vim.Math3d.Interval.op_LessThanOrEqual*
+  commentId: Overload:Vim.Math3d.Interval.op_LessThanOrEqual
+  name: LessThanOrEqual
+  nameWithType: Interval.LessThanOrEqual
+  fullName: Vim.Math3d.Interval.LessThanOrEqual
+- uid: Vim.Math3d.Interval.op_GreaterThan*
+  commentId: Overload:Vim.Math3d.Interval.op_GreaterThan
+  name: GreaterThan
+  nameWithType: Interval.GreaterThan
+  fullName: Vim.Math3d.Interval.GreaterThan
+- uid: Vim.Math3d.Interval.op_GreaterThanOrEqual*
+  commentId: Overload:Vim.Math3d.Interval.op_GreaterThanOrEqual
+  name: GreaterThanOrEqual
+  nameWithType: Interval.GreaterThanOrEqual
+  fullName: Vim.Math3d.Interval.GreaterThanOrEqual

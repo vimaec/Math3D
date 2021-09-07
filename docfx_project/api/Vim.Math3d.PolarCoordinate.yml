@@ -1,0 +1,1513 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.PolarCoordinate
+  commentId: T:Vim.Math3d.PolarCoordinate
+  id: PolarCoordinate
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.PolarCoordinate.#ctor(System.Double,System.Double)
+  - Vim.Math3d.PolarCoordinate.#ctor(System.ValueTuple{System.Double,System.Double})
+  - Vim.Math3d.PolarCoordinate.AlmostEquals(Vim.Math3d.PolarCoordinate,System.Single)
+  - Vim.Math3d.PolarCoordinate.Azimuth
+  - Vim.Math3d.PolarCoordinate.Create(System.Double,System.Double)
+  - Vim.Math3d.PolarCoordinate.Create(System.ValueTuple{System.Double,System.Double})
+  - Vim.Math3d.PolarCoordinate.Deconstruct(System.Double@,System.Double@)
+  - Vim.Math3d.PolarCoordinate.Equals(System.Object)
+  - Vim.Math3d.PolarCoordinate.Equals(Vim.Math3d.PolarCoordinate)
+  - Vim.Math3d.PolarCoordinate.GetHashCode
+  - Vim.Math3d.PolarCoordinate.MaxValue
+  - Vim.Math3d.PolarCoordinate.MinValue
+  - Vim.Math3d.PolarCoordinate.op_Equality(Vim.Math3d.PolarCoordinate,Vim.Math3d.PolarCoordinate)
+  - Vim.Math3d.PolarCoordinate.op_Implicit(System.ValueTuple{System.Double,System.Double})~Vim.Math3d.PolarCoordinate
+  - Vim.Math3d.PolarCoordinate.op_Implicit(Vim.Math3d.PolarCoordinate)~System.ValueTuple{System.Double,System.Double}
+  - Vim.Math3d.PolarCoordinate.op_Inequality(Vim.Math3d.PolarCoordinate,Vim.Math3d.PolarCoordinate)
+  - Vim.Math3d.PolarCoordinate.Radius
+  - Vim.Math3d.PolarCoordinate.SetAzimuth(System.Double)
+  - Vim.Math3d.PolarCoordinate.SetRadius(System.Double)
+  - Vim.Math3d.PolarCoordinate.ToString
+  - Vim.Math3d.PolarCoordinate.Zero
+  langs:
+  - csharp
+  - vb
+  name: PolarCoordinate
+  nameWithType: PolarCoordinate
+  fullName: Vim.Math3d.PolarCoordinate
+  type: Struct
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: PolarCoordinate
+    path: ../src/Structs.cs
+    startLine: 1837
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataContract]
+
+      public readonly struct PolarCoordinate : IEquatable<PolarCoordinate>
+    content.vb: >-
+      <DataContract>
+
+      Public Structure PolarCoordinate
+          Implements IEquatable(Of PolarCoordinate)
+  implements:
+  - System.IEquatable{Vim.Math3d.PolarCoordinate}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Vim.Math3d.PolarCoordinate.Radius
+  commentId: F:Vim.Math3d.PolarCoordinate.Radius
+  id: Radius
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Radius
+  nameWithType: PolarCoordinate.Radius
+  fullName: Vim.Math3d.PolarCoordinate.Radius
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Radius
+    path: ../src/Structs.cs
+    startLine: 1843
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly double Radius
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Radius As Double
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.PolarCoordinate.Azimuth
+  commentId: F:Vim.Math3d.PolarCoordinate.Azimuth
+  id: Azimuth
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Azimuth
+  nameWithType: PolarCoordinate.Azimuth
+  fullName: Vim.Math3d.PolarCoordinate.Azimuth
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Azimuth
+    path: ../src/Structs.cs
+    startLine: 1845
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly double Azimuth
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Azimuth As Double
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.PolarCoordinate.#ctor(System.ValueTuple{System.Double,System.Double})
+  commentId: M:Vim.Math3d.PolarCoordinate.#ctor(System.ValueTuple{System.Double,System.Double})
+  id: '#ctor(System.ValueTuple{System.Double,System.Double})'
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: PolarCoordinate((Double radius, Double azimuth))
+  nameWithType: PolarCoordinate.PolarCoordinate((Double radius, Double azimuth))
+  fullName: Vim.Math3d.PolarCoordinate.PolarCoordinate(System.ValueTuple<System.Double, System.Double>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1846
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public PolarCoordinate((double radius, double azimuth) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Double,System.Double}
+    content.vb: Public Sub New(tuple As(radius As Double, azimuth As Double)(Of Double , Double))
+  overload: Vim.Math3d.PolarCoordinate.#ctor*
+  nameWithType.vb: PolarCoordinate.PolarCoordinate((radius As Double, azimuth As Double)(Of Double, Double))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.PolarCoordinate.PolarCoordinate(System.ValueTuple(Of System.Double, System.Double))
+  name.vb: PolarCoordinate((radius As Double, azimuth As Double)(Of Double, Double))
+- uid: Vim.Math3d.PolarCoordinate.#ctor(System.Double,System.Double)
+  commentId: M:Vim.Math3d.PolarCoordinate.#ctor(System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double)'
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: PolarCoordinate(Double, Double)
+  nameWithType: PolarCoordinate.PolarCoordinate(Double, Double)
+  fullName: Vim.Math3d.PolarCoordinate.PolarCoordinate(System.Double, System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1847
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public PolarCoordinate(double radius, double azimuth)
+    parameters:
+    - id: radius
+      type: System.Double
+    - id: azimuth
+      type: System.Double
+    content.vb: Public Sub New(radius As Double, azimuth As Double)
+  overload: Vim.Math3d.PolarCoordinate.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.PolarCoordinate.Create(System.Double,System.Double)
+  commentId: M:Vim.Math3d.PolarCoordinate.Create(System.Double,System.Double)
+  id: Create(System.Double,System.Double)
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Create(Double, Double)
+  nameWithType: PolarCoordinate.Create(Double, Double)
+  fullName: Vim.Math3d.PolarCoordinate.Create(System.Double, System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1848
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static PolarCoordinate Create(double radius, double azimuth)
+    parameters:
+    - id: radius
+      type: System.Double
+    - id: azimuth
+      type: System.Double
+    return:
+      type: Vim.Math3d.PolarCoordinate
+    content.vb: Public Shared Function Create(radius As Double, azimuth As Double) As PolarCoordinate
+  overload: Vim.Math3d.PolarCoordinate.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.PolarCoordinate.Create(System.ValueTuple{System.Double,System.Double})
+  commentId: M:Vim.Math3d.PolarCoordinate.Create(System.ValueTuple{System.Double,System.Double})
+  id: Create(System.ValueTuple{System.Double,System.Double})
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Create((Double radius, Double azimuth))
+  nameWithType: PolarCoordinate.Create((Double radius, Double azimuth))
+  fullName: Vim.Math3d.PolarCoordinate.Create(System.ValueTuple<System.Double, System.Double>)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1849
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static PolarCoordinate Create((double radius, double azimuth) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Double,System.Double}
+    return:
+      type: Vim.Math3d.PolarCoordinate
+    content.vb: Public Shared Function Create(tuple As(radius As Double, azimuth As Double)(Of Double , Double)) As PolarCoordinate
+  overload: Vim.Math3d.PolarCoordinate.Create*
+  nameWithType.vb: PolarCoordinate.Create((radius As Double, azimuth As Double)(Of Double, Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.PolarCoordinate.Create(System.ValueTuple(Of System.Double, System.Double))
+  name.vb: Create((radius As Double, azimuth As Double)(Of Double, Double))
+- uid: Vim.Math3d.PolarCoordinate.Equals(System.Object)
+  commentId: M:Vim.Math3d.PolarCoordinate.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: PolarCoordinate.Equals(Object)
+  fullName: Vim.Math3d.PolarCoordinate.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1850
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Vim.Math3d.PolarCoordinate.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.PolarCoordinate.GetHashCode
+  commentId: M:Vim.Math3d.PolarCoordinate.GetHashCode
+  id: GetHashCode
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: PolarCoordinate.GetHashCode()
+  fullName: Vim.Math3d.PolarCoordinate.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetHashCode
+    path: ../src/Structs.cs
+    startLine: 1851
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Vim.Math3d.PolarCoordinate.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.PolarCoordinate.ToString
+  commentId: M:Vim.Math3d.PolarCoordinate.ToString
+  id: ToString
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: PolarCoordinate.ToString()
+  fullName: Vim.Math3d.PolarCoordinate.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToString
+    path: ../src/Structs.cs
+    startLine: 1852
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: Vim.Math3d.PolarCoordinate.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.PolarCoordinate.Deconstruct(System.Double@,System.Double@)
+  commentId: M:Vim.Math3d.PolarCoordinate.Deconstruct(System.Double@,System.Double@)
+  id: Deconstruct(System.Double@,System.Double@)
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Double, out Double)
+  nameWithType: PolarCoordinate.Deconstruct(out Double, out Double)
+  fullName: Vim.Math3d.PolarCoordinate.Deconstruct(out System.Double, out System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Deconstruct
+    path: ../src/Structs.cs
+    startLine: 1853
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly void Deconstruct(out double radius, out double azimuth)
+    parameters:
+    - id: radius
+      type: System.Double
+    - id: azimuth
+      type: System.Double
+    content.vb: Public Sub Deconstruct(ByRef radius As Double, ByRef azimuth As Double)
+  overload: Vim.Math3d.PolarCoordinate.Deconstruct*
+  nameWithType.vb: PolarCoordinate.Deconstruct(ByRef Double, ByRef Double)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.PolarCoordinate.Deconstruct(ByRef System.Double, ByRef System.Double)
+  name.vb: Deconstruct(ByRef Double, ByRef Double)
+- uid: Vim.Math3d.PolarCoordinate.Equals(Vim.Math3d.PolarCoordinate)
+  commentId: M:Vim.Math3d.PolarCoordinate.Equals(Vim.Math3d.PolarCoordinate)
+  id: Equals(Vim.Math3d.PolarCoordinate)
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equals(PolarCoordinate)
+  nameWithType: PolarCoordinate.Equals(PolarCoordinate)
+  fullName: Vim.Math3d.PolarCoordinate.Equals(Vim.Math3d.PolarCoordinate)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1854
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool Equals(PolarCoordinate x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.PolarCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(x As PolarCoordinate) As Boolean
+  overload: Vim.Math3d.PolarCoordinate.Equals*
+  implements:
+  - System.IEquatable{Vim.Math3d.PolarCoordinate}.Equals(Vim.Math3d.PolarCoordinate)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.PolarCoordinate.op_Equality(Vim.Math3d.PolarCoordinate,Vim.Math3d.PolarCoordinate)
+  commentId: M:Vim.Math3d.PolarCoordinate.op_Equality(Vim.Math3d.PolarCoordinate,Vim.Math3d.PolarCoordinate)
+  id: op_Equality(Vim.Math3d.PolarCoordinate,Vim.Math3d.PolarCoordinate)
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equality(PolarCoordinate, PolarCoordinate)
+  nameWithType: PolarCoordinate.Equality(PolarCoordinate, PolarCoordinate)
+  fullName: Vim.Math3d.PolarCoordinate.Equality(Vim.Math3d.PolarCoordinate, Vim.Math3d.PolarCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Equality
+    path: ../src/Structs.cs
+    startLine: 1855
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator ==(PolarCoordinate x0, PolarCoordinate x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.PolarCoordinate
+    - id: x1
+      type: Vim.Math3d.PolarCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(x0 As PolarCoordinate, x1 As PolarCoordinate) As Boolean
+  overload: Vim.Math3d.PolarCoordinate.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.PolarCoordinate.op_Inequality(Vim.Math3d.PolarCoordinate,Vim.Math3d.PolarCoordinate)
+  commentId: M:Vim.Math3d.PolarCoordinate.op_Inequality(Vim.Math3d.PolarCoordinate,Vim.Math3d.PolarCoordinate)
+  id: op_Inequality(Vim.Math3d.PolarCoordinate,Vim.Math3d.PolarCoordinate)
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Inequality(PolarCoordinate, PolarCoordinate)
+  nameWithType: PolarCoordinate.Inequality(PolarCoordinate, PolarCoordinate)
+  fullName: Vim.Math3d.PolarCoordinate.Inequality(Vim.Math3d.PolarCoordinate, Vim.Math3d.PolarCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Inequality
+    path: ../src/Structs.cs
+    startLine: 1856
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator !=(PolarCoordinate x0, PolarCoordinate x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.PolarCoordinate
+    - id: x1
+      type: Vim.Math3d.PolarCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(x0 As PolarCoordinate, x1 As PolarCoordinate) As Boolean
+  overload: Vim.Math3d.PolarCoordinate.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.PolarCoordinate.op_Implicit(System.ValueTuple{System.Double,System.Double})~Vim.Math3d.PolarCoordinate
+  commentId: M:Vim.Math3d.PolarCoordinate.op_Implicit(System.ValueTuple{System.Double,System.Double})~Vim.Math3d.PolarCoordinate
+  id: op_Implicit(System.ValueTuple{System.Double,System.Double})~Vim.Math3d.PolarCoordinate
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Implicit((Double radius, Double azimuth) to PolarCoordinate)
+  nameWithType: PolarCoordinate.Implicit((Double radius, Double azimuth) to PolarCoordinate)
+  fullName: Vim.Math3d.PolarCoordinate.Implicit(System.ValueTuple<System.Double, System.Double> to Vim.Math3d.PolarCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1857
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator PolarCoordinate((double radius, double azimuth) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Double,System.Double}
+    return:
+      type: Vim.Math3d.PolarCoordinate
+    content.vb: Public Shared Widening Operator CType(tuple As(radius As Double, azimuth As Double)(Of Double , Double)) As PolarCoordinate
+  overload: Vim.Math3d.PolarCoordinate.op_Implicit*
+  nameWithType.vb: PolarCoordinate.Widening((radius As Double, azimuth As Double)(Of Double, Double) to PolarCoordinate)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.PolarCoordinate.Widening(System.ValueTuple(Of System.Double, System.Double) to Vim.Math3d.PolarCoordinate)
+  name.vb: Widening((radius As Double, azimuth As Double)(Of Double, Double) to PolarCoordinate)
+- uid: Vim.Math3d.PolarCoordinate.op_Implicit(Vim.Math3d.PolarCoordinate)~System.ValueTuple{System.Double,System.Double}
+  commentId: M:Vim.Math3d.PolarCoordinate.op_Implicit(Vim.Math3d.PolarCoordinate)~System.ValueTuple{System.Double,System.Double}
+  id: op_Implicit(Vim.Math3d.PolarCoordinate)~System.ValueTuple{System.Double,System.Double}
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Implicit(PolarCoordinate to (Double radius, Double azimuth))
+  nameWithType: PolarCoordinate.Implicit(PolarCoordinate to (Double radius, Double azimuth))
+  fullName: Vim.Math3d.PolarCoordinate.Implicit(Vim.Math3d.PolarCoordinate to System.ValueTuple<System.Double, System.Double>)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1858
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator (double radius, double azimuth)(PolarCoordinate self)
+    parameters:
+    - id: self
+      type: Vim.Math3d.PolarCoordinate
+    return:
+      type: System.ValueTuple{System.Double,System.Double}
+    content.vb: Public Shared Widening Operator CType(self As PolarCoordinate) As(radius As Double, azimuth As Double)(Of Double , Double)
+  overload: Vim.Math3d.PolarCoordinate.op_Implicit*
+  nameWithType.vb: PolarCoordinate.Widening(PolarCoordinate to (radius As Double, azimuth As Double)(Of Double, Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.PolarCoordinate.Widening(Vim.Math3d.PolarCoordinate to System.ValueTuple(Of System.Double, System.Double))
+  name.vb: Widening(PolarCoordinate to (radius As Double, azimuth As Double)(Of Double, Double))
+- uid: Vim.Math3d.PolarCoordinate.AlmostEquals(Vim.Math3d.PolarCoordinate,System.Single)
+  commentId: M:Vim.Math3d.PolarCoordinate.AlmostEquals(Vim.Math3d.PolarCoordinate,System.Single)
+  id: AlmostEquals(Vim.Math3d.PolarCoordinate,System.Single)
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: AlmostEquals(PolarCoordinate, Single)
+  nameWithType: PolarCoordinate.AlmostEquals(PolarCoordinate, Single)
+  fullName: Vim.Math3d.PolarCoordinate.AlmostEquals(Vim.Math3d.PolarCoordinate, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AlmostEquals
+    path: ../src/Structs.cs
+    startLine: 1860
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool AlmostEquals(PolarCoordinate x, float tolerance = 1E-07F)
+    parameters:
+    - id: x
+      type: Vim.Math3d.PolarCoordinate
+    - id: tolerance
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Function AlmostEquals(x As PolarCoordinate, tolerance As Single = 1E-07F) As Boolean
+  overload: Vim.Math3d.PolarCoordinate.AlmostEquals*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.PolarCoordinate.Zero
+  commentId: F:Vim.Math3d.PolarCoordinate.Zero
+  id: Zero
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: PolarCoordinate.Zero
+  fullName: Vim.Math3d.PolarCoordinate.Zero
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Zero
+    path: ../src/Structs.cs
+    startLine: 1861
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static PolarCoordinate Zero
+    return:
+      type: Vim.Math3d.PolarCoordinate
+    content.vb: Public Shared Zero As PolarCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.PolarCoordinate.MinValue
+  commentId: F:Vim.Math3d.PolarCoordinate.MinValue
+  id: MinValue
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: PolarCoordinate.MinValue
+  fullName: Vim.Math3d.PolarCoordinate.MinValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MinValue
+    path: ../src/Structs.cs
+    startLine: 1862
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static PolarCoordinate MinValue
+    return:
+      type: Vim.Math3d.PolarCoordinate
+    content.vb: Public Shared MinValue As PolarCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.PolarCoordinate.MaxValue
+  commentId: F:Vim.Math3d.PolarCoordinate.MaxValue
+  id: MaxValue
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: PolarCoordinate.MaxValue
+  fullName: Vim.Math3d.PolarCoordinate.MaxValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MaxValue
+    path: ../src/Structs.cs
+    startLine: 1863
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static PolarCoordinate MaxValue
+    return:
+      type: Vim.Math3d.PolarCoordinate
+    content.vb: Public Shared MaxValue As PolarCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.PolarCoordinate.SetRadius(System.Double)
+  commentId: M:Vim.Math3d.PolarCoordinate.SetRadius(System.Double)
+  id: SetRadius(System.Double)
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SetRadius(Double)
+  nameWithType: PolarCoordinate.SetRadius(Double)
+  fullName: Vim.Math3d.PolarCoordinate.SetRadius(System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetRadius
+    path: ../src/Structs.cs
+    startLine: 1864
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly PolarCoordinate SetRadius(double x)
+    parameters:
+    - id: x
+      type: System.Double
+    return:
+      type: Vim.Math3d.PolarCoordinate
+    content.vb: Public Function SetRadius(x As Double) As PolarCoordinate
+  overload: Vim.Math3d.PolarCoordinate.SetRadius*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.PolarCoordinate.SetAzimuth(System.Double)
+  commentId: M:Vim.Math3d.PolarCoordinate.SetAzimuth(System.Double)
+  id: SetAzimuth(System.Double)
+  parent: Vim.Math3d.PolarCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SetAzimuth(Double)
+  nameWithType: PolarCoordinate.SetAzimuth(Double)
+  fullName: Vim.Math3d.PolarCoordinate.SetAzimuth(System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetAzimuth
+    path: ../src/Structs.cs
+    startLine: 1865
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly PolarCoordinate SetAzimuth(double x)
+    parameters:
+    - id: x
+      type: System.Double
+    return:
+      type: Vim.Math3d.PolarCoordinate
+    content.vb: Public Function SetAzimuth(x As Double) As PolarCoordinate
+  overload: Vim.Math3d.PolarCoordinate.SetAzimuth*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.IEquatable{Vim.Math3d.PolarCoordinate}
+  commentId: T:System.IEquatable{Vim.Math3d.PolarCoordinate}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<PolarCoordinate>
+  nameWithType: IEquatable<PolarCoordinate>
+  fullName: System.IEquatable<Vim.Math3d.PolarCoordinate>
+  nameWithType.vb: IEquatable(Of PolarCoordinate)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.PolarCoordinate)
+  name.vb: IEquatable(Of PolarCoordinate)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.PolarCoordinate
+    name: PolarCoordinate
+    nameWithType: PolarCoordinate
+    fullName: Vim.Math3d.PolarCoordinate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.PolarCoordinate
+    name: PolarCoordinate
+    nameWithType: PolarCoordinate
+    fullName: Vim.Math3d.PolarCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Vim.Math3d.PolarCoordinate.#ctor*
+  commentId: Overload:Vim.Math3d.PolarCoordinate.#ctor
+  name: PolarCoordinate
+  nameWithType: PolarCoordinate.PolarCoordinate
+  fullName: Vim.Math3d.PolarCoordinate.PolarCoordinate
+- uid: System.ValueTuple{System.Double,System.Double}
+  commentId: T:System.ValueTuple{System.Double,System.Double}
+  parent: System
+  definition: System.ValueTuple`2
+  name: (T1, T2)<Double, Double>
+  nameWithType: (T1, T2)<Double, Double>
+  fullName: System.ValueTuple<System.Double, System.Double>
+  nameWithType.vb: (T1, T2)(Of Double, Double)
+  fullName.vb: System.ValueTuple(Of System.Double, System.Double)
+  name.vb: (T1, T2)(Of Double, Double)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  isExternal: true
+  name: (T1, T2)<T1, T2>
+  nameWithType: (T1, T2)<T1, T2>
+  fullName: System.ValueTuple<T1, T2>
+  nameWithType.vb: (T1, T2)(Of T1, T2)
+  fullName.vb: System.ValueTuple(Of T1, T2)
+  name.vb: (T1, T2)(Of T1, T2)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.PolarCoordinate.Create*
+  commentId: Overload:Vim.Math3d.PolarCoordinate.Create
+  name: Create
+  nameWithType: PolarCoordinate.Create
+  fullName: Vim.Math3d.PolarCoordinate.Create
+- uid: Vim.Math3d.PolarCoordinate
+  commentId: T:Vim.Math3d.PolarCoordinate
+  parent: Vim.Math3d
+  name: PolarCoordinate
+  nameWithType: PolarCoordinate
+  fullName: Vim.Math3d.PolarCoordinate
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.PolarCoordinate.Equals*
+  commentId: Overload:Vim.Math3d.PolarCoordinate.Equals
+  name: Equals
+  nameWithType: PolarCoordinate.Equals
+  fullName: Vim.Math3d.PolarCoordinate.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.PolarCoordinate.GetHashCode*
+  commentId: Overload:Vim.Math3d.PolarCoordinate.GetHashCode
+  name: GetHashCode
+  nameWithType: PolarCoordinate.GetHashCode
+  fullName: Vim.Math3d.PolarCoordinate.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.PolarCoordinate.ToString*
+  commentId: Overload:Vim.Math3d.PolarCoordinate.ToString
+  name: ToString
+  nameWithType: PolarCoordinate.ToString
+  fullName: Vim.Math3d.PolarCoordinate.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vim.Math3d.PolarCoordinate.Deconstruct*
+  commentId: Overload:Vim.Math3d.PolarCoordinate.Deconstruct
+  name: Deconstruct
+  nameWithType: PolarCoordinate.Deconstruct
+  fullName: Vim.Math3d.PolarCoordinate.Deconstruct
+- uid: System.IEquatable{Vim.Math3d.PolarCoordinate}.Equals(Vim.Math3d.PolarCoordinate)
+  commentId: M:System.IEquatable{Vim.Math3d.PolarCoordinate}.Equals(Vim.Math3d.PolarCoordinate)
+  parent: System.IEquatable{Vim.Math3d.PolarCoordinate}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(PolarCoordinate)
+  nameWithType: IEquatable<PolarCoordinate>.Equals(PolarCoordinate)
+  fullName: System.IEquatable<Vim.Math3d.PolarCoordinate>.Equals(Vim.Math3d.PolarCoordinate)
+  nameWithType.vb: IEquatable(Of PolarCoordinate).Equals(PolarCoordinate)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.PolarCoordinate).Equals(Vim.Math3d.PolarCoordinate)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<PolarCoordinate>.Equals
+    fullName: System.IEquatable<Vim.Math3d.PolarCoordinate>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.PolarCoordinate
+    name: PolarCoordinate
+    nameWithType: PolarCoordinate
+    fullName: Vim.Math3d.PolarCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of PolarCoordinate).Equals
+    fullName: System.IEquatable(Of Vim.Math3d.PolarCoordinate).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.PolarCoordinate
+    name: PolarCoordinate
+    nameWithType: PolarCoordinate
+    fullName: Vim.Math3d.PolarCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.PolarCoordinate.op_Equality*
+  commentId: Overload:Vim.Math3d.PolarCoordinate.op_Equality
+  name: Equality
+  nameWithType: PolarCoordinate.Equality
+  fullName: Vim.Math3d.PolarCoordinate.Equality
+- uid: Vim.Math3d.PolarCoordinate.op_Inequality*
+  commentId: Overload:Vim.Math3d.PolarCoordinate.op_Inequality
+  name: Inequality
+  nameWithType: PolarCoordinate.Inequality
+  fullName: Vim.Math3d.PolarCoordinate.Inequality
+- uid: Vim.Math3d.PolarCoordinate.op_Implicit*
+  commentId: Overload:Vim.Math3d.PolarCoordinate.op_Implicit
+  name: Implicit
+  nameWithType: PolarCoordinate.Implicit
+  fullName: Vim.Math3d.PolarCoordinate.Implicit
+  nameWithType.vb: PolarCoordinate.Widening
+  fullName.vb: Vim.Math3d.PolarCoordinate.Widening
+  name.vb: Widening
+- uid: Vim.Math3d.PolarCoordinate.AlmostEquals*
+  commentId: Overload:Vim.Math3d.PolarCoordinate.AlmostEquals
+  name: AlmostEquals
+  nameWithType: PolarCoordinate.AlmostEquals
+  fullName: Vim.Math3d.PolarCoordinate.AlmostEquals
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Vim.Math3d.PolarCoordinate.SetRadius*
+  commentId: Overload:Vim.Math3d.PolarCoordinate.SetRadius
+  name: SetRadius
+  nameWithType: PolarCoordinate.SetRadius
+  fullName: Vim.Math3d.PolarCoordinate.SetRadius
+- uid: Vim.Math3d.PolarCoordinate.SetAzimuth*
+  commentId: Overload:Vim.Math3d.PolarCoordinate.SetAzimuth
+  name: SetAzimuth
+  nameWithType: PolarCoordinate.SetAzimuth
+  fullName: Vim.Math3d.PolarCoordinate.SetAzimuth

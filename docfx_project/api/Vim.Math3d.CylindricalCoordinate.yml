@@ -1,0 +1,1633 @@
+### YamlMime:ManagedReference
+items:
+- uid: Vim.Math3d.CylindricalCoordinate
+  commentId: T:Vim.Math3d.CylindricalCoordinate
+  id: CylindricalCoordinate
+  parent: Vim.Math3d
+  children:
+  - Vim.Math3d.CylindricalCoordinate.#ctor(System.Double,System.Double,System.Double)
+  - Vim.Math3d.CylindricalCoordinate.#ctor(System.ValueTuple{System.Double,System.Double,System.Double})
+  - Vim.Math3d.CylindricalCoordinate.AlmostEquals(Vim.Math3d.CylindricalCoordinate,System.Single)
+  - Vim.Math3d.CylindricalCoordinate.Azimuth
+  - Vim.Math3d.CylindricalCoordinate.Create(System.Double,System.Double,System.Double)
+  - Vim.Math3d.CylindricalCoordinate.Create(System.ValueTuple{System.Double,System.Double,System.Double})
+  - Vim.Math3d.CylindricalCoordinate.Deconstruct(System.Double@,System.Double@,System.Double@)
+  - Vim.Math3d.CylindricalCoordinate.Equals(System.Object)
+  - Vim.Math3d.CylindricalCoordinate.Equals(Vim.Math3d.CylindricalCoordinate)
+  - Vim.Math3d.CylindricalCoordinate.GetHashCode
+  - Vim.Math3d.CylindricalCoordinate.Height
+  - Vim.Math3d.CylindricalCoordinate.MaxValue
+  - Vim.Math3d.CylindricalCoordinate.MinValue
+  - Vim.Math3d.CylindricalCoordinate.op_Equality(Vim.Math3d.CylindricalCoordinate,Vim.Math3d.CylindricalCoordinate)
+  - Vim.Math3d.CylindricalCoordinate.op_Implicit(System.ValueTuple{System.Double,System.Double,System.Double})~Vim.Math3d.CylindricalCoordinate
+  - Vim.Math3d.CylindricalCoordinate.op_Implicit(Vim.Math3d.CylindricalCoordinate)~System.ValueTuple{System.Double,System.Double,System.Double}
+  - Vim.Math3d.CylindricalCoordinate.op_Inequality(Vim.Math3d.CylindricalCoordinate,Vim.Math3d.CylindricalCoordinate)
+  - Vim.Math3d.CylindricalCoordinate.Radius
+  - Vim.Math3d.CylindricalCoordinate.SetAzimuth(System.Double)
+  - Vim.Math3d.CylindricalCoordinate.SetHeight(System.Double)
+  - Vim.Math3d.CylindricalCoordinate.SetRadius(System.Double)
+  - Vim.Math3d.CylindricalCoordinate.ToString
+  - Vim.Math3d.CylindricalCoordinate.Zero
+  langs:
+  - csharp
+  - vb
+  name: CylindricalCoordinate
+  nameWithType: CylindricalCoordinate
+  fullName: Vim.Math3d.CylindricalCoordinate
+  type: Struct
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: CylindricalCoordinate
+    path: ../src/Structs.cs
+    startLine: 1897
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataContract]
+
+      public readonly struct CylindricalCoordinate : IEquatable<CylindricalCoordinate>
+    content.vb: >-
+      <DataContract>
+
+      Public Structure CylindricalCoordinate
+          Implements IEquatable(Of CylindricalCoordinate)
+  implements:
+  - System.IEquatable{Vim.Math3d.CylindricalCoordinate}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Vim.Math3d.CylindricalCoordinate.Radius
+  commentId: F:Vim.Math3d.CylindricalCoordinate.Radius
+  id: Radius
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Radius
+  nameWithType: CylindricalCoordinate.Radius
+  fullName: Vim.Math3d.CylindricalCoordinate.Radius
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Radius
+    path: ../src/Structs.cs
+    startLine: 1903
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly double Radius
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Radius As Double
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.CylindricalCoordinate.Azimuth
+  commentId: F:Vim.Math3d.CylindricalCoordinate.Azimuth
+  id: Azimuth
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Azimuth
+  nameWithType: CylindricalCoordinate.Azimuth
+  fullName: Vim.Math3d.CylindricalCoordinate.Azimuth
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Azimuth
+    path: ../src/Structs.cs
+    startLine: 1905
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly double Azimuth
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Azimuth As Double
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.CylindricalCoordinate.Height
+  commentId: F:Vim.Math3d.CylindricalCoordinate.Height
+  id: Height
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: CylindricalCoordinate.Height
+  fullName: Vim.Math3d.CylindricalCoordinate.Height
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Height
+    path: ../src/Structs.cs
+    startLine: 1907
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: >-
+      [DataMember]
+
+      public readonly double Height
+    return:
+      type: System.Double
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Height As Double
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Vim.Math3d.CylindricalCoordinate.#ctor(System.ValueTuple{System.Double,System.Double,System.Double})
+  commentId: M:Vim.Math3d.CylindricalCoordinate.#ctor(System.ValueTuple{System.Double,System.Double,System.Double})
+  id: '#ctor(System.ValueTuple{System.Double,System.Double,System.Double})'
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: CylindricalCoordinate((Double radius, Double azimuth, Double height))
+  nameWithType: CylindricalCoordinate.CylindricalCoordinate((Double radius, Double azimuth, Double height))
+  fullName: Vim.Math3d.CylindricalCoordinate.CylindricalCoordinate(System.ValueTuple<System.Double, System.Double, System.Double>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1908
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public CylindricalCoordinate((double radius, double azimuth, double height) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Double,System.Double,System.Double}
+    content.vb: Public Sub New(tuple As(radius As Double, azimuth As Double, height As Double)(Of Double , Double, Double))
+  overload: Vim.Math3d.CylindricalCoordinate.#ctor*
+  nameWithType.vb: CylindricalCoordinate.CylindricalCoordinate((radius As Double, azimuth As Double, height As Double)(Of Double, Double, Double))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.CylindricalCoordinate.CylindricalCoordinate(System.ValueTuple(Of System.Double, System.Double, System.Double))
+  name.vb: CylindricalCoordinate((radius As Double, azimuth As Double, height As Double)(Of Double, Double, Double))
+- uid: Vim.Math3d.CylindricalCoordinate.#ctor(System.Double,System.Double,System.Double)
+  commentId: M:Vim.Math3d.CylindricalCoordinate.#ctor(System.Double,System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double,System.Double)'
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: CylindricalCoordinate(Double, Double, Double)
+  nameWithType: CylindricalCoordinate.CylindricalCoordinate(Double, Double, Double)
+  fullName: Vim.Math3d.CylindricalCoordinate.CylindricalCoordinate(System.Double, System.Double, System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: .ctor
+    path: ../src/Structs.cs
+    startLine: 1909
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public CylindricalCoordinate(double radius, double azimuth, double height)
+    parameters:
+    - id: radius
+      type: System.Double
+    - id: azimuth
+      type: System.Double
+    - id: height
+      type: System.Double
+    content.vb: Public Sub New(radius As Double, azimuth As Double, height As Double)
+  overload: Vim.Math3d.CylindricalCoordinate.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.CylindricalCoordinate.Create(System.Double,System.Double,System.Double)
+  commentId: M:Vim.Math3d.CylindricalCoordinate.Create(System.Double,System.Double,System.Double)
+  id: Create(System.Double,System.Double,System.Double)
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Create(Double, Double, Double)
+  nameWithType: CylindricalCoordinate.Create(Double, Double, Double)
+  fullName: Vim.Math3d.CylindricalCoordinate.Create(System.Double, System.Double, System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1910
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static CylindricalCoordinate Create(double radius, double azimuth, double height)
+    parameters:
+    - id: radius
+      type: System.Double
+    - id: azimuth
+      type: System.Double
+    - id: height
+      type: System.Double
+    return:
+      type: Vim.Math3d.CylindricalCoordinate
+    content.vb: Public Shared Function Create(radius As Double, azimuth As Double, height As Double) As CylindricalCoordinate
+  overload: Vim.Math3d.CylindricalCoordinate.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.CylindricalCoordinate.Create(System.ValueTuple{System.Double,System.Double,System.Double})
+  commentId: M:Vim.Math3d.CylindricalCoordinate.Create(System.ValueTuple{System.Double,System.Double,System.Double})
+  id: Create(System.ValueTuple{System.Double,System.Double,System.Double})
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Create((Double radius, Double azimuth, Double height))
+  nameWithType: CylindricalCoordinate.Create((Double radius, Double azimuth, Double height))
+  fullName: Vim.Math3d.CylindricalCoordinate.Create(System.ValueTuple<System.Double, System.Double, System.Double>)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Create
+    path: ../src/Structs.cs
+    startLine: 1911
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static CylindricalCoordinate Create((double radius, double azimuth, double height) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Double,System.Double,System.Double}
+    return:
+      type: Vim.Math3d.CylindricalCoordinate
+    content.vb: Public Shared Function Create(tuple As(radius As Double, azimuth As Double, height As Double)(Of Double , Double, Double)) As CylindricalCoordinate
+  overload: Vim.Math3d.CylindricalCoordinate.Create*
+  nameWithType.vb: CylindricalCoordinate.Create((radius As Double, azimuth As Double, height As Double)(Of Double, Double, Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.CylindricalCoordinate.Create(System.ValueTuple(Of System.Double, System.Double, System.Double))
+  name.vb: Create((radius As Double, azimuth As Double, height As Double)(Of Double, Double, Double))
+- uid: Vim.Math3d.CylindricalCoordinate.Equals(System.Object)
+  commentId: M:Vim.Math3d.CylindricalCoordinate.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: CylindricalCoordinate.Equals(Object)
+  fullName: Vim.Math3d.CylindricalCoordinate.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1912
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: Vim.Math3d.CylindricalCoordinate.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.CylindricalCoordinate.GetHashCode
+  commentId: M:Vim.Math3d.CylindricalCoordinate.GetHashCode
+  id: GetHashCode
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: CylindricalCoordinate.GetHashCode()
+  fullName: Vim.Math3d.CylindricalCoordinate.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: GetHashCode
+    path: ../src/Structs.cs
+    startLine: 1913
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: Vim.Math3d.CylindricalCoordinate.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.CylindricalCoordinate.ToString
+  commentId: M:Vim.Math3d.CylindricalCoordinate.ToString
+  id: ToString
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: CylindricalCoordinate.ToString()
+  fullName: Vim.Math3d.CylindricalCoordinate.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: ToString
+    path: ../src/Structs.cs
+    startLine: 1914
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.ValueType.ToString
+  overload: Vim.Math3d.CylindricalCoordinate.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Vim.Math3d.CylindricalCoordinate.Deconstruct(System.Double@,System.Double@,System.Double@)
+  commentId: M:Vim.Math3d.CylindricalCoordinate.Deconstruct(System.Double@,System.Double@,System.Double@)
+  id: Deconstruct(System.Double@,System.Double@,System.Double@)
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Deconstruct(out Double, out Double, out Double)
+  nameWithType: CylindricalCoordinate.Deconstruct(out Double, out Double, out Double)
+  fullName: Vim.Math3d.CylindricalCoordinate.Deconstruct(out System.Double, out System.Double, out System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Deconstruct
+    path: ../src/Structs.cs
+    startLine: 1915
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly void Deconstruct(out double radius, out double azimuth, out double height)
+    parameters:
+    - id: radius
+      type: System.Double
+    - id: azimuth
+      type: System.Double
+    - id: height
+      type: System.Double
+    content.vb: Public Sub Deconstruct(ByRef radius As Double, ByRef azimuth As Double, ByRef height As Double)
+  overload: Vim.Math3d.CylindricalCoordinate.Deconstruct*
+  nameWithType.vb: CylindricalCoordinate.Deconstruct(ByRef Double, ByRef Double, ByRef Double)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: Vim.Math3d.CylindricalCoordinate.Deconstruct(ByRef System.Double, ByRef System.Double, ByRef System.Double)
+  name.vb: Deconstruct(ByRef Double, ByRef Double, ByRef Double)
+- uid: Vim.Math3d.CylindricalCoordinate.Equals(Vim.Math3d.CylindricalCoordinate)
+  commentId: M:Vim.Math3d.CylindricalCoordinate.Equals(Vim.Math3d.CylindricalCoordinate)
+  id: Equals(Vim.Math3d.CylindricalCoordinate)
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equals(CylindricalCoordinate)
+  nameWithType: CylindricalCoordinate.Equals(CylindricalCoordinate)
+  fullName: Vim.Math3d.CylindricalCoordinate.Equals(Vim.Math3d.CylindricalCoordinate)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Equals
+    path: ../src/Structs.cs
+    startLine: 1916
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool Equals(CylindricalCoordinate x)
+    parameters:
+    - id: x
+      type: Vim.Math3d.CylindricalCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(x As CylindricalCoordinate) As Boolean
+  overload: Vim.Math3d.CylindricalCoordinate.Equals*
+  implements:
+  - System.IEquatable{Vim.Math3d.CylindricalCoordinate}.Equals(Vim.Math3d.CylindricalCoordinate)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.CylindricalCoordinate.op_Equality(Vim.Math3d.CylindricalCoordinate,Vim.Math3d.CylindricalCoordinate)
+  commentId: M:Vim.Math3d.CylindricalCoordinate.op_Equality(Vim.Math3d.CylindricalCoordinate,Vim.Math3d.CylindricalCoordinate)
+  id: op_Equality(Vim.Math3d.CylindricalCoordinate,Vim.Math3d.CylindricalCoordinate)
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Equality(CylindricalCoordinate, CylindricalCoordinate)
+  nameWithType: CylindricalCoordinate.Equality(CylindricalCoordinate, CylindricalCoordinate)
+  fullName: Vim.Math3d.CylindricalCoordinate.Equality(Vim.Math3d.CylindricalCoordinate, Vim.Math3d.CylindricalCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Equality
+    path: ../src/Structs.cs
+    startLine: 1917
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator ==(CylindricalCoordinate x0, CylindricalCoordinate x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.CylindricalCoordinate
+    - id: x1
+      type: Vim.Math3d.CylindricalCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(x0 As CylindricalCoordinate, x1 As CylindricalCoordinate) As Boolean
+  overload: Vim.Math3d.CylindricalCoordinate.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.CylindricalCoordinate.op_Inequality(Vim.Math3d.CylindricalCoordinate,Vim.Math3d.CylindricalCoordinate)
+  commentId: M:Vim.Math3d.CylindricalCoordinate.op_Inequality(Vim.Math3d.CylindricalCoordinate,Vim.Math3d.CylindricalCoordinate)
+  id: op_Inequality(Vim.Math3d.CylindricalCoordinate,Vim.Math3d.CylindricalCoordinate)
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Inequality(CylindricalCoordinate, CylindricalCoordinate)
+  nameWithType: CylindricalCoordinate.Inequality(CylindricalCoordinate, CylindricalCoordinate)
+  fullName: Vim.Math3d.CylindricalCoordinate.Inequality(Vim.Math3d.CylindricalCoordinate, Vim.Math3d.CylindricalCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Inequality
+    path: ../src/Structs.cs
+    startLine: 1918
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static bool operator !=(CylindricalCoordinate x0, CylindricalCoordinate x1)
+    parameters:
+    - id: x0
+      type: Vim.Math3d.CylindricalCoordinate
+    - id: x1
+      type: Vim.Math3d.CylindricalCoordinate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(x0 As CylindricalCoordinate, x1 As CylindricalCoordinate) As Boolean
+  overload: Vim.Math3d.CylindricalCoordinate.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.CylindricalCoordinate.op_Implicit(System.ValueTuple{System.Double,System.Double,System.Double})~Vim.Math3d.CylindricalCoordinate
+  commentId: M:Vim.Math3d.CylindricalCoordinate.op_Implicit(System.ValueTuple{System.Double,System.Double,System.Double})~Vim.Math3d.CylindricalCoordinate
+  id: op_Implicit(System.ValueTuple{System.Double,System.Double,System.Double})~Vim.Math3d.CylindricalCoordinate
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Implicit((Double radius, Double azimuth, Double height) to CylindricalCoordinate)
+  nameWithType: CylindricalCoordinate.Implicit((Double radius, Double azimuth, Double height) to CylindricalCoordinate)
+  fullName: Vim.Math3d.CylindricalCoordinate.Implicit(System.ValueTuple<System.Double, System.Double, System.Double> to Vim.Math3d.CylindricalCoordinate)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1919
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator CylindricalCoordinate((double radius, double azimuth, double height) tuple)
+    parameters:
+    - id: tuple
+      type: System.ValueTuple{System.Double,System.Double,System.Double}
+    return:
+      type: Vim.Math3d.CylindricalCoordinate
+    content.vb: Public Shared Widening Operator CType(tuple As(radius As Double, azimuth As Double, height As Double)(Of Double , Double, Double)) As CylindricalCoordinate
+  overload: Vim.Math3d.CylindricalCoordinate.op_Implicit*
+  nameWithType.vb: CylindricalCoordinate.Widening((radius As Double, azimuth As Double, height As Double)(Of Double, Double, Double) to CylindricalCoordinate)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.CylindricalCoordinate.Widening(System.ValueTuple(Of System.Double, System.Double, System.Double) to Vim.Math3d.CylindricalCoordinate)
+  name.vb: Widening((radius As Double, azimuth As Double, height As Double)(Of Double, Double, Double) to CylindricalCoordinate)
+- uid: Vim.Math3d.CylindricalCoordinate.op_Implicit(Vim.Math3d.CylindricalCoordinate)~System.ValueTuple{System.Double,System.Double,System.Double}
+  commentId: M:Vim.Math3d.CylindricalCoordinate.op_Implicit(Vim.Math3d.CylindricalCoordinate)~System.ValueTuple{System.Double,System.Double,System.Double}
+  id: op_Implicit(Vim.Math3d.CylindricalCoordinate)~System.ValueTuple{System.Double,System.Double,System.Double}
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Implicit(CylindricalCoordinate to (Double radius, Double azimuth, Double height))
+  nameWithType: CylindricalCoordinate.Implicit(CylindricalCoordinate to (Double radius, Double azimuth, Double height))
+  fullName: Vim.Math3d.CylindricalCoordinate.Implicit(Vim.Math3d.CylindricalCoordinate to System.ValueTuple<System.Double, System.Double, System.Double>)
+  type: Operator
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: op_Implicit
+    path: ../src/Structs.cs
+    startLine: 1920
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static implicit operator (double radius, double azimuth, double height)(CylindricalCoordinate self)
+    parameters:
+    - id: self
+      type: Vim.Math3d.CylindricalCoordinate
+    return:
+      type: System.ValueTuple{System.Double,System.Double,System.Double}
+    content.vb: Public Shared Widening Operator CType(self As CylindricalCoordinate) As(radius As Double, azimuth As Double, height As Double)(Of Double , Double, Double)
+  overload: Vim.Math3d.CylindricalCoordinate.op_Implicit*
+  nameWithType.vb: CylindricalCoordinate.Widening(CylindricalCoordinate to (radius As Double, azimuth As Double, height As Double)(Of Double, Double, Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Vim.Math3d.CylindricalCoordinate.Widening(Vim.Math3d.CylindricalCoordinate to System.ValueTuple(Of System.Double, System.Double, System.Double))
+  name.vb: Widening(CylindricalCoordinate to (radius As Double, azimuth As Double, height As Double)(Of Double, Double, Double))
+- uid: Vim.Math3d.CylindricalCoordinate.AlmostEquals(Vim.Math3d.CylindricalCoordinate,System.Single)
+  commentId: M:Vim.Math3d.CylindricalCoordinate.AlmostEquals(Vim.Math3d.CylindricalCoordinate,System.Single)
+  id: AlmostEquals(Vim.Math3d.CylindricalCoordinate,System.Single)
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: AlmostEquals(CylindricalCoordinate, Single)
+  nameWithType: CylindricalCoordinate.AlmostEquals(CylindricalCoordinate, Single)
+  fullName: Vim.Math3d.CylindricalCoordinate.AlmostEquals(Vim.Math3d.CylindricalCoordinate, System.Single)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: AlmostEquals
+    path: ../src/Structs.cs
+    startLine: 1922
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly bool AlmostEquals(CylindricalCoordinate x, float tolerance = 1E-07F)
+    parameters:
+    - id: x
+      type: Vim.Math3d.CylindricalCoordinate
+    - id: tolerance
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: Public Function AlmostEquals(x As CylindricalCoordinate, tolerance As Single = 1E-07F) As Boolean
+  overload: Vim.Math3d.CylindricalCoordinate.AlmostEquals*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.CylindricalCoordinate.Zero
+  commentId: F:Vim.Math3d.CylindricalCoordinate.Zero
+  id: Zero
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: CylindricalCoordinate.Zero
+  fullName: Vim.Math3d.CylindricalCoordinate.Zero
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: Zero
+    path: ../src/Structs.cs
+    startLine: 1923
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static CylindricalCoordinate Zero
+    return:
+      type: Vim.Math3d.CylindricalCoordinate
+    content.vb: Public Shared Zero As CylindricalCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.CylindricalCoordinate.MinValue
+  commentId: F:Vim.Math3d.CylindricalCoordinate.MinValue
+  id: MinValue
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: MinValue
+  nameWithType: CylindricalCoordinate.MinValue
+  fullName: Vim.Math3d.CylindricalCoordinate.MinValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MinValue
+    path: ../src/Structs.cs
+    startLine: 1924
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static CylindricalCoordinate MinValue
+    return:
+      type: Vim.Math3d.CylindricalCoordinate
+    content.vb: Public Shared MinValue As CylindricalCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.CylindricalCoordinate.MaxValue
+  commentId: F:Vim.Math3d.CylindricalCoordinate.MaxValue
+  id: MaxValue
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: MaxValue
+  nameWithType: CylindricalCoordinate.MaxValue
+  fullName: Vim.Math3d.CylindricalCoordinate.MaxValue
+  type: Field
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: MaxValue
+    path: ../src/Structs.cs
+    startLine: 1925
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public static CylindricalCoordinate MaxValue
+    return:
+      type: Vim.Math3d.CylindricalCoordinate
+    content.vb: Public Shared MaxValue As CylindricalCoordinate
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Vim.Math3d.CylindricalCoordinate.SetRadius(System.Double)
+  commentId: M:Vim.Math3d.CylindricalCoordinate.SetRadius(System.Double)
+  id: SetRadius(System.Double)
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SetRadius(Double)
+  nameWithType: CylindricalCoordinate.SetRadius(Double)
+  fullName: Vim.Math3d.CylindricalCoordinate.SetRadius(System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetRadius
+    path: ../src/Structs.cs
+    startLine: 1926
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly CylindricalCoordinate SetRadius(double x)
+    parameters:
+    - id: x
+      type: System.Double
+    return:
+      type: Vim.Math3d.CylindricalCoordinate
+    content.vb: Public Function SetRadius(x As Double) As CylindricalCoordinate
+  overload: Vim.Math3d.CylindricalCoordinate.SetRadius*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.CylindricalCoordinate.SetAzimuth(System.Double)
+  commentId: M:Vim.Math3d.CylindricalCoordinate.SetAzimuth(System.Double)
+  id: SetAzimuth(System.Double)
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SetAzimuth(Double)
+  nameWithType: CylindricalCoordinate.SetAzimuth(Double)
+  fullName: Vim.Math3d.CylindricalCoordinate.SetAzimuth(System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetAzimuth
+    path: ../src/Structs.cs
+    startLine: 1927
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly CylindricalCoordinate SetAzimuth(double x)
+    parameters:
+    - id: x
+      type: System.Double
+    return:
+      type: Vim.Math3d.CylindricalCoordinate
+    content.vb: Public Function SetAzimuth(x As Double) As CylindricalCoordinate
+  overload: Vim.Math3d.CylindricalCoordinate.SetAzimuth*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+- uid: Vim.Math3d.CylindricalCoordinate.SetHeight(System.Double)
+  commentId: M:Vim.Math3d.CylindricalCoordinate.SetHeight(System.Double)
+  id: SetHeight(System.Double)
+  parent: Vim.Math3d.CylindricalCoordinate
+  langs:
+  - csharp
+  - vb
+  name: SetHeight(Double)
+  nameWithType: CylindricalCoordinate.SetHeight(Double)
+  fullName: Vim.Math3d.CylindricalCoordinate.SetHeight(System.Double)
+  type: Method
+  source:
+    remote:
+      path: src/Structs.cs
+      branch: dev
+      repo: https://github.com/vimaec/Math3D.git
+    id: SetHeight
+    path: ../src/Structs.cs
+    startLine: 1928
+  assemblies:
+  - Vim.Math3D
+  namespace: Vim.Math3d
+  syntax:
+    content: public readonly CylindricalCoordinate SetHeight(double x)
+    parameters:
+    - id: x
+      type: System.Double
+    return:
+      type: Vim.Math3d.CylindricalCoordinate
+    content.vb: Public Function SetHeight(x As Double) As CylindricalCoordinate
+  overload: Vim.Math3d.CylindricalCoordinate.SetHeight*
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+references:
+- uid: Vim.Math3d
+  commentId: N:Vim.Math3d
+  name: Vim.Math3d
+  nameWithType: Vim.Math3d
+  fullName: Vim.Math3d
+- uid: System.IEquatable{Vim.Math3d.CylindricalCoordinate}
+  commentId: T:System.IEquatable{Vim.Math3d.CylindricalCoordinate}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<CylindricalCoordinate>
+  nameWithType: IEquatable<CylindricalCoordinate>
+  fullName: System.IEquatable<Vim.Math3d.CylindricalCoordinate>
+  nameWithType.vb: IEquatable(Of CylindricalCoordinate)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.CylindricalCoordinate)
+  name.vb: IEquatable(Of CylindricalCoordinate)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Vim.Math3d.CylindricalCoordinate
+    name: CylindricalCoordinate
+    nameWithType: CylindricalCoordinate
+    fullName: Vim.Math3d.CylindricalCoordinate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Vim.Math3d.CylindricalCoordinate
+    name: CylindricalCoordinate
+    nameWithType: CylindricalCoordinate
+    fullName: Vim.Math3d.CylindricalCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Vim.Math3d.CylindricalCoordinate.#ctor*
+  commentId: Overload:Vim.Math3d.CylindricalCoordinate.#ctor
+  name: CylindricalCoordinate
+  nameWithType: CylindricalCoordinate.CylindricalCoordinate
+  fullName: Vim.Math3d.CylindricalCoordinate.CylindricalCoordinate
+- uid: System.ValueTuple{System.Double,System.Double,System.Double}
+  commentId: T:System.ValueTuple{System.Double,System.Double,System.Double}
+  parent: System
+  definition: System.ValueTuple`3
+  name: (T1, T2, T3)<Double, Double, Double>
+  nameWithType: (T1, T2, T3)<Double, Double, Double>
+  fullName: System.ValueTuple<System.Double, System.Double, System.Double>
+  nameWithType.vb: (T1, T2, T3)(Of Double, Double, Double)
+  fullName.vb: System.ValueTuple(Of System.Double, System.Double, System.Double)
+  name.vb: (T1, T2, T3)(Of Double, Double, Double)
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`3
+  commentId: T:System.ValueTuple`3
+  isExternal: true
+  name: (T1, T2, T3)<T1, T2, T3>
+  nameWithType: (T1, T2, T3)<T1, T2, T3>
+  fullName: System.ValueTuple<T1, T2, T3>
+  nameWithType.vb: (T1, T2, T3)(Of T1, T2, T3)
+  fullName.vb: System.ValueTuple(Of T1, T2, T3)
+  name.vb: (T1, T2, T3)(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.CylindricalCoordinate.Create*
+  commentId: Overload:Vim.Math3d.CylindricalCoordinate.Create
+  name: Create
+  nameWithType: CylindricalCoordinate.Create
+  fullName: Vim.Math3d.CylindricalCoordinate.Create
+- uid: Vim.Math3d.CylindricalCoordinate
+  commentId: T:Vim.Math3d.CylindricalCoordinate
+  parent: Vim.Math3d
+  name: CylindricalCoordinate
+  nameWithType: CylindricalCoordinate
+  fullName: Vim.Math3d.CylindricalCoordinate
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.CylindricalCoordinate.Equals*
+  commentId: Overload:Vim.Math3d.CylindricalCoordinate.Equals
+  name: Equals
+  nameWithType: CylindricalCoordinate.Equals
+  fullName: Vim.Math3d.CylindricalCoordinate.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.CylindricalCoordinate.GetHashCode*
+  commentId: Overload:Vim.Math3d.CylindricalCoordinate.GetHashCode
+  name: GetHashCode
+  nameWithType: CylindricalCoordinate.GetHashCode
+  fullName: Vim.Math3d.CylindricalCoordinate.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.CylindricalCoordinate.ToString*
+  commentId: Overload:Vim.Math3d.CylindricalCoordinate.ToString
+  name: ToString
+  nameWithType: CylindricalCoordinate.ToString
+  fullName: Vim.Math3d.CylindricalCoordinate.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Vim.Math3d.CylindricalCoordinate.Deconstruct*
+  commentId: Overload:Vim.Math3d.CylindricalCoordinate.Deconstruct
+  name: Deconstruct
+  nameWithType: CylindricalCoordinate.Deconstruct
+  fullName: Vim.Math3d.CylindricalCoordinate.Deconstruct
+- uid: System.IEquatable{Vim.Math3d.CylindricalCoordinate}.Equals(Vim.Math3d.CylindricalCoordinate)
+  commentId: M:System.IEquatable{Vim.Math3d.CylindricalCoordinate}.Equals(Vim.Math3d.CylindricalCoordinate)
+  parent: System.IEquatable{Vim.Math3d.CylindricalCoordinate}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(CylindricalCoordinate)
+  nameWithType: IEquatable<CylindricalCoordinate>.Equals(CylindricalCoordinate)
+  fullName: System.IEquatable<Vim.Math3d.CylindricalCoordinate>.Equals(Vim.Math3d.CylindricalCoordinate)
+  nameWithType.vb: IEquatable(Of CylindricalCoordinate).Equals(CylindricalCoordinate)
+  fullName.vb: System.IEquatable(Of Vim.Math3d.CylindricalCoordinate).Equals(Vim.Math3d.CylindricalCoordinate)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<CylindricalCoordinate>.Equals
+    fullName: System.IEquatable<Vim.Math3d.CylindricalCoordinate>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.CylindricalCoordinate
+    name: CylindricalCoordinate
+    nameWithType: CylindricalCoordinate
+    fullName: Vim.Math3d.CylindricalCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of CylindricalCoordinate).Equals
+    fullName: System.IEquatable(Of Vim.Math3d.CylindricalCoordinate).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Vim.Math3d.CylindricalCoordinate
+    name: CylindricalCoordinate
+    nameWithType: CylindricalCoordinate
+    fullName: Vim.Math3d.CylindricalCoordinate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Vim.Math3d.CylindricalCoordinate.op_Equality*
+  commentId: Overload:Vim.Math3d.CylindricalCoordinate.op_Equality
+  name: Equality
+  nameWithType: CylindricalCoordinate.Equality
+  fullName: Vim.Math3d.CylindricalCoordinate.Equality
+- uid: Vim.Math3d.CylindricalCoordinate.op_Inequality*
+  commentId: Overload:Vim.Math3d.CylindricalCoordinate.op_Inequality
+  name: Inequality
+  nameWithType: CylindricalCoordinate.Inequality
+  fullName: Vim.Math3d.CylindricalCoordinate.Inequality
+- uid: Vim.Math3d.CylindricalCoordinate.op_Implicit*
+  commentId: Overload:Vim.Math3d.CylindricalCoordinate.op_Implicit
+  name: Implicit
+  nameWithType: CylindricalCoordinate.Implicit
+  fullName: Vim.Math3d.CylindricalCoordinate.Implicit
+  nameWithType.vb: CylindricalCoordinate.Widening
+  fullName.vb: Vim.Math3d.CylindricalCoordinate.Widening
+  name.vb: Widening
+- uid: Vim.Math3d.CylindricalCoordinate.AlmostEquals*
+  commentId: Overload:Vim.Math3d.CylindricalCoordinate.AlmostEquals
+  name: AlmostEquals
+  nameWithType: CylindricalCoordinate.AlmostEquals
+  fullName: Vim.Math3d.CylindricalCoordinate.AlmostEquals
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Vim.Math3d.CylindricalCoordinate.SetRadius*
+  commentId: Overload:Vim.Math3d.CylindricalCoordinate.SetRadius
+  name: SetRadius
+  nameWithType: CylindricalCoordinate.SetRadius
+  fullName: Vim.Math3d.CylindricalCoordinate.SetRadius
+- uid: Vim.Math3d.CylindricalCoordinate.SetAzimuth*
+  commentId: Overload:Vim.Math3d.CylindricalCoordinate.SetAzimuth
+  name: SetAzimuth
+  nameWithType: CylindricalCoordinate.SetAzimuth
+  fullName: Vim.Math3d.CylindricalCoordinate.SetAzimuth
+- uid: Vim.Math3d.CylindricalCoordinate.SetHeight*
+  commentId: Overload:Vim.Math3d.CylindricalCoordinate.SetHeight
+  name: SetHeight
+  nameWithType: CylindricalCoordinate.SetHeight
+  fullName: Vim.Math3d.CylindricalCoordinate.SetHeight
