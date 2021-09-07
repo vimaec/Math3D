@@ -1,0 +1,923 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/Acer/Documents/GitHub/Math3D/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.AABox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.AABox.html",
+          "hash": "zG5r2q5/wGuZAvEYIGrAnDplotJ9sEXDvZD/0F3Oba0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.AABox2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.AABox2D.html",
+          "hash": "qud+37TgqS3WEoFfaYH2RBGTCColVD+qc7veWDE1FBQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.AABox4D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.AABox4D.html",
+          "hash": "zoLHWbbQsPdCScXil7zl8tu7pDT/iu8vhnYAae/EEJ0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.AngularMotion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.AngularMotion.html",
+          "hash": "DLotJBcgsZ5vgCU3+JVh/+SxV5Cz3WQFnyBRGDMjMx8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.AxisAngle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.AxisAngle.html",
+          "hash": "RqtP7CbEtrevI2dxzLHuAQG+gK3o1eL3DObn+yngw5o="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Byte2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Byte2.html",
+          "hash": "zcRQKOrk41KXt4jbIyvXFkD6ypfUSM0u3zTP00iCkNs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Byte3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Byte3.html",
+          "hash": "S/yNZj06jqpQpHfQt6WCkv8PCK772iCMKhvDIRV8RAw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Byte4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Byte4.html",
+          "hash": "vrF/cbOuYqHRuf8oYxn329IN61uQCsz5FGs4IGRPIHQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.ColorHDR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.ColorHDR.html",
+          "hash": "RWu21ws1bF5pCNju6LH1ehKoCUwhJDMEbCddNJRKjmQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.ColorRGB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.ColorRGB.html",
+          "hash": "cs7rhlLkuczSwSbq6oC4AxL2N3uSyJ2nz0+EarbHV+Q="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.ColorRGBA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.ColorRGBA.html",
+          "hash": "p9wVeQ3vIBM5We9KA6Cm9ChAJWRVz3XHk8eLhzXeFQI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Complex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Complex.html",
+          "hash": "TiWuMQNv7T6UkMmtN2i8/a9zevz4Yq5XLa2ylyCJhks="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Constants.html",
+          "hash": "dmXbr6wjqMT00GGOuimvV/HUv3+X0CHB5/289Dxq8LM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.ContainmentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.ContainmentType.html",
+          "hash": "g6Os26DIPUwTiqy/tPP5wxau7EOrFeebg/XZhPMCxQE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.CylindricalCoordinate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.CylindricalCoordinate.html",
+          "hash": "PeICEZTXUQnGESqtG8XiQTxJGNSKf8xdnghfnb7yjOc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.DAABox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.DAABox.html",
+          "hash": "WlkArEUL5ugcshinbsfFZ9jldWkDBVMEiW18blfUkuw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.DAABox2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.DAABox2D.html",
+          "hash": "6D/cO9kmVNE83oNPxb9cH85bgC5BSQ/5ekwaPWZ2U58="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.DAABox4D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.DAABox4D.html",
+          "hash": "fNn7+fPjVJdsrMWNvmRCzH2l2s7dTfwOKXnb2yt9KWA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.DInterval.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.DInterval.html",
+          "hash": "uKbMWmuKVTDoIXO9Y+jYvr+5usV+CSX4DnIG+MifFvc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.DPlane.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.DPlane.html",
+          "hash": "DhL1m/hHo6zXGALRPyYnem7wOny83DbLwjAQzRGcai8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.DQuaternion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.DQuaternion.html",
+          "hash": "9H+bPlBHjUwHIR7qt5Jc26gzoZSLspRjXxVol5p4ma8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.DRay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.DRay.html",
+          "hash": "+nsj3ydUUo3PMKpGUj+WYXtpZ21IS7KIlvlolszt/RQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.DSphere.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.DSphere.html",
+          "hash": "/M0m0EHHoCQYeKjKu9DFRtOGNgeVozEUqkzeie3rbxY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.DVector2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.DVector2.html",
+          "hash": "CTAMkfcrBHrXKmM6U+Y6RJMuKuJtj82bEvdsV6J/b3k="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.DVector3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.DVector3.html",
+          "hash": "ir1uzbQ9Ex1DcgaPWF+eQ9eP4uLt/xZ5sjhbRlfyZm0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.DVector4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.DVector4.html",
+          "hash": "5bq1YZJNz2Uy2OT918Y+vFwcm384DibaETUefXfC0po="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Euler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Euler.html",
+          "hash": "TE9O5nV+R/Jh/T9U5Bsi8Cs8kFhomAY13w5k/M34lfg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.GeoCoordinate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.GeoCoordinate.html",
+          "hash": "lUIbtmIMuL7bUIAIUJydgOilI+MAoRlu1na3diyAJf0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Hash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Hash.html",
+          "hash": "FuG7fq+z6A68Kqz1Vlv8vPX3GxksMzlkYV+sk/yuNhI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.HorizontalCoordinate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.HorizontalCoordinate.html",
+          "hash": "TskFM5hasbpeLfEkFyLvGfDDc1D2ubfhd/sldvcjyns="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.IMappable-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.IMappable-2.html",
+          "hash": "BegQTb3/zHjbdooE0sB2GF34cRKm0gpgCRyBKew0/NQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.IPoints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.IPoints.html",
+          "hash": "TdA0ESqWPAe0Kt1tbnA8lX8VJLqk4LXJaDZskkIo/xg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.IPoints2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.IPoints2D.html",
+          "hash": "nS319t7GfhlhSiuEjAYNR/4K+EuhKPpfykQBJBvtZ/k="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.ITransformable3D-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.ITransformable3D-1.html",
+          "hash": "rueOVD/FFbRWwuQQbWb0qmLh0yPcHzpNjK3AaO12kPY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Int2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Int2.html",
+          "hash": "9LU7hD14ZPeysqtcweu9GkDjiReLyYa9tMCO76mmryU="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Int3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Int3.html",
+          "hash": "dSWjQPOIMC9OGioqBnhwUt/9uLVOwoGQo445ZkDlKpI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Int4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Int4.html",
+          "hash": "GboQVjBooaaurIAWnguvb9GCGY3JnsUlPB73JtNZogw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Interval.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Interval.html",
+          "hash": "+Mtdaw32YkVou7UEv1fZ72zUgaEkcvCMrtpmYn9ET58="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Line.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Line.html",
+          "hash": "YJlbnyd1WC2VnVwR2UwV7rZwj5ieNow3r/qNC4D4AYQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Line2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Line2D.html",
+          "hash": "rpxB5R5Y6pErqthT6jxU/WD+TodWPN3/1IfbmZpPf6A="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.LinearMotion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.LinearMotion.html",
+          "hash": "BIithA3eaiermiquLdbkdR+CEfKTUgMqzhU+QIeHZRM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.LinqUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.LinqUtil.html",
+          "hash": "b/cPPz4l4fi7Ze3hT+2p5FK7x3D/0AJoSn0eiYXk7jc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.LogPolarCoordinate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.LogPolarCoordinate.html",
+          "hash": "Ryra/IsZwU1H7IJoQ9Fx8X++AkTUmDotNGg1rfTJKpo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.MathOps.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.MathOps.html",
+          "hash": "uMCRGPCuKJfXAFxFBLYaC8q0finuBnx/radhOp1ONVE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Matrix4x4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Matrix4x4.html",
+          "hash": "UsCFZPUwVdYFGgYLBbgm9WTgu4aoOkou9K39tJE0c7M="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Motion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Motion.html",
+          "hash": "7RCrA0R+xz7ecV+WLPftEu8YKmufFZB15u4rNFOQs4c="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.MovementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.MovementExtensions.html",
+          "hash": "mZOzD/3KZT/7l4pQg3Fyi+lsOrCABIypFriWMip7qk8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Plane.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Plane.html",
+          "hash": "DBJ4wzatc/dLWkXU6mRNpjQoG3xVgpTjB+OrgqW3jWw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.PlaneIntersectionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.PlaneIntersectionType.html",
+          "hash": "yKIrX3GpSmUlTbKHC3cRaSF0cc6KNb9VKNujYTPKJkc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.PolarCoordinate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.PolarCoordinate.html",
+          "hash": "LJxkWblflsppEam38AJg3JTGXCzLacHx9GVHOSn+vQ8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Quad.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Quad.html",
+          "hash": "Rnd6aOxpv1TMGMSM94m0YLjOf0YE2gr2zIfYRQMpFpQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Quad2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Quad2D.html",
+          "hash": "74oGDl/h48zFMAqvFVIK1gbLIf1KpMy+NMoAeeJ+JNI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Quaternion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Quaternion.html",
+          "hash": "6ooeepYYgYr8W5Ceei7iFMax15UcTMsvc+qbR/Hx4yI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Ray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Ray.html",
+          "hash": "UJkz6wPkSbalZlDwu0yugXgMmpEyoIuU75z9ISWsMJY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Sphere.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Sphere.html",
+          "hash": "s5YS1deCV4kFvyunwqqSSZCV3kfoqG3T2S/1emXJV7Y="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.SphericalCoordinate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.SphericalCoordinate.html",
+          "hash": "uZWldn2NR9CBFhSfV5Rq4RUCFTDCO3D6kPfwJmNkmi8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.StatelessRandom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.StatelessRandom.html",
+          "hash": "/ijhXsgcJTH7Z9zs5zR/QuJWteEULmq3PPLp98zuGGk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Stats-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Stats-1.html",
+          "hash": "AWBOwYZ7PUM2KdvlK9vL+WzQuXqUCPgThFM2mbdD9x8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Transform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Transform.html",
+          "hash": "wqqWshOsR8TSGsVyK0Ke6CWpJQparrM3DSPJ99IAvZc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Transformable3D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Transformable3D.html",
+          "hash": "Q0VnWvRyUDHin/Erl3F0YbUG5ewfP9KxAEv+zp0A8I0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Triangle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Triangle.html",
+          "hash": "upQQq2eX/S9zy90dMrJR89ZXpG9vOw7rebOmlUSUv+w="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Triangle2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Triangle2D.html",
+          "hash": "5fhvt6p48Mg4nTzMYlr9d5vpMZUNpVEFHmjqeLsRK7c="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Vector2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Vector2.html",
+          "hash": "qcNp7h7G1gmuhnev7DoHhj8Cxj/r4NCDFNREpeHEeh0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Vector3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Vector3.html",
+          "hash": "BJRDhBSs7cSYObt4UMAmG1er9Eg32SqBLd6fYZ0KAQM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.Vector4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.Vector4.html",
+          "hash": "rnUWDvpqCdDLLyKAS7mfMbktDJi4SFLUpz0XjtrhufE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Vim.Math3d.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Vim.Math3d.html",
+          "hash": "dpJEYUGM2oAjgD8RqTSJY0b6w3Nw+8sxUWGA+XkJF1g="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "jc9prUWSIADwW6WUGJMOTlnbiw5wkW9bCZ0wx0sBpQ0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/csharp-math-libraries.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/csharp-math-libraries.html",
+          "hash": "mMCCvaeDaq7ANPxmzUC9UPUD4C/X7mFSNfXZuRR3eRM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "re4EjkRTIQpwfyWGE279jRcMrWwWFBxMKys1zEyTXpw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/white-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/white-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "MhyUpc42gylHgUyd6dlrIw8eklwfpl7eLohy8DYGl5E="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 4
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 66,
+          "skipped_file_count": 66
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

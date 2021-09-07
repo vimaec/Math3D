@@ -1,6 +1,6 @@
 # Vim.Math3D
 
-[<img src="https://img.shields.io/nuget/v/Vim.Math3D.svg">](https://www.nuget.org/packages/Vim.Math3D/)
+[<img src="https://img.shields.io/nuget/v/Vim.Math3D.svg">](https://github.com/Vim/Math3D)
 
 **Vim.Math3D** is a portable, safe, and efficient 3D math library from [VIM AEC](https://vimaec.com) written in C# 
 targeting .NET Standard 2.0 without any dependencies. 
@@ -19,17 +19,19 @@ In rough order, the Math3D design goals are:
 	* The library must be pure C# 
 	* No unsafe code 
 	* Fixed binary layout of structs in memory
+    * Serializable
 	* Double and Single precision implementation of most structures 
 2. Robustness
 	* Functions are well covered by unit tests 
 	* Functions are easy to read, understand, and verify
+    * All structs are immutable
 3. Ease of Use and Discoverability
 	* Consistent with Microsoft coding styles
 	* Consistent API with System.Numerics
 	* Can use fluent syntax (object-oriented "dot" notation)
 	* We don't have to pass arguments by reference
 4. Performance 
-	* Excellent performance, but not at cost of readability and discoverability
+	* Excellent performance, but not at cost of readability and discoverability    
 
 ## History 
 
@@ -161,36 +163,3 @@ In addition All of the `System.Math` routines are implemented as static extensio
 for `float`, `double`, `Vector2`,`Vector3`, `Vector4`, `DVector2`,`DVector3`, 
 and `DVector4`. This provides a convenient fluent syntax on all variables making the Vim.Math3D API
 easily discoverable using auto-complete.
-
-## What are .TT Files
-
-`Vim.Math3D` leverages the [T4 text template engine](https://docs.microsoft.com/en-us/visualstudio/modeling/code-generation-and-t4-text-templates?view=vs-2017) 
-to auto-generate efficient boilerplate code for the different types of 
-structs. This has proven for us to be an effective way to create generic code that is also very efficient for numerical types and 
-reduce the overhead of maintainance.  
-
-## About the Tests
-
-Vim.Math3D uses NUnit for the tests, which many were ported from the CoreFX Numerics implementation of System.Numerics. 
-At last measure we have approximately 50% code coverage, with most of the uncovered functions having trivial implementations 
-that are auto-generated using the T4 templating engine. 
-
-# Appendix 
-
-## Related Libraries 
-
-* [System.Numerics](https://referencesource.microsoft.com/#System.Numerics,namespaces)
-* [SharpDX Mathematics](https://github.com/sharpdx/SharpDX/tree/master/Source/SharpDX.Mathematics)
-* [MonoGame](https://github.com/MonoGame/MonoGame)
-* [Math.NET Spatial](https://github.com/mathnet/mathnet-spatial)
-* [Math.NET Numerics](https://github.com/mathnet/mathnet-numerics)
-* [Unity.Mathematics](https://github.com/Unity-Technologies/Unity.Mathematics)
-* [Unity Reference](https://github.com/Unity-Technologies/UnityCsReference/tree/master/Runtime/Export)
-* [Abacus](https://github.com/sungiant/abacus)
-* [Geometry3Sharp](https://github.com/gradientspace/geometry3Sharp)
-* [FNA-XNA](https://github.com/FNA-XNA/FNA/tree/master/src)
-* [Stride](https://github.com/stride3d/stride/tree/master/sources/core/Stride.Core.Mathematics)
-* [A Vector Type for C# - R Potter via Code Project](https://www.codeproject.com/Articles/17425/A-Vector-Type-for-C)
-* [Godot Engine C# Libraries](https://github.com/godotengine/godot/tree/master/modules/mono/glue/GodotSharp/GodotSharp/Core)
-* [GeometRi - Simple and lightweight computational geometry library for .Net](https://github.com/RiSearcher/GeometRi.CSharp)
-* [Veldrid ](https://github.com/mellinoe/veldrid/tree/master/src/Veldrid.Utilities)

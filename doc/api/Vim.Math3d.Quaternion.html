@@ -1,0 +1,959 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct Quaternion
+   | Vim.Math3D </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct Quaternion
+   | Vim.Math3D ">
+    <meta name="generator" content="docfx 2.58.2.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/white-logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/intro.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/Vim.Math3d.html" title="Api Documentation">Api Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Vim.Math3d.html" title="Vim.Math3d" class="">Vim.Math3d</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Vim.Math3d.AABox.html" title="AABox" class="">AABox</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.AABox2D.html" title="AABox2D" class="">AABox2D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.AABox4D.html" title="AABox4D" class="">AABox4D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.AngularMotion.html" title="AngularMotion" class="">AngularMotion</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.AxisAngle.html" title="AxisAngle" class="">AxisAngle</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Byte2.html" title="Byte2" class="">Byte2</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Byte3.html" title="Byte3" class="">Byte3</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Byte4.html" title="Byte4" class="">Byte4</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.ColorHDR.html" title="ColorHDR" class="">ColorHDR</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.ColorRGB.html" title="ColorRGB" class="">ColorRGB</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.ColorRGBA.html" title="ColorRGBA" class="">ColorRGBA</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Complex.html" title="Complex" class="">Complex</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Constants.html" title="Constants" class="">Constants</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.ContainmentType.html" title="ContainmentType" class="">ContainmentType</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.CylindricalCoordinate.html" title="CylindricalCoordinate" class="">CylindricalCoordinate</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DAABox.html" title="DAABox" class="">DAABox</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DAABox2D.html" title="DAABox2D" class="">DAABox2D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DAABox4D.html" title="DAABox4D" class="">DAABox4D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DInterval.html" title="DInterval" class="">DInterval</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DPlane.html" title="DPlane" class="">DPlane</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DQuaternion.html" title="DQuaternion" class="">DQuaternion</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DRay.html" title="DRay" class="">DRay</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DSphere.html" title="DSphere" class="">DSphere</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DVector2.html" title="DVector2" class="">DVector2</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DVector3.html" title="DVector3" class="">DVector3</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DVector4.html" title="DVector4" class="">DVector4</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Euler.html" title="Euler" class="">Euler</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.GeoCoordinate.html" title="GeoCoordinate" class="">GeoCoordinate</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Hash.html" title="Hash" class="">Hash</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.HorizontalCoordinate.html" title="HorizontalCoordinate" class="">HorizontalCoordinate</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.IMappable-2.html" title="IMappable&lt;TContainer, TPart&gt;" class="">IMappable&lt;TContainer, TPart&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Int2.html" title="Int2" class="">Int2</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Int3.html" title="Int3" class="">Int3</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Int4.html" title="Int4" class="">Int4</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Interval.html" title="Interval" class="">Interval</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.IPoints.html" title="IPoints" class="">IPoints</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.IPoints2D.html" title="IPoints2D" class="">IPoints2D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.ITransformable3D-1.html" title="ITransformable3D&lt;TSelf&gt;" class="">ITransformable3D&lt;TSelf&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Line.html" title="Line" class="">Line</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Line2D.html" title="Line2D" class="">Line2D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.LinearMotion.html" title="LinearMotion" class="">LinearMotion</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.LinqUtil.html" title="LinqUtil" class="">LinqUtil</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.LogPolarCoordinate.html" title="LogPolarCoordinate" class="">LogPolarCoordinate</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.MathOps.html" title="MathOps" class="">MathOps</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Matrix4x4.html" title="Matrix4x4" class="">Matrix4x4</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Motion.html" title="Motion" class="">Motion</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.MovementExtensions.html" title="MovementExtensions" class="">MovementExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Plane.html" title="Plane" class="">Plane</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.PlaneIntersectionType.html" title="PlaneIntersectionType" class="">PlaneIntersectionType</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.PolarCoordinate.html" title="PolarCoordinate" class="">PolarCoordinate</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Quad.html" title="Quad" class="">Quad</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Quad2D.html" title="Quad2D" class="">Quad2D</a>
+                          </li>
+                          <li class="active">
+                            <a href="Vim.Math3d.Quaternion.html" title="Quaternion" class="active">Quaternion</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Ray.html" title="Ray" class="">Ray</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Sphere.html" title="Sphere" class="">Sphere</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.SphericalCoordinate.html" title="SphericalCoordinate" class="">SphericalCoordinate</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.StatelessRandom.html" title="StatelessRandom" class="">StatelessRandom</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Stats-1.html" title="Stats&lt;T&gt;" class="">Stats&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Transform.html" title="Transform" class="">Transform</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Transformable3D.html" title="Transformable3D" class="">Transformable3D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Triangle.html" title="Triangle" class="">Triangle</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Triangle2D.html" title="Triangle2D" class="">Triangle2D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Vector2.html" title="Vector2" class="">Vector2</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Vector3.html" title="Vector3" class="">Vector3</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Vector4.html" title="Vector4" class="">Vector4</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Vim.Math3d.Quaternion">
+  
+  
+  <h1 id="Vim_Math3d_Quaternion" data-uid="Vim.Math3d.Quaternion" class="text-break">Struct Quaternion
+  </h1>
+  <div class="markdown level0 summary"><p>A structure encapsulating a four-dimensional vector (x,y,z,w),
+which is used to efficiently rotate an object about the (x,y,z) vector by the angle theta, where w = cos(theta/2).</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Vim.Math3d.Quaternion.html">Quaternion</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Vim.Math3d.html">Vim.Math3d</a></h6>
+  <h6><strong>Assembly</strong>: Vim.Math3D.dll</h6>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataContract]
+public readonly struct Quaternion : IEquatable&lt;Quaternion&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L592">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion__ctor_" data-uid="Vim.Math3d.Quaternion.#ctor*"></a>
+  <h4 id="Vim_Math3d_Quaternion__ctor_System_Single_System_Single_System_Single_System_Single_" data-uid="Vim.Math3d.Quaternion.#ctor(System.Single,System.Single,System.Single,System.Single)">Quaternion(Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion(float x, float y, float z, float w)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L591">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion__ctor_" data-uid="Vim.Math3d.Quaternion.#ctor*"></a>
+  <h4 id="Vim_Math3d_Quaternion__ctor_System_ValueTuple_System_Single_System_Single_System_Single_System_Single__" data-uid="Vim.Math3d.Quaternion.#ctor(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})">Quaternion((Single x, Single y, Single z, Single w))</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion((float x, float y, float z, float w) tuple)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L36">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion__ctor_" data-uid="Vim.Math3d.Quaternion.#ctor*"></a>
+  <h4 id="Vim_Math3d_Quaternion__ctor_Vim_Math3d_Vector3_System_Single_" data-uid="Vim.Math3d.Quaternion.#ctor(Vim.Math3d.Vector3,System.Single)">Quaternion(Vector3, Single)</h4>
+  <div class="markdown level1 summary"><p>Constructs a Quaternion from the given vector and rotation parts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion(Vector3 vectorPart, float scalarPart)</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L608">View Source</a>
+  </span>
+  <h4 id="Vim_Math3d_Quaternion_MaxValue" data-uid="Vim.Math3d.Quaternion.MaxValue">MaxValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion MaxValue</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L607">View Source</a>
+  </span>
+  <h4 id="Vim_Math3d_Quaternion_MinValue" data-uid="Vim.Math3d.Quaternion.MinValue">MinValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion MinValue</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L590">View Source</a>
+  </span>
+  <h4 id="Vim_Math3d_Quaternion_W" data-uid="Vim.Math3d.Quaternion.W">W</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public readonly float W</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L584">View Source</a>
+  </span>
+  <h4 id="Vim_Math3d_Quaternion_X" data-uid="Vim.Math3d.Quaternion.X">X</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public readonly float X</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L586">View Source</a>
+  </span>
+  <h4 id="Vim_Math3d_Quaternion_Y" data-uid="Vim.Math3d.Quaternion.Y">Y</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public readonly float Y</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L588">View Source</a>
+  </span>
+  <h4 id="Vim_Math3d_Quaternion_Z" data-uid="Vim.Math3d.Quaternion.Z">Z</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public readonly float Z</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L606">View Source</a>
+  </span>
+  <h4 id="Vim_Math3d_Quaternion_Zero" data-uid="Vim.Math3d.Quaternion.Zero">Zero</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion Zero</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L24">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Identity_" data-uid="Vim.Math3d.Quaternion.Identity*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Identity" data-uid="Vim.Math3d.Quaternion.Identity">Identity</h4>
+  <div class="markdown level1 summary"><p>Returns a Quaternion representing no rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Quaternion Identity { get; }</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L30">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_IsIdentity_" data-uid="Vim.Math3d.Quaternion.IsIdentity*"></a>
+  <h4 id="Vim_Math3d_Quaternion_IsIdentity" data-uid="Vim.Math3d.Quaternion.IsIdentity">IsIdentity</h4>
+  <div class="markdown level1 summary"><p>Returns whether the Quaternion is the identity Quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsIdentity { get; }</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L437">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Vector4_" data-uid="Vim.Math3d.Quaternion.Vector4*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Vector4" data-uid="Vim.Math3d.Quaternion.Vector4">Vector4</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Vector4 Vector4 { get; }</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L605">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_AlmostEquals_" data-uid="Vim.Math3d.Quaternion.AlmostEquals*"></a>
+  <h4 id="Vim_Math3d_Quaternion_AlmostEquals_Vim_Math3d_Quaternion_System_Single_" data-uid="Vim.Math3d.Quaternion.AlmostEquals(Vim.Math3d.Quaternion,System.Single)">AlmostEquals(Quaternion, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool AlmostEquals(Quaternion x, float tolerance = 1E-07F)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L302">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Concatenate_" data-uid="Vim.Math3d.Quaternion.Concatenate*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Concatenate_Vim_Math3d_Quaternion_Vim_Math3d_Quaternion_" data-uid="Vim.Math3d.Quaternion.Concatenate(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)">Concatenate(Quaternion, Quaternion)</h4>
+  <div class="markdown level1 summary"><p>Concatenates two Quaternions; the result represents the value1 rotation followed by the value2 rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion Concatenate(Quaternion value1, Quaternion value2)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L65">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Conjugate_" data-uid="Vim.Math3d.Quaternion.Conjugate*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Conjugate" data-uid="Vim.Math3d.Quaternion.Conjugate">Conjugate()</h4>
+  <div class="markdown level1 summary"><p>Returns the conjugate of the quaternion</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Quaternion Conjugate()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L593">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Create_" data-uid="Vim.Math3d.Quaternion.Create*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Create_System_Single_System_Single_System_Single_System_Single_" data-uid="Vim.Math3d.Quaternion.Create(System.Single,System.Single,System.Single,System.Single)">Create(Single, Single, Single, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion Create(float x, float y, float z, float w)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L594">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Create_" data-uid="Vim.Math3d.Quaternion.Create*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Create_System_ValueTuple_System_Single_System_Single_System_Single_System_Single__" data-uid="Vim.Math3d.Quaternion.Create(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})">Create((Single x, Single y, Single z, Single w))</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion Create((float x, float y, float z, float w) tuple)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L79">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_CreateFromAxisAngle_" data-uid="Vim.Math3d.Quaternion.CreateFromAxisAngle*"></a>
+  <h4 id="Vim_Math3d_Quaternion_CreateFromAxisAngle_Vim_Math3d_Vector3_System_Single_" data-uid="Vim.Math3d.Quaternion.CreateFromAxisAngle(Vim.Math3d.Vector3,System.Single)">CreateFromAxisAngle(Vector3, Single)</h4>
+  <div class="markdown level1 summary"><p>Creates a Quaternion from a normalized vector axis and an angle to rotate about the vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion CreateFromAxisAngle(Vector3 axis, float angle)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L86">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_CreateFromEulerAngles_" data-uid="Vim.Math3d.Quaternion.CreateFromEulerAngles*"></a>
+  <h4 id="Vim_Math3d_Quaternion_CreateFromEulerAngles_Vim_Math3d_Vector3_" data-uid="Vim.Math3d.Quaternion.CreateFromEulerAngles(Vim.Math3d.Vector3)">CreateFromEulerAngles(Vector3)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Quaternion from the given rotation around X, Y, and Z</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion CreateFromEulerAngles(Vector3 v)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L192">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_CreateFromRotationMatrix_" data-uid="Vim.Math3d.Quaternion.CreateFromRotationMatrix*"></a>
+  <h4 id="Vim_Math3d_Quaternion_CreateFromRotationMatrix_Vim_Math3d_Matrix4x4_" data-uid="Vim.Math3d.Quaternion.CreateFromRotationMatrix(Vim.Math3d.Matrix4x4)">CreateFromRotationMatrix(Matrix4x4)</h4>
+  <div class="markdown level1 summary"><p>Creates a Quaternion from the given rotation matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion CreateFromRotationMatrix(Matrix4x4 matrix)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L166">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_CreateFromYawPitchRoll_" data-uid="Vim.Math3d.Quaternion.CreateFromYawPitchRoll*"></a>
+  <h4 id="Vim_Math3d_Quaternion_CreateFromYawPitchRoll_System_Single_System_Single_System_Single_" data-uid="Vim.Math3d.Quaternion.CreateFromYawPitchRoll(System.Single,System.Single,System.Single)">CreateFromYawPitchRoll(Single, Single, Single)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Quaternion from the given yaw, pitch, and roll, in radians.
+Roll first, about axis the object is facing, then
+pitch upward, then yaw to face into the new heading</p>
+<ol>
+<li>Z(roll), 2. X (pitch), 3. Y (yaw)</li>
+</ol>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion CreateFromYawPitchRoll(float yaw, float pitch, float roll)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L144">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_CreateRotationFromAToB_" data-uid="Vim.Math3d.Quaternion.CreateRotationFromAToB*"></a>
+  <h4 id="Vim_Math3d_Quaternion_CreateRotationFromAToB_Vim_Math3d_Vector3_Vim_Math3d_Vector3_" data-uid="Vim.Math3d.Quaternion.CreateRotationFromAToB(Vim.Math3d.Vector3,Vim.Math3d.Vector3)">CreateRotationFromAToB(Vector3, Vector3)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Quaternion rotating vector 'fromA' to 'toB'</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion CreateRotationFromAToB(Vector3 fromA, Vector3 toB)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L106">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_CreateXRotation_" data-uid="Vim.Math3d.Quaternion.CreateXRotation*"></a>
+  <h4 id="Vim_Math3d_Quaternion_CreateXRotation_System_Single_" data-uid="Vim.Math3d.Quaternion.CreateXRotation(System.Single)">CreateXRotation(Single)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Quaternion from the given rotation around the X axis</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion CreateXRotation(float theta)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L113">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_CreateYRotation_" data-uid="Vim.Math3d.Quaternion.CreateYRotation*"></a>
+  <h4 id="Vim_Math3d_Quaternion_CreateYRotation_System_Single_" data-uid="Vim.Math3d.Quaternion.CreateYRotation(System.Single)">CreateYRotation(Single)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Quaternion from the given rotation around the Y axis</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion CreateYRotation(float theta)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L120">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_CreateZRotation_" data-uid="Vim.Math3d.Quaternion.CreateZRotation*"></a>
+  <h4 id="Vim_Math3d_Quaternion_CreateZRotation_System_Single_" data-uid="Vim.Math3d.Quaternion.CreateZRotation(System.Single)">CreateZRotation(Single)</h4>
+  <div class="markdown level1 summary"><p>Creates a new Quaternion from the given rotation around the Z axis</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion CreateZRotation(float theta)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L598">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Deconstruct_" data-uid="Vim.Math3d.Quaternion.Deconstruct*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Deconstruct_System_Single__System_Single__System_Single__System_Single__" data-uid="Vim.Math3d.Quaternion.Deconstruct(System.Single@,System.Single@,System.Single@,System.Single@)">Deconstruct(out Single, out Single, out Single, out Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly void Deconstruct(out float x, out float y, out float z, out float w)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L241">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Dot_" data-uid="Vim.Math3d.Quaternion.Dot*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Dot_Vim_Math3d_Quaternion_Vim_Math3d_Quaternion_" data-uid="Vim.Math3d.Quaternion.Dot(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)">Dot(Quaternion, Quaternion)</h4>
+  <div class="markdown level1 summary"><p>Calculates the dot product of two Quaternions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float Dot(Quaternion quaternion1, Quaternion quaternion2)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L595">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Equals_" data-uid="Vim.Math3d.Quaternion.Equals*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Equals_System_Object_" data-uid="Vim.Math3d.Quaternion.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override readonly bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L599">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Equals_" data-uid="Vim.Math3d.Quaternion.Equals*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Equals_Vim_Math3d_Quaternion_" data-uid="Vim.Math3d.Quaternion.Equals(Vim.Math3d.Quaternion)">Equals(Quaternion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool Equals(Quaternion x)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L596">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_GetHashCode_" data-uid="Vim.Math3d.Quaternion.GetHashCode*"></a>
+  <h4 id="Vim_Math3d_Quaternion_GetHashCode" data-uid="Vim.Math3d.Quaternion.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override readonly int GetHashCode()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L72">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Inverse_" data-uid="Vim.Math3d.Quaternion.Inverse*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Inverse" data-uid="Vim.Math3d.Quaternion.Inverse">Inverse()</h4>
+  <div class="markdown level1 summary"><p>Returns the inverse of a Quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Quaternion Inverse()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L44">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Length_" data-uid="Vim.Math3d.Quaternion.Length*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Length" data-uid="Vim.Math3d.Quaternion.Length">Length()</h4>
+  <div class="markdown level1 summary"><p>Calculates the length of the Quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly float Length()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L51">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_LengthSquared_" data-uid="Vim.Math3d.Quaternion.LengthSquared*"></a>
+  <h4 id="Vim_Math3d_Quaternion_LengthSquared" data-uid="Vim.Math3d.Quaternion.LengthSquared">LengthSquared()</h4>
+  <div class="markdown level1 summary"><p>Calculates the length squared of the Quaternion. This operation is cheaper than Length().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly float LengthSquared()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L293">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Lerp_" data-uid="Vim.Math3d.Quaternion.Lerp*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Lerp_Vim_Math3d_Quaternion_Vim_Math3d_Quaternion_System_Single_" data-uid="Vim.Math3d.Quaternion.Lerp(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion,System.Single)">Lerp(Quaternion, Quaternion, Single)</h4>
+  <div class="markdown level1 summary"><p>Linearly interpolates between two quaternions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion Lerp(Quaternion q1, Quaternion q2, float t)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L127">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_LookAt_" data-uid="Vim.Math3d.Quaternion.LookAt*"></a>
+  <h4 id="Vim_Math3d_Quaternion_LookAt_Vim_Math3d_Vector3_Vim_Math3d_Vector3_Vim_Math3d_Vector3_Vim_Math3d_Vector3_" data-uid="Vim.Math3d.Quaternion.LookAt(Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3,Vim.Math3d.Vector3)">LookAt(Vector3, Vector3, Vector3, Vector3)</h4>
+  <div class="markdown level1 summary"><p>Creates a new look-at Quaternion</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion LookAt(Vector3 position, Vector3 targetPosition, Vector3 up, Vector3 forward)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L58">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Normalize_" data-uid="Vim.Math3d.Quaternion.Normalize*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Normalize" data-uid="Vim.Math3d.Quaternion.Normalize">Normalize()</h4>
+  <div class="markdown level1 summary"><p>Divides each component of the Quaternion by the length of the Quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Quaternion Normalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L612">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_SetW_" data-uid="Vim.Math3d.Quaternion.SetW*"></a>
+  <h4 id="Vim_Math3d_Quaternion_SetW_System_Single_" data-uid="Vim.Math3d.Quaternion.SetW(System.Single)">SetW(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Quaternion SetW(float x)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L609">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_SetX_" data-uid="Vim.Math3d.Quaternion.SetX*"></a>
+  <h4 id="Vim_Math3d_Quaternion_SetX_System_Single_" data-uid="Vim.Math3d.Quaternion.SetX(System.Single)">SetX(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Quaternion SetX(float x)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L610">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_SetY_" data-uid="Vim.Math3d.Quaternion.SetY*"></a>
+  <h4 id="Vim_Math3d_Quaternion_SetY_System_Single_" data-uid="Vim.Math3d.Quaternion.SetY(System.Single)">SetY(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Quaternion SetY(float x)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L611">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_SetZ_" data-uid="Vim.Math3d.Quaternion.SetZ*"></a>
+  <h4 id="Vim_Math3d_Quaternion_SetZ_System_Single_" data-uid="Vim.Math3d.Quaternion.SetZ(System.Single)">SetZ(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Quaternion SetZ(float x)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L251">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_Slerp_" data-uid="Vim.Math3d.Quaternion.Slerp*"></a>
+  <h4 id="Vim_Math3d_Quaternion_Slerp_Vim_Math3d_Quaternion_Vim_Math3d_Quaternion_System_Single_" data-uid="Vim.Math3d.Quaternion.Slerp(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion,System.Single)">Slerp(Quaternion, Quaternion, Single)</h4>
+  <div class="markdown level1 summary"><p>Interpolates between two quaternions, using spherical linear interpolation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion Slerp(Quaternion q1, Quaternion q2, float t)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L395">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_ToEulerAngles_" data-uid="Vim.Math3d.Quaternion.ToEulerAngles*"></a>
+  <h4 id="Vim_Math3d_Quaternion_ToEulerAngles" data-uid="Vim.Math3d.Quaternion.ToEulerAngles">ToEulerAngles()</h4>
+  <div class="markdown level1 summary"><p>Returns Euler123 angles (rotate around, X, then Y, then Z).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Vector3 ToEulerAngles()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L597">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_ToString_" data-uid="Vim.Math3d.Quaternion.ToString*"></a>
+  <h4 id="Vim_Math3d_Quaternion_ToString" data-uid="Vim.Math3d.Quaternion.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override readonly string ToString()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.ToString()</span></div>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L340">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_op_Addition_" data-uid="Vim.Math3d.Quaternion.op_Addition*"></a>
+  <h4 id="Vim_Math3d_Quaternion_op_Addition_Vim_Math3d_Quaternion_Vim_Math3d_Quaternion_" data-uid="Vim.Math3d.Quaternion.op_Addition(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)">Addition(Quaternion, Quaternion)</h4>
+  <div class="markdown level1 summary"><p>Adds two Quaternions element-by-element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion operator +(Quaternion value1, Quaternion value2)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L387">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_op_Division_" data-uid="Vim.Math3d.Quaternion.op_Division*"></a>
+  <h4 id="Vim_Math3d_Quaternion_op_Division_Vim_Math3d_Quaternion_Vim_Math3d_Quaternion_" data-uid="Vim.Math3d.Quaternion.op_Division(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)">Division(Quaternion, Quaternion)</h4>
+  <div class="markdown level1 summary"><p>Divides a Quaternion by another Quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion operator /(Quaternion value1, Quaternion value2)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L600">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_op_Equality_" data-uid="Vim.Math3d.Quaternion.op_Equality*"></a>
+  <h4 id="Vim_Math3d_Quaternion_op_Equality_Vim_Math3d_Quaternion_Vim_Math3d_Quaternion_" data-uid="Vim.Math3d.Quaternion.op_Equality(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)">Equality(Quaternion, Quaternion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Quaternion x0, Quaternion x1)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L602">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_op_Implicit_" data-uid="Vim.Math3d.Quaternion.op_Implicit*"></a>
+  <h4 id="Vim_Math3d_Quaternion_op_Implicit_System_ValueTuple_System_Single_System_Single_System_Single_System_Single___Vim_Math3d_Quaternion" data-uid="Vim.Math3d.Quaternion.op_Implicit(System.ValueTuple{System.Single,System.Single,System.Single,System.Single})~Vim.Math3d.Quaternion">Implicit((Single x, Single y, Single z, Single w) to Quaternion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Quaternion((float x, float y, float z, float w) tuple)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L603">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_op_Implicit_" data-uid="Vim.Math3d.Quaternion.op_Implicit*"></a>
+  <h4 id="Vim_Math3d_Quaternion_op_Implicit_Vim_Math3d_Quaternion__System_ValueTuple_System_Single_System_Single_System_Single_System_Single_" data-uid="Vim.Math3d.Quaternion.op_Implicit(Vim.Math3d.Quaternion)~System.ValueTuple{System.Single,System.Single,System.Single,System.Single}">Implicit(Quaternion to (Single x, Single y, Single z, Single w))</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator (float x, float y, float z, float w)(Quaternion self)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L601">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_op_Inequality_" data-uid="Vim.Math3d.Quaternion.op_Inequality*"></a>
+  <h4 id="Vim_Math3d_Quaternion_op_Inequality_Vim_Math3d_Quaternion_Vim_Math3d_Quaternion_" data-uid="Vim.Math3d.Quaternion.op_Inequality(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)">Inequality(Quaternion, Quaternion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Quaternion x0, Quaternion x1)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L380">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_op_Multiply_" data-uid="Vim.Math3d.Quaternion.op_Multiply*"></a>
+  <h4 id="Vim_Math3d_Quaternion_op_Multiply_Vim_Math3d_Quaternion_System_Single_" data-uid="Vim.Math3d.Quaternion.op_Multiply(Vim.Math3d.Quaternion,System.Single)">Multiply(Quaternion, Single)</h4>
+  <div class="markdown level1 summary"><p>Multiplies a Quaternion by a scalar value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion operator *(Quaternion value1, float value2)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L354">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_op_Multiply_" data-uid="Vim.Math3d.Quaternion.op_Multiply*"></a>
+  <h4 id="Vim_Math3d_Quaternion_op_Multiply_Vim_Math3d_Quaternion_Vim_Math3d_Quaternion_" data-uid="Vim.Math3d.Quaternion.op_Multiply(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)">Multiply(Quaternion, Quaternion)</h4>
+  <div class="markdown level1 summary"><p>Multiplies two Quaternions together.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion operator *(Quaternion value1, Quaternion value2)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L347">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_op_Subtraction_" data-uid="Vim.Math3d.Quaternion.op_Subtraction*"></a>
+  <h4 id="Vim_Math3d_Quaternion_op_Subtraction_Vim_Math3d_Quaternion_Vim_Math3d_Quaternion_" data-uid="Vim.Math3d.Quaternion.op_Subtraction(Vim.Math3d.Quaternion,Vim.Math3d.Quaternion)">Subtraction(Quaternion, Quaternion)</h4>
+  <div class="markdown level1 summary"><p>Subtracts one Quaternion from another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion operator -(Quaternion value1, Quaternion value2)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Quaternion.cs/#L334">View Source</a>
+  </span>
+  <a id="Vim_Math3d_Quaternion_op_UnaryNegation_" data-uid="Vim.Math3d.Quaternion.op_UnaryNegation*"></a>
+  <h4 id="Vim_Math3d_Quaternion_op_UnaryNegation_Vim_Math3d_Quaternion_" data-uid="Vim.Math3d.Quaternion.op_UnaryNegation(Vim.Math3d.Quaternion)">UnaryNegation(Quaternion)</h4>
+  <div class="markdown level1 summary"><p>Flips the sign of each component of the quaternion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Quaternion operator -(Quaternion value)</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Vim.Math3d.MathOps.html#Vim_Math3d_MathOps_ToMatrix_Vim_Math3d_Quaternion_">MathOps.ToMatrix(Quaternion)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/vimaec/Math3D/new/dev/apiSpec/new?filename=Vim_Math3d_Quaternion.md&amp;value=---%0Auid%3A%20Vim.Math3d.Quaternion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L578" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright <a href='https://vimaec.com'>VIM</a> 2021, Generated by <a href='https://https://dotnet.github.io/docfx/'>DocFX</a>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

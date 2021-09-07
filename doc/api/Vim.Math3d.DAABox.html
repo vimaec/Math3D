@@ -1,0 +1,783 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct DAABox
+   | Vim.Math3D </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct DAABox
+   | Vim.Math3D ">
+    <meta name="generator" content="docfx 2.58.2.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/white-logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/intro.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/Vim.Math3d.html" title="Api Documentation">Api Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Vim.Math3d.html" title="Vim.Math3d" class="">Vim.Math3d</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Vim.Math3d.AABox.html" title="AABox" class="">AABox</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.AABox2D.html" title="AABox2D" class="">AABox2D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.AABox4D.html" title="AABox4D" class="">AABox4D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.AngularMotion.html" title="AngularMotion" class="">AngularMotion</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.AxisAngle.html" title="AxisAngle" class="">AxisAngle</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Byte2.html" title="Byte2" class="">Byte2</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Byte3.html" title="Byte3" class="">Byte3</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Byte4.html" title="Byte4" class="">Byte4</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.ColorHDR.html" title="ColorHDR" class="">ColorHDR</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.ColorRGB.html" title="ColorRGB" class="">ColorRGB</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.ColorRGBA.html" title="ColorRGBA" class="">ColorRGBA</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Complex.html" title="Complex" class="">Complex</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Constants.html" title="Constants" class="">Constants</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.ContainmentType.html" title="ContainmentType" class="">ContainmentType</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.CylindricalCoordinate.html" title="CylindricalCoordinate" class="">CylindricalCoordinate</a>
+                          </li>
+                          <li class="active">
+                            <a href="Vim.Math3d.DAABox.html" title="DAABox" class="active">DAABox</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DAABox2D.html" title="DAABox2D" class="">DAABox2D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DAABox4D.html" title="DAABox4D" class="">DAABox4D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DInterval.html" title="DInterval" class="">DInterval</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DPlane.html" title="DPlane" class="">DPlane</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DQuaternion.html" title="DQuaternion" class="">DQuaternion</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DRay.html" title="DRay" class="">DRay</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DSphere.html" title="DSphere" class="">DSphere</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DVector2.html" title="DVector2" class="">DVector2</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DVector3.html" title="DVector3" class="">DVector3</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.DVector4.html" title="DVector4" class="">DVector4</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Euler.html" title="Euler" class="">Euler</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.GeoCoordinate.html" title="GeoCoordinate" class="">GeoCoordinate</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Hash.html" title="Hash" class="">Hash</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.HorizontalCoordinate.html" title="HorizontalCoordinate" class="">HorizontalCoordinate</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.IMappable-2.html" title="IMappable&lt;TContainer, TPart&gt;" class="">IMappable&lt;TContainer, TPart&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Int2.html" title="Int2" class="">Int2</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Int3.html" title="Int3" class="">Int3</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Int4.html" title="Int4" class="">Int4</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Interval.html" title="Interval" class="">Interval</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.IPoints.html" title="IPoints" class="">IPoints</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.IPoints2D.html" title="IPoints2D" class="">IPoints2D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.ITransformable3D-1.html" title="ITransformable3D&lt;TSelf&gt;" class="">ITransformable3D&lt;TSelf&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Line.html" title="Line" class="">Line</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Line2D.html" title="Line2D" class="">Line2D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.LinearMotion.html" title="LinearMotion" class="">LinearMotion</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.LinqUtil.html" title="LinqUtil" class="">LinqUtil</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.LogPolarCoordinate.html" title="LogPolarCoordinate" class="">LogPolarCoordinate</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.MathOps.html" title="MathOps" class="">MathOps</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Matrix4x4.html" title="Matrix4x4" class="">Matrix4x4</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Motion.html" title="Motion" class="">Motion</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.MovementExtensions.html" title="MovementExtensions" class="">MovementExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Plane.html" title="Plane" class="">Plane</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.PlaneIntersectionType.html" title="PlaneIntersectionType" class="">PlaneIntersectionType</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.PolarCoordinate.html" title="PolarCoordinate" class="">PolarCoordinate</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Quad.html" title="Quad" class="">Quad</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Quad2D.html" title="Quad2D" class="">Quad2D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Quaternion.html" title="Quaternion" class="">Quaternion</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Ray.html" title="Ray" class="">Ray</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Sphere.html" title="Sphere" class="">Sphere</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.SphericalCoordinate.html" title="SphericalCoordinate" class="">SphericalCoordinate</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.StatelessRandom.html" title="StatelessRandom" class="">StatelessRandom</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Stats-1.html" title="Stats&lt;T&gt;" class="">Stats&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Transform.html" title="Transform" class="">Transform</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Transformable3D.html" title="Transformable3D" class="">Transformable3D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Triangle.html" title="Triangle" class="">Triangle</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Triangle2D.html" title="Triangle2D" class="">Triangle2D</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Vector2.html" title="Vector2" class="">Vector2</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Vector3.html" title="Vector3" class="">Vector3</a>
+                          </li>
+                          <li class="">
+                            <a href="Vim.Math3d.Vector4.html" title="Vector4" class="">Vector4</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Vim.Math3d.DAABox">
+  
+  
+  <h1 id="Vim_Math3d_DAABox" data-uid="Vim.Math3d.DAABox" class="text-break">Struct DAABox
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Vim.Math3d.DAABox.html">DAABox</a>&gt;</div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="Vim.Math3d.DAABox.html">DAABox</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Vim.Math3d.html">Vim.Math3d</a></h6>
+  <h6><strong>Assembly</strong>: Vim.Math3D.dll</h6>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataContract]
+public readonly struct DAABox : IEquatable&lt;DAABox&gt;, IComparable&lt;DAABox&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L954">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox__ctor_" data-uid="Vim.Math3d.DAABox.#ctor*"></a>
+  <h4 id="Vim_Math3d_DAABox__ctor_System_ValueTuple_Vim_Math3d_DVector3_Vim_Math3d_DVector3__" data-uid="Vim.Math3d.DAABox.#ctor(System.ValueTuple{Vim.Math3d.DVector3,Vim.Math3d.DVector3})">DAABox((DVector3 min, DVector3 max))</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DAABox((DVector3 min, DVector3 max) tuple)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L955">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox__ctor_" data-uid="Vim.Math3d.DAABox.#ctor*"></a>
+  <h4 id="Vim_Math3d_DAABox__ctor_Vim_Math3d_DVector3_Vim_Math3d_DVector3_" data-uid="Vim.Math3d.DAABox.#ctor(Vim.Math3d.DVector3,Vim.Math3d.DVector3)">DAABox(DVector3, DVector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DAABox(DVector3 min, DVector3 max)</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L984">View Source</a>
+  </span>
+  <h4 id="Vim_Math3d_DAABox_Empty" data-uid="Vim.Math3d.DAABox.Empty">Empty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DAABox Empty</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L953">View Source</a>
+  </span>
+  <h4 id="Vim_Math3d_DAABox_Max" data-uid="Vim.Math3d.DAABox.Max">Max</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public readonly DVector3 Max</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L971">View Source</a>
+  </span>
+  <h4 id="Vim_Math3d_DAABox_MaxValue" data-uid="Vim.Math3d.DAABox.MaxValue">MaxValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DAABox MaxValue</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L951">View Source</a>
+  </span>
+  <h4 id="Vim_Math3d_DAABox_Min" data-uid="Vim.Math3d.DAABox.Min">Min</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[DataMember]
+public readonly DVector3 Min</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L970">View Source</a>
+  </span>
+  <h4 id="Vim_Math3d_DAABox_MinValue" data-uid="Vim.Math3d.DAABox.MinValue">MinValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DAABox MinValue</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L969">View Source</a>
+  </span>
+  <h4 id="Vim_Math3d_DAABox_Zero" data-uid="Vim.Math3d.DAABox.Zero">Zero</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DAABox Zero</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/StructsPartial.cs/#L211">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_AABox_" data-uid="Vim.Math3d.DAABox.AABox*"></a>
+  <h4 id="Vim_Math3d_DAABox_AABox" data-uid="Vim.Math3d.DAABox.AABox">AABox</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly AABox AABox { get; }</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L975">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_Center_" data-uid="Vim.Math3d.DAABox.Center*"></a>
+  <h4 id="Vim_Math3d_DAABox_Center" data-uid="Vim.Math3d.DAABox.Center">Center</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly DVector3 Center { get; }</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L974">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_Extent_" data-uid="Vim.Math3d.DAABox.Extent*"></a>
+  <h4 id="Vim_Math3d_DAABox_Extent" data-uid="Vim.Math3d.DAABox.Extent">Extent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly DVector3 Extent { get; }</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L968">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_AlmostEquals_" data-uid="Vim.Math3d.DAABox.AlmostEquals*"></a>
+  <h4 id="Vim_Math3d_DAABox_AlmostEquals_Vim_Math3d_DAABox_System_Single_" data-uid="Vim.Math3d.DAABox.AlmostEquals(Vim.Math3d.DAABox,System.Single)">AlmostEquals(DAABox, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool AlmostEquals(DAABox x, float tolerance = 1E-07F)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L987">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_CompareTo_" data-uid="Vim.Math3d.DAABox.CompareTo*"></a>
+  <h4 id="Vim_Math3d_DAABox_CompareTo_Vim_Math3d_DAABox_" data-uid="Vim.Math3d.DAABox.CompareTo(Vim.Math3d.DAABox)">CompareTo(DAABox)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int CompareTo(DAABox x)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L957">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_Create_" data-uid="Vim.Math3d.DAABox.Create*"></a>
+  <h4 id="Vim_Math3d_DAABox_Create_System_ValueTuple_Vim_Math3d_DVector3_Vim_Math3d_DVector3__" data-uid="Vim.Math3d.DAABox.Create(System.ValueTuple{Vim.Math3d.DVector3,Vim.Math3d.DVector3})">Create((DVector3 min, DVector3 max))</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DAABox Create((DVector3 min, DVector3 max) tuple)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L956">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_Create_" data-uid="Vim.Math3d.DAABox.Create*"></a>
+  <h4 id="Vim_Math3d_DAABox_Create_Vim_Math3d_DVector3_Vim_Math3d_DVector3_" data-uid="Vim.Math3d.DAABox.Create(Vim.Math3d.DVector3,Vim.Math3d.DVector3)">Create(DVector3, DVector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DAABox Create(DVector3 min, DVector3 max)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L961">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_Deconstruct_" data-uid="Vim.Math3d.DAABox.Deconstruct*"></a>
+  <h4 id="Vim_Math3d_DAABox_Deconstruct_Vim_Math3d_DVector3__Vim_Math3d_DVector3__" data-uid="Vim.Math3d.DAABox.Deconstruct(Vim.Math3d.DVector3@,Vim.Math3d.DVector3@)">Deconstruct(out DVector3, out DVector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly void Deconstruct(out DVector3 min, out DVector3 max)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L958">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_Equals_" data-uid="Vim.Math3d.DAABox.Equals*"></a>
+  <h4 id="Vim_Math3d_DAABox_Equals_System_Object_" data-uid="Vim.Math3d.DAABox.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override readonly bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L962">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_Equals_" data-uid="Vim.Math3d.DAABox.Equals*"></a>
+  <h4 id="Vim_Math3d_DAABox_Equals_Vim_Math3d_DAABox_" data-uid="Vim.Math3d.DAABox.Equals(Vim.Math3d.DAABox)">Equals(DAABox)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool Equals(DAABox x)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L959">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_GetHashCode_" data-uid="Vim.Math3d.DAABox.GetHashCode*"></a>
+  <h4 id="Vim_Math3d_DAABox_GetHashCode" data-uid="Vim.Math3d.DAABox.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override readonly int GetHashCode()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L979">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_Intersection_" data-uid="Vim.Math3d.DAABox.Intersection*"></a>
+  <h4 id="Vim_Math3d_DAABox_Intersection_Vim_Math3d_DAABox_" data-uid="Vim.Math3d.DAABox.Intersection(Vim.Math3d.DAABox)">Intersection(DAABox)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly DAABox Intersection(DAABox other)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L986">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_IsInfinity_" data-uid="Vim.Math3d.DAABox.IsInfinity*"></a>
+  <h4 id="Vim_Math3d_DAABox_IsInfinity" data-uid="Vim.Math3d.DAABox.IsInfinity">IsInfinity()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsInfinity()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L985">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_IsNaN_" data-uid="Vim.Math3d.DAABox.IsNaN*"></a>
+  <h4 id="Vim_Math3d_DAABox_IsNaN" data-uid="Vim.Math3d.DAABox.IsNaN">IsNaN()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsNaN()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L977">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_Magnitude_" data-uid="Vim.Math3d.DAABox.Magnitude*"></a>
+  <h4 id="Vim_Math3d_DAABox_Magnitude" data-uid="Vim.Math3d.DAABox.Magnitude">Magnitude()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly double Magnitude()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L976">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_MagnitudeSquared_" data-uid="Vim.Math3d.DAABox.MagnitudeSquared*"></a>
+  <h4 id="Vim_Math3d_DAABox_MagnitudeSquared" data-uid="Vim.Math3d.DAABox.MagnitudeSquared">MagnitudeSquared()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly double MagnitudeSquared()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L978">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_Merge_" data-uid="Vim.Math3d.DAABox.Merge*"></a>
+  <h4 id="Vim_Math3d_DAABox_Merge_Vim_Math3d_DAABox_" data-uid="Vim.Math3d.DAABox.Merge(Vim.Math3d.DAABox)">Merge(DAABox)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly DAABox Merge(DAABox other)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L982">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_Merge_" data-uid="Vim.Math3d.DAABox.Merge*"></a>
+  <h4 id="Vim_Math3d_DAABox_Merge_Vim_Math3d_DVector3_" data-uid="Vim.Math3d.DAABox.Merge(Vim.Math3d.DVector3)">Merge(DVector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly DAABox Merge(DVector3 other)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L973">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_SetMax_" data-uid="Vim.Math3d.DAABox.SetMax*"></a>
+  <h4 id="Vim_Math3d_DAABox_SetMax_Vim_Math3d_DVector3_" data-uid="Vim.Math3d.DAABox.SetMax(Vim.Math3d.DVector3)">SetMax(DVector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly DAABox SetMax(DVector3 x)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L972">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_SetMin_" data-uid="Vim.Math3d.DAABox.SetMin*"></a>
+  <h4 id="Vim_Math3d_DAABox_SetMin_Vim_Math3d_DVector3_" data-uid="Vim.Math3d.DAABox.SetMin(Vim.Math3d.DVector3)">SetMin(DVector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly DAABox SetMin(DVector3 x)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L960">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_ToString_" data-uid="Vim.Math3d.DAABox.ToString*"></a>
+  <h4 id="Vim_Math3d_DAABox_ToString" data-uid="Vim.Math3d.DAABox.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override readonly string ToString()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.ToString()</span></div>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L980">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_op_Addition_" data-uid="Vim.Math3d.DAABox.op_Addition*"></a>
+  <h4 id="Vim_Math3d_DAABox_op_Addition_Vim_Math3d_DAABox_Vim_Math3d_DAABox_" data-uid="Vim.Math3d.DAABox.op_Addition(Vim.Math3d.DAABox,Vim.Math3d.DAABox)">Addition(DAABox, DAABox)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DAABox operator +(DAABox value1, DAABox value2)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L983">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_op_Addition_" data-uid="Vim.Math3d.DAABox.op_Addition*"></a>
+  <h4 id="Vim_Math3d_DAABox_op_Addition_Vim_Math3d_DAABox_Vim_Math3d_DVector3_" data-uid="Vim.Math3d.DAABox.op_Addition(Vim.Math3d.DAABox,Vim.Math3d.DVector3)">Addition(DAABox, DVector3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DAABox operator +(DAABox value1, DVector3 value2)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L963">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_op_Equality_" data-uid="Vim.Math3d.DAABox.op_Equality*"></a>
+  <h4 id="Vim_Math3d_DAABox_op_Equality_Vim_Math3d_DAABox_Vim_Math3d_DAABox_" data-uid="Vim.Math3d.DAABox.op_Equality(Vim.Math3d.DAABox,Vim.Math3d.DAABox)">Equality(DAABox, DAABox)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(DAABox x0, DAABox x1)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L990">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_op_GreaterThan_" data-uid="Vim.Math3d.DAABox.op_GreaterThan*"></a>
+  <h4 id="Vim_Math3d_DAABox_op_GreaterThan_Vim_Math3d_DAABox_Vim_Math3d_DAABox_" data-uid="Vim.Math3d.DAABox.op_GreaterThan(Vim.Math3d.DAABox,Vim.Math3d.DAABox)">GreaterThan(DAABox, DAABox)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator&gt;(DAABox x0, DAABox x1)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L991">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_op_GreaterThanOrEqual_" data-uid="Vim.Math3d.DAABox.op_GreaterThanOrEqual*"></a>
+  <h4 id="Vim_Math3d_DAABox_op_GreaterThanOrEqual_Vim_Math3d_DAABox_Vim_Math3d_DAABox_" data-uid="Vim.Math3d.DAABox.op_GreaterThanOrEqual(Vim.Math3d.DAABox,Vim.Math3d.DAABox)">GreaterThanOrEqual(DAABox, DAABox)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &gt;=(DAABox x0, DAABox x1)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L965">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_op_Implicit_" data-uid="Vim.Math3d.DAABox.op_Implicit*"></a>
+  <h4 id="Vim_Math3d_DAABox_op_Implicit_System_ValueTuple_Vim_Math3d_DVector3_Vim_Math3d_DVector3___Vim_Math3d_DAABox" data-uid="Vim.Math3d.DAABox.op_Implicit(System.ValueTuple{Vim.Math3d.DVector3,Vim.Math3d.DVector3})~Vim.Math3d.DAABox">Implicit((DVector3 min, DVector3 max) to DAABox)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator DAABox((DVector3 min, DVector3 max) tuple)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L966">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_op_Implicit_" data-uid="Vim.Math3d.DAABox.op_Implicit*"></a>
+  <h4 id="Vim_Math3d_DAABox_op_Implicit_Vim_Math3d_DAABox__System_ValueTuple_Vim_Math3d_DVector3_Vim_Math3d_DVector3_" data-uid="Vim.Math3d.DAABox.op_Implicit(Vim.Math3d.DAABox)~System.ValueTuple{Vim.Math3d.DVector3,Vim.Math3d.DVector3}">Implicit(DAABox to (DVector3 min, DVector3 max))</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator (DVector3 min, DVector3 max)(DAABox self)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L964">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_op_Inequality_" data-uid="Vim.Math3d.DAABox.op_Inequality*"></a>
+  <h4 id="Vim_Math3d_DAABox_op_Inequality_Vim_Math3d_DAABox_Vim_Math3d_DAABox_" data-uid="Vim.Math3d.DAABox.op_Inequality(Vim.Math3d.DAABox,Vim.Math3d.DAABox)">Inequality(DAABox, DAABox)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(DAABox x0, DAABox x1)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L988">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_op_LessThan_" data-uid="Vim.Math3d.DAABox.op_LessThan*"></a>
+  <h4 id="Vim_Math3d_DAABox_op_LessThan_Vim_Math3d_DAABox_Vim_Math3d_DAABox_" data-uid="Vim.Math3d.DAABox.op_LessThan(Vim.Math3d.DAABox,Vim.Math3d.DAABox)">LessThan(DAABox, DAABox)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;(DAABox x0, DAABox x1)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L989">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_op_LessThanOrEqual_" data-uid="Vim.Math3d.DAABox.op_LessThanOrEqual*"></a>
+  <h4 id="Vim_Math3d_DAABox_op_LessThanOrEqual_Vim_Math3d_DAABox_Vim_Math3d_DAABox_" data-uid="Vim.Math3d.DAABox.op_LessThanOrEqual(Vim.Math3d.DAABox,Vim.Math3d.DAABox)">LessThanOrEqual(DAABox, DAABox)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator &lt;=(DAABox x0, DAABox x1)</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vimaec/Math3D/blob/dev/src/Structs.cs/#L981">View Source</a>
+  </span>
+  <a id="Vim_Math3d_DAABox_op_Subtraction_" data-uid="Vim.Math3d.DAABox.op_Subtraction*"></a>
+  <h4 id="Vim_Math3d_DAABox_op_Subtraction_Vim_Math3d_DAABox_Vim_Math3d_DAABox_" data-uid="Vim.Math3d.DAABox.op_Subtraction(Vim.Math3d.DAABox,Vim.Math3d.DAABox)">Subtraction(DAABox, DAABox)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DAABox operator -(DAABox value1, DAABox value2)</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/vimaec/Math3D/new/dev/apiSpec/new?filename=Vim_Math3d_DAABox.md&amp;value=---%0Auid%3A%20Vim.Math3d.DAABox%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/vimaec/Math3D/blob/dev/src/StructsPartial.cs/#L209" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright <a href='https://vimaec.com'>VIM</a> 2021, Generated by <a href='https://https://dotnet.github.io/docfx/'>DocFX</a>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

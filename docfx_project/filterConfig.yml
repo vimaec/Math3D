@@ -1,0 +1,4 @@
+apiRules:
+- exclude:
+    uid: Vim.Experimental
+    type: Namespace
