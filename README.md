@@ -2,7 +2,9 @@
 
 [<img src="https://img.shields.io/nuget/v/Vim.Math3D.svg">](https://www.nuget.org/packages/Vim.Math3D/)
 
-**Vim.Math3D** is a portable, safe, and efficient 3D math library from [VIM AEC](https://vimaec.com) written in C# 
+[Read the API Documentation](https://vimaec.github.io/Math3D) | [Browse the Source](https://github.com/vimaec/Math3D/tree/dev/src) | [Get the Nuget](https://www.nuget.org/packages/Vim.Math3D/)
+
+**Vim.Math3D** is a portable, safe, and efficient 3D math library from [VIM](https://vimaec.com) written in C# 
 targeting .NET Standard 2.0 without any dependencies. 
 
 It is intended primarily as a feature rich drop-in replacement for System.Numerics that assures consistent serialization
@@ -52,69 +54,70 @@ an open-source cross platform port of the XNA game development framework.
 
 ## What Structs are Provided
 
-The following is a list of data structures provided by Vim.Math
+The following is a list of data structures provided by Vim.Math. 
 
-* Vectors
-	* Vector2
-	* Vector3
-	* Vector4	
-	* DVector2
-	* DVector3
-	* DVector4
-	* Int2
-	* Int3
-	* Int4
-	* Complex 
-* Pseudo-Vectors - the following classes lack some of the operations of Vectors 
-	* Byte2
-	* Byte3
-	* Byte4
-	* ColorRGB - Three byte representation of colors
-	* ColorRGBA
-	* ColorHDR - High Defintion Range, 4 floating points 
-* Rotations and Transformations
-	* Quaternion
-	* DQuaternion
-	* AxisAngle 
-	* Matrix4x4
-	* Transform - Position and Orientation
-	* Euler (Tait-Bryan)
-* Geometric structures and shapes
-	* Plane
-	* DPlane
-	* Triangle
-	* Triangle2
-	* Quad
-* Lines
-	* Line
-	* Ray
-	* DRay
-* Interval Structures and Bounding			
-	* Interval
-	* AABox
-	* AABox2D
-	* AABox4D
-	* DInterval
-	* DAABox
-	* DAABox2D
-	* DAABox4D
-	* Sphere
-	* DSphere
-* Alternative Coordinate Representations
-	* SphericalCoordinate - Radius, Azimuth (bearing), and Inclination (elevation angle)
-	* PolarCoordinate - Radius and Azimuth (bearing)
-	* LogPolarCoordinate - Rho (log of radial distance) and Azimuth
-	* CylindricalCoordinate - Radius, Azimuth (bearing) and Height
-	* HorizontalCoordinate - Azimuth (bearing) and Inclination
-	* GeoCoordinate - Latitude and Longitude
-* Motion 
-	* LinearMotion - Velocity, Acceleration, and Scalar Friction 
-	* AngularMotion - Velocity, Acceleration, and Scalar Friction 
-	* Motion - LinearMotion and AngularMotion
+* **Vectors**
+	* `Vector2` - Single precision X, Y
+	* `Vector3` - Single precision X, Y, Z
+	* `Vector4` - Single precision X, Y, Z, W
+	* `DVector2` - Double precision X, Y, Z
+	* `DVector3` - Single precision X, Y, Z
+	* `DVector4` - Single precision X, Y, Z, W
+	* `Int2` - Integer X, Y
+	* `Int3` - Integer X, Y, Z
+	* `Int4` - Integer X, Y
+	* `Complex` - Double precision Imaginary, Real 
+* **Pseudo-Vectors** - the following classes lack some of the operations of Vectors 
+	* `Byte2` - Byte X, Y
+	* `Byte3` - Byte X, Y, Z
+	* `Byte4` - Byte X, Y, Z, W
+	* `ColorRGB` - Byte representation of color R, G, B
+	* `ColorRGBA` - Byte representation of color with Alpha R, G, B, A
+ 	* `ColorHDR` - High Defintion Range color representation, 4 floats, R, G, B, A 
+* **Rotations and Transformations**
+	* `Quaternion` - Single precision quaternion rotation X, Y, Z, W
+	* `DQuaternion` - Single precision quaternion rotation X, Y, Z, W
+	* `AxisAngle` - Single precison rotation as Axis (Vector3) and Angle in radians 
+	* `Matrix4x4` - 4 x 4 Single Precision matrix in Row-Column - corder
+	* `Transform` - Single precision Position (Vector3) and Orientation (Quaternion)
+	* `Euler` - Single precision Euler engle rotation as Yaw (Z rotation), Pitch (X rotation), Roll (y rotation)
+* **Geometric structures and shapes**
+	* `Plane` - Single precision plane stored Normal (Vector3) and D (distance along normal from Origin)
+	* `DPlane` - Double precision plane stored Normal (Vector3) and D (distance along normal from Origin)
+	* `Triangle` - Single precision representation of triangle in 3 dimension as 3 Vector3 Points, A, B, and C
+	* `Triangle2` - Single precision representation of triangle in 3 dimension as 3 Vector3 Points, A, B, and C
+	* `Quad` - Single precision representation of quadrilateral in 3 dimension as 4 Vector3 Points, A, B, C, and D
+	* `DQuad` - Double precision representation of quadrilateral in 3 dimension as 4 Vector3 Points, A, B, C, and D
+* **Lines**
+	* `Line` - Single precision line segment A and B
+	* `Ray` - Single precision Point and Direction in 3 dimensional space
+	* `DRay` - Double precision Point and Direction in 3 dimensional space
+* **Interval and Bounding Structure**		
+	* `Interval` - Single precision float interval (float Min, float Max)
+	* `AABox` - Single precision 3 dimensional axis-aligned bouncing box (Vector3 Min, Vector3 Max)
+	* `AABox2D` - Single precision 2 dimensional axis-aligned bouncing box (Vector2 Min, Vector2 Max)
+	* `AABox4D` - Single precision 4 dimensional axis-aligned bouncing box (Vector4 Min, Vector4 Max)
+	* `DInterval` - Double precision float interval (double Min, double Max)
+	* `DAABox` - Double precision 3 dimensional axis-aligned bouncing box (DVector3 Min, DVector3 Max)
+	* `DAABox2D` - Double precision 2 dimensional axis-aligned bouncing box (DVector2 Min, DVector2 Max)
+	* `DAABox4D` - Double precision 4 dimensional axis-aligned bouncing box (DVector4 Min, DVector4 Max)
+	* `Sphere` - Bounding sphere (Vector3 Center, float Radius)
+	* `DSphere` - Double precision bounding spehere (DVector3 Center, double Radius)
+* **Alternative Coordinate Representations**
+	* `SphericalCoordinate` - Radius, Azimuth (bearing), and Inclination (elevation angle)
+	* `PolarCoordinate` - Radius and Azimuth (bearing)
+	* `LogPolarCoordinate` - Rho (log of radial distance) and Azimuth
+	* `CylindricalCoordinate` - Radius, Azimuth (bearing) and Height
+	* `HorizontalCoordinate` - Azimuth (bearing) and Inclination
+	* `GeoCoordinate` - Latitude and Longitude
+* **Motion** 
+	* `LinearMotion` - Velocity, Acceleration, and Scalar Friction 
+	* `AngularMotion` - Velocity, Acceleration, and Scalar Friction 
+	* `Motion` - LinearMotion and AngularMotion
 	
 ## Common Functions
 
-In addition to many specialized functions for the various data type 
+In addition to many specialized functions for the various data types 
 all structs provide the following functionality:
 
 * Constructor from value tuple
@@ -133,7 +136,8 @@ all structs provide the following functionality:
 Every vector struct also provides the additional functionality:
 
 * Unary negation operator 
-* operators: `<`, `<=`, `>=`, `>`, `+`, `-`, `*`, `/`
+* Arithmetic operators: `+`, `-`, `*`, `/`
+* Comparison operators based on Magnitude: `<`, `<=`, `>=`, `>`, 
 * `Dot(T x)` 
 * `AlmostZero()`
 * `AnyComponentNegative()`
