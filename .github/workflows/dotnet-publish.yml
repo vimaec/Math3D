@@ -2,9 +2,9 @@ name: Publish
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ dev, test-vadim ]
   pull_request:
-    branches: [ dev ]
+    branches: [ dev, test-vadim ]
 
 jobs:
   build:
