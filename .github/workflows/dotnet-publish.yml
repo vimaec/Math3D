@@ -20,6 +20,7 @@ jobs:
         dotnet-version: 5.0.x
 
   test:
+    runs-on: ubuntu-latest
     needs: setup
     steps:
     - name: Restore dependencies
@@ -28,6 +29,7 @@ jobs:
       run: dotnet test
 
   build:
+    runs-on: ubuntu-latest
     needs: test
     steps:
     - name: Build
@@ -36,6 +38,7 @@ jobs:
       run: dotnet pack --no-build --include-symbols -p:SymbolPackageFormat=snupkg -c Release src/Vim.Math3D.csproj -o .
 
   publish:
+    runs-on: ubuntu-latest
     needs: build
     steps:
     - name: Push NuGet package
