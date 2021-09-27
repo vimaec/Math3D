@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver=`cat $1 | grep -Eo '<Version>[0-9].[0-9].[0-9]<\/Version>' | grep -Eo '[0-9].[0-9].[0-9]'`
+ver=`cat $1 | grep -Eo '<Version>[0-9]+.[0-9]+.[0-9]+<\/Version>' | grep -Eo '[0-9]+.[0-9]+.[0-9]+'`
 
 echo "Project version is ${ver}. Checking git tags..."
 
