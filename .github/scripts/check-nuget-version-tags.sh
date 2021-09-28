@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver=`./csproj-version.sh`
+ver=`./csproj-version.sh $1`
 
 echo "Project version is ${ver}. Checking git tags..."
 
