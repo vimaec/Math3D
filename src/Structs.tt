@@ -78,10 +78,6 @@ namespace Vim.Math3d
     CreateVectorStruct("GeoCoordinate", new[] { "Latitude", "Longitude" }, "double");
 
     CreateStruct("AxisAngle", new[] { "Axis", "Angle" }, new[] { "DVector3", "double" });
-    CreateVectorStruct("Euler", new[] { "Yaw", "Pitch", "Roll" }, "double");
-
-    CreateStruct("LinearMotion", new[] { "Velocity", "Acceleration", "Friction" }, new[] { "Vector3", "Vector3", "float" });
-    CreateStruct("AngularMotion", new[] { "Velocity", "Acceleration", "Friction" }, new[] { "Quaternion", "Quaternion", "float" });
-    CreateStruct("Motion", new[] { "Linear", "Angular" }, new[] { "LinearMotion", "AngularMotion"} );
+    CreateVectorStruct("Euler", new[] { "Yaw", "Pitch", "Roll" }, "float");
 #>
 }

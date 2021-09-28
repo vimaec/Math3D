@@ -95,12 +95,21 @@ namespace Vim.Math3d
         /// Create a bounding box from the given list of points.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static AABox2D CreateFromPoints(IEnumerable<Vector2> points)
-            => points?.Aggregate(Empty, (box, point) => box + point) ?? Empty;
+        public static AABox2D Create(IEnumerable<Vector2> points)
+        {
+            var minVec = Vector2.MaxValue;
+            var maxVec = Vector2.MinValue;
+            foreach (var pt in points)
+            {
+                minVec = minVec.Min(pt);
+                maxVec = maxVec.Max(pt);
+            }
+            return new AABox2D(minVec, maxVec);
+        }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static AABox2D CreateFromPoints(params Vector2[] points)
-            => CreateFromPoints(points.AsEnumerable());
+        public static AABox2D Create(params Vector2[] points)
+            => Create(points.AsEnumerable());
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Vector2[] GetCorners(Vector2[] corners = null)

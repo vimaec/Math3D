@@ -2103,60 +2103,60 @@ namespace Vim.Math3d
         , IComparable< Euler >
     {
         [DataMember]
-        public readonly double Yaw;
+        public readonly float Yaw;
         [DataMember]
-        public readonly double Pitch;
+        public readonly float Pitch;
         [DataMember]
-        public readonly double Roll;
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Euler((double yaw, double pitch, double roll) tuple) : this(tuple.yaw, tuple.pitch, tuple.roll) { }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Euler(double yaw, double pitch, double roll) { Yaw = yaw; Pitch = pitch; Roll = roll; }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler Create(double yaw, double pitch, double roll) => new Euler(yaw, pitch, roll);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler Create((double yaw, double pitch, double roll) tuple) => new Euler(tuple);
+        public readonly float Roll;
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Euler((float yaw, float pitch, float roll) tuple) : this(tuple.yaw, tuple.pitch, tuple.roll) { }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Euler(float yaw, float pitch, float roll) { Yaw = yaw; Pitch = pitch; Roll = roll; }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler Create(float yaw, float pitch, float roll) => new Euler(yaw, pitch, roll);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler Create((float yaw, float pitch, float roll) tuple) => new Euler(tuple);
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Euler x && Equals(x);
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(Yaw.GetHashCode(), Pitch.GetHashCode(), Roll.GetHashCode());
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"Euler(Yaw = {Yaw}, Pitch = {Pitch}, Roll = {Roll})";
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public void Deconstruct(out double yaw, out double pitch, out double roll) {yaw = Yaw; pitch = Pitch; roll = Roll; }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public void Deconstruct(out float yaw, out float pitch, out float roll) {yaw = Yaw; pitch = Pitch; roll = Roll; }
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(Euler x) => Yaw == x.Yaw && Pitch == x.Pitch && Roll == x.Roll;
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(Euler x0, Euler x1) => x0.Equals(x1);
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(Euler x0, Euler x1) => !x0.Equals(x1);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static implicit operator Euler((double yaw, double pitch, double roll) tuple) => new Euler(tuple);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static implicit operator (double yaw, double pitch, double roll)(Euler self) => (self.Yaw, self.Pitch, self.Roll);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static implicit operator Euler((float yaw, float pitch, float roll) tuple) => new Euler(tuple);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static implicit operator (float yaw, float pitch, float roll)(Euler self) => (self.Yaw, self.Pitch, self.Roll);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public bool AlmostEquals(Euler x, float tolerance = Constants.Tolerance) => Yaw.AlmostEquals(x.Yaw, tolerance) && Pitch.AlmostEquals(x.Pitch, tolerance) && Roll.AlmostEquals(x.Roll, tolerance);
         public static Euler Zero = new Euler(default, default, default);
-        public static Euler MinValue = new Euler(double.MinValue, double.MinValue, double.MinValue);
-        public static Euler MaxValue = new Euler(double.MaxValue, double.MaxValue, double.MaxValue);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Euler SetYaw(double x) => new Euler(x, Pitch, Roll);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Euler SetPitch(double x) => new Euler(Yaw, x, Roll);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Euler SetRoll(double x) => new Euler(Yaw, Pitch, x);
+        public static Euler MinValue = new Euler(float.MinValue, float.MinValue, float.MinValue);
+        public static Euler MaxValue = new Euler(float.MaxValue, float.MaxValue, float.MaxValue);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Euler SetYaw(float x) => new Euler(x, Pitch, Roll);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Euler SetPitch(float x) => new Euler(Yaw, x, Roll);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Euler SetRoll(float x) => new Euler(Yaw, Pitch, x);
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator +(Euler value1, Euler value2) => new Euler(value1.Yaw + value2.Yaw,value1.Pitch + value2.Pitch,value1.Roll + value2.Roll);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator +(Euler value1, double value2) => new Euler(value1.Yaw + value2,value1.Pitch + value2,value1.Roll + value2);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator +(double value1, Euler value2) => new Euler(value1 + value2.Yaw,value1 + value2.Pitch,value1 + value2.Roll);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator +(Euler value1, float value2) => new Euler(value1.Yaw + value2,value1.Pitch + value2,value1.Roll + value2);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator +(float value1, Euler value2) => new Euler(value1 + value2.Yaw,value1 + value2.Pitch,value1 + value2.Roll);
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator -(Euler value1, Euler value2) => new Euler(value1.Yaw - value2.Yaw,value1.Pitch - value2.Pitch,value1.Roll - value2.Roll);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator -(Euler value1, double value2) => new Euler(value1.Yaw - value2,value1.Pitch - value2,value1.Roll - value2);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator -(double value1, Euler value2) => new Euler(value1 - value2.Yaw,value1 - value2.Pitch,value1 - value2.Roll);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator -(Euler value1, float value2) => new Euler(value1.Yaw - value2,value1.Pitch - value2,value1.Roll - value2);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator -(float value1, Euler value2) => new Euler(value1 - value2.Yaw,value1 - value2.Pitch,value1 - value2.Roll);
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator *(Euler value1, Euler value2) => new Euler(value1.Yaw * value2.Yaw,value1.Pitch * value2.Pitch,value1.Roll * value2.Roll);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator *(Euler value1, double value2) => new Euler(value1.Yaw * value2,value1.Pitch * value2,value1.Roll * value2);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator *(double value1, Euler value2) => new Euler(value1 * value2.Yaw,value1 * value2.Pitch,value1 * value2.Roll);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator *(Euler value1, float value2) => new Euler(value1.Yaw * value2,value1.Pitch * value2,value1.Roll * value2);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator *(float value1, Euler value2) => new Euler(value1 * value2.Yaw,value1 * value2.Pitch,value1 * value2.Roll);
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator /(Euler value1, Euler value2) => new Euler(value1.Yaw / value2.Yaw,value1.Pitch / value2.Pitch,value1.Roll / value2.Roll);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator /(Euler value1, double value2) => new Euler(value1.Yaw / value2,value1.Pitch / value2,value1.Roll / value2);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator /(double value1, Euler value2) => new Euler(value1 / value2.Yaw,value1 / value2.Pitch,value1 / value2.Roll);
-        public static Euler One = new Euler(1.0);
-        public static Euler UnitYaw = Zero.SetYaw(1.0);
-        public static Euler UnitPitch = Zero.SetPitch(1.0);
-        public static Euler UnitRoll = Zero.SetRoll(1.0);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Euler(double value) : this(value, value, value) { }
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator /(Euler value1, float value2) => new Euler(value1.Yaw / value2,value1.Pitch / value2,value1.Roll / value2);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator /(float value1, Euler value2) => new Euler(value1 / value2.Yaw,value1 / value2.Pitch,value1 / value2.Roll);
+        public static Euler One = new Euler(1f);
+        public static Euler UnitYaw = Zero.SetYaw(1f);
+        public static Euler UnitPitch = Zero.SetPitch(1f);
+        public static Euler UnitRoll = Zero.SetRoll(1f);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Euler(float value) : this(value, value, value) { }
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Euler operator -(Euler value) => Zero - value;
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static double Dot(Euler value1, Euler value2) => value1.Yaw * value2.Yaw + value1.Pitch * value2.Pitch + value1.Roll * value2.Roll;
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public double Dot(Euler value) => Euler.Dot(this, value);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static float Dot(Euler value1, Euler value2) => value1.Yaw * value2.Yaw + value1.Pitch * value2.Pitch + value1.Roll * value2.Roll;
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public float Dot(Euler value) => Euler.Dot(this, value);
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public bool AlmostZero(float tolerance = Constants.Tolerance) => Yaw.Abs() < tolerance && Pitch.Abs() < tolerance && Roll.Abs() < tolerance;
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public bool AnyComponentNegative() => MinComponent() < 0;
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public double MinComponent() => (Yaw).Min(Pitch).Min(Roll);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public double MaxComponent() => (Yaw).Max(Pitch).Max(Roll);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public double SumComponents() => (Yaw) + (Pitch) + (Roll);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public double SumSqrComponents() => (Yaw).Sqr() + (Pitch).Sqr() + (Roll).Sqr();
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public double ProductComponents() => (Yaw) * (Pitch) * (Roll);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public double GetComponent(int n) => n == 0 ? Yaw : n == 1 ? Pitch:Roll;
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public float MinComponent() => (Yaw).Min(Pitch).Min(Roll);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public float MaxComponent() => (Yaw).Max(Pitch).Max(Roll);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public float SumComponents() => (Yaw) + (Pitch) + (Roll);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public float SumSqrComponents() => (Yaw).Sqr() + (Pitch).Sqr() + (Roll).Sqr();
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public float ProductComponents() => (Yaw) * (Pitch) * (Roll);
+        [MethodImpl(MethodImplOptions.AggressiveInlining)] public float GetComponent(int n) => n == 0 ? Yaw : n == 1 ? Pitch:Roll;
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public double MagnitudeSquared() => SumSqrComponents();
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public double Magnitude() => MagnitudeSquared().Sqrt();        
         public const int NumComponents = 3;
@@ -2168,101 +2168,5 @@ namespace Vim.Math3d
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator <=(Euler x0, Euler x1) => x0.CompareTo(x1) <= 0;
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator >(Euler x0, Euler x1) => x0.CompareTo(x1) > 0;
         [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator >=(Euler x0, Euler x1) => x0.CompareTo(x1) >= 0;
-    }
-    [StructLayout(LayoutKind.Sequential, Pack=4)]
-    [DataContract]
-    public readonly partial struct LinearMotion 
-        : IEquatable< LinearMotion >
-    {
-        [DataMember]
-        public readonly Vector3 Velocity;
-        [DataMember]
-        public readonly Vector3 Acceleration;
-        [DataMember]
-        public readonly float Friction;
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public LinearMotion((Vector3 velocity, Vector3 acceleration, float friction) tuple) : this(tuple.velocity, tuple.acceleration, tuple.friction) { }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public LinearMotion(Vector3 velocity, Vector3 acceleration, float friction) { Velocity = velocity; Acceleration = acceleration; Friction = friction; }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static LinearMotion Create(Vector3 velocity, Vector3 acceleration, float friction) => new LinearMotion(velocity, acceleration, friction);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static LinearMotion Create((Vector3 velocity, Vector3 acceleration, float friction) tuple) => new LinearMotion(tuple);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is LinearMotion x && Equals(x);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(Velocity.GetHashCode(), Acceleration.GetHashCode(), Friction.GetHashCode());
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"LinearMotion(Velocity = {Velocity}, Acceleration = {Acceleration}, Friction = {Friction})";
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public void Deconstruct(out Vector3 velocity, out Vector3 acceleration, out float friction) {velocity = Velocity; acceleration = Acceleration; friction = Friction; }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(LinearMotion x) => Velocity == x.Velocity && Acceleration == x.Acceleration && Friction == x.Friction;
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(LinearMotion x0, LinearMotion x1) => x0.Equals(x1);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(LinearMotion x0, LinearMotion x1) => !x0.Equals(x1);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static implicit operator LinearMotion((Vector3 velocity, Vector3 acceleration, float friction) tuple) => new LinearMotion(tuple);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static implicit operator (Vector3 velocity, Vector3 acceleration, float friction)(LinearMotion self) => (self.Velocity, self.Acceleration, self.Friction);
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public bool AlmostEquals(LinearMotion x, float tolerance = Constants.Tolerance) => Velocity.AlmostEquals(x.Velocity, tolerance) && Acceleration.AlmostEquals(x.Acceleration, tolerance) && Friction.AlmostEquals(x.Friction, tolerance);
-        public static LinearMotion Zero = new LinearMotion(default, default, default);
-        public static LinearMotion MinValue = new LinearMotion(Vector3.MinValue, Vector3.MinValue, float.MinValue);
-        public static LinearMotion MaxValue = new LinearMotion(Vector3.MaxValue, Vector3.MaxValue, float.MaxValue);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public LinearMotion SetVelocity(Vector3 x) => new LinearMotion(x, Acceleration, Friction);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public LinearMotion SetAcceleration(Vector3 x) => new LinearMotion(Velocity, x, Friction);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public LinearMotion SetFriction(float x) => new LinearMotion(Velocity, Acceleration, x);
-    }
-    [StructLayout(LayoutKind.Sequential, Pack=4)]
-    [DataContract]
-    public readonly partial struct AngularMotion 
-        : IEquatable< AngularMotion >
-    {
-        [DataMember]
-        public readonly Quaternion Velocity;
-        [DataMember]
-        public readonly Quaternion Acceleration;
-        [DataMember]
-        public readonly float Friction;
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public AngularMotion((Quaternion velocity, Quaternion acceleration, float friction) tuple) : this(tuple.velocity, tuple.acceleration, tuple.friction) { }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public AngularMotion(Quaternion velocity, Quaternion acceleration, float friction) { Velocity = velocity; Acceleration = acceleration; Friction = friction; }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static AngularMotion Create(Quaternion velocity, Quaternion acceleration, float friction) => new AngularMotion(velocity, acceleration, friction);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static AngularMotion Create((Quaternion velocity, Quaternion acceleration, float friction) tuple) => new AngularMotion(tuple);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is AngularMotion x && Equals(x);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(Velocity.GetHashCode(), Acceleration.GetHashCode(), Friction.GetHashCode());
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"AngularMotion(Velocity = {Velocity}, Acceleration = {Acceleration}, Friction = {Friction})";
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public void Deconstruct(out Quaternion velocity, out Quaternion acceleration, out float friction) {velocity = Velocity; acceleration = Acceleration; friction = Friction; }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(AngularMotion x) => Velocity == x.Velocity && Acceleration == x.Acceleration && Friction == x.Friction;
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(AngularMotion x0, AngularMotion x1) => x0.Equals(x1);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(AngularMotion x0, AngularMotion x1) => !x0.Equals(x1);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static implicit operator AngularMotion((Quaternion velocity, Quaternion acceleration, float friction) tuple) => new AngularMotion(tuple);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static implicit operator (Quaternion velocity, Quaternion acceleration, float friction)(AngularMotion self) => (self.Velocity, self.Acceleration, self.Friction);
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public bool AlmostEquals(AngularMotion x, float tolerance = Constants.Tolerance) => Velocity.AlmostEquals(x.Velocity, tolerance) && Acceleration.AlmostEquals(x.Acceleration, tolerance) && Friction.AlmostEquals(x.Friction, tolerance);
-        public static AngularMotion Zero = new AngularMotion(default, default, default);
-        public static AngularMotion MinValue = new AngularMotion(Quaternion.MinValue, Quaternion.MinValue, float.MinValue);
-        public static AngularMotion MaxValue = new AngularMotion(Quaternion.MaxValue, Quaternion.MaxValue, float.MaxValue);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public AngularMotion SetVelocity(Quaternion x) => new AngularMotion(x, Acceleration, Friction);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public AngularMotion SetAcceleration(Quaternion x) => new AngularMotion(Velocity, x, Friction);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public AngularMotion SetFriction(float x) => new AngularMotion(Velocity, Acceleration, x);
-    }
-    [StructLayout(LayoutKind.Sequential, Pack=4)]
-    [DataContract]
-    public readonly partial struct Motion 
-        : IEquatable< Motion >
-    {
-        [DataMember]
-        public readonly LinearMotion Linear;
-        [DataMember]
-        public readonly AngularMotion Angular;
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Motion((LinearMotion linear, AngularMotion angular) tuple) : this(tuple.linear, tuple.angular) { }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Motion(LinearMotion linear, AngularMotion angular) { Linear = linear; Angular = angular; }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Motion Create(LinearMotion linear, AngularMotion angular) => new Motion(linear, angular);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static Motion Create((LinearMotion linear, AngularMotion angular) tuple) => new Motion(tuple);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public override bool Equals(object obj) => obj is Motion x && Equals(x);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public override int GetHashCode() => Hash.Combine(Linear.GetHashCode(), Angular.GetHashCode());
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public override string ToString() => $"Motion(Linear = {Linear}, Angular = {Angular})";
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public void Deconstruct(out LinearMotion linear, out AngularMotion angular) {linear = Linear; angular = Angular; }
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public bool Equals(Motion x) => Linear == x.Linear && Angular == x.Angular;
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator ==(Motion x0, Motion x1) => x0.Equals(x1);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static bool operator !=(Motion x0, Motion x1) => !x0.Equals(x1);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static implicit operator Motion((LinearMotion linear, AngularMotion angular) tuple) => new Motion(tuple);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public static implicit operator (LinearMotion linear, AngularMotion angular)(Motion self) => (self.Linear, self.Angular);
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public bool AlmostEquals(Motion x, float tolerance = Constants.Tolerance) => Linear.AlmostEquals(x.Linear, tolerance) && Angular.AlmostEquals(x.Angular, tolerance);
-        public static Motion Zero = new Motion(default, default);
-        public static Motion MinValue = new Motion(LinearMotion.MinValue, AngularMotion.MinValue);
-        public static Motion MaxValue = new Motion(LinearMotion.MaxValue, AngularMotion.MaxValue);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Motion SetLinear(LinearMotion x) => new Motion(x, Angular);
-        [MethodImpl(MethodImplOptions.AggressiveInlining)] public Motion SetAngular(AngularMotion x) => new Motion(Linear, x);
     }
 }

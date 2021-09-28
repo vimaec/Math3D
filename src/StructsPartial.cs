@@ -5,9 +5,20 @@
 
 using System;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 
 namespace Vim.Math3d
 {
+    public partial struct ColorRGBA
+    {
+       public static readonly ColorRGBA LightRed = new ColorRGBA(255, 128, 128, 255);
+       public static readonly ColorRGBA DarkRed = new ColorRGBA(255, 0, 0, 255);
+       public static readonly ColorRGBA LightGreen = new ColorRGBA(128, 255, 128, 255);
+       public static readonly ColorRGBA DarkGreen = new ColorRGBA(0, 255, 0, 255);
+       public static readonly ColorRGBA LightBlue = new ColorRGBA(128, 128, 255, 255);
+       public static readonly ColorRGBA DarkBlue = new ColorRGBA(0, 0, 255, 255);
+    }
+
     public partial struct Vector4 : ITransformable3D<Vector4>
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -137,8 +148,32 @@ namespace Vim.Math3d
             => new Line(f(A), f(B));
     }
 
+    public partial struct Int2
+    {
+        public Vector2 ToVector2()
+            => new Vector2(X, Y);
+
+        public static implicit operator Vector2(Int2 self)
+            => self.ToVector2();
+    }
+
+    public partial struct Int3
+    {
+        public Vector3 ToVector3()
+            => new Vector3(X, Y, Z);
+
+        public static implicit operator Vector3(Int3 self)
+            => self.ToVector3();
+    }
+
     public partial struct Vector2
     {
+        public Vector3 ToVector3()
+            => new Vector3(X, Y, 0);
+
+        public static implicit operator Vector3(Vector2 self)
+            => self.ToVector3();
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public double PointCrossProduct(Vector2 other) => X * other.Y - other.X * Y;
 
@@ -152,7 +187,7 @@ namespace Vim.Math3d
     public partial struct Line2D
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public AABox2D BoundingBox() => AABox2D.CreateFromPoints(A, B);
+        public AABox2D BoundingBox() => AABox2D.Create(A, B);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public double LinePointCrossProduct(Vector2 point)
@@ -226,15 +261,24 @@ namespace Vim.Math3d
         public static Transform Identity => new Transform(Vector3.Zero, Quaternion.Identity);
     }
 
+    public partial struct HorizontalCoordinate
+    {
+        public static implicit operator DVector2(HorizontalCoordinate angle)
+            => new DVector2(angle.Azimuth, angle.Inclination);
+
+        public static explicit operator Vector2(HorizontalCoordinate angle)
+            => new Vector2((float)angle.Azimuth, (float)angle.Inclination);
+
+        public static implicit operator HorizontalCoordinate(DVector2 vector)
+            => new HorizontalCoordinate(vector.X, vector.Y);
+
+        public static implicit operator HorizontalCoordinate(Vector2 vector)
+            => new HorizontalCoordinate(vector.X, vector.Y);
+    }
+
     public static class MovementExtensions
     {
         /*
-        public static int CompareLength(this Vector3 self, Vector3 other)
-            => (self.LengthSquared() - other.LengthSquared()).Sign();
-
-        public static bool LargerThan(this Vector3 self, Vector3 other)
-            => self.LengthSquared()
-
         public static Vector3 ComputeFrictionVector(this LinearMotion motion)
         {
             var f = motion.Velocity.Normalize() * motion.Friction;
