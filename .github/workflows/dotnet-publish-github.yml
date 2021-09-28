@@ -2,8 +2,6 @@ name: Publish to GitHub
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ test-vadim ]
 
 jobs:
 
