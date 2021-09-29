@@ -436,5 +436,27 @@ namespace Vim.Math3d
 
         public Vector4 Vector4
             => new Vector4(X, Y, Z, W);
+
+        public HorizontalCoordinate ToSphericalAngle()
+            => ToSphericalAngle(Vector3.UnitY);
+
+        public HorizontalCoordinate ToSphericalAngle(Vector3 forwardVector)
+        {
+            var newForward = forwardVector.Transform(this);
+            var forwardXY = new Vector3(newForward.X, newForward.Y, 0.0f).Normalize();
+            var angle = forwardXY.Y.Acos();
+            var azimuth = forwardXY.X < 0.0f ? angle : -angle;
+            var inclination = -newForward.Z.Acos() + Constants.HalfPi;
+            return (azimuth, inclination);
+        }
+
+        public static Quaternion Create(HorizontalCoordinate angle)
+            => CreateZRotation((float)angle.Azimuth) * CreateXRotation((float)angle.Inclination);
+
+        public static implicit operator Quaternion(HorizontalCoordinate angle)
+            => Create(angle);
+
+        public static implicit operator HorizontalCoordinate(Quaternion q)
+            => q.ToSphericalAngle();
     }
 }
