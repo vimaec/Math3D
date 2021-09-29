@@ -16,9 +16,6 @@ namespace Vim.Math3d
 
     public static partial class MathOps
     {
-        public static Vector2 ToVector2(this Int2 t) => new Vector2(t.X, t.Y);
-        public static Vector3 ToVector3(this Int3 t) => new Vector3(t.X, t.Y, t.Z);
-
         /// <summary>
         /// Expresses two vlaues as a ratio
         /// </summary>
