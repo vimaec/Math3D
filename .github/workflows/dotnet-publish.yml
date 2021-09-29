@@ -27,7 +27,7 @@ jobs:
     - name: Build
       run: dotnet build -c Release --no-restore
     - name: Test
-      run: dotnet test --no-build
+      run: dotnet test --no-build --verbosity normal
 
     - name: Pack NuGet package
       run: dotnet pack --no-build --include-symbols -p:SymbolPackageFormat=snupkg -c Release src/Vim.Math3D.csproj -o .
