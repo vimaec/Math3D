@@ -32,6 +32,6 @@ jobs:
     - name: Pack NuGet package
       run: dotnet pack --no-build --include-symbols -p:SymbolPackageFormat=snupkg -c Release src/Vim.Math3D.csproj -o .
     - name: Push NuGet package
-      run: dotnet nuget push Vim.Math3D*.nupkg -k ${{secrets.NUGET_KEY}}
+      run: dotnet nuget push Vim.Math3D*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json
     - name: Tag commit
       run: .github/scripts/tag-commit.sh src/Vim.Math3D.csproj
