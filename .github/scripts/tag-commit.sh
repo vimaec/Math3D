@@ -8,6 +8,12 @@ fi
 __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ver=`bash ${__dir}/csproj-version.sh $1`
 
+if ! [ $? == 0 ]; then
+    echo "Version couldn't be parsed."
+    echo $ver
+    exit 3
+fi
+
 echo "Project version is ${ver}. Tagging..."
 
 git tag ${ver}
