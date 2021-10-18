@@ -12,8 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Checkout shared scripts
+      uses: actions/checkout@v2
       with:
         repository: vimaec/ci-cd-scripts
         ref: refs/heads/main
