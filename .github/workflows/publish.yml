@@ -1,0 +1,23 @@
+name: Publish to NuGet
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+      with:
+        repository: vimaec/ci-cd-scripts
+        ref: refs/heads/main
+        path: .github/
+    - uses: ./.github/actions/publish-nuget
+      with:
+        project_path: src/Vim.Math3D.csproj
+        package_name: Vim.Math3D
+        api_key: ${{secrets.NUGET_KEY}}
+        root_path: ".github"
