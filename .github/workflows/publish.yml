@@ -20,6 +20,7 @@ jobs:
     - uses: ./.github/actions/publish-nuget
       with:
         project_path: src/Vim.Math3D.csproj
+        test_project_path: tests/Vim.Math3D.Tests.csproj
         package_name: Vim.Math3D
         api_key: ${{secrets.NUGET_KEY}}
         root_path: ".github"
