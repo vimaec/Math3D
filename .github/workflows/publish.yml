@@ -22,5 +22,5 @@ jobs:
         project_path: src/Vim.Math3D.csproj
         test_project_path: tests/Vim.Math3D.Tests.csproj
         package_name: Vim.Math3D
-        api_key: ${{secrets.NUGET_KEY}}
+        api_key: ${{secrets.VIM_NUGET_PUSH}}
         root_path: ".github"
