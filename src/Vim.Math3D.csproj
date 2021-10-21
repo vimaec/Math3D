@@ -11,7 +11,7 @@
     <RepositoryType>GitHub</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseFile>license.txt</PackageLicenseFile>
-    <Version>1.3.0</Version>
+    <Version>1.3.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -54,6 +54,8 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+
+    <Content Remove="*.tt" />
   </ItemGroup>
 
 </Project>
