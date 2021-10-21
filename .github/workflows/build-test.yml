@@ -1,0 +1,28 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Checkout shared scripts
+      uses: actions/checkout@v2
+      with:
+        repository: vimaec/ci-cd-scripts
+        ref: refs/heads/main
+        path: .github/
+    - uses: ./.github/actions/build-and-test
+      with:
+        project_path: src/Vim.Math3D.csproj
+        test_project_path: tests/Vim.Math3D.Tests.csproj
+        package_name: Vim.Math3D
+        root_path: ".github"
