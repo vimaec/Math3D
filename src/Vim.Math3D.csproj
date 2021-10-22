@@ -54,8 +54,6 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-
-    <Content Remove="*.tt" />
   </ItemGroup>
 
 </Project>
