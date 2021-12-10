@@ -22,10 +22,16 @@ namespace Vim.Math3d.Tests
         public static bool Equal(float a, float b)
             => (Math.Abs(a - b) < 1e-5);
 
+        public static bool Equal(double a, double b)
+            => (Math.Abs(a - b) < 1e-5);
+
         public static bool Equal(Vector2 a, Vector2 b)
             => Equal(a.X, b.X) && Equal(a.Y, b.Y);
 
         public static bool Equal(Vector3 a, Vector3 b)
+            => Equal(a.X, b.X) && Equal(a.Y, b.Y) && Equal(a.Z, b.Z);
+
+        public static bool Equal(DVector3 a, DVector3 b)
             => Equal(a.X, b.X) && Equal(a.Y, b.Y) && Equal(a.Z, b.Z);
 
         public static bool Equal(Vector4 a, Vector4 b)

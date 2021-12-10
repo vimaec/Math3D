@@ -233,6 +233,16 @@ namespace Vim.Math3d
     {
         public Vector3 Vector3
             => new Vector3((float)X, (float)Y, (float)Z);
+
+        /// <summary>
+        /// Computes the cross product of two vectors.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public DVector3 Cross(DVector3 vector2)
+            => new DVector3(
+                Y * vector2.Z - Z * vector2.Y,
+                Z * vector2.X - X * vector2.Z,
+                X * vector2.Y - Y * vector2.X);
     }
 
     public partial struct DVector4
