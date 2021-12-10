@@ -518,6 +518,10 @@ namespace Vim.Math3d
         public static Vector3 Cross(Vector3 a, Vector3 b)
             => a.Cross(b);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static DVector3 Cross(DVector3 a, DVector3 b)
+            => a.Cross(b);
+
         /// <summary>
         /// Returns the bounding box, given stats on a Vector3
         /// </summary>
