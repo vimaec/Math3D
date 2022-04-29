@@ -132,17 +132,18 @@ namespace Vim.Math3d
             var projectedTarget = Plane.ProjectPointOntoPlane(plane, targetPosition);
             var projectedDirection = (projectedTarget - position).Normalize();
 
-            var q1 = CreateRotationFromAToB(forward, projectedDirection);
-            var q2 = CreateRotationFromAToB(projectedDirection, (targetPosition - position).Normalize());
+            var q1 = CreateRotationFromAToB(forward, projectedDirection, up);
+            var q2 = CreateRotationFromAToB(projectedDirection, (targetPosition - position).Normalize(), up);
 
             return q2 * q1;
         }
 
         /// <summary>
-        /// Creates a new Quaternion rotating vector 'fromA' to 'toB'
+        /// Creates a new Quaternion rotating vector 'fromA' to 'toB'.<br/>
+        /// Precondition: fromA and toB are normalized.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Quaternion CreateRotationFromAToB(Vector3 fromA, Vector3 toB)
+        public static Quaternion CreateRotationFromAToB(Vector3 fromA, Vector3 toB, Vector3? up = null)
         {
             var axis = fromA.Cross(toB);
             var lengthSquared = axis.LengthSquared();
@@ -150,8 +151,20 @@ namespace Vim.Math3d
             {
                 return CreateFromAxisAngle(axis / (float)Math.Sqrt(lengthSquared), (float)Math.Acos(fromA.Dot(toB)));
             }
-
-            return Identity;
+            else
+            {
+                // The vectors are parallel to each other
+                if ((fromA + toB).AlmostZero())
+                {
+                    // The vectors are in opposite directions so rotate by half a circle.
+                    return CreateFromAxisAngle(up ?? Vector3.UnitZ, (float) Math.PI);
+                }
+                else
+                {
+                    // The vectors are in the same direction so no rotation is required.
+                    return Identity;
+                }
+            }
         }
 
         /// <summary>
