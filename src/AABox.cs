@@ -27,7 +27,7 @@ namespace Vim.Math3d
             => !IsValid;
 
         public bool IsValid
-            => Min.X <= Max.X && Min.Y <= Max.Y && Min.Z < Max.Z;
+            => Min.X <= Max.X && Min.Y <= Max.Y && Min.Z <= Max.Z;
 
         // Inspired by: https://stackoverflow.com/questions/5254838/calculating-distance-between-a-point-and-a-rectangular-box-nearest-point
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
