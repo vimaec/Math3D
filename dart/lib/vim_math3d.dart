@@ -1,0 +1,40 @@
+library vim_math3d;
+
+import 'dart:math' as math;
+
+part 'src/structs/aabox.dart';
+part 'src/structs/axis_angle.dart';
+part 'src/structs/byte.dart';
+part 'src/structs/color.dart';
+part 'src/structs/complex.dart';
+part 'src/structs/coordinates.dart';
+part 'src/structs/euler.dart';
+part 'src/structs/int.dart';
+part 'src/structs/interval.dart';
+part 'src/structs/line.dart';
+part 'src/structs/plane.dart';
+part 'src/structs/quad.dart';
+part 'src/structs/quaternion.dart';
+part 'src/structs/ray.dart';
+part 'src/structs/sphere.dart';
+part 'src/structs/transform.dart';
+part 'src/structs/triangle.dart';
+part 'src/structs/vector2.dart';
+part 'src/structs/vector3.dart';
+part 'src/structs/vector4.dart';
+
+part 'src/constants.dart';
+part 'src/containment_type.dart';
+part 'src/experimental.dart';
+part 'src/extensions.dart';
+part 'src/hash.dart';
+part 'src/imappable.dart';
+part 'src/ipoints.dart';
+part 'src/itransformable.dart';
+part 'src/linq_util.dart';
+part 'src/math_ops.dart';
+part 'src/matrix4x4.dart';
+part 'src/plane_intersection_type.dart';
+part 'src/random.dart';
+part 'src/stats.dart';
+part 'src/value_domain.dart';
