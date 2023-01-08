@@ -149,7 +149,7 @@ namespace Vim.Math3d
             var lengthSquared = axis.LengthSquared();
             if (lengthSquared > 0.0f)
             {
-                return CreateFromAxisAngle(axis / (float)Math.Sqrt(lengthSquared), (float)Math.Acos(fromA.Dot(toB)));
+                return CreateFromAxisAngle(axis / (float)Math.Sqrt(lengthSquared), (float)Math.Acos(MathOps.Clamp(fromA.Dot(toB), -1, 1)));
             }
             else
             {
