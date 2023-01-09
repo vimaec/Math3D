@@ -886,5 +886,23 @@ namespace Vim.Math3d.Tests
             Assert.AreEqual(euler.Y, euler2.Y, 0.001f);
             Assert.AreEqual(euler.Z, euler2.Z, 0.001f);
         }
+
+        // A test to avoid a floating point NaN precision issue
+        // when two input normalized vectors are almost parallel
+        // and pointing in the same direction.
+        [Test]
+        public void CreateRotationFromAtoBTest()
+        {
+            var a = new Vector3(0.57731324f, 0.57728577f, 0.5774519f);
+            var b = new Vector3(0.57738256f, 0.57728577f, 0.57738256f);
+
+            // Assert precondition that a and b are normalized.
+            Assert.IsTrue(a.Normalize().Length().AlmostEquals(a.Length()));
+            Assert.IsTrue(b.Normalize().Length().AlmostEquals(b.Length()));
+
+            // Validate that the returned quaternion does not contain NaN due to precision issues
+            var quat = Quaternion.CreateRotationFromAToB(a, b);
+            Assert.IsTrue(quat.Equals(Quaternion.Identity));
+        }
     }
 }
