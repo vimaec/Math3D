@@ -60,12 +60,12 @@ The following is a list of data structures provided by Vim.Math.
 	* `Vector2` - Single precision X, Y
 	* `Vector3` - Single precision X, Y, Z
 	* `Vector4` - Single precision X, Y, Z, W
-	* `DVector2` - Double precision X, Y, Z
-	* `DVector3` - Single precision X, Y, Z
-	* `DVector4` - Single precision X, Y, Z, W
+	* `DVector2` - Double precision X, Y
+	* `DVector3` - Double precision X, Y, Z
+	* `DVector4` - Double precision X, Y, Z, W
 	* `Int2` - Integer X, Y
 	* `Int3` - Integer X, Y, Z
-	* `Int4` - Integer X, Y
+	* `Int4` - Integer X, Y, Z, W
 	* `Complex` - Double precision Imaginary, Real 
 * **Pseudo-Vectors** - the following classes lack some of the operations of Vectors 
 	* `Byte2` - Byte X, Y
