@@ -1766,6 +1766,28 @@ namespace Vim.Math3d
         public bool Equals(Matrix4x4 other) => this == other;
 
         /// <summary>
+        /// Returns a boolean indicating whether this matrix instance is equal to the other given matrix within a given tolerance value.
+        /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public bool AlmostEquals(Matrix4x4 other, float tolerance = Constants.Tolerance)
+            => M11.AlmostEquals(other.M11, tolerance) &&
+               M12.AlmostEquals(other.M12, tolerance) &&
+               M13.AlmostEquals(other.M13, tolerance) &&
+               M14.AlmostEquals(other.M14, tolerance) &&
+               M21.AlmostEquals(other.M21, tolerance) &&
+               M22.AlmostEquals(other.M22, tolerance) &&
+               M23.AlmostEquals(other.M23, tolerance) &&
+               M24.AlmostEquals(other.M24, tolerance) &&
+               M31.AlmostEquals(other.M31, tolerance) &&
+               M32.AlmostEquals(other.M32, tolerance) &&
+               M33.AlmostEquals(other.M33, tolerance) &&
+               M34.AlmostEquals(other.M34, tolerance) &&
+               M41.AlmostEquals(other.M41, tolerance) &&
+               M42.AlmostEquals(other.M42, tolerance) &&
+               M43.AlmostEquals(other.M43, tolerance) &&
+               M44.AlmostEquals(other.M44, tolerance);
+
+        /// <summary>
         /// Returns a boolean indicating whether the given Object is equal to this matrix instance.
         /// </summary>
         /// <param name="obj">The Object to compare against.</param>
