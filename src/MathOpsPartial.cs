@@ -296,7 +296,7 @@ namespace Vim.Math3d
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static float Angle(this Vector3 v1, Vector3 v2, float tolerance = Constants.Tolerance)
         {
-            var d = v1.LengthSquared() * v2.LengthSquared().Sqrt();
+            var d = v1.LengthSquared().Sqrt() * v2.LengthSquared().Sqrt();
             if (d < tolerance)
                 return 0;
             return (v1.Dot(v2) / d).Clamp(-1F, 1F).Acos();
