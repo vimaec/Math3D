@@ -1,4 +1,4 @@
-**This repository is a public mirror of the Math3D code being maintained within the [vim-format](https://github.com/vimaec/vim-format) repository.**
+**This repository is a public mirror of the Math3D code being maintained within the [vim-format](https://github.com/vimaec/vim-format/tree/develop/src/cs/math3d/Vim.Math3D) repository.**
 
 # Vim.Math3D
 
