@@ -78,7 +78,7 @@ The following is a list of data structures provided by Vim.Math.
  	* `ColorHDR` - High Defintion Range color representation, 4 floats, R, G, B, A 
 * **Rotations and Transformations**
 	* `Quaternion` - Single precision quaternion rotation X, Y, Z, W
-	* `DQuaternion` - Single precision quaternion rotation X, Y, Z, W
+	* `DQuaternion` - Double precision quaternion rotation X, Y, Z, W
 	* `AxisAngle` - Single precison rotation as Axis (Vector3) and Angle in radians 
 	* `Matrix4x4` - 4 x 4 Single Precision matrix in Row-Column - corder
 	* `Transform` - Single precision Position (Vector3) and Orientation (Quaternion)
